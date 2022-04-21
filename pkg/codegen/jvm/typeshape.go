@@ -55,7 +55,7 @@ func (ts TypeShape) WithoutAnnotations() TypeShape {
 	return TypeShape{Type: ts.Type, Parameters: ts.Parameters}
 }
 
-// Converts to Java code, may add imports to use short names.
+// ToCode converts to Java code, may add imports to use short names.
 func (ts TypeShape) ToCode(imports *names.Imports) string {
 	return ts.ToCodeWithOptions(imports, TypeShapeStringOptions{})
 }
@@ -123,6 +123,8 @@ func (ts TypeShape) ListType(ctx *classFileContext) string {
 	return ""
 }
 
+// StringJavaTypeShape returns a Java code representation if this TypeShape
+//                     Basically rewrites itself to Java.
 func (ts TypeShape) StringJavaTypeShape(imports *names.Imports) string {
 	shape := fmt.Sprintf("%s.<%s>builder(%s)",
 		imports.Ref(names.TypeShape),
