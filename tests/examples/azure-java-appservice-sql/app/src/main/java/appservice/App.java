@@ -1,6 +1,5 @@
 package appservice;
 
-import com.pulumi.Config;
 import com.pulumi.Context;
 import com.pulumi.Exports;
 import com.pulumi.Pulumi;
@@ -38,7 +37,6 @@ import com.pulumi.azurenative.web.inputs.ConnStringInfoArgs;
 import com.pulumi.azurenative.web.inputs.NameValuePairArgs;
 import com.pulumi.azurenative.web.inputs.SiteConfigArgs;
 import com.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
-import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 
 public class App {
@@ -52,8 +50,8 @@ public class App {
 
         var storageAccount = new StorageAccount("sa",
                 StorageAccountArgs.builder().resourceGroupName(resourceGroup.name())
-                        .kind(Either.ofRight(Kind.StorageV2))
-                        .sku(SkuArgs.builder().name(Either.ofRight(SkuName.Standard_LRS)).build())
+                        .kind(Kind.StorageV2)
+                        .sku(SkuArgs.builder().name(SkuName.Standard_LRS).build())
                         .build());
 
         var storageContainer = new BlobContainer("container",
@@ -74,7 +72,7 @@ public class App {
         var appInsights = new Component("ai",
                 ComponentArgs.builder().resourceGroupName(resourceGroup.name())
                         .kind("web")
-                        .applicationType(Either.ofRight(ApplicationType.Web))
+                        .applicationType(ApplicationType.Web)
                         .build());
 
         var username = "pulumi";
@@ -147,8 +145,8 @@ public class App {
                                 .protocols(HttpProtocol.Https)
                                 .sharedAccessStartTime("2022-01-01")
                                 .sharedAccessExpiryTime("2030-01-01")
-                                .resource(Either.ofRight(SignedResource.C))
-                                .permissions(Either.ofRight(Permissions.R))
+                                .resource(SignedResource.C)
+                                .permissions(Permissions.R)
                                 .canonicalizedResource(String.format("/blob/%s/%s", t.t2, t.t3))
                                 .contentType("application/json")
                                 .cacheControl("max-age=5")
