@@ -174,6 +174,14 @@ public final class DataCollectionEndpointArgs extends com.pulumi.resources.Resou
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(KnownDataCollectionEndpointResourceKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

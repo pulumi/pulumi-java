@@ -98,6 +98,14 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
             return registrationTokenOperation(Output.of(registrationTokenOperation));
         }
 
+        public Builder registrationTokenOperation(String registrationTokenOperation) {
+            return registrationTokenOperation(Either.ofLeft(registrationTokenOperation));
+        }
+
+        public Builder registrationTokenOperation(RegistrationTokenOperation registrationTokenOperation) {
+            return registrationTokenOperation(Either.ofRight(registrationTokenOperation));
+        }
+
         public Builder token(@Nullable Output<String> token) {
             $.token = token;
             return this;

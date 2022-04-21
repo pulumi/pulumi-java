@@ -142,6 +142,14 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(PolicyEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
             $.mode = mode;
             return this;
@@ -149,6 +157,14 @@ public final class PolicySettingsArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder mode(Either<String,PolicyMode> mode) {
             return mode(Output.of(mode));
+        }
+
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(PolicyMode mode) {
+            return mode(Either.ofRight(mode));
         }
 
         public PolicySettingsArgs build() {

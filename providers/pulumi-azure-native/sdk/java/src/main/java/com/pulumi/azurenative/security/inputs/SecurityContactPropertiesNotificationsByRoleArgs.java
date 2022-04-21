@@ -92,6 +92,14 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends com.
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(State state) {
+            return state(Either.ofRight(state));
+        }
+
         public SecurityContactPropertiesNotificationsByRoleArgs build() {
             return $;
         }

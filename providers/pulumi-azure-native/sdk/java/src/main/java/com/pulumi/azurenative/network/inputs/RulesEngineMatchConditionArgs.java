@@ -151,6 +151,14 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
             return rulesEngineMatchVariable(Output.of(rulesEngineMatchVariable));
         }
 
+        public Builder rulesEngineMatchVariable(String rulesEngineMatchVariable) {
+            return rulesEngineMatchVariable(Either.ofLeft(rulesEngineMatchVariable));
+        }
+
+        public Builder rulesEngineMatchVariable(RulesEngineMatchVariable rulesEngineMatchVariable) {
+            return rulesEngineMatchVariable(Either.ofRight(rulesEngineMatchVariable));
+        }
+
         public Builder rulesEngineOperator(Output<Either<String,RulesEngineOperator>> rulesEngineOperator) {
             $.rulesEngineOperator = rulesEngineOperator;
             return this;
@@ -158,6 +166,14 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
 
         public Builder rulesEngineOperator(Either<String,RulesEngineOperator> rulesEngineOperator) {
             return rulesEngineOperator(Output.of(rulesEngineOperator));
+        }
+
+        public Builder rulesEngineOperator(String rulesEngineOperator) {
+            return rulesEngineOperator(Either.ofLeft(rulesEngineOperator));
+        }
+
+        public Builder rulesEngineOperator(RulesEngineOperator rulesEngineOperator) {
+            return rulesEngineOperator(Either.ofRight(rulesEngineOperator));
         }
 
         public Builder selector(@Nullable Output<String> selector) {

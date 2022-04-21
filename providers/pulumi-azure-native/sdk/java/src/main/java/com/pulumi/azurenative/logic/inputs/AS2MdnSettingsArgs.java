@@ -180,6 +180,14 @@ public final class AS2MdnSettingsArgs extends com.pulumi.resources.ResourceArgs 
             return micHashingAlgorithm(Output.of(micHashingAlgorithm));
         }
 
+        public Builder micHashingAlgorithm(String micHashingAlgorithm) {
+            return micHashingAlgorithm(Either.ofLeft(micHashingAlgorithm));
+        }
+
+        public Builder micHashingAlgorithm(HashingAlgorithm micHashingAlgorithm) {
+            return micHashingAlgorithm(Either.ofRight(micHashingAlgorithm));
+        }
+
         public Builder needMDN(Output<Boolean> needMDN) {
             $.needMDN = needMDN;
             return this;

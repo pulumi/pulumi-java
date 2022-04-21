@@ -99,6 +99,14 @@ public final class ManagementLockAtSubscriptionLevelArgs extends com.pulumi.reso
             return level(Output.of(level));
         }
 
+        public Builder level(String level) {
+            return level(Either.ofLeft(level));
+        }
+
+        public Builder level(LockLevel level) {
+            return level(Either.ofRight(level));
+        }
+
         public Builder lockName(@Nullable Output<String> lockName) {
             $.lockName = lockName;
             return this;

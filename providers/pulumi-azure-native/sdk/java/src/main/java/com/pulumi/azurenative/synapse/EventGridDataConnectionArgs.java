@@ -233,6 +233,14 @@ public final class EventGridDataConnectionArgs extends com.pulumi.resources.Reso
             return blobStorageEventType(Output.of(blobStorageEventType));
         }
 
+        public Builder blobStorageEventType(String blobStorageEventType) {
+            return blobStorageEventType(Either.ofLeft(blobStorageEventType));
+        }
+
+        public Builder blobStorageEventType(BlobStorageEventType blobStorageEventType) {
+            return blobStorageEventType(Either.ofRight(blobStorageEventType));
+        }
+
         public Builder consumerGroup(Output<String> consumerGroup) {
             $.consumerGroup = consumerGroup;
             return this;
@@ -258,6 +266,14 @@ public final class EventGridDataConnectionArgs extends com.pulumi.resources.Reso
 
         public Builder dataFormat(Either<String,EventGridDataFormat> dataFormat) {
             return dataFormat(Output.of(dataFormat));
+        }
+
+        public Builder dataFormat(String dataFormat) {
+            return dataFormat(Either.ofLeft(dataFormat));
+        }
+
+        public Builder dataFormat(EventGridDataFormat dataFormat) {
+            return dataFormat(Either.ofRight(dataFormat));
         }
 
         public Builder databaseName(Output<String> databaseName) {

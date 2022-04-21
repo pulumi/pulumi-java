@@ -158,6 +158,14 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
             return ipAllocationMethod(Output.of(ipAllocationMethod));
         }
 
+        public Builder ipAllocationMethod(String ipAllocationMethod) {
+            return ipAllocationMethod(Either.ofLeft(ipAllocationMethod));
+        }
+
+        public Builder ipAllocationMethod(IPAllocationMethod ipAllocationMethod) {
+            return ipAllocationMethod(Either.ofRight(ipAllocationMethod));
+        }
+
         public Builder ipVersion(@Nullable Output<Either<String,IPVersion>> ipVersion) {
             $.ipVersion = ipVersion;
             return this;
@@ -165,6 +173,14 @@ public final class NetworkInterfaceIPConfigurationArgs extends com.pulumi.resour
 
         public Builder ipVersion(Either<String,IPVersion> ipVersion) {
             return ipVersion(Output.of(ipVersion));
+        }
+
+        public Builder ipVersion(String ipVersion) {
+            return ipVersion(Either.ofLeft(ipVersion));
+        }
+
+        public Builder ipVersion(IPVersion ipVersion) {
+            return ipVersion(Either.ofRight(ipVersion));
         }
 
         public Builder subnet(@Nullable Output<String> subnet) {

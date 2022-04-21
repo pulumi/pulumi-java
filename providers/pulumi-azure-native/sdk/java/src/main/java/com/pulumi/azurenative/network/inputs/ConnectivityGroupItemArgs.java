@@ -99,6 +99,14 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
             return groupConnectivity(Output.of(groupConnectivity));
         }
 
+        public Builder groupConnectivity(String groupConnectivity) {
+            return groupConnectivity(Either.ofLeft(groupConnectivity));
+        }
+
+        public Builder groupConnectivity(GroupConnectivity groupConnectivity) {
+            return groupConnectivity(Either.ofRight(groupConnectivity));
+        }
+
         public Builder isGlobal(@Nullable Output<Either<String,IsGlobal>> isGlobal) {
             $.isGlobal = isGlobal;
             return this;
@@ -106,6 +114,14 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
 
         public Builder isGlobal(Either<String,IsGlobal> isGlobal) {
             return isGlobal(Output.of(isGlobal));
+        }
+
+        public Builder isGlobal(String isGlobal) {
+            return isGlobal(Either.ofLeft(isGlobal));
+        }
+
+        public Builder isGlobal(IsGlobal isGlobal) {
+            return isGlobal(Either.ofRight(isGlobal));
         }
 
         public Builder networkGroupId(@Nullable Output<String> networkGroupId) {
@@ -124,6 +140,14 @@ public final class ConnectivityGroupItemArgs extends com.pulumi.resources.Resour
 
         public Builder useHubGateway(Either<String,UseHubGateway> useHubGateway) {
             return useHubGateway(Output.of(useHubGateway));
+        }
+
+        public Builder useHubGateway(String useHubGateway) {
+            return useHubGateway(Either.ofLeft(useHubGateway));
+        }
+
+        public Builder useHubGateway(UseHubGateway useHubGateway) {
+            return useHubGateway(Either.ofRight(useHubGateway));
         }
 
         public ConnectivityGroupItemArgs build() {

@@ -115,6 +115,14 @@ public final class DefaultRolloutPropertiesStatusArgs extends com.pulumi.resourc
             return nextTrafficRegion(Output.of(nextTrafficRegion));
         }
 
+        public Builder nextTrafficRegion(String nextTrafficRegion) {
+            return nextTrafficRegion(Either.ofLeft(nextTrafficRegion));
+        }
+
+        public Builder nextTrafficRegion(TrafficRegionCategory nextTrafficRegion) {
+            return nextTrafficRegion(Either.ofRight(nextTrafficRegion));
+        }
+
         public Builder nextTrafficRegionScheduledTime(@Nullable Output<String> nextTrafficRegionScheduledTime) {
             $.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
@@ -131,6 +139,14 @@ public final class DefaultRolloutPropertiesStatusArgs extends com.pulumi.resourc
 
         public Builder subscriptionReregistrationResult(Either<String,SubscriptionReregistrationResult> subscriptionReregistrationResult) {
             return subscriptionReregistrationResult(Output.of(subscriptionReregistrationResult));
+        }
+
+        public Builder subscriptionReregistrationResult(String subscriptionReregistrationResult) {
+            return subscriptionReregistrationResult(Either.ofLeft(subscriptionReregistrationResult));
+        }
+
+        public Builder subscriptionReregistrationResult(SubscriptionReregistrationResult subscriptionReregistrationResult) {
+            return subscriptionReregistrationResult(Either.ofRight(subscriptionReregistrationResult));
         }
 
         public DefaultRolloutPropertiesStatusArgs build() {

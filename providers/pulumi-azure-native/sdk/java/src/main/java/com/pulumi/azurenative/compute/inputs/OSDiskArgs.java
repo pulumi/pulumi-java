@@ -215,6 +215,14 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
             return createOption(Output.of(createOption));
         }
 
+        public Builder createOption(String createOption) {
+            return createOption(Either.ofLeft(createOption));
+        }
+
+        public Builder createOption(DiskCreateOptionTypes createOption) {
+            return createOption(Either.ofRight(createOption));
+        }
+
         public Builder deleteOption(@Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption) {
             $.deleteOption = deleteOption;
             return this;
@@ -222,6 +230,14 @@ public final class OSDiskArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder deleteOption(Either<String,DiskDeleteOptionTypes> deleteOption) {
             return deleteOption(Output.of(deleteOption));
+        }
+
+        public Builder deleteOption(String deleteOption) {
+            return deleteOption(Either.ofLeft(deleteOption));
+        }
+
+        public Builder deleteOption(DiskDeleteOptionTypes deleteOption) {
+            return deleteOption(Either.ofRight(deleteOption));
         }
 
         public Builder diffDiskSettings(@Nullable Output<DiffDiskSettingsArgs> diffDiskSettings) {

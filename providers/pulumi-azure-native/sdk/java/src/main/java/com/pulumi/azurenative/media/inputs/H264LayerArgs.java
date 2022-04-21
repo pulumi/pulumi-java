@@ -274,6 +274,14 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
             return entropyMode(Output.of(entropyMode));
         }
 
+        public Builder entropyMode(String entropyMode) {
+            return entropyMode(Either.ofLeft(entropyMode));
+        }
+
+        public Builder entropyMode(EntropyMode entropyMode) {
+            return entropyMode(Either.ofRight(entropyMode));
+        }
+
         public Builder frameRate(@Nullable Output<String> frameRate) {
             $.frameRate = frameRate;
             return this;
@@ -335,6 +343,14 @@ public final class H264LayerArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder profile(Either<String,H264VideoProfile> profile) {
             return profile(Output.of(profile));
+        }
+
+        public Builder profile(String profile) {
+            return profile(Either.ofLeft(profile));
+        }
+
+        public Builder profile(H264VideoProfile profile) {
+            return profile(Either.ofRight(profile));
         }
 
         public Builder referenceFrames(@Nullable Output<Integer> referenceFrames) {

@@ -87,6 +87,14 @@ public final class VariableSpecificationArgs extends com.pulumi.resources.Resour
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(VariableType type) {
+            return type(Either.ofRight(type));
+        }
+
         public VariableSpecificationArgs build() {
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;

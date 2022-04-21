@@ -67,6 +67,14 @@ public final class SkuResourcePropertiesArgs extends com.pulumi.resources.Resour
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder skuSettings(Output<List<SkuSettingArgs>> skuSettings) {
             $.skuSettings = skuSettings;
             return this;

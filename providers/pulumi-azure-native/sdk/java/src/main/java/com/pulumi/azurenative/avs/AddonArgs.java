@@ -118,6 +118,14 @@ public final class AddonArgs extends com.pulumi.resources.ResourceArgs {
             return addonType(Output.of(addonType));
         }
 
+        public Builder addonType(String addonType) {
+            return addonType(Either.ofLeft(addonType));
+        }
+
+        public Builder addonType(AddonType addonType) {
+            return addonType(Either.ofRight(addonType));
+        }
+
         public Builder licenseKey(@Nullable Output<String> licenseKey) {
             $.licenseKey = licenseKey;
             return this;

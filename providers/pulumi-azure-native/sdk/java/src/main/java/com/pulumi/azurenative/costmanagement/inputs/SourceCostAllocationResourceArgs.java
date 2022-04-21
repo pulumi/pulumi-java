@@ -97,6 +97,14 @@ public final class SourceCostAllocationResourceArgs extends com.pulumi.resources
             return resourceType(Output.of(resourceType));
         }
 
+        public Builder resourceType(String resourceType) {
+            return resourceType(Either.ofLeft(resourceType));
+        }
+
+        public Builder resourceType(CostAllocationResourceType resourceType) {
+            return resourceType(Either.ofRight(resourceType));
+        }
+
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;

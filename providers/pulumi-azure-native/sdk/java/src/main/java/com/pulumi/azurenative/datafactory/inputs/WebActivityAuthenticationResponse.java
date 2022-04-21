@@ -140,9 +140,25 @@ public final class WebActivityAuthenticationResponse extends com.pulumi.resource
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder pfx(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx) {
             $.pfx = pfx;
             return this;
+        }
+
+        public Builder pfx(AzureKeyVaultSecretReferenceResponse pfx) {
+            return pfx(Either.ofLeft(pfx));
+        }
+
+        public Builder pfx(SecureStringResponse pfx) {
+            return pfx(Either.ofRight(pfx));
         }
 
         public Builder resource(@Nullable Object resource) {

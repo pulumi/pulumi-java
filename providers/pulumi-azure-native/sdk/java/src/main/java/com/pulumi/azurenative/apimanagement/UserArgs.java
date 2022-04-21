@@ -211,6 +211,14 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
             return appType(Output.of(appType));
         }
 
+        public Builder appType(String appType) {
+            return appType(Either.ofLeft(appType));
+        }
+
+        public Builder appType(AppType appType) {
+            return appType(Either.ofRight(appType));
+        }
+
         public Builder confirmation(@Nullable Output<Either<String,Confirmation>> confirmation) {
             $.confirmation = confirmation;
             return this;
@@ -218,6 +226,14 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder confirmation(Either<String,Confirmation> confirmation) {
             return confirmation(Output.of(confirmation));
+        }
+
+        public Builder confirmation(String confirmation) {
+            return confirmation(Either.ofLeft(confirmation));
+        }
+
+        public Builder confirmation(Confirmation confirmation) {
+            return confirmation(Either.ofRight(confirmation));
         }
 
         public Builder email(Output<String> email) {
@@ -312,6 +328,14 @@ public final class UserArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder state(Either<String,UserState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(UserState state) {
+            return state(Either.ofRight(state));
         }
 
         public Builder userId(@Nullable Output<String> userId) {

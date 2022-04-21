@@ -220,6 +220,14 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
             return valueFormat(Output.of(valueFormat));
         }
 
+        public Builder valueFormat(String valueFormat) {
+            return valueFormat(Either.ofLeft(valueFormat));
+        }
+
+        public Builder valueFormat(ValueFormat valueFormat) {
+            return valueFormat(Either.ofRight(valueFormat));
+        }
+
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;

@@ -216,6 +216,14 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
             return databaseType(Output.of(databaseType));
         }
 
+        public Builder databaseType(String databaseType) {
+            return databaseType(Either.ofLeft(databaseType));
+        }
+
+        public Builder databaseType(SyncMemberDbType databaseType) {
+            return databaseType(Either.ofRight(databaseType));
+        }
+
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
@@ -268,6 +276,14 @@ public final class SyncMemberArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder syncDirection(Either<String,SyncDirection> syncDirection) {
             return syncDirection(Output.of(syncDirection));
+        }
+
+        public Builder syncDirection(String syncDirection) {
+            return syncDirection(Either.ofLeft(syncDirection));
+        }
+
+        public Builder syncDirection(SyncDirection syncDirection) {
+            return syncDirection(Either.ofRight(syncDirection));
         }
 
         public Builder syncGroupName(Output<String> syncGroupName) {

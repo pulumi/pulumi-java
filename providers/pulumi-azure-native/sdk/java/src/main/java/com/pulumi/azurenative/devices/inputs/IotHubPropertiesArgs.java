@@ -283,6 +283,14 @@ public final class IotHubPropertiesArgs extends com.pulumi.resources.ResourceArg
             return features(Output.of(features));
         }
 
+        public Builder features(String features) {
+            return features(Either.ofLeft(features));
+        }
+
+        public Builder features(Capabilities features) {
+            return features(Either.ofRight(features));
+        }
+
         public Builder ipFilterRules(@Nullable Output<List<IpFilterRuleArgs>> ipFilterRules) {
             $.ipFilterRules = ipFilterRules;
             return this;
@@ -343,6 +351,14 @@ public final class IotHubPropertiesArgs extends com.pulumi.resources.ResourceArg
 
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
         public Builder routing(@Nullable Output<RoutingPropertiesArgs> routing) {

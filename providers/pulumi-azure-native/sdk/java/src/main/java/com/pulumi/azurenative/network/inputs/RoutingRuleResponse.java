@@ -231,6 +231,14 @@ public final class RoutingRuleResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder routeConfiguration(ForwardingConfigurationResponse routeConfiguration) {
+            return routeConfiguration(Either.ofLeft(routeConfiguration));
+        }
+
+        public Builder routeConfiguration(RedirectConfigurationResponse routeConfiguration) {
+            return routeConfiguration(Either.ofRight(routeConfiguration));
+        }
+
         public Builder rulesEngine(@Nullable SubResourceResponse rulesEngine) {
             $.rulesEngine = rulesEngine;
             return this;

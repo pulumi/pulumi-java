@@ -262,6 +262,14 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
             return createMode(Output.of(createMode));
         }
 
+        public Builder createMode(String createMode) {
+            return createMode(Either.ofLeft(createMode));
+        }
+
+        public Builder createMode(CreateMode createMode) {
+            return createMode(Either.ofRight(createMode));
+        }
+
         public Builder creationDate(@Nullable Output<String> creationDate) {
             $.creationDate = creationDate;
             return this;
@@ -368,6 +376,14 @@ public final class SqlPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
             return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(StorageAccountType storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

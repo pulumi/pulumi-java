@@ -409,6 +409,14 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
             return hostPoolType(Output.of(hostPoolType));
         }
 
+        public Builder hostPoolType(String hostPoolType) {
+            return hostPoolType(Either.ofLeft(hostPoolType));
+        }
+
+        public Builder hostPoolType(HostPoolType hostPoolType) {
+            return hostPoolType(Either.ofRight(hostPoolType));
+        }
+
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             $.identity = identity;
             return this;
@@ -434,6 +442,14 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder loadBalancerType(Either<String,LoadBalancerType> loadBalancerType) {
             return loadBalancerType(Output.of(loadBalancerType));
+        }
+
+        public Builder loadBalancerType(String loadBalancerType) {
+            return loadBalancerType(Either.ofLeft(loadBalancerType));
+        }
+
+        public Builder loadBalancerType(LoadBalancerType loadBalancerType) {
+            return loadBalancerType(Either.ofRight(loadBalancerType));
         }
 
         public Builder location(@Nullable Output<String> location) {
@@ -481,6 +497,14 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
             return personalDesktopAssignmentType(Output.of(personalDesktopAssignmentType));
         }
 
+        public Builder personalDesktopAssignmentType(String personalDesktopAssignmentType) {
+            return personalDesktopAssignmentType(Either.ofLeft(personalDesktopAssignmentType));
+        }
+
+        public Builder personalDesktopAssignmentType(PersonalDesktopAssignmentType personalDesktopAssignmentType) {
+            return personalDesktopAssignmentType(Either.ofRight(personalDesktopAssignmentType));
+        }
+
         public Builder plan(@Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan) {
             $.plan = plan;
             return this;
@@ -497,6 +521,14 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder preferredAppGroupType(Either<String,PreferredAppGroupType> preferredAppGroupType) {
             return preferredAppGroupType(Output.of(preferredAppGroupType));
+        }
+
+        public Builder preferredAppGroupType(String preferredAppGroupType) {
+            return preferredAppGroupType(Either.ofLeft(preferredAppGroupType));
+        }
+
+        public Builder preferredAppGroupType(PreferredAppGroupType preferredAppGroupType) {
+            return preferredAppGroupType(Either.ofRight(preferredAppGroupType));
         }
 
         public Builder registrationInfo(@Nullable Output<RegistrationInfoArgs> registrationInfo) {
@@ -560,6 +592,14 @@ public final class HostPoolArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder ssoSecretType(Either<String,SSOSecretType> ssoSecretType) {
             return ssoSecretType(Output.of(ssoSecretType));
+        }
+
+        public Builder ssoSecretType(String ssoSecretType) {
+            return ssoSecretType(Either.ofLeft(ssoSecretType));
+        }
+
+        public Builder ssoSecretType(SSOSecretType ssoSecretType) {
+            return ssoSecretType(Either.ofRight(ssoSecretType));
         }
 
         public Builder ssoadfsAuthority(@Nullable Output<String> ssoadfsAuthority) {

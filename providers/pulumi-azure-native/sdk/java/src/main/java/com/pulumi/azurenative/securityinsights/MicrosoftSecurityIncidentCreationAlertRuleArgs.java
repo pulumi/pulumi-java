@@ -269,6 +269,14 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends com.pu
             return productFilter(Output.of(productFilter));
         }
 
+        public Builder productFilter(String productFilter) {
+            return productFilter(Either.ofLeft(productFilter));
+        }
+
+        public Builder productFilter(MicrosoftSecurityProductName productFilter) {
+            return productFilter(Either.ofRight(productFilter));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

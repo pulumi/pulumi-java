@@ -114,6 +114,14 @@ public final class MabContainerExtendedInfoArgs extends com.pulumi.resources.Res
             return backupItemType(Output.of(backupItemType));
         }
 
+        public Builder backupItemType(String backupItemType) {
+            return backupItemType(Either.ofLeft(backupItemType));
+        }
+
+        public Builder backupItemType(BackupItemType backupItemType) {
+            return backupItemType(Either.ofRight(backupItemType));
+        }
+
         public Builder backupItems(@Nullable Output<List<String>> backupItems) {
             $.backupItems = backupItems;
             return this;

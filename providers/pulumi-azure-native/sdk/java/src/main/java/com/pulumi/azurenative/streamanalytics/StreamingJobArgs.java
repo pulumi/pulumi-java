@@ -264,6 +264,14 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
             return compatibilityLevel(Output.of(compatibilityLevel));
         }
 
+        public Builder compatibilityLevel(String compatibilityLevel) {
+            return compatibilityLevel(Either.ofLeft(compatibilityLevel));
+        }
+
+        public Builder compatibilityLevel(CompatibilityLevel compatibilityLevel) {
+            return compatibilityLevel(Either.ofRight(compatibilityLevel));
+        }
+
         public Builder dataLocale(@Nullable Output<String> dataLocale) {
             $.dataLocale = dataLocale;
             return this;
@@ -298,6 +306,14 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder eventsOutOfOrderPolicy(Either<String,EventsOutOfOrderPolicy> eventsOutOfOrderPolicy) {
             return eventsOutOfOrderPolicy(Output.of(eventsOutOfOrderPolicy));
+        }
+
+        public Builder eventsOutOfOrderPolicy(String eventsOutOfOrderPolicy) {
+            return eventsOutOfOrderPolicy(Either.ofLeft(eventsOutOfOrderPolicy));
+        }
+
+        public Builder eventsOutOfOrderPolicy(EventsOutOfOrderPolicy eventsOutOfOrderPolicy) {
+            return eventsOutOfOrderPolicy(Either.ofRight(eventsOutOfOrderPolicy));
         }
 
         public Builder functions(@Nullable Output<List<FunctionArgs>> functions) {
@@ -353,6 +369,14 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
             return outputErrorPolicy(Output.of(outputErrorPolicy));
         }
 
+        public Builder outputErrorPolicy(String outputErrorPolicy) {
+            return outputErrorPolicy(Either.ofLeft(outputErrorPolicy));
+        }
+
+        public Builder outputErrorPolicy(OutputErrorPolicy outputErrorPolicy) {
+            return outputErrorPolicy(Either.ofRight(outputErrorPolicy));
+        }
+
         public Builder outputStartMode(@Nullable Output<Either<String,OutputStartMode>> outputStartMode) {
             $.outputStartMode = outputStartMode;
             return this;
@@ -360,6 +384,14 @@ public final class StreamingJobArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder outputStartMode(Either<String,OutputStartMode> outputStartMode) {
             return outputStartMode(Output.of(outputStartMode));
+        }
+
+        public Builder outputStartMode(String outputStartMode) {
+            return outputStartMode(Either.ofLeft(outputStartMode));
+        }
+
+        public Builder outputStartMode(OutputStartMode outputStartMode) {
+            return outputStartMode(Either.ofRight(outputStartMode));
         }
 
         public Builder outputStartTime(@Nullable Output<String> outputStartTime) {

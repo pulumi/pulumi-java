@@ -375,6 +375,14 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
             return apiType(Output.of(apiType));
         }
 
+        public Builder apiType(String apiType) {
+            return apiType(Either.ofLeft(apiType));
+        }
+
+        public Builder apiType(ApiType apiType) {
+            return apiType(Either.ofRight(apiType));
+        }
+
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
@@ -447,6 +455,14 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(ContentFormat format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder isCurrent(@Nullable Output<Boolean> isCurrent) {
             $.isCurrent = isCurrent;
             return this;
@@ -512,6 +528,14 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder soapApiType(Either<String,SoapApiType> soapApiType) {
             return soapApiType(Output.of(soapApiType));
+        }
+
+        public Builder soapApiType(String soapApiType) {
+            return soapApiType(Either.ofLeft(soapApiType));
+        }
+
+        public Builder soapApiType(SoapApiType soapApiType) {
+            return soapApiType(Either.ofRight(soapApiType));
         }
 
         public Builder sourceApiId(@Nullable Output<String> sourceApiId) {

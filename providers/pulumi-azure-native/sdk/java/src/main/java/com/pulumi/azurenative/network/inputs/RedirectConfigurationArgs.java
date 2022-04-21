@@ -184,6 +184,14 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
             return redirectProtocol(Output.of(redirectProtocol));
         }
 
+        public Builder redirectProtocol(String redirectProtocol) {
+            return redirectProtocol(Either.ofLeft(redirectProtocol));
+        }
+
+        public Builder redirectProtocol(FrontDoorRedirectProtocol redirectProtocol) {
+            return redirectProtocol(Either.ofRight(redirectProtocol));
+        }
+
         public Builder redirectType(@Nullable Output<Either<String,FrontDoorRedirectType>> redirectType) {
             $.redirectType = redirectType;
             return this;
@@ -191,6 +199,14 @@ public final class RedirectConfigurationArgs extends com.pulumi.resources.Resour
 
         public Builder redirectType(Either<String,FrontDoorRedirectType> redirectType) {
             return redirectType(Output.of(redirectType));
+        }
+
+        public Builder redirectType(String redirectType) {
+            return redirectType(Either.ofLeft(redirectType));
+        }
+
+        public Builder redirectType(FrontDoorRedirectType redirectType) {
+            return redirectType(Either.ofRight(redirectType));
         }
 
         public RedirectConfigurationArgs build() {

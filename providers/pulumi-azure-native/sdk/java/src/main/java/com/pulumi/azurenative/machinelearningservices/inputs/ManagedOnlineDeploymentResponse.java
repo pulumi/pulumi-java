@@ -289,6 +289,14 @@ public final class ManagedOnlineDeploymentResponse extends com.pulumi.resources.
             return this;
         }
 
+        public Builder scaleSettings(AutoScaleSettingsResponse scaleSettings) {
+            return scaleSettings(Either.ofLeft(scaleSettings));
+        }
+
+        public Builder scaleSettings(ManualScaleSettingsResponse scaleSettings) {
+            return scaleSettings(Either.ofRight(scaleSettings));
+        }
+
         public ManagedOnlineDeploymentResponse build() {
             $.endpointComputeType = Codegen.stringProp("endpointComputeType").arg($.endpointComputeType).require();
             $.provisioningState = Objects.requireNonNull($.provisioningState, "expected parameter 'provisioningState' to be non-null");

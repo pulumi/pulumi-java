@@ -196,6 +196,14 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
             return contentKeyLocation(Output.of(contentKeyLocation));
         }
 
+        public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs contentKeyLocation) {
+            return contentKeyLocation(Either.ofLeft(contentKeyLocation));
+        }
+
+        public Builder contentKeyLocation(ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs contentKeyLocation) {
+            return contentKeyLocation(Either.ofRight(contentKeyLocation));
+        }
+
         public Builder contentType(Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType) {
             $.contentType = contentType;
             return this;
@@ -203,6 +211,14 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
 
         public Builder contentType(Either<String,ContentKeyPolicyPlayReadyContentType> contentType) {
             return contentType(Output.of(contentType));
+        }
+
+        public Builder contentType(String contentType) {
+            return contentType(Either.ofLeft(contentType));
+        }
+
+        public Builder contentType(ContentKeyPolicyPlayReadyContentType contentType) {
+            return contentType(Either.ofRight(contentType));
         }
 
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -230,6 +246,14 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends com.pulumi.resou
 
         public Builder licenseType(Either<String,ContentKeyPolicyPlayReadyLicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
+        }
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(ContentKeyPolicyPlayReadyLicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
         }
 
         public Builder playRight(@Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight) {

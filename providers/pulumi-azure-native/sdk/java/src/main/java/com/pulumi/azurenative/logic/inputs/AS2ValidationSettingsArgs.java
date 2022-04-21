@@ -221,6 +221,14 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
+            return encryptionAlgorithm(Either.ofLeft(encryptionAlgorithm));
+        }
+
+        public Builder encryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
+            return encryptionAlgorithm(Either.ofRight(encryptionAlgorithm));
+        }
+
         public Builder interchangeDuplicatesValidityDays(Output<Integer> interchangeDuplicatesValidityDays) {
             $.interchangeDuplicatesValidityDays = interchangeDuplicatesValidityDays;
             return this;
@@ -255,6 +263,14 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
 
         public Builder signingAlgorithm(Either<String,SigningAlgorithm> signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
+        }
+
+        public Builder signingAlgorithm(String signingAlgorithm) {
+            return signingAlgorithm(Either.ofLeft(signingAlgorithm));
+        }
+
+        public Builder signingAlgorithm(SigningAlgorithm signingAlgorithm) {
+            return signingAlgorithm(Either.ofRight(signingAlgorithm));
         }
 
         public AS2ValidationSettingsArgs build() {

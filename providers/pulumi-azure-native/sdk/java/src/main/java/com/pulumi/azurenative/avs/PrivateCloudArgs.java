@@ -200,6 +200,14 @@ public final class PrivateCloudArgs extends com.pulumi.resources.ResourceArgs {
             return internet(Output.of(internet));
         }
 
+        public Builder internet(String internet) {
+            return internet(Either.ofLeft(internet));
+        }
+
+        public Builder internet(InternetEnum internet) {
+            return internet(Either.ofRight(internet));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

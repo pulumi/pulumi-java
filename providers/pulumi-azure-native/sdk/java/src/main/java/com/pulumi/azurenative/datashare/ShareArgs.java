@@ -148,6 +148,14 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
             return shareKind(Output.of(shareKind));
         }
 
+        public Builder shareKind(String shareKind) {
+            return shareKind(Either.ofLeft(shareKind));
+        }
+
+        public Builder shareKind(ShareKind shareKind) {
+            return shareKind(Either.ofRight(shareKind));
+        }
+
         public Builder shareName(@Nullable Output<String> shareName) {
             $.shareName = shareName;
             return this;

@@ -315,6 +315,14 @@ public final class H265LayerArgs extends com.pulumi.resources.ResourceArgs {
             return profile(Output.of(profile));
         }
 
+        public Builder profile(String profile) {
+            return profile(Either.ofLeft(profile));
+        }
+
+        public Builder profile(H265VideoProfile profile) {
+            return profile(Either.ofRight(profile));
+        }
+
         public Builder referenceFrames(@Nullable Output<Integer> referenceFrames) {
             $.referenceFrames = referenceFrames;
             return this;

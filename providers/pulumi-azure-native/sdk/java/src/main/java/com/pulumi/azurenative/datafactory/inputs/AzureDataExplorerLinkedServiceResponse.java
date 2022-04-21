@@ -233,6 +233,14 @@ public final class AzureDataExplorerLinkedServiceResponse extends com.pulumi.res
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder tenant(@Nullable Object tenant) {
             $.tenant = tenant;
             return this;

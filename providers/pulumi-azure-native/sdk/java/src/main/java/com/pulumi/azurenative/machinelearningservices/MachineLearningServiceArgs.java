@@ -172,6 +172,14 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
             return computeType(Output.of(computeType));
         }
 
+        public Builder computeType(String computeType) {
+            return computeType(Either.ofLeft(computeType));
+        }
+
+        public Builder computeType(ComputeEnvironmentType computeType) {
+            return computeType(Either.ofRight(computeType));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;

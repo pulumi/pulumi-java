@@ -132,6 +132,14 @@ public final class DeploymentScriptArgs extends com.pulumi.resources.ResourceArg
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(ScriptType kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

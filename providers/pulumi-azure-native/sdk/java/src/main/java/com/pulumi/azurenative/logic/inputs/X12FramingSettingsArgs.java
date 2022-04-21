@@ -138,6 +138,14 @@ public final class X12FramingSettingsArgs extends com.pulumi.resources.ResourceA
             return characterSet(Output.of(characterSet));
         }
 
+        public Builder characterSet(String characterSet) {
+            return characterSet(Either.ofLeft(characterSet));
+        }
+
+        public Builder characterSet(X12CharacterSet characterSet) {
+            return characterSet(Either.ofRight(characterSet));
+        }
+
         public Builder componentSeparator(Output<Integer> componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;

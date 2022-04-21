@@ -65,6 +65,14 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(IdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ResourceIdentityArgs build() {
             return $;
         }

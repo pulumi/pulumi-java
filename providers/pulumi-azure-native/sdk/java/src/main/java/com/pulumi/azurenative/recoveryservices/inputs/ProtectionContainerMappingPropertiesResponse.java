@@ -207,6 +207,14 @@ public final class ProtectionContainerMappingPropertiesResponse extends com.pulu
             return this;
         }
 
+        public Builder providerSpecificDetails(A2AProtectionContainerMappingDetailsResponse providerSpecificDetails) {
+            return providerSpecificDetails(Either.ofLeft(providerSpecificDetails));
+        }
+
+        public Builder providerSpecificDetails(VMwareCbtProtectionContainerMappingDetailsResponse providerSpecificDetails) {
+            return providerSpecificDetails(Either.ofRight(providerSpecificDetails));
+        }
+
         public Builder sourceFabricFriendlyName(@Nullable String sourceFabricFriendlyName) {
             $.sourceFabricFriendlyName = sourceFabricFriendlyName;
             return this;

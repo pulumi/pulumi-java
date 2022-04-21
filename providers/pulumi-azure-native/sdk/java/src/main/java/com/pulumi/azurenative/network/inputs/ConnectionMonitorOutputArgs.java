@@ -78,6 +78,14 @@ public final class ConnectionMonitorOutputArgs extends com.pulumi.resources.Reso
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(OutputType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder workspaceSettings(@Nullable Output<ConnectionMonitorWorkspaceSettingsArgs> workspaceSettings) {
             $.workspaceSettings = workspaceSettings;
             return this;

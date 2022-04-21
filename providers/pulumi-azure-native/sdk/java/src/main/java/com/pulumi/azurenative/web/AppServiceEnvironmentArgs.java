@@ -241,6 +241,14 @@ public final class AppServiceEnvironmentArgs extends com.pulumi.resources.Resour
             return internalLoadBalancingMode(Output.of(internalLoadBalancingMode));
         }
 
+        public Builder internalLoadBalancingMode(String internalLoadBalancingMode) {
+            return internalLoadBalancingMode(Either.ofLeft(internalLoadBalancingMode));
+        }
+
+        public Builder internalLoadBalancingMode(LoadBalancingMode internalLoadBalancingMode) {
+            return internalLoadBalancingMode(Either.ofRight(internalLoadBalancingMode));
+        }
+
         public Builder ipsslAddressCount(@Nullable Output<Integer> ipsslAddressCount) {
             $.ipsslAddressCount = ipsslAddressCount;
             return this;

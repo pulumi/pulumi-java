@@ -264,6 +264,14 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
             $.backupSetName = backupSetName;
             return this;
@@ -289,6 +297,14 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
 
         public Builder createMode(Either<String,CreateMode> createMode) {
             return createMode(Output.of(createMode));
+        }
+
+        public Builder createMode(String createMode) {
+            return createMode(Either.ofLeft(createMode));
+        }
+
+        public Builder createMode(CreateMode createMode) {
+            return createMode(Either.ofRight(createMode));
         }
 
         public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
@@ -390,6 +406,14 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
             return protectionState(Output.of(protectionState));
         }
 
+        public Builder protectionState(String protectionState) {
+            return protectionState(Either.ofLeft(protectionState));
+        }
+
+        public Builder protectionState(ProtectedItemState protectionState) {
+            return protectionState(Either.ofRight(protectionState));
+        }
+
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
@@ -406,6 +430,14 @@ public final class AzureSqlProtectedItemArgs extends com.pulumi.resources.Resour
 
         public Builder workloadType(Either<String,DataSourceType> workloadType) {
             return workloadType(Output.of(workloadType));
+        }
+
+        public Builder workloadType(String workloadType) {
+            return workloadType(Either.ofLeft(workloadType));
+        }
+
+        public Builder workloadType(DataSourceType workloadType) {
+            return workloadType(Either.ofRight(workloadType));
         }
 
         public AzureSqlProtectedItemArgs build() {

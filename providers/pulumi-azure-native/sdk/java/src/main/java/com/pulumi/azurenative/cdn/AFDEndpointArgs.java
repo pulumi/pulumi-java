@@ -135,6 +135,14 @@ public final class AFDEndpointArgs extends com.pulumi.resources.ResourceArgs {
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(EnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;

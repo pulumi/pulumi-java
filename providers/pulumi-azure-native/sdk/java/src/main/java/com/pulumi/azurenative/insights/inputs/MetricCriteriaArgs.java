@@ -217,6 +217,14 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(Operator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder skipMetricValidation(@Nullable Output<Boolean> skipMetricValidation) {
             $.skipMetricValidation = skipMetricValidation;
             return this;
@@ -242,6 +250,14 @@ public final class MetricCriteriaArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder timeAggregation(Either<String,AggregationTypeEnum> timeAggregation) {
             return timeAggregation(Output.of(timeAggregation));
+        }
+
+        public Builder timeAggregation(String timeAggregation) {
+            return timeAggregation(Either.ofLeft(timeAggregation));
+        }
+
+        public Builder timeAggregation(AggregationTypeEnum timeAggregation) {
+            return timeAggregation(Either.ofRight(timeAggregation));
         }
 
         public MetricCriteriaArgs build() {

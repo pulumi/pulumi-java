@@ -98,6 +98,14 @@ public final class AzureSqlProtectionPolicyResponse extends com.pulumi.resources
             return this;
         }
 
+        public Builder retentionPolicy(LongTermRetentionPolicyResponse retentionPolicy) {
+            return retentionPolicy(Either.ofLeft(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(SimpleRetentionPolicyResponse retentionPolicy) {
+            return retentionPolicy(Either.ofRight(retentionPolicy));
+        }
+
         public AzureSqlProtectionPolicyResponse build() {
             $.backupManagementType = Codegen.stringProp("backupManagementType").arg($.backupManagementType).require();
             return $;

@@ -120,6 +120,14 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
             return properties(Output.of(properties));
         }
 
+        public Builder properties(HealthCheckStepPropertiesArgs properties) {
+            return properties(Either.ofLeft(properties));
+        }
+
+        public Builder properties(WaitStepPropertiesArgs properties) {
+            return properties(Either.ofRight(properties));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

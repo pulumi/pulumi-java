@@ -203,6 +203,14 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
             return sessionAffinityState(Output.of(sessionAffinityState));
         }
 
+        public Builder sessionAffinityState(String sessionAffinityState) {
+            return sessionAffinityState(Either.ofLeft(sessionAffinityState));
+        }
+
+        public Builder sessionAffinityState(EnabledState sessionAffinityState) {
+            return sessionAffinityState(Either.ofRight(sessionAffinityState));
+        }
+
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;

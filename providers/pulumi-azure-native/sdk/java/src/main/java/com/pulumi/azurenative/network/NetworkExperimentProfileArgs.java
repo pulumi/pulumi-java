@@ -122,6 +122,14 @@ public final class NetworkExperimentProfileArgs extends com.pulumi.resources.Res
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(State enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

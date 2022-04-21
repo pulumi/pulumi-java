@@ -474,6 +474,14 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
             return securityStyle(Output.of(securityStyle));
         }
 
+        public Builder securityStyle(String securityStyle) {
+            return securityStyle(Either.ofLeft(securityStyle));
+        }
+
+        public Builder securityStyle(SecurityStyle securityStyle) {
+            return securityStyle(Either.ofRight(securityStyle));
+        }
+
         public Builder serviceLevel(@Nullable Output<Either<String,ServiceLevel>> serviceLevel) {
             $.serviceLevel = serviceLevel;
             return this;
@@ -481,6 +489,14 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
             return serviceLevel(Output.of(serviceLevel));
+        }
+
+        public Builder serviceLevel(String serviceLevel) {
+            return serviceLevel(Either.ofLeft(serviceLevel));
+        }
+
+        public Builder serviceLevel(ServiceLevel serviceLevel) {
+            return serviceLevel(Either.ofRight(serviceLevel));
         }
 
         public Builder smbContinuouslyAvailable(@Nullable Output<Boolean> smbContinuouslyAvailable) {

@@ -475,6 +475,14 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
             return licenseType(Output.of(licenseType));
         }
 
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(ManagedInstanceLicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
@@ -500,6 +508,14 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder managedInstanceCreateMode(Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
             return managedInstanceCreateMode(Output.of(managedInstanceCreateMode));
+        }
+
+        public Builder managedInstanceCreateMode(String managedInstanceCreateMode) {
+            return managedInstanceCreateMode(Either.ofLeft(managedInstanceCreateMode));
+        }
+
+        public Builder managedInstanceCreateMode(ManagedServerCreateMode managedInstanceCreateMode) {
+            return managedInstanceCreateMode(Either.ofRight(managedInstanceCreateMode));
         }
 
         public Builder managedInstanceName(@Nullable Output<String> managedInstanceName) {
@@ -536,6 +552,14 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder proxyOverride(Either<String,ManagedInstanceProxyOverride> proxyOverride) {
             return proxyOverride(Output.of(proxyOverride));
+        }
+
+        public Builder proxyOverride(String proxyOverride) {
+            return proxyOverride(Either.ofLeft(proxyOverride));
+        }
+
+        public Builder proxyOverride(ManagedInstanceProxyOverride proxyOverride) {
+            return proxyOverride(Either.ofRight(proxyOverride));
         }
 
         public Builder publicDataEndpointEnabled(@Nullable Output<Boolean> publicDataEndpointEnabled) {
@@ -590,6 +614,14 @@ public final class ManagedInstanceArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder storageAccountType(Either<String,StorageAccountType> storageAccountType) {
             return storageAccountType(Output.of(storageAccountType));
+        }
+
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(StorageAccountType storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
         }
 
         public Builder storageSizeInGB(@Nullable Output<Integer> storageSizeInGB) {

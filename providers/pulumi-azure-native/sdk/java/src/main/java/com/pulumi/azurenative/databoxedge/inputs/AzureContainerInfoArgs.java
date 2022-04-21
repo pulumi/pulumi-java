@@ -96,6 +96,14 @@ public final class AzureContainerInfoArgs extends com.pulumi.resources.ResourceA
             return dataFormat(Output.of(dataFormat));
         }
 
+        public Builder dataFormat(String dataFormat) {
+            return dataFormat(Either.ofLeft(dataFormat));
+        }
+
+        public Builder dataFormat(AzureContainerDataFormat dataFormat) {
+            return dataFormat(Either.ofRight(dataFormat));
+        }
+
         public Builder storageAccountCredentialId(Output<String> storageAccountCredentialId) {
             $.storageAccountCredentialId = storageAccountCredentialId;
             return this;

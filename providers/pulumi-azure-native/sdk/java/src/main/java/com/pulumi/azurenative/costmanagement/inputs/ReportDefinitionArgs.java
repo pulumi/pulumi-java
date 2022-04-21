@@ -122,6 +122,14 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
             return timeframe(Output.of(timeframe));
         }
 
+        public Builder timeframe(String timeframe) {
+            return timeframe(Either.ofLeft(timeframe));
+        }
+
+        public Builder timeframe(TimeframeType timeframe) {
+            return timeframe(Either.ofRight(timeframe));
+        }
+
         public Builder type(Output<Either<String,ReportType>> type) {
             $.type = type;
             return this;
@@ -129,6 +137,14 @@ public final class ReportDefinitionArgs extends com.pulumi.resources.ResourceArg
 
         public Builder type(Either<String,ReportType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ReportType type) {
+            return type(Either.ofRight(type));
         }
 
         public ReportDefinitionArgs build() {

@@ -233,6 +233,14 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
             return credential(Output.of(credential));
         }
 
+        public Builder credential(AzureKeyVaultSecretReferenceArgs credential) {
+            return credential(Either.ofLeft(credential));
+        }
+
+        public Builder credential(SecureStringArgs credential) {
+            return credential(Either.ofRight(credential));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -267,6 +275,14 @@ public final class MicrosoftAccessLinkedServiceArgs extends com.pulumi.resources
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder type(Output<String> type) {

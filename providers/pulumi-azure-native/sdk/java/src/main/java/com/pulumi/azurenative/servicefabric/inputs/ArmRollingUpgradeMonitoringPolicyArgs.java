@@ -125,6 +125,14 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends com.pulumi.reso
             return failureAction(Output.of(failureAction));
         }
 
+        public Builder failureAction(String failureAction) {
+            return failureAction(Either.ofLeft(failureAction));
+        }
+
+        public Builder failureAction(ArmUpgradeFailureAction failureAction) {
+            return failureAction(Either.ofRight(failureAction));
+        }
+
         public Builder healthCheckRetryTimeout(@Nullable Output<String> healthCheckRetryTimeout) {
             $.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;

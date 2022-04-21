@@ -92,6 +92,14 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
             return dataType(Output.of(dataType));
         }
 
+        public Builder dataType(String dataType) {
+            return dataType(Either.ofLeft(dataType));
+        }
+
+        public Builder dataType(DataType dataType) {
+            return dataType(Either.ofRight(dataType));
+        }
+
         public Builder kind(@Nullable Output<Either<String,IndexKind>> kind) {
             $.kind = kind;
             return this;
@@ -99,6 +107,14 @@ public final class IndexesArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder kind(Either<String,IndexKind> kind) {
             return kind(Output.of(kind));
+        }
+
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(IndexKind kind) {
+            return kind(Either.ofRight(kind));
         }
 
         public Builder precision(@Nullable Output<Integer> precision) {

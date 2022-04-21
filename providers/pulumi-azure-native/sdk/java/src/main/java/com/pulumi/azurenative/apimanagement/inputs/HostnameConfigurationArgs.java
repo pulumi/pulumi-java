@@ -236,6 +236,14 @@ public final class HostnameConfigurationArgs extends com.pulumi.resources.Resour
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(HostnameType type) {
+            return type(Either.ofRight(type));
+        }
+
         public HostnameConfigurationArgs build() {
             $.defaultSslBinding = Codegen.booleanProp("defaultSslBinding").output().arg($.defaultSslBinding).def(false).getNullable();
             $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");

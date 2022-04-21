@@ -80,6 +80,14 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends com.pul
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PrivateLinkServiceConnectionStateStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public PrivateLinkServiceConnectionStatePropertyArgs build() {
             $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
             $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");

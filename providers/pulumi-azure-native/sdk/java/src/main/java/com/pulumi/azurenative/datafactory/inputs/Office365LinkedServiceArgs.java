@@ -248,6 +248,14 @@ public final class Office365LinkedServiceArgs extends com.pulumi.resources.Resou
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder servicePrincipalTenantId(Output<Object> servicePrincipalTenantId) {
             $.servicePrincipalTenantId = servicePrincipalTenantId;
             return this;

@@ -290,6 +290,14 @@ public final class MongoDbLinkedServiceResponse extends com.pulumi.resources.Inv
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;

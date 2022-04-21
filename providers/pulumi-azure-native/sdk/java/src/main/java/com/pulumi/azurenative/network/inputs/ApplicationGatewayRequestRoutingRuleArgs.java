@@ -247,6 +247,14 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends com.pulumi.r
             return ruleType(Output.of(ruleType));
         }
 
+        public Builder ruleType(String ruleType) {
+            return ruleType(Either.ofLeft(ruleType));
+        }
+
+        public Builder ruleType(ApplicationGatewayRequestRoutingRuleType ruleType) {
+            return ruleType(Either.ofRight(ruleType));
+        }
+
         public Builder urlPathMap(@Nullable Output<SubResourceArgs> urlPathMap) {
             $.urlPathMap = urlPathMap;
             return this;

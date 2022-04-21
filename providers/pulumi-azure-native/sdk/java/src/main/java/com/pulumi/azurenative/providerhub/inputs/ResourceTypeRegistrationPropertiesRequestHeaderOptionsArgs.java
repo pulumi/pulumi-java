@@ -57,6 +57,14 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
             return optInHeaders(Output.of(optInHeaders));
         }
 
+        public Builder optInHeaders(String optInHeaders) {
+            return optInHeaders(Either.ofLeft(optInHeaders));
+        }
+
+        public Builder optInHeaders(OptInHeaderType optInHeaders) {
+            return optInHeaders(Either.ofRight(optInHeaders));
+        }
+
         public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs build() {
             return $;
         }

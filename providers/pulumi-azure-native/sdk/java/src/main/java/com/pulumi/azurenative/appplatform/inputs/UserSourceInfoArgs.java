@@ -120,6 +120,14 @@ public final class UserSourceInfoArgs extends com.pulumi.resources.ResourceArgs 
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(UserSourceType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;

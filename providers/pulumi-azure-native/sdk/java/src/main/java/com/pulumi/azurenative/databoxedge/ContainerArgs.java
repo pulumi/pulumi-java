@@ -118,6 +118,14 @@ public final class ContainerArgs extends com.pulumi.resources.ResourceArgs {
             return dataFormat(Output.of(dataFormat));
         }
 
+        public Builder dataFormat(String dataFormat) {
+            return dataFormat(Either.ofLeft(dataFormat));
+        }
+
+        public Builder dataFormat(AzureContainerDataFormat dataFormat) {
+            return dataFormat(Either.ofRight(dataFormat));
+        }
+
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;

@@ -101,6 +101,14 @@ public final class StorageEndpointPropertiesArgs extends com.pulumi.resources.Re
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(AuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder connectionString(Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;

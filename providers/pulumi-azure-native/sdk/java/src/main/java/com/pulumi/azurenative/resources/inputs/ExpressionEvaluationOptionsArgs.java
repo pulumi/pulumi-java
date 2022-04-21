@@ -65,6 +65,14 @@ public final class ExpressionEvaluationOptionsArgs extends com.pulumi.resources.
             return scope(Output.of(scope));
         }
 
+        public Builder scope(String scope) {
+            return scope(Either.ofLeft(scope));
+        }
+
+        public Builder scope(ExpressionEvaluationOptionsScopeType scope) {
+            return scope(Either.ofRight(scope));
+        }
+
         public ExpressionEvaluationOptionsArgs build() {
             return $;
         }

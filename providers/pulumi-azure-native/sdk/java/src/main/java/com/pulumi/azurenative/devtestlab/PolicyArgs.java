@@ -205,6 +205,14 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
             return evaluatorType(Output.of(evaluatorType));
         }
 
+        public Builder evaluatorType(String evaluatorType) {
+            return evaluatorType(Either.ofLeft(evaluatorType));
+        }
+
+        public Builder evaluatorType(PolicyEvaluatorType evaluatorType) {
+            return evaluatorType(Either.ofRight(evaluatorType));
+        }
+
         public Builder factData(@Nullable Output<String> factData) {
             $.factData = factData;
             return this;
@@ -221,6 +229,14 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder factName(Either<String,PolicyFactName> factName) {
             return factName(Output.of(factName));
+        }
+
+        public Builder factName(String factName) {
+            return factName(Either.ofLeft(factName));
+        }
+
+        public Builder factName(PolicyFactName factName) {
+            return factName(Either.ofRight(factName));
         }
 
         public Builder labName(Output<String> labName) {
@@ -275,6 +291,14 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder status(Either<String,PolicyStatus> status) {
             return status(Output.of(status));
+        }
+
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PolicyStatus status) {
+            return status(Either.ofRight(status));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

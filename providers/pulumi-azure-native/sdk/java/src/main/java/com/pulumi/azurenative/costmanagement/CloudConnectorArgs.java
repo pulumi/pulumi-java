@@ -157,6 +157,14 @@ public final class CloudConnectorArgs extends com.pulumi.resources.ResourceArgs 
             return billingModel(Output.of(billingModel));
         }
 
+        public Builder billingModel(String billingModel) {
+            return billingModel(Either.ofLeft(billingModel));
+        }
+
+        public Builder billingModel(ConnectorBillingModel billingModel) {
+            return billingModel(Either.ofRight(billingModel));
+        }
+
         public Builder connectorName(@Nullable Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;

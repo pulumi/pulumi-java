@@ -77,6 +77,14 @@ public final class EventSubscriptionIdentityArgs extends com.pulumi.resources.Re
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(EventSubscriptionIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

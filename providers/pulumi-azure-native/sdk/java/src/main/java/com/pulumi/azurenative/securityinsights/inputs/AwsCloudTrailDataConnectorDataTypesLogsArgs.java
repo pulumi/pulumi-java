@@ -65,6 +65,14 @@ public final class AwsCloudTrailDataConnectorDataTypesLogsArgs extends com.pulum
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(DataTypeState state) {
+            return state(Either.ofRight(state));
+        }
+
         public AwsCloudTrailDataConnectorDataTypesLogsArgs build() {
             return $;
         }

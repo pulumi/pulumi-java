@@ -181,6 +181,14 @@ public final class IntegrationAccountArgs extends com.pulumi.resources.ResourceA
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(WorkflowState state) {
+            return state(Either.ofRight(state));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

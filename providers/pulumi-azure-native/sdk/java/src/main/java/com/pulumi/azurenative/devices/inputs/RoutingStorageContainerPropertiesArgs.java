@@ -198,6 +198,14 @@ public final class RoutingStorageContainerPropertiesArgs extends com.pulumi.reso
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(AuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder batchFrequencyInSeconds(@Nullable Output<Integer> batchFrequencyInSeconds) {
             $.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;

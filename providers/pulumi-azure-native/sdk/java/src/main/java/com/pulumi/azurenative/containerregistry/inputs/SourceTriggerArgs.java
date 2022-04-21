@@ -136,6 +136,14 @@ public final class SourceTriggerArgs extends com.pulumi.resources.ResourceArgs {
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(TriggerStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public SourceTriggerArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             $.sourceRepository = Objects.requireNonNull($.sourceRepository, "expected parameter 'sourceRepository' to be non-null");

@@ -203,6 +203,14 @@ public final class RoleAssignmentArgs extends com.pulumi.resources.ResourceArgs 
             return principalType(Output.of(principalType));
         }
 
+        public Builder principalType(String principalType) {
+            return principalType(Either.ofLeft(principalType));
+        }
+
+        public Builder principalType(PrincipalType principalType) {
+            return principalType(Either.ofRight(principalType));
+        }
+
         public Builder roleAssignmentName(@Nullable Output<String> roleAssignmentName) {
             $.roleAssignmentName = roleAssignmentName;
             return this;

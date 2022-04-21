@@ -83,6 +83,14 @@ public final class AccountEncryptionArgs extends com.pulumi.resources.ResourceAr
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AccountEncryptionKeyType type) {
+            return type(Either.ofRight(type));
+        }
+
         public AccountEncryptionArgs build() {
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
             return $;

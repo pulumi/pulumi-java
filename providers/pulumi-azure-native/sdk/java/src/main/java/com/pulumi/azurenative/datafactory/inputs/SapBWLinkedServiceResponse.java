@@ -222,6 +222,14 @@ public final class SapBWLinkedServiceResponse extends com.pulumi.resources.Invok
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder server(Object server) {
             $.server = server;
             return this;

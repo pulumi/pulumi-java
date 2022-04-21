@@ -227,6 +227,14 @@ public final class SaasCreationPropertiesArgs extends com.pulumi.resources.Resou
             return paymentChannelType(Output.of(paymentChannelType));
         }
 
+        public Builder paymentChannelType(String paymentChannelType) {
+            return paymentChannelType(Either.ofLeft(paymentChannelType));
+        }
+
+        public Builder paymentChannelType(PaymentChannelType paymentChannelType) {
+            return paymentChannelType(Either.ofRight(paymentChannelType));
+        }
+
         public Builder publisherId(@Nullable Output<String> publisherId) {
             $.publisherId = publisherId;
             return this;

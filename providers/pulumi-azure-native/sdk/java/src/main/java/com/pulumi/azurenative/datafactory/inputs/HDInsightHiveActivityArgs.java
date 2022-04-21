@@ -287,6 +287,14 @@ public final class HDInsightHiveActivityArgs extends com.pulumi.resources.Resour
             return getDebugInfo(Output.of(getDebugInfo));
         }
 
+        public Builder getDebugInfo(String getDebugInfo) {
+            return getDebugInfo(Either.ofLeft(getDebugInfo));
+        }
+
+        public Builder getDebugInfo(HDInsightActivityDebugInfoOption getDebugInfo) {
+            return getDebugInfo(Either.ofRight(getDebugInfo));
+        }
+
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;

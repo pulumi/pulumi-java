@@ -133,6 +133,14 @@ public final class CommitmentPlanPropertiesArgs extends com.pulumi.resources.Res
             return hostingModel(Output.of(hostingModel));
         }
 
+        public Builder hostingModel(String hostingModel) {
+            return hostingModel(Either.ofLeft(hostingModel));
+        }
+
+        public Builder hostingModel(HostingModel hostingModel) {
+            return hostingModel(Either.ofRight(hostingModel));
+        }
+
         public Builder next(@Nullable Output<CommitmentPeriodArgs> next) {
             $.next = next;
             return this;

@@ -276,6 +276,14 @@ public final class IntegrationAccountSchemaArgs extends com.pulumi.resources.Res
             return schemaType(Output.of(schemaType));
         }
 
+        public Builder schemaType(String schemaType) {
+            return schemaType(Either.ofLeft(schemaType));
+        }
+
+        public Builder schemaType(SchemaType schemaType) {
+            return schemaType(Either.ofRight(schemaType));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

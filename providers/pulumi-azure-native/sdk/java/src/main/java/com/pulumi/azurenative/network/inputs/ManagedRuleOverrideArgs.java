@@ -86,6 +86,14 @@ public final class ManagedRuleOverrideArgs extends com.pulumi.resources.Resource
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(ManagedRuleEnabledState state) {
+            return state(Either.ofRight(state));
+        }
+
         public ManagedRuleOverrideArgs build() {
             $.ruleId = Objects.requireNonNull($.ruleId, "expected parameter 'ruleId' to be non-null");
             return $;

@@ -78,6 +78,14 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(PublicIPAddressSkuName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(@Nullable Output<Either<String,PublicIPAddressSkuTier>> tier) {
             $.tier = tier;
             return this;
@@ -85,6 +93,14 @@ public final class PublicIPAddressSkuArgs extends com.pulumi.resources.ResourceA
 
         public Builder tier(Either<String,PublicIPAddressSkuTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(PublicIPAddressSkuTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public PublicIPAddressSkuArgs build() {

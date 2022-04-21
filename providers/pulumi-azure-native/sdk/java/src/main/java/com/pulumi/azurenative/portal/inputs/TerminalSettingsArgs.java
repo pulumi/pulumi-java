@@ -78,6 +78,14 @@ public final class TerminalSettingsArgs extends com.pulumi.resources.ResourceArg
             return fontSize(Output.of(fontSize));
         }
 
+        public Builder fontSize(String fontSize) {
+            return fontSize(Either.ofLeft(fontSize));
+        }
+
+        public Builder fontSize(FontSize fontSize) {
+            return fontSize(Either.ofRight(fontSize));
+        }
+
         public Builder fontStyle(@Nullable Output<Either<String,FontStyle>> fontStyle) {
             $.fontStyle = fontStyle;
             return this;
@@ -85,6 +93,14 @@ public final class TerminalSettingsArgs extends com.pulumi.resources.ResourceArg
 
         public Builder fontStyle(Either<String,FontStyle> fontStyle) {
             return fontStyle(Output.of(fontStyle));
+        }
+
+        public Builder fontStyle(String fontStyle) {
+            return fontStyle(Either.ofLeft(fontStyle));
+        }
+
+        public Builder fontStyle(FontStyle fontStyle) {
+            return fontStyle(Either.ofRight(fontStyle));
         }
 
         public TerminalSettingsArgs build() {

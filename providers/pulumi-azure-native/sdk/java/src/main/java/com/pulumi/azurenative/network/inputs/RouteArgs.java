@@ -183,6 +183,14 @@ public final class RouteArgs extends com.pulumi.resources.ResourceArgs {
             return nextHopType(Output.of(nextHopType));
         }
 
+        public Builder nextHopType(String nextHopType) {
+            return nextHopType(Either.ofLeft(nextHopType));
+        }
+
+        public Builder nextHopType(RouteNextHopType nextHopType) {
+            return nextHopType(Either.ofRight(nextHopType));
+        }
+
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;

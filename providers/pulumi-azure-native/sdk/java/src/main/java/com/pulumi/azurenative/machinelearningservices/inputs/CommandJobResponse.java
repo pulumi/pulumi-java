@@ -357,6 +357,14 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder identity(AmlTokenResponse identity) {
+            return identity(Either.ofLeft(identity));
+        }
+
+        public Builder identity(ManagedIdentityResponse identity) {
+            return identity(Either.ofRight(identity));
+        }
+
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             $.inputDataBindings = inputDataBindings;
             return this;

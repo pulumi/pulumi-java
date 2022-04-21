@@ -87,6 +87,14 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        public Builder accountDetails(ManagedDiskDetailsResponse accountDetails) {
+            return accountDetails(Either.ofLeft(accountDetails));
+        }
+
+        public Builder accountDetails(StorageAccountDetailsResponse accountDetails) {
+            return accountDetails(Either.ofRight(accountDetails));
+        }
+
         public Builder logCollectionLevel(@Nullable String logCollectionLevel) {
             $.logCollectionLevel = logCollectionLevel;
             return this;

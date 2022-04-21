@@ -78,6 +78,14 @@ public final class StoredProcedureParameterArgs extends com.pulumi.resources.Res
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(StoredProcedureParameterType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;

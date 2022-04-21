@@ -110,6 +110,14 @@ public final class StorageSyncServiceArgs extends com.pulumi.resources.ResourceA
             return incomingTrafficPolicy(Output.of(incomingTrafficPolicy));
         }
 
+        public Builder incomingTrafficPolicy(String incomingTrafficPolicy) {
+            return incomingTrafficPolicy(Either.ofLeft(incomingTrafficPolicy));
+        }
+
+        public Builder incomingTrafficPolicy(IncomingTrafficPolicy incomingTrafficPolicy) {
+            return incomingTrafficPolicy(Either.ofRight(incomingTrafficPolicy));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

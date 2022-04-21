@@ -109,6 +109,14 @@ public final class TriggerConditionArgs extends com.pulumi.resources.ResourceArg
             return thresholdOperator(Output.of(thresholdOperator));
         }
 
+        public Builder thresholdOperator(String thresholdOperator) {
+            return thresholdOperator(Either.ofLeft(thresholdOperator));
+        }
+
+        public Builder thresholdOperator(ConditionalOperator thresholdOperator) {
+            return thresholdOperator(Either.ofRight(thresholdOperator));
+        }
+
         public TriggerConditionArgs build() {
             $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
             $.thresholdOperator = Objects.requireNonNull($.thresholdOperator, "expected parameter 'thresholdOperator' to be non-null");

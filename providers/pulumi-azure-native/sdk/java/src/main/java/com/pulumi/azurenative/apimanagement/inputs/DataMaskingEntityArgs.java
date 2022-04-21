@@ -73,6 +73,14 @@ public final class DataMaskingEntityArgs extends com.pulumi.resources.ResourceAr
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(DataMaskingMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;

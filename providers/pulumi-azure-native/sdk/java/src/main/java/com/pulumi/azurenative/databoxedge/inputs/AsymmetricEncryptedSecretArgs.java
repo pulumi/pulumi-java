@@ -89,6 +89,14 @@ public final class AsymmetricEncryptedSecretArgs extends com.pulumi.resources.Re
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
+            return encryptionAlgorithm(Either.ofLeft(encryptionAlgorithm));
+        }
+
+        public Builder encryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
+            return encryptionAlgorithm(Either.ofRight(encryptionAlgorithm));
+        }
+
         public Builder encryptionCertThumbprint(@Nullable Output<String> encryptionCertThumbprint) {
             $.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;

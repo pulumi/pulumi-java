@@ -105,6 +105,14 @@ public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceA
             return bypass(Output.of(bypass));
         }
 
+        public Builder bypass(String bypass) {
+            return bypass(Either.ofLeft(bypass));
+        }
+
+        public Builder bypass(NetworkRuleBypassOptions bypass) {
+            return bypass(Either.ofRight(bypass));
+        }
+
         public Builder defaultAction(@Nullable Output<Either<String,NetworkRuleAction>> defaultAction) {
             $.defaultAction = defaultAction;
             return this;
@@ -112,6 +120,14 @@ public final class MHSMNetworkRuleSetArgs extends com.pulumi.resources.ResourceA
 
         public Builder defaultAction(Either<String,NetworkRuleAction> defaultAction) {
             return defaultAction(Output.of(defaultAction));
+        }
+
+        public Builder defaultAction(String defaultAction) {
+            return defaultAction(Either.ofLeft(defaultAction));
+        }
+
+        public Builder defaultAction(NetworkRuleAction defaultAction) {
+            return defaultAction(Either.ofRight(defaultAction));
         }
 
         public Builder ipRules(@Nullable Output<List<MHSMIPRuleArgs>> ipRules) {

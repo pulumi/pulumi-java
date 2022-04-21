@@ -130,6 +130,14 @@ public final class RequestMethodMatchConditionParametersArgs extends com.pulumi.
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(RequestMethodOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public RequestMethodMatchConditionParametersArgs build() {
             $.odataType = Objects.requireNonNull($.odataType, "expected parameter 'odataType' to be non-null");
             $.operator = Objects.requireNonNull($.operator, "expected parameter 'operator' to be non-null");

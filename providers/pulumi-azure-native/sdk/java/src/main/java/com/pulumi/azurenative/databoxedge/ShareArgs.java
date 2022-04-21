@@ -201,6 +201,14 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
             return accessProtocol(Output.of(accessProtocol));
         }
 
+        public Builder accessProtocol(String accessProtocol) {
+            return accessProtocol(Either.ofLeft(accessProtocol));
+        }
+
+        public Builder accessProtocol(ShareAccessProtocol accessProtocol) {
+            return accessProtocol(Either.ofRight(accessProtocol));
+        }
+
         public Builder azureContainerInfo(@Nullable Output<AzureContainerInfoArgs> azureContainerInfo) {
             $.azureContainerInfo = azureContainerInfo;
             return this;
@@ -232,6 +240,14 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
             return dataPolicy(Output.of(dataPolicy));
         }
 
+        public Builder dataPolicy(String dataPolicy) {
+            return dataPolicy(Either.ofLeft(dataPolicy));
+        }
+
+        public Builder dataPolicy(DataPolicy dataPolicy) {
+            return dataPolicy(Either.ofRight(dataPolicy));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -257,6 +273,14 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             return monitoringStatus(Output.of(monitoringStatus));
+        }
+
+        public Builder monitoringStatus(String monitoringStatus) {
+            return monitoringStatus(Either.ofLeft(monitoringStatus));
+        }
+
+        public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
+            return monitoringStatus(Either.ofRight(monitoringStatus));
         }
 
         public Builder name(@Nullable Output<String> name) {
@@ -293,6 +317,14 @@ public final class ShareArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder shareStatus(Either<String,ShareStatus> shareStatus) {
             return shareStatus(Output.of(shareStatus));
+        }
+
+        public Builder shareStatus(String shareStatus) {
+            return shareStatus(Either.ofLeft(shareStatus));
+        }
+
+        public Builder shareStatus(ShareStatus shareStatus) {
+            return shareStatus(Either.ofRight(shareStatus));
         }
 
         public Builder userAccessRights(@Nullable Output<List<UserAccessRightArgs>> userAccessRights) {

@@ -103,6 +103,14 @@ public final class WebBasicAuthenticationResponse extends com.pulumi.resources.I
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder url(Object url) {
             $.url = url;
             return this;

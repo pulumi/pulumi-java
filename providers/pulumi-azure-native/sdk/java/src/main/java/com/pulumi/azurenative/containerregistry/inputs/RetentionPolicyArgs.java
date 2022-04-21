@@ -88,6 +88,14 @@ public final class RetentionPolicyArgs extends com.pulumi.resources.ResourceArgs
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PolicyStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public RetentionPolicyArgs build() {
             $.days = Codegen.integerProp("days").output().arg($.days).def(7).getNullable();
             $.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg($.status).def("disabled").getNullable();

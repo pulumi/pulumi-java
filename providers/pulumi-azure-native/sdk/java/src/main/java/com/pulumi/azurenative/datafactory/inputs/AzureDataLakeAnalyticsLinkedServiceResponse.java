@@ -261,6 +261,14 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse extends com.pulum
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder subscriptionId(@Nullable Object subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

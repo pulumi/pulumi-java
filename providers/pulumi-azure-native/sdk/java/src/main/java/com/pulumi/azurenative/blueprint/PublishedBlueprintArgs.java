@@ -223,6 +223,14 @@ public final class PublishedBlueprintArgs extends com.pulumi.resources.ResourceA
             return targetScope(Output.of(targetScope));
         }
 
+        public Builder targetScope(String targetScope) {
+            return targetScope(Either.ofLeft(targetScope));
+        }
+
+        public Builder targetScope(BlueprintTargetScope targetScope) {
+            return targetScope(Either.ofRight(targetScope));
+        }
+
         public Builder versionId(@Nullable Output<String> versionId) {
             $.versionId = versionId;
             return this;

@@ -85,6 +85,14 @@ public final class GpuResourceArgs extends com.pulumi.resources.ResourceArgs {
             return sku(Output.of(sku));
         }
 
+        public Builder sku(String sku) {
+            return sku(Either.ofLeft(sku));
+        }
+
+        public Builder sku(GpuSku sku) {
+            return sku(Either.ofRight(sku));
+        }
+
         public GpuResourceArgs build() {
             $.count = Objects.requireNonNull($.count, "expected parameter 'count' to be non-null");
             $.sku = Objects.requireNonNull($.sku, "expected parameter 'sku' to be non-null");

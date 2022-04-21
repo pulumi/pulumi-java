@@ -118,6 +118,14 @@ public final class EntityQueryArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(CustomEntityQueryKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;

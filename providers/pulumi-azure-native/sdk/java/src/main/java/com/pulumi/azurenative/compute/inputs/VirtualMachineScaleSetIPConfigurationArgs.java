@@ -257,6 +257,14 @@ public final class VirtualMachineScaleSetIPConfigurationArgs extends com.pulumi.
             return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
 
+        public Builder privateIPAddressVersion(String privateIPAddressVersion) {
+            return privateIPAddressVersion(Either.ofLeft(privateIPAddressVersion));
+        }
+
+        public Builder privateIPAddressVersion(IPVersion privateIPAddressVersion) {
+            return privateIPAddressVersion(Either.ofRight(privateIPAddressVersion));
+        }
+
         public Builder publicIPAddressConfiguration(@Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationArgs> publicIPAddressConfiguration) {
             $.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;

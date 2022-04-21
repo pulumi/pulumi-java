@@ -65,6 +65,14 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends com.pulumi.resou
             return upgradeChannel(Output.of(upgradeChannel));
         }
 
+        public Builder upgradeChannel(String upgradeChannel) {
+            return upgradeChannel(Either.ofLeft(upgradeChannel));
+        }
+
+        public Builder upgradeChannel(UpgradeChannel upgradeChannel) {
+            return upgradeChannel(Either.ofRight(upgradeChannel));
+        }
+
         public ManagedClusterAutoUpgradeProfileArgs build() {
             return $;
         }

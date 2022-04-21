@@ -78,6 +78,14 @@ public final class MigrateProjectPropertiesArgs extends com.pulumi.resources.Res
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder registeredTools(@Nullable Output<List<String>> registeredTools) {
             $.registeredTools = registeredTools;
             return this;

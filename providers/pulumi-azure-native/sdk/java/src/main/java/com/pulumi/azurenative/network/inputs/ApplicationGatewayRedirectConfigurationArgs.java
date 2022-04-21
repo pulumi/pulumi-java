@@ -225,6 +225,14 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends com.pulum
             return redirectType(Output.of(redirectType));
         }
 
+        public Builder redirectType(String redirectType) {
+            return redirectType(Either.ofLeft(redirectType));
+        }
+
+        public Builder redirectType(ApplicationGatewayRedirectType redirectType) {
+            return redirectType(Either.ofRight(redirectType));
+        }
+
         public Builder requestRoutingRules(@Nullable Output<List<SubResourceArgs>> requestRoutingRules) {
             $.requestRoutingRules = requestRoutingRules;
             return this;

@@ -117,6 +117,14 @@ public final class GetOnlineDeploymentLogsArgs extends com.pulumi.resources.Invo
             return this;
         }
 
+        public Builder containerType(String containerType) {
+            return containerType(Either.ofLeft(containerType));
+        }
+
+        public Builder containerType(ContainerType containerType) {
+            return containerType(Either.ofRight(containerType));
+        }
+
         public Builder deploymentName(String deploymentName) {
             $.deploymentName = deploymentName;
             return this;

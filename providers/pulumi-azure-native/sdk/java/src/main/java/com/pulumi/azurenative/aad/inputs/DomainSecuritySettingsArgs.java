@@ -144,6 +144,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
             return kerberosArmoring(Output.of(kerberosArmoring));
         }
 
+        public Builder kerberosArmoring(String kerberosArmoring) {
+            return kerberosArmoring(Either.ofLeft(kerberosArmoring));
+        }
+
+        public Builder kerberosArmoring(KerberosArmoring kerberosArmoring) {
+            return kerberosArmoring(Either.ofRight(kerberosArmoring));
+        }
+
         public Builder kerberosRc4Encryption(@Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption) {
             $.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
@@ -151,6 +159,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
 
         public Builder kerberosRc4Encryption(Either<String,KerberosRc4Encryption> kerberosRc4Encryption) {
             return kerberosRc4Encryption(Output.of(kerberosRc4Encryption));
+        }
+
+        public Builder kerberosRc4Encryption(String kerberosRc4Encryption) {
+            return kerberosRc4Encryption(Either.ofLeft(kerberosRc4Encryption));
+        }
+
+        public Builder kerberosRc4Encryption(KerberosRc4Encryption kerberosRc4Encryption) {
+            return kerberosRc4Encryption(Either.ofRight(kerberosRc4Encryption));
         }
 
         public Builder ntlmV1(@Nullable Output<Either<String,NtlmV1>> ntlmV1) {
@@ -162,6 +178,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
             return ntlmV1(Output.of(ntlmV1));
         }
 
+        public Builder ntlmV1(String ntlmV1) {
+            return ntlmV1(Either.ofLeft(ntlmV1));
+        }
+
+        public Builder ntlmV1(NtlmV1 ntlmV1) {
+            return ntlmV1(Either.ofRight(ntlmV1));
+        }
+
         public Builder syncKerberosPasswords(@Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords) {
             $.syncKerberosPasswords = syncKerberosPasswords;
             return this;
@@ -169,6 +193,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
 
         public Builder syncKerberosPasswords(Either<String,SyncKerberosPasswords> syncKerberosPasswords) {
             return syncKerberosPasswords(Output.of(syncKerberosPasswords));
+        }
+
+        public Builder syncKerberosPasswords(String syncKerberosPasswords) {
+            return syncKerberosPasswords(Either.ofLeft(syncKerberosPasswords));
+        }
+
+        public Builder syncKerberosPasswords(SyncKerberosPasswords syncKerberosPasswords) {
+            return syncKerberosPasswords(Either.ofRight(syncKerberosPasswords));
         }
 
         public Builder syncNtlmPasswords(@Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords) {
@@ -180,6 +212,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
             return syncNtlmPasswords(Output.of(syncNtlmPasswords));
         }
 
+        public Builder syncNtlmPasswords(String syncNtlmPasswords) {
+            return syncNtlmPasswords(Either.ofLeft(syncNtlmPasswords));
+        }
+
+        public Builder syncNtlmPasswords(SyncNtlmPasswords syncNtlmPasswords) {
+            return syncNtlmPasswords(Either.ofRight(syncNtlmPasswords));
+        }
+
         public Builder syncOnPremPasswords(@Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords) {
             $.syncOnPremPasswords = syncOnPremPasswords;
             return this;
@@ -189,6 +229,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
             return syncOnPremPasswords(Output.of(syncOnPremPasswords));
         }
 
+        public Builder syncOnPremPasswords(String syncOnPremPasswords) {
+            return syncOnPremPasswords(Either.ofLeft(syncOnPremPasswords));
+        }
+
+        public Builder syncOnPremPasswords(SyncOnPremPasswords syncOnPremPasswords) {
+            return syncOnPremPasswords(Either.ofRight(syncOnPremPasswords));
+        }
+
         public Builder tlsV1(@Nullable Output<Either<String,TlsV1>> tlsV1) {
             $.tlsV1 = tlsV1;
             return this;
@@ -196,6 +244,14 @@ public final class DomainSecuritySettingsArgs extends com.pulumi.resources.Resou
 
         public Builder tlsV1(Either<String,TlsV1> tlsV1) {
             return tlsV1(Output.of(tlsV1));
+        }
+
+        public Builder tlsV1(String tlsV1) {
+            return tlsV1(Either.ofLeft(tlsV1));
+        }
+
+        public Builder tlsV1(TlsV1 tlsV1) {
+            return tlsV1(Either.ofRight(tlsV1));
         }
 
         public DomainSecuritySettingsArgs build() {

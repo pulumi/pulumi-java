@@ -265,6 +265,14 @@ public final class CloudServicePropertiesArgs extends com.pulumi.resources.Resou
             return upgradeMode(Output.of(upgradeMode));
         }
 
+        public Builder upgradeMode(String upgradeMode) {
+            return upgradeMode(Either.ofLeft(upgradeMode));
+        }
+
+        public Builder upgradeMode(CloudServiceUpgradeMode upgradeMode) {
+            return upgradeMode(Either.ofRight(upgradeMode));
+        }
+
         public CloudServicePropertiesArgs build() {
             return $;
         }

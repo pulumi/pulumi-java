@@ -153,6 +153,14 @@ public final class ScheduledSynchronizationSettingArgs extends com.pulumi.resour
             return recurrenceInterval(Output.of(recurrenceInterval));
         }
 
+        public Builder recurrenceInterval(String recurrenceInterval) {
+            return recurrenceInterval(Either.ofLeft(recurrenceInterval));
+        }
+
+        public Builder recurrenceInterval(RecurrenceInterval recurrenceInterval) {
+            return recurrenceInterval(Either.ofRight(recurrenceInterval));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

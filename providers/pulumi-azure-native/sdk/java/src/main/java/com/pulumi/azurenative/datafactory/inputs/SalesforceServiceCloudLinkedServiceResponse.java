@@ -244,9 +244,25 @@ public final class SalesforceServiceCloudLinkedServiceResponse extends com.pulum
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken) {
             $.securityToken = securityToken;
             return this;
+        }
+
+        public Builder securityToken(AzureKeyVaultSecretReferenceResponse securityToken) {
+            return securityToken(Either.ofLeft(securityToken));
+        }
+
+        public Builder securityToken(SecureStringResponse securityToken) {
+            return securityToken(Either.ofRight(securityToken));
         }
 
         public Builder type(String type) {

@@ -91,6 +91,14 @@ public final class TransferAllDetailsArgs extends com.pulumi.resources.ResourceA
             return dataAccountType(Output.of(dataAccountType));
         }
 
+        public Builder dataAccountType(String dataAccountType) {
+            return dataAccountType(Either.ofLeft(dataAccountType));
+        }
+
+        public Builder dataAccountType(DataAccountType dataAccountType) {
+            return dataAccountType(Either.ofRight(dataAccountType));
+        }
+
         public Builder transferAllBlobs(@Nullable Output<Boolean> transferAllBlobs) {
             $.transferAllBlobs = transferAllBlobs;
             return this;

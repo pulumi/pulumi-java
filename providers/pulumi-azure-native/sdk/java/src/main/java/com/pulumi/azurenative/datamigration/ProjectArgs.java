@@ -236,6 +236,14 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             return sourcePlatform(Output.of(sourcePlatform));
         }
 
+        public Builder sourcePlatform(String sourcePlatform) {
+            return sourcePlatform(Either.ofLeft(sourcePlatform));
+        }
+
+        public Builder sourcePlatform(ProjectSourcePlatform sourcePlatform) {
+            return sourcePlatform(Either.ofRight(sourcePlatform));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
@@ -261,6 +269,14 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder targetPlatform(Either<String,ProjectTargetPlatform> targetPlatform) {
             return targetPlatform(Output.of(targetPlatform));
+        }
+
+        public Builder targetPlatform(String targetPlatform) {
+            return targetPlatform(Either.ofLeft(targetPlatform));
+        }
+
+        public Builder targetPlatform(ProjectTargetPlatform targetPlatform) {
+            return targetPlatform(Either.ofRight(targetPlatform));
         }
 
         public ProjectArgs build() {

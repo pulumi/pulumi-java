@@ -103,6 +103,14 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
             return endpoint(Output.of(endpoint));
         }
 
+        public Builder endpoint(MediaGraphClearEndpointArgs endpoint) {
+            return endpoint(Either.ofLeft(endpoint));
+        }
+
+        public Builder endpoint(MediaGraphTlsEndpointArgs endpoint) {
+            return endpoint(Either.ofRight(endpoint));
+        }
+
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
@@ -128,6 +136,14 @@ public final class MediaGraphRtspSourceArgs extends com.pulumi.resources.Resourc
 
         public Builder transport(Either<String,MediaGraphRtspTransport> transport) {
             return transport(Output.of(transport));
+        }
+
+        public Builder transport(String transport) {
+            return transport(Either.ofLeft(transport));
+        }
+
+        public Builder transport(MediaGraphRtspTransport transport) {
+            return transport(Either.ofRight(transport));
         }
 
         public MediaGraphRtspSourceArgs build() {

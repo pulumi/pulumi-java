@@ -154,6 +154,14 @@ public final class FrontendEndpointArgs extends com.pulumi.resources.ResourceArg
             return sessionAffinityEnabledState(Output.of(sessionAffinityEnabledState));
         }
 
+        public Builder sessionAffinityEnabledState(String sessionAffinityEnabledState) {
+            return sessionAffinityEnabledState(Either.ofLeft(sessionAffinityEnabledState));
+        }
+
+        public Builder sessionAffinityEnabledState(SessionAffinityEnabledState sessionAffinityEnabledState) {
+            return sessionAffinityEnabledState(Either.ofRight(sessionAffinityEnabledState));
+        }
+
         public Builder sessionAffinityTtlSeconds(@Nullable Output<Integer> sessionAffinityTtlSeconds) {
             $.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;

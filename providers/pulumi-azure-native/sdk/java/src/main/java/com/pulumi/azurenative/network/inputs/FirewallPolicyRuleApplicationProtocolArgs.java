@@ -87,6 +87,14 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends com.pulumi.
             return protocolType(Output.of(protocolType));
         }
 
+        public Builder protocolType(String protocolType) {
+            return protocolType(Either.ofLeft(protocolType));
+        }
+
+        public Builder protocolType(FirewallPolicyRuleApplicationProtocolType protocolType) {
+            return protocolType(Either.ofRight(protocolType));
+        }
+
         public FirewallPolicyRuleApplicationProtocolArgs build() {
             return $;
         }

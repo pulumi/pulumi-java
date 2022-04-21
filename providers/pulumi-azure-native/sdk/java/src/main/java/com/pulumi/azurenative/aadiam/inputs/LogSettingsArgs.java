@@ -91,6 +91,14 @@ public final class LogSettingsArgs extends com.pulumi.resources.ResourceArgs {
             return category(Output.of(category));
         }
 
+        public Builder category(String category) {
+            return category(Either.ofLeft(category));
+        }
+
+        public Builder category(Category category) {
+            return category(Either.ofRight(category));
+        }
+
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;

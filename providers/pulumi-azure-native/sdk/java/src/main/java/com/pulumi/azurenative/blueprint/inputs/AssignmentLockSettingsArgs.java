@@ -116,6 +116,14 @@ public final class AssignmentLockSettingsArgs extends com.pulumi.resources.Resou
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(AssignmentLockMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public AssignmentLockSettingsArgs build() {
             return $;
         }

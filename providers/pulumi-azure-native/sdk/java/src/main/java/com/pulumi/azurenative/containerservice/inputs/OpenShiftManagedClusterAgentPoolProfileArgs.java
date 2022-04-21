@@ -147,6 +147,14 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OSType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder role(@Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role) {
             $.role = role;
             return this;
@@ -154,6 +162,14 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
 
         public Builder role(Either<String,OpenShiftAgentPoolProfileRole> role) {
             return role(Output.of(role));
+        }
+
+        public Builder role(String role) {
+            return role(Either.ofLeft(role));
+        }
+
+        public Builder role(OpenShiftAgentPoolProfileRole role) {
+            return role(Either.ofRight(role));
         }
 
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
@@ -172,6 +188,14 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends com.pulum
 
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
             return vmSize(Output.of(vmSize));
+        }
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Either.ofLeft(vmSize));
+        }
+
+        public Builder vmSize(OpenShiftContainerServiceVMSize vmSize) {
+            return vmSize(Either.ofRight(vmSize));
         }
 
         public OpenShiftManagedClusterAgentPoolProfileArgs build() {

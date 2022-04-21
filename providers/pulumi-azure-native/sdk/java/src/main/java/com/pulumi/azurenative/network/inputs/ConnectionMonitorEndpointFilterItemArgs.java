@@ -86,6 +86,14 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends com.pulumi.re
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ConnectionMonitorEndpointFilterItemType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ConnectionMonitorEndpointFilterItemArgs build() {
             return $;
         }

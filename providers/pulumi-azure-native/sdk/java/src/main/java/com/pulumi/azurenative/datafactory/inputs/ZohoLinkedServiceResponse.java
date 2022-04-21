@@ -200,6 +200,14 @@ public final class ZohoLinkedServiceResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        public Builder accessToken(AzureKeyVaultSecretReferenceResponse accessToken) {
+            return accessToken(Either.ofLeft(accessToken));
+        }
+
+        public Builder accessToken(SecureStringResponse accessToken) {
+            return accessToken(Either.ofRight(accessToken));
+        }
+
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;

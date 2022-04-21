@@ -145,6 +145,14 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PrivateEndpointServiceConnectionStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public SharedPrivateLinkResourceArgs build() {
             return $;
         }

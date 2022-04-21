@@ -128,6 +128,14 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
             return tier(Output.of(tier));
         }
 
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(SupportTier tier) {
+            return tier(Either.ofRight(tier));
+        }
+
         public MetadataSupportArgs build() {
             $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
             return $;

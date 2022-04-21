@@ -117,6 +117,14 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
             return attribute(Output.of(attribute));
         }
 
+        public Builder attribute(String attribute) {
+            return attribute(Either.ofLeft(attribute));
+        }
+
+        public Builder attribute(TrackAttribute attribute) {
+            return attribute(Either.ofRight(attribute));
+        }
+
         public Builder channelMapping(@Nullable Output<Either<String,ChannelMapping>> channelMapping) {
             $.channelMapping = channelMapping;
             return this;
@@ -126,6 +134,14 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
             return channelMapping(Output.of(channelMapping));
         }
 
+        public Builder channelMapping(String channelMapping) {
+            return channelMapping(Either.ofLeft(channelMapping));
+        }
+
+        public Builder channelMapping(ChannelMapping channelMapping) {
+            return channelMapping(Either.ofRight(channelMapping));
+        }
+
         public Builder filter(Output<Either<String,AttributeFilter>> filter) {
             $.filter = filter;
             return this;
@@ -133,6 +149,14 @@ public final class SelectAudioTrackByAttributeArgs extends com.pulumi.resources.
 
         public Builder filter(Either<String,AttributeFilter> filter) {
             return filter(Output.of(filter));
+        }
+
+        public Builder filter(String filter) {
+            return filter(Either.ofLeft(filter));
+        }
+
+        public Builder filter(AttributeFilter filter) {
+            return filter(Either.ofRight(filter));
         }
 
         public Builder filterValue(@Nullable Output<String> filterValue) {

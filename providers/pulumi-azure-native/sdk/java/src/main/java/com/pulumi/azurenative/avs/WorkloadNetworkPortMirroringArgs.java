@@ -155,6 +155,14 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
             return direction(Output.of(direction));
         }
 
+        public Builder direction(String direction) {
+            return direction(Either.ofLeft(direction));
+        }
+
+        public Builder direction(PortMirroringDirectionEnum direction) {
+            return direction(Either.ofRight(direction));
+        }
+
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;

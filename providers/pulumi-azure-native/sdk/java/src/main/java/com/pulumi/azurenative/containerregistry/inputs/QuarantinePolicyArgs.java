@@ -66,6 +66,14 @@ public final class QuarantinePolicyArgs extends com.pulumi.resources.ResourceArg
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(PolicyStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public QuarantinePolicyArgs build() {
             $.status = Codegen.stringProp("status").left(PolicyStatus.class).output().arg($.status).def("disabled").getNullable();
             return $;

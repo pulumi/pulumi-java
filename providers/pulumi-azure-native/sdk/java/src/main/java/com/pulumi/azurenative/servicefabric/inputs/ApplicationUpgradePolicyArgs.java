@@ -164,6 +164,14 @@ public final class ApplicationUpgradePolicyArgs extends com.pulumi.resources.Res
             return upgradeMode(Output.of(upgradeMode));
         }
 
+        public Builder upgradeMode(String upgradeMode) {
+            return upgradeMode(Either.ofLeft(upgradeMode));
+        }
+
+        public Builder upgradeMode(RollingUpgradeMode upgradeMode) {
+            return upgradeMode(Either.ofRight(upgradeMode));
+        }
+
         public Builder upgradeReplicaSetCheckTimeout(@Nullable Output<String> upgradeReplicaSetCheckTimeout) {
             $.upgradeReplicaSetCheckTimeout = upgradeReplicaSetCheckTimeout;
             return this;

@@ -130,6 +130,14 @@ public final class AdminRuleArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(AdminRuleKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder networkManagerName(Output<String> networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;

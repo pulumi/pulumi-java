@@ -457,6 +457,14 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(Kind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder largeFileSharesState(@Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState) {
             $.largeFileSharesState = largeFileSharesState;
             return this;
@@ -464,6 +472,14 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder largeFileSharesState(Either<String,LargeFileSharesState> largeFileSharesState) {
             return largeFileSharesState(Output.of(largeFileSharesState));
+        }
+
+        public Builder largeFileSharesState(String largeFileSharesState) {
+            return largeFileSharesState(Either.ofLeft(largeFileSharesState));
+        }
+
+        public Builder largeFileSharesState(LargeFileSharesState largeFileSharesState) {
+            return largeFileSharesState(Either.ofRight(largeFileSharesState));
         }
 
         public Builder location(@Nullable Output<String> location) {
@@ -482,6 +498,14 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder minimumTlsVersion(Either<String,MinimumTlsVersion> minimumTlsVersion) {
             return minimumTlsVersion(Output.of(minimumTlsVersion));
+        }
+
+        public Builder minimumTlsVersion(String minimumTlsVersion) {
+            return minimumTlsVersion(Either.ofLeft(minimumTlsVersion));
+        }
+
+        public Builder minimumTlsVersion(MinimumTlsVersion minimumTlsVersion) {
+            return minimumTlsVersion(Either.ofRight(minimumTlsVersion));
         }
 
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {

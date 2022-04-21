@@ -172,6 +172,14 @@ public final class DistributedAvailabilityGroupArgs extends com.pulumi.resources
             return replicationMode(Output.of(replicationMode));
         }
 
+        public Builder replicationMode(String replicationMode) {
+            return replicationMode(Either.ofLeft(replicationMode));
+        }
+
+        public Builder replicationMode(ReplicationMode replicationMode) {
+            return replicationMode(Either.ofRight(replicationMode));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

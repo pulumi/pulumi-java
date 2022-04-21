@@ -223,6 +223,14 @@ public final class ADCCatalogArgs extends com.pulumi.resources.ResourceArgs {
             return sku(Output.of(sku));
         }
 
+        public Builder sku(String sku) {
+            return sku(Either.ofLeft(sku));
+        }
+
+        public Builder sku(SkuType sku) {
+            return sku(Either.ofRight(sku));
+        }
+
         public Builder successfullyProvisioned(@Nullable Output<Boolean> successfullyProvisioned) {
             $.successfullyProvisioned = successfullyProvisioned;
             return this;

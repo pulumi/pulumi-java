@@ -126,6 +126,14 @@ public final class LastAccessTimeTrackingPolicyArgs extends com.pulumi.resources
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(Name name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder trackingGranularityInDays(@Nullable Output<Integer> trackingGranularityInDays) {
             $.trackingGranularityInDays = trackingGranularityInDays;
             return this;

@@ -65,6 +65,14 @@ public final class FirewallPolicyNatRuleCollectionActionArgs extends com.pulumi.
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(FirewallPolicyNatRuleCollectionActionType type) {
+            return type(Either.ofRight(type));
+        }
+
         public FirewallPolicyNatRuleCollectionActionArgs build() {
             return $;
         }

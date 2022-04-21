@@ -404,6 +404,14 @@ public final class AzureFirewallArgs extends com.pulumi.resources.ResourceArgs {
             return threatIntelMode(Output.of(threatIntelMode));
         }
 
+        public Builder threatIntelMode(String threatIntelMode) {
+            return threatIntelMode(Either.ofLeft(threatIntelMode));
+        }
+
+        public Builder threatIntelMode(AzureFirewallThreatIntelMode threatIntelMode) {
+            return threatIntelMode(Either.ofRight(threatIntelMode));
+        }
+
         public Builder virtualHub(@Nullable Output<SubResourceArgs> virtualHub) {
             $.virtualHub = virtualHub;
             return this;

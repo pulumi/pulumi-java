@@ -172,6 +172,14 @@ public final class ExportArgs extends com.pulumi.resources.ResourceArgs {
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(FormatType format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder schedule(@Nullable Output<ExportScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;

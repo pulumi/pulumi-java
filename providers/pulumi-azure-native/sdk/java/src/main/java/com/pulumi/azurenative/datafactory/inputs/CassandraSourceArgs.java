@@ -173,6 +173,14 @@ public final class CassandraSourceArgs extends com.pulumi.resources.ResourceArgs
             return consistencyLevel(Output.of(consistencyLevel));
         }
 
+        public Builder consistencyLevel(String consistencyLevel) {
+            return consistencyLevel(Either.ofLeft(consistencyLevel));
+        }
+
+        public Builder consistencyLevel(CassandraSourceReadConsistencyLevels consistencyLevel) {
+            return consistencyLevel(Either.ofRight(consistencyLevel));
+        }
+
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;

@@ -197,6 +197,14 @@ public final class ElasticPoolArgs extends com.pulumi.resources.ResourceArgs {
             return licenseType(Output.of(licenseType));
         }
 
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(ElasticPoolLicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

@@ -127,6 +127,14 @@ public final class LinkedSubscriptionArgs extends com.pulumi.resources.ResourceA
             return location(Output.of(location));
         }
 
+        public Builder location(String location) {
+            return location(Either.ofLeft(location));
+        }
+
+        public Builder location(Location location) {
+            return location(Either.ofRight(location));
+        }
+
         public Builder registrationResourceId(Output<String> registrationResourceId) {
             $.registrationResourceId = registrationResourceId;
             return this;

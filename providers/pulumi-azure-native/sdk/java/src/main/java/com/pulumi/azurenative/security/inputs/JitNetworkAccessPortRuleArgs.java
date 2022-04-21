@@ -143,6 +143,14 @@ public final class JitNetworkAccessPortRuleArgs extends com.pulumi.resources.Res
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(Protocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public JitNetworkAccessPortRuleArgs build() {
             $.maxRequestAccessDuration = Objects.requireNonNull($.maxRequestAccessDuration, "expected parameter 'maxRequestAccessDuration' to be non-null");
             $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");

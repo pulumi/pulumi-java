@@ -123,6 +123,14 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
             return preferredOsType(Output.of(preferredOsType));
         }
 
+        public Builder preferredOsType(String preferredOsType) {
+            return preferredOsType(Either.ofLeft(preferredOsType));
+        }
+
+        public Builder preferredOsType(OsType preferredOsType) {
+            return preferredOsType(Either.ofRight(preferredOsType));
+        }
+
         public Builder preferredShellType(Output<Either<String,ShellType>> preferredShellType) {
             $.preferredShellType = preferredShellType;
             return this;
@@ -130,6 +138,14 @@ public final class UserPropertiesArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder preferredShellType(Either<String,ShellType> preferredShellType) {
             return preferredShellType(Output.of(preferredShellType));
+        }
+
+        public Builder preferredShellType(String preferredShellType) {
+            return preferredShellType(Either.ofLeft(preferredShellType));
+        }
+
+        public Builder preferredShellType(ShellType preferredShellType) {
+            return preferredShellType(Either.ofRight(preferredShellType));
         }
 
         public Builder storageProfile(Output<StorageProfileArgs> storageProfile) {

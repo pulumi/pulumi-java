@@ -323,6 +323,14 @@ public final class SparkLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(SparkAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
@@ -395,6 +403,14 @@ public final class SparkLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder port(Output<Object> port) {
             $.port = port;
             return this;
@@ -413,6 +429,14 @@ public final class SparkLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return serverType(Output.of(serverType));
         }
 
+        public Builder serverType(String serverType) {
+            return serverType(Either.ofLeft(serverType));
+        }
+
+        public Builder serverType(SparkServerType serverType) {
+            return serverType(Either.ofRight(serverType));
+        }
+
         public Builder thriftTransportProtocol(@Nullable Output<Either<String,SparkThriftTransportProtocol>> thriftTransportProtocol) {
             $.thriftTransportProtocol = thriftTransportProtocol;
             return this;
@@ -420,6 +444,14 @@ public final class SparkLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
         public Builder thriftTransportProtocol(Either<String,SparkThriftTransportProtocol> thriftTransportProtocol) {
             return thriftTransportProtocol(Output.of(thriftTransportProtocol));
+        }
+
+        public Builder thriftTransportProtocol(String thriftTransportProtocol) {
+            return thriftTransportProtocol(Either.ofLeft(thriftTransportProtocol));
+        }
+
+        public Builder thriftTransportProtocol(SparkThriftTransportProtocol thriftTransportProtocol) {
+            return thriftTransportProtocol(Either.ofRight(thriftTransportProtocol));
         }
 
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {

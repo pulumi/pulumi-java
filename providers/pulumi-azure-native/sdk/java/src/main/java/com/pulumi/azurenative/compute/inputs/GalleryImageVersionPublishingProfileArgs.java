@@ -144,6 +144,14 @@ public final class GalleryImageVersionPublishingProfileArgs extends com.pulumi.r
             return storageAccountType(Output.of(storageAccountType));
         }
 
+        public Builder storageAccountType(String storageAccountType) {
+            return storageAccountType(Either.ofLeft(storageAccountType));
+        }
+
+        public Builder storageAccountType(StorageAccountType storageAccountType) {
+            return storageAccountType(Either.ofRight(storageAccountType));
+        }
+
         public Builder targetRegions(@Nullable Output<List<TargetRegionArgs>> targetRegions) {
             $.targetRegions = targetRegions;
             return this;

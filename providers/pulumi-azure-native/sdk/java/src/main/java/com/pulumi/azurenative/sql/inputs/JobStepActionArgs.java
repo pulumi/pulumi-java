@@ -91,6 +91,14 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
             return source(Output.of(source));
         }
 
+        public Builder source(String source) {
+            return source(Either.ofLeft(source));
+        }
+
+        public Builder source(JobStepActionSource source) {
+            return source(Either.ofRight(source));
+        }
+
         public Builder type(@Nullable Output<Either<String,JobStepActionType>> type) {
             $.type = type;
             return this;
@@ -98,6 +106,14 @@ public final class JobStepActionArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,JobStepActionType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(JobStepActionType type) {
+            return type(Either.ofRight(type));
         }
 
         public Builder value(Output<String> value) {

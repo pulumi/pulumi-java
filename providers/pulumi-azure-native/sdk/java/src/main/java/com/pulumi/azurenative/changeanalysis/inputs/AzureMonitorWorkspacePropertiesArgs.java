@@ -89,6 +89,14 @@ public final class AzureMonitorWorkspacePropertiesArgs extends com.pulumi.resour
             return includeChangeDetails(Output.of(includeChangeDetails));
         }
 
+        public Builder includeChangeDetails(String includeChangeDetails) {
+            return includeChangeDetails(Either.ofLeft(includeChangeDetails));
+        }
+
+        public Builder includeChangeDetails(ChangeDetailsMode includeChangeDetails) {
+            return includeChangeDetails(Either.ofRight(includeChangeDetails));
+        }
+
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
             $.workspaceId = workspaceId;
             return this;

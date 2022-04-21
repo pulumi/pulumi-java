@@ -163,6 +163,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             return clientProtocol(Output.of(clientProtocol));
         }
 
+        public Builder clientProtocol(String clientProtocol) {
+            return clientProtocol(Either.ofLeft(clientProtocol));
+        }
+
+        public Builder clientProtocol(Protocol clientProtocol) {
+            return clientProtocol(Either.ofRight(clientProtocol));
+        }
+
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
@@ -181,6 +189,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             return clusteringPolicy(Output.of(clusteringPolicy));
         }
 
+        public Builder clusteringPolicy(String clusteringPolicy) {
+            return clusteringPolicy(Either.ofLeft(clusteringPolicy));
+        }
+
+        public Builder clusteringPolicy(ClusteringPolicy clusteringPolicy) {
+            return clusteringPolicy(Either.ofRight(clusteringPolicy));
+        }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
@@ -197,6 +213,14 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder evictionPolicy(Either<String,EvictionPolicy> evictionPolicy) {
             return evictionPolicy(Output.of(evictionPolicy));
+        }
+
+        public Builder evictionPolicy(String evictionPolicy) {
+            return evictionPolicy(Either.ofLeft(evictionPolicy));
+        }
+
+        public Builder evictionPolicy(EvictionPolicy evictionPolicy) {
+            return evictionPolicy(Either.ofRight(evictionPolicy));
         }
 
         public Builder modules(@Nullable Output<List<ModuleArgs>> modules) {

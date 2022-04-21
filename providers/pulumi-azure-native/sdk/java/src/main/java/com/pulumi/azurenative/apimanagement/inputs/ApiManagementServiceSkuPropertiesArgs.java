@@ -85,6 +85,14 @@ public final class ApiManagementServiceSkuPropertiesArgs extends com.pulumi.reso
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(SkuType name) {
+            return name(Either.ofRight(name));
+        }
+
         public ApiManagementServiceSkuPropertiesArgs build() {
             $.capacity = Objects.requireNonNull($.capacity, "expected parameter 'capacity' to be non-null");
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

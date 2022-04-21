@@ -145,6 +145,14 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
             return this;
         }
 
+        public Builder end(AbsoluteClipTimeResponse end) {
+            return end(Either.ofLeft(end));
+        }
+
+        public Builder end(UtcClipTimeResponse end) {
+            return end(Either.ofRight(end));
+        }
+
         public Builder files(@Nullable List<String> files) {
             $.files = files;
             return this;
@@ -176,6 +184,14 @@ public final class JobInputHttpResponse extends com.pulumi.resources.InvokeArgs 
         public Builder start(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
             $.start = start;
             return this;
+        }
+
+        public Builder start(AbsoluteClipTimeResponse start) {
+            return start(Either.ofLeft(start));
+        }
+
+        public Builder start(UtcClipTimeResponse start) {
+            return start(Either.ofRight(start));
         }
 
         public JobInputHttpResponse build() {

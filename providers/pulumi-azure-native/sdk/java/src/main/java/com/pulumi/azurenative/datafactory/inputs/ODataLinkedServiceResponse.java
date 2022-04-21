@@ -338,14 +338,38 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder servicePrincipalEmbeddedCert(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCert) {
             $.servicePrincipalEmbeddedCert = servicePrincipalEmbeddedCert;
             return this;
         }
 
+        public Builder servicePrincipalEmbeddedCert(AzureKeyVaultSecretReferenceResponse servicePrincipalEmbeddedCert) {
+            return servicePrincipalEmbeddedCert(Either.ofLeft(servicePrincipalEmbeddedCert));
+        }
+
+        public Builder servicePrincipalEmbeddedCert(SecureStringResponse servicePrincipalEmbeddedCert) {
+            return servicePrincipalEmbeddedCert(Either.ofRight(servicePrincipalEmbeddedCert));
+        }
+
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalEmbeddedCertPassword) {
             $.servicePrincipalEmbeddedCertPassword = servicePrincipalEmbeddedCertPassword;
             return this;
+        }
+
+        public Builder servicePrincipalEmbeddedCertPassword(AzureKeyVaultSecretReferenceResponse servicePrincipalEmbeddedCertPassword) {
+            return servicePrincipalEmbeddedCertPassword(Either.ofLeft(servicePrincipalEmbeddedCertPassword));
+        }
+
+        public Builder servicePrincipalEmbeddedCertPassword(SecureStringResponse servicePrincipalEmbeddedCertPassword) {
+            return servicePrincipalEmbeddedCertPassword(Either.ofRight(servicePrincipalEmbeddedCertPassword));
         }
 
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
@@ -356,6 +380,14 @@ public final class ODataLinkedServiceResponse extends com.pulumi.resources.Invok
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder tenant(@Nullable Object tenant) {

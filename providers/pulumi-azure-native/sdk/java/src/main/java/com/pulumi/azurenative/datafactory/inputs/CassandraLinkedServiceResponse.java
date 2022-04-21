@@ -227,6 +227,14 @@ public final class CassandraLinkedServiceResponse extends com.pulumi.resources.I
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder port(@Nullable Object port) {
             $.port = port;
             return this;

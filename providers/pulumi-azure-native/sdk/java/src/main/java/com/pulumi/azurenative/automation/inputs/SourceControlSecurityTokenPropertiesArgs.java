@@ -103,6 +103,14 @@ public final class SourceControlSecurityTokenPropertiesArgs extends com.pulumi.r
             return tokenType(Output.of(tokenType));
         }
 
+        public Builder tokenType(String tokenType) {
+            return tokenType(Either.ofLeft(tokenType));
+        }
+
+        public Builder tokenType(TokenType tokenType) {
+            return tokenType(Either.ofRight(tokenType));
+        }
+
         public SourceControlSecurityTokenPropertiesArgs build() {
             return $;
         }

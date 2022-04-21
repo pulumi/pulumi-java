@@ -236,6 +236,14 @@ public final class SapCloudForCustomerSinkArgs extends com.pulumi.resources.Reso
             return writeBehavior(Output.of(writeBehavior));
         }
 
+        public Builder writeBehavior(String writeBehavior) {
+            return writeBehavior(Either.ofLeft(writeBehavior));
+        }
+
+        public Builder writeBehavior(SapCloudForCustomerSinkWriteBehavior writeBehavior) {
+            return writeBehavior(Either.ofRight(writeBehavior));
+        }
+
         public SapCloudForCustomerSinkArgs build() {
             $.type = Codegen.stringProp("type").output().arg($.type).require();
             return $;

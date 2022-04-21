@@ -197,6 +197,14 @@ public final class AzureSearchLinkedServiceArgs extends com.pulumi.resources.Res
             return key(Output.of(key));
         }
 
+        public Builder key(AzureKeyVaultSecretReferenceArgs key) {
+            return key(Either.ofLeft(key));
+        }
+
+        public Builder key(SecureStringArgs key) {
+            return key(Either.ofRight(key));
+        }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;

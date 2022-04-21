@@ -261,6 +261,14 @@ public final class AzureFunctionLinkedServiceArgs extends com.pulumi.resources.R
             return functionKey(Output.of(functionKey));
         }
 
+        public Builder functionKey(AzureKeyVaultSecretReferenceArgs functionKey) {
+            return functionKey(Either.ofLeft(functionKey));
+        }
+
+        public Builder functionKey(SecureStringArgs functionKey) {
+            return functionKey(Either.ofRight(functionKey));
+        }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;

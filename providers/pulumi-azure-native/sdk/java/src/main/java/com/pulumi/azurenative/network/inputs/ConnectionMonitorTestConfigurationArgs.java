@@ -182,6 +182,14 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
             return preferredIPVersion(Output.of(preferredIPVersion));
         }
 
+        public Builder preferredIPVersion(String preferredIPVersion) {
+            return preferredIPVersion(Either.ofLeft(preferredIPVersion));
+        }
+
+        public Builder preferredIPVersion(PreferredIPVersion preferredIPVersion) {
+            return preferredIPVersion(Either.ofRight(preferredIPVersion));
+        }
+
         public Builder protocol(Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol) {
             $.protocol = protocol;
             return this;
@@ -189,6 +197,14 @@ public final class ConnectionMonitorTestConfigurationArgs extends com.pulumi.res
 
         public Builder protocol(Either<String,ConnectionMonitorTestConfigurationProtocol> protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ConnectionMonitorTestConfigurationProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
         }
 
         public Builder successThreshold(@Nullable Output<ConnectionMonitorSuccessThresholdArgs> successThreshold) {

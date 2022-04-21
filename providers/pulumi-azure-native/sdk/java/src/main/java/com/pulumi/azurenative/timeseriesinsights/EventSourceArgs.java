@@ -153,6 +153,14 @@ public final class EventSourceArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(EventSourceKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder localTimestamp(@Nullable Output<LocalTimestampArgs> localTimestamp) {
             $.localTimestamp = localTimestamp;
             return this;

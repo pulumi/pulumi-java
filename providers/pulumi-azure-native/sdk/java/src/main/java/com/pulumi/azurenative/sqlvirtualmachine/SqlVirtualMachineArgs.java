@@ -335,6 +335,14 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
             return sqlImageSku(Output.of(sqlImageSku));
         }
 
+        public Builder sqlImageSku(String sqlImageSku) {
+            return sqlImageSku(Either.ofLeft(sqlImageSku));
+        }
+
+        public Builder sqlImageSku(SqlImageSku sqlImageSku) {
+            return sqlImageSku(Either.ofRight(sqlImageSku));
+        }
+
         public Builder sqlManagement(@Nullable Output<Either<String,SqlManagementMode>> sqlManagement) {
             $.sqlManagement = sqlManagement;
             return this;
@@ -344,6 +352,14 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
             return sqlManagement(Output.of(sqlManagement));
         }
 
+        public Builder sqlManagement(String sqlManagement) {
+            return sqlManagement(Either.ofLeft(sqlManagement));
+        }
+
+        public Builder sqlManagement(SqlManagementMode sqlManagement) {
+            return sqlManagement(Either.ofRight(sqlManagement));
+        }
+
         public Builder sqlServerLicenseType(@Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
             $.sqlServerLicenseType = sqlServerLicenseType;
             return this;
@@ -351,6 +367,14 @@ public final class SqlVirtualMachineArgs extends com.pulumi.resources.ResourceAr
 
         public Builder sqlServerLicenseType(Either<String,SqlServerLicenseType> sqlServerLicenseType) {
             return sqlServerLicenseType(Output.of(sqlServerLicenseType));
+        }
+
+        public Builder sqlServerLicenseType(String sqlServerLicenseType) {
+            return sqlServerLicenseType(Either.ofLeft(sqlServerLicenseType));
+        }
+
+        public Builder sqlServerLicenseType(SqlServerLicenseType sqlServerLicenseType) {
+            return sqlServerLicenseType(Either.ofRight(sqlServerLicenseType));
         }
 
         public Builder sqlVirtualMachineGroupResourceId(@Nullable Output<String> sqlVirtualMachineGroupResourceId) {

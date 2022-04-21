@@ -157,6 +157,14 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
             return this;
         }
 
+        public Builder retentionPolicy(LongTermRetentionPolicyResponse retentionPolicy) {
+            return retentionPolicy(Either.ofLeft(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(SimpleRetentionPolicyResponse retentionPolicy) {
+            return retentionPolicy(Either.ofRight(retentionPolicy));
+        }
+
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;

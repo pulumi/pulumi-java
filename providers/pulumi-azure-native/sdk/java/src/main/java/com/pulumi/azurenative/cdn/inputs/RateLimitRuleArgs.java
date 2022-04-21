@@ -141,6 +141,14 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(ActionType action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder enabledState(@Nullable Output<Either<String,CustomRuleEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
@@ -148,6 +156,14 @@ public final class RateLimitRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder enabledState(Either<String,CustomRuleEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
+        }
+
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(CustomRuleEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
         }
 
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {

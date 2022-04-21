@@ -61,6 +61,14 @@ public final class PlanArgs extends com.pulumi.resources.ResourceArgs {
             return accessibility(Output.of(accessibility));
         }
 
+        public Builder accessibility(String accessibility) {
+            return accessibility(Either.ofLeft(accessibility));
+        }
+
+        public Builder accessibility(Accessibility accessibility) {
+            return accessibility(Either.ofRight(accessibility));
+        }
+
         public PlanArgs build() {
             return $;
         }

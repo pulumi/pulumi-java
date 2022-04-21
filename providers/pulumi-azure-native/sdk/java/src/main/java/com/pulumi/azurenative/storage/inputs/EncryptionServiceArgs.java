@@ -87,6 +87,14 @@ public final class EncryptionServiceArgs extends com.pulumi.resources.ResourceAr
             return keyType(Output.of(keyType));
         }
 
+        public Builder keyType(String keyType) {
+            return keyType(Either.ofLeft(keyType));
+        }
+
+        public Builder keyType(KeyType keyType) {
+            return keyType(Either.ofRight(keyType));
+        }
+
         public EncryptionServiceArgs build() {
             return $;
         }

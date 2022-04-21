@@ -161,6 +161,14 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
             return edition(Output.of(edition));
         }
 
+        public Builder edition(String edition) {
+            return edition(Either.ofLeft(edition));
+        }
+
+        public Builder edition(IntegrationRuntimeEdition edition) {
+            return edition(Either.ofRight(edition));
+        }
+
         public Builder expressCustomSetupProperties(@Nullable Output<List<Object>> expressCustomSetupProperties) {
             $.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
@@ -181,6 +189,14 @@ public final class IntegrationRuntimeSsisPropertiesArgs extends com.pulumi.resou
 
         public Builder licenseType(Either<String,IntegrationRuntimeLicenseType> licenseType) {
             return licenseType(Output.of(licenseType));
+        }
+
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(IntegrationRuntimeLicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
         }
 
         public IntegrationRuntimeSsisPropertiesArgs build() {

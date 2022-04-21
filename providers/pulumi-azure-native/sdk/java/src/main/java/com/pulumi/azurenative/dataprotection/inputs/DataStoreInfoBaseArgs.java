@@ -75,6 +75,14 @@ public final class DataStoreInfoBaseArgs extends com.pulumi.resources.ResourceAr
             return dataStoreType(Output.of(dataStoreType));
         }
 
+        public Builder dataStoreType(String dataStoreType) {
+            return dataStoreType(Either.ofLeft(dataStoreType));
+        }
+
+        public Builder dataStoreType(DataStoreTypes dataStoreType) {
+            return dataStoreType(Either.ofRight(dataStoreType));
+        }
+
         public Builder objectType(Output<String> objectType) {
             $.objectType = objectType;
             return this;

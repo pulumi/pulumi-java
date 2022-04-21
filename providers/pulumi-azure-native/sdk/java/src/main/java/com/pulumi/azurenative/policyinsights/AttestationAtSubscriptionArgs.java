@@ -165,6 +165,14 @@ public final class AttestationAtSubscriptionArgs extends com.pulumi.resources.Re
             return complianceState(Output.of(complianceState));
         }
 
+        public Builder complianceState(String complianceState) {
+            return complianceState(Either.ofLeft(complianceState));
+        }
+
+        public Builder complianceState(ComplianceState complianceState) {
+            return complianceState(Either.ofRight(complianceState));
+        }
+
         public Builder evidence(@Nullable Output<List<AttestationEvidenceArgs>> evidence) {
             $.evidence = evidence;
             return this;

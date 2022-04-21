@@ -142,6 +142,14 @@ public final class FrontDoorMatchConditionArgs extends com.pulumi.resources.Reso
             return matchVariable(Output.of(matchVariable));
         }
 
+        public Builder matchVariable(String matchVariable) {
+            return matchVariable(Either.ofLeft(matchVariable));
+        }
+
+        public Builder matchVariable(FrontDoorMatchVariable matchVariable) {
+            return matchVariable(Either.ofRight(matchVariable));
+        }
+
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             $.negateCondition = negateCondition;
             return this;
@@ -158,6 +166,14 @@ public final class FrontDoorMatchConditionArgs extends com.pulumi.resources.Reso
 
         public Builder operator(Either<String,Operator> operator) {
             return operator(Output.of(operator));
+        }
+
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(Operator operator) {
+            return operator(Either.ofRight(operator));
         }
 
         public Builder selector(@Nullable Output<String> selector) {

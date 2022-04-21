@@ -244,6 +244,14 @@ public final class VMwareCbtEnableMigrationInputArgs extends com.pulumi.resource
             return licenseType(Output.of(licenseType));
         }
 
+        public Builder licenseType(String licenseType) {
+            return licenseType(Either.ofLeft(licenseType));
+        }
+
+        public Builder licenseType(LicenseType licenseType) {
+            return licenseType(Either.ofRight(licenseType));
+        }
+
         public Builder snapshotRunAsAccountId(Output<String> snapshotRunAsAccountId) {
             $.snapshotRunAsAccountId = snapshotRunAsAccountId;
             return this;

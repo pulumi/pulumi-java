@@ -195,6 +195,14 @@ public final class VirtualHubIpConfigurationArgs extends com.pulumi.resources.Re
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
         }
 
+        public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
+        }
+
+        public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
+        }
+
         public Builder publicIPAddress(@Nullable Output<PublicIPAddressArgs> publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;

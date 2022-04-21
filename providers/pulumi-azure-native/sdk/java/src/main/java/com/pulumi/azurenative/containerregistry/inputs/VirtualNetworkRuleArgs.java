@@ -78,6 +78,14 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(Action action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder virtualNetworkResourceId(Output<String> virtualNetworkResourceId) {
             $.virtualNetworkResourceId = virtualNetworkResourceId;
             return this;

@@ -112,6 +112,14 @@ public final class KeyEncryptionKeyArgs extends com.pulumi.resources.ResourceArg
             return kekType(Output.of(kekType));
         }
 
+        public Builder kekType(String kekType) {
+            return kekType(Either.ofLeft(kekType));
+        }
+
+        public Builder kekType(KekType kekType) {
+            return kekType(Either.ofRight(kekType));
+        }
+
         public Builder kekUrl(@Nullable Output<String> kekUrl) {
             $.kekUrl = kekUrl;
             return this;

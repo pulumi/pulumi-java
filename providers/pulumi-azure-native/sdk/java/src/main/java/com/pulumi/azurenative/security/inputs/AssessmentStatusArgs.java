@@ -98,6 +98,14 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
             return code(Output.of(code));
         }
 
+        public Builder code(String code) {
+            return code(Either.ofLeft(code));
+        }
+
+        public Builder code(AssessmentStatusCode code) {
+            return code(Either.ofRight(code));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;

@@ -79,6 +79,14 @@ public final class SubscriptionStateRuleArgs extends com.pulumi.resources.Resour
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(SubscriptionState state) {
+            return state(Either.ofRight(state));
+        }
+
         public SubscriptionStateRuleArgs build() {
             return $;
         }

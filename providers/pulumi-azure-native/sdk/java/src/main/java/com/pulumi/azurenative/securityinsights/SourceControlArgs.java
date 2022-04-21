@@ -276,6 +276,14 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
             return createdByType(Output.of(createdByType));
         }
 
+        public Builder createdByType(String createdByType) {
+            return createdByType(Either.ofLeft(createdByType));
+        }
+
+        public Builder createdByType(CreatedByType createdByType) {
+            return createdByType(Either.ofRight(createdByType));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -330,6 +338,14 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
             return lastModifiedByType(Output.of(lastModifiedByType));
         }
 
+        public Builder lastModifiedByType(String lastModifiedByType) {
+            return lastModifiedByType(Either.ofLeft(lastModifiedByType));
+        }
+
+        public Builder lastModifiedByType(CreatedByType lastModifiedByType) {
+            return lastModifiedByType(Either.ofRight(lastModifiedByType));
+        }
+
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
             $.operationalInsightsResourceProvider = operationalInsightsResourceProvider;
             return this;
@@ -346,6 +362,14 @@ public final class SourceControlArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder repoType(Either<String,RepoType> repoType) {
             return repoType(Output.of(repoType));
+        }
+
+        public Builder repoType(String repoType) {
+            return repoType(Either.ofLeft(repoType));
+        }
+
+        public Builder repoType(RepoType repoType) {
+            return repoType(Either.ofRight(repoType));
         }
 
         public Builder repository(Output<RepositoryArgs> repository) {

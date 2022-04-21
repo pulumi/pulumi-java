@@ -318,6 +318,14 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
             return diskType(Output.of(diskType));
         }
 
+        public Builder diskType(String diskType) {
+            return diskType(Either.ofLeft(diskType));
+        }
+
+        public Builder diskType(DiskAccountType diskType) {
+            return diskType(Either.ofRight(diskType));
+        }
+
         public Builder disksToInclude(@Nullable Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude) {
             $.disksToInclude = disksToInclude;
             return this;

@@ -248,6 +248,14 @@ public final class DomainServiceArgs extends com.pulumi.resources.ResourceArgs {
             return filteredSync(Output.of(filteredSync));
         }
 
+        public Builder filteredSync(String filteredSync) {
+            return filteredSync(Either.ofLeft(filteredSync));
+        }
+
+        public Builder filteredSync(FilteredSync filteredSync) {
+            return filteredSync(Either.ofRight(filteredSync));
+        }
+
         public Builder ldapsSettings(@Nullable Output<LdapsSettingsArgs> ldapsSettings) {
             $.ldapsSettings = ldapsSettings;
             return this;

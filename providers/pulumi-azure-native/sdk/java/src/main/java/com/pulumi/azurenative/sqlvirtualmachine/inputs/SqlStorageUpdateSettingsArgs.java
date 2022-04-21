@@ -90,6 +90,14 @@ public final class SqlStorageUpdateSettingsArgs extends com.pulumi.resources.Res
             return diskConfigurationType(Output.of(diskConfigurationType));
         }
 
+        public Builder diskConfigurationType(String diskConfigurationType) {
+            return diskConfigurationType(Either.ofLeft(diskConfigurationType));
+        }
+
+        public Builder diskConfigurationType(DiskConfigurationType diskConfigurationType) {
+            return diskConfigurationType(Either.ofRight(diskConfigurationType));
+        }
+
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
             $.diskCount = diskCount;
             return this;

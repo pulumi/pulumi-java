@@ -136,6 +136,14 @@ public final class WorkflowTriggerRecurrenceArgs extends com.pulumi.resources.Re
             return frequency(Output.of(frequency));
         }
 
+        public Builder frequency(String frequency) {
+            return frequency(Either.ofLeft(frequency));
+        }
+
+        public Builder frequency(RecurrenceFrequency frequency) {
+            return frequency(Either.ofRight(frequency));
+        }
+
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;

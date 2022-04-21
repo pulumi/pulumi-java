@@ -190,6 +190,14 @@ public final class VirtualMachineScaleSetOSDiskArgs extends com.pulumi.resources
             return createOption(Output.of(createOption));
         }
 
+        public Builder createOption(String createOption) {
+            return createOption(Either.ofLeft(createOption));
+        }
+
+        public Builder createOption(DiskCreateOptionTypes createOption) {
+            return createOption(Either.ofRight(createOption));
+        }
+
         public Builder diffDiskSettings(@Nullable Output<DiffDiskSettingsArgs> diffDiskSettings) {
             $.diffDiskSettings = diffDiskSettings;
             return this;

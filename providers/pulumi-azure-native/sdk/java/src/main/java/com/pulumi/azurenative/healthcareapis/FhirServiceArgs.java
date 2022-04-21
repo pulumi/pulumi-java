@@ -268,6 +268,14 @@ public final class FhirServiceArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(FhirServiceKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

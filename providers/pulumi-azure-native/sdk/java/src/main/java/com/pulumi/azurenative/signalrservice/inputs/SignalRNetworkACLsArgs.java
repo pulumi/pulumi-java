@@ -93,6 +93,14 @@ public final class SignalRNetworkACLsArgs extends com.pulumi.resources.ResourceA
             return defaultAction(Output.of(defaultAction));
         }
 
+        public Builder defaultAction(String defaultAction) {
+            return defaultAction(Either.ofLeft(defaultAction));
+        }
+
+        public Builder defaultAction(ACLAction defaultAction) {
+            return defaultAction(Either.ofRight(defaultAction));
+        }
+
         public Builder privateEndpoints(@Nullable Output<List<PrivateEndpointACLArgs>> privateEndpoints) {
             $.privateEndpoints = privateEndpoints;
             return this;

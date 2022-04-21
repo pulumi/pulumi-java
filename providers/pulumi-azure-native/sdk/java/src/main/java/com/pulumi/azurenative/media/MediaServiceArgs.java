@@ -204,6 +204,14 @@ public final class MediaServiceArgs extends com.pulumi.resources.ResourceArgs {
             return storageAuthentication(Output.of(storageAuthentication));
         }
 
+        public Builder storageAuthentication(String storageAuthentication) {
+            return storageAuthentication(Either.ofLeft(storageAuthentication));
+        }
+
+        public Builder storageAuthentication(StorageAuthentication storageAuthentication) {
+            return storageAuthentication(Either.ofRight(storageAuthentication));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

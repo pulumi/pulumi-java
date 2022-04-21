@@ -204,6 +204,14 @@ public final class ManagedHsmPropertiesArgs extends com.pulumi.resources.Resourc
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
+        }
+
         public Builder softDeleteRetentionInDays(@Nullable Output<Integer> softDeleteRetentionInDays) {
             $.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;

@@ -88,6 +88,14 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
             return matchVariable(Output.of(matchVariable));
         }
 
+        public Builder matchVariable(String matchVariable) {
+            return matchVariable(Either.ofLeft(matchVariable));
+        }
+
+        public Builder matchVariable(ManagedRuleExclusionMatchVariable matchVariable) {
+            return matchVariable(Either.ofRight(matchVariable));
+        }
+
         public Builder selector(Output<String> selector) {
             $.selector = selector;
             return this;
@@ -104,6 +112,14 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
 
         public Builder selectorMatchOperator(Either<String,ManagedRuleExclusionSelectorMatchOperator> selectorMatchOperator) {
             return selectorMatchOperator(Output.of(selectorMatchOperator));
+        }
+
+        public Builder selectorMatchOperator(String selectorMatchOperator) {
+            return selectorMatchOperator(Either.ofLeft(selectorMatchOperator));
+        }
+
+        public Builder selectorMatchOperator(ManagedRuleExclusionSelectorMatchOperator selectorMatchOperator) {
+            return selectorMatchOperator(Either.ofRight(selectorMatchOperator));
         }
 
         public ManagedRuleExclusionArgs build() {

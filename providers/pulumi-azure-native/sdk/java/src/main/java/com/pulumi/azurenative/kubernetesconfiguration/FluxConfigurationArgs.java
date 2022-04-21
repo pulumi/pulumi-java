@@ -280,6 +280,14 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
             return scope(Output.of(scope));
         }
 
+        public Builder scope(String scope) {
+            return scope(Either.ofLeft(scope));
+        }
+
+        public Builder scope(ScopeType scope) {
+            return scope(Either.ofRight(scope));
+        }
+
         public Builder sourceKind(@Nullable Output<Either<String,SourceKindType>> sourceKind) {
             $.sourceKind = sourceKind;
             return this;
@@ -287,6 +295,14 @@ public final class FluxConfigurationArgs extends com.pulumi.resources.ResourceAr
 
         public Builder sourceKind(Either<String,SourceKindType> sourceKind) {
             return sourceKind(Output.of(sourceKind));
+        }
+
+        public Builder sourceKind(String sourceKind) {
+            return sourceKind(Either.ofLeft(sourceKind));
+        }
+
+        public Builder sourceKind(SourceKindType sourceKind) {
+            return sourceKind(Either.ofRight(sourceKind));
         }
 
         public Builder suspend(@Nullable Output<Boolean> suspend) {

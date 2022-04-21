@@ -107,6 +107,14 @@ public final class CustomRPActionRouteDefinitionArgs extends com.pulumi.resource
             return routingType(Output.of(routingType));
         }
 
+        public Builder routingType(String routingType) {
+            return routingType(Either.ofLeft(routingType));
+        }
+
+        public Builder routingType(ActionRouting routingType) {
+            return routingType(Either.ofRight(routingType));
+        }
+
         public CustomRPActionRouteDefinitionArgs build() {
             $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

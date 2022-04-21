@@ -79,6 +79,14 @@ public final class AutomationSourceArgs extends com.pulumi.resources.ResourceArg
             return eventSource(Output.of(eventSource));
         }
 
+        public Builder eventSource(String eventSource) {
+            return eventSource(Either.ofLeft(eventSource));
+        }
+
+        public Builder eventSource(EventSource eventSource) {
+            return eventSource(Either.ofRight(eventSource));
+        }
+
         public Builder ruleSets(@Nullable Output<List<AutomationRuleSetArgs>> ruleSets) {
             $.ruleSets = ruleSets;
             return this;

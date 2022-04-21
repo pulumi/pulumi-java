@@ -281,6 +281,14 @@ public final class WorkflowArgs extends com.pulumi.resources.ResourceArgs {
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(WorkflowState state) {
+            return state(Either.ofRight(state));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

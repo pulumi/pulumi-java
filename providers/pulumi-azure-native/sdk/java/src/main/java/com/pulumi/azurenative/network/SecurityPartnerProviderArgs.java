@@ -171,6 +171,14 @@ public final class SecurityPartnerProviderArgs extends com.pulumi.resources.Reso
             return securityProviderName(Output.of(securityProviderName));
         }
 
+        public Builder securityProviderName(String securityProviderName) {
+            return securityProviderName(Either.ofLeft(securityProviderName));
+        }
+
+        public Builder securityProviderName(SecurityProviderName securityProviderName) {
+            return securityProviderName(Either.ofRight(securityProviderName));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

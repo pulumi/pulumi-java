@@ -169,6 +169,14 @@ public final class CustomIPPrefixArgs extends com.pulumi.resources.ResourceArgs 
             return commissionedState(Output.of(commissionedState));
         }
 
+        public Builder commissionedState(String commissionedState) {
+            return commissionedState(Either.ofLeft(commissionedState));
+        }
+
+        public Builder commissionedState(CommissionedState commissionedState) {
+            return commissionedState(Either.ofRight(commissionedState));
+        }
+
         public Builder customIpPrefixName(@Nullable Output<String> customIpPrefixName) {
             $.customIpPrefixName = customIpPrefixName;
             return this;

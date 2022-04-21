@@ -335,6 +335,14 @@ public final class AzureBlobStorageLinkedServiceResponse extends com.pulumi.reso
             return this;
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder tenant(@Nullable Object tenant) {
             $.tenant = tenant;
             return this;

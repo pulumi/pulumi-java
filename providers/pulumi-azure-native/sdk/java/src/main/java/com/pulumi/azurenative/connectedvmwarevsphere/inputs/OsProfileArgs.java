@@ -128,6 +128,14 @@ public final class OsProfileArgs extends com.pulumi.resources.ResourceArgs {
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OsType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public OsProfileArgs build() {
             return $;
         }

@@ -224,9 +224,25 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
             return this;
         }
 
+        public Builder accessToken(AzureKeyVaultSecretReferenceResponse accessToken) {
+            return accessToken(Either.ofLeft(accessToken));
+        }
+
+        public Builder accessToken(SecureStringResponse accessToken) {
+            return accessToken(Either.ofRight(accessToken));
+        }
+
         public Builder accessTokenSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessTokenSecret) {
             $.accessTokenSecret = accessTokenSecret;
             return this;
+        }
+
+        public Builder accessTokenSecret(AzureKeyVaultSecretReferenceResponse accessTokenSecret) {
+            return accessTokenSecret(Either.ofLeft(accessTokenSecret));
+        }
+
+        public Builder accessTokenSecret(SecureStringResponse accessTokenSecret) {
+            return accessTokenSecret(Either.ofRight(accessTokenSecret));
         }
 
         public Builder annotations(@Nullable List<Object> annotations) {
@@ -261,6 +277,14 @@ public final class QuickBooksLinkedServiceResponse extends com.pulumi.resources.
         public Builder consumerSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> consumerSecret) {
             $.consumerSecret = consumerSecret;
             return this;
+        }
+
+        public Builder consumerSecret(AzureKeyVaultSecretReferenceResponse consumerSecret) {
+            return consumerSecret(Either.ofLeft(consumerSecret));
+        }
+
+        public Builder consumerSecret(SecureStringResponse consumerSecret) {
+            return consumerSecret(Either.ofRight(consumerSecret));
         }
 
         public Builder description(@Nullable String description) {

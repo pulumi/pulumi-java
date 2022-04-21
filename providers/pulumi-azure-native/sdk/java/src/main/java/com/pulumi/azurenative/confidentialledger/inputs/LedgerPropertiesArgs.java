@@ -139,6 +139,14 @@ public final class LedgerPropertiesArgs extends com.pulumi.resources.ResourceArg
             return ledgerType(Output.of(ledgerType));
         }
 
+        public Builder ledgerType(String ledgerType) {
+            return ledgerType(Either.ofLeft(ledgerType));
+        }
+
+        public Builder ledgerType(LedgerType ledgerType) {
+            return ledgerType(Either.ofRight(ledgerType));
+        }
+
         public LedgerPropertiesArgs build() {
             return $;
         }

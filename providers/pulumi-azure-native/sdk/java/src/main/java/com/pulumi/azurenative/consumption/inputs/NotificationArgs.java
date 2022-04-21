@@ -203,6 +203,14 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
             return locale(Output.of(locale));
         }
 
+        public Builder locale(String locale) {
+            return locale(Either.ofLeft(locale));
+        }
+
+        public Builder locale(CultureCode locale) {
+            return locale(Either.ofRight(locale));
+        }
+
         public Builder operator(Output<Either<String,OperatorType>> operator) {
             $.operator = operator;
             return this;
@@ -210,6 +218,14 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder operator(Either<String,OperatorType> operator) {
             return operator(Output.of(operator));
+        }
+
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(OperatorType operator) {
+            return operator(Either.ofRight(operator));
         }
 
         public Builder threshold(Output<Double> threshold) {
@@ -228,6 +244,14 @@ public final class NotificationArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder thresholdType(Either<String,ThresholdType> thresholdType) {
             return thresholdType(Output.of(thresholdType));
+        }
+
+        public Builder thresholdType(String thresholdType) {
+            return thresholdType(Either.ofLeft(thresholdType));
+        }
+
+        public Builder thresholdType(ThresholdType thresholdType) {
+            return thresholdType(Either.ofRight(thresholdType));
         }
 
         public NotificationArgs build() {

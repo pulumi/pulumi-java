@@ -300,6 +300,14 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return aadServicePrincipalCredentialType(Output.of(aadServicePrincipalCredentialType));
         }
 
+        public Builder aadServicePrincipalCredentialType(String aadServicePrincipalCredentialType) {
+            return aadServicePrincipalCredentialType(Either.ofLeft(aadServicePrincipalCredentialType));
+        }
+
+        public Builder aadServicePrincipalCredentialType(ODataAadServicePrincipalCredentialType aadServicePrincipalCredentialType) {
+            return aadServicePrincipalCredentialType(Either.ofRight(aadServicePrincipalCredentialType));
+        }
+
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
@@ -329,6 +337,14 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
         public Builder authenticationType(Either<String,ODataAuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
+        }
+
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(ODataAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
         }
 
         public Builder azureCloudType(@Nullable Output<Object> azureCloudType) {
@@ -385,6 +401,14 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder servicePrincipalEmbeddedCert(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCert) {
             $.servicePrincipalEmbeddedCert = servicePrincipalEmbeddedCert;
             return this;
@@ -394,6 +418,14 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
             return servicePrincipalEmbeddedCert(Output.of(servicePrincipalEmbeddedCert));
         }
 
+        public Builder servicePrincipalEmbeddedCert(AzureKeyVaultSecretReferenceArgs servicePrincipalEmbeddedCert) {
+            return servicePrincipalEmbeddedCert(Either.ofLeft(servicePrincipalEmbeddedCert));
+        }
+
+        public Builder servicePrincipalEmbeddedCert(SecureStringArgs servicePrincipalEmbeddedCert) {
+            return servicePrincipalEmbeddedCert(Either.ofRight(servicePrincipalEmbeddedCert));
+        }
+
         public Builder servicePrincipalEmbeddedCertPassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalEmbeddedCertPassword) {
             $.servicePrincipalEmbeddedCertPassword = servicePrincipalEmbeddedCertPassword;
             return this;
@@ -401,6 +433,14 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
         public Builder servicePrincipalEmbeddedCertPassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalEmbeddedCertPassword) {
             return servicePrincipalEmbeddedCertPassword(Output.of(servicePrincipalEmbeddedCertPassword));
+        }
+
+        public Builder servicePrincipalEmbeddedCertPassword(AzureKeyVaultSecretReferenceArgs servicePrincipalEmbeddedCertPassword) {
+            return servicePrincipalEmbeddedCertPassword(Either.ofLeft(servicePrincipalEmbeddedCertPassword));
+        }
+
+        public Builder servicePrincipalEmbeddedCertPassword(SecureStringArgs servicePrincipalEmbeddedCertPassword) {
+            return servicePrincipalEmbeddedCertPassword(Either.ofRight(servicePrincipalEmbeddedCertPassword));
         }
 
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
@@ -419,6 +459,14 @@ public final class ODataLinkedServiceArgs extends com.pulumi.resources.ResourceA
 
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder tenant(@Nullable Output<Object> tenant) {

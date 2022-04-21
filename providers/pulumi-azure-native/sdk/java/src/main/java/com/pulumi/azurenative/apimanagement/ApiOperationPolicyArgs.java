@@ -143,6 +143,14 @@ public final class ApiOperationPolicyArgs extends com.pulumi.resources.ResourceA
             return format(Output.of(format));
         }
 
+        public Builder format(String format) {
+            return format(Either.ofLeft(format));
+        }
+
+        public Builder format(PolicyContentFormat format) {
+            return format(Either.ofRight(format));
+        }
+
         public Builder operationId(Output<String> operationId) {
             $.operationId = operationId;
             return this;

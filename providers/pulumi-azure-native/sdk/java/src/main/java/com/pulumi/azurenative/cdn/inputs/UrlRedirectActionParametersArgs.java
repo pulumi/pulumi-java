@@ -170,6 +170,14 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
             return destinationProtocol(Output.of(destinationProtocol));
         }
 
+        public Builder destinationProtocol(String destinationProtocol) {
+            return destinationProtocol(Either.ofLeft(destinationProtocol));
+        }
+
+        public Builder destinationProtocol(DestinationProtocol destinationProtocol) {
+            return destinationProtocol(Either.ofRight(destinationProtocol));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
@@ -186,6 +194,14 @@ public final class UrlRedirectActionParametersArgs extends com.pulumi.resources.
 
         public Builder redirectType(Either<String,RedirectType> redirectType) {
             return redirectType(Output.of(redirectType));
+        }
+
+        public Builder redirectType(String redirectType) {
+            return redirectType(Either.ofLeft(redirectType));
+        }
+
+        public Builder redirectType(RedirectType redirectType) {
+            return redirectType(Either.ofRight(redirectType));
         }
 
         public UrlRedirectActionParametersArgs build() {

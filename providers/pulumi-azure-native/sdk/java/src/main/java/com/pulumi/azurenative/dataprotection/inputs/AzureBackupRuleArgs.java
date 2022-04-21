@@ -149,6 +149,14 @@ public final class AzureBackupRuleArgs extends com.pulumi.resources.ResourceArgs
             return trigger(Output.of(trigger));
         }
 
+        public Builder trigger(AdhocBasedTriggerContextArgs trigger) {
+            return trigger(Either.ofLeft(trigger));
+        }
+
+        public Builder trigger(ScheduleBasedTriggerContextArgs trigger) {
+            return trigger(Either.ofRight(trigger));
+        }
+
         public AzureBackupRuleArgs build() {
             $.dataStore = Objects.requireNonNull($.dataStore, "expected parameter 'dataStore' to be non-null");
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

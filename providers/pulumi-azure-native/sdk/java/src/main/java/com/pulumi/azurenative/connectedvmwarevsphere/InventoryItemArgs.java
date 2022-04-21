@@ -154,6 +154,14 @@ public final class InventoryItemArgs extends com.pulumi.resources.ResourceArgs {
             return inventoryType(Output.of(inventoryType));
         }
 
+        public Builder inventoryType(String inventoryType) {
+            return inventoryType(Either.ofLeft(inventoryType));
+        }
+
+        public Builder inventoryType(InventoryType inventoryType) {
+            return inventoryType(Either.ofRight(inventoryType));
+        }
+
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;

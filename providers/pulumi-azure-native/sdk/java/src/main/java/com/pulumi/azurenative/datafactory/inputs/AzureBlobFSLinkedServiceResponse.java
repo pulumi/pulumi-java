@@ -281,6 +281,14 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
             return this;
         }
 
+        public Builder servicePrincipalCredential(AzureKeyVaultSecretReferenceResponse servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofLeft(servicePrincipalCredential));
+        }
+
+        public Builder servicePrincipalCredential(SecureStringResponse servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofRight(servicePrincipalCredential));
+        }
+
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
             $.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
@@ -294,6 +302,14 @@ public final class AzureBlobFSLinkedServiceResponse extends com.pulumi.resources
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
+        }
+
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
         public Builder tenant(@Nullable Object tenant) {

@@ -218,6 +218,14 @@ public final class EdifactValidationSettingsArgs extends com.pulumi.resources.Re
             return trailingSeparatorPolicy(Output.of(trailingSeparatorPolicy));
         }
 
+        public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
+            return trailingSeparatorPolicy(Either.ofLeft(trailingSeparatorPolicy));
+        }
+
+        public Builder trailingSeparatorPolicy(TrailingSeparatorPolicy trailingSeparatorPolicy) {
+            return trailingSeparatorPolicy(Either.ofRight(trailingSeparatorPolicy));
+        }
+
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;

@@ -86,6 +86,14 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
             return level(Output.of(level));
         }
 
+        public Builder level(String level) {
+            return level(Either.ofLeft(level));
+        }
+
+        public Builder level(DiagnosticsLevel level) {
+            return level(Either.ofRight(level));
+        }
+
         public DiagnosticsConfigurationArgs build() {
             $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
             return $;

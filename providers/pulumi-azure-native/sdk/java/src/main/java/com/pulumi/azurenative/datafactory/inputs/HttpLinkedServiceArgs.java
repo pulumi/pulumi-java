@@ -252,6 +252,14 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(HttpAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder certThumbprint(@Nullable Output<Object> certThumbprint) {
             $.certThumbprint = certThumbprint;
             return this;
@@ -322,6 +330,14 @@ public final class HttpLinkedServiceArgs extends com.pulumi.resources.ResourceAr
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder type(Output<String> type) {

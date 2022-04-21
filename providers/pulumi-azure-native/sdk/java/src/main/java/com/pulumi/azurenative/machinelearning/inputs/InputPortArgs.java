@@ -66,6 +66,14 @@ public final class InputPortArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(InputPortType type) {
+            return type(Either.ofRight(type));
+        }
+
         public InputPortArgs build() {
             $.type = Codegen.stringProp("type").left(InputPortType.class).output().arg($.type).def("Dataset").getNullable();
             return $;

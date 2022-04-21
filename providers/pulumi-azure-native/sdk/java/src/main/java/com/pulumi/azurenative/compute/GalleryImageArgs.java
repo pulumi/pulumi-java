@@ -341,6 +341,14 @@ public final class GalleryImageArgs extends com.pulumi.resources.ResourceArgs {
             return hyperVGeneration(Output.of(hyperVGeneration));
         }
 
+        public Builder hyperVGeneration(String hyperVGeneration) {
+            return hyperVGeneration(Either.ofLeft(hyperVGeneration));
+        }
+
+        public Builder hyperVGeneration(HyperVGeneration hyperVGeneration) {
+            return hyperVGeneration(Either.ofRight(hyperVGeneration));
+        }
+
         public Builder identifier(Output<GalleryImageIdentifierArgs> identifier) {
             $.identifier = identifier;
             return this;
