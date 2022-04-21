@@ -5,11 +5,11 @@ package com.pulumi.random;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,49 +22,48 @@ public final class RandomUuidArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
-    public RandomUuidArgs(@Nullable Output<Map<String,Object>> keepers) {
-        this.keepers = keepers;
-    }
+    private RandomUuidArgs() {}
 
-    private RandomUuidArgs() {
-        this.keepers = Codegen.empty();
+    private RandomUuidArgs(RandomUuidArgs $) {
+        this.keepers = $.keepers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomUuidArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,Object>> keepers;
+        private RandomUuidArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomUuidArgs();
         }
 
         public Builder(RandomUuidArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keepers = defaults.keepers;
+            $ = new RandomUuidArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
-        }        public RandomUuidArgs build() {
-            return new RandomUuidArgs(keepers);
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
+        }
+
+        public RandomUuidArgs build() {
+            return $;
         }
     }
+
 }

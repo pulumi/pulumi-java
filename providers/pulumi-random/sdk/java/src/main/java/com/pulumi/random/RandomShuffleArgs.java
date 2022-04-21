@@ -5,13 +5,13 @@ package com.pulumi.random;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputs", required=true)
-      private final Output<List<String>> inputs;
+    private Output<List<String>> inputs;
 
     public Output<List<String>> inputs() {
         return this.inputs;
@@ -35,10 +35,10 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="keepers")
-      private final @Nullable Output<Map<String,Object>> keepers;
+    private @Nullable Output<Map<String,Object>> keepers;
 
-    public Output<Map<String,Object>> keepers() {
-        return this.keepers == null ? Codegen.empty() : this.keepers;
+    public Optional<Output<Map<String,Object>>> keepers() {
+        return Optional.ofNullable(this.keepers);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resultCount")
-      private final @Nullable Output<Integer> resultCount;
+    private @Nullable Output<Integer> resultCount;
 
-    public Output<Integer> resultCount() {
-        return this.resultCount == null ? Codegen.empty() : this.resultCount;
+    public Optional<Output<Integer>> resultCount() {
+        return Optional.ofNullable(this.resultCount);
     }
 
     /**
@@ -57,92 +57,83 @@ public final class RandomShuffleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="seed")
-      private final @Nullable Output<String> seed;
+    private @Nullable Output<String> seed;
 
-    public Output<String> seed() {
-        return this.seed == null ? Codegen.empty() : this.seed;
+    public Optional<Output<String>> seed() {
+        return Optional.ofNullable(this.seed);
     }
 
-    public RandomShuffleArgs(
-        Output<List<String>> inputs,
-        @Nullable Output<Map<String,Object>> keepers,
-        @Nullable Output<Integer> resultCount,
-        @Nullable Output<String> seed) {
-        this.inputs = Objects.requireNonNull(inputs, "expected parameter 'inputs' to be non-null");
-        this.keepers = keepers;
-        this.resultCount = resultCount;
-        this.seed = seed;
-    }
+    private RandomShuffleArgs() {}
 
-    private RandomShuffleArgs() {
-        this.inputs = Codegen.empty();
-        this.keepers = Codegen.empty();
-        this.resultCount = Codegen.empty();
-        this.seed = Codegen.empty();
+    private RandomShuffleArgs(RandomShuffleArgs $) {
+        this.inputs = $.inputs;
+        this.keepers = $.keepers;
+        this.resultCount = $.resultCount;
+        this.seed = $.seed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RandomShuffleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> inputs;
-        private @Nullable Output<Map<String,Object>> keepers;
-        private @Nullable Output<Integer> resultCount;
-        private @Nullable Output<String> seed;
+        private RandomShuffleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RandomShuffleArgs();
         }
 
         public Builder(RandomShuffleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputs = defaults.inputs;
-    	      this.keepers = defaults.keepers;
-    	      this.resultCount = defaults.resultCount;
-    	      this.seed = defaults.seed;
+            $ = new RandomShuffleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputs(Output<List<String>> inputs) {
-            this.inputs = Objects.requireNonNull(inputs);
+            $.inputs = inputs;
             return this;
         }
+
         public Builder inputs(List<String> inputs) {
-            this.inputs = Output.of(Objects.requireNonNull(inputs));
-            return this;
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(String... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder keepers(@Nullable Output<Map<String,Object>> keepers) {
-            this.keepers = keepers;
+            $.keepers = keepers;
             return this;
         }
-        public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Codegen.ofNullable(keepers);
-            return this;
+
+        public Builder keepers(Map<String,Object> keepers) {
+            return keepers(Output.of(keepers));
         }
+
         public Builder resultCount(@Nullable Output<Integer> resultCount) {
-            this.resultCount = resultCount;
+            $.resultCount = resultCount;
             return this;
         }
-        public Builder resultCount(@Nullable Integer resultCount) {
-            this.resultCount = Codegen.ofNullable(resultCount);
-            return this;
+
+        public Builder resultCount(Integer resultCount) {
+            return resultCount(Output.of(resultCount));
         }
+
         public Builder seed(@Nullable Output<String> seed) {
-            this.seed = seed;
+            $.seed = seed;
             return this;
         }
-        public Builder seed(@Nullable String seed) {
-            this.seed = Codegen.ofNullable(seed);
-            return this;
-        }        public RandomShuffleArgs build() {
-            return new RandomShuffleArgs(inputs, keepers, resultCount, seed);
+
+        public Builder seed(String seed) {
+            return seed(Output.of(seed));
+        }
+
+        public RandomShuffleArgs build() {
+            $.inputs = Objects.requireNonNull($.inputs, "expected parameter 'inputs' to be non-null");
+            return $;
         }
     }
+
 }
