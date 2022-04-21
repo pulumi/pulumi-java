@@ -5,11 +5,11 @@ package com.pulumi.example;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.inputs.PetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,73 +18,69 @@ public final class PersonArgs extends com.pulumi.resources.ResourceArgs {
     public static final PersonArgs Empty = new PersonArgs();
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="pets")
-      private final @Nullable Output<List<PetArgs>> pets;
+    private @Nullable Output<List<PetArgs>> pets;
 
-    public Output<List<PetArgs>> pets() {
-        return this.pets == null ? Codegen.empty() : this.pets;
+    public Optional<Output<List<PetArgs>>> pets() {
+        return Optional.ofNullable(this.pets);
     }
 
-    public PersonArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<List<PetArgs>> pets) {
-        this.name = name;
-        this.pets = pets;
-    }
+    private PersonArgs() {}
 
-    private PersonArgs() {
-        this.name = Codegen.empty();
-        this.pets = Codegen.empty();
+    private PersonArgs(PersonArgs $) {
+        this.name = $.name;
+        this.pets = $.pets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<PetArgs>> pets;
+        private PersonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersonArgs();
         }
 
         public Builder(PersonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.pets = defaults.pets;
+            $ = new PersonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pets(@Nullable Output<List<PetArgs>> pets) {
-            this.pets = pets;
+            $.pets = pets;
             return this;
         }
-        public Builder pets(@Nullable List<PetArgs> pets) {
-            this.pets = Codegen.ofNullable(pets);
-            return this;
+
+        public Builder pets(List<PetArgs> pets) {
+            return pets(Output.of(pets));
         }
+
         public Builder pets(PetArgs... pets) {
             return pets(List.of(pets));
-        }        public PersonArgs build() {
-            return new PersonArgs(name, pets);
+        }
+
+        public PersonArgs build() {
+            return $;
         }
     }
+
 }

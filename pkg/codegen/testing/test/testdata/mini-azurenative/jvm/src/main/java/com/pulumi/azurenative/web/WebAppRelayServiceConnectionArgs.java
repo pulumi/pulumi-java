@@ -5,9 +5,9 @@ package com.pulumi.azurenative.web;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class WebAppRelayServiceConnectionArgs extends com.pulumi.resources
     public static final WebAppRelayServiceConnectionArgs Empty = new WebAppRelayServiceConnectionArgs();
 
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public WebAppRelayServiceConnectionArgs(@Nullable Output<String> resourceType) {
-        this.resourceType = resourceType;
-    }
+    private WebAppRelayServiceConnectionArgs() {}
 
-    private WebAppRelayServiceConnectionArgs() {
-        this.resourceType = Codegen.empty();
+    private WebAppRelayServiceConnectionArgs(WebAppRelayServiceConnectionArgs $) {
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebAppRelayServiceConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceType;
+        private WebAppRelayServiceConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebAppRelayServiceConnectionArgs();
         }
 
         public Builder(WebAppRelayServiceConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceType = defaults.resourceType;
+            $ = new WebAppRelayServiceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public WebAppRelayServiceConnectionArgs build() {
-            return new WebAppRelayServiceConnectionArgs(resourceType);
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public WebAppRelayServiceConnectionArgs build() {
+            return $;
         }
     }
+
 }

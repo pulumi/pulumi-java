@@ -19,7 +19,7 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="accountName", required=true)
-      private final String accountName;
+    private String accountName;
 
     public String accountName() {
         return this.accountName;
@@ -30,10 +30,10 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="expand")
-      private final @Nullable String expand;
+    private @Nullable String expand;
 
     public Optional<String> expand() {
-        return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
+        return Optional.ofNullable(this.expand);
     }
 
     /**
@@ -41,64 +41,58 @@ public final class ListStorageAccountKeysArgs extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceGroupName", required=true)
-      private final String resourceGroupName;
+    private String resourceGroupName;
 
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
 
-    public ListStorageAccountKeysArgs(
-        String accountName,
-        @Nullable String expand,
-        String resourceGroupName) {
-        this.accountName = Objects.requireNonNull(accountName, "expected parameter 'accountName' to be non-null");
-        this.expand = expand;
-        this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-    }
+    private ListStorageAccountKeysArgs() {}
 
-    private ListStorageAccountKeysArgs() {
-        this.accountName = null;
-        this.expand = null;
-        this.resourceGroupName = null;
+    private ListStorageAccountKeysArgs(ListStorageAccountKeysArgs $) {
+        this.accountName = $.accountName;
+        this.expand = $.expand;
+        this.resourceGroupName = $.resourceGroupName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ListStorageAccountKeysArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountName;
-        private @Nullable String expand;
-        private String resourceGroupName;
+        private ListStorageAccountKeysArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ListStorageAccountKeysArgs();
         }
 
         public Builder(ListStorageAccountKeysArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountName = defaults.accountName;
-    	      this.expand = defaults.expand;
-    	      this.resourceGroupName = defaults.resourceGroupName;
+            $ = new ListStorageAccountKeysArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accountName(String accountName) {
-            this.accountName = Objects.requireNonNull(accountName);
+            $.accountName = accountName;
             return this;
         }
+
         public Builder expand(@Nullable String expand) {
-            this.expand = expand;
+            $.expand = expand;
             return this;
         }
+
         public Builder resourceGroupName(String resourceGroupName) {
-            this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
+            $.resourceGroupName = resourceGroupName;
             return this;
-        }        public ListStorageAccountKeysArgs build() {
-            return new ListStorageAccountKeysArgs(accountName, expand, resourceGroupName);
+        }
+
+        public ListStorageAccountKeysArgs build() {
+            $.accountName = Objects.requireNonNull($.accountName, "expected parameter 'accountName' to be non-null");
+            $.resourceGroupName = Objects.requireNonNull($.resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
+            return $;
         }
     }
+
 }

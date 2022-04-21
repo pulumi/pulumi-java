@@ -3,35 +3,26 @@
 
 package com.pulumi.example;
 
-import java.util.Objects;
+
 
 
 public final class NoRecursiveArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final NoRecursiveArgs Empty = new NoRecursiveArgs();
 
-    public NoRecursiveArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(NoRecursiveArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private NoRecursiveArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(NoRecursiveArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new NoRecursiveArgs();
         }
         public NoRecursiveArgs build() {
-            return new NoRecursiveArgs();
+            return $;
         }
     }
+
 }

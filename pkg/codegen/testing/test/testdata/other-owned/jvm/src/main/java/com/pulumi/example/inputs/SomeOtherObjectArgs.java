@@ -5,9 +5,9 @@ package com.pulumi.example.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class SomeOtherObjectArgs extends com.pulumi.resources.ResourceArgs
     public static final SomeOtherObjectArgs Empty = new SomeOtherObjectArgs();
 
     @Import(name="baz")
-      private final @Nullable Output<String> baz;
+    private @Nullable Output<String> baz;
 
-    public Output<String> baz() {
-        return this.baz == null ? Codegen.empty() : this.baz;
+    public Optional<Output<String>> baz() {
+        return Optional.ofNullable(this.baz);
     }
 
-    public SomeOtherObjectArgs(@Nullable Output<String> baz) {
-        this.baz = baz;
-    }
+    private SomeOtherObjectArgs() {}
 
-    private SomeOtherObjectArgs() {
-        this.baz = Codegen.empty();
+    private SomeOtherObjectArgs(SomeOtherObjectArgs $) {
+        this.baz = $.baz;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SomeOtherObjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baz;
+        private SomeOtherObjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SomeOtherObjectArgs();
         }
 
         public Builder(SomeOtherObjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baz = defaults.baz;
+            $ = new SomeOtherObjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baz(@Nullable Output<String> baz) {
-            this.baz = baz;
+            $.baz = baz;
             return this;
         }
-        public Builder baz(@Nullable String baz) {
-            this.baz = Codegen.ofNullable(baz);
-            return this;
-        }        public SomeOtherObjectArgs build() {
-            return new SomeOtherObjectArgs(baz);
+
+        public Builder baz(String baz) {
+            return baz(Output.of(baz));
+        }
+
+        public SomeOtherObjectArgs build() {
+            return $;
         }
     }
+
 }

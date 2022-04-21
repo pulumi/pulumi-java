@@ -5,9 +5,9 @@ package com.pulumi.foobar.deeply_nested_module;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     @Import(name="baz")
-      private final @Nullable Output<String> baz;
+    private @Nullable Output<String> baz;
 
-    public Output<String> baz() {
-        return this.baz == null ? Codegen.empty() : this.baz;
+    public Optional<Output<String>> baz() {
+        return Optional.ofNullable(this.baz);
     }
 
-    public ResourceArgs(@Nullable Output<String> baz) {
-        this.baz = baz;
-    }
+    private ResourceArgs() {}
 
-    private ResourceArgs() {
-        this.baz = Codegen.empty();
+    private ResourceArgs(ResourceArgs $) {
+        this.baz = $.baz;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baz;
+        private ResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceArgs();
         }
 
         public Builder(ResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baz = defaults.baz;
+            $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baz(@Nullable Output<String> baz) {
-            this.baz = Codegen.secret(baz);
+            $.baz = baz;
             return this;
         }
-        public Builder baz(@Nullable String baz) {
-            this.baz = Codegen.secret(baz);
-            return this;
-        }        public ResourceArgs build() {
-            return new ResourceArgs(baz);
+
+        public Builder baz(String baz) {
+            return baz(Output.of(baz));
+        }
+
+        public ResourceArgs build() {
+            return $;
         }
     }
+
 }
