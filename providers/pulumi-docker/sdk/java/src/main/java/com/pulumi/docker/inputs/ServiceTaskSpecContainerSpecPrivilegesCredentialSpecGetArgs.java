@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs e
     public static final ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs();
 
     @Import(name="file")
-      private final @Nullable Output<String> file;
+    private @Nullable Output<String> file;
 
-    public Output<String> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<String>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     @Import(name="registry")
-      private final @Nullable Output<String> registry;
+    private @Nullable Output<String> registry;
 
-    public Output<String> registry() {
-        return this.registry == null ? Codegen.empty() : this.registry;
+    public Optional<Output<String>> registry() {
+        return Optional.ofNullable(this.registry);
     }
 
-    public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(
-        @Nullable Output<String> file,
-        @Nullable Output<String> registry) {
-        this.file = file;
-        this.registry = registry;
-    }
+    private ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs() {}
 
-    private ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs() {
-        this.file = Codegen.empty();
-        this.registry = Codegen.empty();
+    private ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs $) {
+        this.file = $.file;
+        this.registry = $.registry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> file;
-        private @Nullable Output<String> registry;
+        private ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.file = defaults.file;
-    	      this.registry = defaults.registry;
+            $ = new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder file(@Nullable Output<String> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable String file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(String file) {
+            return file(Output.of(file));
         }
+
         public Builder registry(@Nullable Output<String> registry) {
-            this.registry = registry;
+            $.registry = registry;
             return this;
         }
-        public Builder registry(@Nullable String registry) {
-            this.registry = Codegen.ofNullable(registry);
-            return this;
-        }        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs build() {
-            return new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs(file, registry);
+
+        public Builder registry(String registry) {
+            return registry(Output.of(registry));
+        }
+
+        public ServiceTaskSpecContainerSpecPrivilegesCredentialSpecGetArgs build() {
+            return $;
         }
     }
+
 }

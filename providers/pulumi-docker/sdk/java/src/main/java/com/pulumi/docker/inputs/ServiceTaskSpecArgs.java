@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceTaskSpecContainerSpecArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecLogDriverArgs;
 import com.pulumi.docker.inputs.ServiceTaskSpecPlacementArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,193 +23,172 @@ public final class ServiceTaskSpecArgs extends com.pulumi.resources.ResourceArgs
     public static final ServiceTaskSpecArgs Empty = new ServiceTaskSpecArgs();
 
     @Import(name="containerSpec", required=true)
-      private final Output<ServiceTaskSpecContainerSpecArgs> containerSpec;
+    private Output<ServiceTaskSpecContainerSpecArgs> containerSpec;
 
     public Output<ServiceTaskSpecContainerSpecArgs> containerSpec() {
         return this.containerSpec;
     }
 
     @Import(name="forceUpdate")
-      private final @Nullable Output<Integer> forceUpdate;
+    private @Nullable Output<Integer> forceUpdate;
 
-    public Output<Integer> forceUpdate() {
-        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
+    public Optional<Output<Integer>> forceUpdate() {
+        return Optional.ofNullable(this.forceUpdate);
     }
 
     @Import(name="logDriver")
-      private final @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver;
+    private @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver;
 
-    public Output<ServiceTaskSpecLogDriverArgs> logDriver() {
-        return this.logDriver == null ? Codegen.empty() : this.logDriver;
+    public Optional<Output<ServiceTaskSpecLogDriverArgs>> logDriver() {
+        return Optional.ofNullable(this.logDriver);
     }
 
     @Import(name="networks")
-      private final @Nullable Output<List<String>> networks;
+    private @Nullable Output<List<String>> networks;
 
-    public Output<List<String>> networks() {
-        return this.networks == null ? Codegen.empty() : this.networks;
+    public Optional<Output<List<String>>> networks() {
+        return Optional.ofNullable(this.networks);
     }
 
     @Import(name="placement")
-      private final @Nullable Output<ServiceTaskSpecPlacementArgs> placement;
+    private @Nullable Output<ServiceTaskSpecPlacementArgs> placement;
 
-    public Output<ServiceTaskSpecPlacementArgs> placement() {
-        return this.placement == null ? Codegen.empty() : this.placement;
+    public Optional<Output<ServiceTaskSpecPlacementArgs>> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
     @Import(name="resources")
-      private final @Nullable Output<ServiceTaskSpecResourcesArgs> resources;
+    private @Nullable Output<ServiceTaskSpecResourcesArgs> resources;
 
-    public Output<ServiceTaskSpecResourcesArgs> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<ServiceTaskSpecResourcesArgs>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     @Import(name="restartPolicy")
-      private final @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy;
+    private @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy;
 
-    public Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy() {
-        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
+    public Optional<Output<ServiceTaskSpecRestartPolicyArgs>> restartPolicy() {
+        return Optional.ofNullable(this.restartPolicy);
     }
 
     @Import(name="runtime")
-      private final @Nullable Output<String> runtime;
+    private @Nullable Output<String> runtime;
 
-    public Output<String> runtime() {
-        return this.runtime == null ? Codegen.empty() : this.runtime;
+    public Optional<Output<String>> runtime() {
+        return Optional.ofNullable(this.runtime);
     }
 
-    public ServiceTaskSpecArgs(
-        Output<ServiceTaskSpecContainerSpecArgs> containerSpec,
-        @Nullable Output<Integer> forceUpdate,
-        @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver,
-        @Nullable Output<List<String>> networks,
-        @Nullable Output<ServiceTaskSpecPlacementArgs> placement,
-        @Nullable Output<ServiceTaskSpecResourcesArgs> resources,
-        @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy,
-        @Nullable Output<String> runtime) {
-        this.containerSpec = Objects.requireNonNull(containerSpec, "expected parameter 'containerSpec' to be non-null");
-        this.forceUpdate = forceUpdate;
-        this.logDriver = logDriver;
-        this.networks = networks;
-        this.placement = placement;
-        this.resources = resources;
-        this.restartPolicy = restartPolicy;
-        this.runtime = runtime;
-    }
+    private ServiceTaskSpecArgs() {}
 
-    private ServiceTaskSpecArgs() {
-        this.containerSpec = Codegen.empty();
-        this.forceUpdate = Codegen.empty();
-        this.logDriver = Codegen.empty();
-        this.networks = Codegen.empty();
-        this.placement = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.restartPolicy = Codegen.empty();
-        this.runtime = Codegen.empty();
+    private ServiceTaskSpecArgs(ServiceTaskSpecArgs $) {
+        this.containerSpec = $.containerSpec;
+        this.forceUpdate = $.forceUpdate;
+        this.logDriver = $.logDriver;
+        this.networks = $.networks;
+        this.placement = $.placement;
+        this.resources = $.resources;
+        this.restartPolicy = $.restartPolicy;
+        this.runtime = $.runtime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ServiceTaskSpecContainerSpecArgs> containerSpec;
-        private @Nullable Output<Integer> forceUpdate;
-        private @Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver;
-        private @Nullable Output<List<String>> networks;
-        private @Nullable Output<ServiceTaskSpecPlacementArgs> placement;
-        private @Nullable Output<ServiceTaskSpecResourcesArgs> resources;
-        private @Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy;
-        private @Nullable Output<String> runtime;
+        private ServiceTaskSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecArgs();
         }
 
         public Builder(ServiceTaskSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerSpec = defaults.containerSpec;
-    	      this.forceUpdate = defaults.forceUpdate;
-    	      this.logDriver = defaults.logDriver;
-    	      this.networks = defaults.networks;
-    	      this.placement = defaults.placement;
-    	      this.resources = defaults.resources;
-    	      this.restartPolicy = defaults.restartPolicy;
-    	      this.runtime = defaults.runtime;
+            $ = new ServiceTaskSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerSpec(Output<ServiceTaskSpecContainerSpecArgs> containerSpec) {
-            this.containerSpec = Objects.requireNonNull(containerSpec);
+            $.containerSpec = containerSpec;
             return this;
         }
+
         public Builder containerSpec(ServiceTaskSpecContainerSpecArgs containerSpec) {
-            this.containerSpec = Output.of(Objects.requireNonNull(containerSpec));
-            return this;
+            return containerSpec(Output.of(containerSpec));
         }
+
         public Builder forceUpdate(@Nullable Output<Integer> forceUpdate) {
-            this.forceUpdate = forceUpdate;
+            $.forceUpdate = forceUpdate;
             return this;
         }
-        public Builder forceUpdate(@Nullable Integer forceUpdate) {
-            this.forceUpdate = Codegen.ofNullable(forceUpdate);
-            return this;
+
+        public Builder forceUpdate(Integer forceUpdate) {
+            return forceUpdate(Output.of(forceUpdate));
         }
+
         public Builder logDriver(@Nullable Output<ServiceTaskSpecLogDriverArgs> logDriver) {
-            this.logDriver = logDriver;
+            $.logDriver = logDriver;
             return this;
         }
-        public Builder logDriver(@Nullable ServiceTaskSpecLogDriverArgs logDriver) {
-            this.logDriver = Codegen.ofNullable(logDriver);
-            return this;
+
+        public Builder logDriver(ServiceTaskSpecLogDriverArgs logDriver) {
+            return logDriver(Output.of(logDriver));
         }
+
         public Builder networks(@Nullable Output<List<String>> networks) {
-            this.networks = networks;
+            $.networks = networks;
             return this;
         }
-        public Builder networks(@Nullable List<String> networks) {
-            this.networks = Codegen.ofNullable(networks);
-            return this;
+
+        public Builder networks(List<String> networks) {
+            return networks(Output.of(networks));
         }
+
         public Builder networks(String... networks) {
             return networks(List.of(networks));
         }
+
         public Builder placement(@Nullable Output<ServiceTaskSpecPlacementArgs> placement) {
-            this.placement = placement;
+            $.placement = placement;
             return this;
         }
-        public Builder placement(@Nullable ServiceTaskSpecPlacementArgs placement) {
-            this.placement = Codegen.ofNullable(placement);
-            return this;
+
+        public Builder placement(ServiceTaskSpecPlacementArgs placement) {
+            return placement(Output.of(placement));
         }
+
         public Builder resources(@Nullable Output<ServiceTaskSpecResourcesArgs> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable ServiceTaskSpecResourcesArgs resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(ServiceTaskSpecResourcesArgs resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder restartPolicy(@Nullable Output<ServiceTaskSpecRestartPolicyArgs> restartPolicy) {
-            this.restartPolicy = restartPolicy;
+            $.restartPolicy = restartPolicy;
             return this;
         }
-        public Builder restartPolicy(@Nullable ServiceTaskSpecRestartPolicyArgs restartPolicy) {
-            this.restartPolicy = Codegen.ofNullable(restartPolicy);
-            return this;
+
+        public Builder restartPolicy(ServiceTaskSpecRestartPolicyArgs restartPolicy) {
+            return restartPolicy(Output.of(restartPolicy));
         }
+
         public Builder runtime(@Nullable Output<String> runtime) {
-            this.runtime = runtime;
+            $.runtime = runtime;
             return this;
         }
-        public Builder runtime(@Nullable String runtime) {
-            this.runtime = Codegen.ofNullable(runtime);
-            return this;
-        }        public ServiceTaskSpecArgs build() {
-            return new ServiceTaskSpecArgs(containerSpec, forceUpdate, logDriver, networks, placement, resources, restartPolicy, runtime);
+
+        public Builder runtime(String runtime) {
+            return runtime(Output.of(runtime));
+        }
+
+        public ServiceTaskSpecArgs build() {
+            $.containerSpec = Objects.requireNonNull($.containerSpec, "expected parameter 'containerSpec' to be non-null");
+            return $;
         }
     }
+
 }

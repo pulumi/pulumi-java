@@ -5,9 +5,9 @@ package com.pulumi.docker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class ServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data", required=true)
-      private final Output<String> data;
+    private Output<String> data;
 
     public Output<String> data() {
         return this.data;
@@ -31,63 +31,59 @@ public final class ServiceConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ServiceConfigArgs(
-        Output<String> data,
-        @Nullable Output<String> name) {
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.name = name;
-    }
+    private ServiceConfigArgs() {}
 
-    private ServiceConfigArgs() {
-        this.data = Codegen.empty();
-        this.name = Codegen.empty();
+    private ServiceConfigArgs(ServiceConfigArgs $) {
+        this.data = $.data;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> data;
-        private @Nullable Output<String> name;
+        private ServiceConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceConfigArgs();
         }
 
         public Builder(ServiceConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.name = defaults.name;
+            $ = new ServiceConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(Output<String> data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder data(String data) {
-            this.data = Output.of(Objects.requireNonNull(data));
-            return this;
+            return data(Output.of(data));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ServiceConfigArgs build() {
-            return new ServiceConfigArgs(data, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ServiceConfigArgs build() {
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            return $;
         }
     }
+
 }

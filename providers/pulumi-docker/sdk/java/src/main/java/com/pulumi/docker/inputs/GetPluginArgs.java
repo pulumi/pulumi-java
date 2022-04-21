@@ -15,62 +15,57 @@ public final class GetPluginArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetPluginArgs Empty = new GetPluginArgs();
 
     @Import(name="alias")
-      private final @Nullable String alias;
+    private @Nullable String alias;
 
     public Optional<String> alias() {
-        return this.alias == null ? Optional.empty() : Optional.ofNullable(this.alias);
+        return Optional.ofNullable(this.alias);
     }
 
     @Import(name="id")
-      private final @Nullable String id;
+    private @Nullable String id;
 
     public Optional<String> id() {
-        return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
+        return Optional.ofNullable(this.id);
     }
 
-    public GetPluginArgs(
-        @Nullable String alias,
-        @Nullable String id) {
-        this.alias = alias;
-        this.id = id;
-    }
+    private GetPluginArgs() {}
 
-    private GetPluginArgs() {
-        this.alias = null;
-        this.id = null;
+    private GetPluginArgs(GetPluginArgs $) {
+        this.alias = $.alias;
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPluginArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String alias;
-        private @Nullable String id;
+        private GetPluginArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPluginArgs();
         }
 
         public Builder(GetPluginArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.id = defaults.id;
+            $ = new GetPluginArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(@Nullable String alias) {
-            this.alias = alias;
+            $.alias = alias;
             return this;
         }
+
         public Builder id(@Nullable String id) {
-            this.id = id;
+            $.id = id;
             return this;
-        }        public GetPluginArgs build() {
-            return new GetPluginArgs(alias, id);
+        }
+
+        public GetPluginArgs build() {
+            return $;
         }
     }
+
 }

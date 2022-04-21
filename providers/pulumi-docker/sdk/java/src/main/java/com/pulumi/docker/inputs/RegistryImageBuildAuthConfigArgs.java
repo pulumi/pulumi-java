@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,190 +16,168 @@ public final class RegistryImageBuildAuthConfigArgs extends com.pulumi.resources
     public static final RegistryImageBuildAuthConfigArgs Empty = new RegistryImageBuildAuthConfigArgs();
 
     @Import(name="auth")
-      private final @Nullable Output<String> auth;
+    private @Nullable Output<String> auth;
 
-    public Output<String> auth() {
-        return this.auth == null ? Codegen.empty() : this.auth;
+    public Optional<Output<String>> auth() {
+        return Optional.ofNullable(this.auth);
     }
 
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     @Import(name="hostName", required=true)
-      private final Output<String> hostName;
+    private Output<String> hostName;
 
     public Output<String> hostName() {
         return this.hostName;
     }
 
     @Import(name="identityToken")
-      private final @Nullable Output<String> identityToken;
+    private @Nullable Output<String> identityToken;
 
-    public Output<String> identityToken() {
-        return this.identityToken == null ? Codegen.empty() : this.identityToken;
+    public Optional<Output<String>> identityToken() {
+        return Optional.ofNullable(this.identityToken);
     }
 
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     @Import(name="registryToken")
-      private final @Nullable Output<String> registryToken;
+    private @Nullable Output<String> registryToken;
 
-    public Output<String> registryToken() {
-        return this.registryToken == null ? Codegen.empty() : this.registryToken;
+    public Optional<Output<String>> registryToken() {
+        return Optional.ofNullable(this.registryToken);
     }
 
     @Import(name="serverAddress")
-      private final @Nullable Output<String> serverAddress;
+    private @Nullable Output<String> serverAddress;
 
-    public Output<String> serverAddress() {
-        return this.serverAddress == null ? Codegen.empty() : this.serverAddress;
+    public Optional<Output<String>> serverAddress() {
+        return Optional.ofNullable(this.serverAddress);
     }
 
     @Import(name="userName")
-      private final @Nullable Output<String> userName;
+    private @Nullable Output<String> userName;
 
-    public Output<String> userName() {
-        return this.userName == null ? Codegen.empty() : this.userName;
+    public Optional<Output<String>> userName() {
+        return Optional.ofNullable(this.userName);
     }
 
-    public RegistryImageBuildAuthConfigArgs(
-        @Nullable Output<String> auth,
-        @Nullable Output<String> email,
-        Output<String> hostName,
-        @Nullable Output<String> identityToken,
-        @Nullable Output<String> password,
-        @Nullable Output<String> registryToken,
-        @Nullable Output<String> serverAddress,
-        @Nullable Output<String> userName) {
-        this.auth = auth;
-        this.email = email;
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.identityToken = identityToken;
-        this.password = password;
-        this.registryToken = registryToken;
-        this.serverAddress = serverAddress;
-        this.userName = userName;
-    }
+    private RegistryImageBuildAuthConfigArgs() {}
 
-    private RegistryImageBuildAuthConfigArgs() {
-        this.auth = Codegen.empty();
-        this.email = Codegen.empty();
-        this.hostName = Codegen.empty();
-        this.identityToken = Codegen.empty();
-        this.password = Codegen.empty();
-        this.registryToken = Codegen.empty();
-        this.serverAddress = Codegen.empty();
-        this.userName = Codegen.empty();
+    private RegistryImageBuildAuthConfigArgs(RegistryImageBuildAuthConfigArgs $) {
+        this.auth = $.auth;
+        this.email = $.email;
+        this.hostName = $.hostName;
+        this.identityToken = $.identityToken;
+        this.password = $.password;
+        this.registryToken = $.registryToken;
+        this.serverAddress = $.serverAddress;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryImageBuildAuthConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> auth;
-        private @Nullable Output<String> email;
-        private Output<String> hostName;
-        private @Nullable Output<String> identityToken;
-        private @Nullable Output<String> password;
-        private @Nullable Output<String> registryToken;
-        private @Nullable Output<String> serverAddress;
-        private @Nullable Output<String> userName;
+        private RegistryImageBuildAuthConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryImageBuildAuthConfigArgs();
         }
 
         public Builder(RegistryImageBuildAuthConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auth = defaults.auth;
-    	      this.email = defaults.email;
-    	      this.hostName = defaults.hostName;
-    	      this.identityToken = defaults.identityToken;
-    	      this.password = defaults.password;
-    	      this.registryToken = defaults.registryToken;
-    	      this.serverAddress = defaults.serverAddress;
-    	      this.userName = defaults.userName;
+            $ = new RegistryImageBuildAuthConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auth(@Nullable Output<String> auth) {
-            this.auth = auth;
+            $.auth = auth;
             return this;
         }
-        public Builder auth(@Nullable String auth) {
-            this.auth = Codegen.ofNullable(auth);
-            return this;
+
+        public Builder auth(String auth) {
+            return auth(Output.of(auth));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder hostName(Output<String> hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder hostName(String hostName) {
-            this.hostName = Output.of(Objects.requireNonNull(hostName));
-            return this;
+            return hostName(Output.of(hostName));
         }
+
         public Builder identityToken(@Nullable Output<String> identityToken) {
-            this.identityToken = identityToken;
+            $.identityToken = identityToken;
             return this;
         }
-        public Builder identityToken(@Nullable String identityToken) {
-            this.identityToken = Codegen.ofNullable(identityToken);
-            return this;
+
+        public Builder identityToken(String identityToken) {
+            return identityToken(Output.of(identityToken));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder registryToken(@Nullable Output<String> registryToken) {
-            this.registryToken = registryToken;
+            $.registryToken = registryToken;
             return this;
         }
-        public Builder registryToken(@Nullable String registryToken) {
-            this.registryToken = Codegen.ofNullable(registryToken);
-            return this;
+
+        public Builder registryToken(String registryToken) {
+            return registryToken(Output.of(registryToken));
         }
+
         public Builder serverAddress(@Nullable Output<String> serverAddress) {
-            this.serverAddress = serverAddress;
+            $.serverAddress = serverAddress;
             return this;
         }
-        public Builder serverAddress(@Nullable String serverAddress) {
-            this.serverAddress = Codegen.ofNullable(serverAddress);
-            return this;
+
+        public Builder serverAddress(String serverAddress) {
+            return serverAddress(Output.of(serverAddress));
         }
+
         public Builder userName(@Nullable Output<String> userName) {
-            this.userName = userName;
+            $.userName = userName;
             return this;
         }
-        public Builder userName(@Nullable String userName) {
-            this.userName = Codegen.ofNullable(userName);
-            return this;
-        }        public RegistryImageBuildAuthConfigArgs build() {
-            return new RegistryImageBuildAuthConfigArgs(auth, email, hostName, identityToken, password, registryToken, serverAddress, userName);
+
+        public Builder userName(String userName) {
+            return userName(Output.of(userName));
+        }
+
+        public RegistryImageBuildAuthConfigArgs build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.docker;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.NetworkIpamConfigArgs;
 import com.pulumi.docker.inputs.NetworkLabelArgs;
 import java.lang.Boolean;
@@ -14,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attachable")
-      private final @Nullable Output<Boolean> attachable;
+    private @Nullable Output<Boolean> attachable;
 
-    public Output<Boolean> attachable() {
-        return this.attachable == null ? Codegen.empty() : this.attachable;
+    public Optional<Output<Boolean>> attachable() {
+        return Optional.ofNullable(this.attachable);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="checkDuplicate")
-      private final @Nullable Output<Boolean> checkDuplicate;
+    private @Nullable Output<Boolean> checkDuplicate;
 
-    public Output<Boolean> checkDuplicate() {
-        return this.checkDuplicate == null ? Codegen.empty() : this.checkDuplicate;
+    public Optional<Output<Boolean>> checkDuplicate() {
+        return Optional.ofNullable(this.checkDuplicate);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="driver")
-      private final @Nullable Output<String> driver;
+    private @Nullable Output<String> driver;
 
-    public Output<String> driver() {
-        return this.driver == null ? Codegen.empty() : this.driver;
+    public Optional<Output<String>> driver() {
+        return Optional.ofNullable(this.driver);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ingress")
-      private final @Nullable Output<Boolean> ingress;
+    private @Nullable Output<Boolean> ingress;
 
-    public Output<Boolean> ingress() {
-        return this.ingress == null ? Codegen.empty() : this.ingress;
+    public Optional<Output<Boolean>> ingress() {
+        return Optional.ofNullable(this.ingress);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="internal")
-      private final @Nullable Output<Boolean> internal;
+    private @Nullable Output<Boolean> internal;
 
-    public Output<Boolean> internal() {
-        return this.internal == null ? Codegen.empty() : this.internal;
+    public Optional<Output<Boolean>> internal() {
+        return Optional.ofNullable(this.internal);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipamConfigs")
-      private final @Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs;
+    private @Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs;
 
-    public Output<List<NetworkIpamConfigArgs>> ipamConfigs() {
-        return this.ipamConfigs == null ? Codegen.empty() : this.ipamConfigs;
+    public Optional<Output<List<NetworkIpamConfigArgs>>> ipamConfigs() {
+        return Optional.ofNullable(this.ipamConfigs);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipamDriver")
-      private final @Nullable Output<String> ipamDriver;
+    private @Nullable Output<String> ipamDriver;
 
-    public Output<String> ipamDriver() {
-        return this.ipamDriver == null ? Codegen.empty() : this.ipamDriver;
+    public Optional<Output<String>> ipamDriver() {
+        return Optional.ofNullable(this.ipamDriver);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipv6")
-      private final @Nullable Output<Boolean> ipv6;
+    private @Nullable Output<Boolean> ipv6;
 
-    public Output<Boolean> ipv6() {
-        return this.ipv6 == null ? Codegen.empty() : this.ipv6;
+    public Optional<Output<Boolean>> ipv6() {
+        return Optional.ofNullable(this.ipv6);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<List<NetworkLabelArgs>> labels;
+    private @Nullable Output<List<NetworkLabelArgs>> labels;
 
-    public Output<List<NetworkLabelArgs>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<NetworkLabelArgs>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -138,186 +138,156 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<Map<String,Object>> options;
+    private @Nullable Output<Map<String,Object>> options;
 
-    public Output<Map<String,Object>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<Map<String,Object>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
-    public NetworkArgs(
-        @Nullable Output<Boolean> attachable,
-        @Nullable Output<Boolean> checkDuplicate,
-        @Nullable Output<String> driver,
-        @Nullable Output<Boolean> ingress,
-        @Nullable Output<Boolean> internal,
-        @Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs,
-        @Nullable Output<String> ipamDriver,
-        @Nullable Output<Boolean> ipv6,
-        @Nullable Output<List<NetworkLabelArgs>> labels,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,Object>> options) {
-        this.attachable = attachable;
-        this.checkDuplicate = checkDuplicate;
-        this.driver = driver;
-        this.ingress = ingress;
-        this.internal = internal;
-        this.ipamConfigs = ipamConfigs;
-        this.ipamDriver = ipamDriver;
-        this.ipv6 = ipv6;
-        this.labels = labels;
-        this.name = name;
-        this.options = options;
-    }
+    private NetworkArgs() {}
 
-    private NetworkArgs() {
-        this.attachable = Codegen.empty();
-        this.checkDuplicate = Codegen.empty();
-        this.driver = Codegen.empty();
-        this.ingress = Codegen.empty();
-        this.internal = Codegen.empty();
-        this.ipamConfigs = Codegen.empty();
-        this.ipamDriver = Codegen.empty();
-        this.ipv6 = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
+    private NetworkArgs(NetworkArgs $) {
+        this.attachable = $.attachable;
+        this.checkDuplicate = $.checkDuplicate;
+        this.driver = $.driver;
+        this.ingress = $.ingress;
+        this.internal = $.internal;
+        this.ipamConfigs = $.ipamConfigs;
+        this.ipamDriver = $.ipamDriver;
+        this.ipv6 = $.ipv6;
+        this.labels = $.labels;
+        this.name = $.name;
+        this.options = $.options;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> attachable;
-        private @Nullable Output<Boolean> checkDuplicate;
-        private @Nullable Output<String> driver;
-        private @Nullable Output<Boolean> ingress;
-        private @Nullable Output<Boolean> internal;
-        private @Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs;
-        private @Nullable Output<String> ipamDriver;
-        private @Nullable Output<Boolean> ipv6;
-        private @Nullable Output<List<NetworkLabelArgs>> labels;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,Object>> options;
+        private NetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkArgs();
         }
 
         public Builder(NetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachable = defaults.attachable;
-    	      this.checkDuplicate = defaults.checkDuplicate;
-    	      this.driver = defaults.driver;
-    	      this.ingress = defaults.ingress;
-    	      this.internal = defaults.internal;
-    	      this.ipamConfigs = defaults.ipamConfigs;
-    	      this.ipamDriver = defaults.ipamDriver;
-    	      this.ipv6 = defaults.ipv6;
-    	      this.labels = defaults.labels;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
+            $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachable(@Nullable Output<Boolean> attachable) {
-            this.attachable = attachable;
+            $.attachable = attachable;
             return this;
         }
-        public Builder attachable(@Nullable Boolean attachable) {
-            this.attachable = Codegen.ofNullable(attachable);
-            return this;
+
+        public Builder attachable(Boolean attachable) {
+            return attachable(Output.of(attachable));
         }
+
         public Builder checkDuplicate(@Nullable Output<Boolean> checkDuplicate) {
-            this.checkDuplicate = checkDuplicate;
+            $.checkDuplicate = checkDuplicate;
             return this;
         }
-        public Builder checkDuplicate(@Nullable Boolean checkDuplicate) {
-            this.checkDuplicate = Codegen.ofNullable(checkDuplicate);
-            return this;
+
+        public Builder checkDuplicate(Boolean checkDuplicate) {
+            return checkDuplicate(Output.of(checkDuplicate));
         }
+
         public Builder driver(@Nullable Output<String> driver) {
-            this.driver = driver;
+            $.driver = driver;
             return this;
         }
-        public Builder driver(@Nullable String driver) {
-            this.driver = Codegen.ofNullable(driver);
-            return this;
+
+        public Builder driver(String driver) {
+            return driver(Output.of(driver));
         }
+
         public Builder ingress(@Nullable Output<Boolean> ingress) {
-            this.ingress = ingress;
+            $.ingress = ingress;
             return this;
         }
-        public Builder ingress(@Nullable Boolean ingress) {
-            this.ingress = Codegen.ofNullable(ingress);
-            return this;
+
+        public Builder ingress(Boolean ingress) {
+            return ingress(Output.of(ingress));
         }
+
         public Builder internal(@Nullable Output<Boolean> internal) {
-            this.internal = internal;
+            $.internal = internal;
             return this;
         }
-        public Builder internal(@Nullable Boolean internal) {
-            this.internal = Codegen.ofNullable(internal);
-            return this;
+
+        public Builder internal(Boolean internal) {
+            return internal(Output.of(internal));
         }
+
         public Builder ipamConfigs(@Nullable Output<List<NetworkIpamConfigArgs>> ipamConfigs) {
-            this.ipamConfigs = ipamConfigs;
+            $.ipamConfigs = ipamConfigs;
             return this;
         }
-        public Builder ipamConfigs(@Nullable List<NetworkIpamConfigArgs> ipamConfigs) {
-            this.ipamConfigs = Codegen.ofNullable(ipamConfigs);
-            return this;
+
+        public Builder ipamConfigs(List<NetworkIpamConfigArgs> ipamConfigs) {
+            return ipamConfigs(Output.of(ipamConfigs));
         }
+
         public Builder ipamConfigs(NetworkIpamConfigArgs... ipamConfigs) {
             return ipamConfigs(List.of(ipamConfigs));
         }
+
         public Builder ipamDriver(@Nullable Output<String> ipamDriver) {
-            this.ipamDriver = ipamDriver;
+            $.ipamDriver = ipamDriver;
             return this;
         }
-        public Builder ipamDriver(@Nullable String ipamDriver) {
-            this.ipamDriver = Codegen.ofNullable(ipamDriver);
-            return this;
+
+        public Builder ipamDriver(String ipamDriver) {
+            return ipamDriver(Output.of(ipamDriver));
         }
+
         public Builder ipv6(@Nullable Output<Boolean> ipv6) {
-            this.ipv6 = ipv6;
+            $.ipv6 = ipv6;
             return this;
         }
-        public Builder ipv6(@Nullable Boolean ipv6) {
-            this.ipv6 = Codegen.ofNullable(ipv6);
-            return this;
+
+        public Builder ipv6(Boolean ipv6) {
+            return ipv6(Output.of(ipv6));
         }
+
         public Builder labels(@Nullable Output<List<NetworkLabelArgs>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<NetworkLabelArgs> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<NetworkLabelArgs> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(NetworkLabelArgs... labels) {
             return labels(List.of(labels));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<Map<String,Object>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable Map<String,Object> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
-        }        public NetworkArgs build() {
-            return new NetworkArgs(attachable, checkDuplicate, driver, ingress, internal, ipamConfigs, ipamDriver, ipv6, labels, name, options);
+
+        public Builder options(Map<String,Object> options) {
+            return options(Output.of(options));
+        }
+
+        public NetworkArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceConvergeConfigArgs extends com.pulumi.resources.Resour
     public static final ServiceConvergeConfigArgs Empty = new ServiceConvergeConfigArgs();
 
     @Import(name="delay")
-      private final @Nullable Output<String> delay;
+    private @Nullable Output<String> delay;
 
-    public Output<String> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<String>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
-    public ServiceConvergeConfigArgs(
-        @Nullable Output<String> delay,
-        @Nullable Output<String> timeout) {
-        this.delay = delay;
-        this.timeout = timeout;
-    }
+    private ServiceConvergeConfigArgs() {}
 
-    private ServiceConvergeConfigArgs() {
-        this.delay = Codegen.empty();
-        this.timeout = Codegen.empty();
+    private ServiceConvergeConfigArgs(ServiceConvergeConfigArgs $) {
+        this.delay = $.delay;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceConvergeConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> delay;
-        private @Nullable Output<String> timeout;
+        private ServiceConvergeConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceConvergeConfigArgs();
         }
 
         public Builder(ServiceConvergeConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.delay = defaults.delay;
-    	      this.timeout = defaults.timeout;
+            $ = new ServiceConvergeConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder delay(@Nullable Output<String> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable String delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
+
+        public Builder delay(String delay) {
+            return delay(Output.of(delay));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
-        }        public ServiceConvergeConfigArgs build() {
-            return new ServiceConvergeConfigArgs(delay, timeout);
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
+        }
+
+        public ServiceConvergeConfigArgs build() {
+            return $;
         }
     }
+
 }

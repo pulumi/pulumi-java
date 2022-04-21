@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceTaskSpecResourcesLimitsGetArgs extends com.pulumi.reso
     public static final ServiceTaskSpecResourcesLimitsGetArgs Empty = new ServiceTaskSpecResourcesLimitsGetArgs();
 
     @Import(name="memoryBytes")
-      private final @Nullable Output<Integer> memoryBytes;
+    private @Nullable Output<Integer> memoryBytes;
 
-    public Output<Integer> memoryBytes() {
-        return this.memoryBytes == null ? Codegen.empty() : this.memoryBytes;
+    public Optional<Output<Integer>> memoryBytes() {
+        return Optional.ofNullable(this.memoryBytes);
     }
 
     @Import(name="nanoCpus")
-      private final @Nullable Output<Integer> nanoCpus;
+    private @Nullable Output<Integer> nanoCpus;
 
-    public Output<Integer> nanoCpus() {
-        return this.nanoCpus == null ? Codegen.empty() : this.nanoCpus;
+    public Optional<Output<Integer>> nanoCpus() {
+        return Optional.ofNullable(this.nanoCpus);
     }
 
-    public ServiceTaskSpecResourcesLimitsGetArgs(
-        @Nullable Output<Integer> memoryBytes,
-        @Nullable Output<Integer> nanoCpus) {
-        this.memoryBytes = memoryBytes;
-        this.nanoCpus = nanoCpus;
-    }
+    private ServiceTaskSpecResourcesLimitsGetArgs() {}
 
-    private ServiceTaskSpecResourcesLimitsGetArgs() {
-        this.memoryBytes = Codegen.empty();
-        this.nanoCpus = Codegen.empty();
+    private ServiceTaskSpecResourcesLimitsGetArgs(ServiceTaskSpecResourcesLimitsGetArgs $) {
+        this.memoryBytes = $.memoryBytes;
+        this.nanoCpus = $.nanoCpus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecResourcesLimitsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> memoryBytes;
-        private @Nullable Output<Integer> nanoCpus;
+        private ServiceTaskSpecResourcesLimitsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecResourcesLimitsGetArgs();
         }
 
         public Builder(ServiceTaskSpecResourcesLimitsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.memoryBytes = defaults.memoryBytes;
-    	      this.nanoCpus = defaults.nanoCpus;
+            $ = new ServiceTaskSpecResourcesLimitsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder memoryBytes(@Nullable Output<Integer> memoryBytes) {
-            this.memoryBytes = memoryBytes;
+            $.memoryBytes = memoryBytes;
             return this;
         }
-        public Builder memoryBytes(@Nullable Integer memoryBytes) {
-            this.memoryBytes = Codegen.ofNullable(memoryBytes);
-            return this;
+
+        public Builder memoryBytes(Integer memoryBytes) {
+            return memoryBytes(Output.of(memoryBytes));
         }
+
         public Builder nanoCpus(@Nullable Output<Integer> nanoCpus) {
-            this.nanoCpus = nanoCpus;
+            $.nanoCpus = nanoCpus;
             return this;
         }
-        public Builder nanoCpus(@Nullable Integer nanoCpus) {
-            this.nanoCpus = Codegen.ofNullable(nanoCpus);
-            return this;
-        }        public ServiceTaskSpecResourcesLimitsGetArgs build() {
-            return new ServiceTaskSpecResourcesLimitsGetArgs(memoryBytes, nanoCpus);
+
+        public Builder nanoCpus(Integer nanoCpus) {
+            return nanoCpus(Output.of(nanoCpus));
+        }
+
+        public ServiceTaskSpecResourcesLimitsGetArgs build() {
+            return $;
         }
     }
+
 }

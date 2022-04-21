@@ -5,7 +5,6 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,70 +14,67 @@ public final class ServiceTaskSpecContainerSpecHostArgs extends com.pulumi.resou
     public static final ServiceTaskSpecContainerSpecHostArgs Empty = new ServiceTaskSpecContainerSpecHostArgs();
 
     @Import(name="host", required=true)
-      private final Output<String> host;
+    private Output<String> host;
 
     public Output<String> host() {
         return this.host;
     }
 
     @Import(name="ip", required=true)
-      private final Output<String> ip;
+    private Output<String> ip;
 
     public Output<String> ip() {
         return this.ip;
     }
 
-    public ServiceTaskSpecContainerSpecHostArgs(
-        Output<String> host,
-        Output<String> ip) {
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.ip = Objects.requireNonNull(ip, "expected parameter 'ip' to be non-null");
-    }
+    private ServiceTaskSpecContainerSpecHostArgs() {}
 
-    private ServiceTaskSpecContainerSpecHostArgs() {
-        this.host = Codegen.empty();
-        this.ip = Codegen.empty();
+    private ServiceTaskSpecContainerSpecHostArgs(ServiceTaskSpecContainerSpecHostArgs $) {
+        this.host = $.host;
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecHostArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> host;
-        private Output<String> ip;
+        private ServiceTaskSpecContainerSpecHostArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecHostArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecHostArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.ip = defaults.ip;
+            $ = new ServiceTaskSpecContainerSpecHostArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(Output<String> host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Output.of(Objects.requireNonNull(host));
-            return this;
+            return host(Output.of(host));
         }
+
         public Builder ip(Output<String> ip) {
-            this.ip = Objects.requireNonNull(ip);
+            $.ip = ip;
             return this;
         }
+
         public Builder ip(String ip) {
-            this.ip = Output.of(Objects.requireNonNull(ip));
-            return this;
-        }        public ServiceTaskSpecContainerSpecHostArgs build() {
-            return new ServiceTaskSpecContainerSpecHostArgs(host, ip);
+            return ip(Output.of(ip));
+        }
+
+        public ServiceTaskSpecContainerSpecHostArgs build() {
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.ip = Objects.requireNonNull($.ip, "expected parameter 'ip' to be non-null");
+            return $;
         }
     }
+
 }

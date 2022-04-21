@@ -5,10 +5,10 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.docker.inputs.ServiceModeReplicatedGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,70 +17,65 @@ public final class ServiceModeGetArgs extends com.pulumi.resources.ResourceArgs 
     public static final ServiceModeGetArgs Empty = new ServiceModeGetArgs();
 
     @Import(name="global")
-      private final @Nullable Output<Boolean> global;
+    private @Nullable Output<Boolean> global;
 
-    public Output<Boolean> global() {
-        return this.global == null ? Codegen.empty() : this.global;
+    public Optional<Output<Boolean>> global() {
+        return Optional.ofNullable(this.global);
     }
 
     @Import(name="replicated")
-      private final @Nullable Output<ServiceModeReplicatedGetArgs> replicated;
+    private @Nullable Output<ServiceModeReplicatedGetArgs> replicated;
 
-    public Output<ServiceModeReplicatedGetArgs> replicated() {
-        return this.replicated == null ? Codegen.empty() : this.replicated;
+    public Optional<Output<ServiceModeReplicatedGetArgs>> replicated() {
+        return Optional.ofNullable(this.replicated);
     }
 
-    public ServiceModeGetArgs(
-        @Nullable Output<Boolean> global,
-        @Nullable Output<ServiceModeReplicatedGetArgs> replicated) {
-        this.global = global;
-        this.replicated = replicated;
-    }
+    private ServiceModeGetArgs() {}
 
-    private ServiceModeGetArgs() {
-        this.global = Codegen.empty();
-        this.replicated = Codegen.empty();
+    private ServiceModeGetArgs(ServiceModeGetArgs $) {
+        this.global = $.global;
+        this.replicated = $.replicated;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceModeGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> global;
-        private @Nullable Output<ServiceModeReplicatedGetArgs> replicated;
+        private ServiceModeGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceModeGetArgs();
         }
 
         public Builder(ServiceModeGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.global = defaults.global;
-    	      this.replicated = defaults.replicated;
+            $ = new ServiceModeGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder global(@Nullable Output<Boolean> global) {
-            this.global = global;
+            $.global = global;
             return this;
         }
-        public Builder global(@Nullable Boolean global) {
-            this.global = Codegen.ofNullable(global);
-            return this;
+
+        public Builder global(Boolean global) {
+            return global(Output.of(global));
         }
+
         public Builder replicated(@Nullable Output<ServiceModeReplicatedGetArgs> replicated) {
-            this.replicated = replicated;
+            $.replicated = replicated;
             return this;
         }
-        public Builder replicated(@Nullable ServiceModeReplicatedGetArgs replicated) {
-            this.replicated = Codegen.ofNullable(replicated);
-            return this;
-        }        public ServiceModeGetArgs build() {
-            return new ServiceModeGetArgs(global, replicated);
+
+        public Builder replicated(ServiceModeReplicatedGetArgs replicated) {
+            return replicated(Output.of(replicated));
+        }
+
+        public ServiceModeGetArgs build() {
+            return $;
         }
     }
+
 }

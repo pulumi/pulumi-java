@@ -5,9 +5,9 @@ package com.pulumi.docker.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,70 +16,65 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs extends 
     public static final ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs Empty = new ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs();
 
     @Import(name="mode")
-      private final @Nullable Output<Integer> mode;
+    private @Nullable Output<Integer> mode;
 
-    public Output<Integer> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Integer>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     @Import(name="sizeBytes")
-      private final @Nullable Output<Integer> sizeBytes;
+    private @Nullable Output<Integer> sizeBytes;
 
-    public Output<Integer> sizeBytes() {
-        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
+    public Optional<Output<Integer>> sizeBytes() {
+        return Optional.ofNullable(this.sizeBytes);
     }
 
-    public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(
-        @Nullable Output<Integer> mode,
-        @Nullable Output<Integer> sizeBytes) {
-        this.mode = mode;
-        this.sizeBytes = sizeBytes;
-    }
+    private ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs() {}
 
-    private ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs() {
-        this.mode = Codegen.empty();
-        this.sizeBytes = Codegen.empty();
+    private ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs $) {
+        this.mode = $.mode;
+        this.sizeBytes = $.sizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> mode;
-        private @Nullable Output<Integer> sizeBytes;
+        private ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs();
         }
 
         public Builder(ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
-    	      this.sizeBytes = defaults.sizeBytes;
+            $ = new ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<Integer> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Integer mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Integer mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
-            this.sizeBytes = sizeBytes;
+            $.sizeBytes = sizeBytes;
             return this;
         }
-        public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Codegen.ofNullable(sizeBytes);
-            return this;
-        }        public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs build() {
-            return new ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(mode, sizeBytes);
+
+        public Builder sizeBytes(Integer sizeBytes) {
+            return sizeBytes(Output.of(sizeBytes));
+        }
+
+        public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs build() {
+            return $;
         }
     }
+
 }
