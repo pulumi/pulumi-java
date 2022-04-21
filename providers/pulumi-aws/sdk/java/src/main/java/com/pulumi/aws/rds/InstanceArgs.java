@@ -1008,6 +1008,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
             return instanceClass(Output.of(instanceClass));
         }
 
+        public Builder instanceClass(String instanceClass) {
+            return instanceClass(Either.ofLeft(instanceClass));
+        }
+
+        public Builder instanceClass(InstanceType instanceClass) {
+            return instanceClass(Either.ofRight(instanceClass));
+        }
+
         public Builder iops(@Nullable Output<Integer> iops) {
             $.iops = iops;
             return this;
@@ -1253,6 +1261,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder storageType(Either<String,StorageType> storageType) {
             return storageType(Output.of(storageType));
+        }
+
+        public Builder storageType(String storageType) {
+            return storageType(Either.ofLeft(storageType));
+        }
+
+        public Builder storageType(StorageType storageType) {
+            return storageType(Either.ofRight(storageType));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

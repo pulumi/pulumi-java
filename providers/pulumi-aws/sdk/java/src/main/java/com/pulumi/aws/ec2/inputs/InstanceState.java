@@ -824,6 +824,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
             return instanceType(Output.of(instanceType));
         }
 
+        public Builder instanceType(String instanceType) {
+            return instanceType(Either.ofLeft(instanceType));
+        }
+
+        public Builder instanceType(InstanceType instanceType) {
+            return instanceType(Either.ofRight(instanceType));
+        }
+
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
             $.ipv6AddressCount = ipv6AddressCount;
             return this;
@@ -1054,6 +1062,14 @@ public final class InstanceState extends com.pulumi.resources.ResourceArgs {
 
         public Builder tenancy(Either<String,Tenancy> tenancy) {
             return tenancy(Output.of(tenancy));
+        }
+
+        public Builder tenancy(String tenancy) {
+            return tenancy(Either.ofLeft(tenancy));
+        }
+
+        public Builder tenancy(Tenancy tenancy) {
+            return tenancy(Either.ofRight(tenancy));
         }
 
         public Builder userData(@Nullable Output<String> userData) {

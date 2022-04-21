@@ -447,6 +447,14 @@ public final class ClusterInstanceArgs extends com.pulumi.resources.ResourceArgs
             return instanceClass(Output.of(instanceClass));
         }
 
+        public Builder instanceClass(String instanceClass) {
+            return instanceClass(Either.ofLeft(instanceClass));
+        }
+
+        public Builder instanceClass(InstanceType instanceClass) {
+            return instanceClass(Either.ofRight(instanceClass));
+        }
+
         public Builder monitoringInterval(@Nullable Output<Integer> monitoringInterval) {
             $.monitoringInterval = monitoringInterval;
             return this;

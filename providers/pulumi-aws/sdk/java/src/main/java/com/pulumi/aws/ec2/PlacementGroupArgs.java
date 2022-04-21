@@ -119,6 +119,14 @@ public final class PlacementGroupArgs extends com.pulumi.resources.ResourceArgs 
             return strategy(Output.of(strategy));
         }
 
+        public Builder strategy(String strategy) {
+            return strategy(Either.ofLeft(strategy));
+        }
+
+        public Builder strategy(PlacementStrategy strategy) {
+            return strategy(Either.ofRight(strategy));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

@@ -325,6 +325,14 @@ public final class BucketArgs extends com.pulumi.resources.ResourceArgs {
             return acl(Output.of(acl));
         }
 
+        public Builder acl(String acl) {
+            return acl(Either.ofLeft(acl));
+        }
+
+        public Builder acl(CannedAcl acl) {
+            return acl(Either.ofRight(acl));
+        }
+
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;

@@ -242,6 +242,14 @@ public final class SecurityGroupRuleArgs extends com.pulumi.resources.ResourceAr
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ProtocolType protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder securityGroupId(Output<String> securityGroupId) {
             $.securityGroupId = securityGroupId;
             return this;
