@@ -86,13 +86,13 @@ func (dg *defaultsGen) builderExpr(
 	// For Either<A,B> try to codegen A or B opportunistically.
 	if isEither, a, b := dg.unEitherTypeShape(t); isEither {
 		aV, err := dg.builderExprWithSimpleType(prop, a, config, arg,
-			fmt.Sprintf(".left(%s.class)%s",
-				dg.ctx.ref(b.Type),
+			fmt.Sprintf(".left(%s)%s",
+				b.ToCodeClassLiteral(dg.ctx.imports),
 				builderTransformCode))
 		if err != nil {
 			bV, err2 := dg.builderExprWithSimpleType(prop, b, config, arg,
-				fmt.Sprintf(".right(%s.class)%s",
-					dg.ctx.ref(a.Type),
+				fmt.Sprintf(".right(%s)%s",
+					a.ToCodeClassLiteral(dg.ctx.imports),
 					builderTransformCode))
 			if err2 != nil {
 				return "", fmt.Errorf("Cannot process Either"+
