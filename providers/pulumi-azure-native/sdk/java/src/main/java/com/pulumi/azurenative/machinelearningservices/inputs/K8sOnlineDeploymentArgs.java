@@ -305,6 +305,14 @@ public final class K8sOnlineDeploymentArgs extends com.pulumi.resources.Resource
             return scaleSettings(Output.of(scaleSettings));
         }
 
+        public Builder scaleSettings(AutoScaleSettingsArgs scaleSettings) {
+            return scaleSettings(Either.ofLeft(scaleSettings));
+        }
+
+        public Builder scaleSettings(ManualScaleSettingsArgs scaleSettings) {
+            return scaleSettings(Either.ofRight(scaleSettings));
+        }
+
         public K8sOnlineDeploymentArgs build() {
             $.endpointComputeType = Codegen.stringProp("endpointComputeType").output().arg($.endpointComputeType).require();
             return $;

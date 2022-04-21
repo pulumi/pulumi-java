@@ -111,6 +111,14 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
             return cipher(Output.of(cipher));
         }
 
+        public Builder cipher(String cipher) {
+            return cipher(Either.ofLeft(cipher));
+        }
+
+        public Builder cipher(ExpressRouteLinkMacSecCipher cipher) {
+            return cipher(Either.ofRight(cipher));
+        }
+
         public Builder cknSecretIdentifier(@Nullable Output<String> cknSecretIdentifier) {
             $.cknSecretIdentifier = cknSecretIdentifier;
             return this;
@@ -127,6 +135,14 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
 
         public Builder sciState(Either<String,ExpressRouteLinkMacSecSciState> sciState) {
             return sciState(Output.of(sciState));
+        }
+
+        public Builder sciState(String sciState) {
+            return sciState(Either.ofLeft(sciState));
+        }
+
+        public Builder sciState(ExpressRouteLinkMacSecSciState sciState) {
+            return sciState(Either.ofRight(sciState));
         }
 
         public ExpressRouteLinkMacSecConfigArgs build() {

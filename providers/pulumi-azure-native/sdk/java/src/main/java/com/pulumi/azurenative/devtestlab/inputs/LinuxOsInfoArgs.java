@@ -65,6 +65,14 @@ public final class LinuxOsInfoArgs extends com.pulumi.resources.ResourceArgs {
             return linuxOsState(Output.of(linuxOsState));
         }
 
+        public Builder linuxOsState(String linuxOsState) {
+            return linuxOsState(Either.ofLeft(linuxOsState));
+        }
+
+        public Builder linuxOsState(LinuxOsState linuxOsState) {
+            return linuxOsState(Either.ofRight(linuxOsState));
+        }
+
         public LinuxOsInfoArgs build() {
             return $;
         }

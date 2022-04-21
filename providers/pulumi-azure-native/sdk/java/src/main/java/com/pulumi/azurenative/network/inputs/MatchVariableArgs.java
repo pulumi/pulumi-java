@@ -86,6 +86,14 @@ public final class MatchVariableArgs extends com.pulumi.resources.ResourceArgs {
             return variableName(Output.of(variableName));
         }
 
+        public Builder variableName(String variableName) {
+            return variableName(Either.ofLeft(variableName));
+        }
+
+        public Builder variableName(WebApplicationFirewallMatchVariable variableName) {
+            return variableName(Either.ofRight(variableName));
+        }
+
         public MatchVariableArgs build() {
             $.variableName = Objects.requireNonNull($.variableName, "expected parameter 'variableName' to be non-null");
             return $;

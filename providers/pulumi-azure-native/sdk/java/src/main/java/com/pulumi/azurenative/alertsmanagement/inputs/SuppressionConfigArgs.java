@@ -78,6 +78,14 @@ public final class SuppressionConfigArgs extends com.pulumi.resources.ResourceAr
             return recurrenceType(Output.of(recurrenceType));
         }
 
+        public Builder recurrenceType(String recurrenceType) {
+            return recurrenceType(Either.ofLeft(recurrenceType));
+        }
+
+        public Builder recurrenceType(SuppressionType recurrenceType) {
+            return recurrenceType(Either.ofRight(recurrenceType));
+        }
+
         public Builder schedule(@Nullable Output<SuppressionScheduleArgs> schedule) {
             $.schedule = schedule;
             return this;

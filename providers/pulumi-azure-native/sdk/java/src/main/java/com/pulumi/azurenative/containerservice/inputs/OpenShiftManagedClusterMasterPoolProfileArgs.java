@@ -133,6 +133,14 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OSType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
             $.subnetCidr = subnetCidr;
             return this;
@@ -149,6 +157,14 @@ public final class OpenShiftManagedClusterMasterPoolProfileArgs extends com.pulu
 
         public Builder vmSize(Either<String,OpenShiftContainerServiceVMSize> vmSize) {
             return vmSize(Output.of(vmSize));
+        }
+
+        public Builder vmSize(String vmSize) {
+            return vmSize(Either.ofLeft(vmSize));
+        }
+
+        public Builder vmSize(OpenShiftContainerServiceVMSize vmSize) {
+            return vmSize(Either.ofRight(vmSize));
         }
 
         public OpenShiftManagedClusterMasterPoolProfileArgs build() {

@@ -176,6 +176,14 @@ public final class PrivateLinkServiceIpConfigurationArgs extends com.pulumi.reso
             return privateIPAddressVersion(Output.of(privateIPAddressVersion));
         }
 
+        public Builder privateIPAddressVersion(String privateIPAddressVersion) {
+            return privateIPAddressVersion(Either.ofLeft(privateIPAddressVersion));
+        }
+
+        public Builder privateIPAddressVersion(IPVersion privateIPAddressVersion) {
+            return privateIPAddressVersion(Either.ofRight(privateIPAddressVersion));
+        }
+
         public Builder privateIPAllocationMethod(@Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
@@ -183,6 +191,14 @@ public final class PrivateLinkServiceIpConfigurationArgs extends com.pulumi.reso
 
         public Builder privateIPAllocationMethod(Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             return privateIPAllocationMethod(Output.of(privateIPAllocationMethod));
+        }
+
+        public Builder privateIPAllocationMethod(String privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Either.ofLeft(privateIPAllocationMethod));
+        }
+
+        public Builder privateIPAllocationMethod(IPAllocationMethod privateIPAllocationMethod) {
+            return privateIPAllocationMethod(Either.ofRight(privateIPAllocationMethod));
         }
 
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {

@@ -278,6 +278,14 @@ public final class IpSecurityRestrictionArgs extends com.pulumi.resources.Resour
             return tag(Output.of(tag));
         }
 
+        public Builder tag(String tag) {
+            return tag(Either.ofLeft(tag));
+        }
+
+        public Builder tag(IpFilterTag tag) {
+            return tag(Either.ofRight(tag));
+        }
+
         public Builder vnetSubnetResourceId(@Nullable Output<String> vnetSubnetResourceId) {
             $.vnetSubnetResourceId = vnetSubnetResourceId;
             return this;

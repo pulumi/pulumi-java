@@ -74,6 +74,14 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(ManagedClusterSKUName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder tier(@Nullable Output<Either<String,ManagedClusterSKUTier>> tier) {
             $.tier = tier;
             return this;
@@ -81,6 +89,14 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
 
         public Builder tier(Either<String,ManagedClusterSKUTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(ManagedClusterSKUTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public ManagedClusterSKUArgs build() {

@@ -248,6 +248,14 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
             return prefixType(Output.of(prefixType));
         }
 
+        public Builder prefixType(String prefixType) {
+            return prefixType(Either.ofLeft(prefixType));
+        }
+
+        public Builder prefixType(IPVersion prefixType) {
+            return prefixType(Either.ofRight(prefixType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -273,6 +281,14 @@ public final class IpAllocationArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,IpAllocationType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(IpAllocationType type) {
+            return type(Either.ofRight(type));
         }
 
         public IpAllocationArgs build() {

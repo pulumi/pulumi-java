@@ -114,6 +114,14 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
             return endpointType(Output.of(endpointType));
         }
 
+        public Builder endpointType(String endpointType) {
+            return endpointType(Either.ofLeft(endpointType));
+        }
+
+        public Builder endpointType(EndpointType endpointType) {
+            return endpointType(Either.ofRight(endpointType));
+        }
+
         public Builder remoteVolumeRegion(@Nullable Output<String> remoteVolumeRegion) {
             $.remoteVolumeRegion = remoteVolumeRegion;
             return this;
@@ -148,6 +156,14 @@ public final class ReplicationObjectArgs extends com.pulumi.resources.ResourceAr
 
         public Builder replicationSchedule(Either<String,ReplicationSchedule> replicationSchedule) {
             return replicationSchedule(Output.of(replicationSchedule));
+        }
+
+        public Builder replicationSchedule(String replicationSchedule) {
+            return replicationSchedule(Either.ofLeft(replicationSchedule));
+        }
+
+        public Builder replicationSchedule(ReplicationSchedule replicationSchedule) {
+            return replicationSchedule(Either.ofRight(replicationSchedule));
         }
 
         public ReplicationObjectArgs build() {

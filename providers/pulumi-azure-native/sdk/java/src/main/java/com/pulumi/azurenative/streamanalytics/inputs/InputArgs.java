@@ -87,6 +87,14 @@ public final class InputArgs extends com.pulumi.resources.ResourceArgs {
             return properties(Output.of(properties));
         }
 
+        public Builder properties(ReferenceInputPropertiesArgs properties) {
+            return properties(Either.ofLeft(properties));
+        }
+
+        public Builder properties(StreamInputPropertiesArgs properties) {
+            return properties(Either.ofRight(properties));
+        }
+
         public InputArgs build() {
             return $;
         }

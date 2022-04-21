@@ -143,6 +143,14 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
             return applicationSharingPolicy(Output.of(applicationSharingPolicy));
         }
 
+        public Builder applicationSharingPolicy(String applicationSharingPolicy) {
+            return applicationSharingPolicy(Either.ofLeft(applicationSharingPolicy));
+        }
+
+        public Builder applicationSharingPolicy(ApplicationSharingPolicy applicationSharingPolicy) {
+            return applicationSharingPolicy(Either.ofRight(applicationSharingPolicy));
+        }
+
         public Builder computeInstanceAuthorizationType(@Nullable Output<Either<String,ComputeInstanceAuthorizationType>> computeInstanceAuthorizationType) {
             $.computeInstanceAuthorizationType = computeInstanceAuthorizationType;
             return this;
@@ -150,6 +158,14 @@ public final class ComputeInstancePropertiesArgs extends com.pulumi.resources.Re
 
         public Builder computeInstanceAuthorizationType(Either<String,ComputeInstanceAuthorizationType> computeInstanceAuthorizationType) {
             return computeInstanceAuthorizationType(Output.of(computeInstanceAuthorizationType));
+        }
+
+        public Builder computeInstanceAuthorizationType(String computeInstanceAuthorizationType) {
+            return computeInstanceAuthorizationType(Either.ofLeft(computeInstanceAuthorizationType));
+        }
+
+        public Builder computeInstanceAuthorizationType(ComputeInstanceAuthorizationType computeInstanceAuthorizationType) {
+            return computeInstanceAuthorizationType(Either.ofRight(computeInstanceAuthorizationType));
         }
 
         public Builder personalComputeInstanceSettings(@Nullable Output<PersonalComputeInstanceSettingsArgs> personalComputeInstanceSettings) {

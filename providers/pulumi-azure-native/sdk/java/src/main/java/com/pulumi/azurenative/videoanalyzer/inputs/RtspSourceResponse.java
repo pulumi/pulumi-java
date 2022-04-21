@@ -99,6 +99,14 @@ public final class RtspSourceResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder endpoint(TlsEndpointResponse endpoint) {
+            return endpoint(Either.ofLeft(endpoint));
+        }
+
+        public Builder endpoint(UnsecuredEndpointResponse endpoint) {
+            return endpoint(Either.ofRight(endpoint));
+        }
+
         public Builder name(String name) {
             $.name = name;
             return this;

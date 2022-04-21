@@ -149,6 +149,14 @@ public final class ApplianceArgs extends com.pulumi.resources.ResourceArgs {
             return distro(Output.of(distro));
         }
 
+        public Builder distro(String distro) {
+            return distro(Either.ofLeft(distro));
+        }
+
+        public Builder distro(Distro distro) {
+            return distro(Either.ofRight(distro));
+        }
+
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;

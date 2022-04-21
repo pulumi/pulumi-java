@@ -100,6 +100,14 @@ public final class VirtualNetworkRuleArgs extends com.pulumi.resources.ResourceA
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(State state) {
+            return state(Either.ofRight(state));
+        }
+
         public Builder virtualNetworkResourceId(Output<String> virtualNetworkResourceId) {
             $.virtualNetworkResourceId = virtualNetworkResourceId;
             return this;

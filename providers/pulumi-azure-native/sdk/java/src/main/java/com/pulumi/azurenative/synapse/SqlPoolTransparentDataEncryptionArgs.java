@@ -127,6 +127,14 @@ public final class SqlPoolTransparentDataEncryptionArgs extends com.pulumi.resou
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(TransparentDataEncryptionStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder transparentDataEncryptionName(@Nullable Output<String> transparentDataEncryptionName) {
             $.transparentDataEncryptionName = transparentDataEncryptionName;
             return this;

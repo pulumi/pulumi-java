@@ -289,6 +289,14 @@ public final class ScalingPlanArgs extends com.pulumi.resources.ResourceArgs {
             return hostPoolType(Output.of(hostPoolType));
         }
 
+        public Builder hostPoolType(String hostPoolType) {
+            return hostPoolType(Either.ofLeft(hostPoolType));
+        }
+
+        public Builder hostPoolType(HostPoolType hostPoolType) {
+            return hostPoolType(Either.ofRight(hostPoolType));
+        }
+
         public Builder identity(@Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity) {
             $.identity = identity;
             return this;

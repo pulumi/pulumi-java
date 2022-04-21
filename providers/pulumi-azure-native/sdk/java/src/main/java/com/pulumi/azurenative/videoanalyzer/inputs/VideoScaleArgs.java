@@ -98,6 +98,14 @@ public final class VideoScaleArgs extends com.pulumi.resources.ResourceArgs {
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(VideoScaleMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder width(@Nullable Output<String> width) {
             $.width = width;
             return this;

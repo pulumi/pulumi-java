@@ -174,6 +174,14 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
             return authentication(Output.of(authentication));
         }
 
+        public Builder authentication(String authentication) {
+            return authentication(Either.ofLeft(authentication));
+        }
+
+        public Builder authentication(AuthenticationType authentication) {
+            return authentication(Either.ofRight(authentication));
+        }
+
         public Builder dataSource(Output<String> dataSource) {
             $.dataSource = dataSource;
             return this;
@@ -208,6 +216,14 @@ public final class SqlConnectionInfoArgs extends com.pulumi.resources.ResourceAr
 
         public Builder platform(Either<String,SqlSourcePlatform> platform) {
             return platform(Output.of(platform));
+        }
+
+        public Builder platform(String platform) {
+            return platform(Either.ofLeft(platform));
+        }
+
+        public Builder platform(SqlSourcePlatform platform) {
+            return platform(Either.ofRight(platform));
         }
 
         public Builder trustServerCertificate(@Nullable Output<Boolean> trustServerCertificate) {

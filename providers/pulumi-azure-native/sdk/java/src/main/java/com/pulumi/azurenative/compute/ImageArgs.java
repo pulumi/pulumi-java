@@ -158,6 +158,14 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             return hyperVGeneration(Output.of(hyperVGeneration));
         }
 
+        public Builder hyperVGeneration(String hyperVGeneration) {
+            return hyperVGeneration(Either.ofLeft(hyperVGeneration));
+        }
+
+        public Builder hyperVGeneration(HyperVGenerationTypes hyperVGeneration) {
+            return hyperVGeneration(Either.ofRight(hyperVGeneration));
+        }
+
         public Builder imageName(@Nullable Output<String> imageName) {
             $.imageName = imageName;
             return this;

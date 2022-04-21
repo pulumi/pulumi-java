@@ -111,6 +111,14 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(Operator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder propertyJPath(@Nullable Output<String> propertyJPath) {
             $.propertyJPath = propertyJPath;
             return this;
@@ -127,6 +135,14 @@ public final class AutomationTriggeringRuleArgs extends com.pulumi.resources.Res
 
         public Builder propertyType(Either<String,PropertyType> propertyType) {
             return propertyType(Output.of(propertyType));
+        }
+
+        public Builder propertyType(String propertyType) {
+            return propertyType(Either.ofLeft(propertyType));
+        }
+
+        public Builder propertyType(PropertyType propertyType) {
+            return propertyType(Either.ofRight(propertyType));
         }
 
         public AutomationTriggeringRuleArgs build() {

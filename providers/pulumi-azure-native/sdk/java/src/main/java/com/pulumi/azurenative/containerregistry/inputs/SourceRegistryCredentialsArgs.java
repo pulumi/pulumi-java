@@ -67,6 +67,14 @@ public final class SourceRegistryCredentialsArgs extends com.pulumi.resources.Re
             return loginMode(Output.of(loginMode));
         }
 
+        public Builder loginMode(String loginMode) {
+            return loginMode(Either.ofLeft(loginMode));
+        }
+
+        public Builder loginMode(SourceRegistryLoginMode loginMode) {
+            return loginMode(Either.ofRight(loginMode));
+        }
+
         public SourceRegistryCredentialsArgs build() {
             return $;
         }

@@ -92,6 +92,14 @@ public final class GetGlobalUserPersonalPreferencesArgs extends com.pulumi.resou
             return this;
         }
 
+        public Builder addRemove(String addRemove) {
+            return addRemove(Either.ofLeft(addRemove));
+        }
+
+        public Builder addRemove(AddRemove addRemove) {
+            return addRemove(Either.ofRight(addRemove));
+        }
+
         public Builder labAccountResourceId(@Nullable String labAccountResourceId) {
             $.labAccountResourceId = labAccountResourceId;
             return this;

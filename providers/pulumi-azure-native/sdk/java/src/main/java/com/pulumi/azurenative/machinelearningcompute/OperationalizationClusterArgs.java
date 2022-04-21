@@ -205,6 +205,14 @@ public final class OperationalizationClusterArgs extends com.pulumi.resources.Re
             return clusterType(Output.of(clusterType));
         }
 
+        public Builder clusterType(String clusterType) {
+            return clusterType(Either.ofLeft(clusterType));
+        }
+
+        public Builder clusterType(ClusterType clusterType) {
+            return clusterType(Either.ofRight(clusterType));
+        }
+
         public Builder containerRegistry(@Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry) {
             $.containerRegistry = containerRegistry;
             return this;

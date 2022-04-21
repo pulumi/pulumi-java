@@ -156,6 +156,14 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
             return allocationPolicy(Output.of(allocationPolicy));
         }
 
+        public Builder allocationPolicy(String allocationPolicy) {
+            return allocationPolicy(Either.ofLeft(allocationPolicy));
+        }
+
+        public Builder allocationPolicy(AllocationPolicy allocationPolicy) {
+            return allocationPolicy(Either.ofRight(allocationPolicy));
+        }
+
         public Builder authorizationPolicies(@Nullable Output<List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionArgs>> authorizationPolicies) {
             $.authorizationPolicies = authorizationPolicies;
             return this;
@@ -226,6 +234,14 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
+        }
+
         public Builder state(@Nullable Output<Either<String,State>> state) {
             $.state = state;
             return this;
@@ -233,6 +249,14 @@ public final class IotDpsPropertiesDescriptionArgs extends com.pulumi.resources.
 
         public Builder state(Either<String,State> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(State state) {
+            return state(Either.ofRight(state));
         }
 
         public IotDpsPropertiesDescriptionArgs build() {

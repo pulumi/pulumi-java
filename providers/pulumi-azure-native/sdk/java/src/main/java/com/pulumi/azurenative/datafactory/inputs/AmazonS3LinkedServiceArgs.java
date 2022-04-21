@@ -260,6 +260,14 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
             return secretAccessKey(Output.of(secretAccessKey));
         }
 
+        public Builder secretAccessKey(AzureKeyVaultSecretReferenceArgs secretAccessKey) {
+            return secretAccessKey(Either.ofLeft(secretAccessKey));
+        }
+
+        public Builder secretAccessKey(SecureStringArgs secretAccessKey) {
+            return secretAccessKey(Either.ofRight(secretAccessKey));
+        }
+
         public Builder serviceUrl(@Nullable Output<Object> serviceUrl) {
             $.serviceUrl = serviceUrl;
             return this;
@@ -276,6 +284,14 @@ public final class AmazonS3LinkedServiceArgs extends com.pulumi.resources.Resour
 
         public Builder sessionToken(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> sessionToken) {
             return sessionToken(Output.of(sessionToken));
+        }
+
+        public Builder sessionToken(AzureKeyVaultSecretReferenceArgs sessionToken) {
+            return sessionToken(Either.ofLeft(sessionToken));
+        }
+
+        public Builder sessionToken(SecureStringArgs sessionToken) {
+            return sessionToken(Either.ofRight(sessionToken));
         }
 
         public Builder type(Output<String> type) {

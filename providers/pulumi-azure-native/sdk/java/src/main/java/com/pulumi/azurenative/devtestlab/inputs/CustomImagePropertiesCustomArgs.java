@@ -99,6 +99,14 @@ public final class CustomImagePropertiesCustomArgs extends com.pulumi.resources.
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(CustomImageOsType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder sysPrep(@Nullable Output<Boolean> sysPrep) {
             $.sysPrep = sysPrep;
             return this;

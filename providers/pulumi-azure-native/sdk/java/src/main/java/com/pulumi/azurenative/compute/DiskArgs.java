@@ -471,6 +471,14 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             return hyperVGeneration(Output.of(hyperVGeneration));
         }
 
+        public Builder hyperVGeneration(String hyperVGeneration) {
+            return hyperVGeneration(Either.ofLeft(hyperVGeneration));
+        }
+
+        public Builder hyperVGeneration(HyperVGeneration hyperVGeneration) {
+            return hyperVGeneration(Either.ofRight(hyperVGeneration));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
@@ -496,6 +504,14 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder networkAccessPolicy(Either<String,NetworkAccessPolicy> networkAccessPolicy) {
             return networkAccessPolicy(Output.of(networkAccessPolicy));
+        }
+
+        public Builder networkAccessPolicy(String networkAccessPolicy) {
+            return networkAccessPolicy(Either.ofLeft(networkAccessPolicy));
+        }
+
+        public Builder networkAccessPolicy(NetworkAccessPolicy networkAccessPolicy) {
+            return networkAccessPolicy(Either.ofRight(networkAccessPolicy));
         }
 
         public Builder osType(@Nullable Output<OperatingSystemTypes> osType) {

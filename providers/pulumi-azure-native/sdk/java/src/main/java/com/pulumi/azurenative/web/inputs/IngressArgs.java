@@ -154,6 +154,14 @@ public final class IngressArgs extends com.pulumi.resources.ResourceArgs {
             return transport(Output.of(transport));
         }
 
+        public Builder transport(String transport) {
+            return transport(Either.ofLeft(transport));
+        }
+
+        public Builder transport(IngressTransportMethod transport) {
+            return transport(Either.ofRight(transport));
+        }
+
         public IngressArgs build() {
             $.external = Codegen.booleanProp("external").output().arg($.external).def(false).getNullable();
             return $;

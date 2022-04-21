@@ -221,6 +221,14 @@ public final class KustomizationDefinitionArgs extends com.pulumi.resources.Reso
             return validation(Output.of(validation));
         }
 
+        public Builder validation(String validation) {
+            return validation(Either.ofLeft(validation));
+        }
+
+        public Builder validation(KustomizationValidationType validation) {
+            return validation(Either.ofRight(validation));
+        }
+
         public KustomizationDefinitionArgs build() {
             $.force = Codegen.booleanProp("force").output().arg($.force).def(false).getNullable();
             $.path = Codegen.stringProp("path").output().arg($.path).def("").getNullable();

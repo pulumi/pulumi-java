@@ -209,6 +209,14 @@ public final class SalesforceSourceArgs extends com.pulumi.resources.ResourceArg
             return readBehavior(Output.of(readBehavior));
         }
 
+        public Builder readBehavior(String readBehavior) {
+            return readBehavior(Either.ofLeft(readBehavior));
+        }
+
+        public Builder readBehavior(SalesforceSourceReadBehavior readBehavior) {
+            return readBehavior(Either.ofRight(readBehavior));
+        }
+
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;

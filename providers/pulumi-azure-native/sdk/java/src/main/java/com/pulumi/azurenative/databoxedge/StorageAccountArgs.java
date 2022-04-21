@@ -134,6 +134,14 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             return dataPolicy(Output.of(dataPolicy));
         }
 
+        public Builder dataPolicy(String dataPolicy) {
+            return dataPolicy(Either.ofLeft(dataPolicy));
+        }
+
+        public Builder dataPolicy(DataPolicy dataPolicy) {
+            return dataPolicy(Either.ofRight(dataPolicy));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -186,6 +194,14 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder storageAccountStatus(Either<String,StorageAccountStatus> storageAccountStatus) {
             return storageAccountStatus(Output.of(storageAccountStatus));
+        }
+
+        public Builder storageAccountStatus(String storageAccountStatus) {
+            return storageAccountStatus(Either.ofLeft(storageAccountStatus));
+        }
+
+        public Builder storageAccountStatus(StorageAccountStatus storageAccountStatus) {
+            return storageAccountStatus(Either.ofRight(storageAccountStatus));
         }
 
         public StorageAccountArgs build() {

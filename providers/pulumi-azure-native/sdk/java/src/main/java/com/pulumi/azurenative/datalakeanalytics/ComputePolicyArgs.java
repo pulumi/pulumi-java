@@ -179,6 +179,14 @@ public final class ComputePolicyArgs extends com.pulumi.resources.ResourceArgs {
             return objectType(Output.of(objectType));
         }
 
+        public Builder objectType(String objectType) {
+            return objectType(Either.ofLeft(objectType));
+        }
+
+        public Builder objectType(AADObjectType objectType) {
+            return objectType(Either.ofRight(objectType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

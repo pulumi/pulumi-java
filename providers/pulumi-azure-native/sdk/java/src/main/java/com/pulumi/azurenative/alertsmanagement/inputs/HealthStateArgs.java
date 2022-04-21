@@ -76,6 +76,14 @@ public final class HealthStateArgs extends com.pulumi.resources.ResourceArgs {
             return healthStateName(Output.of(healthStateName));
         }
 
+        public Builder healthStateName(String healthStateName) {
+            return healthStateName(Either.ofLeft(healthStateName));
+        }
+
+        public Builder healthStateName(HealthStateName healthStateName) {
+            return healthStateName(Either.ofRight(healthStateName));
+        }
+
         public Builder severity(Output<Double> severity) {
             $.severity = severity;
             return this;

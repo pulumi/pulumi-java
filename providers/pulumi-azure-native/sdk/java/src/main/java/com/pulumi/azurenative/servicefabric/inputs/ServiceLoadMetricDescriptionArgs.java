@@ -150,6 +150,14 @@ public final class ServiceLoadMetricDescriptionArgs extends com.pulumi.resources
             return weight(Output.of(weight));
         }
 
+        public Builder weight(String weight) {
+            return weight(Either.ofLeft(weight));
+        }
+
+        public Builder weight(ServiceLoadMetricWeight weight) {
+            return weight(Either.ofRight(weight));
+        }
+
         public ServiceLoadMetricDescriptionArgs build() {
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
             return $;

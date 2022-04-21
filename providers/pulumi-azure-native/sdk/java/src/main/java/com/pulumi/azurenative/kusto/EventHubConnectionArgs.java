@@ -187,6 +187,14 @@ public final class EventHubConnectionArgs extends com.pulumi.resources.ResourceA
             return dataFormat(Output.of(dataFormat));
         }
 
+        public Builder dataFormat(String dataFormat) {
+            return dataFormat(Either.ofLeft(dataFormat));
+        }
+
+        public Builder dataFormat(DataFormat dataFormat) {
+            return dataFormat(Either.ofRight(dataFormat));
+        }
+
         public Builder databaseName(Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;

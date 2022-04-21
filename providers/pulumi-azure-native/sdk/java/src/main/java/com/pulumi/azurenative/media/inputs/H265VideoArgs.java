@@ -156,6 +156,14 @@ public final class H265VideoArgs extends com.pulumi.resources.ResourceArgs {
             return complexity(Output.of(complexity));
         }
 
+        public Builder complexity(String complexity) {
+            return complexity(Either.ofLeft(complexity));
+        }
+
+        public Builder complexity(H265Complexity complexity) {
+            return complexity(Either.ofRight(complexity));
+        }
+
         public Builder keyFrameInterval(@Nullable Output<String> keyFrameInterval) {
             $.keyFrameInterval = keyFrameInterval;
             return this;
@@ -214,6 +222,14 @@ public final class H265VideoArgs extends com.pulumi.resources.ResourceArgs {
             return stretchMode(Output.of(stretchMode));
         }
 
+        public Builder stretchMode(String stretchMode) {
+            return stretchMode(Either.ofLeft(stretchMode));
+        }
+
+        public Builder stretchMode(StretchMode stretchMode) {
+            return stretchMode(Either.ofRight(stretchMode));
+        }
+
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
             $.syncMode = syncMode;
             return this;
@@ -221,6 +237,14 @@ public final class H265VideoArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder syncMode(Either<String,VideoSyncMode> syncMode) {
             return syncMode(Output.of(syncMode));
+        }
+
+        public Builder syncMode(String syncMode) {
+            return syncMode(Either.ofLeft(syncMode));
+        }
+
+        public Builder syncMode(VideoSyncMode syncMode) {
+            return syncMode(Either.ofRight(syncMode));
         }
 
         public H265VideoArgs build() {

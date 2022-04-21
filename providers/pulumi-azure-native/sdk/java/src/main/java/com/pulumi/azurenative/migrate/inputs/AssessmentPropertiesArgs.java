@@ -258,6 +258,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return azureDiskType(Output.of(azureDiskType));
         }
 
+        public Builder azureDiskType(String azureDiskType) {
+            return azureDiskType(Either.ofLeft(azureDiskType));
+        }
+
+        public Builder azureDiskType(AzureDiskType azureDiskType) {
+            return azureDiskType(Either.ofRight(azureDiskType));
+        }
+
         public Builder azureHybridUseBenefit(Output<Either<String,AzureHybridUseBenefit>> azureHybridUseBenefit) {
             $.azureHybridUseBenefit = azureHybridUseBenefit;
             return this;
@@ -265,6 +273,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder azureHybridUseBenefit(Either<String,AzureHybridUseBenefit> azureHybridUseBenefit) {
             return azureHybridUseBenefit(Output.of(azureHybridUseBenefit));
+        }
+
+        public Builder azureHybridUseBenefit(String azureHybridUseBenefit) {
+            return azureHybridUseBenefit(Either.ofLeft(azureHybridUseBenefit));
+        }
+
+        public Builder azureHybridUseBenefit(AzureHybridUseBenefit azureHybridUseBenefit) {
+            return azureHybridUseBenefit(Either.ofRight(azureHybridUseBenefit));
         }
 
         public Builder azureLocation(Output<Either<String,AzureLocation>> azureLocation) {
@@ -276,6 +292,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return azureLocation(Output.of(azureLocation));
         }
 
+        public Builder azureLocation(String azureLocation) {
+            return azureLocation(Either.ofLeft(azureLocation));
+        }
+
+        public Builder azureLocation(AzureLocation azureLocation) {
+            return azureLocation(Either.ofRight(azureLocation));
+        }
+
         public Builder azureOfferCode(Output<Either<String,AzureOfferCode>> azureOfferCode) {
             $.azureOfferCode = azureOfferCode;
             return this;
@@ -283,6 +307,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder azureOfferCode(Either<String,AzureOfferCode> azureOfferCode) {
             return azureOfferCode(Output.of(azureOfferCode));
+        }
+
+        public Builder azureOfferCode(String azureOfferCode) {
+            return azureOfferCode(Either.ofLeft(azureOfferCode));
+        }
+
+        public Builder azureOfferCode(AzureOfferCode azureOfferCode) {
+            return azureOfferCode(Either.ofRight(azureOfferCode));
         }
 
         public Builder azurePricingTier(Output<Either<String,AzurePricingTier>> azurePricingTier) {
@@ -294,6 +326,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return azurePricingTier(Output.of(azurePricingTier));
         }
 
+        public Builder azurePricingTier(String azurePricingTier) {
+            return azurePricingTier(Either.ofLeft(azurePricingTier));
+        }
+
+        public Builder azurePricingTier(AzurePricingTier azurePricingTier) {
+            return azurePricingTier(Either.ofRight(azurePricingTier));
+        }
+
         public Builder azureStorageRedundancy(Output<Either<String,AzureStorageRedundancy>> azureStorageRedundancy) {
             $.azureStorageRedundancy = azureStorageRedundancy;
             return this;
@@ -301,6 +341,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder azureStorageRedundancy(Either<String,AzureStorageRedundancy> azureStorageRedundancy) {
             return azureStorageRedundancy(Output.of(azureStorageRedundancy));
+        }
+
+        public Builder azureStorageRedundancy(String azureStorageRedundancy) {
+            return azureStorageRedundancy(Either.ofLeft(azureStorageRedundancy));
+        }
+
+        public Builder azureStorageRedundancy(AzureStorageRedundancy azureStorageRedundancy) {
+            return azureStorageRedundancy(Either.ofRight(azureStorageRedundancy));
         }
 
         public Builder azureVmFamilies(Output<List<Either<String,AzureVmFamily>>> azureVmFamilies) {
@@ -325,6 +373,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return currency(Output.of(currency));
         }
 
+        public Builder currency(String currency) {
+            return currency(Either.ofLeft(currency));
+        }
+
+        public Builder currency(Currency currency) {
+            return currency(Either.ofRight(currency));
+        }
+
         public Builder discountPercentage(Output<Double> discountPercentage) {
             $.discountPercentage = discountPercentage;
             return this;
@@ -343,6 +399,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return percentile(Output.of(percentile));
         }
 
+        public Builder percentile(String percentile) {
+            return percentile(Either.ofLeft(percentile));
+        }
+
+        public Builder percentile(Percentile percentile) {
+            return percentile(Either.ofRight(percentile));
+        }
+
         public Builder reservedInstance(Output<Either<String,ReservedInstance>> reservedInstance) {
             $.reservedInstance = reservedInstance;
             return this;
@@ -350,6 +414,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder reservedInstance(Either<String,ReservedInstance> reservedInstance) {
             return reservedInstance(Output.of(reservedInstance));
+        }
+
+        public Builder reservedInstance(String reservedInstance) {
+            return reservedInstance(Either.ofLeft(reservedInstance));
+        }
+
+        public Builder reservedInstance(ReservedInstance reservedInstance) {
+            return reservedInstance(Either.ofRight(reservedInstance));
         }
 
         public Builder scalingFactor(Output<Double> scalingFactor) {
@@ -370,6 +442,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return sizingCriterion(Output.of(sizingCriterion));
         }
 
+        public Builder sizingCriterion(String sizingCriterion) {
+            return sizingCriterion(Either.ofLeft(sizingCriterion));
+        }
+
+        public Builder sizingCriterion(AssessmentSizingCriterion sizingCriterion) {
+            return sizingCriterion(Either.ofRight(sizingCriterion));
+        }
+
         public Builder stage(Output<Either<String,AssessmentStage>> stage) {
             $.stage = stage;
             return this;
@@ -379,6 +459,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
             return stage(Output.of(stage));
         }
 
+        public Builder stage(String stage) {
+            return stage(Either.ofLeft(stage));
+        }
+
+        public Builder stage(AssessmentStage stage) {
+            return stage(Either.ofRight(stage));
+        }
+
         public Builder timeRange(Output<Either<String,TimeRange>> timeRange) {
             $.timeRange = timeRange;
             return this;
@@ -386,6 +474,14 @@ public final class AssessmentPropertiesArgs extends com.pulumi.resources.Resourc
 
         public Builder timeRange(Either<String,TimeRange> timeRange) {
             return timeRange(Output.of(timeRange));
+        }
+
+        public Builder timeRange(String timeRange) {
+            return timeRange(Either.ofLeft(timeRange));
+        }
+
+        public Builder timeRange(TimeRange timeRange) {
+            return timeRange(Either.ofRight(timeRange));
         }
 
         public Builder vmUptime(Output<VmUptimeArgs> vmUptime) {

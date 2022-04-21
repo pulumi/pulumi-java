@@ -151,6 +151,14 @@ public final class CodeRepositoryArgs extends com.pulumi.resources.ResourceArgs 
             return repositoryType(Output.of(repositoryType));
         }
 
+        public Builder repositoryType(String repositoryType) {
+            return repositoryType(Either.ofLeft(repositoryType));
+        }
+
+        public Builder repositoryType(CodeRepositoryType repositoryType) {
+            return repositoryType(Either.ofRight(repositoryType));
+        }
+
         public CodeRepositoryArgs build() {
             $.defaultBranch = Objects.requireNonNull($.defaultBranch, "expected parameter 'defaultBranch' to be non-null");
             $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");

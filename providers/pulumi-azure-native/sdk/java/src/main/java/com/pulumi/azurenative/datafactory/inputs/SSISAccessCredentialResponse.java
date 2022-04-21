@@ -88,6 +88,14 @@ public final class SSISAccessCredentialResponse extends com.pulumi.resources.Inv
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder userName(Object userName) {
             $.userName = userName;
             return this;

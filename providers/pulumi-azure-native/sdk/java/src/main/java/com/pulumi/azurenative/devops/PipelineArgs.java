@@ -150,6 +150,14 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
             return pipelineType(Output.of(pipelineType));
         }
 
+        public Builder pipelineType(String pipelineType) {
+            return pipelineType(Either.ofLeft(pipelineType));
+        }
+
+        public Builder pipelineType(PipelineTypeEnum pipelineType) {
+            return pipelineType(Either.ofRight(pipelineType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

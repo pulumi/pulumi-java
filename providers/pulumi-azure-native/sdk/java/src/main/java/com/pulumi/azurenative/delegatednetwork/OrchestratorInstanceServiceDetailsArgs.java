@@ -232,6 +232,14 @@ public final class OrchestratorInstanceServiceDetailsArgs extends com.pulumi.res
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(OrchestratorKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

@@ -295,6 +295,14 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
             return offPeakLoadBalancingAlgorithm(Output.of(offPeakLoadBalancingAlgorithm));
         }
 
+        public Builder offPeakLoadBalancingAlgorithm(String offPeakLoadBalancingAlgorithm) {
+            return offPeakLoadBalancingAlgorithm(Either.ofLeft(offPeakLoadBalancingAlgorithm));
+        }
+
+        public Builder offPeakLoadBalancingAlgorithm(SessionHostLoadBalancingAlgorithm offPeakLoadBalancingAlgorithm) {
+            return offPeakLoadBalancingAlgorithm(Either.ofRight(offPeakLoadBalancingAlgorithm));
+        }
+
         public Builder offPeakStartTime(@Nullable Output<String> offPeakStartTime) {
             $.offPeakStartTime = offPeakStartTime;
             return this;
@@ -311,6 +319,14 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder peakLoadBalancingAlgorithm(Either<String,SessionHostLoadBalancingAlgorithm> peakLoadBalancingAlgorithm) {
             return peakLoadBalancingAlgorithm(Output.of(peakLoadBalancingAlgorithm));
+        }
+
+        public Builder peakLoadBalancingAlgorithm(String peakLoadBalancingAlgorithm) {
+            return peakLoadBalancingAlgorithm(Either.ofLeft(peakLoadBalancingAlgorithm));
+        }
+
+        public Builder peakLoadBalancingAlgorithm(SessionHostLoadBalancingAlgorithm peakLoadBalancingAlgorithm) {
+            return peakLoadBalancingAlgorithm(Either.ofRight(peakLoadBalancingAlgorithm));
         }
 
         public Builder peakStartTime(@Nullable Output<String> peakStartTime) {
@@ -349,6 +365,14 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
             return rampDownLoadBalancingAlgorithm(Output.of(rampDownLoadBalancingAlgorithm));
         }
 
+        public Builder rampDownLoadBalancingAlgorithm(String rampDownLoadBalancingAlgorithm) {
+            return rampDownLoadBalancingAlgorithm(Either.ofLeft(rampDownLoadBalancingAlgorithm));
+        }
+
+        public Builder rampDownLoadBalancingAlgorithm(SessionHostLoadBalancingAlgorithm rampDownLoadBalancingAlgorithm) {
+            return rampDownLoadBalancingAlgorithm(Either.ofRight(rampDownLoadBalancingAlgorithm));
+        }
+
         public Builder rampDownMinimumHostsPct(@Nullable Output<Integer> rampDownMinimumHostsPct) {
             $.rampDownMinimumHostsPct = rampDownMinimumHostsPct;
             return this;
@@ -385,6 +409,14 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
             return rampDownStopHostsWhen(Output.of(rampDownStopHostsWhen));
         }
 
+        public Builder rampDownStopHostsWhen(String rampDownStopHostsWhen) {
+            return rampDownStopHostsWhen(Either.ofLeft(rampDownStopHostsWhen));
+        }
+
+        public Builder rampDownStopHostsWhen(StopHostsWhen rampDownStopHostsWhen) {
+            return rampDownStopHostsWhen(Either.ofRight(rampDownStopHostsWhen));
+        }
+
         public Builder rampDownWaitTimeMinutes(@Nullable Output<Integer> rampDownWaitTimeMinutes) {
             $.rampDownWaitTimeMinutes = rampDownWaitTimeMinutes;
             return this;
@@ -410,6 +442,14 @@ public final class ScalingScheduleArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder rampUpLoadBalancingAlgorithm(Either<String,SessionHostLoadBalancingAlgorithm> rampUpLoadBalancingAlgorithm) {
             return rampUpLoadBalancingAlgorithm(Output.of(rampUpLoadBalancingAlgorithm));
+        }
+
+        public Builder rampUpLoadBalancingAlgorithm(String rampUpLoadBalancingAlgorithm) {
+            return rampUpLoadBalancingAlgorithm(Either.ofLeft(rampUpLoadBalancingAlgorithm));
+        }
+
+        public Builder rampUpLoadBalancingAlgorithm(SessionHostLoadBalancingAlgorithm rampUpLoadBalancingAlgorithm) {
+            return rampUpLoadBalancingAlgorithm(Either.ofRight(rampUpLoadBalancingAlgorithm));
         }
 
         public Builder rampUpMinimumHostsPct(@Nullable Output<Integer> rampUpMinimumHostsPct) {

@@ -359,6 +359,14 @@ public final class IoTHubEventSourceArgs extends com.pulumi.resources.ResourceAr
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(IngressStartAtType type) {
+            return type(Either.ofRight(type));
+        }
+
         public IoTHubEventSourceArgs build() {
             $.consumerGroupName = Objects.requireNonNull($.consumerGroupName, "expected parameter 'consumerGroupName' to be non-null");
             $.environmentName = Objects.requireNonNull($.environmentName, "expected parameter 'environmentName' to be non-null");

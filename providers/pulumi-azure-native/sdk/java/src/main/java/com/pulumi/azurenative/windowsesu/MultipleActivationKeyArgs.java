@@ -207,6 +207,14 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
             return osType(Output.of(osType));
         }
 
+        public Builder osType(String osType) {
+            return osType(Either.ofLeft(osType));
+        }
+
+        public Builder osType(OsType osType) {
+            return osType(Either.ofRight(osType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -223,6 +231,14 @@ public final class MultipleActivationKeyArgs extends com.pulumi.resources.Resour
 
         public Builder supportType(Either<String,SupportType> supportType) {
             return supportType(Output.of(supportType));
+        }
+
+        public Builder supportType(String supportType) {
+            return supportType(Either.ofLeft(supportType));
+        }
+
+        public Builder supportType(SupportType supportType) {
+            return supportType(Either.ofRight(supportType));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

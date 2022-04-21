@@ -308,6 +308,14 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
             return mwsAuthToken(Output.of(mwsAuthToken));
         }
 
+        public Builder mwsAuthToken(AzureKeyVaultSecretReferenceArgs mwsAuthToken) {
+            return mwsAuthToken(Either.ofLeft(mwsAuthToken));
+        }
+
+        public Builder mwsAuthToken(SecureStringArgs mwsAuthToken) {
+            return mwsAuthToken(Either.ofRight(mwsAuthToken));
+        }
+
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
@@ -324,6 +332,14 @@ public final class AmazonMWSLinkedServiceArgs extends com.pulumi.resources.Resou
 
         public Builder secretKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretKey) {
             return secretKey(Output.of(secretKey));
+        }
+
+        public Builder secretKey(AzureKeyVaultSecretReferenceArgs secretKey) {
+            return secretKey(Either.ofLeft(secretKey));
+        }
+
+        public Builder secretKey(SecureStringArgs secretKey) {
+            return secretKey(Either.ofRight(secretKey));
         }
 
         public Builder sellerID(Output<Object> sellerID) {

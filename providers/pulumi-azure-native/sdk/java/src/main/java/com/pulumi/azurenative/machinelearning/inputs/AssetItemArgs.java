@@ -222,6 +222,14 @@ public final class AssetItemArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(AssetType type) {
+            return type(Either.ofRight(type));
+        }
+
         public AssetItemArgs build() {
             $.locationInfo = Objects.requireNonNull($.locationInfo, "expected parameter 'locationInfo' to be non-null");
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

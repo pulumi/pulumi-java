@@ -64,6 +64,14 @@ public final class SubscriptionStateOverrideActionArgs extends com.pulumi.resour
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(SubscriptionNotificationOperation action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder state(Output<Either<String,SubscriptionTransitioningState>> state) {
             $.state = state;
             return this;
@@ -71,6 +79,14 @@ public final class SubscriptionStateOverrideActionArgs extends com.pulumi.resour
 
         public Builder state(Either<String,SubscriptionTransitioningState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(SubscriptionTransitioningState state) {
+            return state(Either.ofRight(state));
         }
 
         public SubscriptionStateOverrideActionArgs build() {

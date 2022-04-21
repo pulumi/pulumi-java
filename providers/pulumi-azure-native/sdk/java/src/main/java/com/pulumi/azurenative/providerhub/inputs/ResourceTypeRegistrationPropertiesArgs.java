@@ -475,6 +475,14 @@ public final class ResourceTypeRegistrationPropertiesArgs extends com.pulumi.res
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public Builder regionality(@Nullable Output<Either<String,Regionality>> regionality) {
             $.regionality = regionality;
             return this;
@@ -482,6 +490,14 @@ public final class ResourceTypeRegistrationPropertiesArgs extends com.pulumi.res
 
         public Builder regionality(Either<String,Regionality> regionality) {
             return regionality(Output.of(regionality));
+        }
+
+        public Builder regionality(String regionality) {
+            return regionality(Either.ofLeft(regionality));
+        }
+
+        public Builder regionality(Regionality regionality) {
+            return regionality(Either.ofRight(regionality));
         }
 
         public Builder requestHeaderOptions(@Nullable Output<ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs> requestHeaderOptions) {
@@ -515,6 +531,14 @@ public final class ResourceTypeRegistrationPropertiesArgs extends com.pulumi.res
             return resourceDeletionPolicy(Output.of(resourceDeletionPolicy));
         }
 
+        public Builder resourceDeletionPolicy(String resourceDeletionPolicy) {
+            return resourceDeletionPolicy(Either.ofLeft(resourceDeletionPolicy));
+        }
+
+        public Builder resourceDeletionPolicy(ResourceDeletionPolicy resourceDeletionPolicy) {
+            return resourceDeletionPolicy(Either.ofRight(resourceDeletionPolicy));
+        }
+
         public Builder resourceMovePolicy(@Nullable Output<ResourceTypeRegistrationPropertiesResourceMovePolicyArgs> resourceMovePolicy) {
             $.resourceMovePolicy = resourceMovePolicy;
             return this;
@@ -531,6 +555,14 @@ public final class ResourceTypeRegistrationPropertiesArgs extends com.pulumi.res
 
         public Builder routingType(Either<String,RoutingType> routingType) {
             return routingType(Output.of(routingType));
+        }
+
+        public Builder routingType(String routingType) {
+            return routingType(Either.ofLeft(routingType));
+        }
+
+        public Builder routingType(RoutingType routingType) {
+            return routingType(Either.ofRight(routingType));
         }
 
         public Builder serviceTreeInfos(@Nullable Output<List<ServiceTreeInfoArgs>> serviceTreeInfos) {

@@ -193,6 +193,14 @@ public final class JobTargetArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(JobTargetType type) {
+            return type(Either.ofRight(type));
+        }
+
         public JobTargetArgs build() {
             $.membershipType = Codegen.objectProp("membershipType", JobTargetGroupMembershipType.class).output().arg($.membershipType).def(JobTargetGroupMembershipType.Include).getNullable();
             $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");

@@ -92,6 +92,14 @@ public final class EnterpriseChannelPropertiesArgs extends com.pulumi.resources.
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(EnterpriseChannelState state) {
+            return state(Either.ofRight(state));
+        }
+
         public EnterpriseChannelPropertiesArgs build() {
             $.nodes = Objects.requireNonNull($.nodes, "expected parameter 'nodes' to be non-null");
             return $;

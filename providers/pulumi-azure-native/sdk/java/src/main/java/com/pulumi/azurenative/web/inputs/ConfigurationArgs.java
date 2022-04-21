@@ -106,6 +106,14 @@ public final class ConfigurationArgs extends com.pulumi.resources.ResourceArgs {
             return activeRevisionsMode(Output.of(activeRevisionsMode));
         }
 
+        public Builder activeRevisionsMode(String activeRevisionsMode) {
+            return activeRevisionsMode(Either.ofLeft(activeRevisionsMode));
+        }
+
+        public Builder activeRevisionsMode(ActiveRevisionsMode activeRevisionsMode) {
+            return activeRevisionsMode(Either.ofRight(activeRevisionsMode));
+        }
+
         public Builder ingress(@Nullable Output<IngressArgs> ingress) {
             $.ingress = ingress;
             return this;

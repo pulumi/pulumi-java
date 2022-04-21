@@ -161,6 +161,14 @@ public final class EnvironmentSpecificationVersionResponse extends com.pulumi.re
             return this;
         }
 
+        public Builder docker(DockerBuildResponse docker) {
+            return docker(Either.ofLeft(docker));
+        }
+
+        public Builder docker(DockerImageResponse docker) {
+            return docker(Either.ofRight(docker));
+        }
+
         public Builder environmentSpecificationType(String environmentSpecificationType) {
             $.environmentSpecificationType = environmentSpecificationType;
             return this;

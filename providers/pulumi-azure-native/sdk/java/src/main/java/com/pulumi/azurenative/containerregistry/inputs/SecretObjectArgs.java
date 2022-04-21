@@ -80,6 +80,14 @@ public final class SecretObjectArgs extends com.pulumi.resources.ResourceArgs {
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(SecretObjectType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;

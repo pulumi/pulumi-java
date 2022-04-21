@@ -65,6 +65,14 @@ public final class SnapshotSkuArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(SnapshotStorageAccountTypes name) {
+            return name(Either.ofRight(name));
+        }
+
         public SnapshotSkuArgs build() {
             return $;
         }

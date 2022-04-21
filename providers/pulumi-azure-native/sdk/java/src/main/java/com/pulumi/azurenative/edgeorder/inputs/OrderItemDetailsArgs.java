@@ -117,6 +117,14 @@ public final class OrderItemDetailsArgs extends com.pulumi.resources.ResourceArg
             return orderItemType(Output.of(orderItemType));
         }
 
+        public Builder orderItemType(String orderItemType) {
+            return orderItemType(Either.ofLeft(orderItemType));
+        }
+
+        public Builder orderItemType(OrderItemType orderItemType) {
+            return orderItemType(Either.ofRight(orderItemType));
+        }
+
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
             $.preferences = preferences;
             return this;

@@ -61,6 +61,14 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ManagedIdentityTypes type) {
+            return type(Either.ofRight(type));
+        }
+
         public IdentityPropertiesArgs build() {
             return $;
         }

@@ -60,6 +60,14 @@ public final class PipelineSourceTriggerPropertiesArgs extends com.pulumi.resour
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(TriggerStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public PipelineSourceTriggerPropertiesArgs build() {
             $.status = Codegen.stringProp("status").left(TriggerStatus.class).output().arg($.status).def("Enabled").require();
             return $;

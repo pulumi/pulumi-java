@@ -66,6 +66,14 @@ public final class EncryptionPreferencesArgs extends com.pulumi.resources.Resour
             return doubleEncryption(Output.of(doubleEncryption));
         }
 
+        public Builder doubleEncryption(String doubleEncryption) {
+            return doubleEncryption(Either.ofLeft(doubleEncryption));
+        }
+
+        public Builder doubleEncryption(DoubleEncryption doubleEncryption) {
+            return doubleEncryption(Either.ofRight(doubleEncryption));
+        }
+
         public EncryptionPreferencesArgs build() {
             $.doubleEncryption = Codegen.stringProp("doubleEncryption").left(DoubleEncryption.class).output().arg($.doubleEncryption).def("Disabled").getNullable();
             return $;

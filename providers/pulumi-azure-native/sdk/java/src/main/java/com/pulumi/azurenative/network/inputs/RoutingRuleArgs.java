@@ -180,6 +180,14 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(RoutingRuleEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder frontendEndpoints(@Nullable Output<List<SubResourceArgs>> frontendEndpoints) {
             $.frontendEndpoints = frontendEndpoints;
             return this;
@@ -231,6 +239,14 @@ public final class RoutingRuleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder routeConfiguration(Either<ForwardingConfigurationArgs,RedirectConfigurationArgs> routeConfiguration) {
             return routeConfiguration(Output.of(routeConfiguration));
+        }
+
+        public Builder routeConfiguration(ForwardingConfigurationArgs routeConfiguration) {
+            return routeConfiguration(Either.ofLeft(routeConfiguration));
+        }
+
+        public Builder routeConfiguration(RedirectConfigurationArgs routeConfiguration) {
+            return routeConfiguration(Either.ofRight(routeConfiguration));
         }
 
         public Builder rulesEngine(@Nullable Output<SubResourceArgs> rulesEngine) {

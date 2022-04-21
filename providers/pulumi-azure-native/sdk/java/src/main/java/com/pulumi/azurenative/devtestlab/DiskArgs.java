@@ -237,6 +237,14 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
             return diskType(Output.of(diskType));
         }
 
+        public Builder diskType(String diskType) {
+            return diskType(Either.ofLeft(diskType));
+        }
+
+        public Builder diskType(StorageType diskType) {
+            return diskType(Either.ofRight(diskType));
+        }
+
         public Builder diskUri(@Nullable Output<String> diskUri) {
             $.diskUri = diskUri;
             return this;

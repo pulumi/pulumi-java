@@ -98,6 +98,14 @@ public final class HttpRouteMatchPathArgs extends com.pulumi.resources.ResourceA
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(PathMatchType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder value(Output<String> value) {
             $.value = value;
             return this;

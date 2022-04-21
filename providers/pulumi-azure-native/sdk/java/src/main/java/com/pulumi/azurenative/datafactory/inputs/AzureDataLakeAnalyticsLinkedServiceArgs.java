@@ -302,6 +302,14 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder subscriptionId(@Nullable Output<Object> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

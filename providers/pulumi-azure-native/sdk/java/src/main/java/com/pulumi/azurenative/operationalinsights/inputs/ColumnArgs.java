@@ -114,6 +114,14 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
             return dataTypeHint(Output.of(dataTypeHint));
         }
 
+        public Builder dataTypeHint(String dataTypeHint) {
+            return dataTypeHint(Either.ofLeft(dataTypeHint));
+        }
+
+        public Builder dataTypeHint(ColumnDataTypeHintEnum dataTypeHint) {
+            return dataTypeHint(Either.ofRight(dataTypeHint));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
@@ -148,6 +156,14 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,ColumnTypeEnum> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ColumnTypeEnum type) {
+            return type(Either.ofRight(type));
         }
 
         public ColumnArgs build() {

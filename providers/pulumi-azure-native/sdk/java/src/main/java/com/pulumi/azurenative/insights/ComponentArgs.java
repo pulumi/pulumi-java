@@ -225,6 +225,14 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return applicationType(Output.of(applicationType));
         }
 
+        public Builder applicationType(String applicationType) {
+            return applicationType(Either.ofLeft(applicationType));
+        }
+
+        public Builder applicationType(ApplicationType applicationType) {
+            return applicationType(Either.ofRight(applicationType));
+        }
+
         public Builder disableIpMasking(@Nullable Output<Boolean> disableIpMasking) {
             $.disableIpMasking = disableIpMasking;
             return this;
@@ -241,6 +249,14 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder flowType(Either<String,FlowType> flowType) {
             return flowType(Output.of(flowType));
+        }
+
+        public Builder flowType(String flowType) {
+            return flowType(Either.ofLeft(flowType));
+        }
+
+        public Builder flowType(FlowType flowType) {
+            return flowType(Either.ofRight(flowType));
         }
 
         public Builder hockeyAppId(@Nullable Output<String> hockeyAppId) {
@@ -270,6 +286,14 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
             return ingestionMode(Output.of(ingestionMode));
         }
 
+        public Builder ingestionMode(String ingestionMode) {
+            return ingestionMode(Either.ofLeft(ingestionMode));
+        }
+
+        public Builder ingestionMode(IngestionMode ingestionMode) {
+            return ingestionMode(Either.ofRight(ingestionMode));
+        }
+
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
@@ -295,6 +319,14 @@ public final class ComponentArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder requestSource(Either<String,RequestSource> requestSource) {
             return requestSource(Output.of(requestSource));
+        }
+
+        public Builder requestSource(String requestSource) {
+            return requestSource(Either.ofLeft(requestSource));
+        }
+
+        public Builder requestSource(RequestSource requestSource) {
+            return requestSource(Either.ofRight(requestSource));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -87,6 +87,14 @@ public final class PropertiesEncryptionArgs extends com.pulumi.resources.Resourc
             return state(Output.of(state));
         }
 
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(State state) {
+            return state(Either.ofRight(state));
+        }
+
         public PropertiesEncryptionArgs build() {
             return $;
         }

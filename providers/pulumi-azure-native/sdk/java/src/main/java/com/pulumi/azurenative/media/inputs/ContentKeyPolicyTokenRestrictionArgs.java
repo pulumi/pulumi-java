@@ -228,6 +228,14 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends com.pulumi.resou
             return restrictionTokenType(Output.of(restrictionTokenType));
         }
 
+        public Builder restrictionTokenType(String restrictionTokenType) {
+            return restrictionTokenType(Either.ofLeft(restrictionTokenType));
+        }
+
+        public Builder restrictionTokenType(ContentKeyPolicyRestrictionTokenType restrictionTokenType) {
+            return restrictionTokenType(Either.ofRight(restrictionTokenType));
+        }
+
         public ContentKeyPolicyTokenRestrictionArgs build() {
             $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
             $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");

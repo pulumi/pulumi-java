@@ -100,6 +100,14 @@ public final class SecurityProfileArgs extends com.pulumi.resources.ResourceArgs
             return securityType(Output.of(securityType));
         }
 
+        public Builder securityType(String securityType) {
+            return securityType(Either.ofLeft(securityType));
+        }
+
+        public Builder securityType(SecurityTypes securityType) {
+            return securityType(Either.ofRight(securityType));
+        }
+
         public Builder uefiSettings(@Nullable Output<UefiSettingsArgs> uefiSettings) {
             $.uefiSettings = uefiSettings;
             return this;

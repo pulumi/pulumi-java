@@ -376,6 +376,14 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        public Builder backupManagementType(String backupManagementType) {
+            return backupManagementType(Either.ofLeft(backupManagementType));
+        }
+
+        public Builder backupManagementType(BackupManagementType backupManagementType) {
+            return backupManagementType(Either.ofRight(backupManagementType));
+        }
+
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
             $.backupSetName = backupSetName;
             return this;
@@ -401,6 +409,14 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
 
         public Builder createMode(Either<String,CreateMode> createMode) {
             return createMode(Output.of(createMode));
+        }
+
+        public Builder createMode(String createMode) {
+            return createMode(Either.ofLeft(createMode));
+        }
+
+        public Builder createMode(CreateMode createMode) {
+            return createMode(Either.ofRight(createMode));
         }
 
         public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
@@ -484,6 +500,14 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
             return lastBackupStatus(Output.of(lastBackupStatus));
         }
 
+        public Builder lastBackupStatus(String lastBackupStatus) {
+            return lastBackupStatus(Either.ofLeft(lastBackupStatus));
+        }
+
+        public Builder lastBackupStatus(LastBackupStatus lastBackupStatus) {
+            return lastBackupStatus(Either.ofRight(lastBackupStatus));
+        }
+
         public Builder lastBackupTime(@Nullable Output<String> lastBackupTime) {
             $.lastBackupTime = lastBackupTime;
             return this;
@@ -547,6 +571,14 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
             return protectedItemHealthStatus(Output.of(protectedItemHealthStatus));
         }
 
+        public Builder protectedItemHealthStatus(String protectedItemHealthStatus) {
+            return protectedItemHealthStatus(Either.ofLeft(protectedItemHealthStatus));
+        }
+
+        public Builder protectedItemHealthStatus(ProtectedItemHealthStatus protectedItemHealthStatus) {
+            return protectedItemHealthStatus(Either.ofRight(protectedItemHealthStatus));
+        }
+
         public Builder protectedItemType(Output<String> protectedItemType) {
             $.protectedItemType = protectedItemType;
             return this;
@@ -563,6 +595,14 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
 
         public Builder protectionState(Either<String,ProtectionState> protectionState) {
             return protectionState(Output.of(protectionState));
+        }
+
+        public Builder protectionState(String protectionState) {
+            return protectionState(Either.ofLeft(protectionState));
+        }
+
+        public Builder protectionState(ProtectionState protectionState) {
+            return protectionState(Either.ofRight(protectionState));
         }
 
         public Builder protectionStatus(@Nullable Output<String> protectionStatus) {
@@ -599,6 +639,14 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends com.pulum
 
         public Builder workloadType(Either<String,DataSourceType> workloadType) {
             return workloadType(Output.of(workloadType));
+        }
+
+        public Builder workloadType(String workloadType) {
+            return workloadType(Either.ofLeft(workloadType));
+        }
+
+        public Builder workloadType(DataSourceType workloadType) {
+            return workloadType(Either.ofRight(workloadType));
         }
 
         public AzureVmWorkloadSQLDatabaseProtectedItemArgs build() {

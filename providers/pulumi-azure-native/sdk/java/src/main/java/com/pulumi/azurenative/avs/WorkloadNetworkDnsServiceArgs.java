@@ -208,6 +208,14 @@ public final class WorkloadNetworkDnsServiceArgs extends com.pulumi.resources.Re
             return logLevel(Output.of(logLevel));
         }
 
+        public Builder logLevel(String logLevel) {
+            return logLevel(Either.ofLeft(logLevel));
+        }
+
+        public Builder logLevel(DnsServiceLogLevelEnum logLevel) {
+            return logLevel(Either.ofRight(logLevel));
+        }
+
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;

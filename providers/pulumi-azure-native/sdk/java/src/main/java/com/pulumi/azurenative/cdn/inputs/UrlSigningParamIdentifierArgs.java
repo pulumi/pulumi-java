@@ -75,6 +75,14 @@ public final class UrlSigningParamIdentifierArgs extends com.pulumi.resources.Re
             return paramIndicator(Output.of(paramIndicator));
         }
 
+        public Builder paramIndicator(String paramIndicator) {
+            return paramIndicator(Either.ofLeft(paramIndicator));
+        }
+
+        public Builder paramIndicator(ParamIndicator paramIndicator) {
+            return paramIndicator(Either.ofRight(paramIndicator));
+        }
+
         public Builder paramName(Output<String> paramName) {
             $.paramName = paramName;
             return this;

@@ -258,6 +258,14 @@ public final class SUCSchedulePropertiesArgs extends com.pulumi.resources.Resour
             return frequency(Output.of(frequency));
         }
 
+        public Builder frequency(String frequency) {
+            return frequency(Either.ofLeft(frequency));
+        }
+
+        public Builder frequency(ScheduleFrequency frequency) {
+            return frequency(Either.ofRight(frequency));
+        }
+
         public Builder interval(@Nullable Output<Double> interval) {
             $.interval = interval;
             return this;

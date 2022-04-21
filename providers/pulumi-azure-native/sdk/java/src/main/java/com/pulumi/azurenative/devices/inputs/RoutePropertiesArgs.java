@@ -155,6 +155,14 @@ public final class RoutePropertiesArgs extends com.pulumi.resources.ResourceArgs
             return source(Output.of(source));
         }
 
+        public Builder source(String source) {
+            return source(Either.ofLeft(source));
+        }
+
+        public Builder source(RoutingSource source) {
+            return source(Either.ofRight(source));
+        }
+
         public RoutePropertiesArgs build() {
             $.endpointNames = Objects.requireNonNull($.endpointNames, "expected parameter 'endpointNames' to be non-null");
             $.isEnabled = Objects.requireNonNull($.isEnabled, "expected parameter 'isEnabled' to be non-null");

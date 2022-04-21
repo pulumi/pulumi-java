@@ -87,6 +87,14 @@ public final class MonitoringTagRulesPropertiesArgs extends com.pulumi.resources
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public MonitoringTagRulesPropertiesArgs build() {
             return $;
         }

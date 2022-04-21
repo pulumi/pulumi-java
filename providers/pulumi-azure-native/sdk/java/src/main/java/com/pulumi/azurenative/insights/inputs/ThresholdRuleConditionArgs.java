@@ -131,6 +131,14 @@ public final class ThresholdRuleConditionArgs extends com.pulumi.resources.Resou
             return dataSource(Output.of(dataSource));
         }
 
+        public Builder dataSource(RuleManagementEventDataSourceArgs dataSource) {
+            return dataSource(Either.ofLeft(dataSource));
+        }
+
+        public Builder dataSource(RuleMetricDataSourceArgs dataSource) {
+            return dataSource(Either.ofRight(dataSource));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;

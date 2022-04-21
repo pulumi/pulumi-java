@@ -65,6 +65,14 @@ public final class HardwareProfileArgs extends com.pulumi.resources.ResourceArgs
             return vmSize(Output.of(vmSize));
         }
 
+        public Builder vmSize(String vmSize) {
+            return vmSize(Either.ofLeft(vmSize));
+        }
+
+        public Builder vmSize(VirtualMachineSizeTypes vmSize) {
+            return vmSize(Either.ofRight(vmSize));
+        }
+
         public HardwareProfileArgs build() {
             return $;
         }

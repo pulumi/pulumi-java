@@ -90,6 +90,14 @@ public final class NetworkInterfaceReferenceArgs extends com.pulumi.resources.Re
             return deleteOption(Output.of(deleteOption));
         }
 
+        public Builder deleteOption(String deleteOption) {
+            return deleteOption(Either.ofLeft(deleteOption));
+        }
+
+        public Builder deleteOption(DeleteOptions deleteOption) {
+            return deleteOption(Either.ofRight(deleteOption));
+        }
+
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;

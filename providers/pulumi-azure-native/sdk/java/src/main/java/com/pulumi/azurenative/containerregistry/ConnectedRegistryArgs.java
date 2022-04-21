@@ -167,6 +167,14 @@ public final class ConnectedRegistryArgs extends com.pulumi.resources.ResourceAr
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(ConnectedRegistryMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder parent(Output<ParentPropertiesArgs> parent) {
             $.parent = parent;
             return this;

@@ -90,6 +90,14 @@ public final class IntegrationRuntimeDataFlowPropertiesArgs extends com.pulumi.r
             return computeType(Output.of(computeType));
         }
 
+        public Builder computeType(String computeType) {
+            return computeType(Either.ofLeft(computeType));
+        }
+
+        public Builder computeType(DataFlowComputeType computeType) {
+            return computeType(Either.ofRight(computeType));
+        }
+
         public Builder coreCount(@Nullable Output<Integer> coreCount) {
             $.coreCount = coreCount;
             return this;

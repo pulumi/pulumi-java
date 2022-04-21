@@ -109,6 +109,14 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
             return sizeDisk(Output.of(sizeDisk));
         }
 
+        public Builder sizeDisk(String sizeDisk) {
+            return sizeDisk(Either.ofLeft(sizeDisk));
+        }
+
+        public Builder sizeDisk(SizeTypes sizeDisk) {
+            return sizeDisk(Either.ofRight(sizeDisk));
+        }
+
         public ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs build() {
             $.kind = Codegen.stringProp("kind").output().arg($.kind).require();
             $.sizeDisk = Objects.requireNonNull($.sizeDisk, "expected parameter 'sizeDisk' to be non-null");

@@ -284,6 +284,14 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
             return this;
         }
 
+        public Builder clientSecret(AzureKeyVaultSecretReferenceResponse clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringResponse clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
+        }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
@@ -302,6 +310,14 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
         public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken) {
             $.developerToken = developerToken;
             return this;
+        }
+
+        public Builder developerToken(AzureKeyVaultSecretReferenceResponse developerToken) {
+            return developerToken(Either.ofLeft(developerToken));
+        }
+
+        public Builder developerToken(SecureStringResponse developerToken) {
+            return developerToken(Either.ofRight(developerToken));
         }
 
         public Builder email(@Nullable Object email) {
@@ -327,6 +343,14 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
+        }
+
+        public Builder refreshToken(AzureKeyVaultSecretReferenceResponse refreshToken) {
+            return refreshToken(Either.ofLeft(refreshToken));
+        }
+
+        public Builder refreshToken(SecureStringResponse refreshToken) {
+            return refreshToken(Either.ofRight(refreshToken));
         }
 
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {

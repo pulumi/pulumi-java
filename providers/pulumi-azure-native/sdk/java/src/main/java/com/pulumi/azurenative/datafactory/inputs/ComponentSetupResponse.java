@@ -92,6 +92,14 @@ public final class ComponentSetupResponse extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        public Builder licenseKey(AzureKeyVaultSecretReferenceResponse licenseKey) {
+            return licenseKey(Either.ofLeft(licenseKey));
+        }
+
+        public Builder licenseKey(SecureStringResponse licenseKey) {
+            return licenseKey(Either.ofRight(licenseKey));
+        }
+
         public Builder type(String type) {
             $.type = type;
             return this;

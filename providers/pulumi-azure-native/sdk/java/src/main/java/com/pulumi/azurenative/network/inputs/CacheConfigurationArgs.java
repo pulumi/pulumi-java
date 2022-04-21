@@ -111,6 +111,14 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
             return dynamicCompression(Output.of(dynamicCompression));
         }
 
+        public Builder dynamicCompression(String dynamicCompression) {
+            return dynamicCompression(Either.ofLeft(dynamicCompression));
+        }
+
+        public Builder dynamicCompression(DynamicCompressionEnabled dynamicCompression) {
+            return dynamicCompression(Either.ofRight(dynamicCompression));
+        }
+
         public Builder queryParameterStripDirective(@Nullable Output<Either<String,FrontDoorQuery>> queryParameterStripDirective) {
             $.queryParameterStripDirective = queryParameterStripDirective;
             return this;
@@ -118,6 +126,14 @@ public final class CacheConfigurationArgs extends com.pulumi.resources.ResourceA
 
         public Builder queryParameterStripDirective(Either<String,FrontDoorQuery> queryParameterStripDirective) {
             return queryParameterStripDirective(Output.of(queryParameterStripDirective));
+        }
+
+        public Builder queryParameterStripDirective(String queryParameterStripDirective) {
+            return queryParameterStripDirective(Either.ofLeft(queryParameterStripDirective));
+        }
+
+        public Builder queryParameterStripDirective(FrontDoorQuery queryParameterStripDirective) {
+            return queryParameterStripDirective(Either.ofRight(queryParameterStripDirective));
         }
 
         public Builder queryParameters(@Nullable Output<String> queryParameters) {

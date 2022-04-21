@@ -243,6 +243,14 @@ public final class PolicySetDefinitionAtManagementGroupArgs extends com.pulumi.r
             return policyType(Output.of(policyType));
         }
 
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(PolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
+        }
+
         public PolicySetDefinitionAtManagementGroupArgs build() {
             $.managementGroupId = Objects.requireNonNull($.managementGroupId, "expected parameter 'managementGroupId' to be non-null");
             $.policyDefinitions = Objects.requireNonNull($.policyDefinitions, "expected parameter 'policyDefinitions' to be non-null");

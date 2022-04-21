@@ -103,6 +103,14 @@ public final class DatabaseBackupSetting extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        public Builder databaseType(String databaseType) {
+            return databaseType(Either.ofLeft(databaseType));
+        }
+
+        public Builder databaseType(DatabaseType databaseType) {
+            return databaseType(Either.ofRight(databaseType));
+        }
+
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

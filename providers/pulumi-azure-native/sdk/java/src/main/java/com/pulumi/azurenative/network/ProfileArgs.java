@@ -327,6 +327,14 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
             return profileStatus(Output.of(profileStatus));
         }
 
+        public Builder profileStatus(String profileStatus) {
+            return profileStatus(Either.ofLeft(profileStatus));
+        }
+
+        public Builder profileStatus(ProfileStatus profileStatus) {
+            return profileStatus(Either.ofRight(profileStatus));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -354,6 +362,14 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
             return trafficRoutingMethod(Output.of(trafficRoutingMethod));
         }
 
+        public Builder trafficRoutingMethod(String trafficRoutingMethod) {
+            return trafficRoutingMethod(Either.ofLeft(trafficRoutingMethod));
+        }
+
+        public Builder trafficRoutingMethod(TrafficRoutingMethod trafficRoutingMethod) {
+            return trafficRoutingMethod(Either.ofRight(trafficRoutingMethod));
+        }
+
         public Builder trafficViewEnrollmentStatus(@Nullable Output<Either<String,TrafficViewEnrollmentStatus>> trafficViewEnrollmentStatus) {
             $.trafficViewEnrollmentStatus = trafficViewEnrollmentStatus;
             return this;
@@ -361,6 +377,14 @@ public final class ProfileArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder trafficViewEnrollmentStatus(Either<String,TrafficViewEnrollmentStatus> trafficViewEnrollmentStatus) {
             return trafficViewEnrollmentStatus(Output.of(trafficViewEnrollmentStatus));
+        }
+
+        public Builder trafficViewEnrollmentStatus(String trafficViewEnrollmentStatus) {
+            return trafficViewEnrollmentStatus(Either.ofLeft(trafficViewEnrollmentStatus));
+        }
+
+        public Builder trafficViewEnrollmentStatus(TrafficViewEnrollmentStatus trafficViewEnrollmentStatus) {
+            return trafficViewEnrollmentStatus(Either.ofRight(trafficViewEnrollmentStatus));
         }
 
         public Builder type(@Nullable Output<String> type) {

@@ -121,6 +121,14 @@ public final class NamespaceIpFilterRuleArgs extends com.pulumi.resources.Resour
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(IPAction action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder filterName(@Nullable Output<String> filterName) {
             $.filterName = filterName;
             return this;

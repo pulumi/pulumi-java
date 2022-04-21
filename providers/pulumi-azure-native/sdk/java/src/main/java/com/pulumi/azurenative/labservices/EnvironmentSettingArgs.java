@@ -195,6 +195,14 @@ public final class EnvironmentSettingArgs extends com.pulumi.resources.ResourceA
             return configurationState(Output.of(configurationState));
         }
 
+        public Builder configurationState(String configurationState) {
+            return configurationState(Either.ofLeft(configurationState));
+        }
+
+        public Builder configurationState(ConfigurationState configurationState) {
+            return configurationState(Either.ofRight(configurationState));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;

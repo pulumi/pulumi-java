@@ -117,6 +117,14 @@ public final class BatchEndpointArgs extends com.pulumi.resources.ResourceArgs {
             return authMode(Output.of(authMode));
         }
 
+        public Builder authMode(String authMode) {
+            return authMode(Either.ofLeft(authMode));
+        }
+
+        public Builder authMode(EndpointAuthMode authMode) {
+            return authMode(Either.ofRight(authMode));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;

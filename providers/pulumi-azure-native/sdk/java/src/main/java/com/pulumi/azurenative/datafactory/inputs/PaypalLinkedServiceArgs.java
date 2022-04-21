@@ -227,6 +227,14 @@ public final class PaypalLinkedServiceArgs extends com.pulumi.resources.Resource
             return clientSecret(Output.of(clientSecret));
         }
 
+        public Builder clientSecret(AzureKeyVaultSecretReferenceArgs clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringArgs clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
+        }
+
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;

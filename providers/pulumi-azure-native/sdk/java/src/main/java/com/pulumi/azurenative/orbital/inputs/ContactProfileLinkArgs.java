@@ -130,6 +130,14 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
             return direction(Output.of(direction));
         }
 
+        public Builder direction(String direction) {
+            return direction(Either.ofLeft(direction));
+        }
+
+        public Builder direction(Direction direction) {
+            return direction(Either.ofRight(direction));
+        }
+
         public Builder eirpdBW(@Nullable Output<Double> eirpdBW) {
             $.eirpdBW = eirpdBW;
             return this;
@@ -155,6 +163,14 @@ public final class ContactProfileLinkArgs extends com.pulumi.resources.ResourceA
 
         public Builder polarization(Either<String,Polarization> polarization) {
             return polarization(Output.of(polarization));
+        }
+
+        public Builder polarization(String polarization) {
+            return polarization(Either.ofLeft(polarization));
+        }
+
+        public Builder polarization(Polarization polarization) {
+            return polarization(Either.ofRight(polarization));
         }
 
         public ContactProfileLinkArgs build() {

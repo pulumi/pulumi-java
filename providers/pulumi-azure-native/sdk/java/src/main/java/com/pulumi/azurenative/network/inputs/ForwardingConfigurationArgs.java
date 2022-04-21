@@ -143,6 +143,14 @@ public final class ForwardingConfigurationArgs extends com.pulumi.resources.Reso
             return forwardingProtocol(Output.of(forwardingProtocol));
         }
 
+        public Builder forwardingProtocol(String forwardingProtocol) {
+            return forwardingProtocol(Either.ofLeft(forwardingProtocol));
+        }
+
+        public Builder forwardingProtocol(FrontDoorForwardingProtocol forwardingProtocol) {
+            return forwardingProtocol(Either.ofRight(forwardingProtocol));
+        }
+
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;

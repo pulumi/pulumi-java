@@ -116,6 +116,14 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
             return baseImageTriggerType(Output.of(baseImageTriggerType));
         }
 
+        public Builder baseImageTriggerType(String baseImageTriggerType) {
+            return baseImageTriggerType(Either.ofLeft(baseImageTriggerType));
+        }
+
+        public Builder baseImageTriggerType(BaseImageTriggerType baseImageTriggerType) {
+            return baseImageTriggerType(Either.ofRight(baseImageTriggerType));
+        }
+
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
@@ -134,6 +142,14 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(TriggerStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder updateTriggerEndpoint(@Nullable Output<String> updateTriggerEndpoint) {
             $.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
@@ -150,6 +166,14 @@ public final class BaseImageTriggerArgs extends com.pulumi.resources.ResourceArg
 
         public Builder updateTriggerPayloadType(Either<String,UpdateTriggerPayloadType> updateTriggerPayloadType) {
             return updateTriggerPayloadType(Output.of(updateTriggerPayloadType));
+        }
+
+        public Builder updateTriggerPayloadType(String updateTriggerPayloadType) {
+            return updateTriggerPayloadType(Either.ofLeft(updateTriggerPayloadType));
+        }
+
+        public Builder updateTriggerPayloadType(UpdateTriggerPayloadType updateTriggerPayloadType) {
+            return updateTriggerPayloadType(Either.ofRight(updateTriggerPayloadType));
         }
 
         public BaseImageTriggerArgs build() {

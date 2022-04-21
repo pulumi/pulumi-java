@@ -87,6 +87,14 @@ public final class ExportDatasetArgs extends com.pulumi.resources.ResourceArgs {
             return granularity(Output.of(granularity));
         }
 
+        public Builder granularity(String granularity) {
+            return granularity(Either.ofLeft(granularity));
+        }
+
+        public Builder granularity(GranularityType granularity) {
+            return granularity(Either.ofRight(granularity));
+        }
+
         public ExportDatasetArgs build() {
             return $;
         }

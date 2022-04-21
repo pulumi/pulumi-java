@@ -165,6 +165,14 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
             return inputSchema(Output.of(inputSchema));
         }
 
+        public Builder inputSchema(String inputSchema) {
+            return inputSchema(Either.ofLeft(inputSchema));
+        }
+
+        public Builder inputSchema(InputSchema inputSchema) {
+            return inputSchema(Either.ofRight(inputSchema));
+        }
+
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
             $.inputSchemaMapping = inputSchemaMapping;
             return this;
@@ -190,6 +198,14 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

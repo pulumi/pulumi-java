@@ -531,6 +531,14 @@ public final class MachineLearningDatastoreArgs extends com.pulumi.resources.Res
             return dataStoreType(Output.of(dataStoreType));
         }
 
+        public Builder dataStoreType(String dataStoreType) {
+            return dataStoreType(Either.ofLeft(dataStoreType));
+        }
+
+        public Builder dataStoreType(DatastoreTypeArm dataStoreType) {
+            return dataStoreType(Either.ofRight(dataStoreType));
+        }
+
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;

@@ -107,6 +107,14 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder properties(ReferenceInputPropertiesResponse properties) {
+            return properties(Either.ofLeft(properties));
+        }
+
+        public Builder properties(StreamInputPropertiesResponse properties) {
+            return properties(Either.ofRight(properties));
+        }
+
         public Builder type(String type) {
             $.type = type;
             return this;

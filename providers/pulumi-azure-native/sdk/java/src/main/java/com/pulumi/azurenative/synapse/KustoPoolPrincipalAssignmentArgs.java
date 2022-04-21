@@ -173,6 +173,14 @@ public final class KustoPoolPrincipalAssignmentArgs extends com.pulumi.resources
             return principalType(Output.of(principalType));
         }
 
+        public Builder principalType(String principalType) {
+            return principalType(Either.ofLeft(principalType));
+        }
+
+        public Builder principalType(PrincipalType principalType) {
+            return principalType(Either.ofRight(principalType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -189,6 +197,14 @@ public final class KustoPoolPrincipalAssignmentArgs extends com.pulumi.resources
 
         public Builder role(Either<String,ClusterPrincipalRole> role) {
             return role(Output.of(role));
+        }
+
+        public Builder role(String role) {
+            return role(Either.ofLeft(role));
+        }
+
+        public Builder role(ClusterPrincipalRole role) {
+            return role(Either.ofRight(role));
         }
 
         public Builder tenantId(@Nullable Output<String> tenantId) {

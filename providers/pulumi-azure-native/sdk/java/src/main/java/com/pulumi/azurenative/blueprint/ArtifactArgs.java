@@ -115,6 +115,14 @@ public final class ArtifactArgs extends com.pulumi.resources.ResourceArgs {
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(ArtifactKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder resourceScope(Output<String> resourceScope) {
             $.resourceScope = resourceScope;
             return this;

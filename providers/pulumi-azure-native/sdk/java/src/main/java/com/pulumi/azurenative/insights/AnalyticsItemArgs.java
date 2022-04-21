@@ -235,6 +235,14 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
             return scope(Output.of(scope));
         }
 
+        public Builder scope(String scope) {
+            return scope(Either.ofLeft(scope));
+        }
+
+        public Builder scope(ItemScope scope) {
+            return scope(Either.ofRight(scope));
+        }
+
         public Builder scopePath(Output<String> scopePath) {
             $.scopePath = scopePath;
             return this;
@@ -251,6 +259,14 @@ public final class AnalyticsItemArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder type(Either<String,ItemType> type) {
             return type(Output.of(type));
+        }
+
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ItemType type) {
+            return type(Either.ofRight(type));
         }
 
         public AnalyticsItemArgs build() {

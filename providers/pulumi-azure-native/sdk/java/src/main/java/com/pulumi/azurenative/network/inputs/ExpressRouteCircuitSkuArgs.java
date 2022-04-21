@@ -90,6 +90,14 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
             return family(Output.of(family));
         }
 
+        public Builder family(String family) {
+            return family(Either.ofLeft(family));
+        }
+
+        public Builder family(ExpressRouteCircuitSkuFamily family) {
+            return family(Either.ofRight(family));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
@@ -106,6 +114,14 @@ public final class ExpressRouteCircuitSkuArgs extends com.pulumi.resources.Resou
 
         public Builder tier(Either<String,ExpressRouteCircuitSkuTier> tier) {
             return tier(Output.of(tier));
+        }
+
+        public Builder tier(String tier) {
+            return tier(Either.ofLeft(tier));
+        }
+
+        public Builder tier(ExpressRouteCircuitSkuTier tier) {
+            return tier(Either.ofRight(tier));
         }
 
         public ExpressRouteCircuitSkuArgs build() {

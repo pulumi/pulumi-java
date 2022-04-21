@@ -127,6 +127,14 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
             return administratorType(Output.of(administratorType));
         }
 
+        public Builder administratorType(String administratorType) {
+            return administratorType(Either.ofLeft(administratorType));
+        }
+
+        public Builder administratorType(AdministratorType administratorType) {
+            return administratorType(Either.ofRight(administratorType));
+        }
+
         public Builder azureADOnlyAuthentication(@Nullable Output<Boolean> azureADOnlyAuthentication) {
             $.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
@@ -152,6 +160,14 @@ public final class ManagedInstanceExternalAdministratorArgs extends com.pulumi.r
 
         public Builder principalType(Either<String,PrincipalType> principalType) {
             return principalType(Output.of(principalType));
+        }
+
+        public Builder principalType(String principalType) {
+            return principalType(Either.ofLeft(principalType));
+        }
+
+        public Builder principalType(PrincipalType principalType) {
+            return principalType(Either.ofRight(principalType));
         }
 
         public Builder sid(@Nullable Output<String> sid) {

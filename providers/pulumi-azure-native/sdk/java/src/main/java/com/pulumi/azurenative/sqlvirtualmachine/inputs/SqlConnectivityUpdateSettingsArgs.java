@@ -102,6 +102,14 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
             return connectivityType(Output.of(connectivityType));
         }
 
+        public Builder connectivityType(String connectivityType) {
+            return connectivityType(Either.ofLeft(connectivityType));
+        }
+
+        public Builder connectivityType(ConnectivityType connectivityType) {
+            return connectivityType(Either.ofRight(connectivityType));
+        }
+
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;

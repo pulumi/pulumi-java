@@ -132,6 +132,14 @@ public final class ExtensionStatusArgs extends com.pulumi.resources.ResourceArgs
             return level(Output.of(level));
         }
 
+        public Builder level(String level) {
+            return level(Either.ofLeft(level));
+        }
+
+        public Builder level(LevelType level) {
+            return level(Either.ofRight(level));
+        }
+
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;

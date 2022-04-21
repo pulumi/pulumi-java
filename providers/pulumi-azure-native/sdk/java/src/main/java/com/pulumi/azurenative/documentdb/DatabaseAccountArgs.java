@@ -421,6 +421,14 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
             return backupPolicy(Output.of(backupPolicy));
         }
 
+        public Builder backupPolicy(ContinuousModeBackupPolicyArgs backupPolicy) {
+            return backupPolicy(Either.ofLeft(backupPolicy));
+        }
+
+        public Builder backupPolicy(PeriodicModeBackupPolicyArgs backupPolicy) {
+            return backupPolicy(Either.ofRight(backupPolicy));
+        }
+
         public Builder capabilities(@Nullable Output<List<CapabilityArgs>> capabilities) {
             $.capabilities = capabilities;
             return this;
@@ -441,6 +449,14 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder connectorOffer(Either<String,ConnectorOffer> connectorOffer) {
             return connectorOffer(Output.of(connectorOffer));
+        }
+
+        public Builder connectorOffer(String connectorOffer) {
+            return connectorOffer(Either.ofLeft(connectorOffer));
+        }
+
+        public Builder connectorOffer(ConnectorOffer connectorOffer) {
+            return connectorOffer(Either.ofRight(connectorOffer));
         }
 
         public Builder consistencyPolicy(@Nullable Output<ConsistencyPolicyArgs> consistencyPolicy) {
@@ -586,6 +602,14 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
             return kind(Output.of(kind));
         }
 
+        public Builder kind(String kind) {
+            return kind(Either.ofLeft(kind));
+        }
+
+        public Builder kind(DatabaseAccountKind kind) {
+            return kind(Either.ofRight(kind));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
@@ -637,6 +661,14 @@ public final class DatabaseAccountArgs extends com.pulumi.resources.ResourceArgs
 
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(String publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
+        }
+
+        public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
+            return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {

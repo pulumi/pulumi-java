@@ -130,6 +130,14 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(RuleType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ManagementPolicyRuleArgs build() {
             $.definition = Objects.requireNonNull($.definition, "expected parameter 'definition' to be non-null");
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

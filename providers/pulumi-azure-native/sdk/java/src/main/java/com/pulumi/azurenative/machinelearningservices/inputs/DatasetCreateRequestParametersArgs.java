@@ -130,6 +130,14 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
             return header(Output.of(header));
         }
 
+        public Builder header(String header) {
+            return header(Either.ofLeft(header));
+        }
+
+        public Builder header(Header header) {
+            return header(Either.ofRight(header));
+        }
+
         public Builder includePath(@Nullable Output<Boolean> includePath) {
             $.includePath = includePath;
             return this;
@@ -182,6 +190,14 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
 
         public Builder sourceType(Either<String,SourceType> sourceType) {
             return sourceType(Output.of(sourceType));
+        }
+
+        public Builder sourceType(String sourceType) {
+            return sourceType(Either.ofLeft(sourceType));
+        }
+
+        public Builder sourceType(SourceType sourceType) {
+            return sourceType(Either.ofRight(sourceType));
         }
 
         public DatasetCreateRequestParametersArgs build() {

@@ -156,6 +156,14 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return deleteOption(Output.of(deleteOption));
         }
 
+        public Builder deleteOption(String deleteOption) {
+            return deleteOption(Either.ofLeft(deleteOption));
+        }
+
+        public Builder deleteOption(DeleteOptions deleteOption) {
+            return deleteOption(Either.ofRight(deleteOption));
+        }
+
         public Builder dnsSettings(@Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
@@ -203,6 +211,14 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
 
         public Builder publicIPAddressVersion(Either<String,IPVersion> publicIPAddressVersion) {
             return publicIPAddressVersion(Output.of(publicIPAddressVersion));
+        }
+
+        public Builder publicIPAddressVersion(String publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofLeft(publicIPAddressVersion));
+        }
+
+        public Builder publicIPAddressVersion(IPVersion publicIPAddressVersion) {
+            return publicIPAddressVersion(Either.ofRight(publicIPAddressVersion));
         }
 
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {

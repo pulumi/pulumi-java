@@ -155,6 +155,14 @@ public final class CookiesMatchConditionParametersArgs extends com.pulumi.resour
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(CookiesOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;

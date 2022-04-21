@@ -150,6 +150,14 @@ public final class ProximityPlacementGroupArgs extends com.pulumi.resources.Reso
             return proximityPlacementGroupType(Output.of(proximityPlacementGroupType));
         }
 
+        public Builder proximityPlacementGroupType(String proximityPlacementGroupType) {
+            return proximityPlacementGroupType(Either.ofLeft(proximityPlacementGroupType));
+        }
+
+        public Builder proximityPlacementGroupType(ProximityPlacementGroupType proximityPlacementGroupType) {
+            return proximityPlacementGroupType(Either.ofRight(proximityPlacementGroupType));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

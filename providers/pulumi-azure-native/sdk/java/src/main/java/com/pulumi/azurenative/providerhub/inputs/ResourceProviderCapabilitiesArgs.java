@@ -74,6 +74,14 @@ public final class ResourceProviderCapabilitiesArgs extends com.pulumi.resources
             return effect(Output.of(effect));
         }
 
+        public Builder effect(String effect) {
+            return effect(Either.ofLeft(effect));
+        }
+
+        public Builder effect(ResourceProviderCapabilitiesEffect effect) {
+            return effect(Either.ofRight(effect));
+        }
+
         public Builder quotaId(Output<String> quotaId) {
             $.quotaId = quotaId;
             return this;

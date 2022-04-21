@@ -112,6 +112,14 @@ public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArg
             return metricTriggerType(Output.of(metricTriggerType));
         }
 
+        public Builder metricTriggerType(String metricTriggerType) {
+            return metricTriggerType(Either.ofLeft(metricTriggerType));
+        }
+
+        public Builder metricTriggerType(MetricTriggerType metricTriggerType) {
+            return metricTriggerType(Either.ofRight(metricTriggerType));
+        }
+
         public Builder threshold(@Nullable Output<Double> threshold) {
             $.threshold = threshold;
             return this;
@@ -128,6 +136,14 @@ public final class LogMetricTriggerArgs extends com.pulumi.resources.ResourceArg
 
         public Builder thresholdOperator(Either<String,ConditionalOperator> thresholdOperator) {
             return thresholdOperator(Output.of(thresholdOperator));
+        }
+
+        public Builder thresholdOperator(String thresholdOperator) {
+            return thresholdOperator(Either.ofLeft(thresholdOperator));
+        }
+
+        public Builder thresholdOperator(ConditionalOperator thresholdOperator) {
+            return thresholdOperator(Either.ofRight(thresholdOperator));
         }
 
         public LogMetricTriggerArgs build() {

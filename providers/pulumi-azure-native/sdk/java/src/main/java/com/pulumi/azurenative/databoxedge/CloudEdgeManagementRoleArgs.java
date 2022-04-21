@@ -147,6 +147,14 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
             return roleStatus(Output.of(roleStatus));
         }
 
+        public Builder roleStatus(String roleStatus) {
+            return roleStatus(Either.ofLeft(roleStatus));
+        }
+
+        public Builder roleStatus(RoleStatus roleStatus) {
+            return roleStatus(Either.ofRight(roleStatus));
+        }
+
         public CloudEdgeManagementRoleArgs build() {
             $.deviceName = Objects.requireNonNull($.deviceName, "expected parameter 'deviceName' to be non-null");
             $.kind = Codegen.stringProp("kind").output().arg($.kind).require();

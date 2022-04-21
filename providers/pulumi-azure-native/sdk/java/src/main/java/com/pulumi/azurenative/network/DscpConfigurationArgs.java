@@ -252,6 +252,14 @@ public final class DscpConfigurationArgs extends com.pulumi.resources.ResourceAr
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ProtocolType protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

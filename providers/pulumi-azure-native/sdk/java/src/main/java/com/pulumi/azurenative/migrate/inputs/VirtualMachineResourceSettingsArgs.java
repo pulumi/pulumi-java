@@ -133,6 +133,14 @@ public final class VirtualMachineResourceSettingsArgs extends com.pulumi.resourc
             return targetAvailabilityZone(Output.of(targetAvailabilityZone));
         }
 
+        public Builder targetAvailabilityZone(String targetAvailabilityZone) {
+            return targetAvailabilityZone(Either.ofLeft(targetAvailabilityZone));
+        }
+
+        public Builder targetAvailabilityZone(TargetAvailabilityZone targetAvailabilityZone) {
+            return targetAvailabilityZone(Either.ofRight(targetAvailabilityZone));
+        }
+
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;

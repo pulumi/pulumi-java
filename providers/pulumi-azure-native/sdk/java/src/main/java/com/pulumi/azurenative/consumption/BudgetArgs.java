@@ -181,6 +181,14 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
             return category(Output.of(category));
         }
 
+        public Builder category(String category) {
+            return category(Either.ofLeft(category));
+        }
+
+        public Builder category(CategoryType category) {
+            return category(Either.ofRight(category));
+        }
+
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
@@ -224,6 +232,14 @@ public final class BudgetArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder timeGrain(Either<String,TimeGrainType> timeGrain) {
             return timeGrain(Output.of(timeGrain));
+        }
+
+        public Builder timeGrain(String timeGrain) {
+            return timeGrain(Either.ofLeft(timeGrain));
+        }
+
+        public Builder timeGrain(TimeGrainType timeGrain) {
+            return timeGrain(Either.ofRight(timeGrain));
         }
 
         public Builder timePeriod(Output<BudgetTimePeriodArgs> timePeriod) {

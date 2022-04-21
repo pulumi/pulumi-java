@@ -87,6 +87,14 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(ContainerNetworkProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public ContainerPortArgs build() {
             $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
             return $;

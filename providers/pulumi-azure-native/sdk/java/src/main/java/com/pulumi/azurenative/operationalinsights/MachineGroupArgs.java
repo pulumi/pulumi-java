@@ -168,6 +168,14 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
             return groupType(Output.of(groupType));
         }
 
+        public Builder groupType(String groupType) {
+            return groupType(Either.ofLeft(groupType));
+        }
+
+        public Builder groupType(MachineGroupType groupType) {
+            return groupType(Either.ofRight(groupType));
+        }
+
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;

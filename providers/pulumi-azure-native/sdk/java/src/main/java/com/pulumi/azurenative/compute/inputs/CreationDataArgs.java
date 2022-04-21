@@ -152,6 +152,14 @@ public final class CreationDataArgs extends com.pulumi.resources.ResourceArgs {
             return createOption(Output.of(createOption));
         }
 
+        public Builder createOption(String createOption) {
+            return createOption(Either.ofLeft(createOption));
+        }
+
+        public Builder createOption(DiskCreateOption createOption) {
+            return createOption(Either.ofRight(createOption));
+        }
+
         public Builder galleryImageReference(@Nullable Output<ImageDiskReferenceArgs> galleryImageReference) {
             $.galleryImageReference = galleryImageReference;
             return this;

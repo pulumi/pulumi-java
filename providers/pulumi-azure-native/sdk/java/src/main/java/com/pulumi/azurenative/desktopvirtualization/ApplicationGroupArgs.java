@@ -219,6 +219,14 @@ public final class ApplicationGroupArgs extends com.pulumi.resources.ResourceArg
             return applicationGroupType(Output.of(applicationGroupType));
         }
 
+        public Builder applicationGroupType(String applicationGroupType) {
+            return applicationGroupType(Either.ofLeft(applicationGroupType));
+        }
+
+        public Builder applicationGroupType(ApplicationGroupType applicationGroupType) {
+            return applicationGroupType(Either.ofRight(applicationGroupType));
+        }
+
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;

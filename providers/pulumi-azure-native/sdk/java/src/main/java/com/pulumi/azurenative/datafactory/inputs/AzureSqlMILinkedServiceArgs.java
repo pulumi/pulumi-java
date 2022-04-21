@@ -334,6 +334,14 @@ public final class AzureSqlMILinkedServiceArgs extends com.pulumi.resources.Reso
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder tenant(@Nullable Output<Object> tenant) {
             $.tenant = tenant;
             return this;

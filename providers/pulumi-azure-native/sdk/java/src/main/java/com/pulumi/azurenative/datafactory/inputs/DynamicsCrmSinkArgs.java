@@ -257,6 +257,14 @@ public final class DynamicsCrmSinkArgs extends com.pulumi.resources.ResourceArgs
             return writeBehavior(Output.of(writeBehavior));
         }
 
+        public Builder writeBehavior(String writeBehavior) {
+            return writeBehavior(Either.ofLeft(writeBehavior));
+        }
+
+        public Builder writeBehavior(DynamicsSinkWriteBehavior writeBehavior) {
+            return writeBehavior(Either.ofRight(writeBehavior));
+        }
+
         public DynamicsCrmSinkArgs build() {
             $.type = Codegen.stringProp("type").output().arg($.type).require();
             $.writeBehavior = Objects.requireNonNull($.writeBehavior, "expected parameter 'writeBehavior' to be non-null");

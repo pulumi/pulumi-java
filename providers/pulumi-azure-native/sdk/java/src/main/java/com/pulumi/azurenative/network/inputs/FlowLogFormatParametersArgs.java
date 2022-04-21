@@ -79,6 +79,14 @@ public final class FlowLogFormatParametersArgs extends com.pulumi.resources.Reso
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(FlowLogFormatType type) {
+            return type(Either.ofRight(type));
+        }
+
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;

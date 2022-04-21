@@ -88,6 +88,14 @@ public final class ApplicationDefinitionArtifactArgs extends com.pulumi.resource
             return name(Output.of(name));
         }
 
+        public Builder name(String name) {
+            return name(Either.ofLeft(name));
+        }
+
+        public Builder name(ApplicationDefinitionArtifactName name) {
+            return name(Either.ofRight(name));
+        }
+
         public Builder type(Output<ApplicationArtifactType> type) {
             $.type = type;
             return this;

@@ -208,6 +208,14 @@ public final class NetworkFunctionRoleConfigurationArgs extends com.pulumi.resou
             return roleType(Output.of(roleType));
         }
 
+        public Builder roleType(String roleType) {
+            return roleType(Either.ofLeft(roleType));
+        }
+
+        public Builder roleType(NetworkFunctionRoleConfigurationType roleType) {
+            return roleType(Either.ofRight(roleType));
+        }
+
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             $.storageProfile = storageProfile;
             return this;
@@ -242,6 +250,14 @@ public final class NetworkFunctionRoleConfigurationArgs extends com.pulumi.resou
 
         public Builder virtualMachineSize(Either<String,VirtualMachineSizeTypes> virtualMachineSize) {
             return virtualMachineSize(Output.of(virtualMachineSize));
+        }
+
+        public Builder virtualMachineSize(String virtualMachineSize) {
+            return virtualMachineSize(Either.ofLeft(virtualMachineSize));
+        }
+
+        public Builder virtualMachineSize(VirtualMachineSizeTypes virtualMachineSize) {
+            return virtualMachineSize(Either.ofRight(virtualMachineSize));
         }
 
         public NetworkFunctionRoleConfigurationArgs build() {

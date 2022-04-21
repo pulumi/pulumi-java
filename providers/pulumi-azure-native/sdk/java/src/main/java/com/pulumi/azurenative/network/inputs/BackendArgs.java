@@ -204,6 +204,14 @@ public final class BackendArgs extends com.pulumi.resources.ResourceArgs {
             return enabledState(Output.of(enabledState));
         }
 
+        public Builder enabledState(String enabledState) {
+            return enabledState(Either.ofLeft(enabledState));
+        }
+
+        public Builder enabledState(BackendEnabledState enabledState) {
+            return enabledState(Either.ofRight(enabledState));
+        }
+
         public Builder httpPort(@Nullable Output<Integer> httpPort) {
             $.httpPort = httpPort;
             return this;

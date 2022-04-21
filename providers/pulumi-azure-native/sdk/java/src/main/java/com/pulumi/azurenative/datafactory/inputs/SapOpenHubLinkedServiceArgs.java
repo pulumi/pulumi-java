@@ -347,6 +347,14 @@ public final class SapOpenHubLinkedServiceArgs extends com.pulumi.resources.Reso
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder server(@Nullable Output<Object> server) {
             $.server = server;
             return this;

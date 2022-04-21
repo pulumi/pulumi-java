@@ -177,6 +177,14 @@ public final class ListAccountSasArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        public Builder signingKey(String signingKey) {
+            return signingKey(Either.ofLeft(signingKey));
+        }
+
+        public Builder signingKey(SigningKey signingKey) {
+            return signingKey(Either.ofRight(signingKey));
+        }
+
         public Builder start(String start) {
             $.start = start;
             return this;

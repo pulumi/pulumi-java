@@ -63,6 +63,14 @@ public final class DefenderSettingsPropertiesMdeIntegrationArgs extends com.pulu
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(MdeIntegration status) {
+            return status(Either.ofRight(status));
+        }
+
         public DefenderSettingsPropertiesMdeIntegrationArgs build() {
             $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
             return $;

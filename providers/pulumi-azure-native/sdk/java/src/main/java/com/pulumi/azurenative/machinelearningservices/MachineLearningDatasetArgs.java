@@ -147,6 +147,14 @@ public final class MachineLearningDatasetArgs extends com.pulumi.resources.Resou
             return datasetType(Output.of(datasetType));
         }
 
+        public Builder datasetType(String datasetType) {
+            return datasetType(Either.ofLeft(datasetType));
+        }
+
+        public Builder datasetType(DatasetType datasetType) {
+            return datasetType(Either.ofRight(datasetType));
+        }
+
         public Builder parameters(Output<DatasetCreateRequestParametersArgs> parameters) {
             $.parameters = parameters;
             return this;

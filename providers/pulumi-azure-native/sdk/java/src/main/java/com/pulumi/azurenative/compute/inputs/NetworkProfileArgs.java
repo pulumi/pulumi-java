@@ -92,6 +92,14 @@ public final class NetworkProfileArgs extends com.pulumi.resources.ResourceArgs 
             return networkApiVersion(Output.of(networkApiVersion));
         }
 
+        public Builder networkApiVersion(String networkApiVersion) {
+            return networkApiVersion(Either.ofLeft(networkApiVersion));
+        }
+
+        public Builder networkApiVersion(NetworkApiVersion networkApiVersion) {
+            return networkApiVersion(Either.ofRight(networkApiVersion));
+        }
+
         public Builder networkInterfaceConfigurations(@Nullable Output<List<VirtualMachineNetworkInterfaceConfigurationArgs>> networkInterfaceConfigurations) {
             $.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;

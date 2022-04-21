@@ -200,6 +200,14 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
             return backupScheduleType(Output.of(backupScheduleType));
         }
 
+        public Builder backupScheduleType(String backupScheduleType) {
+            return backupScheduleType(Either.ofLeft(backupScheduleType));
+        }
+
+        public Builder backupScheduleType(BackupScheduleType backupScheduleType) {
+            return backupScheduleType(Either.ofRight(backupScheduleType));
+        }
+
         public Builder backupSystemDbs(@Nullable Output<Boolean> backupSystemDbs) {
             $.backupSystemDbs = backupSystemDbs;
             return this;
@@ -234,6 +242,14 @@ public final class AutoBackupSettingsArgs extends com.pulumi.resources.ResourceA
 
         public Builder fullBackupFrequency(Either<String,FullBackupFrequencyType> fullBackupFrequency) {
             return fullBackupFrequency(Output.of(fullBackupFrequency));
+        }
+
+        public Builder fullBackupFrequency(String fullBackupFrequency) {
+            return fullBackupFrequency(Either.ofLeft(fullBackupFrequency));
+        }
+
+        public Builder fullBackupFrequency(FullBackupFrequencyType fullBackupFrequency) {
+            return fullBackupFrequency(Either.ofRight(fullBackupFrequency));
         }
 
         public Builder fullBackupStartTime(@Nullable Output<Integer> fullBackupStartTime) {

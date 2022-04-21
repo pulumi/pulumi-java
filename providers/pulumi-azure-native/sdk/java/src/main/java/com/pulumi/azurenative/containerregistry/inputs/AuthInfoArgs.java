@@ -150,6 +150,14 @@ public final class AuthInfoArgs extends com.pulumi.resources.ResourceArgs {
             return tokenType(Output.of(tokenType));
         }
 
+        public Builder tokenType(String tokenType) {
+            return tokenType(Either.ofLeft(tokenType));
+        }
+
+        public Builder tokenType(TokenType tokenType) {
+            return tokenType(Either.ofRight(tokenType));
+        }
+
         public AuthInfoArgs build() {
             $.token = Objects.requireNonNull($.token, "expected parameter 'token' to be non-null");
             $.tokenType = Objects.requireNonNull($.tokenType, "expected parameter 'tokenType' to be non-null");

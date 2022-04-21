@@ -89,6 +89,14 @@ public final class FilteringTagArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(TagAction action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;

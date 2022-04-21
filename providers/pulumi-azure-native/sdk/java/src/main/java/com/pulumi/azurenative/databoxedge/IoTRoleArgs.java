@@ -207,6 +207,14 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
             return hostPlatform(Output.of(hostPlatform));
         }
 
+        public Builder hostPlatform(String hostPlatform) {
+            return hostPlatform(Either.ofLeft(hostPlatform));
+        }
+
+        public Builder hostPlatform(PlatformType hostPlatform) {
+            return hostPlatform(Either.ofRight(hostPlatform));
+        }
+
         public Builder ioTDeviceDetails(Output<IoTDeviceInfoArgs> ioTDeviceDetails) {
             $.ioTDeviceDetails = ioTDeviceDetails;
             return this;
@@ -268,6 +276,14 @@ public final class IoTRoleArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             return roleStatus(Output.of(roleStatus));
+        }
+
+        public Builder roleStatus(String roleStatus) {
+            return roleStatus(Either.ofLeft(roleStatus));
+        }
+
+        public Builder roleStatus(RoleStatus roleStatus) {
+            return roleStatus(Either.ofRight(roleStatus));
         }
 
         public Builder shareMappings(@Nullable Output<List<MountPointMapArgs>> shareMappings) {

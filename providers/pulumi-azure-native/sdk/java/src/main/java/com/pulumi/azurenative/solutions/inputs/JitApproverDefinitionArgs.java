@@ -107,6 +107,14 @@ public final class JitApproverDefinitionArgs extends com.pulumi.resources.Resour
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(JitApproverType type) {
+            return type(Either.ofRight(type));
+        }
+
         public JitApproverDefinitionArgs build() {
             $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
             return $;

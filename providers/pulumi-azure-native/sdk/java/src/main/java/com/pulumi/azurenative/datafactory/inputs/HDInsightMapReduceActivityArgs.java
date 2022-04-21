@@ -295,6 +295,14 @@ public final class HDInsightMapReduceActivityArgs extends com.pulumi.resources.R
             return getDebugInfo(Output.of(getDebugInfo));
         }
 
+        public Builder getDebugInfo(String getDebugInfo) {
+            return getDebugInfo(Either.ofLeft(getDebugInfo));
+        }
+
+        public Builder getDebugInfo(HDInsightActivityDebugInfoOption getDebugInfo) {
+            return getDebugInfo(Either.ofRight(getDebugInfo));
+        }
+
         public Builder jarFilePath(Output<Object> jarFilePath) {
             $.jarFilePath = jarFilePath;
             return this;

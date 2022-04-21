@@ -117,6 +117,14 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(WebApplicationFirewallAction action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder matchConditions(Output<List<MatchConditionArgs>> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
@@ -155,6 +163,14 @@ public final class WebApplicationFirewallCustomRuleArgs extends com.pulumi.resou
 
         public Builder ruleType(Either<String,WebApplicationFirewallRuleType> ruleType) {
             return ruleType(Output.of(ruleType));
+        }
+
+        public Builder ruleType(String ruleType) {
+            return ruleType(Either.ofLeft(ruleType));
+        }
+
+        public Builder ruleType(WebApplicationFirewallRuleType ruleType) {
+            return ruleType(Either.ofRight(ruleType));
         }
 
         public WebApplicationFirewallCustomRuleArgs build() {

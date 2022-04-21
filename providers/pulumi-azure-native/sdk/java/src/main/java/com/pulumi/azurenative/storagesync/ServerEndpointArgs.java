@@ -221,6 +221,14 @@ public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs 
             return cloudTiering(Output.of(cloudTiering));
         }
 
+        public Builder cloudTiering(String cloudTiering) {
+            return cloudTiering(Either.ofLeft(cloudTiering));
+        }
+
+        public Builder cloudTiering(FeatureStatus cloudTiering) {
+            return cloudTiering(Either.ofRight(cloudTiering));
+        }
+
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
@@ -239,6 +247,14 @@ public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs 
             return initialDownloadPolicy(Output.of(initialDownloadPolicy));
         }
 
+        public Builder initialDownloadPolicy(String initialDownloadPolicy) {
+            return initialDownloadPolicy(Either.ofLeft(initialDownloadPolicy));
+        }
+
+        public Builder initialDownloadPolicy(InitialDownloadPolicy initialDownloadPolicy) {
+            return initialDownloadPolicy(Either.ofRight(initialDownloadPolicy));
+        }
+
         public Builder localCacheMode(@Nullable Output<Either<String,LocalCacheMode>> localCacheMode) {
             $.localCacheMode = localCacheMode;
             return this;
@@ -248,6 +264,14 @@ public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs 
             return localCacheMode(Output.of(localCacheMode));
         }
 
+        public Builder localCacheMode(String localCacheMode) {
+            return localCacheMode(Either.ofLeft(localCacheMode));
+        }
+
+        public Builder localCacheMode(LocalCacheMode localCacheMode) {
+            return localCacheMode(Either.ofRight(localCacheMode));
+        }
+
         public Builder offlineDataTransfer(@Nullable Output<Either<String,FeatureStatus>> offlineDataTransfer) {
             $.offlineDataTransfer = offlineDataTransfer;
             return this;
@@ -255,6 +279,14 @@ public final class ServerEndpointArgs extends com.pulumi.resources.ResourceArgs 
 
         public Builder offlineDataTransfer(Either<String,FeatureStatus> offlineDataTransfer) {
             return offlineDataTransfer(Output.of(offlineDataTransfer));
+        }
+
+        public Builder offlineDataTransfer(String offlineDataTransfer) {
+            return offlineDataTransfer(Either.ofLeft(offlineDataTransfer));
+        }
+
+        public Builder offlineDataTransfer(FeatureStatus offlineDataTransfer) {
+            return offlineDataTransfer(Either.ofRight(offlineDataTransfer));
         }
 
         public Builder offlineDataTransferShareName(@Nullable Output<String> offlineDataTransferShareName) {

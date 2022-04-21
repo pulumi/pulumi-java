@@ -105,6 +105,14 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             return provisioningState(Output.of(provisioningState));
         }
 
+        public Builder provisioningState(String provisioningState) {
+            return provisioningState(Either.ofLeft(provisioningState));
+        }
+
+        public Builder provisioningState(ResourceProvisioningState provisioningState) {
+            return provisioningState(Either.ofRight(provisioningState));
+        }
+
         public PrivateEndpointConnectionArgs build() {
             return $;
         }

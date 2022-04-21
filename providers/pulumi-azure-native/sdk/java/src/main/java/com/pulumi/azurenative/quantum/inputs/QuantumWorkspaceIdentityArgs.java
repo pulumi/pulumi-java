@@ -65,6 +65,14 @@ public final class QuantumWorkspaceIdentityArgs extends com.pulumi.resources.Res
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ResourceIdentityType type) {
+            return type(Either.ofRight(type));
+        }
+
         public QuantumWorkspaceIdentityArgs build() {
             return $;
         }

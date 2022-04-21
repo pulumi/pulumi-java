@@ -105,6 +105,14 @@ public final class PeeringPropertiesDirectArgs extends com.pulumi.resources.Reso
             return directPeeringType(Output.of(directPeeringType));
         }
 
+        public Builder directPeeringType(String directPeeringType) {
+            return directPeeringType(Either.ofLeft(directPeeringType));
+        }
+
+        public Builder directPeeringType(DirectPeeringType directPeeringType) {
+            return directPeeringType(Either.ofRight(directPeeringType));
+        }
+
         public Builder peerAsn(@Nullable Output<SubResourceArgs> peerAsn) {
             $.peerAsn = peerAsn;
             return this;

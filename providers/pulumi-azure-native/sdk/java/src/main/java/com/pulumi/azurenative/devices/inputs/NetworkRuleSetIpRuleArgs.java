@@ -90,6 +90,14 @@ public final class NetworkRuleSetIpRuleArgs extends com.pulumi.resources.Resourc
             return action(Output.of(action));
         }
 
+        public Builder action(String action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(NetworkRuleIPAction action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder filterName(Output<String> filterName) {
             $.filterName = filterName;
             return this;

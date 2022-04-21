@@ -281,6 +281,14 @@ public final class AzureMLServiceLinkedServiceArgs extends com.pulumi.resources.
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
+        }
+
+        public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
+            return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
+        }
+
         public Builder subscriptionId(Output<Object> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

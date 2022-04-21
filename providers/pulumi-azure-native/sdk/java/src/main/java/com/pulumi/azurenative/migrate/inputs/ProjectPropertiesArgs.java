@@ -161,6 +161,14 @@ public final class ProjectPropertiesArgs extends com.pulumi.resources.ResourceAr
             return projectStatus(Output.of(projectStatus));
         }
 
+        public Builder projectStatus(String projectStatus) {
+            return projectStatus(Either.ofLeft(projectStatus));
+        }
+
+        public Builder projectStatus(ProjectStatus projectStatus) {
+            return projectStatus(Either.ofRight(projectStatus));
+        }
+
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;

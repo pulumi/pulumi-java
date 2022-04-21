@@ -325,6 +325,14 @@ public final class ManagedOnlineDeploymentArgs extends com.pulumi.resources.Reso
             return scaleSettings(Output.of(scaleSettings));
         }
 
+        public Builder scaleSettings(AutoScaleSettingsArgs scaleSettings) {
+            return scaleSettings(Either.ofLeft(scaleSettings));
+        }
+
+        public Builder scaleSettings(ManualScaleSettingsArgs scaleSettings) {
+            return scaleSettings(Either.ofRight(scaleSettings));
+        }
+
         public ManagedOnlineDeploymentArgs build() {
             $.endpointComputeType = Codegen.stringProp("endpointComputeType").output().arg($.endpointComputeType).require();
             return $;

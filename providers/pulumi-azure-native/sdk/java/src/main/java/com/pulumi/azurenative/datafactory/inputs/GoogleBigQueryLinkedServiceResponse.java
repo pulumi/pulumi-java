@@ -284,6 +284,14 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
             return this;
         }
 
+        public Builder clientSecret(AzureKeyVaultSecretReferenceResponse clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringResponse clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
+        }
+
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
@@ -322,6 +330,14 @@ public final class GoogleBigQueryLinkedServiceResponse extends com.pulumi.resour
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
+        }
+
+        public Builder refreshToken(AzureKeyVaultSecretReferenceResponse refreshToken) {
+            return refreshToken(Either.ofLeft(refreshToken));
+        }
+
+        public Builder refreshToken(SecureStringResponse refreshToken) {
+            return refreshToken(Either.ofRight(refreshToken));
         }
 
         public Builder requestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {

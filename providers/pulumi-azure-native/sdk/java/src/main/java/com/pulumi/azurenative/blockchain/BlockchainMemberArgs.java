@@ -286,6 +286,14 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
             return protocol(Output.of(protocol));
         }
 
+        public Builder protocol(String protocol) {
+            return protocol(Either.ofLeft(protocol));
+        }
+
+        public Builder protocol(BlockchainProtocol protocol) {
+            return protocol(Either.ofRight(protocol));
+        }
+
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -309,6 +309,14 @@ public final class RunbookArgs extends com.pulumi.resources.ResourceArgs {
             return runbookType(Output.of(runbookType));
         }
 
+        public Builder runbookType(String runbookType) {
+            return runbookType(Either.ofLeft(runbookType));
+        }
+
+        public Builder runbookType(RunbookTypeEnum runbookType) {
+            return runbookType(Either.ofRight(runbookType));
+        }
+
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;

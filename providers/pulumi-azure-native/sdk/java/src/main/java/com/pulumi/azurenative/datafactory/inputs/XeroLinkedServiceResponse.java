@@ -232,6 +232,14 @@ public final class XeroLinkedServiceResponse extends com.pulumi.resources.Invoke
             return this;
         }
 
+        public Builder consumerKey(AzureKeyVaultSecretReferenceResponse consumerKey) {
+            return consumerKey(Either.ofLeft(consumerKey));
+        }
+
+        public Builder consumerKey(SecureStringResponse consumerKey) {
+            return consumerKey(Either.ofRight(consumerKey));
+        }
+
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
@@ -255,6 +263,14 @@ public final class XeroLinkedServiceResponse extends com.pulumi.resources.Invoke
         public Builder privateKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKey) {
             $.privateKey = privateKey;
             return this;
+        }
+
+        public Builder privateKey(AzureKeyVaultSecretReferenceResponse privateKey) {
+            return privateKey(Either.ofLeft(privateKey));
+        }
+
+        public Builder privateKey(SecureStringResponse privateKey) {
+            return privateKey(Either.ofRight(privateKey));
         }
 
         public Builder type(String type) {

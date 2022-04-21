@@ -276,6 +276,14 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
             return severity(Output.of(severity));
         }
 
+        public Builder severity(String severity) {
+            return severity(Either.ofLeft(severity));
+        }
+
+        public Builder severity(Severity severity) {
+            return severity(Either.ofRight(severity));
+        }
+
         public Builder state(Output<Either<String,AlertRuleState>> state) {
             $.state = state;
             return this;
@@ -283,6 +291,14 @@ public final class SmartDetectorAlertRuleArgs extends com.pulumi.resources.Resou
 
         public Builder state(Either<String,AlertRuleState> state) {
             return state(Output.of(state));
+        }
+
+        public Builder state(String state) {
+            return state(Either.ofLeft(state));
+        }
+
+        public Builder state(AlertRuleState state) {
+            return state(Either.ofRight(state));
         }
 
         public Builder tags(@Nullable Output<Map<String,String>> tags) {

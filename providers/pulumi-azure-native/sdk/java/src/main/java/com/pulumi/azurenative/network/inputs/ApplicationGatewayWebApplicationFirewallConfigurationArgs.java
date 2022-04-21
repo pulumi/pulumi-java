@@ -222,6 +222,14 @@ public final class ApplicationGatewayWebApplicationFirewallConfigurationArgs ext
             return firewallMode(Output.of(firewallMode));
         }
 
+        public Builder firewallMode(String firewallMode) {
+            return firewallMode(Either.ofLeft(firewallMode));
+        }
+
+        public Builder firewallMode(ApplicationGatewayFirewallMode firewallMode) {
+            return firewallMode(Either.ofRight(firewallMode));
+        }
+
         public Builder maxRequestBodySize(@Nullable Output<Integer> maxRequestBodySize) {
             $.maxRequestBodySize = maxRequestBodySize;
             return this;

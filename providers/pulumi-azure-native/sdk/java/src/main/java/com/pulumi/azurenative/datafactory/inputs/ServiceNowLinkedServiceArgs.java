@@ -255,6 +255,14 @@ public final class ServiceNowLinkedServiceArgs extends com.pulumi.resources.Reso
             return authenticationType(Output.of(authenticationType));
         }
 
+        public Builder authenticationType(String authenticationType) {
+            return authenticationType(Either.ofLeft(authenticationType));
+        }
+
+        public Builder authenticationType(ServiceNowAuthenticationType authenticationType) {
+            return authenticationType(Either.ofRight(authenticationType));
+        }
+
         public Builder clientId(@Nullable Output<Object> clientId) {
             $.clientId = clientId;
             return this;
@@ -271,6 +279,14 @@ public final class ServiceNowLinkedServiceArgs extends com.pulumi.resources.Reso
 
         public Builder clientSecret(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
             return clientSecret(Output.of(clientSecret));
+        }
+
+        public Builder clientSecret(AzureKeyVaultSecretReferenceArgs clientSecret) {
+            return clientSecret(Either.ofLeft(clientSecret));
+        }
+
+        public Builder clientSecret(SecureStringArgs clientSecret) {
+            return clientSecret(Either.ofRight(clientSecret));
         }
 
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -325,6 +341,14 @@ public final class ServiceNowLinkedServiceArgs extends com.pulumi.resources.Reso
 
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
+        }
+
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
         }
 
         public Builder type(Output<String> type) {

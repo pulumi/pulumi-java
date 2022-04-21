@@ -227,6 +227,14 @@ public final class TeradataLinkedServiceResponse extends com.pulumi.resources.In
             return this;
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceResponse password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringResponse password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder server(@Nullable Object server) {
             $.server = server;
             return this;

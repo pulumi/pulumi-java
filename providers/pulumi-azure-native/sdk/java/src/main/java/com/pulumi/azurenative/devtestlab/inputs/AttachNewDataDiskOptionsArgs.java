@@ -108,6 +108,14 @@ public final class AttachNewDataDiskOptionsArgs extends com.pulumi.resources.Res
             return diskType(Output.of(diskType));
         }
 
+        public Builder diskType(String diskType) {
+            return diskType(Either.ofLeft(diskType));
+        }
+
+        public Builder diskType(StorageType diskType) {
+            return diskType(Either.ofRight(diskType));
+        }
+
         public AttachNewDataDiskOptionsArgs build() {
             return $;
         }

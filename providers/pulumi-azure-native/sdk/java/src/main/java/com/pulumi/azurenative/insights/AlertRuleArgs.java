@@ -189,6 +189,14 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
             return action(Output.of(action));
         }
 
+        public Builder action(RuleEmailActionArgs action) {
+            return action(Either.ofLeft(action));
+        }
+
+        public Builder action(RuleWebhookActionArgs action) {
+            return action(Either.ofRight(action));
+        }
+
         public Builder actions(@Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions) {
             $.actions = actions;
             return this;

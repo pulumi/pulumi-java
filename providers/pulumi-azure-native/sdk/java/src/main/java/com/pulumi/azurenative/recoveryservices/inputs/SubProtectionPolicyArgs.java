@@ -95,6 +95,14 @@ public final class SubProtectionPolicyArgs extends com.pulumi.resources.Resource
             return policyType(Output.of(policyType));
         }
 
+        public Builder policyType(String policyType) {
+            return policyType(Either.ofLeft(policyType));
+        }
+
+        public Builder policyType(PolicyType policyType) {
+            return policyType(Either.ofRight(policyType));
+        }
+
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
@@ -102,6 +110,14 @@ public final class SubProtectionPolicyArgs extends com.pulumi.resources.Resource
 
         public Builder retentionPolicy(Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
             return retentionPolicy(Output.of(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(LongTermRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofLeft(retentionPolicy));
+        }
+
+        public Builder retentionPolicy(SimpleRetentionPolicyArgs retentionPolicy) {
+            return retentionPolicy(Either.ofRight(retentionPolicy));
         }
 
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {

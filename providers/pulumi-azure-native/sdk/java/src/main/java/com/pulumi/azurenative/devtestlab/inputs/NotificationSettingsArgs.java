@@ -133,6 +133,14 @@ public final class NotificationSettingsArgs extends com.pulumi.resources.Resourc
             return status(Output.of(status));
         }
 
+        public Builder status(String status) {
+            return status(Either.ofLeft(status));
+        }
+
+        public Builder status(EnableStatus status) {
+            return status(Either.ofRight(status));
+        }
+
         public Builder timeInMinutes(@Nullable Output<Integer> timeInMinutes) {
             $.timeInMinutes = timeInMinutes;
             return this;

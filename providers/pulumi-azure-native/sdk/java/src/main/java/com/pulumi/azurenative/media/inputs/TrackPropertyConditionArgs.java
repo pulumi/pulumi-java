@@ -90,6 +90,14 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
             return operation(Output.of(operation));
         }
 
+        public Builder operation(String operation) {
+            return operation(Either.ofLeft(operation));
+        }
+
+        public Builder operation(TrackPropertyCompareOperation operation) {
+            return operation(Either.ofRight(operation));
+        }
+
         public Builder property(Output<Either<String,TrackPropertyType>> property) {
             $.property = property;
             return this;
@@ -97,6 +105,14 @@ public final class TrackPropertyConditionArgs extends com.pulumi.resources.Resou
 
         public Builder property(Either<String,TrackPropertyType> property) {
             return property(Output.of(property));
+        }
+
+        public Builder property(String property) {
+            return property(Either.ofLeft(property));
+        }
+
+        public Builder property(TrackPropertyType property) {
+            return property(Either.ofRight(property));
         }
 
         public Builder value(@Nullable Output<String> value) {

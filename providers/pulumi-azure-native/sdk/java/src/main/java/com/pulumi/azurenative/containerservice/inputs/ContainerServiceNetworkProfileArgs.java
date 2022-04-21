@@ -206,6 +206,14 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
             return loadBalancerSku(Output.of(loadBalancerSku));
         }
 
+        public Builder loadBalancerSku(String loadBalancerSku) {
+            return loadBalancerSku(Either.ofLeft(loadBalancerSku));
+        }
+
+        public Builder loadBalancerSku(LoadBalancerSku loadBalancerSku) {
+            return loadBalancerSku(Either.ofRight(loadBalancerSku));
+        }
+
         public Builder networkMode(@Nullable Output<Either<String,NetworkMode>> networkMode) {
             $.networkMode = networkMode;
             return this;
@@ -213,6 +221,14 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
 
         public Builder networkMode(Either<String,NetworkMode> networkMode) {
             return networkMode(Output.of(networkMode));
+        }
+
+        public Builder networkMode(String networkMode) {
+            return networkMode(Either.ofLeft(networkMode));
+        }
+
+        public Builder networkMode(NetworkMode networkMode) {
+            return networkMode(Either.ofRight(networkMode));
         }
 
         public Builder networkPlugin(@Nullable Output<Either<String,NetworkPlugin>> networkPlugin) {
@@ -224,6 +240,14 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
             return networkPlugin(Output.of(networkPlugin));
         }
 
+        public Builder networkPlugin(String networkPlugin) {
+            return networkPlugin(Either.ofLeft(networkPlugin));
+        }
+
+        public Builder networkPlugin(NetworkPlugin networkPlugin) {
+            return networkPlugin(Either.ofRight(networkPlugin));
+        }
+
         public Builder networkPolicy(@Nullable Output<Either<String,NetworkPolicy>> networkPolicy) {
             $.networkPolicy = networkPolicy;
             return this;
@@ -233,6 +257,14 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
             return networkPolicy(Output.of(networkPolicy));
         }
 
+        public Builder networkPolicy(String networkPolicy) {
+            return networkPolicy(Either.ofLeft(networkPolicy));
+        }
+
+        public Builder networkPolicy(NetworkPolicy networkPolicy) {
+            return networkPolicy(Either.ofRight(networkPolicy));
+        }
+
         public Builder outboundType(@Nullable Output<Either<String,OutboundType>> outboundType) {
             $.outboundType = outboundType;
             return this;
@@ -240,6 +272,14 @@ public final class ContainerServiceNetworkProfileArgs extends com.pulumi.resourc
 
         public Builder outboundType(Either<String,OutboundType> outboundType) {
             return outboundType(Output.of(outboundType));
+        }
+
+        public Builder outboundType(String outboundType) {
+            return outboundType(Either.ofLeft(outboundType));
+        }
+
+        public Builder outboundType(OutboundType outboundType) {
+            return outboundType(Either.ofRight(outboundType));
         }
 
         public Builder podCidr(@Nullable Output<String> podCidr) {

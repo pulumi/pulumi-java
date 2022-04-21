@@ -199,6 +199,14 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
             return alwaysLog(Output.of(alwaysLog));
         }
 
+        public Builder alwaysLog(String alwaysLog) {
+            return alwaysLog(Either.ofLeft(alwaysLog));
+        }
+
+        public Builder alwaysLog(AlwaysLog alwaysLog) {
+            return alwaysLog(Either.ofRight(alwaysLog));
+        }
+
         public Builder backend(@Nullable Output<PipelineDiagnosticSettingsArgs> backend) {
             $.backend = backend;
             return this;
@@ -235,6 +243,14 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
             return httpCorrelationProtocol(Output.of(httpCorrelationProtocol));
         }
 
+        public Builder httpCorrelationProtocol(String httpCorrelationProtocol) {
+            return httpCorrelationProtocol(Either.ofLeft(httpCorrelationProtocol));
+        }
+
+        public Builder httpCorrelationProtocol(HttpCorrelationProtocol httpCorrelationProtocol) {
+            return httpCorrelationProtocol(Either.ofRight(httpCorrelationProtocol));
+        }
+
         public Builder logClientIp(@Nullable Output<Boolean> logClientIp) {
             $.logClientIp = logClientIp;
             return this;
@@ -260,6 +276,14 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder operationNameFormat(Either<String,OperationNameFormat> operationNameFormat) {
             return operationNameFormat(Output.of(operationNameFormat));
+        }
+
+        public Builder operationNameFormat(String operationNameFormat) {
+            return operationNameFormat(Either.ofLeft(operationNameFormat));
+        }
+
+        public Builder operationNameFormat(OperationNameFormat operationNameFormat) {
+            return operationNameFormat(Either.ofRight(operationNameFormat));
         }
 
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -296,6 +320,14 @@ public final class DiagnosticArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder verbosity(Either<String,Verbosity> verbosity) {
             return verbosity(Output.of(verbosity));
+        }
+
+        public Builder verbosity(String verbosity) {
+            return verbosity(Either.ofLeft(verbosity));
+        }
+
+        public Builder verbosity(Verbosity verbosity) {
+            return verbosity(Either.ofRight(verbosity));
         }
 
         public DiagnosticArgs build() {

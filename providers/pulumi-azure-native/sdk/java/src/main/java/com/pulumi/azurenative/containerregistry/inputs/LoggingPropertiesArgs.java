@@ -79,6 +79,14 @@ public final class LoggingPropertiesArgs extends com.pulumi.resources.ResourceAr
             return auditLogStatus(Output.of(auditLogStatus));
         }
 
+        public Builder auditLogStatus(String auditLogStatus) {
+            return auditLogStatus(Either.ofLeft(auditLogStatus));
+        }
+
+        public Builder auditLogStatus(AuditLogStatus auditLogStatus) {
+            return auditLogStatus(Either.ofRight(auditLogStatus));
+        }
+
         public Builder logLevel(@Nullable Output<Either<String,LogLevel>> logLevel) {
             $.logLevel = logLevel;
             return this;
@@ -86,6 +94,14 @@ public final class LoggingPropertiesArgs extends com.pulumi.resources.ResourceAr
 
         public Builder logLevel(Either<String,LogLevel> logLevel) {
             return logLevel(Output.of(logLevel));
+        }
+
+        public Builder logLevel(String logLevel) {
+            return logLevel(Either.ofLeft(logLevel));
+        }
+
+        public Builder logLevel(LogLevel logLevel) {
+            return logLevel(Either.ofRight(logLevel));
         }
 
         public LoggingPropertiesArgs build() {

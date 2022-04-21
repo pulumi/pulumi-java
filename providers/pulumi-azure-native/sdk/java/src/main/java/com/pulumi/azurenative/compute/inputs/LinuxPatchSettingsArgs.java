@@ -78,6 +78,14 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
             return assessmentMode(Output.of(assessmentMode));
         }
 
+        public Builder assessmentMode(String assessmentMode) {
+            return assessmentMode(Either.ofLeft(assessmentMode));
+        }
+
+        public Builder assessmentMode(LinuxPatchAssessmentMode assessmentMode) {
+            return assessmentMode(Either.ofRight(assessmentMode));
+        }
+
         public Builder patchMode(@Nullable Output<Either<String,LinuxVMGuestPatchMode>> patchMode) {
             $.patchMode = patchMode;
             return this;
@@ -85,6 +93,14 @@ public final class LinuxPatchSettingsArgs extends com.pulumi.resources.ResourceA
 
         public Builder patchMode(Either<String,LinuxVMGuestPatchMode> patchMode) {
             return patchMode(Output.of(patchMode));
+        }
+
+        public Builder patchMode(String patchMode) {
+            return patchMode(Either.ofLeft(patchMode));
+        }
+
+        public Builder patchMode(LinuxVMGuestPatchMode patchMode) {
+            return patchMode(Either.ofRight(patchMode));
         }
 
         public LinuxPatchSettingsArgs build() {

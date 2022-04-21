@@ -86,6 +86,14 @@ public final class ReferenceDataSetKeyPropertyArgs extends com.pulumi.resources.
             return type(Output.of(type));
         }
 
+        public Builder type(String type) {
+            return type(Either.ofLeft(type));
+        }
+
+        public Builder type(ReferenceDataKeyPropertyType type) {
+            return type(Either.ofRight(type));
+        }
+
         public ReferenceDataSetKeyPropertyArgs build() {
             return $;
         }

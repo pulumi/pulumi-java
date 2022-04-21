@@ -114,6 +114,14 @@ public final class NicIPSettingsArgs extends com.pulumi.resources.ResourceArgs {
             return allocationMethod(Output.of(allocationMethod));
         }
 
+        public Builder allocationMethod(String allocationMethod) {
+            return allocationMethod(Either.ofLeft(allocationMethod));
+        }
+
+        public Builder allocationMethod(IPAddressAllocationMethod allocationMethod) {
+            return allocationMethod(Either.ofRight(allocationMethod));
+        }
+
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;

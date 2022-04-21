@@ -196,6 +196,14 @@ public final class RuleArgs extends com.pulumi.resources.ResourceArgs {
             return matchProcessingBehavior(Output.of(matchProcessingBehavior));
         }
 
+        public Builder matchProcessingBehavior(String matchProcessingBehavior) {
+            return matchProcessingBehavior(Either.ofLeft(matchProcessingBehavior));
+        }
+
+        public Builder matchProcessingBehavior(MatchProcessingBehavior matchProcessingBehavior) {
+            return matchProcessingBehavior(Either.ofRight(matchProcessingBehavior));
+        }
+
         public Builder order(Output<Integer> order) {
             $.order = order;
             return this;

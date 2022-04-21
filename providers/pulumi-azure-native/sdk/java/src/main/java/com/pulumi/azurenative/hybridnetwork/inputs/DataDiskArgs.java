@@ -90,6 +90,14 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
             return createOption(Output.of(createOption));
         }
 
+        public Builder createOption(String createOption) {
+            return createOption(Either.ofLeft(createOption));
+        }
+
+        public Builder createOption(DiskCreateOptionTypes createOption) {
+            return createOption(Either.ofRight(createOption));
+        }
+
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;

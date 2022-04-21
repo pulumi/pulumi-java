@@ -372,6 +372,14 @@ public final class DynamicsLinkedServiceArgs extends com.pulumi.resources.Resour
             return password(Output.of(password));
         }
 
+        public Builder password(AzureKeyVaultSecretReferenceArgs password) {
+            return password(Either.ofLeft(password));
+        }
+
+        public Builder password(SecureStringArgs password) {
+            return password(Either.ofRight(password));
+        }
+
         public Builder port(@Nullable Output<Object> port) {
             $.port = port;
             return this;
@@ -388,6 +396,14 @@ public final class DynamicsLinkedServiceArgs extends com.pulumi.resources.Resour
 
         public Builder servicePrincipalCredential(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
             return servicePrincipalCredential(Output.of(servicePrincipalCredential));
+        }
+
+        public Builder servicePrincipalCredential(AzureKeyVaultSecretReferenceArgs servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofLeft(servicePrincipalCredential));
+        }
+
+        public Builder servicePrincipalCredential(SecureStringArgs servicePrincipalCredential) {
+            return servicePrincipalCredential(Either.ofRight(servicePrincipalCredential));
         }
 
         public Builder servicePrincipalCredentialType(@Nullable Output<Object> servicePrincipalCredentialType) {

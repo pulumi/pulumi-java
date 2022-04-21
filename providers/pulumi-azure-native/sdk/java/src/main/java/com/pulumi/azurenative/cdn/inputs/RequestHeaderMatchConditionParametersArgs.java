@@ -155,6 +155,14 @@ public final class RequestHeaderMatchConditionParametersArgs extends com.pulumi.
             return operator(Output.of(operator));
         }
 
+        public Builder operator(String operator) {
+            return operator(Either.ofLeft(operator));
+        }
+
+        public Builder operator(RequestHeaderOperator operator) {
+            return operator(Either.ofRight(operator));
+        }
+
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;

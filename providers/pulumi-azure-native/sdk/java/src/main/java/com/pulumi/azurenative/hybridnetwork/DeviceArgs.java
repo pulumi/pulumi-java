@@ -119,6 +119,14 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             return deviceType(Output.of(deviceType));
         }
 
+        public Builder deviceType(String deviceType) {
+            return deviceType(Either.ofLeft(deviceType));
+        }
+
+        public Builder deviceType(DeviceType deviceType) {
+            return deviceType(Either.ofRight(deviceType));
+        }
+
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;

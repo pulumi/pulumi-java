@@ -316,6 +316,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
             return endpointMonitorStatus(Output.of(endpointMonitorStatus));
         }
 
+        public Builder endpointMonitorStatus(String endpointMonitorStatus) {
+            return endpointMonitorStatus(Either.ofLeft(endpointMonitorStatus));
+        }
+
+        public Builder endpointMonitorStatus(EndpointMonitorStatus endpointMonitorStatus) {
+            return endpointMonitorStatus(Either.ofRight(endpointMonitorStatus));
+        }
+
         public Builder endpointName(@Nullable Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
@@ -332,6 +340,14 @@ public final class EndpointArgs extends com.pulumi.resources.ResourceArgs {
 
         public Builder endpointStatus(Either<String,EndpointStatus> endpointStatus) {
             return endpointStatus(Output.of(endpointStatus));
+        }
+
+        public Builder endpointStatus(String endpointStatus) {
+            return endpointStatus(Either.ofLeft(endpointStatus));
+        }
+
+        public Builder endpointStatus(EndpointStatus endpointStatus) {
+            return endpointStatus(Either.ofRight(endpointStatus));
         }
 
         public Builder endpointType(Output<String> endpointType) {

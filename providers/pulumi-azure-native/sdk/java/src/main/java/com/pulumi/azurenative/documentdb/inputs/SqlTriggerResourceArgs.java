@@ -120,6 +120,14 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
             return triggerOperation(Output.of(triggerOperation));
         }
 
+        public Builder triggerOperation(String triggerOperation) {
+            return triggerOperation(Either.ofLeft(triggerOperation));
+        }
+
+        public Builder triggerOperation(TriggerOperation triggerOperation) {
+            return triggerOperation(Either.ofRight(triggerOperation));
+        }
+
         public Builder triggerType(@Nullable Output<Either<String,TriggerType>> triggerType) {
             $.triggerType = triggerType;
             return this;
@@ -127,6 +135,14 @@ public final class SqlTriggerResourceArgs extends com.pulumi.resources.ResourceA
 
         public Builder triggerType(Either<String,TriggerType> triggerType) {
             return triggerType(Output.of(triggerType));
+        }
+
+        public Builder triggerType(String triggerType) {
+            return triggerType(Either.ofLeft(triggerType));
+        }
+
+        public Builder triggerType(TriggerType triggerType) {
+            return triggerType(Either.ofRight(triggerType));
         }
 
         public SqlTriggerResourceArgs build() {

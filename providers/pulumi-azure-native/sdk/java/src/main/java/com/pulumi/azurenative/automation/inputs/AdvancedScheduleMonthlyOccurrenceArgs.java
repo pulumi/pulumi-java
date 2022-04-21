@@ -78,6 +78,14 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends com.pulumi.reso
             return day(Output.of(day));
         }
 
+        public Builder day(String day) {
+            return day(Either.ofLeft(day));
+        }
+
+        public Builder day(ScheduleDay day) {
+            return day(Either.ofRight(day));
+        }
+
         public Builder occurrence(@Nullable Output<Integer> occurrence) {
             $.occurrence = occurrence;
             return this;

@@ -106,6 +106,14 @@ public final class OutputDataBindingArgs extends com.pulumi.resources.ResourceAr
             return mode(Output.of(mode));
         }
 
+        public Builder mode(String mode) {
+            return mode(Either.ofLeft(mode));
+        }
+
+        public Builder mode(DataBindingMode mode) {
+            return mode(Either.ofRight(mode));
+        }
+
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
             $.pathOnCompute = pathOnCompute;
             return this;

@@ -113,6 +113,14 @@ public final class RsaTokenKeyArgs extends com.pulumi.resources.ResourceArgs {
             return alg(Output.of(alg));
         }
 
+        public Builder alg(String alg) {
+            return alg(Either.ofLeft(alg));
+        }
+
+        public Builder alg(AccessPolicyRsaAlgo alg) {
+            return alg(Either.ofRight(alg));
+        }
+
         public Builder e(Output<String> e) {
             $.e = e;
             return this;

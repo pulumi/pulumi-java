@@ -174,6 +174,14 @@ public final class VirtualMachineNetworkInterfaceConfigurationArgs extends com.p
             return deleteOption(Output.of(deleteOption));
         }
 
+        public Builder deleteOption(String deleteOption) {
+            return deleteOption(Either.ofLeft(deleteOption));
+        }
+
+        public Builder deleteOption(DeleteOptions deleteOption) {
+            return deleteOption(Either.ofRight(deleteOption));
+        }
+
         public Builder dnsSettings(@Nullable Output<VirtualMachineNetworkInterfaceDnsSettingsConfigurationArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;

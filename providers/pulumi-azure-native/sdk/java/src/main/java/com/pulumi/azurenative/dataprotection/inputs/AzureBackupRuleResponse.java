@@ -128,6 +128,14 @@ public final class AzureBackupRuleResponse extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        public Builder trigger(AdhocBasedTriggerContextResponse trigger) {
+            return trigger(Either.ofLeft(trigger));
+        }
+
+        public Builder trigger(ScheduleBasedTriggerContextResponse trigger) {
+            return trigger(Either.ofRight(trigger));
+        }
+
         public AzureBackupRuleResponse build() {
             $.dataStore = Objects.requireNonNull($.dataStore, "expected parameter 'dataStore' to be non-null");
             $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");

@@ -124,6 +124,14 @@ public final class ThresholdRuleConditionResponse extends com.pulumi.resources.I
             return this;
         }
 
+        public Builder dataSource(RuleManagementEventDataSourceResponse dataSource) {
+            return dataSource(Either.ofLeft(dataSource));
+        }
+
+        public Builder dataSource(RuleMetricDataSourceResponse dataSource) {
+            return dataSource(Either.ofRight(dataSource));
+        }
+
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
