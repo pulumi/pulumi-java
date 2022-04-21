@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.HttpFaultAbortArgs;
 import com.pulumi.googlenative.compute_beta.inputs.HttpFaultDelayArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HttpFaultInjectionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="abort")
-      private final @Nullable Output<HttpFaultAbortArgs> abort;
+    private @Nullable Output<HttpFaultAbortArgs> abort;
 
-    public Output<HttpFaultAbortArgs> abort() {
-        return this.abort == null ? Codegen.empty() : this.abort;
+    public Optional<Output<HttpFaultAbortArgs>> abort() {
+        return Optional.ofNullable(this.abort);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class HttpFaultInjectionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="delay")
-      private final @Nullable Output<HttpFaultDelayArgs> delay;
+    private @Nullable Output<HttpFaultDelayArgs> delay;
 
-    public Output<HttpFaultDelayArgs> delay() {
-        return this.delay == null ? Codegen.empty() : this.delay;
+    public Optional<Output<HttpFaultDelayArgs>> delay() {
+        return Optional.ofNullable(this.delay);
     }
 
-    public HttpFaultInjectionArgs(
-        @Nullable Output<HttpFaultAbortArgs> abort,
-        @Nullable Output<HttpFaultDelayArgs> delay) {
-        this.abort = abort;
-        this.delay = delay;
-    }
+    private HttpFaultInjectionArgs() {}
 
-    private HttpFaultInjectionArgs() {
-        this.abort = Codegen.empty();
-        this.delay = Codegen.empty();
+    private HttpFaultInjectionArgs(HttpFaultInjectionArgs $) {
+        this.abort = $.abort;
+        this.delay = $.delay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpFaultInjectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HttpFaultAbortArgs> abort;
-        private @Nullable Output<HttpFaultDelayArgs> delay;
+        private HttpFaultInjectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpFaultInjectionArgs();
         }
 
         public Builder(HttpFaultInjectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abort = defaults.abort;
-    	      this.delay = defaults.delay;
+            $ = new HttpFaultInjectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder abort(@Nullable Output<HttpFaultAbortArgs> abort) {
-            this.abort = abort;
+            $.abort = abort;
             return this;
         }
-        public Builder abort(@Nullable HttpFaultAbortArgs abort) {
-            this.abort = Codegen.ofNullable(abort);
-            return this;
+
+        public Builder abort(HttpFaultAbortArgs abort) {
+            return abort(Output.of(abort));
         }
+
         public Builder delay(@Nullable Output<HttpFaultDelayArgs> delay) {
-            this.delay = delay;
+            $.delay = delay;
             return this;
         }
-        public Builder delay(@Nullable HttpFaultDelayArgs delay) {
-            this.delay = Codegen.ofNullable(delay);
-            return this;
-        }        public HttpFaultInjectionArgs build() {
-            return new HttpFaultInjectionArgs(abort, delay);
+
+        public Builder delay(HttpFaultDelayArgs delay) {
+            return delay(Output.of(delay));
+        }
+
+        public HttpFaultInjectionArgs build() {
+            return $;
         }
     }
+
 }

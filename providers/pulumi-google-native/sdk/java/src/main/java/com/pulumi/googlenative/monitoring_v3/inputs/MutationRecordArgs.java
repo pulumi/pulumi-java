@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MutationRecordArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mutateTime")
-      private final @Nullable Output<String> mutateTime;
+    private @Nullable Output<String> mutateTime;
 
-    public Output<String> mutateTime() {
-        return this.mutateTime == null ? Codegen.empty() : this.mutateTime;
+    public Optional<Output<String>> mutateTime() {
+        return Optional.ofNullable(this.mutateTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MutationRecordArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mutatedBy")
-      private final @Nullable Output<String> mutatedBy;
+    private @Nullable Output<String> mutatedBy;
 
-    public Output<String> mutatedBy() {
-        return this.mutatedBy == null ? Codegen.empty() : this.mutatedBy;
+    public Optional<Output<String>> mutatedBy() {
+        return Optional.ofNullable(this.mutatedBy);
     }
 
-    public MutationRecordArgs(
-        @Nullable Output<String> mutateTime,
-        @Nullable Output<String> mutatedBy) {
-        this.mutateTime = mutateTime;
-        this.mutatedBy = mutatedBy;
-    }
+    private MutationRecordArgs() {}
 
-    private MutationRecordArgs() {
-        this.mutateTime = Codegen.empty();
-        this.mutatedBy = Codegen.empty();
+    private MutationRecordArgs(MutationRecordArgs $) {
+        this.mutateTime = $.mutateTime;
+        this.mutatedBy = $.mutatedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MutationRecordArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mutateTime;
-        private @Nullable Output<String> mutatedBy;
+        private MutationRecordArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MutationRecordArgs();
         }
 
         public Builder(MutationRecordArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mutateTime = defaults.mutateTime;
-    	      this.mutatedBy = defaults.mutatedBy;
+            $ = new MutationRecordArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mutateTime(@Nullable Output<String> mutateTime) {
-            this.mutateTime = mutateTime;
+            $.mutateTime = mutateTime;
             return this;
         }
-        public Builder mutateTime(@Nullable String mutateTime) {
-            this.mutateTime = Codegen.ofNullable(mutateTime);
-            return this;
+
+        public Builder mutateTime(String mutateTime) {
+            return mutateTime(Output.of(mutateTime));
         }
+
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
-            this.mutatedBy = mutatedBy;
+            $.mutatedBy = mutatedBy;
             return this;
         }
-        public Builder mutatedBy(@Nullable String mutatedBy) {
-            this.mutatedBy = Codegen.ofNullable(mutatedBy);
-            return this;
-        }        public MutationRecordArgs build() {
-            return new MutationRecordArgs(mutateTime, mutatedBy);
+
+        public Builder mutatedBy(String mutatedBy) {
+            return mutatedBy(Output.of(mutatedBy));
+        }
+
+        public MutationRecordArgs build() {
+            return $;
         }
     }
+
 }

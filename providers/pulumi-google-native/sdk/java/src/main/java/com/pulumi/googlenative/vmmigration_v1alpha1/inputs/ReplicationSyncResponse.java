@@ -21,45 +21,45 @@ public final class ReplicationSyncResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="lastSyncTime", required=true)
-      private final String lastSyncTime;
+    private String lastSyncTime;
 
     public String lastSyncTime() {
         return this.lastSyncTime;
     }
 
-    public ReplicationSyncResponse(String lastSyncTime) {
-        this.lastSyncTime = Objects.requireNonNull(lastSyncTime, "expected parameter 'lastSyncTime' to be non-null");
-    }
+    private ReplicationSyncResponse() {}
 
-    private ReplicationSyncResponse() {
-        this.lastSyncTime = null;
+    private ReplicationSyncResponse(ReplicationSyncResponse $) {
+        this.lastSyncTime = $.lastSyncTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationSyncResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lastSyncTime;
+        private ReplicationSyncResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationSyncResponse();
         }
 
         public Builder(ReplicationSyncResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastSyncTime = defaults.lastSyncTime;
+            $ = new ReplicationSyncResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder lastSyncTime(String lastSyncTime) {
-            this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
+            $.lastSyncTime = lastSyncTime;
             return this;
-        }        public ReplicationSyncResponse build() {
-            return new ReplicationSyncResponse(lastSyncTime);
+        }
+
+        public ReplicationSyncResponse build() {
+            $.lastSyncTime = Objects.requireNonNull($.lastSyncTime, "expected parameter 'lastSyncTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class CloudRunConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
@@ -33,55 +33,52 @@ public final class CloudRunConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="loadBalancerType", required=true)
-      private final String loadBalancerType;
+    private String loadBalancerType;
 
     public String loadBalancerType() {
         return this.loadBalancerType;
     }
 
-    public CloudRunConfigResponse(
-        Boolean disabled,
-        String loadBalancerType) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-        this.loadBalancerType = Objects.requireNonNull(loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
-    }
+    private CloudRunConfigResponse() {}
 
-    private CloudRunConfigResponse() {
-        this.disabled = null;
-        this.loadBalancerType = null;
+    private CloudRunConfigResponse(CloudRunConfigResponse $) {
+        this.disabled = $.disabled;
+        this.loadBalancerType = $.loadBalancerType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRunConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
-        private String loadBalancerType;
+        private CloudRunConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRunConfigResponse();
         }
 
         public Builder(CloudRunConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
-    	      this.loadBalancerType = defaults.loadBalancerType;
+            $ = new CloudRunConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
         }
+
         public Builder loadBalancerType(String loadBalancerType) {
-            this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
+            $.loadBalancerType = loadBalancerType;
             return this;
-        }        public CloudRunConfigResponse build() {
-            return new CloudRunConfigResponse(disabled, loadBalancerType);
+        }
+
+        public CloudRunConfigResponse build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            $.loadBalancerType = Objects.requireNonNull($.loadBalancerType, "expected parameter 'loadBalancerType' to be non-null");
+            return $;
         }
     }
+
 }

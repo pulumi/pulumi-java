@@ -5,7 +5,6 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerPortArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2EnvVarArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ResourceRequirementsArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VolumeMountArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="command")
-      private final @Nullable Output<List<String>> command;
+    private @Nullable Output<List<String>> command;
 
-    public Output<List<String>> command() {
-        return this.command == null ? Codegen.empty() : this.command;
+    public Optional<Output<List<String>>> command() {
+        return Optional.ofNullable(this.command);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
+    private @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
 
-    public Output<List<GoogleCloudRunOpV2EnvVarArgs>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<GoogleCloudRunOpV2EnvVarArgs>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="image", required=true)
-      private final Output<String> image;
+    private Output<String> image;
 
     public Output<String> image() {
         return this.image;
@@ -73,10 +73,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
+    private @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
 
-    public Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<GoogleCloudRunOpV2ContainerPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="resources")
-      private final @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
+    private @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
 
-    public Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources() {
-        return this.resources == null ? Codegen.empty() : this.resources;
+    public Optional<Output<GoogleCloudRunOpV2ResourceRequirementsArgs>> resources() {
+        return Optional.ofNullable(this.resources);
     }
 
     /**
@@ -106,156 +106,139 @@ public final class GoogleCloudRunOpV2ContainerArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="volumeMounts")
-      private final @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
+    private @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
 
-    public Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts() {
-        return this.volumeMounts == null ? Codegen.empty() : this.volumeMounts;
+    public Optional<Output<List<GoogleCloudRunOpV2VolumeMountArgs>>> volumeMounts() {
+        return Optional.ofNullable(this.volumeMounts);
     }
 
-    public GoogleCloudRunOpV2ContainerArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> command,
-        @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env,
-        Output<String> image,
-        @Nullable Output<String> name,
-        @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports,
-        @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources,
-        @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
-        this.args = args;
-        this.command = command;
-        this.env = env;
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.name = name;
-        this.ports = ports;
-        this.resources = resources;
-        this.volumeMounts = volumeMounts;
-    }
+    private GoogleCloudRunOpV2ContainerArgs() {}
 
-    private GoogleCloudRunOpV2ContainerArgs() {
-        this.args = Codegen.empty();
-        this.command = Codegen.empty();
-        this.env = Codegen.empty();
-        this.image = Codegen.empty();
-        this.name = Codegen.empty();
-        this.ports = Codegen.empty();
-        this.resources = Codegen.empty();
-        this.volumeMounts = Codegen.empty();
+    private GoogleCloudRunOpV2ContainerArgs(GoogleCloudRunOpV2ContainerArgs $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.image = $.image;
+        this.name = $.name;
+        this.ports = $.ports;
+        this.resources = $.resources;
+        this.volumeMounts = $.volumeMounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ContainerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> command;
-        private @Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env;
-        private Output<String> image;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports;
-        private @Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources;
-        private @Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts;
+        private GoogleCloudRunOpV2ContainerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ContainerArgs();
         }
 
         public Builder(GoogleCloudRunOpV2ContainerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.ports = defaults.ports;
-    	      this.resources = defaults.resources;
-    	      this.volumeMounts = defaults.volumeMounts;
+            $ = new GoogleCloudRunOpV2ContainerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(@Nullable Output<List<String>> command) {
-            this.command = command;
+            $.command = command;
             return this;
         }
-        public Builder command(@Nullable List<String> command) {
-            this.command = Codegen.ofNullable(command);
-            return this;
+
+        public Builder command(List<String> command) {
+            return command(Output.of(command));
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(@Nullable Output<List<GoogleCloudRunOpV2EnvVarArgs>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<GoogleCloudRunOpV2EnvVarArgs> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<GoogleCloudRunOpV2EnvVarArgs> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(GoogleCloudRunOpV2EnvVarArgs... env) {
             return env(List.of(env));
         }
+
         public Builder image(Output<String> image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder image(String image) {
-            this.image = Output.of(Objects.requireNonNull(image));
-            return this;
+            return image(Output.of(image));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder ports(@Nullable Output<List<GoogleCloudRunOpV2ContainerPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<GoogleCloudRunOpV2ContainerPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<GoogleCloudRunOpV2ContainerPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(GoogleCloudRunOpV2ContainerPortArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder resources(@Nullable Output<GoogleCloudRunOpV2ResourceRequirementsArgs> resources) {
-            this.resources = resources;
+            $.resources = resources;
             return this;
         }
-        public Builder resources(@Nullable GoogleCloudRunOpV2ResourceRequirementsArgs resources) {
-            this.resources = Codegen.ofNullable(resources);
-            return this;
+
+        public Builder resources(GoogleCloudRunOpV2ResourceRequirementsArgs resources) {
+            return resources(Output.of(resources));
         }
+
         public Builder volumeMounts(@Nullable Output<List<GoogleCloudRunOpV2VolumeMountArgs>> volumeMounts) {
-            this.volumeMounts = volumeMounts;
+            $.volumeMounts = volumeMounts;
             return this;
         }
-        public Builder volumeMounts(@Nullable List<GoogleCloudRunOpV2VolumeMountArgs> volumeMounts) {
-            this.volumeMounts = Codegen.ofNullable(volumeMounts);
-            return this;
+
+        public Builder volumeMounts(List<GoogleCloudRunOpV2VolumeMountArgs> volumeMounts) {
+            return volumeMounts(Output.of(volumeMounts));
         }
+
         public Builder volumeMounts(GoogleCloudRunOpV2VolumeMountArgs... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
-        }        public GoogleCloudRunOpV2ContainerArgs build() {
-            return new GoogleCloudRunOpV2ContainerArgs(args, command, env, image, name, ports, resources, volumeMounts);
+        }
+
+        public GoogleCloudRunOpV2ContainerArgs build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            return $;
         }
     }
+
 }

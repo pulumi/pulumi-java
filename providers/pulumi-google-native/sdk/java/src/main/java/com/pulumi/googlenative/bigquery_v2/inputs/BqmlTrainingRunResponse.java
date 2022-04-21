@@ -20,7 +20,7 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="iterationResults", required=true)
-      private final List<BqmlIterationResultResponse> iterationResults;
+    private List<BqmlIterationResultResponse> iterationResults;
 
     public List<BqmlIterationResultResponse> iterationResults() {
         return this.iterationResults;
@@ -31,7 +31,7 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -42,7 +42,7 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -53,76 +53,70 @@ public final class BqmlTrainingRunResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="trainingOptions", required=true)
-      private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;
+    private BqmlTrainingRunTrainingOptionsResponse trainingOptions;
 
     public BqmlTrainingRunTrainingOptionsResponse trainingOptions() {
         return this.trainingOptions;
     }
 
-    public BqmlTrainingRunResponse(
-        List<BqmlIterationResultResponse> iterationResults,
-        String startTime,
-        String state,
-        BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
-        this.iterationResults = Objects.requireNonNull(iterationResults, "expected parameter 'iterationResults' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.trainingOptions = Objects.requireNonNull(trainingOptions, "expected parameter 'trainingOptions' to be non-null");
-    }
+    private BqmlTrainingRunResponse() {}
 
-    private BqmlTrainingRunResponse() {
-        this.iterationResults = List.of();
-        this.startTime = null;
-        this.state = null;
-        this.trainingOptions = null;
+    private BqmlTrainingRunResponse(BqmlTrainingRunResponse $) {
+        this.iterationResults = $.iterationResults;
+        this.startTime = $.startTime;
+        this.state = $.state;
+        this.trainingOptions = $.trainingOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BqmlTrainingRunResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BqmlIterationResultResponse> iterationResults;
-        private String startTime;
-        private String state;
-        private BqmlTrainingRunTrainingOptionsResponse trainingOptions;
+        private BqmlTrainingRunResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BqmlTrainingRunResponse();
         }
 
         public Builder(BqmlTrainingRunResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iterationResults = defaults.iterationResults;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
-    	      this.trainingOptions = defaults.trainingOptions;
+            $ = new BqmlTrainingRunResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iterationResults(List<BqmlIterationResultResponse> iterationResults) {
-            this.iterationResults = Objects.requireNonNull(iterationResults);
+            $.iterationResults = iterationResults;
             return this;
         }
+
         public Builder iterationResults(BqmlIterationResultResponse... iterationResults) {
             return iterationResults(List.of(iterationResults));
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder trainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
-            this.trainingOptions = Objects.requireNonNull(trainingOptions);
+            $.trainingOptions = trainingOptions;
             return this;
-        }        public BqmlTrainingRunResponse build() {
-            return new BqmlTrainingRunResponse(iterationResults, startTime, state, trainingOptions);
+        }
+
+        public BqmlTrainingRunResponse build() {
+            $.iterationResults = Objects.requireNonNull($.iterationResults, "expected parameter 'iterationResults' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.trainingOptions = Objects.requireNonNull($.trainingOptions, "expected parameter 'trainingOptions' to be non-null");
+            return $;
         }
     }
+
 }

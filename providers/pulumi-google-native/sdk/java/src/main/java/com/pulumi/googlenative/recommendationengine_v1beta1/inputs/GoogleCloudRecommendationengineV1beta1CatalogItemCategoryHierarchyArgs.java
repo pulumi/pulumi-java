@@ -5,7 +5,6 @@ package com.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
      * 
      */
     @Import(name="categories", required=true)
-      private final Output<List<String>> categories;
+    private Output<List<String>> categories;
 
     public Output<List<String>> categories() {
         return this.categories;
     }
 
-    public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(Output<List<String>> categories) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs() {}
 
-    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs() {
-        this.categories = Codegen.empty();
+    private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs $) {
+        this.categories = $.categories;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> categories;
+        private GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
+            $ = new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(Output<List<String>> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(List<String> categories) {
-            this.categories = Output.of(Objects.requireNonNull(categories));
-            return this;
+            return categories(Output.of(categories));
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
-        }        public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs build() {
-            return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs(categories);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class SubordinateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="certificateAuthority", required=true)
-      private final String certificateAuthority;
+    private String certificateAuthority;
 
     public String certificateAuthority() {
         return this.certificateAuthority;
@@ -33,55 +33,52 @@ public final class SubordinateConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pemIssuerChain", required=true)
-      private final SubordinateConfigChainResponse pemIssuerChain;
+    private SubordinateConfigChainResponse pemIssuerChain;
 
     public SubordinateConfigChainResponse pemIssuerChain() {
         return this.pemIssuerChain;
     }
 
-    public SubordinateConfigResponse(
-        String certificateAuthority,
-        SubordinateConfigChainResponse pemIssuerChain) {
-        this.certificateAuthority = Objects.requireNonNull(certificateAuthority, "expected parameter 'certificateAuthority' to be non-null");
-        this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain, "expected parameter 'pemIssuerChain' to be non-null");
-    }
+    private SubordinateConfigResponse() {}
 
-    private SubordinateConfigResponse() {
-        this.certificateAuthority = null;
-        this.pemIssuerChain = null;
+    private SubordinateConfigResponse(SubordinateConfigResponse $) {
+        this.certificateAuthority = $.certificateAuthority;
+        this.pemIssuerChain = $.pemIssuerChain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubordinateConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificateAuthority;
-        private SubordinateConfigChainResponse pemIssuerChain;
+        private SubordinateConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubordinateConfigResponse();
         }
 
         public Builder(SubordinateConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthority = defaults.certificateAuthority;
-    	      this.pemIssuerChain = defaults.pemIssuerChain;
+            $ = new SubordinateConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthority(String certificateAuthority) {
-            this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
+            $.certificateAuthority = certificateAuthority;
             return this;
         }
+
         public Builder pemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
-            this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
+            $.pemIssuerChain = pemIssuerChain;
             return this;
-        }        public SubordinateConfigResponse build() {
-            return new SubordinateConfigResponse(certificateAuthority, pemIssuerChain);
+        }
+
+        public SubordinateConfigResponse build() {
+            $.certificateAuthority = Objects.requireNonNull($.certificateAuthority, "expected parameter 'certificateAuthority' to be non-null");
+            $.pemIssuerChain = Objects.requireNonNull($.pemIssuerChain, "expected parameter 'pemIssuerChain' to be non-null");
+            return $;
         }
     }
+
 }

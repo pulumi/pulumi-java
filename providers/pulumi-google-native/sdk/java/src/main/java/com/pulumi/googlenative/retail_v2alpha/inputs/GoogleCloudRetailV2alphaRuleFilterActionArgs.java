@@ -5,9 +5,9 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionArgs extends com.pulu
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
-    public GoogleCloudRetailV2alphaRuleFilterActionArgs(@Nullable Output<String> filter) {
-        this.filter = filter;
-    }
+    private GoogleCloudRetailV2alphaRuleFilterActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleFilterActionArgs() {
-        this.filter = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleFilterActionArgs(GoogleCloudRetailV2alphaRuleFilterActionArgs $) {
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleFilterActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
+        private GoogleCloudRetailV2alphaRuleFilterActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleFilterActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleFilterActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
+            $ = new GoogleCloudRetailV2alphaRuleFilterActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
-        }        public GoogleCloudRetailV2alphaRuleFilterActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleFilterActionArgs(filter);
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
+        }
+
+        public GoogleCloudRetailV2alphaRuleFilterActionArgs build() {
+            return $;
         }
     }
+
 }

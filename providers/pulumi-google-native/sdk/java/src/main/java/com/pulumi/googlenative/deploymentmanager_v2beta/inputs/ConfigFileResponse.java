@@ -17,45 +17,45 @@ public final class ConfigFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
     }
 
-    public ConfigFileResponse(String content) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-    }
+    private ConfigFileResponse() {}
 
-    private ConfigFileResponse() {
-        this.content = null;
+    private ConfigFileResponse(ConfigFileResponse $) {
+        this.content = $.content;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
+        private ConfigFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigFileResponse();
         }
 
         public Builder(ConfigFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
+            $ = new ConfigFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
-        }        public ConfigFileResponse build() {
-            return new ConfigFileResponse(content);
+        }
+
+        public ConfigFileResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            return $;
         }
     }
+
 }

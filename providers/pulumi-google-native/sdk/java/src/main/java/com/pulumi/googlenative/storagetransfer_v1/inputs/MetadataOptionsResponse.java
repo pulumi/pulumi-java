@@ -21,7 +21,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="acl", required=true)
-      private final String acl;
+    private String acl;
 
     public String acl() {
         return this.acl;
@@ -32,7 +32,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="gid", required=true)
-      private final String gid;
+    private String gid;
 
     public String gid() {
         return this.gid;
@@ -43,7 +43,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="kmsKey", required=true)
-      private final String kmsKey;
+    private String kmsKey;
 
     public String kmsKey() {
         return this.kmsKey;
@@ -54,7 +54,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="mode", required=true)
-      private final String mode;
+    private String mode;
 
     public String mode() {
         return this.mode;
@@ -65,7 +65,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="storageClass", required=true)
-      private final String storageClass;
+    private String storageClass;
 
     public String storageClass() {
         return this.storageClass;
@@ -76,7 +76,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="symlink", required=true)
-      private final String symlink;
+    private String symlink;
 
     public String symlink() {
         return this.symlink;
@@ -87,7 +87,7 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="temporaryHold", required=true)
-      private final String temporaryHold;
+    private String temporaryHold;
 
     public String temporaryHold() {
         return this.temporaryHold;
@@ -98,109 +98,94 @@ public final class MetadataOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
     }
 
-    public MetadataOptionsResponse(
-        String acl,
-        String gid,
-        String kmsKey,
-        String mode,
-        String storageClass,
-        String symlink,
-        String temporaryHold,
-        String uid) {
-        this.acl = Objects.requireNonNull(acl, "expected parameter 'acl' to be non-null");
-        this.gid = Objects.requireNonNull(gid, "expected parameter 'gid' to be non-null");
-        this.kmsKey = Objects.requireNonNull(kmsKey, "expected parameter 'kmsKey' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.storageClass = Objects.requireNonNull(storageClass, "expected parameter 'storageClass' to be non-null");
-        this.symlink = Objects.requireNonNull(symlink, "expected parameter 'symlink' to be non-null");
-        this.temporaryHold = Objects.requireNonNull(temporaryHold, "expected parameter 'temporaryHold' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private MetadataOptionsResponse() {}
 
-    private MetadataOptionsResponse() {
-        this.acl = null;
-        this.gid = null;
-        this.kmsKey = null;
-        this.mode = null;
-        this.storageClass = null;
-        this.symlink = null;
-        this.temporaryHold = null;
-        this.uid = null;
+    private MetadataOptionsResponse(MetadataOptionsResponse $) {
+        this.acl = $.acl;
+        this.gid = $.gid;
+        this.kmsKey = $.kmsKey;
+        this.mode = $.mode;
+        this.storageClass = $.storageClass;
+        this.symlink = $.symlink;
+        this.temporaryHold = $.temporaryHold;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acl;
-        private String gid;
-        private String kmsKey;
-        private String mode;
-        private String storageClass;
-        private String symlink;
-        private String temporaryHold;
-        private String uid;
+        private MetadataOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataOptionsResponse();
         }
 
         public Builder(MetadataOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acl = defaults.acl;
-    	      this.gid = defaults.gid;
-    	      this.kmsKey = defaults.kmsKey;
-    	      this.mode = defaults.mode;
-    	      this.storageClass = defaults.storageClass;
-    	      this.symlink = defaults.symlink;
-    	      this.temporaryHold = defaults.temporaryHold;
-    	      this.uid = defaults.uid;
+            $ = new MetadataOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acl(String acl) {
-            this.acl = Objects.requireNonNull(acl);
+            $.acl = acl;
             return this;
         }
+
         public Builder gid(String gid) {
-            this.gid = Objects.requireNonNull(gid);
+            $.gid = gid;
             return this;
         }
+
         public Builder kmsKey(String kmsKey) {
-            this.kmsKey = Objects.requireNonNull(kmsKey);
+            $.kmsKey = kmsKey;
             return this;
         }
+
         public Builder mode(String mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder storageClass(String storageClass) {
-            this.storageClass = Objects.requireNonNull(storageClass);
+            $.storageClass = storageClass;
             return this;
         }
+
         public Builder symlink(String symlink) {
-            this.symlink = Objects.requireNonNull(symlink);
+            $.symlink = symlink;
             return this;
         }
+
         public Builder temporaryHold(String temporaryHold) {
-            this.temporaryHold = Objects.requireNonNull(temporaryHold);
+            $.temporaryHold = temporaryHold;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public MetadataOptionsResponse build() {
-            return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
+        }
+
+        public MetadataOptionsResponse build() {
+            $.acl = Objects.requireNonNull($.acl, "expected parameter 'acl' to be non-null");
+            $.gid = Objects.requireNonNull($.gid, "expected parameter 'gid' to be non-null");
+            $.kmsKey = Objects.requireNonNull($.kmsKey, "expected parameter 'kmsKey' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.storageClass = Objects.requireNonNull($.storageClass, "expected parameter 'storageClass' to be non-null");
+            $.symlink = Objects.requireNonNull($.symlink, "expected parameter 'symlink' to be non-null");
+            $.temporaryHold = Objects.requireNonNull($.temporaryHold, "expected parameter 'temporaryHold' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

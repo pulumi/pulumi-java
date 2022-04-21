@@ -22,7 +22,7 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="architecture", required=true)
-      private final String architecture;
+    private String architecture;
 
     public String architecture() {
         return this.architecture;
@@ -33,7 +33,7 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final String cpeUri;
+    private String cpeUri;
 
     public String cpeUri() {
         return this.cpeUri;
@@ -44,7 +44,7 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -55,7 +55,7 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="latestVersion", required=true)
-      private final VersionResponse latestVersion;
+    private VersionResponse latestVersion;
 
     public VersionResponse latestVersion() {
         return this.latestVersion;
@@ -66,7 +66,7 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maintainer", required=true)
-      private final String maintainer;
+    private String maintainer;
 
     public String maintainer() {
         return this.maintainer;
@@ -77,91 +77,80 @@ public final class DistributionResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public DistributionResponse(
-        String architecture,
-        String cpeUri,
-        String description,
-        VersionResponse latestVersion,
-        String maintainer,
-        String url) {
-        this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.latestVersion = Objects.requireNonNull(latestVersion, "expected parameter 'latestVersion' to be non-null");
-        this.maintainer = Objects.requireNonNull(maintainer, "expected parameter 'maintainer' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private DistributionResponse() {}
 
-    private DistributionResponse() {
-        this.architecture = null;
-        this.cpeUri = null;
-        this.description = null;
-        this.latestVersion = null;
-        this.maintainer = null;
-        this.url = null;
+    private DistributionResponse(DistributionResponse $) {
+        this.architecture = $.architecture;
+        this.cpeUri = $.cpeUri;
+        this.description = $.description;
+        this.latestVersion = $.latestVersion;
+        this.maintainer = $.maintainer;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String architecture;
-        private String cpeUri;
-        private String description;
-        private VersionResponse latestVersion;
-        private String maintainer;
-        private String url;
+        private DistributionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionResponse();
         }
 
         public Builder(DistributionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.description = defaults.description;
-    	      this.latestVersion = defaults.latestVersion;
-    	      this.maintainer = defaults.maintainer;
-    	      this.url = defaults.url;
+            $ = new DistributionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(String architecture) {
-            this.architecture = Objects.requireNonNull(architecture);
+            $.architecture = architecture;
             return this;
         }
+
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder latestVersion(VersionResponse latestVersion) {
-            this.latestVersion = Objects.requireNonNull(latestVersion);
+            $.latestVersion = latestVersion;
             return this;
         }
+
         public Builder maintainer(String maintainer) {
-            this.maintainer = Objects.requireNonNull(maintainer);
+            $.maintainer = maintainer;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public DistributionResponse build() {
-            return new DistributionResponse(architecture, cpeUri, description, latestVersion, maintainer, url);
+        }
+
+        public DistributionResponse build() {
+            $.architecture = Objects.requireNonNull($.architecture, "expected parameter 'architecture' to be non-null");
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.latestVersion = Objects.requireNonNull($.latestVersion, "expected parameter 'latestVersion' to be non-null");
+            $.maintainer = Objects.requireNonNull($.maintainer, "expected parameter 'maintainer' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

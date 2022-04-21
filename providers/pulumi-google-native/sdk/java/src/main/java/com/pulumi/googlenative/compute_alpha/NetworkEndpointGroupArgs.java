@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkEndpointGroupNetworkEndpointType;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkEndpointGroupType;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkEndpointGroupAppEngineArgs;
@@ -16,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="appEngine")
-      private final @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine;
+    private @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine;
 
-    public Output<NetworkEndpointGroupAppEngineArgs> appEngine() {
-        return this.appEngine == null ? Codegen.empty() : this.appEngine;
+    public Optional<Output<NetworkEndpointGroupAppEngineArgs>> appEngine() {
+        return Optional.ofNullable(this.appEngine);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cloudFunction")
-      private final @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
+    private @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
-    public Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction() {
-        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
+    public Optional<Output<NetworkEndpointGroupCloudFunctionArgs>> cloudFunction() {
+        return Optional.ofNullable(this.cloudFunction);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cloudRun")
-      private final @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun;
+    private @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun;
 
-    public Output<NetworkEndpointGroupCloudRunArgs> cloudRun() {
-        return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
+    public Optional<Output<NetworkEndpointGroupCloudRunArgs>> cloudRun() {
+        return Optional.ofNullable(this.cloudRun);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="defaultPort")
-      private final @Nullable Output<Integer> defaultPort;
+    private @Nullable Output<Integer> defaultPort;
 
-    public Output<Integer> defaultPort() {
-        return this.defaultPort == null ? Codegen.empty() : this.defaultPort;
+    public Optional<Output<Integer>> defaultPort() {
+        return Optional.ofNullable(this.defaultPort);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -116,17 +116,17 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkEndpointType")
-      private final @Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
+    private @Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
 
-    public Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType() {
-        return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
+    public Optional<Output<NetworkEndpointGroupNetworkEndpointType>> networkEndpointType() {
+        return Optional.ofNullable(this.networkEndpointType);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -134,17 +134,17 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="pscTargetService")
-      private final @Nullable Output<String> pscTargetService;
+    private @Nullable Output<String> pscTargetService;
 
-    public Output<String> pscTargetService() {
-        return this.pscTargetService == null ? Codegen.empty() : this.pscTargetService;
+    public Optional<Output<String>> pscTargetService() {
+        return Optional.ofNullable(this.pscTargetService);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="serverlessDeployment")
-      private final @Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
+    private @Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
 
-    public Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment() {
-        return this.serverlessDeployment == null ? Codegen.empty() : this.serverlessDeployment;
+    public Optional<Output<NetworkEndpointGroupServerlessDeploymentArgs>> serverlessDeployment() {
+        return Optional.ofNullable(this.serverlessDeployment);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     /**
@@ -174,252 +174,205 @@ public final class NetworkEndpointGroupArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<NetworkEndpointGroupType> type;
+    private @Nullable Output<NetworkEndpointGroupType> type;
 
-    public Output<NetworkEndpointGroupType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<NetworkEndpointGroupType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public NetworkEndpointGroupArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine,
-        @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction,
-        @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun,
-        @Nullable Output<Integer> defaultPort,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType,
-        @Nullable Output<String> project,
-        @Nullable Output<String> pscTargetService,
-        @Nullable Output<String> requestId,
-        @Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<NetworkEndpointGroupType> type,
-        @Nullable Output<String> zone) {
-        this.annotations = annotations;
-        this.appEngine = appEngine;
-        this.cloudFunction = cloudFunction;
-        this.cloudRun = cloudRun;
-        this.defaultPort = defaultPort;
-        this.description = description;
-        this.name = name;
-        this.network = network;
-        this.networkEndpointType = networkEndpointType;
-        this.project = project;
-        this.pscTargetService = pscTargetService;
-        this.requestId = requestId;
-        this.serverlessDeployment = serverlessDeployment;
-        this.subnetwork = subnetwork;
-        this.type = type;
-        this.zone = zone;
-    }
+    private NetworkEndpointGroupArgs() {}
 
-    private NetworkEndpointGroupArgs() {
-        this.annotations = Codegen.empty();
-        this.appEngine = Codegen.empty();
-        this.cloudFunction = Codegen.empty();
-        this.cloudRun = Codegen.empty();
-        this.defaultPort = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkEndpointType = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pscTargetService = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serverlessDeployment = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.type = Codegen.empty();
-        this.zone = Codegen.empty();
+    private NetworkEndpointGroupArgs(NetworkEndpointGroupArgs $) {
+        this.annotations = $.annotations;
+        this.appEngine = $.appEngine;
+        this.cloudFunction = $.cloudFunction;
+        this.cloudRun = $.cloudRun;
+        this.defaultPort = $.defaultPort;
+        this.description = $.description;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkEndpointType = $.networkEndpointType;
+        this.project = $.project;
+        this.pscTargetService = $.pscTargetService;
+        this.requestId = $.requestId;
+        this.serverlessDeployment = $.serverlessDeployment;
+        this.subnetwork = $.subnetwork;
+        this.type = $.type;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine;
-        private @Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction;
-        private @Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun;
-        private @Nullable Output<Integer> defaultPort;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> pscTargetService;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<NetworkEndpointGroupType> type;
-        private @Nullable Output<String> zone;
+        private NetworkEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupArgs();
         }
 
         public Builder(NetworkEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.appEngine = defaults.appEngine;
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.cloudRun = defaults.cloudRun;
-    	      this.defaultPort = defaults.defaultPort;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkEndpointType = defaults.networkEndpointType;
-    	      this.project = defaults.project;
-    	      this.pscTargetService = defaults.pscTargetService;
-    	      this.requestId = defaults.requestId;
-    	      this.serverlessDeployment = defaults.serverlessDeployment;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.type = defaults.type;
-    	      this.zone = defaults.zone;
+            $ = new NetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder appEngine(@Nullable Output<NetworkEndpointGroupAppEngineArgs> appEngine) {
-            this.appEngine = appEngine;
+            $.appEngine = appEngine;
             return this;
         }
-        public Builder appEngine(@Nullable NetworkEndpointGroupAppEngineArgs appEngine) {
-            this.appEngine = Codegen.ofNullable(appEngine);
-            return this;
+
+        public Builder appEngine(NetworkEndpointGroupAppEngineArgs appEngine) {
+            return appEngine(Output.of(appEngine));
         }
+
         public Builder cloudFunction(@Nullable Output<NetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
-            this.cloudFunction = cloudFunction;
+            $.cloudFunction = cloudFunction;
             return this;
         }
-        public Builder cloudFunction(@Nullable NetworkEndpointGroupCloudFunctionArgs cloudFunction) {
-            this.cloudFunction = Codegen.ofNullable(cloudFunction);
-            return this;
+
+        public Builder cloudFunction(NetworkEndpointGroupCloudFunctionArgs cloudFunction) {
+            return cloudFunction(Output.of(cloudFunction));
         }
+
         public Builder cloudRun(@Nullable Output<NetworkEndpointGroupCloudRunArgs> cloudRun) {
-            this.cloudRun = cloudRun;
+            $.cloudRun = cloudRun;
             return this;
         }
-        public Builder cloudRun(@Nullable NetworkEndpointGroupCloudRunArgs cloudRun) {
-            this.cloudRun = Codegen.ofNullable(cloudRun);
-            return this;
+
+        public Builder cloudRun(NetworkEndpointGroupCloudRunArgs cloudRun) {
+            return cloudRun(Output.of(cloudRun));
         }
+
         public Builder defaultPort(@Nullable Output<Integer> defaultPort) {
-            this.defaultPort = defaultPort;
+            $.defaultPort = defaultPort;
             return this;
         }
-        public Builder defaultPort(@Nullable Integer defaultPort) {
-            this.defaultPort = Codegen.ofNullable(defaultPort);
-            return this;
+
+        public Builder defaultPort(Integer defaultPort) {
+            return defaultPort(Output.of(defaultPort));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkEndpointType(@Nullable Output<NetworkEndpointGroupNetworkEndpointType> networkEndpointType) {
-            this.networkEndpointType = networkEndpointType;
+            $.networkEndpointType = networkEndpointType;
             return this;
         }
-        public Builder networkEndpointType(@Nullable NetworkEndpointGroupNetworkEndpointType networkEndpointType) {
-            this.networkEndpointType = Codegen.ofNullable(networkEndpointType);
-            return this;
+
+        public Builder networkEndpointType(NetworkEndpointGroupNetworkEndpointType networkEndpointType) {
+            return networkEndpointType(Output.of(networkEndpointType));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pscTargetService(@Nullable Output<String> pscTargetService) {
-            this.pscTargetService = pscTargetService;
+            $.pscTargetService = pscTargetService;
             return this;
         }
-        public Builder pscTargetService(@Nullable String pscTargetService) {
-            this.pscTargetService = Codegen.ofNullable(pscTargetService);
-            return this;
+
+        public Builder pscTargetService(String pscTargetService) {
+            return pscTargetService(Output.of(pscTargetService));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serverlessDeployment(@Nullable Output<NetworkEndpointGroupServerlessDeploymentArgs> serverlessDeployment) {
-            this.serverlessDeployment = serverlessDeployment;
+            $.serverlessDeployment = serverlessDeployment;
             return this;
         }
-        public Builder serverlessDeployment(@Nullable NetworkEndpointGroupServerlessDeploymentArgs serverlessDeployment) {
-            this.serverlessDeployment = Codegen.ofNullable(serverlessDeployment);
-            return this;
+
+        public Builder serverlessDeployment(NetworkEndpointGroupServerlessDeploymentArgs serverlessDeployment) {
+            return serverlessDeployment(Output.of(serverlessDeployment));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder type(@Nullable Output<NetworkEndpointGroupType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable NetworkEndpointGroupType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(NetworkEndpointGroupType type) {
+            return type(Output.of(type));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public NetworkEndpointGroupArgs build() {
-            return new NetworkEndpointGroupArgs(annotations, appEngine, cloudFunction, cloudRun, defaultPort, description, name, network, networkEndpointType, project, pscTargetService, requestId, serverlessDeployment, subnetwork, type, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public NetworkEndpointGroupArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends com.pulumi.res
      * 
      */
     @Import(name="customTag", required=true)
-      private final String customTag;
+    private String customTag;
 
     public String customTag() {
         return this.customTag;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse extends com.pulumi.res
      * 
      */
     @Import(name="field", required=true)
-      private final GooglePrivacyDlpV2FieldIdResponse field;
+    private GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse field() {
         return this.field;
     }
 
-    public GooglePrivacyDlpV2QuasiIdFieldResponse(
-        String customTag,
-        GooglePrivacyDlpV2FieldIdResponse field) {
-        this.customTag = Objects.requireNonNull(customTag, "expected parameter 'customTag' to be non-null");
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-    }
+    private GooglePrivacyDlpV2QuasiIdFieldResponse() {}
 
-    private GooglePrivacyDlpV2QuasiIdFieldResponse() {
-        this.customTag = null;
-        this.field = null;
+    private GooglePrivacyDlpV2QuasiIdFieldResponse(GooglePrivacyDlpV2QuasiIdFieldResponse $) {
+        this.customTag = $.customTag;
+        this.field = $.field;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2QuasiIdFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String customTag;
-        private GooglePrivacyDlpV2FieldIdResponse field;
+        private GooglePrivacyDlpV2QuasiIdFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2QuasiIdFieldResponse();
         }
 
         public Builder(GooglePrivacyDlpV2QuasiIdFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customTag = defaults.customTag;
-    	      this.field = defaults.field;
+            $ = new GooglePrivacyDlpV2QuasiIdFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customTag(String customTag) {
-            this.customTag = Objects.requireNonNull(customTag);
+            $.customTag = customTag;
             return this;
         }
+
         public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
-        }        public GooglePrivacyDlpV2QuasiIdFieldResponse build() {
-            return new GooglePrivacyDlpV2QuasiIdFieldResponse(customTag, field);
+        }
+
+        public GooglePrivacyDlpV2QuasiIdFieldResponse build() {
+            $.customTag = Objects.requireNonNull($.customTag, "expected parameter 'customTag' to be non-null");
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            return $;
         }
     }
+
 }

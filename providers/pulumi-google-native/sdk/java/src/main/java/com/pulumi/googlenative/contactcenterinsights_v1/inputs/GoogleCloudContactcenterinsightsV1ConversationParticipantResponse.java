@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @Import(name="dialogflowParticipantName", required=true)
-      private final String dialogflowParticipantName;
+    private String dialogflowParticipantName;
 
     public String dialogflowParticipantName() {
         return this.dialogflowParticipantName;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @Import(name="obfuscatedExternalUserId", required=true)
-      private final String obfuscatedExternalUserId;
+    private String obfuscatedExternalUserId;
 
     public String obfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId;
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
@@ -54,73 +54,66 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      * 
      */
     @Import(name="userId", required=true)
-      private final String userId;
+    private String userId;
 
     public String userId() {
         return this.userId;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(
-        String dialogflowParticipantName,
-        String obfuscatedExternalUserId,
-        String role,
-        String userId) {
-        this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName, "expected parameter 'dialogflowParticipantName' to be non-null");
-        this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId, "expected parameter 'obfuscatedExternalUserId' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse() {
-        this.dialogflowParticipantName = null;
-        this.obfuscatedExternalUserId = null;
-        this.role = null;
-        this.userId = null;
+    private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse $) {
+        this.dialogflowParticipantName = $.dialogflowParticipantName;
+        this.obfuscatedExternalUserId = $.obfuscatedExternalUserId;
+        this.role = $.role;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dialogflowParticipantName;
-        private String obfuscatedExternalUserId;
-        private String role;
-        private String userId;
+        private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationParticipantResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dialogflowParticipantName = defaults.dialogflowParticipantName;
-    	      this.obfuscatedExternalUserId = defaults.obfuscatedExternalUserId;
-    	      this.role = defaults.role;
-    	      this.userId = defaults.userId;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dialogflowParticipantName(String dialogflowParticipantName) {
-            this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName);
+            $.dialogflowParticipantName = dialogflowParticipantName;
             return this;
         }
+
         public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
-            this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
+            $.obfuscatedExternalUserId = obfuscatedExternalUserId;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(dialogflowParticipantName, obfuscatedExternalUserId, role, userId);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationParticipantResponse build() {
+            $.dialogflowParticipantName = Objects.requireNonNull($.dialogflowParticipantName, "expected parameter 'dialogflowParticipantName' to be non-null");
+            $.obfuscatedExternalUserId = Objects.requireNonNull($.obfuscatedExternalUserId, "expected parameter 'obfuscatedExternalUserId' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="appStartTimeout", required=true)
-      private final String appStartTimeout;
+    private String appStartTimeout;
 
     public String appStartTimeout() {
         return this.appStartTimeout;
@@ -33,7 +33,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="checkInterval", required=true)
-      private final String checkInterval;
+    private String checkInterval;
 
     public String checkInterval() {
         return this.checkInterval;
@@ -44,7 +44,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="failureThreshold", required=true)
-      private final Integer failureThreshold;
+    private Integer failureThreshold;
 
     public Integer failureThreshold() {
         return this.failureThreshold;
@@ -55,7 +55,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -66,7 +66,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -77,7 +77,7 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="successThreshold", required=true)
-      private final Integer successThreshold;
+    private Integer successThreshold;
 
     public Integer successThreshold() {
         return this.successThreshold;
@@ -88,100 +88,87 @@ public final class ReadinessCheckResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="timeout", required=true)
-      private final String timeout;
+    private String timeout;
 
     public String timeout() {
         return this.timeout;
     }
 
-    public ReadinessCheckResponse(
-        String appStartTimeout,
-        String checkInterval,
-        Integer failureThreshold,
-        String host,
-        String path,
-        Integer successThreshold,
-        String timeout) {
-        this.appStartTimeout = Objects.requireNonNull(appStartTimeout, "expected parameter 'appStartTimeout' to be non-null");
-        this.checkInterval = Objects.requireNonNull(checkInterval, "expected parameter 'checkInterval' to be non-null");
-        this.failureThreshold = Objects.requireNonNull(failureThreshold, "expected parameter 'failureThreshold' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.successThreshold = Objects.requireNonNull(successThreshold, "expected parameter 'successThreshold' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-    }
+    private ReadinessCheckResponse() {}
 
-    private ReadinessCheckResponse() {
-        this.appStartTimeout = null;
-        this.checkInterval = null;
-        this.failureThreshold = null;
-        this.host = null;
-        this.path = null;
-        this.successThreshold = null;
-        this.timeout = null;
+    private ReadinessCheckResponse(ReadinessCheckResponse $) {
+        this.appStartTimeout = $.appStartTimeout;
+        this.checkInterval = $.checkInterval;
+        this.failureThreshold = $.failureThreshold;
+        this.host = $.host;
+        this.path = $.path;
+        this.successThreshold = $.successThreshold;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReadinessCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appStartTimeout;
-        private String checkInterval;
-        private Integer failureThreshold;
-        private String host;
-        private String path;
-        private Integer successThreshold;
-        private String timeout;
+        private ReadinessCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReadinessCheckResponse();
         }
 
         public Builder(ReadinessCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appStartTimeout = defaults.appStartTimeout;
-    	      this.checkInterval = defaults.checkInterval;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.host = defaults.host;
-    	      this.path = defaults.path;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeout = defaults.timeout;
+            $ = new ReadinessCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appStartTimeout(String appStartTimeout) {
-            this.appStartTimeout = Objects.requireNonNull(appStartTimeout);
+            $.appStartTimeout = appStartTimeout;
             return this;
         }
+
         public Builder checkInterval(String checkInterval) {
-            this.checkInterval = Objects.requireNonNull(checkInterval);
+            $.checkInterval = checkInterval;
             return this;
         }
+
         public Builder failureThreshold(Integer failureThreshold) {
-            this.failureThreshold = Objects.requireNonNull(failureThreshold);
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder successThreshold(Integer successThreshold) {
-            this.successThreshold = Objects.requireNonNull(successThreshold);
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
-        }        public ReadinessCheckResponse build() {
-            return new ReadinessCheckResponse(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
+        }
+
+        public ReadinessCheckResponse build() {
+            $.appStartTimeout = Objects.requireNonNull($.appStartTimeout, "expected parameter 'appStartTimeout' to be non-null");
+            $.checkInterval = Objects.requireNonNull($.checkInterval, "expected parameter 'checkInterval' to be non-null");
+            $.failureThreshold = Objects.requireNonNull($.failureThreshold, "expected parameter 'failureThreshold' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.successThreshold = Objects.requireNonNull($.successThreshold, "expected parameter 'successThreshold' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            return $;
         }
     }
+
 }

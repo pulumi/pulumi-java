@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
      * 
      */
     @Import(name="allowedExitCodes", required=true)
-      private final List<Integer> allowedExitCodes;
+    private List<Integer> allowedExitCodes;
 
     public List<Integer> allowedExitCodes() {
         return this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
      * 
      */
     @Import(name="interpreter", required=true)
-      private final String interpreter;
+    private String interpreter;
 
     public String interpreter() {
         return this.interpreter;
@@ -45,67 +45,63 @@ public final class SoftwareRecipeStepRunScriptResponse extends com.pulumi.resour
      * 
      */
     @Import(name="script", required=true)
-      private final String script;
+    private String script;
 
     public String script() {
         return this.script;
     }
 
-    public SoftwareRecipeStepRunScriptResponse(
-        List<Integer> allowedExitCodes,
-        String interpreter,
-        String script) {
-        this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes, "expected parameter 'allowedExitCodes' to be non-null");
-        this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-    }
+    private SoftwareRecipeStepRunScriptResponse() {}
 
-    private SoftwareRecipeStepRunScriptResponse() {
-        this.allowedExitCodes = List.of();
-        this.interpreter = null;
-        this.script = null;
+    private SoftwareRecipeStepRunScriptResponse(SoftwareRecipeStepRunScriptResponse $) {
+        this.allowedExitCodes = $.allowedExitCodes;
+        this.interpreter = $.interpreter;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepRunScriptResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<Integer> allowedExitCodes;
-        private String interpreter;
-        private String script;
+        private SoftwareRecipeStepRunScriptResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepRunScriptResponse();
         }
 
         public Builder(SoftwareRecipeStepRunScriptResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedExitCodes = defaults.allowedExitCodes;
-    	      this.interpreter = defaults.interpreter;
-    	      this.script = defaults.script;
+            $ = new SoftwareRecipeStepRunScriptResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
-            this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
+            $.allowedExitCodes = allowedExitCodes;
             return this;
         }
+
         public Builder allowedExitCodes(Integer... allowedExitCodes) {
             return allowedExitCodes(List.of(allowedExitCodes));
         }
+
         public Builder interpreter(String interpreter) {
-            this.interpreter = Objects.requireNonNull(interpreter);
+            $.interpreter = interpreter;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
-        }        public SoftwareRecipeStepRunScriptResponse build() {
-            return new SoftwareRecipeStepRunScriptResponse(allowedExitCodes, interpreter, script);
+        }
+
+        public SoftwareRecipeStepRunScriptResponse build() {
+            $.allowedExitCodes = Objects.requireNonNull($.allowedExitCodes, "expected parameter 'allowedExitCodes' to be non-null");
+            $.interpreter = Objects.requireNonNull($.interpreter, "expected parameter 'interpreter' to be non-null");
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            return $;
         }
     }
+
 }

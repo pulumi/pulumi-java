@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
      * 
      */
     @Import(name="header", required=true)
-      private final Output<String> header;
+    private Output<String> header;
 
     public Output<String> header() {
         return this.header;
@@ -36,63 +36,59 @@ public final class GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs exte
      * 
      */
     @Import(name="horizontalAlignment")
-      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
+    private @Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment() {
-        return this.horizontalAlignment == null ? Codegen.empty() : this.horizontalAlignment;
+    public Optional<Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment>> horizontalAlignment() {
+        return Optional.ofNullable(this.horizontalAlignment);
     }
 
-    public GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(
-        Output<String> header,
-        @Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment) {
-        this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
-        this.horizontalAlignment = horizontalAlignment;
-    }
+    private GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs() {
-        this.header = Codegen.empty();
-        this.horizontalAlignment = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs $) {
+        this.header = $.header;
+        this.horizontalAlignment = $.horizontalAlignment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> header;
-        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
+        private GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.horizontalAlignment = defaults.horizontalAlignment;
+            $ = new GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder header(Output<String> header) {
-            this.header = Objects.requireNonNull(header);
+            $.header = header;
             return this;
         }
+
         public Builder header(String header) {
-            this.header = Output.of(Objects.requireNonNull(header));
-            return this;
+            return header(Output.of(header));
         }
+
         public Builder horizontalAlignment(@Nullable Output<GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment) {
-            this.horizontalAlignment = horizontalAlignment;
+            $.horizontalAlignment = horizontalAlignment;
             return this;
         }
-        public Builder horizontalAlignment(@Nullable GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
-            this.horizontalAlignment = Codegen.ofNullable(horizontalAlignment);
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs(header, horizontalAlignment);
+
+        public Builder horizontalAlignment(GoogleCloudDialogflowV2IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
+            return horizontalAlignment(Output.of(horizontalAlignment));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs build() {
+            $.header = Objects.requireNonNull($.header, "expected parameter 'header' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends com.pulumi.res
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<List<String>> properties;
+    private @Nullable Output<List<String>> properties;
 
-    public Output<List<String>> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<List<String>>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class OSPolicyResourcePackageResourceMSIArgs extends com.pulumi.res
      * 
      */
     @Import(name="source", required=true)
-      private final Output<OSPolicyResourceFileArgs> source;
+    private Output<OSPolicyResourceFileArgs> source;
 
     public Output<OSPolicyResourceFileArgs> source() {
         return this.source;
     }
 
-    public OSPolicyResourcePackageResourceMSIArgs(
-        @Nullable Output<List<String>> properties,
-        Output<OSPolicyResourceFileArgs> source) {
-        this.properties = properties;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private OSPolicyResourcePackageResourceMSIArgs() {}
 
-    private OSPolicyResourcePackageResourceMSIArgs() {
-        this.properties = Codegen.empty();
-        this.source = Codegen.empty();
+    private OSPolicyResourcePackageResourceMSIArgs(OSPolicyResourcePackageResourceMSIArgs $) {
+        this.properties = $.properties;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourcePackageResourceMSIArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> properties;
-        private Output<OSPolicyResourceFileArgs> source;
+        private OSPolicyResourcePackageResourceMSIArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourcePackageResourceMSIArgs();
         }
 
         public Builder(OSPolicyResourcePackageResourceMSIArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.properties = defaults.properties;
-    	      this.source = defaults.source;
+            $ = new OSPolicyResourcePackageResourceMSIArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder properties(@Nullable Output<List<String>> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable List<String> properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(List<String> properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder properties(String... properties) {
             return properties(List.of(properties));
         }
+
         public Builder source(Output<OSPolicyResourceFileArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(OSPolicyResourceFileArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public OSPolicyResourcePackageResourceMSIArgs build() {
-            return new OSPolicyResourcePackageResourceMSIArgs(properties, source);
+            return source(Output.of(source));
+        }
+
+        public OSPolicyResourcePackageResourceMSIArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

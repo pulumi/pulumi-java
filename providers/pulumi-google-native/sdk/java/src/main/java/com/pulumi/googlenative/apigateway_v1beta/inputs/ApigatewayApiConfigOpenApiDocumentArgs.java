@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigateway_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApigatewayApiConfigOpenApiDocumentArgs extends com.pulumi.res
      * 
      */
     @Import(name="document")
-      private final @Nullable Output<ApigatewayApiConfigFileArgs> document;
+    private @Nullable Output<ApigatewayApiConfigFileArgs> document;
 
-    public Output<ApigatewayApiConfigFileArgs> document() {
-        return this.document == null ? Codegen.empty() : this.document;
+    public Optional<Output<ApigatewayApiConfigFileArgs>> document() {
+        return Optional.ofNullable(this.document);
     }
 
-    public ApigatewayApiConfigOpenApiDocumentArgs(@Nullable Output<ApigatewayApiConfigFileArgs> document) {
-        this.document = document;
-    }
+    private ApigatewayApiConfigOpenApiDocumentArgs() {}
 
-    private ApigatewayApiConfigOpenApiDocumentArgs() {
-        this.document = Codegen.empty();
+    private ApigatewayApiConfigOpenApiDocumentArgs(ApigatewayApiConfigOpenApiDocumentArgs $) {
+        this.document = $.document;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApigatewayApiConfigOpenApiDocumentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApigatewayApiConfigFileArgs> document;
+        private ApigatewayApiConfigOpenApiDocumentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApigatewayApiConfigOpenApiDocumentArgs();
         }
 
         public Builder(ApigatewayApiConfigOpenApiDocumentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.document = defaults.document;
+            $ = new ApigatewayApiConfigOpenApiDocumentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder document(@Nullable Output<ApigatewayApiConfigFileArgs> document) {
-            this.document = document;
+            $.document = document;
             return this;
         }
-        public Builder document(@Nullable ApigatewayApiConfigFileArgs document) {
-            this.document = Codegen.ofNullable(document);
-            return this;
-        }        public ApigatewayApiConfigOpenApiDocumentArgs build() {
-            return new ApigatewayApiConfigOpenApiDocumentArgs(document);
+
+        public Builder document(ApigatewayApiConfigFileArgs document) {
+            return document(Output.of(document));
+        }
+
+        public ApigatewayApiConfigOpenApiDocumentArgs build() {
+            return $;
         }
     }
+
 }

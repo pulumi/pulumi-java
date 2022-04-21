@@ -23,7 +23,7 @@ public final class RuntimeMetadataResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<ParameterMetadataResponse> parameters;
+    private List<ParameterMetadataResponse> parameters;
 
     public List<ParameterMetadataResponse> parameters() {
         return this.parameters;
@@ -34,58 +34,56 @@ public final class RuntimeMetadataResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sdkInfo", required=true)
-      private final SDKInfoResponse sdkInfo;
+    private SDKInfoResponse sdkInfo;
 
     public SDKInfoResponse sdkInfo() {
         return this.sdkInfo;
     }
 
-    public RuntimeMetadataResponse(
-        List<ParameterMetadataResponse> parameters,
-        SDKInfoResponse sdkInfo) {
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.sdkInfo = Objects.requireNonNull(sdkInfo, "expected parameter 'sdkInfo' to be non-null");
-    }
+    private RuntimeMetadataResponse() {}
 
-    private RuntimeMetadataResponse() {
-        this.parameters = List.of();
-        this.sdkInfo = null;
+    private RuntimeMetadataResponse(RuntimeMetadataResponse $) {
+        this.parameters = $.parameters;
+        this.sdkInfo = $.sdkInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ParameterMetadataResponse> parameters;
-        private SDKInfoResponse sdkInfo;
+        private RuntimeMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeMetadataResponse();
         }
 
         public Builder(RuntimeMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.sdkInfo = defaults.sdkInfo;
+            $ = new RuntimeMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(List<ParameterMetadataResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(ParameterMetadataResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder sdkInfo(SDKInfoResponse sdkInfo) {
-            this.sdkInfo = Objects.requireNonNull(sdkInfo);
+            $.sdkInfo = sdkInfo;
             return this;
-        }        public RuntimeMetadataResponse build() {
-            return new RuntimeMetadataResponse(parameters, sdkInfo);
+        }
+
+        public RuntimeMetadataResponse build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.sdkInfo = Objects.requireNonNull($.sdkInfo, "expected parameter 'sdkInfo' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="httpHeader")
-      private final @Nullable Output<String> httpHeader;
+    private @Nullable Output<String> httpHeader;
 
-    public Output<String> httpHeader() {
-        return this.httpHeader == null ? Codegen.empty() : this.httpHeader;
+    public Optional<Output<String>> httpHeader() {
+        return Optional.ofNullable(this.httpHeader);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SystemParameterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="urlQueryParameter")
-      private final @Nullable Output<String> urlQueryParameter;
+    private @Nullable Output<String> urlQueryParameter;
 
-    public Output<String> urlQueryParameter() {
-        return this.urlQueryParameter == null ? Codegen.empty() : this.urlQueryParameter;
+    public Optional<Output<String>> urlQueryParameter() {
+        return Optional.ofNullable(this.urlQueryParameter);
     }
 
-    public SystemParameterArgs(
-        @Nullable Output<String> httpHeader,
-        @Nullable Output<String> name,
-        @Nullable Output<String> urlQueryParameter) {
-        this.httpHeader = httpHeader;
-        this.name = name;
-        this.urlQueryParameter = urlQueryParameter;
-    }
+    private SystemParameterArgs() {}
 
-    private SystemParameterArgs() {
-        this.httpHeader = Codegen.empty();
-        this.name = Codegen.empty();
-        this.urlQueryParameter = Codegen.empty();
+    private SystemParameterArgs(SystemParameterArgs $) {
+        this.httpHeader = $.httpHeader;
+        this.name = $.name;
+        this.urlQueryParameter = $.urlQueryParameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> httpHeader;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> urlQueryParameter;
+        private SystemParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemParameterArgs();
         }
 
         public Builder(SystemParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHeader = defaults.httpHeader;
-    	      this.name = defaults.name;
-    	      this.urlQueryParameter = defaults.urlQueryParameter;
+            $ = new SystemParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHeader(@Nullable Output<String> httpHeader) {
-            this.httpHeader = httpHeader;
+            $.httpHeader = httpHeader;
             return this;
         }
-        public Builder httpHeader(@Nullable String httpHeader) {
-            this.httpHeader = Codegen.ofNullable(httpHeader);
-            return this;
+
+        public Builder httpHeader(String httpHeader) {
+            return httpHeader(Output.of(httpHeader));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder urlQueryParameter(@Nullable Output<String> urlQueryParameter) {
-            this.urlQueryParameter = urlQueryParameter;
+            $.urlQueryParameter = urlQueryParameter;
             return this;
         }
-        public Builder urlQueryParameter(@Nullable String urlQueryParameter) {
-            this.urlQueryParameter = Codegen.ofNullable(urlQueryParameter);
-            return this;
-        }        public SystemParameterArgs build() {
-            return new SystemParameterArgs(httpHeader, name, urlQueryParameter);
+
+        public Builder urlQueryParameter(String urlQueryParameter) {
+            return urlQueryParameter(Output.of(urlQueryParameter));
+        }
+
+        public SystemParameterArgs build() {
+            return $;
         }
     }
+
 }

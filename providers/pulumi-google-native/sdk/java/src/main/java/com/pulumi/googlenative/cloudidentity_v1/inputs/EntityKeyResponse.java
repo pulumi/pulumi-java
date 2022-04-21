@@ -21,45 +21,45 @@ public final class EntityKeyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
-    public EntityKeyResponse(String namespace) {
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private EntityKeyResponse() {}
 
-    private EntityKeyResponse() {
-        this.namespace = null;
+    private EntityKeyResponse(EntityKeyResponse $) {
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntityKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespace;
+        private EntityKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntityKeyResponse();
         }
 
         public Builder(EntityKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
+            $ = new EntityKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
-        }        public EntityKeyResponse build() {
-            return new EntityKeyResponse(namespace);
+        }
+
+        public EntityKeyResponse build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse exten
      * 
      */
     @Import(name="onewayTerms", required=true)
-      private final List<String> onewayTerms;
+    private List<String> onewayTerms;
 
     public List<String> onewayTerms() {
         return this.onewayTerms;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse exten
      * 
      */
     @Import(name="queryTerms", required=true)
-      private final List<String> queryTerms;
+    private List<String> queryTerms;
 
     public List<String> queryTerms() {
         return this.queryTerms;
@@ -44,73 +44,71 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse exten
      * 
      */
     @Import(name="synonyms", required=true)
-      private final List<String> synonyms;
+    private List<String> synonyms;
 
     public List<String> synonyms() {
         return this.synonyms;
     }
 
-    public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse(
-        List<String> onewayTerms,
-        List<String> queryTerms,
-        List<String> synonyms) {
-        this.onewayTerms = Objects.requireNonNull(onewayTerms, "expected parameter 'onewayTerms' to be non-null");
-        this.queryTerms = Objects.requireNonNull(queryTerms, "expected parameter 'queryTerms' to be non-null");
-        this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
-    }
+    private GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse() {}
 
-    private GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse() {
-        this.onewayTerms = List.of();
-        this.queryTerms = List.of();
-        this.synonyms = List.of();
+    private GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse(GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse $) {
+        this.onewayTerms = $.onewayTerms;
+        this.queryTerms = $.queryTerms;
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> onewayTerms;
-        private List<String> queryTerms;
-        private List<String> synonyms;
+        private GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onewayTerms = defaults.onewayTerms;
-    	      this.queryTerms = defaults.queryTerms;
-    	      this.synonyms = defaults.synonyms;
+            $ = new GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder onewayTerms(List<String> onewayTerms) {
-            this.onewayTerms = Objects.requireNonNull(onewayTerms);
+            $.onewayTerms = onewayTerms;
             return this;
         }
+
         public Builder onewayTerms(String... onewayTerms) {
             return onewayTerms(List.of(onewayTerms));
         }
+
         public Builder queryTerms(List<String> queryTerms) {
-            this.queryTerms = Objects.requireNonNull(queryTerms);
+            $.queryTerms = queryTerms;
             return this;
         }
+
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
+
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Objects.requireNonNull(synonyms);
+            $.synonyms = synonyms;
             return this;
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse build() {
-            return new GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse(onewayTerms, queryTerms, synonyms);
+        }
+
+        public GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse build() {
+            $.onewayTerms = Objects.requireNonNull($.onewayTerms, "expected parameter 'onewayTerms' to be non-null");
+            $.queryTerms = Objects.requireNonNull($.queryTerms, "expected parameter 'queryTerms' to be non-null");
+            $.synonyms = Objects.requireNonNull($.synonyms, "expected parameter 'synonyms' to be non-null");
+            return $;
         }
     }
+
 }

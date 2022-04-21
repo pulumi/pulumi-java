@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.MetadataOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deleteObjectsFromSourceAfterTransfer")
-      private final @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
+    private @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
-    public Output<Boolean> deleteObjectsFromSourceAfterTransfer() {
-        return this.deleteObjectsFromSourceAfterTransfer == null ? Codegen.empty() : this.deleteObjectsFromSourceAfterTransfer;
+    public Optional<Output<Boolean>> deleteObjectsFromSourceAfterTransfer() {
+        return Optional.ofNullable(this.deleteObjectsFromSourceAfterTransfer);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="deleteObjectsUniqueInSink")
-      private final @Nullable Output<Boolean> deleteObjectsUniqueInSink;
+    private @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
-    public Output<Boolean> deleteObjectsUniqueInSink() {
-        return this.deleteObjectsUniqueInSink == null ? Codegen.empty() : this.deleteObjectsUniqueInSink;
+    public Optional<Output<Boolean>> deleteObjectsUniqueInSink() {
+        return Optional.ofNullable(this.deleteObjectsUniqueInSink);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadataOptions")
-      private final @Nullable Output<MetadataOptionsArgs> metadataOptions;
+    private @Nullable Output<MetadataOptionsArgs> metadataOptions;
 
-    public Output<MetadataOptionsArgs> metadataOptions() {
-        return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
+    public Optional<Output<MetadataOptionsArgs>> metadataOptions() {
+        return Optional.ofNullable(this.metadataOptions);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class TransferOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="overwriteObjectsAlreadyExistingInSink")
-      private final @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
+    private @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
-    public Output<Boolean> overwriteObjectsAlreadyExistingInSink() {
-        return this.overwriteObjectsAlreadyExistingInSink == null ? Codegen.empty() : this.overwriteObjectsAlreadyExistingInSink;
+    public Optional<Output<Boolean>> overwriteObjectsAlreadyExistingInSink() {
+        return Optional.ofNullable(this.overwriteObjectsAlreadyExistingInSink);
     }
 
-    public TransferOptionsArgs(
-        @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer,
-        @Nullable Output<Boolean> deleteObjectsUniqueInSink,
-        @Nullable Output<MetadataOptionsArgs> metadataOptions,
-        @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
-        this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
-        this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
-        this.metadataOptions = metadataOptions;
-        this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
-    }
+    private TransferOptionsArgs() {}
 
-    private TransferOptionsArgs() {
-        this.deleteObjectsFromSourceAfterTransfer = Codegen.empty();
-        this.deleteObjectsUniqueInSink = Codegen.empty();
-        this.metadataOptions = Codegen.empty();
-        this.overwriteObjectsAlreadyExistingInSink = Codegen.empty();
+    private TransferOptionsArgs(TransferOptionsArgs $) {
+        this.deleteObjectsFromSourceAfterTransfer = $.deleteObjectsFromSourceAfterTransfer;
+        this.deleteObjectsUniqueInSink = $.deleteObjectsUniqueInSink;
+        this.metadataOptions = $.metadataOptions;
+        this.overwriteObjectsAlreadyExistingInSink = $.overwriteObjectsAlreadyExistingInSink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
-        private @Nullable Output<Boolean> deleteObjectsUniqueInSink;
-        private @Nullable Output<MetadataOptionsArgs> metadataOptions;
-        private @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
+        private TransferOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferOptionsArgs();
         }
 
         public Builder(TransferOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleteObjectsFromSourceAfterTransfer = defaults.deleteObjectsFromSourceAfterTransfer;
-    	      this.deleteObjectsUniqueInSink = defaults.deleteObjectsUniqueInSink;
-    	      this.metadataOptions = defaults.metadataOptions;
-    	      this.overwriteObjectsAlreadyExistingInSink = defaults.overwriteObjectsAlreadyExistingInSink;
+            $ = new TransferOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer) {
-            this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
+            $.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
             return this;
         }
-        public Builder deleteObjectsFromSourceAfterTransfer(@Nullable Boolean deleteObjectsFromSourceAfterTransfer) {
-            this.deleteObjectsFromSourceAfterTransfer = Codegen.ofNullable(deleteObjectsFromSourceAfterTransfer);
-            return this;
+
+        public Builder deleteObjectsFromSourceAfterTransfer(Boolean deleteObjectsFromSourceAfterTransfer) {
+            return deleteObjectsFromSourceAfterTransfer(Output.of(deleteObjectsFromSourceAfterTransfer));
         }
+
         public Builder deleteObjectsUniqueInSink(@Nullable Output<Boolean> deleteObjectsUniqueInSink) {
-            this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
+            $.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
             return this;
         }
-        public Builder deleteObjectsUniqueInSink(@Nullable Boolean deleteObjectsUniqueInSink) {
-            this.deleteObjectsUniqueInSink = Codegen.ofNullable(deleteObjectsUniqueInSink);
-            return this;
+
+        public Builder deleteObjectsUniqueInSink(Boolean deleteObjectsUniqueInSink) {
+            return deleteObjectsUniqueInSink(Output.of(deleteObjectsUniqueInSink));
         }
+
         public Builder metadataOptions(@Nullable Output<MetadataOptionsArgs> metadataOptions) {
-            this.metadataOptions = metadataOptions;
+            $.metadataOptions = metadataOptions;
             return this;
         }
-        public Builder metadataOptions(@Nullable MetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Codegen.ofNullable(metadataOptions);
-            return this;
+
+        public Builder metadataOptions(MetadataOptionsArgs metadataOptions) {
+            return metadataOptions(Output.of(metadataOptions));
         }
+
         public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink) {
-            this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
+            $.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;
             return this;
         }
-        public Builder overwriteObjectsAlreadyExistingInSink(@Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
-            this.overwriteObjectsAlreadyExistingInSink = Codegen.ofNullable(overwriteObjectsAlreadyExistingInSink);
-            return this;
-        }        public TransferOptionsArgs build() {
-            return new TransferOptionsArgs(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
+
+        public Builder overwriteObjectsAlreadyExistingInSink(Boolean overwriteObjectsAlreadyExistingInSink) {
+            return overwriteObjectsAlreadyExistingInSink(Output.of(overwriteObjectsAlreadyExistingInSink));
+        }
+
+        public TransferOptionsArgs build() {
+            return $;
         }
     }
+
 }

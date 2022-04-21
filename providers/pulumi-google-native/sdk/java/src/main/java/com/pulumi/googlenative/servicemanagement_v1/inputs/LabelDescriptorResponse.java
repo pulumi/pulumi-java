@@ -21,7 +21,7 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,7 +32,7 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -43,64 +43,59 @@ public final class LabelDescriptorResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="valueType", required=true)
-      private final String valueType;
+    private String valueType;
 
     public String valueType() {
         return this.valueType;
     }
 
-    public LabelDescriptorResponse(
-        String description,
-        String key,
-        String valueType) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.valueType = Objects.requireNonNull(valueType, "expected parameter 'valueType' to be non-null");
-    }
+    private LabelDescriptorResponse() {}
 
-    private LabelDescriptorResponse() {
-        this.description = null;
-        this.key = null;
-        this.valueType = null;
+    private LabelDescriptorResponse(LabelDescriptorResponse $) {
+        this.description = $.description;
+        this.key = $.key;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LabelDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String key;
-        private String valueType;
+        private LabelDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LabelDescriptorResponse();
         }
 
         public Builder(LabelDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.key = defaults.key;
-    	      this.valueType = defaults.valueType;
+            $ = new LabelDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder valueType(String valueType) {
-            this.valueType = Objects.requireNonNull(valueType);
+            $.valueType = valueType;
             return this;
-        }        public LabelDescriptorResponse build() {
-            return new LabelDescriptorResponse(description, key, valueType);
+        }
+
+        public LabelDescriptorResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.valueType = Objects.requireNonNull($.valueType, "expected parameter 'valueType' to be non-null");
+            return $;
         }
     }
+
 }

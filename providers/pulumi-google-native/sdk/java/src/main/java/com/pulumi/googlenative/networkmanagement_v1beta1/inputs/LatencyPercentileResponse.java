@@ -22,7 +22,7 @@ public final class LatencyPercentileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="latencyMicros", required=true)
-      private final String latencyMicros;
+    private String latencyMicros;
 
     public String latencyMicros() {
         return this.latencyMicros;
@@ -33,55 +33,52 @@ public final class LatencyPercentileResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="percent", required=true)
-      private final Integer percent;
+    private Integer percent;
 
     public Integer percent() {
         return this.percent;
     }
 
-    public LatencyPercentileResponse(
-        String latencyMicros,
-        Integer percent) {
-        this.latencyMicros = Objects.requireNonNull(latencyMicros, "expected parameter 'latencyMicros' to be non-null");
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-    }
+    private LatencyPercentileResponse() {}
 
-    private LatencyPercentileResponse() {
-        this.latencyMicros = null;
-        this.percent = null;
+    private LatencyPercentileResponse(LatencyPercentileResponse $) {
+        this.latencyMicros = $.latencyMicros;
+        this.percent = $.percent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LatencyPercentileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String latencyMicros;
-        private Integer percent;
+        private LatencyPercentileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LatencyPercentileResponse();
         }
 
         public Builder(LatencyPercentileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.latencyMicros = defaults.latencyMicros;
-    	      this.percent = defaults.percent;
+            $ = new LatencyPercentileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder latencyMicros(String latencyMicros) {
-            this.latencyMicros = Objects.requireNonNull(latencyMicros);
+            $.latencyMicros = latencyMicros;
             return this;
         }
+
         public Builder percent(Integer percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
-        }        public LatencyPercentileResponse build() {
-            return new LatencyPercentileResponse(latencyMicros, percent);
+        }
+
+        public LatencyPercentileResponse build() {
+            $.latencyMicros = Objects.requireNonNull($.latencyMicros, "expected parameter 'latencyMicros' to be non-null");
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            return $;
         }
     }
+
 }

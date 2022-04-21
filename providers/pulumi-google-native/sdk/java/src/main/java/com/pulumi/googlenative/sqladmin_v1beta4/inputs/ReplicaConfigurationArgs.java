@@ -5,11 +5,11 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1beta4.inputs.MySqlReplicaConfigurationArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="failoverTarget")
-      private final @Nullable Output<Boolean> failoverTarget;
+    private @Nullable Output<Boolean> failoverTarget;
 
-    public Output<Boolean> failoverTarget() {
-        return this.failoverTarget == null ? Codegen.empty() : this.failoverTarget;
+    public Optional<Output<Boolean>> failoverTarget() {
+        return Optional.ofNullable(this.failoverTarget);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ReplicaConfigurationArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="mysqlReplicaConfiguration")
-      private final @Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
+    private @Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
 
-    public Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration() {
-        return this.mysqlReplicaConfiguration == null ? Codegen.empty() : this.mysqlReplicaConfiguration;
+    public Optional<Output<MySqlReplicaConfigurationArgs>> mysqlReplicaConfiguration() {
+        return Optional.ofNullable(this.mysqlReplicaConfiguration);
     }
 
-    public ReplicaConfigurationArgs(
-        @Nullable Output<Boolean> failoverTarget,
-        @Nullable Output<String> kind,
-        @Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration) {
-        this.failoverTarget = failoverTarget;
-        this.kind = kind;
-        this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
-    }
+    private ReplicaConfigurationArgs() {}
 
-    private ReplicaConfigurationArgs() {
-        this.failoverTarget = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.mysqlReplicaConfiguration = Codegen.empty();
+    private ReplicaConfigurationArgs(ReplicaConfigurationArgs $) {
+        this.failoverTarget = $.failoverTarget;
+        this.kind = $.kind;
+        this.mysqlReplicaConfiguration = $.mysqlReplicaConfiguration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaConfigurationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> failoverTarget;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
+        private ReplicaConfigurationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaConfigurationArgs();
         }
 
         public Builder(ReplicaConfigurationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failoverTarget = defaults.failoverTarget;
-    	      this.kind = defaults.kind;
-    	      this.mysqlReplicaConfiguration = defaults.mysqlReplicaConfiguration;
+            $ = new ReplicaConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failoverTarget(@Nullable Output<Boolean> failoverTarget) {
-            this.failoverTarget = failoverTarget;
+            $.failoverTarget = failoverTarget;
             return this;
         }
-        public Builder failoverTarget(@Nullable Boolean failoverTarget) {
-            this.failoverTarget = Codegen.ofNullable(failoverTarget);
-            return this;
+
+        public Builder failoverTarget(Boolean failoverTarget) {
+            return failoverTarget(Output.of(failoverTarget));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder mysqlReplicaConfiguration(@Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration) {
-            this.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
+            $.mysqlReplicaConfiguration = mysqlReplicaConfiguration;
             return this;
         }
-        public Builder mysqlReplicaConfiguration(@Nullable MySqlReplicaConfigurationArgs mysqlReplicaConfiguration) {
-            this.mysqlReplicaConfiguration = Codegen.ofNullable(mysqlReplicaConfiguration);
-            return this;
-        }        public ReplicaConfigurationArgs build() {
-            return new ReplicaConfigurationArgs(failoverTarget, kind, mysqlReplicaConfiguration);
+
+        public Builder mysqlReplicaConfiguration(MySqlReplicaConfigurationArgs mysqlReplicaConfiguration) {
+            return mysqlReplicaConfiguration(Output.of(mysqlReplicaConfiguration));
+        }
+
+        public ReplicaConfigurationArgs build() {
+            return $;
         }
     }
+
 }

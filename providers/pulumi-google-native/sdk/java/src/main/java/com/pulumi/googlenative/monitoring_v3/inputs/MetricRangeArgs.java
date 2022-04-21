@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<GoogleMonitoringV3RangeArgs> range;
+    private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
 
-    public Output<GoogleMonitoringV3RangeArgs> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<GoogleMonitoringV3RangeArgs>> range() {
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MetricRangeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeSeries")
-      private final @Nullable Output<String> timeSeries;
+    private @Nullable Output<String> timeSeries;
 
-    public Output<String> timeSeries() {
-        return this.timeSeries == null ? Codegen.empty() : this.timeSeries;
+    public Optional<Output<String>> timeSeries() {
+        return Optional.ofNullable(this.timeSeries);
     }
 
-    public MetricRangeArgs(
-        @Nullable Output<GoogleMonitoringV3RangeArgs> range,
-        @Nullable Output<String> timeSeries) {
-        this.range = range;
-        this.timeSeries = timeSeries;
-    }
+    private MetricRangeArgs() {}
 
-    private MetricRangeArgs() {
-        this.range = Codegen.empty();
-        this.timeSeries = Codegen.empty();
+    private MetricRangeArgs(MetricRangeArgs $) {
+        this.range = $.range;
+        this.timeSeries = $.timeSeries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleMonitoringV3RangeArgs> range;
-        private @Nullable Output<String> timeSeries;
+        private MetricRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricRangeArgs();
         }
 
         public Builder(MetricRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.timeSeries = defaults.timeSeries;
+            $ = new MetricRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder range(@Nullable Output<GoogleMonitoringV3RangeArgs> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
+
+        public Builder range(GoogleMonitoringV3RangeArgs range) {
+            return range(Output.of(range));
         }
+
         public Builder timeSeries(@Nullable Output<String> timeSeries) {
-            this.timeSeries = timeSeries;
+            $.timeSeries = timeSeries;
             return this;
         }
-        public Builder timeSeries(@Nullable String timeSeries) {
-            this.timeSeries = Codegen.ofNullable(timeSeries);
-            return this;
-        }        public MetricRangeArgs build() {
-            return new MetricRangeArgs(range, timeSeries);
+
+        public Builder timeSeries(String timeSeries) {
+            return timeSeries(Output.of(timeSeries));
+        }
+
+        public MetricRangeArgs build() {
+            return $;
         }
     }
+
 }

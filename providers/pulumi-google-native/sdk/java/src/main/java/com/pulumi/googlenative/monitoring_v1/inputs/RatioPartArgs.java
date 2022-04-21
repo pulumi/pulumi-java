@@ -5,10 +5,10 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RatioPartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable Output<AggregationArgs> aggregation;
+    private @Nullable Output<AggregationArgs> aggregation;
 
-    public Output<AggregationArgs> aggregation() {
-        return this.aggregation == null ? Codegen.empty() : this.aggregation;
+    public Optional<Output<AggregationArgs>> aggregation() {
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class RatioPartArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
     }
 
-    public RatioPartArgs(
-        @Nullable Output<AggregationArgs> aggregation,
-        Output<String> filter) {
-        this.aggregation = aggregation;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private RatioPartArgs() {}
 
-    private RatioPartArgs() {
-        this.aggregation = Codegen.empty();
-        this.filter = Codegen.empty();
+    private RatioPartArgs(RatioPartArgs $) {
+        this.aggregation = $.aggregation;
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RatioPartArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AggregationArgs> aggregation;
-        private Output<String> filter;
+        private RatioPartArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RatioPartArgs();
         }
 
         public Builder(RatioPartArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.filter = defaults.filter;
+            $ = new RatioPartArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable Output<AggregationArgs> aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
-        public Builder aggregation(@Nullable AggregationArgs aggregation) {
-            this.aggregation = Codegen.ofNullable(aggregation);
-            return this;
+
+        public Builder aggregation(AggregationArgs aggregation) {
+            return aggregation(Output.of(aggregation));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
-        }        public RatioPartArgs build() {
-            return new RatioPartArgs(aggregation, filter);
+            return filter(Output.of(filter));
+        }
+
+        public RatioPartArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

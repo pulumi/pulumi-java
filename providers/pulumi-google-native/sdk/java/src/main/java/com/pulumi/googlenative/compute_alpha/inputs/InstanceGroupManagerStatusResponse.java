@@ -21,7 +21,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="allInstancesConfig", required=true)
-      private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
+    private InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
 
     public InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig() {
         return this.allInstancesConfig;
@@ -32,7 +32,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="autoscaler", required=true)
-      private final String autoscaler;
+    private String autoscaler;
 
     public String autoscaler() {
         return this.autoscaler;
@@ -43,7 +43,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="isStable", required=true)
-      private final Boolean isStable;
+    private Boolean isStable;
 
     public Boolean isStable() {
         return this.isStable;
@@ -54,7 +54,7 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="stateful", required=true)
-      private final InstanceGroupManagerStatusStatefulResponse stateful;
+    private InstanceGroupManagerStatusStatefulResponse stateful;
 
     public InstanceGroupManagerStatusStatefulResponse stateful() {
         return this.stateful;
@@ -65,82 +65,73 @@ public final class InstanceGroupManagerStatusResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="versionTarget", required=true)
-      private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
+    private InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
     public InstanceGroupManagerStatusVersionTargetResponse versionTarget() {
         return this.versionTarget;
     }
 
-    public InstanceGroupManagerStatusResponse(
-        InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig,
-        String autoscaler,
-        Boolean isStable,
-        InstanceGroupManagerStatusStatefulResponse stateful,
-        InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
-        this.allInstancesConfig = Objects.requireNonNull(allInstancesConfig, "expected parameter 'allInstancesConfig' to be non-null");
-        this.autoscaler = Objects.requireNonNull(autoscaler, "expected parameter 'autoscaler' to be non-null");
-        this.isStable = Objects.requireNonNull(isStable, "expected parameter 'isStable' to be non-null");
-        this.stateful = Objects.requireNonNull(stateful, "expected parameter 'stateful' to be non-null");
-        this.versionTarget = Objects.requireNonNull(versionTarget, "expected parameter 'versionTarget' to be non-null");
-    }
+    private InstanceGroupManagerStatusResponse() {}
 
-    private InstanceGroupManagerStatusResponse() {
-        this.allInstancesConfig = null;
-        this.autoscaler = null;
-        this.isStable = null;
-        this.stateful = null;
-        this.versionTarget = null;
+    private InstanceGroupManagerStatusResponse(InstanceGroupManagerStatusResponse $) {
+        this.allInstancesConfig = $.allInstancesConfig;
+        this.autoscaler = $.autoscaler;
+        this.isStable = $.isStable;
+        this.stateful = $.stateful;
+        this.versionTarget = $.versionTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
-        private String autoscaler;
-        private Boolean isStable;
-        private InstanceGroupManagerStatusStatefulResponse stateful;
-        private InstanceGroupManagerStatusVersionTargetResponse versionTarget;
+        private InstanceGroupManagerStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStatusResponse();
         }
 
         public Builder(InstanceGroupManagerStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allInstancesConfig = defaults.allInstancesConfig;
-    	      this.autoscaler = defaults.autoscaler;
-    	      this.isStable = defaults.isStable;
-    	      this.stateful = defaults.stateful;
-    	      this.versionTarget = defaults.versionTarget;
+            $ = new InstanceGroupManagerStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allInstancesConfig(InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig) {
-            this.allInstancesConfig = Objects.requireNonNull(allInstancesConfig);
+            $.allInstancesConfig = allInstancesConfig;
             return this;
         }
+
         public Builder autoscaler(String autoscaler) {
-            this.autoscaler = Objects.requireNonNull(autoscaler);
+            $.autoscaler = autoscaler;
             return this;
         }
+
         public Builder isStable(Boolean isStable) {
-            this.isStable = Objects.requireNonNull(isStable);
+            $.isStable = isStable;
             return this;
         }
+
         public Builder stateful(InstanceGroupManagerStatusStatefulResponse stateful) {
-            this.stateful = Objects.requireNonNull(stateful);
+            $.stateful = stateful;
             return this;
         }
+
         public Builder versionTarget(InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
-            this.versionTarget = Objects.requireNonNull(versionTarget);
+            $.versionTarget = versionTarget;
             return this;
-        }        public InstanceGroupManagerStatusResponse build() {
-            return new InstanceGroupManagerStatusResponse(allInstancesConfig, autoscaler, isStable, stateful, versionTarget);
+        }
+
+        public InstanceGroupManagerStatusResponse build() {
+            $.allInstancesConfig = Objects.requireNonNull($.allInstancesConfig, "expected parameter 'allInstancesConfig' to be non-null");
+            $.autoscaler = Objects.requireNonNull($.autoscaler, "expected parameter 'autoscaler' to be non-null");
+            $.isStable = Objects.requireNonNull($.isStable, "expected parameter 'isStable' to be non-null");
+            $.stateful = Objects.requireNonNull($.stateful, "expected parameter 'stateful' to be non-null");
+            $.versionTarget = Objects.requireNonNull($.versionTarget, "expected parameter 'versionTarget' to be non-null");
+            return $;
         }
     }
+
 }

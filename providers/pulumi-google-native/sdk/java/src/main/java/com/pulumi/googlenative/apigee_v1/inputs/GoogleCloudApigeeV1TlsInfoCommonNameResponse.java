@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends com.pulu
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
@@ -29,55 +29,52 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends com.pulu
      * 
      */
     @Import(name="wildcardMatch", required=true)
-      private final Boolean wildcardMatch;
+    private Boolean wildcardMatch;
 
     public Boolean wildcardMatch() {
         return this.wildcardMatch;
     }
 
-    public GoogleCloudApigeeV1TlsInfoCommonNameResponse(
-        String value,
-        Boolean wildcardMatch) {
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.wildcardMatch = Objects.requireNonNull(wildcardMatch, "expected parameter 'wildcardMatch' to be non-null");
-    }
+    private GoogleCloudApigeeV1TlsInfoCommonNameResponse() {}
 
-    private GoogleCloudApigeeV1TlsInfoCommonNameResponse() {
-        this.value = null;
-        this.wildcardMatch = null;
+    private GoogleCloudApigeeV1TlsInfoCommonNameResponse(GoogleCloudApigeeV1TlsInfoCommonNameResponse $) {
+        this.value = $.value;
+        this.wildcardMatch = $.wildcardMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1TlsInfoCommonNameResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String value;
-        private Boolean wildcardMatch;
+        private GoogleCloudApigeeV1TlsInfoCommonNameResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1TlsInfoCommonNameResponse();
         }
 
         public Builder(GoogleCloudApigeeV1TlsInfoCommonNameResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.value = defaults.value;
-    	      this.wildcardMatch = defaults.wildcardMatch;
+            $ = new GoogleCloudApigeeV1TlsInfoCommonNameResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder wildcardMatch(Boolean wildcardMatch) {
-            this.wildcardMatch = Objects.requireNonNull(wildcardMatch);
+            $.wildcardMatch = wildcardMatch;
             return this;
-        }        public GoogleCloudApigeeV1TlsInfoCommonNameResponse build() {
-            return new GoogleCloudApigeeV1TlsInfoCommonNameResponse(value, wildcardMatch);
+        }
+
+        public GoogleCloudApigeeV1TlsInfoCommonNameResponse build() {
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.wildcardMatch = Objects.requireNonNull($.wildcardMatch, "expected parameter 'wildcardMatch' to be non-null");
+            return $;
         }
     }
+
 }

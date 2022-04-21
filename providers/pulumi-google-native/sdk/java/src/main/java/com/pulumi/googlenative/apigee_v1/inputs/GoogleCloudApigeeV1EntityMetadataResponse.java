@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
      * 
      */
     @Import(name="createdAt", required=true)
-      private final String createdAt;
+    private String createdAt;
 
     public String createdAt() {
         return this.createdAt;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
      * 
      */
     @Import(name="lastModifiedAt", required=true)
-      private final String lastModifiedAt;
+    private String lastModifiedAt;
 
     public String lastModifiedAt() {
         return this.lastModifiedAt;
@@ -43,64 +43,59 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends com.pulumi.
      * 
      */
     @Import(name="subType", required=true)
-      private final String subType;
+    private String subType;
 
     public String subType() {
         return this.subType;
     }
 
-    public GoogleCloudApigeeV1EntityMetadataResponse(
-        String createdAt,
-        String lastModifiedAt,
-        String subType) {
-        this.createdAt = Objects.requireNonNull(createdAt, "expected parameter 'createdAt' to be non-null");
-        this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt, "expected parameter 'lastModifiedAt' to be non-null");
-        this.subType = Objects.requireNonNull(subType, "expected parameter 'subType' to be non-null");
-    }
+    private GoogleCloudApigeeV1EntityMetadataResponse() {}
 
-    private GoogleCloudApigeeV1EntityMetadataResponse() {
-        this.createdAt = null;
-        this.lastModifiedAt = null;
-        this.subType = null;
+    private GoogleCloudApigeeV1EntityMetadataResponse(GoogleCloudApigeeV1EntityMetadataResponse $) {
+        this.createdAt = $.createdAt;
+        this.lastModifiedAt = $.lastModifiedAt;
+        this.subType = $.subType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1EntityMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createdAt;
-        private String lastModifiedAt;
-        private String subType;
+        private GoogleCloudApigeeV1EntityMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1EntityMetadataResponse();
         }
 
         public Builder(GoogleCloudApigeeV1EntityMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createdAt = defaults.createdAt;
-    	      this.lastModifiedAt = defaults.lastModifiedAt;
-    	      this.subType = defaults.subType;
+            $ = new GoogleCloudApigeeV1EntityMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createdAt(String createdAt) {
-            this.createdAt = Objects.requireNonNull(createdAt);
+            $.createdAt = createdAt;
             return this;
         }
+
         public Builder lastModifiedAt(String lastModifiedAt) {
-            this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
+            $.lastModifiedAt = lastModifiedAt;
             return this;
         }
+
         public Builder subType(String subType) {
-            this.subType = Objects.requireNonNull(subType);
+            $.subType = subType;
             return this;
-        }        public GoogleCloudApigeeV1EntityMetadataResponse build() {
-            return new GoogleCloudApigeeV1EntityMetadataResponse(createdAt, lastModifiedAt, subType);
+        }
+
+        public GoogleCloudApigeeV1EntityMetadataResponse build() {
+            $.createdAt = Objects.requireNonNull($.createdAt, "expected parameter 'createdAt' to be non-null");
+            $.lastModifiedAt = Objects.requireNonNull($.lastModifiedAt, "expected parameter 'lastModifiedAt' to be non-null");
+            $.subType = Objects.requireNonNull($.subType, "expected parameter 'subType' to be non-null");
+            return $;
         }
     }
+
 }

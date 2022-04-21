@@ -23,7 +23,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="crossRealmTrustAdminServer", required=true)
-      private final String crossRealmTrustAdminServer;
+    private String crossRealmTrustAdminServer;
 
     public String crossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer;
@@ -34,7 +34,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="crossRealmTrustKdc", required=true)
-      private final String crossRealmTrustKdc;
+    private String crossRealmTrustKdc;
 
     public String crossRealmTrustKdc() {
         return this.crossRealmTrustKdc;
@@ -45,7 +45,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="crossRealmTrustRealm", required=true)
-      private final String crossRealmTrustRealm;
+    private String crossRealmTrustRealm;
 
     public String crossRealmTrustRealm() {
         return this.crossRealmTrustRealm;
@@ -56,7 +56,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="crossRealmTrustSharedPasswordUri", required=true)
-      private final String crossRealmTrustSharedPasswordUri;
+    private String crossRealmTrustSharedPasswordUri;
 
     public String crossRealmTrustSharedPasswordUri() {
         return this.crossRealmTrustSharedPasswordUri;
@@ -67,7 +67,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enableKerberos", required=true)
-      private final Boolean enableKerberos;
+    private Boolean enableKerberos;
 
     public Boolean enableKerberos() {
         return this.enableKerberos;
@@ -78,7 +78,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kdcDbKeyUri", required=true)
-      private final String kdcDbKeyUri;
+    private String kdcDbKeyUri;
 
     public String kdcDbKeyUri() {
         return this.kdcDbKeyUri;
@@ -89,7 +89,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyPasswordUri", required=true)
-      private final String keyPasswordUri;
+    private String keyPasswordUri;
 
     public String keyPasswordUri() {
         return this.keyPasswordUri;
@@ -100,7 +100,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keystorePasswordUri", required=true)
-      private final String keystorePasswordUri;
+    private String keystorePasswordUri;
 
     public String keystorePasswordUri() {
         return this.keystorePasswordUri;
@@ -111,7 +111,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keystoreUri", required=true)
-      private final String keystoreUri;
+    private String keystoreUri;
 
     public String keystoreUri() {
         return this.keystoreUri;
@@ -122,7 +122,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kmsKeyUri", required=true)
-      private final String kmsKeyUri;
+    private String kmsKeyUri;
 
     public String kmsKeyUri() {
         return this.kmsKeyUri;
@@ -133,7 +133,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="realm", required=true)
-      private final String realm;
+    private String realm;
 
     public String realm() {
         return this.realm;
@@ -144,7 +144,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="rootPrincipalPasswordUri", required=true)
-      private final String rootPrincipalPasswordUri;
+    private String rootPrincipalPasswordUri;
 
     public String rootPrincipalPasswordUri() {
         return this.rootPrincipalPasswordUri;
@@ -155,7 +155,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="tgtLifetimeHours", required=true)
-      private final Integer tgtLifetimeHours;
+    private Integer tgtLifetimeHours;
 
     public Integer tgtLifetimeHours() {
         return this.tgtLifetimeHours;
@@ -166,7 +166,7 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="truststorePasswordUri", required=true)
-      private final String truststorePasswordUri;
+    private String truststorePasswordUri;
 
     public String truststorePasswordUri() {
         return this.truststorePasswordUri;
@@ -177,172 +177,143 @@ public final class KerberosConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="truststoreUri", required=true)
-      private final String truststoreUri;
+    private String truststoreUri;
 
     public String truststoreUri() {
         return this.truststoreUri;
     }
 
-    public KerberosConfigResponse(
-        String crossRealmTrustAdminServer,
-        String crossRealmTrustKdc,
-        String crossRealmTrustRealm,
-        String crossRealmTrustSharedPasswordUri,
-        Boolean enableKerberos,
-        String kdcDbKeyUri,
-        String keyPasswordUri,
-        String keystorePasswordUri,
-        String keystoreUri,
-        String kmsKeyUri,
-        String realm,
-        String rootPrincipalPasswordUri,
-        Integer tgtLifetimeHours,
-        String truststorePasswordUri,
-        String truststoreUri) {
-        this.crossRealmTrustAdminServer = Objects.requireNonNull(crossRealmTrustAdminServer, "expected parameter 'crossRealmTrustAdminServer' to be non-null");
-        this.crossRealmTrustKdc = Objects.requireNonNull(crossRealmTrustKdc, "expected parameter 'crossRealmTrustKdc' to be non-null");
-        this.crossRealmTrustRealm = Objects.requireNonNull(crossRealmTrustRealm, "expected parameter 'crossRealmTrustRealm' to be non-null");
-        this.crossRealmTrustSharedPasswordUri = Objects.requireNonNull(crossRealmTrustSharedPasswordUri, "expected parameter 'crossRealmTrustSharedPasswordUri' to be non-null");
-        this.enableKerberos = Objects.requireNonNull(enableKerberos, "expected parameter 'enableKerberos' to be non-null");
-        this.kdcDbKeyUri = Objects.requireNonNull(kdcDbKeyUri, "expected parameter 'kdcDbKeyUri' to be non-null");
-        this.keyPasswordUri = Objects.requireNonNull(keyPasswordUri, "expected parameter 'keyPasswordUri' to be non-null");
-        this.keystorePasswordUri = Objects.requireNonNull(keystorePasswordUri, "expected parameter 'keystorePasswordUri' to be non-null");
-        this.keystoreUri = Objects.requireNonNull(keystoreUri, "expected parameter 'keystoreUri' to be non-null");
-        this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri, "expected parameter 'kmsKeyUri' to be non-null");
-        this.realm = Objects.requireNonNull(realm, "expected parameter 'realm' to be non-null");
-        this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri, "expected parameter 'rootPrincipalPasswordUri' to be non-null");
-        this.tgtLifetimeHours = Objects.requireNonNull(tgtLifetimeHours, "expected parameter 'tgtLifetimeHours' to be non-null");
-        this.truststorePasswordUri = Objects.requireNonNull(truststorePasswordUri, "expected parameter 'truststorePasswordUri' to be non-null");
-        this.truststoreUri = Objects.requireNonNull(truststoreUri, "expected parameter 'truststoreUri' to be non-null");
-    }
+    private KerberosConfigResponse() {}
 
-    private KerberosConfigResponse() {
-        this.crossRealmTrustAdminServer = null;
-        this.crossRealmTrustKdc = null;
-        this.crossRealmTrustRealm = null;
-        this.crossRealmTrustSharedPasswordUri = null;
-        this.enableKerberos = null;
-        this.kdcDbKeyUri = null;
-        this.keyPasswordUri = null;
-        this.keystorePasswordUri = null;
-        this.keystoreUri = null;
-        this.kmsKeyUri = null;
-        this.realm = null;
-        this.rootPrincipalPasswordUri = null;
-        this.tgtLifetimeHours = null;
-        this.truststorePasswordUri = null;
-        this.truststoreUri = null;
+    private KerberosConfigResponse(KerberosConfigResponse $) {
+        this.crossRealmTrustAdminServer = $.crossRealmTrustAdminServer;
+        this.crossRealmTrustKdc = $.crossRealmTrustKdc;
+        this.crossRealmTrustRealm = $.crossRealmTrustRealm;
+        this.crossRealmTrustSharedPasswordUri = $.crossRealmTrustSharedPasswordUri;
+        this.enableKerberos = $.enableKerberos;
+        this.kdcDbKeyUri = $.kdcDbKeyUri;
+        this.keyPasswordUri = $.keyPasswordUri;
+        this.keystorePasswordUri = $.keystorePasswordUri;
+        this.keystoreUri = $.keystoreUri;
+        this.kmsKeyUri = $.kmsKeyUri;
+        this.realm = $.realm;
+        this.rootPrincipalPasswordUri = $.rootPrincipalPasswordUri;
+        this.tgtLifetimeHours = $.tgtLifetimeHours;
+        this.truststorePasswordUri = $.truststorePasswordUri;
+        this.truststoreUri = $.truststoreUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KerberosConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String crossRealmTrustAdminServer;
-        private String crossRealmTrustKdc;
-        private String crossRealmTrustRealm;
-        private String crossRealmTrustSharedPasswordUri;
-        private Boolean enableKerberos;
-        private String kdcDbKeyUri;
-        private String keyPasswordUri;
-        private String keystorePasswordUri;
-        private String keystoreUri;
-        private String kmsKeyUri;
-        private String realm;
-        private String rootPrincipalPasswordUri;
-        private Integer tgtLifetimeHours;
-        private String truststorePasswordUri;
-        private String truststoreUri;
+        private KerberosConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KerberosConfigResponse();
         }
 
         public Builder(KerberosConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crossRealmTrustAdminServer = defaults.crossRealmTrustAdminServer;
-    	      this.crossRealmTrustKdc = defaults.crossRealmTrustKdc;
-    	      this.crossRealmTrustRealm = defaults.crossRealmTrustRealm;
-    	      this.crossRealmTrustSharedPasswordUri = defaults.crossRealmTrustSharedPasswordUri;
-    	      this.enableKerberos = defaults.enableKerberos;
-    	      this.kdcDbKeyUri = defaults.kdcDbKeyUri;
-    	      this.keyPasswordUri = defaults.keyPasswordUri;
-    	      this.keystorePasswordUri = defaults.keystorePasswordUri;
-    	      this.keystoreUri = defaults.keystoreUri;
-    	      this.kmsKeyUri = defaults.kmsKeyUri;
-    	      this.realm = defaults.realm;
-    	      this.rootPrincipalPasswordUri = defaults.rootPrincipalPasswordUri;
-    	      this.tgtLifetimeHours = defaults.tgtLifetimeHours;
-    	      this.truststorePasswordUri = defaults.truststorePasswordUri;
-    	      this.truststoreUri = defaults.truststoreUri;
+            $ = new KerberosConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder crossRealmTrustAdminServer(String crossRealmTrustAdminServer) {
-            this.crossRealmTrustAdminServer = Objects.requireNonNull(crossRealmTrustAdminServer);
+            $.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
             return this;
         }
+
         public Builder crossRealmTrustKdc(String crossRealmTrustKdc) {
-            this.crossRealmTrustKdc = Objects.requireNonNull(crossRealmTrustKdc);
+            $.crossRealmTrustKdc = crossRealmTrustKdc;
             return this;
         }
+
         public Builder crossRealmTrustRealm(String crossRealmTrustRealm) {
-            this.crossRealmTrustRealm = Objects.requireNonNull(crossRealmTrustRealm);
+            $.crossRealmTrustRealm = crossRealmTrustRealm;
             return this;
         }
+
         public Builder crossRealmTrustSharedPasswordUri(String crossRealmTrustSharedPasswordUri) {
-            this.crossRealmTrustSharedPasswordUri = Objects.requireNonNull(crossRealmTrustSharedPasswordUri);
+            $.crossRealmTrustSharedPasswordUri = crossRealmTrustSharedPasswordUri;
             return this;
         }
+
         public Builder enableKerberos(Boolean enableKerberos) {
-            this.enableKerberos = Objects.requireNonNull(enableKerberos);
+            $.enableKerberos = enableKerberos;
             return this;
         }
+
         public Builder kdcDbKeyUri(String kdcDbKeyUri) {
-            this.kdcDbKeyUri = Objects.requireNonNull(kdcDbKeyUri);
+            $.kdcDbKeyUri = kdcDbKeyUri;
             return this;
         }
+
         public Builder keyPasswordUri(String keyPasswordUri) {
-            this.keyPasswordUri = Objects.requireNonNull(keyPasswordUri);
+            $.keyPasswordUri = keyPasswordUri;
             return this;
         }
+
         public Builder keystorePasswordUri(String keystorePasswordUri) {
-            this.keystorePasswordUri = Objects.requireNonNull(keystorePasswordUri);
+            $.keystorePasswordUri = keystorePasswordUri;
             return this;
         }
+
         public Builder keystoreUri(String keystoreUri) {
-            this.keystoreUri = Objects.requireNonNull(keystoreUri);
+            $.keystoreUri = keystoreUri;
             return this;
         }
+
         public Builder kmsKeyUri(String kmsKeyUri) {
-            this.kmsKeyUri = Objects.requireNonNull(kmsKeyUri);
+            $.kmsKeyUri = kmsKeyUri;
             return this;
         }
+
         public Builder realm(String realm) {
-            this.realm = Objects.requireNonNull(realm);
+            $.realm = realm;
             return this;
         }
+
         public Builder rootPrincipalPasswordUri(String rootPrincipalPasswordUri) {
-            this.rootPrincipalPasswordUri = Objects.requireNonNull(rootPrincipalPasswordUri);
+            $.rootPrincipalPasswordUri = rootPrincipalPasswordUri;
             return this;
         }
+
         public Builder tgtLifetimeHours(Integer tgtLifetimeHours) {
-            this.tgtLifetimeHours = Objects.requireNonNull(tgtLifetimeHours);
+            $.tgtLifetimeHours = tgtLifetimeHours;
             return this;
         }
+
         public Builder truststorePasswordUri(String truststorePasswordUri) {
-            this.truststorePasswordUri = Objects.requireNonNull(truststorePasswordUri);
+            $.truststorePasswordUri = truststorePasswordUri;
             return this;
         }
+
         public Builder truststoreUri(String truststoreUri) {
-            this.truststoreUri = Objects.requireNonNull(truststoreUri);
+            $.truststoreUri = truststoreUri;
             return this;
-        }        public KerberosConfigResponse build() {
-            return new KerberosConfigResponse(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
+        }
+
+        public KerberosConfigResponse build() {
+            $.crossRealmTrustAdminServer = Objects.requireNonNull($.crossRealmTrustAdminServer, "expected parameter 'crossRealmTrustAdminServer' to be non-null");
+            $.crossRealmTrustKdc = Objects.requireNonNull($.crossRealmTrustKdc, "expected parameter 'crossRealmTrustKdc' to be non-null");
+            $.crossRealmTrustRealm = Objects.requireNonNull($.crossRealmTrustRealm, "expected parameter 'crossRealmTrustRealm' to be non-null");
+            $.crossRealmTrustSharedPasswordUri = Objects.requireNonNull($.crossRealmTrustSharedPasswordUri, "expected parameter 'crossRealmTrustSharedPasswordUri' to be non-null");
+            $.enableKerberos = Objects.requireNonNull($.enableKerberos, "expected parameter 'enableKerberos' to be non-null");
+            $.kdcDbKeyUri = Objects.requireNonNull($.kdcDbKeyUri, "expected parameter 'kdcDbKeyUri' to be non-null");
+            $.keyPasswordUri = Objects.requireNonNull($.keyPasswordUri, "expected parameter 'keyPasswordUri' to be non-null");
+            $.keystorePasswordUri = Objects.requireNonNull($.keystorePasswordUri, "expected parameter 'keystorePasswordUri' to be non-null");
+            $.keystoreUri = Objects.requireNonNull($.keystoreUri, "expected parameter 'keystoreUri' to be non-null");
+            $.kmsKeyUri = Objects.requireNonNull($.kmsKeyUri, "expected parameter 'kmsKeyUri' to be non-null");
+            $.realm = Objects.requireNonNull($.realm, "expected parameter 'realm' to be non-null");
+            $.rootPrincipalPasswordUri = Objects.requireNonNull($.rootPrincipalPasswordUri, "expected parameter 'rootPrincipalPasswordUri' to be non-null");
+            $.tgtLifetimeHours = Objects.requireNonNull($.tgtLifetimeHours, "expected parameter 'tgtLifetimeHours' to be non-null");
+            $.truststorePasswordUri = Objects.requireNonNull($.truststorePasswordUri, "expected parameter 'truststorePasswordUri' to be non-null");
+            $.truststoreUri = Objects.requireNonNull($.truststoreUri, "expected parameter 'truststoreUri' to be non-null");
+            return $;
         }
     }
+
 }

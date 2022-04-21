@@ -15,110 +15,100 @@ public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @Import(name="agentId", required=true)
-      private final String agentId;
+    private String agentId;
 
     public String agentId() {
         return this.agentId;
     }
 
     @Import(name="flowId", required=true)
-      private final String flowId;
+    private String flowId;
 
     public String flowId() {
         return this.flowId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="versionId", required=true)
-      private final String versionId;
+    private String versionId;
 
     public String versionId() {
         return this.versionId;
     }
 
-    public GetVersionArgs(
-        String agentId,
-        String flowId,
-        String location,
-        @Nullable String project,
-        String versionId) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.flowId = Objects.requireNonNull(flowId, "expected parameter 'flowId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-    }
+    private GetVersionArgs() {}
 
-    private GetVersionArgs() {
-        this.agentId = null;
-        this.flowId = null;
-        this.location = null;
-        this.project = null;
-        this.versionId = null;
+    private GetVersionArgs(GetVersionArgs $) {
+        this.agentId = $.agentId;
+        this.flowId = $.flowId;
+        this.location = $.location;
+        this.project = $.project;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentId;
-        private String flowId;
-        private String location;
-        private @Nullable String project;
-        private String versionId;
+        private GetVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVersionArgs();
         }
 
         public Builder(GetVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.flowId = defaults.flowId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.versionId = defaults.versionId;
+            $ = new GetVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder flowId(String flowId) {
-            this.flowId = Objects.requireNonNull(flowId);
+            $.flowId = flowId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder versionId(String versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
-        }        public GetVersionArgs build() {
-            return new GetVersionArgs(agentId, flowId, location, project, versionId);
+        }
+
+        public GetVersionArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.flowId = Objects.requireNonNull($.flowId, "expected parameter 'flowId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            return $;
         }
     }
+
 }

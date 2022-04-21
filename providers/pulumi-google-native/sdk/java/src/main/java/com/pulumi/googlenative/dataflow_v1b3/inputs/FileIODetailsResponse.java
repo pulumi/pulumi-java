@@ -21,45 +21,45 @@ public final class FileIODetailsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="filePattern", required=true)
-      private final String filePattern;
+    private String filePattern;
 
     public String filePattern() {
         return this.filePattern;
     }
 
-    public FileIODetailsResponse(String filePattern) {
-        this.filePattern = Objects.requireNonNull(filePattern, "expected parameter 'filePattern' to be non-null");
-    }
+    private FileIODetailsResponse() {}
 
-    private FileIODetailsResponse() {
-        this.filePattern = null;
+    private FileIODetailsResponse(FileIODetailsResponse $) {
+        this.filePattern = $.filePattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileIODetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filePattern;
+        private FileIODetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileIODetailsResponse();
         }
 
         public Builder(FileIODetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePattern = defaults.filePattern;
+            $ = new FileIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePattern(String filePattern) {
-            this.filePattern = Objects.requireNonNull(filePattern);
+            $.filePattern = filePattern;
             return this;
-        }        public FileIODetailsResponse build() {
-            return new FileIODetailsResponse(filePattern);
+        }
+
+        public FileIODetailsResponse build() {
+            $.filePattern = Objects.requireNonNull($.filePattern, "expected parameter 'filePattern' to be non-null");
+            return $;
         }
     }
+
 }

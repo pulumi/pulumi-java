@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.ProjectRepoIdArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RepoIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectRepoId")
-      private final @Nullable Output<ProjectRepoIdArgs> projectRepoId;
+    private @Nullable Output<ProjectRepoIdArgs> projectRepoId;
 
-    public Output<ProjectRepoIdArgs> projectRepoId() {
-        return this.projectRepoId == null ? Codegen.empty() : this.projectRepoId;
+    public Optional<Output<ProjectRepoIdArgs>> projectRepoId() {
+        return Optional.ofNullable(this.projectRepoId);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class RepoIdArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public RepoIdArgs(
-        @Nullable Output<ProjectRepoIdArgs> projectRepoId,
-        @Nullable Output<String> uid) {
-        this.projectRepoId = projectRepoId;
-        this.uid = uid;
-    }
+    private RepoIdArgs() {}
 
-    private RepoIdArgs() {
-        this.projectRepoId = Codegen.empty();
-        this.uid = Codegen.empty();
+    private RepoIdArgs(RepoIdArgs $) {
+        this.projectRepoId = $.projectRepoId;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ProjectRepoIdArgs> projectRepoId;
-        private @Nullable Output<String> uid;
+        private RepoIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoIdArgs();
         }
 
         public Builder(RepoIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectRepoId = defaults.projectRepoId;
-    	      this.uid = defaults.uid;
+            $ = new RepoIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectRepoId(@Nullable Output<ProjectRepoIdArgs> projectRepoId) {
-            this.projectRepoId = projectRepoId;
+            $.projectRepoId = projectRepoId;
             return this;
         }
-        public Builder projectRepoId(@Nullable ProjectRepoIdArgs projectRepoId) {
-            this.projectRepoId = Codegen.ofNullable(projectRepoId);
-            return this;
+
+        public Builder projectRepoId(ProjectRepoIdArgs projectRepoId) {
+            return projectRepoId(Output.of(projectRepoId));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public RepoIdArgs build() {
-            return new RepoIdArgs(projectRepoId, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public RepoIdArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventHandlerArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
      * 
      */
     @Import(name="initialPromptFulfillment", required=true)
-      private final Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
+    private Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
 
     public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment() {
         return this.initialPromptFulfillment;
@@ -37,66 +37,63 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
      * 
      */
     @Import(name="repromptEventHandlers")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers() {
-        return this.repromptEventHandlers == null ? Codegen.empty() : this.repromptEventHandlers;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>>> repromptEventHandlers() {
+        return Optional.ofNullable(this.repromptEventHandlers);
     }
 
-    public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs(
-        Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers) {
-        this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment, "expected parameter 'initialPromptFulfillment' to be non-null");
-        this.repromptEventHandlers = repromptEventHandlers;
-    }
+    private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs() {
-        this.initialPromptFulfillment = Codegen.empty();
-        this.repromptEventHandlers = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs $) {
+        this.initialPromptFulfillment = $.initialPromptFulfillment;
+        this.repromptEventHandlers = $.repromptEventHandlers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
+        private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialPromptFulfillment = defaults.initialPromptFulfillment;
-    	      this.repromptEventHandlers = defaults.repromptEventHandlers;
+            $ = new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder initialPromptFulfillment(Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> initialPromptFulfillment) {
-            this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
+            $.initialPromptFulfillment = initialPromptFulfillment;
             return this;
         }
+
         public Builder initialPromptFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentArgs initialPromptFulfillment) {
-            this.initialPromptFulfillment = Output.of(Objects.requireNonNull(initialPromptFulfillment));
-            return this;
+            return initialPromptFulfillment(Output.of(initialPromptFulfillment));
         }
+
         public Builder repromptEventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers) {
-            this.repromptEventHandlers = repromptEventHandlers;
+            $.repromptEventHandlers = repromptEventHandlers;
             return this;
         }
-        public Builder repromptEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> repromptEventHandlers) {
-            this.repromptEventHandlers = Codegen.ofNullable(repromptEventHandlers);
-            return this;
+
+        public Builder repromptEventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> repromptEventHandlers) {
+            return repromptEventHandlers(Output.of(repromptEventHandlers));
         }
+
         public Builder repromptEventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerArgs... repromptEventHandlers) {
             return repromptEventHandlers(List.of(repromptEventHandlers));
-        }        public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs(initialPromptFulfillment, repromptEventHandlers);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs build() {
+            $.initialPromptFulfillment = Objects.requireNonNull($.initialPromptFulfillment, "expected parameter 'initialPromptFulfillment' to be non-null");
+            return $;
         }
     }
+
 }

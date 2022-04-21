@@ -21,45 +21,45 @@ public final class GoogleCloudDatalabelingV1beta1SentimentConfigResponse extends
      * 
      */
     @Import(name="enableLabelSentimentSelection", required=true)
-      private final Boolean enableLabelSentimentSelection;
+    private Boolean enableLabelSentimentSelection;
 
     public Boolean enableLabelSentimentSelection() {
         return this.enableLabelSentimentSelection;
     }
 
-    public GoogleCloudDatalabelingV1beta1SentimentConfigResponse(Boolean enableLabelSentimentSelection) {
-        this.enableLabelSentimentSelection = Objects.requireNonNull(enableLabelSentimentSelection, "expected parameter 'enableLabelSentimentSelection' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse() {
-        this.enableLabelSentimentSelection = null;
+    private GoogleCloudDatalabelingV1beta1SentimentConfigResponse(GoogleCloudDatalabelingV1beta1SentimentConfigResponse $) {
+        this.enableLabelSentimentSelection = $.enableLabelSentimentSelection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1SentimentConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableLabelSentimentSelection;
+        private GoogleCloudDatalabelingV1beta1SentimentConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1SentimentConfigResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1SentimentConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableLabelSentimentSelection = defaults.enableLabelSentimentSelection;
+            $ = new GoogleCloudDatalabelingV1beta1SentimentConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableLabelSentimentSelection(Boolean enableLabelSentimentSelection) {
-            this.enableLabelSentimentSelection = Objects.requireNonNull(enableLabelSentimentSelection);
+            $.enableLabelSentimentSelection = enableLabelSentimentSelection;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1SentimentConfigResponse build() {
-            return new GoogleCloudDatalabelingV1beta1SentimentConfigResponse(enableLabelSentimentSelection);
+        }
+
+        public GoogleCloudDatalabelingV1beta1SentimentConfigResponse build() {
+            $.enableLabelSentimentSelection = Objects.requireNonNull($.enableLabelSentimentSelection, "expected parameter 'enableLabelSentimentSelection' to be non-null");
+            return $;
         }
     }
+
 }

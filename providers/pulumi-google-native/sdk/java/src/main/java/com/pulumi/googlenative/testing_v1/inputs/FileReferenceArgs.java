@@ -5,9 +5,9 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FileReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsPath")
-      private final @Nullable Output<String> gcsPath;
+    private @Nullable Output<String> gcsPath;
 
-    public Output<String> gcsPath() {
-        return this.gcsPath == null ? Codegen.empty() : this.gcsPath;
+    public Optional<Output<String>> gcsPath() {
+        return Optional.ofNullable(this.gcsPath);
     }
 
-    public FileReferenceArgs(@Nullable Output<String> gcsPath) {
-        this.gcsPath = gcsPath;
-    }
+    private FileReferenceArgs() {}
 
-    private FileReferenceArgs() {
-        this.gcsPath = Codegen.empty();
+    private FileReferenceArgs(FileReferenceArgs $) {
+        this.gcsPath = $.gcsPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gcsPath;
+        private FileReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileReferenceArgs();
         }
 
         public Builder(FileReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsPath = defaults.gcsPath;
+            $ = new FileReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsPath(@Nullable Output<String> gcsPath) {
-            this.gcsPath = gcsPath;
+            $.gcsPath = gcsPath;
             return this;
         }
-        public Builder gcsPath(@Nullable String gcsPath) {
-            this.gcsPath = Codegen.ofNullable(gcsPath);
-            return this;
-        }        public FileReferenceArgs build() {
-            return new FileReferenceArgs(gcsPath);
+
+        public Builder gcsPath(String gcsPath) {
+            return gcsPath(Output.of(gcsPath));
+        }
+
+        public FileReferenceArgs build() {
+            return $;
         }
     }
+
 }

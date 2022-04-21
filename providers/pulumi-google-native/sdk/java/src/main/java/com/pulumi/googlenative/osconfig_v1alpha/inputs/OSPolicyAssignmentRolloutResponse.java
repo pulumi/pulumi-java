@@ -22,7 +22,7 @@ public final class OSPolicyAssignmentRolloutResponse extends com.pulumi.resource
      * 
      */
     @Import(name="disruptionBudget", required=true)
-      private final FixedOrPercentResponse disruptionBudget;
+    private FixedOrPercentResponse disruptionBudget;
 
     public FixedOrPercentResponse disruptionBudget() {
         return this.disruptionBudget;
@@ -33,55 +33,52 @@ public final class OSPolicyAssignmentRolloutResponse extends com.pulumi.resource
      * 
      */
     @Import(name="minWaitDuration", required=true)
-      private final String minWaitDuration;
+    private String minWaitDuration;
 
     public String minWaitDuration() {
         return this.minWaitDuration;
     }
 
-    public OSPolicyAssignmentRolloutResponse(
-        FixedOrPercentResponse disruptionBudget,
-        String minWaitDuration) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
-        this.minWaitDuration = Objects.requireNonNull(minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
-    }
+    private OSPolicyAssignmentRolloutResponse() {}
 
-    private OSPolicyAssignmentRolloutResponse() {
-        this.disruptionBudget = null;
-        this.minWaitDuration = null;
+    private OSPolicyAssignmentRolloutResponse(OSPolicyAssignmentRolloutResponse $) {
+        this.disruptionBudget = $.disruptionBudget;
+        this.minWaitDuration = $.minWaitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyAssignmentRolloutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FixedOrPercentResponse disruptionBudget;
-        private String minWaitDuration;
+        private OSPolicyAssignmentRolloutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyAssignmentRolloutResponse();
         }
 
         public Builder(OSPolicyAssignmentRolloutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disruptionBudget = defaults.disruptionBudget;
-    	      this.minWaitDuration = defaults.minWaitDuration;
+            $ = new OSPolicyAssignmentRolloutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
-            this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
+            $.disruptionBudget = disruptionBudget;
             return this;
         }
+
         public Builder minWaitDuration(String minWaitDuration) {
-            this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
+            $.minWaitDuration = minWaitDuration;
             return this;
-        }        public OSPolicyAssignmentRolloutResponse build() {
-            return new OSPolicyAssignmentRolloutResponse(disruptionBudget, minWaitDuration);
+        }
+
+        public OSPolicyAssignmentRolloutResponse build() {
+            $.disruptionBudget = Objects.requireNonNull($.disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
+            $.minWaitDuration = Objects.requireNonNull($.minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
+            return $;
         }
     }
+
 }

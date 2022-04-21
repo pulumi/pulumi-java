@@ -5,9 +5,9 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AppBundleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleLocation")
-      private final @Nullable Output<FileReferenceArgs> bundleLocation;
+    private @Nullable Output<FileReferenceArgs> bundleLocation;
 
-    public Output<FileReferenceArgs> bundleLocation() {
-        return this.bundleLocation == null ? Codegen.empty() : this.bundleLocation;
+    public Optional<Output<FileReferenceArgs>> bundleLocation() {
+        return Optional.ofNullable(this.bundleLocation);
     }
 
-    public AppBundleArgs(@Nullable Output<FileReferenceArgs> bundleLocation) {
-        this.bundleLocation = bundleLocation;
-    }
+    private AppBundleArgs() {}
 
-    private AppBundleArgs() {
-        this.bundleLocation = Codegen.empty();
+    private AppBundleArgs(AppBundleArgs $) {
+        this.bundleLocation = $.bundleLocation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppBundleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<FileReferenceArgs> bundleLocation;
+        private AppBundleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppBundleArgs();
         }
 
         public Builder(AppBundleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleLocation = defaults.bundleLocation;
+            $ = new AppBundleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleLocation(@Nullable Output<FileReferenceArgs> bundleLocation) {
-            this.bundleLocation = bundleLocation;
+            $.bundleLocation = bundleLocation;
             return this;
         }
-        public Builder bundleLocation(@Nullable FileReferenceArgs bundleLocation) {
-            this.bundleLocation = Codegen.ofNullable(bundleLocation);
-            return this;
-        }        public AppBundleArgs build() {
-            return new AppBundleArgs(bundleLocation);
+
+        public Builder bundleLocation(FileReferenceArgs bundleLocation) {
+            return bundleLocation(Output.of(bundleLocation));
+        }
+
+        public AppBundleArgs build() {
+            return $;
         }
     }
+
 }

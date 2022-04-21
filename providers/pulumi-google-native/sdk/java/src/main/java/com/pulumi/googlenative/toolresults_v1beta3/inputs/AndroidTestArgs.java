@@ -5,13 +5,13 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidAppInfoArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidInstrumentationTestArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidRoboTestArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidTestLoopArgs;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class AndroidTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidAppInfo")
-      private final @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
+    private @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
 
-    public Output<AndroidAppInfoArgs> androidAppInfo() {
-        return this.androidAppInfo == null ? Codegen.empty() : this.androidAppInfo;
+    public Optional<Output<AndroidAppInfoArgs>> androidAppInfo() {
+        return Optional.ofNullable(this.androidAppInfo);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class AndroidTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidInstrumentationTest")
-      private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
+    private @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
-    public Output<AndroidInstrumentationTestArgs> androidInstrumentationTest() {
-        return this.androidInstrumentationTest == null ? Codegen.empty() : this.androidInstrumentationTest;
+    public Optional<Output<AndroidInstrumentationTestArgs>> androidInstrumentationTest() {
+        return Optional.ofNullable(this.androidInstrumentationTest);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class AndroidTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidRoboTest")
-      private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
+    private @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
-    public Output<AndroidRoboTestArgs> androidRoboTest() {
-        return this.androidRoboTest == null ? Codegen.empty() : this.androidRoboTest;
+    public Optional<Output<AndroidRoboTestArgs>> androidRoboTest() {
+        return Optional.ofNullable(this.androidRoboTest);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class AndroidTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="androidTestLoop")
-      private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
+    private @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
-    public Output<AndroidTestLoopArgs> androidTestLoop() {
-        return this.androidTestLoop == null ? Codegen.empty() : this.androidTestLoop;
+    public Optional<Output<AndroidTestLoopArgs>> androidTestLoop() {
+        return Optional.ofNullable(this.androidTestLoop);
     }
 
     /**
@@ -72,102 +72,88 @@ public final class AndroidTestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testTimeout")
-      private final @Nullable Output<DurationArgs> testTimeout;
+    private @Nullable Output<DurationArgs> testTimeout;
 
-    public Output<DurationArgs> testTimeout() {
-        return this.testTimeout == null ? Codegen.empty() : this.testTimeout;
+    public Optional<Output<DurationArgs>> testTimeout() {
+        return Optional.ofNullable(this.testTimeout);
     }
 
-    public AndroidTestArgs(
-        @Nullable Output<AndroidAppInfoArgs> androidAppInfo,
-        @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest,
-        @Nullable Output<AndroidRoboTestArgs> androidRoboTest,
-        @Nullable Output<AndroidTestLoopArgs> androidTestLoop,
-        @Nullable Output<DurationArgs> testTimeout) {
-        this.androidAppInfo = androidAppInfo;
-        this.androidInstrumentationTest = androidInstrumentationTest;
-        this.androidRoboTest = androidRoboTest;
-        this.androidTestLoop = androidTestLoop;
-        this.testTimeout = testTimeout;
-    }
+    private AndroidTestArgs() {}
 
-    private AndroidTestArgs() {
-        this.androidAppInfo = Codegen.empty();
-        this.androidInstrumentationTest = Codegen.empty();
-        this.androidRoboTest = Codegen.empty();
-        this.androidTestLoop = Codegen.empty();
-        this.testTimeout = Codegen.empty();
+    private AndroidTestArgs(AndroidTestArgs $) {
+        this.androidAppInfo = $.androidAppInfo;
+        this.androidInstrumentationTest = $.androidInstrumentationTest;
+        this.androidRoboTest = $.androidRoboTest;
+        this.androidTestLoop = $.androidTestLoop;
+        this.testTimeout = $.testTimeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidTestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
-        private @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
-        private @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
-        private @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
-        private @Nullable Output<DurationArgs> testTimeout;
+        private AndroidTestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidTestArgs();
         }
 
         public Builder(AndroidTestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidAppInfo = defaults.androidAppInfo;
-    	      this.androidInstrumentationTest = defaults.androidInstrumentationTest;
-    	      this.androidRoboTest = defaults.androidRoboTest;
-    	      this.androidTestLoop = defaults.androidTestLoop;
-    	      this.testTimeout = defaults.testTimeout;
+            $ = new AndroidTestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidAppInfo(@Nullable Output<AndroidAppInfoArgs> androidAppInfo) {
-            this.androidAppInfo = androidAppInfo;
+            $.androidAppInfo = androidAppInfo;
             return this;
         }
-        public Builder androidAppInfo(@Nullable AndroidAppInfoArgs androidAppInfo) {
-            this.androidAppInfo = Codegen.ofNullable(androidAppInfo);
-            return this;
+
+        public Builder androidAppInfo(AndroidAppInfoArgs androidAppInfo) {
+            return androidAppInfo(Output.of(androidAppInfo));
         }
+
         public Builder androidInstrumentationTest(@Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest) {
-            this.androidInstrumentationTest = androidInstrumentationTest;
+            $.androidInstrumentationTest = androidInstrumentationTest;
             return this;
         }
-        public Builder androidInstrumentationTest(@Nullable AndroidInstrumentationTestArgs androidInstrumentationTest) {
-            this.androidInstrumentationTest = Codegen.ofNullable(androidInstrumentationTest);
-            return this;
+
+        public Builder androidInstrumentationTest(AndroidInstrumentationTestArgs androidInstrumentationTest) {
+            return androidInstrumentationTest(Output.of(androidInstrumentationTest));
         }
+
         public Builder androidRoboTest(@Nullable Output<AndroidRoboTestArgs> androidRoboTest) {
-            this.androidRoboTest = androidRoboTest;
+            $.androidRoboTest = androidRoboTest;
             return this;
         }
-        public Builder androidRoboTest(@Nullable AndroidRoboTestArgs androidRoboTest) {
-            this.androidRoboTest = Codegen.ofNullable(androidRoboTest);
-            return this;
+
+        public Builder androidRoboTest(AndroidRoboTestArgs androidRoboTest) {
+            return androidRoboTest(Output.of(androidRoboTest));
         }
+
         public Builder androidTestLoop(@Nullable Output<AndroidTestLoopArgs> androidTestLoop) {
-            this.androidTestLoop = androidTestLoop;
+            $.androidTestLoop = androidTestLoop;
             return this;
         }
-        public Builder androidTestLoop(@Nullable AndroidTestLoopArgs androidTestLoop) {
-            this.androidTestLoop = Codegen.ofNullable(androidTestLoop);
-            return this;
+
+        public Builder androidTestLoop(AndroidTestLoopArgs androidTestLoop) {
+            return androidTestLoop(Output.of(androidTestLoop));
         }
+
         public Builder testTimeout(@Nullable Output<DurationArgs> testTimeout) {
-            this.testTimeout = testTimeout;
+            $.testTimeout = testTimeout;
             return this;
         }
-        public Builder testTimeout(@Nullable DurationArgs testTimeout) {
-            this.testTimeout = Codegen.ofNullable(testTimeout);
-            return this;
-        }        public AndroidTestArgs build() {
-            return new AndroidTestArgs(androidAppInfo, androidInstrumentationTest, androidRoboTest, androidTestLoop, testTimeout);
+
+        public Builder testTimeout(DurationArgs testTimeout) {
+            return testTimeout(Output.of(testTimeout));
+        }
+
+        public AndroidTestArgs build() {
+            return $;
         }
     }
+
 }

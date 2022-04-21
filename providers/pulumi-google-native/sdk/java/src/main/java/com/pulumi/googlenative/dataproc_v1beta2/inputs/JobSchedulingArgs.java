@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JobSchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxFailuresPerHour")
-      private final @Nullable Output<Integer> maxFailuresPerHour;
+    private @Nullable Output<Integer> maxFailuresPerHour;
 
-    public Output<Integer> maxFailuresPerHour() {
-        return this.maxFailuresPerHour == null ? Codegen.empty() : this.maxFailuresPerHour;
+    public Optional<Output<Integer>> maxFailuresPerHour() {
+        return Optional.ofNullable(this.maxFailuresPerHour);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class JobSchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxFailuresTotal")
-      private final @Nullable Output<Integer> maxFailuresTotal;
+    private @Nullable Output<Integer> maxFailuresTotal;
 
-    public Output<Integer> maxFailuresTotal() {
-        return this.maxFailuresTotal == null ? Codegen.empty() : this.maxFailuresTotal;
+    public Optional<Output<Integer>> maxFailuresTotal() {
+        return Optional.ofNullable(this.maxFailuresTotal);
     }
 
-    public JobSchedulingArgs(
-        @Nullable Output<Integer> maxFailuresPerHour,
-        @Nullable Output<Integer> maxFailuresTotal) {
-        this.maxFailuresPerHour = maxFailuresPerHour;
-        this.maxFailuresTotal = maxFailuresTotal;
-    }
+    private JobSchedulingArgs() {}
 
-    private JobSchedulingArgs() {
-        this.maxFailuresPerHour = Codegen.empty();
-        this.maxFailuresTotal = Codegen.empty();
+    private JobSchedulingArgs(JobSchedulingArgs $) {
+        this.maxFailuresPerHour = $.maxFailuresPerHour;
+        this.maxFailuresTotal = $.maxFailuresTotal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobSchedulingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxFailuresPerHour;
-        private @Nullable Output<Integer> maxFailuresTotal;
+        private JobSchedulingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobSchedulingArgs();
         }
 
         public Builder(JobSchedulingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxFailuresPerHour = defaults.maxFailuresPerHour;
-    	      this.maxFailuresTotal = defaults.maxFailuresTotal;
+            $ = new JobSchedulingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxFailuresPerHour(@Nullable Output<Integer> maxFailuresPerHour) {
-            this.maxFailuresPerHour = maxFailuresPerHour;
+            $.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
-        public Builder maxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
-            this.maxFailuresPerHour = Codegen.ofNullable(maxFailuresPerHour);
-            return this;
+
+        public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
+            return maxFailuresPerHour(Output.of(maxFailuresPerHour));
         }
+
         public Builder maxFailuresTotal(@Nullable Output<Integer> maxFailuresTotal) {
-            this.maxFailuresTotal = maxFailuresTotal;
+            $.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
-        public Builder maxFailuresTotal(@Nullable Integer maxFailuresTotal) {
-            this.maxFailuresTotal = Codegen.ofNullable(maxFailuresTotal);
-            return this;
-        }        public JobSchedulingArgs build() {
-            return new JobSchedulingArgs(maxFailuresPerHour, maxFailuresTotal);
+
+        public Builder maxFailuresTotal(Integer maxFailuresTotal) {
+            return maxFailuresTotal(Output.of(maxFailuresTotal));
+        }
+
+        public JobSchedulingArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="arguments", required=true)
-      private final Boolean arguments;
+    private Boolean arguments;
 
     public Boolean arguments() {
         return this.arguments;
@@ -32,7 +32,7 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="environment", required=true)
-      private final Boolean environment;
+    private Boolean environment;
 
     public Boolean environment() {
         return this.environment;
@@ -43,64 +43,59 @@ public final class CompletenessResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="materials", required=true)
-      private final Boolean materials;
+    private Boolean materials;
 
     public Boolean materials() {
         return this.materials;
     }
 
-    public CompletenessResponse(
-        Boolean arguments,
-        Boolean environment,
-        Boolean materials) {
-        this.arguments = Objects.requireNonNull(arguments, "expected parameter 'arguments' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.materials = Objects.requireNonNull(materials, "expected parameter 'materials' to be non-null");
-    }
+    private CompletenessResponse() {}
 
-    private CompletenessResponse() {
-        this.arguments = null;
-        this.environment = null;
-        this.materials = null;
+    private CompletenessResponse(CompletenessResponse $) {
+        this.arguments = $.arguments;
+        this.environment = $.environment;
+        this.materials = $.materials;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompletenessResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean arguments;
-        private Boolean environment;
-        private Boolean materials;
+        private CompletenessResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompletenessResponse();
         }
 
         public Builder(CompletenessResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.environment = defaults.environment;
-    	      this.materials = defaults.materials;
+            $ = new CompletenessResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(Boolean arguments) {
-            this.arguments = Objects.requireNonNull(arguments);
+            $.arguments = arguments;
             return this;
         }
+
         public Builder environment(Boolean environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder materials(Boolean materials) {
-            this.materials = Objects.requireNonNull(materials);
+            $.materials = materials;
             return this;
-        }        public CompletenessResponse build() {
-            return new CompletenessResponse(arguments, environment, materials);
+        }
+
+        public CompletenessResponse build() {
+            $.arguments = Objects.requireNonNull($.arguments, "expected parameter 'arguments' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.materials = Objects.requireNonNull($.materials, "expected parameter 'materials' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ExprArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class CustomLevelArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expr", required=true)
-      private final Output<ExprArgs> expr;
+    private Output<ExprArgs> expr;
 
     public Output<ExprArgs> expr() {
         return this.expr;
     }
 
-    public CustomLevelArgs(Output<ExprArgs> expr) {
-        this.expr = Objects.requireNonNull(expr, "expected parameter 'expr' to be non-null");
-    }
+    private CustomLevelArgs() {}
 
-    private CustomLevelArgs() {
-        this.expr = Codegen.empty();
+    private CustomLevelArgs(CustomLevelArgs $) {
+        this.expr = $.expr;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<ExprArgs> expr;
+        private CustomLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomLevelArgs();
         }
 
         public Builder(CustomLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expr = defaults.expr;
+            $ = new CustomLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expr(Output<ExprArgs> expr) {
-            this.expr = Objects.requireNonNull(expr);
+            $.expr = expr;
             return this;
         }
+
         public Builder expr(ExprArgs expr) {
-            this.expr = Output.of(Objects.requireNonNull(expr));
-            return this;
-        }        public CustomLevelArgs build() {
-            return new CustomLevelArgs(expr);
+            return expr(Output.of(expr));
+        }
+
+        public CustomLevelArgs build() {
+            $.expr = Objects.requireNonNull($.expr, "expected parameter 'expr' to be non-null");
+            return $;
         }
     }
+
 }

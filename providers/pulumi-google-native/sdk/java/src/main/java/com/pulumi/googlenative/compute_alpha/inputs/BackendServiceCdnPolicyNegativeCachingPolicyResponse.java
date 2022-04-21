@@ -21,7 +21,7 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyResponse extends 
      * 
      */
     @Import(name="code", required=true)
-      private final Integer code;
+    private Integer code;
 
     public Integer code() {
         return this.code;
@@ -32,55 +32,52 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyResponse extends 
      * 
      */
     @Import(name="ttl", required=true)
-      private final Integer ttl;
+    private Integer ttl;
 
     public Integer ttl() {
         return this.ttl;
     }
 
-    public BackendServiceCdnPolicyNegativeCachingPolicyResponse(
-        Integer code,
-        Integer ttl) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-    }
+    private BackendServiceCdnPolicyNegativeCachingPolicyResponse() {}
 
-    private BackendServiceCdnPolicyNegativeCachingPolicyResponse() {
-        this.code = null;
-        this.ttl = null;
+    private BackendServiceCdnPolicyNegativeCachingPolicyResponse(BackendServiceCdnPolicyNegativeCachingPolicyResponse $) {
+        this.code = $.code;
+        this.ttl = $.ttl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceCdnPolicyNegativeCachingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer code;
-        private Integer ttl;
+        private BackendServiceCdnPolicyNegativeCachingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceCdnPolicyNegativeCachingPolicyResponse();
         }
 
         public Builder(BackendServiceCdnPolicyNegativeCachingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.ttl = defaults.ttl;
+            $ = new BackendServiceCdnPolicyNegativeCachingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(Integer code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder ttl(Integer ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
-        }        public BackendServiceCdnPolicyNegativeCachingPolicyResponse build() {
-            return new BackendServiceCdnPolicyNegativeCachingPolicyResponse(code, ttl);
+        }
+
+        public BackendServiceCdnPolicyNegativeCachingPolicyResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class FleetConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fleetSpec", required=true)
-      private final String fleetSpec;
+    private String fleetSpec;
 
     public String fleetSpec() {
         return this.fleetSpec;
@@ -32,55 +32,52 @@ public final class FleetConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public FleetConfigResponse(
-        String fleetSpec,
-        String name) {
-        this.fleetSpec = Objects.requireNonNull(fleetSpec, "expected parameter 'fleetSpec' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private FleetConfigResponse() {}
 
-    private FleetConfigResponse() {
-        this.fleetSpec = null;
-        this.name = null;
+    private FleetConfigResponse(FleetConfigResponse $) {
+        this.fleetSpec = $.fleetSpec;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FleetConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fleetSpec;
-        private String name;
+        private FleetConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FleetConfigResponse();
         }
 
         public Builder(FleetConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetSpec = defaults.fleetSpec;
-    	      this.name = defaults.name;
+            $ = new FleetConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetSpec(String fleetSpec) {
-            this.fleetSpec = Objects.requireNonNull(fleetSpec);
+            $.fleetSpec = fleetSpec;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public FleetConfigResponse build() {
-            return new FleetConfigResponse(fleetSpec, name);
+        }
+
+        public FleetConfigResponse build() {
+            $.fleetSpec = Objects.requireNonNull($.fleetSpec, "expected parameter 'fleetSpec' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetServiceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetServiceArgs Empty = new GetServiceArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="namespaceId", required=true)
-      private final String namespaceId;
+    private String namespaceId;
 
     public String namespaceId() {
         return this.namespaceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceId", required=true)
-      private final String serviceId;
+    private String serviceId;
 
     public String serviceId() {
         return this.serviceId;
     }
 
-    public GetServiceArgs(
-        String location,
-        String namespaceId,
-        @Nullable String project,
-        String serviceId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-        this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-    }
+    private GetServiceArgs() {}
 
-    private GetServiceArgs() {
-        this.location = null;
-        this.namespaceId = null;
-        this.project = null;
-        this.serviceId = null;
+    private GetServiceArgs(GetServiceArgs $) {
+        this.location = $.location;
+        this.namespaceId = $.namespaceId;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String namespaceId;
-        private @Nullable String project;
-        private String serviceId;
+        private GetServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceArgs();
         }
 
         public Builder(GetServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
+            $ = new GetServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
-        }        public GetServiceArgs build() {
-            return new GetServiceArgs(location, namespaceId, project, serviceId);
+        }
+
+        public GetServiceArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

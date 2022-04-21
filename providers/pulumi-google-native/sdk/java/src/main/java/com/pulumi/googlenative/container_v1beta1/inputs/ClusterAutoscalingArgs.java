@@ -5,7 +5,6 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.ClusterAutoscalingAutoscalingProfile;
 import com.pulumi.googlenative.container_v1beta1.inputs.AutoprovisioningNodePoolDefaultsArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.ResourceLimitArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="autoprovisioningLocations")
-      private final @Nullable Output<List<String>> autoprovisioningLocations;
+    private @Nullable Output<List<String>> autoprovisioningLocations;
 
-    public Output<List<String>> autoprovisioningLocations() {
-        return this.autoprovisioningLocations == null ? Codegen.empty() : this.autoprovisioningLocations;
+    public Optional<Output<List<String>>> autoprovisioningLocations() {
+        return Optional.ofNullable(this.autoprovisioningLocations);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="autoprovisioningNodePoolDefaults")
-      private final @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
+    private @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
 
-    public Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults() {
-        return this.autoprovisioningNodePoolDefaults == null ? Codegen.empty() : this.autoprovisioningNodePoolDefaults;
+    public Optional<Output<AutoprovisioningNodePoolDefaultsArgs>> autoprovisioningNodePoolDefaults() {
+        return Optional.ofNullable(this.autoprovisioningNodePoolDefaults);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="autoscalingProfile")
-      private final @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
+    private @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
 
-    public Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile() {
-        return this.autoscalingProfile == null ? Codegen.empty() : this.autoscalingProfile;
+    public Optional<Output<ClusterAutoscalingAutoscalingProfile>> autoscalingProfile() {
+        return Optional.ofNullable(this.autoscalingProfile);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enableNodeAutoprovisioning")
-      private final @Nullable Output<Boolean> enableNodeAutoprovisioning;
+    private @Nullable Output<Boolean> enableNodeAutoprovisioning;
 
-    public Output<Boolean> enableNodeAutoprovisioning() {
-        return this.enableNodeAutoprovisioning == null ? Codegen.empty() : this.enableNodeAutoprovisioning;
+    public Optional<Output<Boolean>> enableNodeAutoprovisioning() {
+        return Optional.ofNullable(this.enableNodeAutoprovisioning);
     }
 
     /**
@@ -73,108 +73,96 @@ public final class ClusterAutoscalingArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="resourceLimits")
-      private final @Nullable Output<List<ResourceLimitArgs>> resourceLimits;
+    private @Nullable Output<List<ResourceLimitArgs>> resourceLimits;
 
-    public Output<List<ResourceLimitArgs>> resourceLimits() {
-        return this.resourceLimits == null ? Codegen.empty() : this.resourceLimits;
+    public Optional<Output<List<ResourceLimitArgs>>> resourceLimits() {
+        return Optional.ofNullable(this.resourceLimits);
     }
 
-    public ClusterAutoscalingArgs(
-        @Nullable Output<List<String>> autoprovisioningLocations,
-        @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults,
-        @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile,
-        @Nullable Output<Boolean> enableNodeAutoprovisioning,
-        @Nullable Output<List<ResourceLimitArgs>> resourceLimits) {
-        this.autoprovisioningLocations = autoprovisioningLocations;
-        this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
-        this.autoscalingProfile = autoscalingProfile;
-        this.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
-        this.resourceLimits = resourceLimits;
-    }
+    private ClusterAutoscalingArgs() {}
 
-    private ClusterAutoscalingArgs() {
-        this.autoprovisioningLocations = Codegen.empty();
-        this.autoprovisioningNodePoolDefaults = Codegen.empty();
-        this.autoscalingProfile = Codegen.empty();
-        this.enableNodeAutoprovisioning = Codegen.empty();
-        this.resourceLimits = Codegen.empty();
+    private ClusterAutoscalingArgs(ClusterAutoscalingArgs $) {
+        this.autoprovisioningLocations = $.autoprovisioningLocations;
+        this.autoprovisioningNodePoolDefaults = $.autoprovisioningNodePoolDefaults;
+        this.autoscalingProfile = $.autoscalingProfile;
+        this.enableNodeAutoprovisioning = $.enableNodeAutoprovisioning;
+        this.resourceLimits = $.resourceLimits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAutoscalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> autoprovisioningLocations;
-        private @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
-        private @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
-        private @Nullable Output<Boolean> enableNodeAutoprovisioning;
-        private @Nullable Output<List<ResourceLimitArgs>> resourceLimits;
+        private ClusterAutoscalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAutoscalingArgs();
         }
 
         public Builder(ClusterAutoscalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoprovisioningLocations = defaults.autoprovisioningLocations;
-    	      this.autoprovisioningNodePoolDefaults = defaults.autoprovisioningNodePoolDefaults;
-    	      this.autoscalingProfile = defaults.autoscalingProfile;
-    	      this.enableNodeAutoprovisioning = defaults.enableNodeAutoprovisioning;
-    	      this.resourceLimits = defaults.resourceLimits;
+            $ = new ClusterAutoscalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoprovisioningLocations(@Nullable Output<List<String>> autoprovisioningLocations) {
-            this.autoprovisioningLocations = autoprovisioningLocations;
+            $.autoprovisioningLocations = autoprovisioningLocations;
             return this;
         }
-        public Builder autoprovisioningLocations(@Nullable List<String> autoprovisioningLocations) {
-            this.autoprovisioningLocations = Codegen.ofNullable(autoprovisioningLocations);
-            return this;
+
+        public Builder autoprovisioningLocations(List<String> autoprovisioningLocations) {
+            return autoprovisioningLocations(Output.of(autoprovisioningLocations));
         }
+
         public Builder autoprovisioningLocations(String... autoprovisioningLocations) {
             return autoprovisioningLocations(List.of(autoprovisioningLocations));
         }
+
         public Builder autoprovisioningNodePoolDefaults(@Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults) {
-            this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
+            $.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
             return this;
         }
-        public Builder autoprovisioningNodePoolDefaults(@Nullable AutoprovisioningNodePoolDefaultsArgs autoprovisioningNodePoolDefaults) {
-            this.autoprovisioningNodePoolDefaults = Codegen.ofNullable(autoprovisioningNodePoolDefaults);
-            return this;
+
+        public Builder autoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsArgs autoprovisioningNodePoolDefaults) {
+            return autoprovisioningNodePoolDefaults(Output.of(autoprovisioningNodePoolDefaults));
         }
+
         public Builder autoscalingProfile(@Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile) {
-            this.autoscalingProfile = autoscalingProfile;
+            $.autoscalingProfile = autoscalingProfile;
             return this;
         }
-        public Builder autoscalingProfile(@Nullable ClusterAutoscalingAutoscalingProfile autoscalingProfile) {
-            this.autoscalingProfile = Codegen.ofNullable(autoscalingProfile);
-            return this;
+
+        public Builder autoscalingProfile(ClusterAutoscalingAutoscalingProfile autoscalingProfile) {
+            return autoscalingProfile(Output.of(autoscalingProfile));
         }
+
         public Builder enableNodeAutoprovisioning(@Nullable Output<Boolean> enableNodeAutoprovisioning) {
-            this.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
+            $.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
             return this;
         }
-        public Builder enableNodeAutoprovisioning(@Nullable Boolean enableNodeAutoprovisioning) {
-            this.enableNodeAutoprovisioning = Codegen.ofNullable(enableNodeAutoprovisioning);
-            return this;
+
+        public Builder enableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
+            return enableNodeAutoprovisioning(Output.of(enableNodeAutoprovisioning));
         }
+
         public Builder resourceLimits(@Nullable Output<List<ResourceLimitArgs>> resourceLimits) {
-            this.resourceLimits = resourceLimits;
+            $.resourceLimits = resourceLimits;
             return this;
         }
-        public Builder resourceLimits(@Nullable List<ResourceLimitArgs> resourceLimits) {
-            this.resourceLimits = Codegen.ofNullable(resourceLimits);
-            return this;
+
+        public Builder resourceLimits(List<ResourceLimitArgs> resourceLimits) {
+            return resourceLimits(Output.of(resourceLimits));
         }
+
         public Builder resourceLimits(ResourceLimitArgs... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
-        }        public ClusterAutoscalingArgs build() {
-            return new ClusterAutoscalingArgs(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
+        }
+
+        public ClusterAutoscalingArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUReservationArgs;
 import com.pulumi.googlenative.compute_v1.inputs.ShareSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,24 +34,24 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareSettings")
-      private final @Nullable Output<ShareSettingsArgs> shareSettings;
+    private @Nullable Output<ShareSettingsArgs> shareSettings;
 
-    public Output<ShareSettingsArgs> shareSettings() {
-        return this.shareSettings == null ? Codegen.empty() : this.shareSettings;
+    public Optional<Output<ShareSettingsArgs>> shareSettings() {
+        return Optional.ofNullable(this.shareSettings);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specificReservation")
-      private final @Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation;
+    private @Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation;
 
-    public Output<AllocationSpecificSKUReservationArgs> specificReservation() {
-        return this.specificReservation == null ? Codegen.empty() : this.specificReservation;
+    public Optional<Output<AllocationSpecificSKUReservationArgs>> specificReservation() {
+        return Optional.ofNullable(this.specificReservation);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="specificReservationRequired")
-      private final @Nullable Output<Boolean> specificReservationRequired;
+    private @Nullable Output<Boolean> specificReservationRequired;
 
-    public Output<Boolean> specificReservationRequired() {
-        return this.specificReservationRequired == null ? Codegen.empty() : this.specificReservationRequired;
+    public Optional<Output<Boolean>> specificReservationRequired() {
+        return Optional.ofNullable(this.specificReservationRequired);
     }
 
     /**
@@ -92,141 +92,118 @@ public final class ReservationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public ReservationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<ShareSettingsArgs> shareSettings,
-        @Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation,
-        @Nullable Output<Boolean> specificReservationRequired,
-        @Nullable Output<String> zone) {
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.shareSettings = shareSettings;
-        this.specificReservation = specificReservation;
-        this.specificReservationRequired = specificReservationRequired;
-        this.zone = zone;
-    }
+    private ReservationArgs() {}
 
-    private ReservationArgs() {
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.shareSettings = Codegen.empty();
-        this.specificReservation = Codegen.empty();
-        this.specificReservationRequired = Codegen.empty();
-        this.zone = Codegen.empty();
+    private ReservationArgs(ReservationArgs $) {
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.shareSettings = $.shareSettings;
+        this.specificReservation = $.specificReservation;
+        this.specificReservationRequired = $.specificReservationRequired;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReservationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<ShareSettingsArgs> shareSettings;
-        private @Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation;
-        private @Nullable Output<Boolean> specificReservationRequired;
-        private @Nullable Output<String> zone;
+        private ReservationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReservationArgs();
         }
 
         public Builder(ReservationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.shareSettings = defaults.shareSettings;
-    	      this.specificReservation = defaults.specificReservation;
-    	      this.specificReservationRequired = defaults.specificReservationRequired;
-    	      this.zone = defaults.zone;
+            $ = new ReservationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder shareSettings(@Nullable Output<ShareSettingsArgs> shareSettings) {
-            this.shareSettings = shareSettings;
+            $.shareSettings = shareSettings;
             return this;
         }
-        public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
-            this.shareSettings = Codegen.ofNullable(shareSettings);
-            return this;
+
+        public Builder shareSettings(ShareSettingsArgs shareSettings) {
+            return shareSettings(Output.of(shareSettings));
         }
+
         public Builder specificReservation(@Nullable Output<AllocationSpecificSKUReservationArgs> specificReservation) {
-            this.specificReservation = specificReservation;
+            $.specificReservation = specificReservation;
             return this;
         }
-        public Builder specificReservation(@Nullable AllocationSpecificSKUReservationArgs specificReservation) {
-            this.specificReservation = Codegen.ofNullable(specificReservation);
-            return this;
+
+        public Builder specificReservation(AllocationSpecificSKUReservationArgs specificReservation) {
+            return specificReservation(Output.of(specificReservation));
         }
+
         public Builder specificReservationRequired(@Nullable Output<Boolean> specificReservationRequired) {
-            this.specificReservationRequired = specificReservationRequired;
+            $.specificReservationRequired = specificReservationRequired;
             return this;
         }
-        public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
-            this.specificReservationRequired = Codegen.ofNullable(specificReservationRequired);
-            return this;
+
+        public Builder specificReservationRequired(Boolean specificReservationRequired) {
+            return specificReservationRequired(Output.of(specificReservationRequired));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public ReservationArgs build() {
-            return new ReservationArgs(description, name, project, requestId, shareSettings, specificReservation, specificReservationRequired, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public ReservationArgs build() {
+            return $;
         }
     }
+
 }

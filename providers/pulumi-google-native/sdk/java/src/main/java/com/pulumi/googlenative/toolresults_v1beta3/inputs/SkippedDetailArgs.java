@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incompatibleAppVersion")
-      private final @Nullable Output<Boolean> incompatibleAppVersion;
+    private @Nullable Output<Boolean> incompatibleAppVersion;
 
-    public Output<Boolean> incompatibleAppVersion() {
-        return this.incompatibleAppVersion == null ? Codegen.empty() : this.incompatibleAppVersion;
+    public Optional<Output<Boolean>> incompatibleAppVersion() {
+        return Optional.ofNullable(this.incompatibleAppVersion);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incompatibleArchitecture")
-      private final @Nullable Output<Boolean> incompatibleArchitecture;
+    private @Nullable Output<Boolean> incompatibleArchitecture;
 
-    public Output<Boolean> incompatibleArchitecture() {
-        return this.incompatibleArchitecture == null ? Codegen.empty() : this.incompatibleArchitecture;
+    public Optional<Output<Boolean>> incompatibleArchitecture() {
+        return Optional.ofNullable(this.incompatibleArchitecture);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class SkippedDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="incompatibleDevice")
-      private final @Nullable Output<Boolean> incompatibleDevice;
+    private @Nullable Output<Boolean> incompatibleDevice;
 
-    public Output<Boolean> incompatibleDevice() {
-        return this.incompatibleDevice == null ? Codegen.empty() : this.incompatibleDevice;
+    public Optional<Output<Boolean>> incompatibleDevice() {
+        return Optional.ofNullable(this.incompatibleDevice);
     }
 
-    public SkippedDetailArgs(
-        @Nullable Output<Boolean> incompatibleAppVersion,
-        @Nullable Output<Boolean> incompatibleArchitecture,
-        @Nullable Output<Boolean> incompatibleDevice) {
-        this.incompatibleAppVersion = incompatibleAppVersion;
-        this.incompatibleArchitecture = incompatibleArchitecture;
-        this.incompatibleDevice = incompatibleDevice;
-    }
+    private SkippedDetailArgs() {}
 
-    private SkippedDetailArgs() {
-        this.incompatibleAppVersion = Codegen.empty();
-        this.incompatibleArchitecture = Codegen.empty();
-        this.incompatibleDevice = Codegen.empty();
+    private SkippedDetailArgs(SkippedDetailArgs $) {
+        this.incompatibleAppVersion = $.incompatibleAppVersion;
+        this.incompatibleArchitecture = $.incompatibleArchitecture;
+        this.incompatibleDevice = $.incompatibleDevice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SkippedDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> incompatibleAppVersion;
-        private @Nullable Output<Boolean> incompatibleArchitecture;
-        private @Nullable Output<Boolean> incompatibleDevice;
+        private SkippedDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SkippedDetailArgs();
         }
 
         public Builder(SkippedDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.incompatibleAppVersion = defaults.incompatibleAppVersion;
-    	      this.incompatibleArchitecture = defaults.incompatibleArchitecture;
-    	      this.incompatibleDevice = defaults.incompatibleDevice;
+            $ = new SkippedDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder incompatibleAppVersion(@Nullable Output<Boolean> incompatibleAppVersion) {
-            this.incompatibleAppVersion = incompatibleAppVersion;
+            $.incompatibleAppVersion = incompatibleAppVersion;
             return this;
         }
-        public Builder incompatibleAppVersion(@Nullable Boolean incompatibleAppVersion) {
-            this.incompatibleAppVersion = Codegen.ofNullable(incompatibleAppVersion);
-            return this;
+
+        public Builder incompatibleAppVersion(Boolean incompatibleAppVersion) {
+            return incompatibleAppVersion(Output.of(incompatibleAppVersion));
         }
+
         public Builder incompatibleArchitecture(@Nullable Output<Boolean> incompatibleArchitecture) {
-            this.incompatibleArchitecture = incompatibleArchitecture;
+            $.incompatibleArchitecture = incompatibleArchitecture;
             return this;
         }
-        public Builder incompatibleArchitecture(@Nullable Boolean incompatibleArchitecture) {
-            this.incompatibleArchitecture = Codegen.ofNullable(incompatibleArchitecture);
-            return this;
+
+        public Builder incompatibleArchitecture(Boolean incompatibleArchitecture) {
+            return incompatibleArchitecture(Output.of(incompatibleArchitecture));
         }
+
         public Builder incompatibleDevice(@Nullable Output<Boolean> incompatibleDevice) {
-            this.incompatibleDevice = incompatibleDevice;
+            $.incompatibleDevice = incompatibleDevice;
             return this;
         }
-        public Builder incompatibleDevice(@Nullable Boolean incompatibleDevice) {
-            this.incompatibleDevice = Codegen.ofNullable(incompatibleDevice);
-            return this;
-        }        public SkippedDetailArgs build() {
-            return new SkippedDetailArgs(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
+
+        public Builder incompatibleDevice(Boolean incompatibleDevice) {
+            return incompatibleDevice(Output.of(incompatibleDevice));
+        }
+
+        public SkippedDetailArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class AutoscalingConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="policyUri", required=true)
-      private final String policyUri;
+    private String policyUri;
 
     public String policyUri() {
         return this.policyUri;
     }
 
-    public AutoscalingConfigResponse(String policyUri) {
-        this.policyUri = Objects.requireNonNull(policyUri, "expected parameter 'policyUri' to be non-null");
-    }
+    private AutoscalingConfigResponse() {}
 
-    private AutoscalingConfigResponse() {
-        this.policyUri = null;
+    private AutoscalingConfigResponse(AutoscalingConfigResponse $) {
+        this.policyUri = $.policyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String policyUri;
+        private AutoscalingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingConfigResponse();
         }
 
         public Builder(AutoscalingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policyUri = defaults.policyUri;
+            $ = new AutoscalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder policyUri(String policyUri) {
-            this.policyUri = Objects.requireNonNull(policyUri);
+            $.policyUri = policyUri;
             return this;
-        }        public AutoscalingConfigResponse build() {
-            return new AutoscalingConfigResponse(policyUri);
+        }
+
+        public AutoscalingConfigResponse build() {
+            $.policyUri = Objects.requireNonNull($.policyUri, "expected parameter 'policyUri' to be non-null");
+            return $;
         }
     }
+
 }

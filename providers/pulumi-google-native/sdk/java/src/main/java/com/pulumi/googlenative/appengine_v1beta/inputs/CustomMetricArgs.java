@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricName")
-      private final @Nullable Output<String> metricName;
+    private @Nullable Output<String> metricName;
 
-    public Output<String> metricName() {
-        return this.metricName == null ? Codegen.empty() : this.metricName;
+    public Optional<Output<String>> metricName() {
+        return Optional.ofNullable(this.metricName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="singleInstanceAssignment")
-      private final @Nullable Output<Double> singleInstanceAssignment;
+    private @Nullable Output<Double> singleInstanceAssignment;
 
-    public Output<Double> singleInstanceAssignment() {
-        return this.singleInstanceAssignment == null ? Codegen.empty() : this.singleInstanceAssignment;
+    public Optional<Output<Double>> singleInstanceAssignment() {
+        return Optional.ofNullable(this.singleInstanceAssignment);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetType")
-      private final @Nullable Output<String> targetType;
+    private @Nullable Output<String> targetType;
 
-    public Output<String> targetType() {
-        return this.targetType == null ? Codegen.empty() : this.targetType;
+    public Optional<Output<String>> targetType() {
+        return Optional.ofNullable(this.targetType);
     }
 
     /**
@@ -69,102 +69,88 @@ public final class CustomMetricArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="targetUtilization")
-      private final @Nullable Output<Double> targetUtilization;
+    private @Nullable Output<Double> targetUtilization;
 
-    public Output<Double> targetUtilization() {
-        return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
+    public Optional<Output<Double>> targetUtilization() {
+        return Optional.ofNullable(this.targetUtilization);
     }
 
-    public CustomMetricArgs(
-        @Nullable Output<String> filter,
-        @Nullable Output<String> metricName,
-        @Nullable Output<Double> singleInstanceAssignment,
-        @Nullable Output<String> targetType,
-        @Nullable Output<Double> targetUtilization) {
-        this.filter = filter;
-        this.metricName = metricName;
-        this.singleInstanceAssignment = singleInstanceAssignment;
-        this.targetType = targetType;
-        this.targetUtilization = targetUtilization;
-    }
+    private CustomMetricArgs() {}
 
-    private CustomMetricArgs() {
-        this.filter = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.singleInstanceAssignment = Codegen.empty();
-        this.targetType = Codegen.empty();
-        this.targetUtilization = Codegen.empty();
+    private CustomMetricArgs(CustomMetricArgs $) {
+        this.filter = $.filter;
+        this.metricName = $.metricName;
+        this.singleInstanceAssignment = $.singleInstanceAssignment;
+        this.targetType = $.targetType;
+        this.targetUtilization = $.targetUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filter;
-        private @Nullable Output<String> metricName;
-        private @Nullable Output<Double> singleInstanceAssignment;
-        private @Nullable Output<String> targetType;
-        private @Nullable Output<Double> targetUtilization;
+        private CustomMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomMetricArgs();
         }
 
         public Builder(CustomMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.metricName = defaults.metricName;
-    	      this.singleInstanceAssignment = defaults.singleInstanceAssignment;
-    	      this.targetType = defaults.targetType;
-    	      this.targetUtilization = defaults.targetUtilization;
+            $ = new CustomMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder metricName(@Nullable Output<String> metricName) {
-            this.metricName = metricName;
+            $.metricName = metricName;
             return this;
         }
-        public Builder metricName(@Nullable String metricName) {
-            this.metricName = Codegen.ofNullable(metricName);
-            return this;
+
+        public Builder metricName(String metricName) {
+            return metricName(Output.of(metricName));
         }
+
         public Builder singleInstanceAssignment(@Nullable Output<Double> singleInstanceAssignment) {
-            this.singleInstanceAssignment = singleInstanceAssignment;
+            $.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
-        public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
-            this.singleInstanceAssignment = Codegen.ofNullable(singleInstanceAssignment);
-            return this;
+
+        public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
+            return singleInstanceAssignment(Output.of(singleInstanceAssignment));
         }
+
         public Builder targetType(@Nullable Output<String> targetType) {
-            this.targetType = targetType;
+            $.targetType = targetType;
             return this;
         }
-        public Builder targetType(@Nullable String targetType) {
-            this.targetType = Codegen.ofNullable(targetType);
-            return this;
+
+        public Builder targetType(String targetType) {
+            return targetType(Output.of(targetType));
         }
+
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
-            this.targetUtilization = targetUtilization;
+            $.targetUtilization = targetUtilization;
             return this;
         }
-        public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = Codegen.ofNullable(targetUtilization);
-            return this;
-        }        public CustomMetricArgs build() {
-            return new CustomMetricArgs(filter, metricName, singleInstanceAssignment, targetType, targetUtilization);
+
+        public Builder targetUtilization(Double targetUtilization) {
+            return targetUtilization(Output.of(targetUtilization));
+        }
+
+        public CustomMetricArgs build() {
+            return $;
         }
     }
+
 }

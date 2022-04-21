@@ -22,45 +22,45 @@ public final class SensitiveTextAnnotationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="details", required=true)
-      private final Map<String,String> details;
+    private Map<String,String> details;
 
     public Map<String,String> details() {
         return this.details;
     }
 
-    public SensitiveTextAnnotationResponse(Map<String,String> details) {
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-    }
+    private SensitiveTextAnnotationResponse() {}
 
-    private SensitiveTextAnnotationResponse() {
-        this.details = Map.of();
+    private SensitiveTextAnnotationResponse(SensitiveTextAnnotationResponse $) {
+        this.details = $.details;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SensitiveTextAnnotationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> details;
+        private SensitiveTextAnnotationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SensitiveTextAnnotationResponse();
         }
 
         public Builder(SensitiveTextAnnotationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
+            $ = new SensitiveTextAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder details(Map<String,String> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
-        }        public SensitiveTextAnnotationResponse build() {
-            return new SensitiveTextAnnotationResponse(details);
+        }
+
+        public SensitiveTextAnnotationResponse build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            return $;
         }
     }
+
 }

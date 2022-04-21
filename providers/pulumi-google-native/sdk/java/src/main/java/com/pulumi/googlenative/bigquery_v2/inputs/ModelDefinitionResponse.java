@@ -19,7 +19,7 @@ public final class ModelDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="modelOptions", required=true)
-      private final ModelDefinitionModelOptionsResponse modelOptions;
+    private ModelDefinitionModelOptionsResponse modelOptions;
 
     public ModelDefinitionModelOptionsResponse modelOptions() {
         return this.modelOptions;
@@ -30,58 +30,56 @@ public final class ModelDefinitionResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="trainingRuns", required=true)
-      private final List<BqmlTrainingRunResponse> trainingRuns;
+    private List<BqmlTrainingRunResponse> trainingRuns;
 
     public List<BqmlTrainingRunResponse> trainingRuns() {
         return this.trainingRuns;
     }
 
-    public ModelDefinitionResponse(
-        ModelDefinitionModelOptionsResponse modelOptions,
-        List<BqmlTrainingRunResponse> trainingRuns) {
-        this.modelOptions = Objects.requireNonNull(modelOptions, "expected parameter 'modelOptions' to be non-null");
-        this.trainingRuns = Objects.requireNonNull(trainingRuns, "expected parameter 'trainingRuns' to be non-null");
-    }
+    private ModelDefinitionResponse() {}
 
-    private ModelDefinitionResponse() {
-        this.modelOptions = null;
-        this.trainingRuns = List.of();
+    private ModelDefinitionResponse(ModelDefinitionResponse $) {
+        this.modelOptions = $.modelOptions;
+        this.trainingRuns = $.trainingRuns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ModelDefinitionModelOptionsResponse modelOptions;
-        private List<BqmlTrainingRunResponse> trainingRuns;
+        private ModelDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelDefinitionResponse();
         }
 
         public Builder(ModelDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelOptions = defaults.modelOptions;
-    	      this.trainingRuns = defaults.trainingRuns;
+            $ = new ModelDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder modelOptions(ModelDefinitionModelOptionsResponse modelOptions) {
-            this.modelOptions = Objects.requireNonNull(modelOptions);
+            $.modelOptions = modelOptions;
             return this;
         }
+
         public Builder trainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
-            this.trainingRuns = Objects.requireNonNull(trainingRuns);
+            $.trainingRuns = trainingRuns;
             return this;
         }
+
         public Builder trainingRuns(BqmlTrainingRunResponse... trainingRuns) {
             return trainingRuns(List.of(trainingRuns));
-        }        public ModelDefinitionResponse build() {
-            return new ModelDefinitionResponse(modelOptions, trainingRuns);
+        }
+
+        public ModelDefinitionResponse build() {
+            $.modelOptions = Objects.requireNonNull($.modelOptions, "expected parameter 'modelOptions' to be non-null");
+            $.trainingRuns = Objects.requireNonNull($.trainingRuns, "expected parameter 'trainingRuns' to be non-null");
+            return $;
         }
     }
+
 }

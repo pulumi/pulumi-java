@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class BucketCustomPlacementConfigArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="dataLocations")
-      private final @Nullable Output<List<String>> dataLocations;
+    private @Nullable Output<List<String>> dataLocations;
 
-    public Output<List<String>> dataLocations() {
-        return this.dataLocations == null ? Codegen.empty() : this.dataLocations;
+    public Optional<Output<List<String>>> dataLocations() {
+        return Optional.ofNullable(this.dataLocations);
     }
 
-    public BucketCustomPlacementConfigArgs(@Nullable Output<List<String>> dataLocations) {
-        this.dataLocations = dataLocations;
-    }
+    private BucketCustomPlacementConfigArgs() {}
 
-    private BucketCustomPlacementConfigArgs() {
-        this.dataLocations = Codegen.empty();
+    private BucketCustomPlacementConfigArgs(BucketCustomPlacementConfigArgs $) {
+        this.dataLocations = $.dataLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCustomPlacementConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> dataLocations;
+        private BucketCustomPlacementConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCustomPlacementConfigArgs();
         }
 
         public Builder(BucketCustomPlacementConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataLocations = defaults.dataLocations;
+            $ = new BucketCustomPlacementConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataLocations(@Nullable Output<List<String>> dataLocations) {
-            this.dataLocations = dataLocations;
+            $.dataLocations = dataLocations;
             return this;
         }
-        public Builder dataLocations(@Nullable List<String> dataLocations) {
-            this.dataLocations = Codegen.ofNullable(dataLocations);
-            return this;
+
+        public Builder dataLocations(List<String> dataLocations) {
+            return dataLocations(Output.of(dataLocations));
         }
+
         public Builder dataLocations(String... dataLocations) {
             return dataLocations(List.of(dataLocations));
-        }        public BucketCustomPlacementConfigArgs build() {
-            return new BucketCustomPlacementConfigArgs(dataLocations);
+        }
+
+        public BucketCustomPlacementConfigArgs build() {
+            return $;
         }
     }
+
 }

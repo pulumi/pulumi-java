@@ -26,7 +26,7 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="audio", required=true)
-      private final AudioResponse audio;
+    private AudioResponse audio;
 
     public AudioResponse audio() {
         return this.audio;
@@ -37,7 +37,7 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="color", required=true)
-      private final ColorResponse color;
+    private ColorResponse color;
 
     public ColorResponse color() {
         return this.color;
@@ -48,7 +48,7 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="crop", required=true)
-      private final CropResponse crop;
+    private CropResponse crop;
 
     public CropResponse crop() {
         return this.crop;
@@ -59,7 +59,7 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="deblock", required=true)
-      private final DeblockResponse deblock;
+    private DeblockResponse deblock;
 
     public DeblockResponse deblock() {
         return this.deblock;
@@ -70,7 +70,7 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="denoise", required=true)
-      private final DenoiseResponse denoise;
+    private DenoiseResponse denoise;
 
     public DenoiseResponse denoise() {
         return this.denoise;
@@ -81,91 +81,80 @@ public final class PreprocessingConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="pad", required=true)
-      private final PadResponse pad;
+    private PadResponse pad;
 
     public PadResponse pad() {
         return this.pad;
     }
 
-    public PreprocessingConfigResponse(
-        AudioResponse audio,
-        ColorResponse color,
-        CropResponse crop,
-        DeblockResponse deblock,
-        DenoiseResponse denoise,
-        PadResponse pad) {
-        this.audio = Objects.requireNonNull(audio, "expected parameter 'audio' to be non-null");
-        this.color = Objects.requireNonNull(color, "expected parameter 'color' to be non-null");
-        this.crop = Objects.requireNonNull(crop, "expected parameter 'crop' to be non-null");
-        this.deblock = Objects.requireNonNull(deblock, "expected parameter 'deblock' to be non-null");
-        this.denoise = Objects.requireNonNull(denoise, "expected parameter 'denoise' to be non-null");
-        this.pad = Objects.requireNonNull(pad, "expected parameter 'pad' to be non-null");
-    }
+    private PreprocessingConfigResponse() {}
 
-    private PreprocessingConfigResponse() {
-        this.audio = null;
-        this.color = null;
-        this.crop = null;
-        this.deblock = null;
-        this.denoise = null;
-        this.pad = null;
+    private PreprocessingConfigResponse(PreprocessingConfigResponse $) {
+        this.audio = $.audio;
+        this.color = $.color;
+        this.crop = $.crop;
+        this.deblock = $.deblock;
+        this.denoise = $.denoise;
+        this.pad = $.pad;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreprocessingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AudioResponse audio;
-        private ColorResponse color;
-        private CropResponse crop;
-        private DeblockResponse deblock;
-        private DenoiseResponse denoise;
-        private PadResponse pad;
+        private PreprocessingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreprocessingConfigResponse();
         }
 
         public Builder(PreprocessingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audio = defaults.audio;
-    	      this.color = defaults.color;
-    	      this.crop = defaults.crop;
-    	      this.deblock = defaults.deblock;
-    	      this.denoise = defaults.denoise;
-    	      this.pad = defaults.pad;
+            $ = new PreprocessingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audio(AudioResponse audio) {
-            this.audio = Objects.requireNonNull(audio);
+            $.audio = audio;
             return this;
         }
+
         public Builder color(ColorResponse color) {
-            this.color = Objects.requireNonNull(color);
+            $.color = color;
             return this;
         }
+
         public Builder crop(CropResponse crop) {
-            this.crop = Objects.requireNonNull(crop);
+            $.crop = crop;
             return this;
         }
+
         public Builder deblock(DeblockResponse deblock) {
-            this.deblock = Objects.requireNonNull(deblock);
+            $.deblock = deblock;
             return this;
         }
+
         public Builder denoise(DenoiseResponse denoise) {
-            this.denoise = Objects.requireNonNull(denoise);
+            $.denoise = denoise;
             return this;
         }
+
         public Builder pad(PadResponse pad) {
-            this.pad = Objects.requireNonNull(pad);
+            $.pad = pad;
             return this;
-        }        public PreprocessingConfigResponse build() {
-            return new PreprocessingConfigResponse(audio, color, crop, deblock, denoise, pad);
+        }
+
+        public PreprocessingConfigResponse build() {
+            $.audio = Objects.requireNonNull($.audio, "expected parameter 'audio' to be non-null");
+            $.color = Objects.requireNonNull($.color, "expected parameter 'color' to be non-null");
+            $.crop = Objects.requireNonNull($.crop, "expected parameter 'crop' to be non-null");
+            $.deblock = Objects.requireNonNull($.deblock, "expected parameter 'deblock' to be non-null");
+            $.denoise = Objects.requireNonNull($.denoise, "expected parameter 'denoise' to be non-null");
+            $.pad = Objects.requireNonNull($.pad, "expected parameter 'pad' to be non-null");
+            return $;
         }
     }
+
 }

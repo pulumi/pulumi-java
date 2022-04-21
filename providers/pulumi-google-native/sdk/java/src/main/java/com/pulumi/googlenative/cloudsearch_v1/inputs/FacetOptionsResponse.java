@@ -22,7 +22,7 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="numFacetBuckets", required=true)
-      private final Integer numFacetBuckets;
+    private Integer numFacetBuckets;
 
     public Integer numFacetBuckets() {
         return this.numFacetBuckets;
@@ -33,7 +33,7 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="objectType", required=true)
-      private final String objectType;
+    private String objectType;
 
     public String objectType() {
         return this.objectType;
@@ -44,7 +44,7 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="operatorName", required=true)
-      private final String operatorName;
+    private String operatorName;
 
     public String operatorName() {
         return this.operatorName;
@@ -55,73 +55,66 @@ public final class FacetOptionsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceName", required=true)
-      private final String sourceName;
+    private String sourceName;
 
     public String sourceName() {
         return this.sourceName;
     }
 
-    public FacetOptionsResponse(
-        Integer numFacetBuckets,
-        String objectType,
-        String operatorName,
-        String sourceName) {
-        this.numFacetBuckets = Objects.requireNonNull(numFacetBuckets, "expected parameter 'numFacetBuckets' to be non-null");
-        this.objectType = Objects.requireNonNull(objectType, "expected parameter 'objectType' to be non-null");
-        this.operatorName = Objects.requireNonNull(operatorName, "expected parameter 'operatorName' to be non-null");
-        this.sourceName = Objects.requireNonNull(sourceName, "expected parameter 'sourceName' to be non-null");
-    }
+    private FacetOptionsResponse() {}
 
-    private FacetOptionsResponse() {
-        this.numFacetBuckets = null;
-        this.objectType = null;
-        this.operatorName = null;
-        this.sourceName = null;
+    private FacetOptionsResponse(FacetOptionsResponse $) {
+        this.numFacetBuckets = $.numFacetBuckets;
+        this.objectType = $.objectType;
+        this.operatorName = $.operatorName;
+        this.sourceName = $.sourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FacetOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numFacetBuckets;
-        private String objectType;
-        private String operatorName;
-        private String sourceName;
+        private FacetOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FacetOptionsResponse();
         }
 
         public Builder(FacetOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numFacetBuckets = defaults.numFacetBuckets;
-    	      this.objectType = defaults.objectType;
-    	      this.operatorName = defaults.operatorName;
-    	      this.sourceName = defaults.sourceName;
+            $ = new FacetOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numFacetBuckets(Integer numFacetBuckets) {
-            this.numFacetBuckets = Objects.requireNonNull(numFacetBuckets);
+            $.numFacetBuckets = numFacetBuckets;
             return this;
         }
+
         public Builder objectType(String objectType) {
-            this.objectType = Objects.requireNonNull(objectType);
+            $.objectType = objectType;
             return this;
         }
+
         public Builder operatorName(String operatorName) {
-            this.operatorName = Objects.requireNonNull(operatorName);
+            $.operatorName = operatorName;
             return this;
         }
+
         public Builder sourceName(String sourceName) {
-            this.sourceName = Objects.requireNonNull(sourceName);
+            $.sourceName = sourceName;
             return this;
-        }        public FacetOptionsResponse build() {
-            return new FacetOptionsResponse(numFacetBuckets, objectType, operatorName, sourceName);
+        }
+
+        public FacetOptionsResponse build() {
+            $.numFacetBuckets = Objects.requireNonNull($.numFacetBuckets, "expected parameter 'numFacetBuckets' to be non-null");
+            $.objectType = Objects.requireNonNull($.objectType, "expected parameter 'objectType' to be non-null");
+            $.operatorName = Objects.requireNonNull($.operatorName, "expected parameter 'operatorName' to be non-null");
+            $.sourceName = Objects.requireNonNull($.sourceName, "expected parameter 'sourceName' to be non-null");
+            return $;
         }
     }
+
 }

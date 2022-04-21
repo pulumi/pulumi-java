@@ -17,62 +17,59 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse extends 
      * 
      */
     @Import(name="gkeClusterName", required=true)
-      private final String gkeClusterName;
+    private String gkeClusterName;
 
     public String gkeClusterName() {
         return this.gkeClusterName;
     }
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public ManagedZonePrivateVisibilityConfigGKEClusterResponse(
-        String gkeClusterName,
-        String kind) {
-        this.gkeClusterName = Objects.requireNonNull(gkeClusterName, "expected parameter 'gkeClusterName' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private ManagedZonePrivateVisibilityConfigGKEClusterResponse() {}
 
-    private ManagedZonePrivateVisibilityConfigGKEClusterResponse() {
-        this.gkeClusterName = null;
-        this.kind = null;
+    private ManagedZonePrivateVisibilityConfigGKEClusterResponse(ManagedZonePrivateVisibilityConfigGKEClusterResponse $) {
+        this.gkeClusterName = $.gkeClusterName;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigGKEClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gkeClusterName;
-        private String kind;
+        private ManagedZonePrivateVisibilityConfigGKEClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigGKEClusterResponse();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigGKEClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusterName = defaults.gkeClusterName;
-    	      this.kind = defaults.kind;
+            $ = new ManagedZonePrivateVisibilityConfigGKEClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusterName(String gkeClusterName) {
-            this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
+            $.gkeClusterName = gkeClusterName;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public ManagedZonePrivateVisibilityConfigGKEClusterResponse build() {
-            return new ManagedZonePrivateVisibilityConfigGKEClusterResponse(gkeClusterName, kind);
+        }
+
+        public ManagedZonePrivateVisibilityConfigGKEClusterResponse build() {
+            $.gkeClusterName = Objects.requireNonNull($.gkeClusterName, "expected parameter 'gkeClusterName' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

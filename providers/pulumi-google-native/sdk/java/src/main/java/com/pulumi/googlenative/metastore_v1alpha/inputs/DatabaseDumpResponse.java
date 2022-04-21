@@ -21,7 +21,7 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="databaseType", required=true)
-      private final String databaseType;
+    private String databaseType;
 
     public String databaseType() {
         return this.databaseType;
@@ -32,7 +32,7 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="gcsUri", required=true)
-      private final String gcsUri;
+    private String gcsUri;
 
     public String gcsUri() {
         return this.gcsUri;
@@ -43,7 +43,7 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="sourceDatabase", required=true)
-      private final String sourceDatabase;
+    private String sourceDatabase;
 
     public String sourceDatabase() {
         return this.sourceDatabase;
@@ -54,73 +54,66 @@ public final class DatabaseDumpResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public DatabaseDumpResponse(
-        String databaseType,
-        String gcsUri,
-        String sourceDatabase,
-        String type) {
-        this.databaseType = Objects.requireNonNull(databaseType, "expected parameter 'databaseType' to be non-null");
-        this.gcsUri = Objects.requireNonNull(gcsUri, "expected parameter 'gcsUri' to be non-null");
-        this.sourceDatabase = Objects.requireNonNull(sourceDatabase, "expected parameter 'sourceDatabase' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DatabaseDumpResponse() {}
 
-    private DatabaseDumpResponse() {
-        this.databaseType = null;
-        this.gcsUri = null;
-        this.sourceDatabase = null;
-        this.type = null;
+    private DatabaseDumpResponse(DatabaseDumpResponse $) {
+        this.databaseType = $.databaseType;
+        this.gcsUri = $.gcsUri;
+        this.sourceDatabase = $.sourceDatabase;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseDumpResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseType;
-        private String gcsUri;
-        private String sourceDatabase;
-        private String type;
+        private DatabaseDumpResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseDumpResponse();
         }
 
         public Builder(DatabaseDumpResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseType = defaults.databaseType;
-    	      this.gcsUri = defaults.gcsUri;
-    	      this.sourceDatabase = defaults.sourceDatabase;
-    	      this.type = defaults.type;
+            $ = new DatabaseDumpResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseType(String databaseType) {
-            this.databaseType = Objects.requireNonNull(databaseType);
+            $.databaseType = databaseType;
             return this;
         }
+
         public Builder gcsUri(String gcsUri) {
-            this.gcsUri = Objects.requireNonNull(gcsUri);
+            $.gcsUri = gcsUri;
             return this;
         }
+
         public Builder sourceDatabase(String sourceDatabase) {
-            this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
+            $.sourceDatabase = sourceDatabase;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public DatabaseDumpResponse build() {
-            return new DatabaseDumpResponse(databaseType, gcsUri, sourceDatabase, type);
+        }
+
+        public DatabaseDumpResponse build() {
+            $.databaseType = Objects.requireNonNull($.databaseType, "expected parameter 'databaseType' to be non-null");
+            $.gcsUri = Objects.requireNonNull($.gcsUri, "expected parameter 'gcsUri' to be non-null");
+            $.sourceDatabase = Objects.requireNonNull($.sourceDatabase, "expected parameter 'sourceDatabase' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

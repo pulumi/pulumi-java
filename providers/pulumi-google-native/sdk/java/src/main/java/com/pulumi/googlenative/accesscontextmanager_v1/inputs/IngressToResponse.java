@@ -23,7 +23,7 @@ public final class IngressToResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operations", required=true)
-      private final List<ApiOperationResponse> operations;
+    private List<ApiOperationResponse> operations;
 
     public List<ApiOperationResponse> operations() {
         return this.operations;
@@ -34,61 +34,60 @@ public final class IngressToResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resources", required=true)
-      private final List<String> resources;
+    private List<String> resources;
 
     public List<String> resources() {
         return this.resources;
     }
 
-    public IngressToResponse(
-        List<ApiOperationResponse> operations,
-        List<String> resources) {
-        this.operations = Objects.requireNonNull(operations, "expected parameter 'operations' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-    }
+    private IngressToResponse() {}
 
-    private IngressToResponse() {
-        this.operations = List.of();
-        this.resources = List.of();
+    private IngressToResponse(IngressToResponse $) {
+        this.operations = $.operations;
+        this.resources = $.resources;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressToResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ApiOperationResponse> operations;
-        private List<String> resources;
+        private IngressToResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressToResponse();
         }
 
         public Builder(IngressToResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operations = defaults.operations;
-    	      this.resources = defaults.resources;
+            $ = new IngressToResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operations(List<ApiOperationResponse> operations) {
-            this.operations = Objects.requireNonNull(operations);
+            $.operations = operations;
             return this;
         }
+
         public Builder operations(ApiOperationResponse... operations) {
             return operations(List.of(operations));
         }
+
         public Builder resources(List<String> resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder resources(String... resources) {
             return resources(List.of(resources));
-        }        public IngressToResponse build() {
-            return new IngressToResponse(operations, resources);
+        }
+
+        public IngressToResponse build() {
+            $.operations = Objects.requireNonNull($.operations, "expected parameter 'operations' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            return $;
         }
     }
+
 }

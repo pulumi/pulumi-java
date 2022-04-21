@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.MetricRuleArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.QuotaLimitArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class QuotaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<List<QuotaLimitArgs>> limits;
+    private @Nullable Output<List<QuotaLimitArgs>> limits;
 
-    public Output<List<QuotaLimitArgs>> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<List<QuotaLimitArgs>>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class QuotaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metricRules")
-      private final @Nullable Output<List<MetricRuleArgs>> metricRules;
+    private @Nullable Output<List<MetricRuleArgs>> metricRules;
 
-    public Output<List<MetricRuleArgs>> metricRules() {
-        return this.metricRules == null ? Codegen.empty() : this.metricRules;
+    public Optional<Output<List<MetricRuleArgs>>> metricRules() {
+        return Optional.ofNullable(this.metricRules);
     }
 
-    public QuotaArgs(
-        @Nullable Output<List<QuotaLimitArgs>> limits,
-        @Nullable Output<List<MetricRuleArgs>> metricRules) {
-        this.limits = limits;
-        this.metricRules = metricRules;
-    }
+    private QuotaArgs() {}
 
-    private QuotaArgs() {
-        this.limits = Codegen.empty();
-        this.metricRules = Codegen.empty();
+    private QuotaArgs(QuotaArgs $) {
+        this.limits = $.limits;
+        this.metricRules = $.metricRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuotaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<QuotaLimitArgs>> limits;
-        private @Nullable Output<List<MetricRuleArgs>> metricRules;
+        private QuotaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuotaArgs();
         }
 
         public Builder(QuotaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.metricRules = defaults.metricRules;
+            $ = new QuotaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(@Nullable Output<List<QuotaLimitArgs>> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable List<QuotaLimitArgs> limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(List<QuotaLimitArgs> limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder limits(QuotaLimitArgs... limits) {
             return limits(List.of(limits));
         }
+
         public Builder metricRules(@Nullable Output<List<MetricRuleArgs>> metricRules) {
-            this.metricRules = metricRules;
+            $.metricRules = metricRules;
             return this;
         }
-        public Builder metricRules(@Nullable List<MetricRuleArgs> metricRules) {
-            this.metricRules = Codegen.ofNullable(metricRules);
-            return this;
+
+        public Builder metricRules(List<MetricRuleArgs> metricRules) {
+            return metricRules(Output.of(metricRules));
         }
+
         public Builder metricRules(MetricRuleArgs... metricRules) {
             return metricRules(List.of(metricRules));
-        }        public QuotaArgs build() {
-            return new QuotaArgs(limits, metricRules);
+        }
+
+        public QuotaArgs build() {
+            return $;
         }
     }
+
 }

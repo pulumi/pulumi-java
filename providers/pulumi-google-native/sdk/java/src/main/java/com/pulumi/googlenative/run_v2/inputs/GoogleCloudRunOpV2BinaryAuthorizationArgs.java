@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends com.pulumi.
      * 
      */
     @Import(name="breakglassJustification")
-      private final @Nullable Output<String> breakglassJustification;
+    private @Nullable Output<String> breakglassJustification;
 
-    public Output<String> breakglassJustification() {
-        return this.breakglassJustification == null ? Codegen.empty() : this.breakglassJustification;
+    public Optional<Output<String>> breakglassJustification() {
+        return Optional.ofNullable(this.breakglassJustification);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationArgs extends com.pulumi.
      * 
      */
     @Import(name="useDefault")
-      private final @Nullable Output<Boolean> useDefault;
+    private @Nullable Output<Boolean> useDefault;
 
-    public Output<Boolean> useDefault() {
-        return this.useDefault == null ? Codegen.empty() : this.useDefault;
+    public Optional<Output<Boolean>> useDefault() {
+        return Optional.ofNullable(this.useDefault);
     }
 
-    public GoogleCloudRunOpV2BinaryAuthorizationArgs(
-        @Nullable Output<String> breakglassJustification,
-        @Nullable Output<Boolean> useDefault) {
-        this.breakglassJustification = breakglassJustification;
-        this.useDefault = useDefault;
-    }
+    private GoogleCloudRunOpV2BinaryAuthorizationArgs() {}
 
-    private GoogleCloudRunOpV2BinaryAuthorizationArgs() {
-        this.breakglassJustification = Codegen.empty();
-        this.useDefault = Codegen.empty();
+    private GoogleCloudRunOpV2BinaryAuthorizationArgs(GoogleCloudRunOpV2BinaryAuthorizationArgs $) {
+        this.breakglassJustification = $.breakglassJustification;
+        this.useDefault = $.useDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2BinaryAuthorizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> breakglassJustification;
-        private @Nullable Output<Boolean> useDefault;
+        private GoogleCloudRunOpV2BinaryAuthorizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2BinaryAuthorizationArgs();
         }
 
         public Builder(GoogleCloudRunOpV2BinaryAuthorizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.breakglassJustification = defaults.breakglassJustification;
-    	      this.useDefault = defaults.useDefault;
+            $ = new GoogleCloudRunOpV2BinaryAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder breakglassJustification(@Nullable Output<String> breakglassJustification) {
-            this.breakglassJustification = breakglassJustification;
+            $.breakglassJustification = breakglassJustification;
             return this;
         }
-        public Builder breakglassJustification(@Nullable String breakglassJustification) {
-            this.breakglassJustification = Codegen.ofNullable(breakglassJustification);
-            return this;
+
+        public Builder breakglassJustification(String breakglassJustification) {
+            return breakglassJustification(Output.of(breakglassJustification));
         }
+
         public Builder useDefault(@Nullable Output<Boolean> useDefault) {
-            this.useDefault = useDefault;
+            $.useDefault = useDefault;
             return this;
         }
-        public Builder useDefault(@Nullable Boolean useDefault) {
-            this.useDefault = Codegen.ofNullable(useDefault);
-            return this;
-        }        public GoogleCloudRunOpV2BinaryAuthorizationArgs build() {
-            return new GoogleCloudRunOpV2BinaryAuthorizationArgs(breakglassJustification, useDefault);
+
+        public Builder useDefault(Boolean useDefault) {
+            return useDefault(Output.of(useDefault));
+        }
+
+        public GoogleCloudRunOpV2BinaryAuthorizationArgs build() {
+            return $;
         }
     }
+
 }

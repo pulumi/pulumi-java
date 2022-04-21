@@ -17,7 +17,7 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deletedRowCount", required=true)
-      private final String deletedRowCount;
+    private String deletedRowCount;
 
     public String deletedRowCount() {
         return this.deletedRowCount;
@@ -28,7 +28,7 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="insertedRowCount", required=true)
-      private final String insertedRowCount;
+    private String insertedRowCount;
 
     public String insertedRowCount() {
         return this.insertedRowCount;
@@ -39,64 +39,59 @@ public final class DmlStatisticsResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="updatedRowCount", required=true)
-      private final String updatedRowCount;
+    private String updatedRowCount;
 
     public String updatedRowCount() {
         return this.updatedRowCount;
     }
 
-    public DmlStatisticsResponse(
-        String deletedRowCount,
-        String insertedRowCount,
-        String updatedRowCount) {
-        this.deletedRowCount = Objects.requireNonNull(deletedRowCount, "expected parameter 'deletedRowCount' to be non-null");
-        this.insertedRowCount = Objects.requireNonNull(insertedRowCount, "expected parameter 'insertedRowCount' to be non-null");
-        this.updatedRowCount = Objects.requireNonNull(updatedRowCount, "expected parameter 'updatedRowCount' to be non-null");
-    }
+    private DmlStatisticsResponse() {}
 
-    private DmlStatisticsResponse() {
-        this.deletedRowCount = null;
-        this.insertedRowCount = null;
-        this.updatedRowCount = null;
+    private DmlStatisticsResponse(DmlStatisticsResponse $) {
+        this.deletedRowCount = $.deletedRowCount;
+        this.insertedRowCount = $.insertedRowCount;
+        this.updatedRowCount = $.updatedRowCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DmlStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deletedRowCount;
-        private String insertedRowCount;
-        private String updatedRowCount;
+        private DmlStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DmlStatisticsResponse();
         }
 
         public Builder(DmlStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletedRowCount = defaults.deletedRowCount;
-    	      this.insertedRowCount = defaults.insertedRowCount;
-    	      this.updatedRowCount = defaults.updatedRowCount;
+            $ = new DmlStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deletedRowCount(String deletedRowCount) {
-            this.deletedRowCount = Objects.requireNonNull(deletedRowCount);
+            $.deletedRowCount = deletedRowCount;
             return this;
         }
+
         public Builder insertedRowCount(String insertedRowCount) {
-            this.insertedRowCount = Objects.requireNonNull(insertedRowCount);
+            $.insertedRowCount = insertedRowCount;
             return this;
         }
+
         public Builder updatedRowCount(String updatedRowCount) {
-            this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
+            $.updatedRowCount = updatedRowCount;
             return this;
-        }        public DmlStatisticsResponse build() {
-            return new DmlStatisticsResponse(deletedRowCount, insertedRowCount, updatedRowCount);
+        }
+
+        public DmlStatisticsResponse build() {
+            $.deletedRowCount = Objects.requireNonNull($.deletedRowCount, "expected parameter 'deletedRowCount' to be non-null");
+            $.insertedRowCount = Objects.requireNonNull($.insertedRowCount, "expected parameter 'insertedRowCount' to be non-null");
+            $.updatedRowCount = Objects.requireNonNull($.updatedRowCount, "expected parameter 'updatedRowCount' to be non-null");
+            return $;
         }
     }
+
 }

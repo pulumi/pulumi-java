@@ -22,7 +22,7 @@ public final class InsightsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryInsightsEnabled", required=true)
-      private final Boolean queryInsightsEnabled;
+    private Boolean queryInsightsEnabled;
 
     public Boolean queryInsightsEnabled() {
         return this.queryInsightsEnabled;
@@ -33,7 +33,7 @@ public final class InsightsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryPlansPerMinute", required=true)
-      private final Integer queryPlansPerMinute;
+    private Integer queryPlansPerMinute;
 
     public Integer queryPlansPerMinute() {
         return this.queryPlansPerMinute;
@@ -44,7 +44,7 @@ public final class InsightsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryStringLength", required=true)
-      private final Integer queryStringLength;
+    private Integer queryStringLength;
 
     public Integer queryStringLength() {
         return this.queryStringLength;
@@ -55,7 +55,7 @@ public final class InsightsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recordApplicationTags", required=true)
-      private final Boolean recordApplicationTags;
+    private Boolean recordApplicationTags;
 
     public Boolean recordApplicationTags() {
         return this.recordApplicationTags;
@@ -66,82 +66,73 @@ public final class InsightsConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="recordClientAddress", required=true)
-      private final Boolean recordClientAddress;
+    private Boolean recordClientAddress;
 
     public Boolean recordClientAddress() {
         return this.recordClientAddress;
     }
 
-    public InsightsConfigResponse(
-        Boolean queryInsightsEnabled,
-        Integer queryPlansPerMinute,
-        Integer queryStringLength,
-        Boolean recordApplicationTags,
-        Boolean recordClientAddress) {
-        this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled, "expected parameter 'queryInsightsEnabled' to be non-null");
-        this.queryPlansPerMinute = Objects.requireNonNull(queryPlansPerMinute, "expected parameter 'queryPlansPerMinute' to be non-null");
-        this.queryStringLength = Objects.requireNonNull(queryStringLength, "expected parameter 'queryStringLength' to be non-null");
-        this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags, "expected parameter 'recordApplicationTags' to be non-null");
-        this.recordClientAddress = Objects.requireNonNull(recordClientAddress, "expected parameter 'recordClientAddress' to be non-null");
-    }
+    private InsightsConfigResponse() {}
 
-    private InsightsConfigResponse() {
-        this.queryInsightsEnabled = null;
-        this.queryPlansPerMinute = null;
-        this.queryStringLength = null;
-        this.recordApplicationTags = null;
-        this.recordClientAddress = null;
+    private InsightsConfigResponse(InsightsConfigResponse $) {
+        this.queryInsightsEnabled = $.queryInsightsEnabled;
+        this.queryPlansPerMinute = $.queryPlansPerMinute;
+        this.queryStringLength = $.queryStringLength;
+        this.recordApplicationTags = $.recordApplicationTags;
+        this.recordClientAddress = $.recordClientAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InsightsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean queryInsightsEnabled;
-        private Integer queryPlansPerMinute;
-        private Integer queryStringLength;
-        private Boolean recordApplicationTags;
-        private Boolean recordClientAddress;
+        private InsightsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InsightsConfigResponse();
         }
 
         public Builder(InsightsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryInsightsEnabled = defaults.queryInsightsEnabled;
-    	      this.queryPlansPerMinute = defaults.queryPlansPerMinute;
-    	      this.queryStringLength = defaults.queryStringLength;
-    	      this.recordApplicationTags = defaults.recordApplicationTags;
-    	      this.recordClientAddress = defaults.recordClientAddress;
+            $ = new InsightsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
-            this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
+            $.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
+
         public Builder queryPlansPerMinute(Integer queryPlansPerMinute) {
-            this.queryPlansPerMinute = Objects.requireNonNull(queryPlansPerMinute);
+            $.queryPlansPerMinute = queryPlansPerMinute;
             return this;
         }
+
         public Builder queryStringLength(Integer queryStringLength) {
-            this.queryStringLength = Objects.requireNonNull(queryStringLength);
+            $.queryStringLength = queryStringLength;
             return this;
         }
+
         public Builder recordApplicationTags(Boolean recordApplicationTags) {
-            this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
+            $.recordApplicationTags = recordApplicationTags;
             return this;
         }
+
         public Builder recordClientAddress(Boolean recordClientAddress) {
-            this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
+            $.recordClientAddress = recordClientAddress;
             return this;
-        }        public InsightsConfigResponse build() {
-            return new InsightsConfigResponse(queryInsightsEnabled, queryPlansPerMinute, queryStringLength, recordApplicationTags, recordClientAddress);
+        }
+
+        public InsightsConfigResponse build() {
+            $.queryInsightsEnabled = Objects.requireNonNull($.queryInsightsEnabled, "expected parameter 'queryInsightsEnabled' to be non-null");
+            $.queryPlansPerMinute = Objects.requireNonNull($.queryPlansPerMinute, "expected parameter 'queryPlansPerMinute' to be non-null");
+            $.queryStringLength = Objects.requireNonNull($.queryStringLength, "expected parameter 'queryStringLength' to be non-null");
+            $.recordApplicationTags = Objects.requireNonNull($.recordApplicationTags, "expected parameter 'recordApplicationTags' to be non-null");
+            $.recordClientAddress = Objects.requireNonNull($.recordClientAddress, "expected parameter 'recordClientAddress' to be non-null");
+            return $;
         }
     }
+
 }

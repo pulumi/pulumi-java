@@ -23,7 +23,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildFinishedOn", required=true)
-      private final String buildFinishedOn;
+    private String buildFinishedOn;
 
     public String buildFinishedOn() {
         return this.buildFinishedOn;
@@ -34,7 +34,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildInvocationId", required=true)
-      private final String buildInvocationId;
+    private String buildInvocationId;
 
     public String buildInvocationId() {
         return this.buildInvocationId;
@@ -45,7 +45,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="buildStartedOn", required=true)
-      private final String buildStartedOn;
+    private String buildStartedOn;
 
     public String buildStartedOn() {
         return this.buildStartedOn;
@@ -56,7 +56,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="completeness", required=true)
-      private final CompletenessResponse completeness;
+    private CompletenessResponse completeness;
 
     public CompletenessResponse completeness() {
         return this.completeness;
@@ -67,82 +67,73 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reproducible", required=true)
-      private final Boolean reproducible;
+    private Boolean reproducible;
 
     public Boolean reproducible() {
         return this.reproducible;
     }
 
-    public MetadataResponse(
-        String buildFinishedOn,
-        String buildInvocationId,
-        String buildStartedOn,
-        CompletenessResponse completeness,
-        Boolean reproducible) {
-        this.buildFinishedOn = Objects.requireNonNull(buildFinishedOn, "expected parameter 'buildFinishedOn' to be non-null");
-        this.buildInvocationId = Objects.requireNonNull(buildInvocationId, "expected parameter 'buildInvocationId' to be non-null");
-        this.buildStartedOn = Objects.requireNonNull(buildStartedOn, "expected parameter 'buildStartedOn' to be non-null");
-        this.completeness = Objects.requireNonNull(completeness, "expected parameter 'completeness' to be non-null");
-        this.reproducible = Objects.requireNonNull(reproducible, "expected parameter 'reproducible' to be non-null");
-    }
+    private MetadataResponse() {}
 
-    private MetadataResponse() {
-        this.buildFinishedOn = null;
-        this.buildInvocationId = null;
-        this.buildStartedOn = null;
-        this.completeness = null;
-        this.reproducible = null;
+    private MetadataResponse(MetadataResponse $) {
+        this.buildFinishedOn = $.buildFinishedOn;
+        this.buildInvocationId = $.buildInvocationId;
+        this.buildStartedOn = $.buildStartedOn;
+        this.completeness = $.completeness;
+        this.reproducible = $.reproducible;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String buildFinishedOn;
-        private String buildInvocationId;
-        private String buildStartedOn;
-        private CompletenessResponse completeness;
-        private Boolean reproducible;
+        private MetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataResponse();
         }
 
         public Builder(MetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildFinishedOn = defaults.buildFinishedOn;
-    	      this.buildInvocationId = defaults.buildInvocationId;
-    	      this.buildStartedOn = defaults.buildStartedOn;
-    	      this.completeness = defaults.completeness;
-    	      this.reproducible = defaults.reproducible;
+            $ = new MetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buildFinishedOn(String buildFinishedOn) {
-            this.buildFinishedOn = Objects.requireNonNull(buildFinishedOn);
+            $.buildFinishedOn = buildFinishedOn;
             return this;
         }
+
         public Builder buildInvocationId(String buildInvocationId) {
-            this.buildInvocationId = Objects.requireNonNull(buildInvocationId);
+            $.buildInvocationId = buildInvocationId;
             return this;
         }
+
         public Builder buildStartedOn(String buildStartedOn) {
-            this.buildStartedOn = Objects.requireNonNull(buildStartedOn);
+            $.buildStartedOn = buildStartedOn;
             return this;
         }
+
         public Builder completeness(CompletenessResponse completeness) {
-            this.completeness = Objects.requireNonNull(completeness);
+            $.completeness = completeness;
             return this;
         }
+
         public Builder reproducible(Boolean reproducible) {
-            this.reproducible = Objects.requireNonNull(reproducible);
+            $.reproducible = reproducible;
             return this;
-        }        public MetadataResponse build() {
-            return new MetadataResponse(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
+        }
+
+        public MetadataResponse build() {
+            $.buildFinishedOn = Objects.requireNonNull($.buildFinishedOn, "expected parameter 'buildFinishedOn' to be non-null");
+            $.buildInvocationId = Objects.requireNonNull($.buildInvocationId, "expected parameter 'buildInvocationId' to be non-null");
+            $.buildStartedOn = Objects.requireNonNull($.buildStartedOn, "expected parameter 'buildStartedOn' to be non-null");
+            $.completeness = Objects.requireNonNull($.completeness, "expected parameter 'completeness' to be non-null");
+            $.reproducible = Objects.requireNonNull($.reproducible, "expected parameter 'reproducible' to be non-null");
+            return $;
         }
     }
+
 }

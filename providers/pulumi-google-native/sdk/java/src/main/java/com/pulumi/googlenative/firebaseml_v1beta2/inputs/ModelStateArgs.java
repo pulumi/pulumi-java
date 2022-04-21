@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ModelStateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="published")
-      private final @Nullable Output<Boolean> published;
+    private @Nullable Output<Boolean> published;
 
-    public Output<Boolean> published() {
-        return this.published == null ? Codegen.empty() : this.published;
+    public Optional<Output<Boolean>> published() {
+        return Optional.ofNullable(this.published);
     }
 
-    public ModelStateArgs(@Nullable Output<Boolean> published) {
-        this.published = published;
-    }
+    private ModelStateArgs() {}
 
-    private ModelStateArgs() {
-        this.published = Codegen.empty();
+    private ModelStateArgs(ModelStateArgs $) {
+        this.published = $.published;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> published;
+        private ModelStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelStateArgs();
         }
 
         public Builder(ModelStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.published = defaults.published;
+            $ = new ModelStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder published(@Nullable Output<Boolean> published) {
-            this.published = published;
+            $.published = published;
             return this;
         }
-        public Builder published(@Nullable Boolean published) {
-            this.published = Codegen.ofNullable(published);
-            return this;
-        }        public ModelStateArgs build() {
-            return new ModelStateArgs(published);
+
+        public Builder published(Boolean published) {
+            return published(Output.of(published));
+        }
+
+        public ModelStateArgs build() {
+            return $;
         }
     }
+
 }

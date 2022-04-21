@@ -22,7 +22,7 @@ public final class ReusableConfigWrapperResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="reusableConfig", required=true)
-      private final String reusableConfig;
+    private String reusableConfig;
 
     public String reusableConfig() {
         return this.reusableConfig;
@@ -33,55 +33,52 @@ public final class ReusableConfigWrapperResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="reusableConfigValues", required=true)
-      private final ReusableConfigValuesResponse reusableConfigValues;
+    private ReusableConfigValuesResponse reusableConfigValues;
 
     public ReusableConfigValuesResponse reusableConfigValues() {
         return this.reusableConfigValues;
     }
 
-    public ReusableConfigWrapperResponse(
-        String reusableConfig,
-        ReusableConfigValuesResponse reusableConfigValues) {
-        this.reusableConfig = Objects.requireNonNull(reusableConfig, "expected parameter 'reusableConfig' to be non-null");
-        this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues, "expected parameter 'reusableConfigValues' to be non-null");
-    }
+    private ReusableConfigWrapperResponse() {}
 
-    private ReusableConfigWrapperResponse() {
-        this.reusableConfig = null;
-        this.reusableConfigValues = null;
+    private ReusableConfigWrapperResponse(ReusableConfigWrapperResponse $) {
+        this.reusableConfig = $.reusableConfig;
+        this.reusableConfigValues = $.reusableConfigValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReusableConfigWrapperResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String reusableConfig;
-        private ReusableConfigValuesResponse reusableConfigValues;
+        private ReusableConfigWrapperResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReusableConfigWrapperResponse();
         }
 
         public Builder(ReusableConfigWrapperResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.reusableConfig = defaults.reusableConfig;
-    	      this.reusableConfigValues = defaults.reusableConfigValues;
+            $ = new ReusableConfigWrapperResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder reusableConfig(String reusableConfig) {
-            this.reusableConfig = Objects.requireNonNull(reusableConfig);
+            $.reusableConfig = reusableConfig;
             return this;
         }
+
         public Builder reusableConfigValues(ReusableConfigValuesResponse reusableConfigValues) {
-            this.reusableConfigValues = Objects.requireNonNull(reusableConfigValues);
+            $.reusableConfigValues = reusableConfigValues;
             return this;
-        }        public ReusableConfigWrapperResponse build() {
-            return new ReusableConfigWrapperResponse(reusableConfig, reusableConfigValues);
+        }
+
+        public ReusableConfigWrapperResponse build() {
+            $.reusableConfig = Objects.requireNonNull($.reusableConfig, "expected parameter 'reusableConfig' to be non-null");
+            $.reusableConfigValues = Objects.requireNonNull($.reusableConfigValues, "expected parameter 'reusableConfigValues' to be non-null");
+            return $;
         }
     }
+
 }

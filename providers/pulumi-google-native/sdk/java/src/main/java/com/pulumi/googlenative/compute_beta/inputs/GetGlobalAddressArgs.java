@@ -15,62 +15,58 @@ public final class GetGlobalAddressArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetGlobalAddressArgs Empty = new GetGlobalAddressArgs();
 
     @Import(name="address", required=true)
-      private final String address;
+    private String address;
 
     public String address() {
         return this.address;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetGlobalAddressArgs(
-        String address,
-        @Nullable String project) {
-        this.address = Objects.requireNonNull(address, "expected parameter 'address' to be non-null");
-        this.project = project;
-    }
+    private GetGlobalAddressArgs() {}
 
-    private GetGlobalAddressArgs() {
-        this.address = null;
-        this.project = null;
+    private GetGlobalAddressArgs(GetGlobalAddressArgs $) {
+        this.address = $.address;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String address;
-        private @Nullable String project;
+        private GetGlobalAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalAddressArgs();
         }
 
         public Builder(GetGlobalAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.address = defaults.address;
-    	      this.project = defaults.project;
+            $ = new GetGlobalAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder address(String address) {
-            this.address = Objects.requireNonNull(address);
+            $.address = address;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetGlobalAddressArgs build() {
-            return new GetGlobalAddressArgs(address, project);
+        }
+
+        public GetGlobalAddressArgs build() {
+            $.address = Objects.requireNonNull($.address, "expected parameter 'address' to be non-null");
+            return $;
         }
     }
+
 }

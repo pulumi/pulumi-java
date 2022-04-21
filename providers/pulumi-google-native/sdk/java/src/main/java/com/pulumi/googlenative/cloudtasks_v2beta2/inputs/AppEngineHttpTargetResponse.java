@@ -21,45 +21,45 @@ public final class AppEngineHttpTargetResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="appEngineRoutingOverride", required=true)
-      private final AppEngineRoutingResponse appEngineRoutingOverride;
+    private AppEngineRoutingResponse appEngineRoutingOverride;
 
     public AppEngineRoutingResponse appEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
     }
 
-    public AppEngineHttpTargetResponse(AppEngineRoutingResponse appEngineRoutingOverride) {
-        this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride, "expected parameter 'appEngineRoutingOverride' to be non-null");
-    }
+    private AppEngineHttpTargetResponse() {}
 
-    private AppEngineHttpTargetResponse() {
-        this.appEngineRoutingOverride = null;
+    private AppEngineHttpTargetResponse(AppEngineHttpTargetResponse $) {
+        this.appEngineRoutingOverride = $.appEngineRoutingOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineHttpTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AppEngineRoutingResponse appEngineRoutingOverride;
+        private AppEngineHttpTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineHttpTargetResponse();
         }
 
         public Builder(AppEngineHttpTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineRoutingOverride = defaults.appEngineRoutingOverride;
+            $ = new AppEngineHttpTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineRoutingOverride(AppEngineRoutingResponse appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
+            $.appEngineRoutingOverride = appEngineRoutingOverride;
             return this;
-        }        public AppEngineHttpTargetResponse build() {
-            return new AppEngineHttpTargetResponse(appEngineRoutingOverride);
+        }
+
+        public AppEngineHttpTargetResponse build() {
+            $.appEngineRoutingOverride = Objects.requireNonNull($.appEngineRoutingOverride, "expected parameter 'appEngineRoutingOverride' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoprovisioningLocations", required=true)
-      private final List<String> autoprovisioningLocations;
+    private List<String> autoprovisioningLocations;
 
     public List<String> autoprovisioningLocations() {
         return this.autoprovisioningLocations;
@@ -36,7 +36,7 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoprovisioningNodePoolDefaults", required=true)
-      private final AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
+    private AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
 
     public AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults;
@@ -47,7 +47,7 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="autoscalingProfile", required=true)
-      private final String autoscalingProfile;
+    private String autoscalingProfile;
 
     public String autoscalingProfile() {
         return this.autoscalingProfile;
@@ -58,7 +58,7 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableNodeAutoprovisioning", required=true)
-      private final Boolean enableNodeAutoprovisioning;
+    private Boolean enableNodeAutoprovisioning;
 
     public Boolean enableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning;
@@ -69,88 +69,81 @@ public final class ClusterAutoscalingResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="resourceLimits", required=true)
-      private final List<ResourceLimitResponse> resourceLimits;
+    private List<ResourceLimitResponse> resourceLimits;
 
     public List<ResourceLimitResponse> resourceLimits() {
         return this.resourceLimits;
     }
 
-    public ClusterAutoscalingResponse(
-        List<String> autoprovisioningLocations,
-        AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
-        String autoscalingProfile,
-        Boolean enableNodeAutoprovisioning,
-        List<ResourceLimitResponse> resourceLimits) {
-        this.autoprovisioningLocations = Objects.requireNonNull(autoprovisioningLocations, "expected parameter 'autoprovisioningLocations' to be non-null");
-        this.autoprovisioningNodePoolDefaults = Objects.requireNonNull(autoprovisioningNodePoolDefaults, "expected parameter 'autoprovisioningNodePoolDefaults' to be non-null");
-        this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile, "expected parameter 'autoscalingProfile' to be non-null");
-        this.enableNodeAutoprovisioning = Objects.requireNonNull(enableNodeAutoprovisioning, "expected parameter 'enableNodeAutoprovisioning' to be non-null");
-        this.resourceLimits = Objects.requireNonNull(resourceLimits, "expected parameter 'resourceLimits' to be non-null");
-    }
+    private ClusterAutoscalingResponse() {}
 
-    private ClusterAutoscalingResponse() {
-        this.autoprovisioningLocations = List.of();
-        this.autoprovisioningNodePoolDefaults = null;
-        this.autoscalingProfile = null;
-        this.enableNodeAutoprovisioning = null;
-        this.resourceLimits = List.of();
+    private ClusterAutoscalingResponse(ClusterAutoscalingResponse $) {
+        this.autoprovisioningLocations = $.autoprovisioningLocations;
+        this.autoprovisioningNodePoolDefaults = $.autoprovisioningNodePoolDefaults;
+        this.autoscalingProfile = $.autoscalingProfile;
+        this.enableNodeAutoprovisioning = $.enableNodeAutoprovisioning;
+        this.resourceLimits = $.resourceLimits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAutoscalingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> autoprovisioningLocations;
-        private AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults;
-        private String autoscalingProfile;
-        private Boolean enableNodeAutoprovisioning;
-        private List<ResourceLimitResponse> resourceLimits;
+        private ClusterAutoscalingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAutoscalingResponse();
         }
 
         public Builder(ClusterAutoscalingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoprovisioningLocations = defaults.autoprovisioningLocations;
-    	      this.autoprovisioningNodePoolDefaults = defaults.autoprovisioningNodePoolDefaults;
-    	      this.autoscalingProfile = defaults.autoscalingProfile;
-    	      this.enableNodeAutoprovisioning = defaults.enableNodeAutoprovisioning;
-    	      this.resourceLimits = defaults.resourceLimits;
+            $ = new ClusterAutoscalingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoprovisioningLocations(List<String> autoprovisioningLocations) {
-            this.autoprovisioningLocations = Objects.requireNonNull(autoprovisioningLocations);
+            $.autoprovisioningLocations = autoprovisioningLocations;
             return this;
         }
+
         public Builder autoprovisioningLocations(String... autoprovisioningLocations) {
             return autoprovisioningLocations(List.of(autoprovisioningLocations));
         }
+
         public Builder autoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults) {
-            this.autoprovisioningNodePoolDefaults = Objects.requireNonNull(autoprovisioningNodePoolDefaults);
+            $.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
             return this;
         }
+
         public Builder autoscalingProfile(String autoscalingProfile) {
-            this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
+            $.autoscalingProfile = autoscalingProfile;
             return this;
         }
+
         public Builder enableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
-            this.enableNodeAutoprovisioning = Objects.requireNonNull(enableNodeAutoprovisioning);
+            $.enableNodeAutoprovisioning = enableNodeAutoprovisioning;
             return this;
         }
+
         public Builder resourceLimits(List<ResourceLimitResponse> resourceLimits) {
-            this.resourceLimits = Objects.requireNonNull(resourceLimits);
+            $.resourceLimits = resourceLimits;
             return this;
         }
+
         public Builder resourceLimits(ResourceLimitResponse... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
-        }        public ClusterAutoscalingResponse build() {
-            return new ClusterAutoscalingResponse(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
+        }
+
+        public ClusterAutoscalingResponse build() {
+            $.autoprovisioningLocations = Objects.requireNonNull($.autoprovisioningLocations, "expected parameter 'autoprovisioningLocations' to be non-null");
+            $.autoprovisioningNodePoolDefaults = Objects.requireNonNull($.autoprovisioningNodePoolDefaults, "expected parameter 'autoprovisioningNodePoolDefaults' to be non-null");
+            $.autoscalingProfile = Objects.requireNonNull($.autoscalingProfile, "expected parameter 'autoscalingProfile' to be non-null");
+            $.enableNodeAutoprovisioning = Objects.requireNonNull($.enableNodeAutoprovisioning, "expected parameter 'enableNodeAutoprovisioning' to be non-null");
+            $.resourceLimits = Objects.requireNonNull($.resourceLimits, "expected parameter 'resourceLimits' to be non-null");
+            return $;
         }
     }
+
 }

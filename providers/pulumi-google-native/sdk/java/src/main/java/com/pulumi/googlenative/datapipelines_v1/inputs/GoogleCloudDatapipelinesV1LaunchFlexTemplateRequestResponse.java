@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @Import(name="launchParameter", required=true)
-      private final GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter() {
         return this.launchParameter;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -56,73 +56,66 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse e
      * 
      */
     @Import(name="validateOnly", required=true)
-      private final Boolean validateOnly;
+    private Boolean validateOnly;
 
     public Boolean validateOnly() {
         return this.validateOnly;
     }
 
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(
-        GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
-        String location,
-        String project,
-        Boolean validateOnly) {
-        this.launchParameter = Objects.requireNonNull(launchParameter, "expected parameter 'launchParameter' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.validateOnly = Objects.requireNonNull(validateOnly, "expected parameter 'validateOnly' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse() {}
 
-    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse() {
-        this.launchParameter = null;
-        this.location = null;
-        this.project = null;
-        this.validateOnly = null;
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse $) {
+        this.launchParameter = $.launchParameter;
+        this.location = $.location;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter;
-        private String location;
-        private String project;
-        private Boolean validateOnly;
+        private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launchParameter = defaults.launchParameter;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter) {
-            this.launchParameter = Objects.requireNonNull(launchParameter);
+            $.launchParameter = launchParameter;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder validateOnly(Boolean validateOnly) {
-            this.validateOnly = Objects.requireNonNull(validateOnly);
+            $.validateOnly = validateOnly;
             return this;
-        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
-            return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(launchParameter, location, project, validateOnly);
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse build() {
+            $.launchParameter = Objects.requireNonNull($.launchParameter, "expected parameter 'launchParameter' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.validateOnly = Objects.requireNonNull($.validateOnly, "expected parameter 'validateOnly' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.baremetalsolution_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.baremetalsolution_v2.inputs.ScheduleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -45,24 +45,24 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -70,138 +70,120 @@ public final class SnapshotSchedulePolicyArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="schedules")
-      private final @Nullable Output<List<ScheduleArgs>> schedules;
+    private @Nullable Output<List<ScheduleArgs>> schedules;
 
-    public Output<List<ScheduleArgs>> schedules() {
-        return this.schedules == null ? Codegen.empty() : this.schedules;
+    public Optional<Output<List<ScheduleArgs>>> schedules() {
+        return Optional.ofNullable(this.schedules);
     }
 
     @Import(name="snapshotSchedulePolicyId", required=true)
-      private final Output<String> snapshotSchedulePolicyId;
+    private Output<String> snapshotSchedulePolicyId;
 
     public Output<String> snapshotSchedulePolicyId() {
         return this.snapshotSchedulePolicyId;
     }
 
-    public SnapshotSchedulePolicyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> id,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<List<ScheduleArgs>> schedules,
-        Output<String> snapshotSchedulePolicyId) {
-        this.description = description;
-        this.id = id;
-        this.labels = labels;
-        this.location = location;
-        this.project = project;
-        this.schedules = schedules;
-        this.snapshotSchedulePolicyId = Objects.requireNonNull(snapshotSchedulePolicyId, "expected parameter 'snapshotSchedulePolicyId' to be non-null");
-    }
+    private SnapshotSchedulePolicyArgs() {}
 
-    private SnapshotSchedulePolicyArgs() {
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.schedules = Codegen.empty();
-        this.snapshotSchedulePolicyId = Codegen.empty();
+    private SnapshotSchedulePolicyArgs(SnapshotSchedulePolicyArgs $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.project = $.project;
+        this.schedules = $.schedules;
+        this.snapshotSchedulePolicyId = $.snapshotSchedulePolicyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotSchedulePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> id;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<ScheduleArgs>> schedules;
-        private Output<String> snapshotSchedulePolicyId;
+        private SnapshotSchedulePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotSchedulePolicyArgs();
         }
 
         public Builder(SnapshotSchedulePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.schedules = defaults.schedules;
-    	      this.snapshotSchedulePolicyId = defaults.snapshotSchedulePolicyId;
+            $ = new SnapshotSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
-            this.schedules = schedules;
+            $.schedules = schedules;
             return this;
         }
-        public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Codegen.ofNullable(schedules);
-            return this;
+
+        public Builder schedules(List<ScheduleArgs> schedules) {
+            return schedules(Output.of(schedules));
         }
+
         public Builder schedules(ScheduleArgs... schedules) {
             return schedules(List.of(schedules));
         }
+
         public Builder snapshotSchedulePolicyId(Output<String> snapshotSchedulePolicyId) {
-            this.snapshotSchedulePolicyId = Objects.requireNonNull(snapshotSchedulePolicyId);
+            $.snapshotSchedulePolicyId = snapshotSchedulePolicyId;
             return this;
         }
+
         public Builder snapshotSchedulePolicyId(String snapshotSchedulePolicyId) {
-            this.snapshotSchedulePolicyId = Output.of(Objects.requireNonNull(snapshotSchedulePolicyId));
-            return this;
-        }        public SnapshotSchedulePolicyArgs build() {
-            return new SnapshotSchedulePolicyArgs(description, id, labels, location, project, schedules, snapshotSchedulePolicyId);
+            return snapshotSchedulePolicyId(Output.of(snapshotSchedulePolicyId));
+        }
+
+        public SnapshotSchedulePolicyArgs build() {
+            $.snapshotSchedulePolicyId = Objects.requireNonNull($.snapshotSchedulePolicyId, "expected parameter 'snapshotSchedulePolicyId' to be non-null");
+            return $;
         }
     }
+
 }

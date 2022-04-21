@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class JobPlacementArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterLabels")
-      private final @Nullable Output<Map<String,String>> clusterLabels;
+    private @Nullable Output<Map<String,String>> clusterLabels;
 
-    public Output<Map<String,String>> clusterLabels() {
-        return this.clusterLabels == null ? Codegen.empty() : this.clusterLabels;
+    public Optional<Output<Map<String,String>>> clusterLabels() {
+        return Optional.ofNullable(this.clusterLabels);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class JobPlacementArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
     }
 
-    public JobPlacementArgs(
-        @Nullable Output<Map<String,String>> clusterLabels,
-        Output<String> clusterName) {
-        this.clusterLabels = clusterLabels;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-    }
+    private JobPlacementArgs() {}
 
-    private JobPlacementArgs() {
-        this.clusterLabels = Codegen.empty();
-        this.clusterName = Codegen.empty();
+    private JobPlacementArgs(JobPlacementArgs $) {
+        this.clusterLabels = $.clusterLabels;
+        this.clusterName = $.clusterName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobPlacementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> clusterLabels;
-        private Output<String> clusterName;
+        private JobPlacementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobPlacementArgs();
         }
 
         public Builder(JobPlacementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterLabels = defaults.clusterLabels;
-    	      this.clusterName = defaults.clusterName;
+            $ = new JobPlacementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterLabels(@Nullable Output<Map<String,String>> clusterLabels) {
-            this.clusterLabels = clusterLabels;
+            $.clusterLabels = clusterLabels;
             return this;
         }
-        public Builder clusterLabels(@Nullable Map<String,String> clusterLabels) {
-            this.clusterLabels = Codegen.ofNullable(clusterLabels);
-            return this;
+
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
+            return clusterLabels(Output.of(clusterLabels));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
-        }        public JobPlacementArgs build() {
-            return new JobPlacementArgs(clusterLabels, clusterName);
+            return clusterName(Output.of(clusterName));
+        }
+
+        public JobPlacementArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            return $;
         }
     }
+
 }

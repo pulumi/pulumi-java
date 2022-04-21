@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionAttributes")
-      private final @Nullable Output<Map<String,String>> connectionAttributes;
+    private @Nullable Output<Map<String,String>> connectionAttributes;
 
-    public Output<Map<String,String>> connectionAttributes() {
-        return this.connectionAttributes == null ? Codegen.empty() : this.connectionAttributes;
+    public Optional<Output<Map<String,String>>> connectionAttributes() {
+        return Optional.ofNullable(this.connectionAttributes);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseService", required=true)
-      private final Output<String> databaseService;
+    private Output<String> databaseService;
 
     public Output<String> databaseService() {
         return this.databaseService;
@@ -48,7 +48,7 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostname", required=true)
-      private final Output<String> hostname;
+    private Output<String> hostname;
 
     public Output<String> hostname() {
         return this.hostname;
@@ -59,7 +59,7 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final Output<String> password;
+    private Output<String> password;
 
     public Output<String> password() {
         return this.password;
@@ -70,10 +70,10 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -81,115 +81,102 @@ public final class OracleProfileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final Output<String> username;
+    private Output<String> username;
 
     public Output<String> username() {
         return this.username;
     }
 
-    public OracleProfileArgs(
-        @Nullable Output<Map<String,String>> connectionAttributes,
-        Output<String> databaseService,
-        Output<String> hostname,
-        Output<String> password,
-        @Nullable Output<Integer> port,
-        Output<String> username) {
-        this.connectionAttributes = connectionAttributes;
-        this.databaseService = Objects.requireNonNull(databaseService, "expected parameter 'databaseService' to be non-null");
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.port = port;
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private OracleProfileArgs() {}
 
-    private OracleProfileArgs() {
-        this.connectionAttributes = Codegen.empty();
-        this.databaseService = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.password = Codegen.empty();
-        this.port = Codegen.empty();
-        this.username = Codegen.empty();
+    private OracleProfileArgs(OracleProfileArgs $) {
+        this.connectionAttributes = $.connectionAttributes;
+        this.databaseService = $.databaseService;
+        this.hostname = $.hostname;
+        this.password = $.password;
+        this.port = $.port;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> connectionAttributes;
-        private Output<String> databaseService;
-        private Output<String> hostname;
-        private Output<String> password;
-        private @Nullable Output<Integer> port;
-        private Output<String> username;
+        private OracleProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleProfileArgs();
         }
 
         public Builder(OracleProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionAttributes = defaults.connectionAttributes;
-    	      this.databaseService = defaults.databaseService;
-    	      this.hostname = defaults.hostname;
-    	      this.password = defaults.password;
-    	      this.port = defaults.port;
-    	      this.username = defaults.username;
+            $ = new OracleProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionAttributes(@Nullable Output<Map<String,String>> connectionAttributes) {
-            this.connectionAttributes = connectionAttributes;
+            $.connectionAttributes = connectionAttributes;
             return this;
         }
-        public Builder connectionAttributes(@Nullable Map<String,String> connectionAttributes) {
-            this.connectionAttributes = Codegen.ofNullable(connectionAttributes);
-            return this;
+
+        public Builder connectionAttributes(Map<String,String> connectionAttributes) {
+            return connectionAttributes(Output.of(connectionAttributes));
         }
+
         public Builder databaseService(Output<String> databaseService) {
-            this.databaseService = Objects.requireNonNull(databaseService);
+            $.databaseService = databaseService;
             return this;
         }
+
         public Builder databaseService(String databaseService) {
-            this.databaseService = Output.of(Objects.requireNonNull(databaseService));
-            return this;
+            return databaseService(Output.of(databaseService));
         }
+
         public Builder hostname(Output<String> hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Output.of(Objects.requireNonNull(hostname));
-            return this;
+            return hostname(Output.of(hostname));
         }
+
         public Builder password(Output<String> password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Output.of(Objects.requireNonNull(password));
-            return this;
+            return password(Output.of(password));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder username(Output<String> username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Output.of(Objects.requireNonNull(username));
-            return this;
-        }        public OracleProfileArgs build() {
-            return new OracleProfileArgs(connectionAttributes, databaseService, hostname, password, port, username);
+            return username(Output.of(username));
+        }
+
+        public OracleProfileArgs build() {
+            $.databaseService = Objects.requireNonNull($.databaseService, "expected parameter 'databaseService' to be non-null");
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

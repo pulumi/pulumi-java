@@ -5,13 +5,13 @@ package com.pulumi.googlenative.healthcare_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.enums.ConsentState;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1ConsentPolicyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,21 +24,21 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="consentArtifact", required=true)
-      private final Output<String> consentArtifact;
+    private Output<String> consentArtifact;
 
     public Output<String> consentArtifact() {
         return this.consentArtifact;
     }
 
     @Import(name="consentStoreId", required=true)
-      private final Output<String> consentStoreId;
+    private Output<String> consentStoreId;
 
     public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -49,17 +49,17 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -89,17 +89,17 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies;
+    private @Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies;
 
-    public Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final Output<ConsentState> state;
+    private Output<ConsentState> state;
 
     public Output<ConsentState> state() {
         return this.state;
@@ -118,10 +118,10 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -129,196 +129,167 @@ public final class ConsentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
     }
 
-    public ConsentArgs(
-        Output<String> consentArtifact,
-        Output<String> consentStoreId,
-        Output<String> datasetId,
-        @Nullable Output<String> expireTime,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies,
-        @Nullable Output<String> project,
-        Output<ConsentState> state,
-        @Nullable Output<String> ttl,
-        Output<String> userId) {
-        this.consentArtifact = Objects.requireNonNull(consentArtifact, "expected parameter 'consentArtifact' to be non-null");
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.expireTime = expireTime;
-        this.location = location;
-        this.metadata = metadata;
-        this.name = name;
-        this.policies = policies;
-        this.project = project;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.ttl = ttl;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-    }
+    private ConsentArgs() {}
 
-    private ConsentArgs() {
-        this.consentArtifact = Codegen.empty();
-        this.consentStoreId = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.expireTime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.policies = Codegen.empty();
-        this.project = Codegen.empty();
-        this.state = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.userId = Codegen.empty();
+    private ConsentArgs(ConsentArgs $) {
+        this.consentArtifact = $.consentArtifact;
+        this.consentStoreId = $.consentStoreId;
+        this.datasetId = $.datasetId;
+        this.expireTime = $.expireTime;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.policies = $.policies;
+        this.project = $.project;
+        this.state = $.state;
+        this.ttl = $.ttl;
+        this.userId = $.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> consentArtifact;
-        private Output<String> consentStoreId;
-        private Output<String> datasetId;
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies;
-        private @Nullable Output<String> project;
-        private Output<ConsentState> state;
-        private @Nullable Output<String> ttl;
-        private Output<String> userId;
+        private ConsentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentArgs();
         }
 
         public Builder(ConsentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentArtifact = defaults.consentArtifact;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.expireTime = defaults.expireTime;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.policies = defaults.policies;
-    	      this.project = defaults.project;
-    	      this.state = defaults.state;
-    	      this.ttl = defaults.ttl;
-    	      this.userId = defaults.userId;
+            $ = new ConsentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentArtifact(Output<String> consentArtifact) {
-            this.consentArtifact = Objects.requireNonNull(consentArtifact);
+            $.consentArtifact = consentArtifact;
             return this;
         }
+
         public Builder consentArtifact(String consentArtifact) {
-            this.consentArtifact = Output.of(Objects.requireNonNull(consentArtifact));
-            return this;
+            return consentArtifact(Output.of(consentArtifact));
         }
+
         public Builder consentStoreId(Output<String> consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
-            return this;
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder policies(@Nullable Output<List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs>> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs> policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
+
+        public Builder policies(List<GoogleCloudHealthcareV1beta1ConsentPolicyArgs> policies) {
+            return policies(Output.of(policies));
         }
+
         public Builder policies(GoogleCloudHealthcareV1beta1ConsentPolicyArgs... policies) {
             return policies(List.of(policies));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder state(Output<ConsentState> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(ConsentState state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
+            return state(Output.of(state));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
-        }        public ConsentArgs build() {
-            return new ConsentArgs(consentArtifact, consentStoreId, datasetId, expireTime, location, metadata, name, policies, project, state, ttl, userId);
+            return userId(Output.of(userId));
+        }
+
+        public ConsentArgs build() {
+            $.consentArtifact = Objects.requireNonNull($.consentArtifact, "expected parameter 'consentArtifact' to be non-null");
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -32,55 +32,52 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse ext
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(
-        String resourceId,
-        String resourceType) {
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse() {}
 
-    private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse() {
-        this.resourceId = null;
-        this.resourceType = null;
+    private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse $) {
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceId;
-        private String resourceType;
+        private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse();
         }
 
         public Builder(GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse build() {
-            return new GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(resourceId, resourceType);
+        }
+
+        public GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse build() {
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

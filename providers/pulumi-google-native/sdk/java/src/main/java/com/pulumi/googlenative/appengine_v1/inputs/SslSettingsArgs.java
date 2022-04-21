@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1.enums.SslSettingsSslManagementType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SslSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslManagementType")
-      private final @Nullable Output<SslSettingsSslManagementType> sslManagementType;
+    private @Nullable Output<SslSettingsSslManagementType> sslManagementType;
 
-    public Output<SslSettingsSslManagementType> sslManagementType() {
-        return this.sslManagementType == null ? Codegen.empty() : this.sslManagementType;
+    public Optional<Output<SslSettingsSslManagementType>> sslManagementType() {
+        return Optional.ofNullable(this.sslManagementType);
     }
 
-    public SslSettingsArgs(
-        @Nullable Output<String> certificateId,
-        @Nullable Output<SslSettingsSslManagementType> sslManagementType) {
-        this.certificateId = certificateId;
-        this.sslManagementType = sslManagementType;
-    }
+    private SslSettingsArgs() {}
 
-    private SslSettingsArgs() {
-        this.certificateId = Codegen.empty();
-        this.sslManagementType = Codegen.empty();
+    private SslSettingsArgs(SslSettingsArgs $) {
+        this.certificateId = $.certificateId;
+        this.sslManagementType = $.sslManagementType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> certificateId;
-        private @Nullable Output<SslSettingsSslManagementType> sslManagementType;
+        private SslSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslSettingsArgs();
         }
 
         public Builder(SslSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateId = defaults.certificateId;
-    	      this.sslManagementType = defaults.sslManagementType;
+            $ = new SslSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder sslManagementType(@Nullable Output<SslSettingsSslManagementType> sslManagementType) {
-            this.sslManagementType = sslManagementType;
+            $.sslManagementType = sslManagementType;
             return this;
         }
-        public Builder sslManagementType(@Nullable SslSettingsSslManagementType sslManagementType) {
-            this.sslManagementType = Codegen.ofNullable(sslManagementType);
-            return this;
-        }        public SslSettingsArgs build() {
-            return new SslSettingsArgs(certificateId, sslManagementType);
+
+        public Builder sslManagementType(SslSettingsSslManagementType sslManagementType) {
+            return sslManagementType(Output.of(sslManagementType));
+        }
+
+        public SslSettingsArgs build() {
+            return $;
         }
     }
+
 }

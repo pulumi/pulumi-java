@@ -15,62 +15,58 @@ public final class GetScanConfigArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetScanConfigArgs Empty = new GetScanConfigArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="scanConfigId", required=true)
-      private final String scanConfigId;
+    private String scanConfigId;
 
     public String scanConfigId() {
         return this.scanConfigId;
     }
 
-    public GetScanConfigArgs(
-        @Nullable String project,
-        String scanConfigId) {
-        this.project = project;
-        this.scanConfigId = Objects.requireNonNull(scanConfigId, "expected parameter 'scanConfigId' to be non-null");
-    }
+    private GetScanConfigArgs() {}
 
-    private GetScanConfigArgs() {
-        this.project = null;
-        this.scanConfigId = null;
+    private GetScanConfigArgs(GetScanConfigArgs $) {
+        this.project = $.project;
+        this.scanConfigId = $.scanConfigId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetScanConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String scanConfigId;
+        private GetScanConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetScanConfigArgs();
         }
 
         public Builder(GetScanConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.scanConfigId = defaults.scanConfigId;
+            $ = new GetScanConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder scanConfigId(String scanConfigId) {
-            this.scanConfigId = Objects.requireNonNull(scanConfigId);
+            $.scanConfigId = scanConfigId;
             return this;
-        }        public GetScanConfigArgs build() {
-            return new GetScanConfigArgs(project, scanConfigId);
+        }
+
+        public GetScanConfigArgs build() {
+            $.scanConfigId = Objects.requireNonNull($.scanConfigId, "expected parameter 'scanConfigId' to be non-null");
+            return $;
         }
     }
+
 }

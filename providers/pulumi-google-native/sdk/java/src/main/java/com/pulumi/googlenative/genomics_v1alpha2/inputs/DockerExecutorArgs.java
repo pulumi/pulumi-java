@@ -5,7 +5,6 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cmd", required=true)
-      private final Output<String> cmd;
+    private Output<String> cmd;
 
     public Output<String> cmd() {
         return this.cmd;
@@ -34,63 +33,60 @@ public final class DockerExecutorArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="imageName", required=true)
-      private final Output<String> imageName;
+    private Output<String> imageName;
 
     public Output<String> imageName() {
         return this.imageName;
     }
 
-    public DockerExecutorArgs(
-        Output<String> cmd,
-        Output<String> imageName) {
-        this.cmd = Objects.requireNonNull(cmd, "expected parameter 'cmd' to be non-null");
-        this.imageName = Objects.requireNonNull(imageName, "expected parameter 'imageName' to be non-null");
-    }
+    private DockerExecutorArgs() {}
 
-    private DockerExecutorArgs() {
-        this.cmd = Codegen.empty();
-        this.imageName = Codegen.empty();
+    private DockerExecutorArgs(DockerExecutorArgs $) {
+        this.cmd = $.cmd;
+        this.imageName = $.imageName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DockerExecutorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cmd;
-        private Output<String> imageName;
+        private DockerExecutorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DockerExecutorArgs();
         }
 
         public Builder(DockerExecutorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cmd = defaults.cmd;
-    	      this.imageName = defaults.imageName;
+            $ = new DockerExecutorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cmd(Output<String> cmd) {
-            this.cmd = Objects.requireNonNull(cmd);
+            $.cmd = cmd;
             return this;
         }
+
         public Builder cmd(String cmd) {
-            this.cmd = Output.of(Objects.requireNonNull(cmd));
-            return this;
+            return cmd(Output.of(cmd));
         }
+
         public Builder imageName(Output<String> imageName) {
-            this.imageName = Objects.requireNonNull(imageName);
+            $.imageName = imageName;
             return this;
         }
+
         public Builder imageName(String imageName) {
-            this.imageName = Output.of(Objects.requireNonNull(imageName));
-            return this;
-        }        public DockerExecutorArgs build() {
-            return new DockerExecutorArgs(cmd, imageName);
+            return imageName(Output.of(imageName));
+        }
+
+        public DockerExecutorArgs build() {
+            $.cmd = Objects.requireNonNull($.cmd, "expected parameter 'cmd' to be non-null");
+            $.imageName = Objects.requireNonNull($.imageName, "expected parameter 'imageName' to be non-null");
+            return $;
         }
     }
+
 }

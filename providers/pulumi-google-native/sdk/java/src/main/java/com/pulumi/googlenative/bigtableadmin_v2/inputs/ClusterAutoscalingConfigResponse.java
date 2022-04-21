@@ -22,7 +22,7 @@ public final class ClusterAutoscalingConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="autoscalingLimits", required=true)
-      private final AutoscalingLimitsResponse autoscalingLimits;
+    private AutoscalingLimitsResponse autoscalingLimits;
 
     public AutoscalingLimitsResponse autoscalingLimits() {
         return this.autoscalingLimits;
@@ -33,55 +33,52 @@ public final class ClusterAutoscalingConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="autoscalingTargets", required=true)
-      private final AutoscalingTargetsResponse autoscalingTargets;
+    private AutoscalingTargetsResponse autoscalingTargets;
 
     public AutoscalingTargetsResponse autoscalingTargets() {
         return this.autoscalingTargets;
     }
 
-    public ClusterAutoscalingConfigResponse(
-        AutoscalingLimitsResponse autoscalingLimits,
-        AutoscalingTargetsResponse autoscalingTargets) {
-        this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits, "expected parameter 'autoscalingLimits' to be non-null");
-        this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets, "expected parameter 'autoscalingTargets' to be non-null");
-    }
+    private ClusterAutoscalingConfigResponse() {}
 
-    private ClusterAutoscalingConfigResponse() {
-        this.autoscalingLimits = null;
-        this.autoscalingTargets = null;
+    private ClusterAutoscalingConfigResponse(ClusterAutoscalingConfigResponse $) {
+        this.autoscalingLimits = $.autoscalingLimits;
+        this.autoscalingTargets = $.autoscalingTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterAutoscalingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AutoscalingLimitsResponse autoscalingLimits;
-        private AutoscalingTargetsResponse autoscalingTargets;
+        private ClusterAutoscalingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterAutoscalingConfigResponse();
         }
 
         public Builder(ClusterAutoscalingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingLimits = defaults.autoscalingLimits;
-    	      this.autoscalingTargets = defaults.autoscalingTargets;
+            $ = new ClusterAutoscalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingLimits(AutoscalingLimitsResponse autoscalingLimits) {
-            this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
+            $.autoscalingLimits = autoscalingLimits;
             return this;
         }
+
         public Builder autoscalingTargets(AutoscalingTargetsResponse autoscalingTargets) {
-            this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
+            $.autoscalingTargets = autoscalingTargets;
             return this;
-        }        public ClusterAutoscalingConfigResponse build() {
-            return new ClusterAutoscalingConfigResponse(autoscalingLimits, autoscalingTargets);
+        }
+
+        public ClusterAutoscalingConfigResponse build() {
+            $.autoscalingLimits = Objects.requireNonNull($.autoscalingLimits, "expected parameter 'autoscalingLimits' to be non-null");
+            $.autoscalingTargets = Objects.requireNonNull($.autoscalingTargets, "expected parameter 'autoscalingTargets' to be non-null");
+            return $;
         }
     }
+
 }

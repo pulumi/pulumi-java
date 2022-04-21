@@ -5,11 +5,11 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.BigQueryDestinationArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.ConsumptionMeteringConfigArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bigqueryDestination")
-      private final @Nullable Output<BigQueryDestinationArgs> bigqueryDestination;
+    private @Nullable Output<BigQueryDestinationArgs> bigqueryDestination;
 
-    public Output<BigQueryDestinationArgs> bigqueryDestination() {
-        return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
+    public Optional<Output<BigQueryDestinationArgs>> bigqueryDestination() {
+        return Optional.ofNullable(this.bigqueryDestination);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="consumptionMeteringConfig")
-      private final @Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
+    private @Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
 
-    public Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig() {
-        return this.consumptionMeteringConfig == null ? Codegen.empty() : this.consumptionMeteringConfig;
+    public Optional<Output<ConsumptionMeteringConfigArgs>> consumptionMeteringConfig() {
+        return Optional.ofNullable(this.consumptionMeteringConfig);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class ResourceUsageExportConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enableNetworkEgressMetering")
-      private final @Nullable Output<Boolean> enableNetworkEgressMetering;
+    private @Nullable Output<Boolean> enableNetworkEgressMetering;
 
-    public Output<Boolean> enableNetworkEgressMetering() {
-        return this.enableNetworkEgressMetering == null ? Codegen.empty() : this.enableNetworkEgressMetering;
+    public Optional<Output<Boolean>> enableNetworkEgressMetering() {
+        return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
 
-    public ResourceUsageExportConfigArgs(
-        @Nullable Output<BigQueryDestinationArgs> bigqueryDestination,
-        @Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig,
-        @Nullable Output<Boolean> enableNetworkEgressMetering) {
-        this.bigqueryDestination = bigqueryDestination;
-        this.consumptionMeteringConfig = consumptionMeteringConfig;
-        this.enableNetworkEgressMetering = enableNetworkEgressMetering;
-    }
+    private ResourceUsageExportConfigArgs() {}
 
-    private ResourceUsageExportConfigArgs() {
-        this.bigqueryDestination = Codegen.empty();
-        this.consumptionMeteringConfig = Codegen.empty();
-        this.enableNetworkEgressMetering = Codegen.empty();
+    private ResourceUsageExportConfigArgs(ResourceUsageExportConfigArgs $) {
+        this.bigqueryDestination = $.bigqueryDestination;
+        this.consumptionMeteringConfig = $.consumptionMeteringConfig;
+        this.enableNetworkEgressMetering = $.enableNetworkEgressMetering;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceUsageExportConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BigQueryDestinationArgs> bigqueryDestination;
-        private @Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig;
-        private @Nullable Output<Boolean> enableNetworkEgressMetering;
+        private ResourceUsageExportConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceUsageExportConfigArgs();
         }
 
         public Builder(ResourceUsageExportConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
-    	      this.consumptionMeteringConfig = defaults.consumptionMeteringConfig;
-    	      this.enableNetworkEgressMetering = defaults.enableNetworkEgressMetering;
+            $ = new ResourceUsageExportConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(@Nullable Output<BigQueryDestinationArgs> bigqueryDestination) {
-            this.bigqueryDestination = bigqueryDestination;
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
-        public Builder bigqueryDestination(@Nullable BigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Codegen.ofNullable(bigqueryDestination);
-            return this;
+
+        public Builder bigqueryDestination(BigQueryDestinationArgs bigqueryDestination) {
+            return bigqueryDestination(Output.of(bigqueryDestination));
         }
+
         public Builder consumptionMeteringConfig(@Nullable Output<ConsumptionMeteringConfigArgs> consumptionMeteringConfig) {
-            this.consumptionMeteringConfig = consumptionMeteringConfig;
+            $.consumptionMeteringConfig = consumptionMeteringConfig;
             return this;
         }
-        public Builder consumptionMeteringConfig(@Nullable ConsumptionMeteringConfigArgs consumptionMeteringConfig) {
-            this.consumptionMeteringConfig = Codegen.ofNullable(consumptionMeteringConfig);
-            return this;
+
+        public Builder consumptionMeteringConfig(ConsumptionMeteringConfigArgs consumptionMeteringConfig) {
+            return consumptionMeteringConfig(Output.of(consumptionMeteringConfig));
         }
+
         public Builder enableNetworkEgressMetering(@Nullable Output<Boolean> enableNetworkEgressMetering) {
-            this.enableNetworkEgressMetering = enableNetworkEgressMetering;
+            $.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
-        public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
-            this.enableNetworkEgressMetering = Codegen.ofNullable(enableNetworkEgressMetering);
-            return this;
-        }        public ResourceUsageExportConfigArgs build() {
-            return new ResourceUsageExportConfigArgs(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
+
+        public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
+            return enableNetworkEgressMetering(Output.of(enableNetworkEgressMetering));
+        }
+
+        public ResourceUsageExportConfigArgs build() {
+            return $;
         }
     }
+
 }

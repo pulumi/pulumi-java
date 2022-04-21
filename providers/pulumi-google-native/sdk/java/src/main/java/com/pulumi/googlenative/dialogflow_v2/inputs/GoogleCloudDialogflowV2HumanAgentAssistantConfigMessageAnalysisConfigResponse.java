@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
      * 
      */
     @Import(name="enableEntityExtraction", required=true)
-      private final Boolean enableEntityExtraction;
+    private Boolean enableEntityExtraction;
 
     public Boolean enableEntityExtraction() {
         return this.enableEntityExtraction;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalys
      * 
      */
     @Import(name="enableSentimentAnalysis", required=true)
-      private final Boolean enableSentimentAnalysis;
+    private Boolean enableSentimentAnalysis;
 
     public Boolean enableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse(
-        Boolean enableEntityExtraction,
-        Boolean enableSentimentAnalysis) {
-        this.enableEntityExtraction = Objects.requireNonNull(enableEntityExtraction, "expected parameter 'enableEntityExtraction' to be non-null");
-        this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis, "expected parameter 'enableSentimentAnalysis' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse() {
-        this.enableEntityExtraction = null;
-        this.enableSentimentAnalysis = null;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse $) {
+        this.enableEntityExtraction = $.enableEntityExtraction;
+        this.enableSentimentAnalysis = $.enableSentimentAnalysis;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableEntityExtraction;
-        private Boolean enableSentimentAnalysis;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableEntityExtraction = defaults.enableEntityExtraction;
-    	      this.enableSentimentAnalysis = defaults.enableSentimentAnalysis;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableEntityExtraction(Boolean enableEntityExtraction) {
-            this.enableEntityExtraction = Objects.requireNonNull(enableEntityExtraction);
+            $.enableEntityExtraction = enableEntityExtraction;
             return this;
         }
+
         public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
-            this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
+            $.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse(enableEntityExtraction, enableSentimentAnalysis);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigMessageAnalysisConfigResponse build() {
+            $.enableEntityExtraction = Objects.requireNonNull($.enableEntityExtraction, "expected parameter 'enableEntityExtraction' to be non-null");
+            $.enableSentimentAnalysis = Objects.requireNonNull($.enableSentimentAnalysis, "expected parameter 'enableSentimentAnalysis' to be non-null");
+            return $;
         }
     }
+
 }

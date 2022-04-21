@@ -15,110 +15,100 @@ public final class GetPerfSampleSeriesArgs extends com.pulumi.resources.InvokeAr
     public static final GetPerfSampleSeriesArgs Empty = new GetPerfSampleSeriesArgs();
 
     @Import(name="executionId", required=true)
-      private final String executionId;
+    private String executionId;
 
     public String executionId() {
         return this.executionId;
     }
 
     @Import(name="historyId", required=true)
-      private final String historyId;
+    private String historyId;
 
     public String historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sampleSeriesId", required=true)
-      private final String sampleSeriesId;
+    private String sampleSeriesId;
 
     public String sampleSeriesId() {
         return this.sampleSeriesId;
     }
 
     @Import(name="stepId", required=true)
-      private final String stepId;
+    private String stepId;
 
     public String stepId() {
         return this.stepId;
     }
 
-    public GetPerfSampleSeriesArgs(
-        String executionId,
-        String historyId,
-        @Nullable String project,
-        String sampleSeriesId,
-        String stepId) {
-        this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.project = project;
-        this.sampleSeriesId = Objects.requireNonNull(sampleSeriesId, "expected parameter 'sampleSeriesId' to be non-null");
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private GetPerfSampleSeriesArgs() {}
 
-    private GetPerfSampleSeriesArgs() {
-        this.executionId = null;
-        this.historyId = null;
-        this.project = null;
-        this.sampleSeriesId = null;
-        this.stepId = null;
+    private GetPerfSampleSeriesArgs(GetPerfSampleSeriesArgs $) {
+        this.executionId = $.executionId;
+        this.historyId = $.historyId;
+        this.project = $.project;
+        this.sampleSeriesId = $.sampleSeriesId;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPerfSampleSeriesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String executionId;
-        private String historyId;
-        private @Nullable String project;
-        private String sampleSeriesId;
-        private String stepId;
+        private GetPerfSampleSeriesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPerfSampleSeriesArgs();
         }
 
         public Builder(GetPerfSampleSeriesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionId = defaults.executionId;
-    	      this.historyId = defaults.historyId;
-    	      this.project = defaults.project;
-    	      this.sampleSeriesId = defaults.sampleSeriesId;
-    	      this.stepId = defaults.stepId;
+            $ = new GetPerfSampleSeriesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Objects.requireNonNull(executionId);
+            $.executionId = executionId;
             return this;
         }
+
         public Builder historyId(String historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder sampleSeriesId(String sampleSeriesId) {
-            this.sampleSeriesId = Objects.requireNonNull(sampleSeriesId);
+            $.sampleSeriesId = sampleSeriesId;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
-        }        public GetPerfSampleSeriesArgs build() {
-            return new GetPerfSampleSeriesArgs(executionId, historyId, project, sampleSeriesId, stepId);
+        }
+
+        public GetPerfSampleSeriesArgs build() {
+            $.executionId = Objects.requireNonNull($.executionId, "expected parameter 'executionId' to be non-null");
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            $.sampleSeriesId = Objects.requireNonNull($.sampleSeriesId, "expected parameter 'sampleSeriesId' to be non-null");
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

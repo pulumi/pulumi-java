@@ -21,7 +21,7 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -32,7 +32,7 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -43,64 +43,59 @@ public final class UrlDispatchRuleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public UrlDispatchRuleResponse(
-        String domain,
-        String path,
-        String service) {
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private UrlDispatchRuleResponse() {}
 
-    private UrlDispatchRuleResponse() {
-        this.domain = null;
-        this.path = null;
-        this.service = null;
+    private UrlDispatchRuleResponse(UrlDispatchRuleResponse $) {
+        this.domain = $.domain;
+        this.path = $.path;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlDispatchRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domain;
-        private String path;
-        private String service;
+        private UrlDispatchRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlDispatchRuleResponse();
         }
 
         public Builder(UrlDispatchRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domain = defaults.domain;
-    	      this.path = defaults.path;
-    	      this.service = defaults.service;
+            $ = new UrlDispatchRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public UrlDispatchRuleResponse build() {
-            return new UrlDispatchRuleResponse(domain, path, service);
+        }
+
+        public UrlDispatchRuleResponse build() {
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

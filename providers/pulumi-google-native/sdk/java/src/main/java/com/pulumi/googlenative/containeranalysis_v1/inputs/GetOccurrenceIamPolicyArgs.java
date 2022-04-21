@@ -15,62 +15,58 @@ public final class GetOccurrenceIamPolicyArgs extends com.pulumi.resources.Invok
     public static final GetOccurrenceIamPolicyArgs Empty = new GetOccurrenceIamPolicyArgs();
 
     @Import(name="occurrenceId", required=true)
-      private final String occurrenceId;
+    private String occurrenceId;
 
     public String occurrenceId() {
         return this.occurrenceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetOccurrenceIamPolicyArgs(
-        String occurrenceId,
-        @Nullable String project) {
-        this.occurrenceId = Objects.requireNonNull(occurrenceId, "expected parameter 'occurrenceId' to be non-null");
-        this.project = project;
-    }
+    private GetOccurrenceIamPolicyArgs() {}
 
-    private GetOccurrenceIamPolicyArgs() {
-        this.occurrenceId = null;
-        this.project = null;
+    private GetOccurrenceIamPolicyArgs(GetOccurrenceIamPolicyArgs $) {
+        this.occurrenceId = $.occurrenceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOccurrenceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String occurrenceId;
-        private @Nullable String project;
+        private GetOccurrenceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOccurrenceIamPolicyArgs();
         }
 
         public Builder(GetOccurrenceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.occurrenceId = defaults.occurrenceId;
-    	      this.project = defaults.project;
+            $ = new GetOccurrenceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder occurrenceId(String occurrenceId) {
-            this.occurrenceId = Objects.requireNonNull(occurrenceId);
+            $.occurrenceId = occurrenceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetOccurrenceIamPolicyArgs build() {
-            return new GetOccurrenceIamPolicyArgs(occurrenceId, project);
+        }
+
+        public GetOccurrenceIamPolicyArgs build() {
+            $.occurrenceId = Objects.requireNonNull($.occurrenceId, "expected parameter 'occurrenceId' to be non-null");
+            return $;
         }
     }
+
 }

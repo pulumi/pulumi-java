@@ -13,78 +13,73 @@ public final class GetInstanceAttachmentArgs extends com.pulumi.resources.Invoke
     public static final GetInstanceAttachmentArgs Empty = new GetInstanceAttachmentArgs();
 
     @Import(name="attachmentId", required=true)
-      private final String attachmentId;
+    private String attachmentId;
 
     public String attachmentId() {
         return this.attachmentId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetInstanceAttachmentArgs(
-        String attachmentId,
-        String instanceId,
-        String organizationId) {
-        this.attachmentId = Objects.requireNonNull(attachmentId, "expected parameter 'attachmentId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetInstanceAttachmentArgs() {}
 
-    private GetInstanceAttachmentArgs() {
-        this.attachmentId = null;
-        this.instanceId = null;
-        this.organizationId = null;
+    private GetInstanceAttachmentArgs(GetInstanceAttachmentArgs $) {
+        this.attachmentId = $.attachmentId;
+        this.instanceId = $.instanceId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceAttachmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attachmentId;
-        private String instanceId;
-        private String organizationId;
+        private GetInstanceAttachmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceAttachmentArgs();
         }
 
         public Builder(GetInstanceAttachmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attachmentId = defaults.attachmentId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetInstanceAttachmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attachmentId(String attachmentId) {
-            this.attachmentId = Objects.requireNonNull(attachmentId);
+            $.attachmentId = attachmentId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetInstanceAttachmentArgs build() {
-            return new GetInstanceAttachmentArgs(attachmentId, instanceId, organizationId);
+        }
+
+        public GetInstanceAttachmentArgs build() {
+            $.attachmentId = Objects.requireNonNull($.attachmentId, "expected parameter 'attachmentId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

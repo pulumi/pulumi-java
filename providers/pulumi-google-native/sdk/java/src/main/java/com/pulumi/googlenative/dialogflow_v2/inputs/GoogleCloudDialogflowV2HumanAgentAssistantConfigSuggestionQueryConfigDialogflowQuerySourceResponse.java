@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="agent", required=true)
-      private final String agent;
+    private String agent;
 
     public String agent() {
         return this.agent;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse(String agent) {
-        this.agent = Objects.requireNonNull(agent, "expected parameter 'agent' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse() {
-        this.agent = null;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse $) {
+        this.agent = $.agent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agent;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agent = defaults.agent;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder agent(String agent) {
-            this.agent = Objects.requireNonNull(agent);
+            $.agent = agent;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse(agent);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse build() {
+            $.agent = Objects.requireNonNull($.agent, "expected parameter 'agent' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FileIODetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filePattern")
-      private final @Nullable Output<String> filePattern;
+    private @Nullable Output<String> filePattern;
 
-    public Output<String> filePattern() {
-        return this.filePattern == null ? Codegen.empty() : this.filePattern;
+    public Optional<Output<String>> filePattern() {
+        return Optional.ofNullable(this.filePattern);
     }
 
-    public FileIODetailsArgs(@Nullable Output<String> filePattern) {
-        this.filePattern = filePattern;
-    }
+    private FileIODetailsArgs() {}
 
-    private FileIODetailsArgs() {
-        this.filePattern = Codegen.empty();
+    private FileIODetailsArgs(FileIODetailsArgs $) {
+        this.filePattern = $.filePattern;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileIODetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> filePattern;
+        private FileIODetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileIODetailsArgs();
         }
 
         public Builder(FileIODetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePattern = defaults.filePattern;
+            $ = new FileIODetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filePattern(@Nullable Output<String> filePattern) {
-            this.filePattern = filePattern;
+            $.filePattern = filePattern;
             return this;
         }
-        public Builder filePattern(@Nullable String filePattern) {
-            this.filePattern = Codegen.ofNullable(filePattern);
-            return this;
-        }        public FileIODetailsArgs build() {
-            return new FileIODetailsArgs(filePattern);
+
+        public Builder filePattern(String filePattern) {
+            return filePattern(Output.of(filePattern));
+        }
+
+        public FileIODetailsArgs build() {
+            return $;
         }
     }
+
 }

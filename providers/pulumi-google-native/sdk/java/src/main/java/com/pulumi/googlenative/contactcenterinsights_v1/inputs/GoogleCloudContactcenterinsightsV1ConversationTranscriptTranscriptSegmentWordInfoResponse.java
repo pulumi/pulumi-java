@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="confidence", required=true)
-      private final Double confidence;
+    private Double confidence;
 
     public Double confidence() {
         return this.confidence;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="endOffset", required=true)
-      private final String endOffset;
+    private String endOffset;
 
     public String endOffset() {
         return this.endOffset;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="startOffset", required=true)
-      private final String startOffset;
+    private String startOffset;
 
     public String startOffset() {
         return this.startOffset;
@@ -55,73 +55,66 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @Import(name="word", required=true)
-      private final String word;
+    private String word;
 
     public String word() {
         return this.word;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(
-        Double confidence,
-        String endOffset,
-        String startOffset,
-        String word) {
-        this.confidence = Objects.requireNonNull(confidence, "expected parameter 'confidence' to be non-null");
-        this.endOffset = Objects.requireNonNull(endOffset, "expected parameter 'endOffset' to be non-null");
-        this.startOffset = Objects.requireNonNull(startOffset, "expected parameter 'startOffset' to be non-null");
-        this.word = Objects.requireNonNull(word, "expected parameter 'word' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse() {
-        this.confidence = null;
-        this.endOffset = null;
-        this.startOffset = null;
-        this.word = null;
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse $) {
+        this.confidence = $.confidence;
+        this.endOffset = $.endOffset;
+        this.startOffset = $.startOffset;
+        this.word = $.word;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double confidence;
-        private String endOffset;
-        private String startOffset;
-        private String word;
+        private GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidence = defaults.confidence;
-    	      this.endOffset = defaults.endOffset;
-    	      this.startOffset = defaults.startOffset;
-    	      this.word = defaults.word;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidence(Double confidence) {
-            this.confidence = Objects.requireNonNull(confidence);
+            $.confidence = confidence;
             return this;
         }
+
         public Builder endOffset(String endOffset) {
-            this.endOffset = Objects.requireNonNull(endOffset);
+            $.endOffset = endOffset;
             return this;
         }
+
         public Builder startOffset(String startOffset) {
-            this.startOffset = Objects.requireNonNull(startOffset);
+            $.startOffset = startOffset;
             return this;
         }
+
         public Builder word(String word) {
-            this.word = Objects.requireNonNull(word);
+            $.word = word;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse(confidence, endOffset, startOffset, word);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfoResponse build() {
+            $.confidence = Objects.requireNonNull($.confidence, "expected parameter 'confidence' to be non-null");
+            $.endOffset = Objects.requireNonNull($.endOffset, "expected parameter 'endOffset' to be non-null");
+            $.startOffset = Objects.requireNonNull($.startOffset, "expected parameter 'startOffset' to be non-null");
+            $.word = Objects.requireNonNull($.word, "expected parameter 'word' to be non-null");
+            return $;
         }
     }
+
 }

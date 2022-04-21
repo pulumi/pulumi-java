@@ -15,78 +15,72 @@ public final class GetTargetVpnGatewayArgs extends com.pulumi.resources.InvokeAr
     public static final GetTargetVpnGatewayArgs Empty = new GetTargetVpnGatewayArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="targetVpnGateway", required=true)
-      private final String targetVpnGateway;
+    private String targetVpnGateway;
 
     public String targetVpnGateway() {
         return this.targetVpnGateway;
     }
 
-    public GetTargetVpnGatewayArgs(
-        @Nullable String project,
-        String region,
-        String targetVpnGateway) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway, "expected parameter 'targetVpnGateway' to be non-null");
-    }
+    private GetTargetVpnGatewayArgs() {}
 
-    private GetTargetVpnGatewayArgs() {
-        this.project = null;
-        this.region = null;
-        this.targetVpnGateway = null;
+    private GetTargetVpnGatewayArgs(GetTargetVpnGatewayArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.targetVpnGateway = $.targetVpnGateway;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetVpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String targetVpnGateway;
+        private GetTargetVpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetVpnGatewayArgs();
         }
 
         public Builder(GetTargetVpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.targetVpnGateway = defaults.targetVpnGateway;
+            $ = new GetTargetVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder targetVpnGateway(String targetVpnGateway) {
-            this.targetVpnGateway = Objects.requireNonNull(targetVpnGateway);
+            $.targetVpnGateway = targetVpnGateway;
             return this;
-        }        public GetTargetVpnGatewayArgs build() {
-            return new GetTargetVpnGatewayArgs(project, region, targetVpnGateway);
+        }
+
+        public GetTargetVpnGatewayArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.targetVpnGateway = Objects.requireNonNull($.targetVpnGateway, "expected parameter 'targetVpnGateway' to be non-null");
+            return $;
         }
     }
+
 }

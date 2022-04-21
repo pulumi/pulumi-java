@@ -15,62 +15,58 @@ public final class GetReleaseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetReleaseArgs Empty = new GetReleaseArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="releaseId", required=true)
-      private final String releaseId;
+    private String releaseId;
 
     public String releaseId() {
         return this.releaseId;
     }
 
-    public GetReleaseArgs(
-        @Nullable String project,
-        String releaseId) {
-        this.project = project;
-        this.releaseId = Objects.requireNonNull(releaseId, "expected parameter 'releaseId' to be non-null");
-    }
+    private GetReleaseArgs() {}
 
-    private GetReleaseArgs() {
-        this.project = null;
-        this.releaseId = null;
+    private GetReleaseArgs(GetReleaseArgs $) {
+        this.project = $.project;
+        this.releaseId = $.releaseId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetReleaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String releaseId;
+        private GetReleaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetReleaseArgs();
         }
 
         public Builder(GetReleaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.releaseId = defaults.releaseId;
+            $ = new GetReleaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder releaseId(String releaseId) {
-            this.releaseId = Objects.requireNonNull(releaseId);
+            $.releaseId = releaseId;
             return this;
-        }        public GetReleaseArgs build() {
-            return new GetReleaseArgs(project, releaseId);
+        }
+
+        public GetReleaseArgs build() {
+            $.releaseId = Objects.requireNonNull($.releaseId, "expected parameter 'releaseId' to be non-null");
+            return $;
         }
     }
+
 }

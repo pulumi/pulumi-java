@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeSeriesFilter")
-      private final @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
+    private @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
 
-    public Output<TimeSeriesFilterArgs> timeSeriesFilter() {
-        return this.timeSeriesFilter == null ? Codegen.empty() : this.timeSeriesFilter;
+    public Optional<Output<TimeSeriesFilterArgs>> timeSeriesFilter() {
+        return Optional.ofNullable(this.timeSeriesFilter);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeSeriesFilterRatio")
-      private final @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
+    private @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
 
-    public Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio() {
-        return this.timeSeriesFilterRatio == null ? Codegen.empty() : this.timeSeriesFilterRatio;
+    public Optional<Output<TimeSeriesFilterRatioArgs>> timeSeriesFilterRatio() {
+        return Optional.ofNullable(this.timeSeriesFilterRatio);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeSeriesQueryLanguage")
-      private final @Nullable Output<String> timeSeriesQueryLanguage;
+    private @Nullable Output<String> timeSeriesQueryLanguage;
 
-    public Output<String> timeSeriesQueryLanguage() {
-        return this.timeSeriesQueryLanguage == null ? Codegen.empty() : this.timeSeriesQueryLanguage;
+    public Optional<Output<String>> timeSeriesQueryLanguage() {
+        return Optional.ofNullable(this.timeSeriesQueryLanguage);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class TimeSeriesQueryArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="unitOverride")
-      private final @Nullable Output<String> unitOverride;
+    private @Nullable Output<String> unitOverride;
 
-    public Output<String> unitOverride() {
-        return this.unitOverride == null ? Codegen.empty() : this.unitOverride;
+    public Optional<Output<String>> unitOverride() {
+        return Optional.ofNullable(this.unitOverride);
     }
 
-    public TimeSeriesQueryArgs(
-        @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter,
-        @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio,
-        @Nullable Output<String> timeSeriesQueryLanguage,
-        @Nullable Output<String> unitOverride) {
-        this.timeSeriesFilter = timeSeriesFilter;
-        this.timeSeriesFilterRatio = timeSeriesFilterRatio;
-        this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
-        this.unitOverride = unitOverride;
-    }
+    private TimeSeriesQueryArgs() {}
 
-    private TimeSeriesQueryArgs() {
-        this.timeSeriesFilter = Codegen.empty();
-        this.timeSeriesFilterRatio = Codegen.empty();
-        this.timeSeriesQueryLanguage = Codegen.empty();
-        this.unitOverride = Codegen.empty();
+    private TimeSeriesQueryArgs(TimeSeriesQueryArgs $) {
+        this.timeSeriesFilter = $.timeSeriesFilter;
+        this.timeSeriesFilterRatio = $.timeSeriesFilterRatio;
+        this.timeSeriesQueryLanguage = $.timeSeriesQueryLanguage;
+        this.unitOverride = $.unitOverride;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
-        private @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
-        private @Nullable Output<String> timeSeriesQueryLanguage;
-        private @Nullable Output<String> unitOverride;
+        private TimeSeriesQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesQueryArgs();
         }
 
         public Builder(TimeSeriesQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.timeSeriesFilter = defaults.timeSeriesFilter;
-    	      this.timeSeriesFilterRatio = defaults.timeSeriesFilterRatio;
-    	      this.timeSeriesQueryLanguage = defaults.timeSeriesQueryLanguage;
-    	      this.unitOverride = defaults.unitOverride;
+            $ = new TimeSeriesQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder timeSeriesFilter(@Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter) {
-            this.timeSeriesFilter = timeSeriesFilter;
+            $.timeSeriesFilter = timeSeriesFilter;
             return this;
         }
-        public Builder timeSeriesFilter(@Nullable TimeSeriesFilterArgs timeSeriesFilter) {
-            this.timeSeriesFilter = Codegen.ofNullable(timeSeriesFilter);
-            return this;
+
+        public Builder timeSeriesFilter(TimeSeriesFilterArgs timeSeriesFilter) {
+            return timeSeriesFilter(Output.of(timeSeriesFilter));
         }
+
         public Builder timeSeriesFilterRatio(@Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
-            this.timeSeriesFilterRatio = timeSeriesFilterRatio;
+            $.timeSeriesFilterRatio = timeSeriesFilterRatio;
             return this;
         }
-        public Builder timeSeriesFilterRatio(@Nullable TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
-            this.timeSeriesFilterRatio = Codegen.ofNullable(timeSeriesFilterRatio);
-            return this;
+
+        public Builder timeSeriesFilterRatio(TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
+            return timeSeriesFilterRatio(Output.of(timeSeriesFilterRatio));
         }
+
         public Builder timeSeriesQueryLanguage(@Nullable Output<String> timeSeriesQueryLanguage) {
-            this.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
+            $.timeSeriesQueryLanguage = timeSeriesQueryLanguage;
             return this;
         }
-        public Builder timeSeriesQueryLanguage(@Nullable String timeSeriesQueryLanguage) {
-            this.timeSeriesQueryLanguage = Codegen.ofNullable(timeSeriesQueryLanguage);
-            return this;
+
+        public Builder timeSeriesQueryLanguage(String timeSeriesQueryLanguage) {
+            return timeSeriesQueryLanguage(Output.of(timeSeriesQueryLanguage));
         }
+
         public Builder unitOverride(@Nullable Output<String> unitOverride) {
-            this.unitOverride = unitOverride;
+            $.unitOverride = unitOverride;
             return this;
         }
-        public Builder unitOverride(@Nullable String unitOverride) {
-            this.unitOverride = Codegen.ofNullable(unitOverride);
-            return this;
-        }        public TimeSeriesQueryArgs build() {
-            return new TimeSeriesQueryArgs(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
+
+        public Builder unitOverride(String unitOverride) {
+            return unitOverride(Output.of(unitOverride));
+        }
+
+        public TimeSeriesQueryArgs build() {
+            return $;
         }
     }
+
 }

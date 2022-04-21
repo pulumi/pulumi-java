@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apikeys_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class V2ServerKeyRestrictionsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="allowedIps")
-      private final @Nullable Output<List<String>> allowedIps;
+    private @Nullable Output<List<String>> allowedIps;
 
-    public Output<List<String>> allowedIps() {
-        return this.allowedIps == null ? Codegen.empty() : this.allowedIps;
+    public Optional<Output<List<String>>> allowedIps() {
+        return Optional.ofNullable(this.allowedIps);
     }
 
-    public V2ServerKeyRestrictionsArgs(@Nullable Output<List<String>> allowedIps) {
-        this.allowedIps = allowedIps;
-    }
+    private V2ServerKeyRestrictionsArgs() {}
 
-    private V2ServerKeyRestrictionsArgs() {
-        this.allowedIps = Codegen.empty();
+    private V2ServerKeyRestrictionsArgs(V2ServerKeyRestrictionsArgs $) {
+        this.allowedIps = $.allowedIps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(V2ServerKeyRestrictionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedIps;
+        private V2ServerKeyRestrictionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new V2ServerKeyRestrictionsArgs();
         }
 
         public Builder(V2ServerKeyRestrictionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIps = defaults.allowedIps;
+            $ = new V2ServerKeyRestrictionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIps(@Nullable Output<List<String>> allowedIps) {
-            this.allowedIps = allowedIps;
+            $.allowedIps = allowedIps;
             return this;
         }
-        public Builder allowedIps(@Nullable List<String> allowedIps) {
-            this.allowedIps = Codegen.ofNullable(allowedIps);
-            return this;
+
+        public Builder allowedIps(List<String> allowedIps) {
+            return allowedIps(Output.of(allowedIps));
         }
+
         public Builder allowedIps(String... allowedIps) {
             return allowedIps(List.of(allowedIps));
-        }        public V2ServerKeyRestrictionsArgs build() {
-            return new V2ServerKeyRestrictionsArgs(allowedIps);
+        }
+
+        public V2ServerKeyRestrictionsArgs build() {
+            return $;
         }
     }
+
 }

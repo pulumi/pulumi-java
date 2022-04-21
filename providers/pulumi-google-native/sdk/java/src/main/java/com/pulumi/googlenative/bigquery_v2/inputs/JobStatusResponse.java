@@ -19,7 +19,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorResult", required=true)
-      private final ErrorProtoResponse errorResult;
+    private ErrorProtoResponse errorResult;
 
     public ErrorProtoResponse errorResult() {
         return this.errorResult;
@@ -30,7 +30,7 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errors", required=true)
-      private final List<ErrorProtoResponse> errors;
+    private List<ErrorProtoResponse> errors;
 
     public List<ErrorProtoResponse> errors() {
         return this.errors;
@@ -41,67 +41,63 @@ public final class JobStatusResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public JobStatusResponse(
-        ErrorProtoResponse errorResult,
-        List<ErrorProtoResponse> errors,
-        String state) {
-        this.errorResult = Objects.requireNonNull(errorResult, "expected parameter 'errorResult' to be non-null");
-        this.errors = Objects.requireNonNull(errors, "expected parameter 'errors' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private JobStatusResponse() {}
 
-    private JobStatusResponse() {
-        this.errorResult = null;
-        this.errors = List.of();
-        this.state = null;
+    private JobStatusResponse(JobStatusResponse $) {
+        this.errorResult = $.errorResult;
+        this.errors = $.errors;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ErrorProtoResponse errorResult;
-        private List<ErrorProtoResponse> errors;
-        private String state;
+        private JobStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobStatusResponse();
         }
 
         public Builder(JobStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorResult = defaults.errorResult;
-    	      this.errors = defaults.errors;
-    	      this.state = defaults.state;
+            $ = new JobStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorResult(ErrorProtoResponse errorResult) {
-            this.errorResult = Objects.requireNonNull(errorResult);
+            $.errorResult = errorResult;
             return this;
         }
+
         public Builder errors(List<ErrorProtoResponse> errors) {
-            this.errors = Objects.requireNonNull(errors);
+            $.errors = errors;
             return this;
         }
+
         public Builder errors(ErrorProtoResponse... errors) {
             return errors(List.of(errors));
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public JobStatusResponse build() {
-            return new JobStatusResponse(errorResult, errors, state);
+        }
+
+        public JobStatusResponse build() {
+            $.errorResult = Objects.requireNonNull($.errorResult, "expected parameter 'errorResult' to be non-null");
+            $.errors = Objects.requireNonNull($.errors, "expected parameter 'errors' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

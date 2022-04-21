@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2CloudSqlInstanceArgs;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretVolumeSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="cloudSqlInstance")
-      private final @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
+    private @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
 
-    public Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance() {
-        return this.cloudSqlInstance == null ? Codegen.empty() : this.cloudSqlInstance;
+    public Optional<Output<GoogleCloudRunOpV2CloudSqlInstanceArgs>> cloudSqlInstance() {
+        return Optional.ofNullable(this.cloudSqlInstance);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,76 +48,69 @@ public final class GoogleCloudRunOpV2VolumeArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
+    private @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
 
-    public Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<GoogleCloudRunOpV2SecretVolumeSourceArgs>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public GoogleCloudRunOpV2VolumeArgs(
-        @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance,
-        Output<String> name,
-        @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret) {
-        this.cloudSqlInstance = cloudSqlInstance;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secret = secret;
-    }
+    private GoogleCloudRunOpV2VolumeArgs() {}
 
-    private GoogleCloudRunOpV2VolumeArgs() {
-        this.cloudSqlInstance = Codegen.empty();
-        this.name = Codegen.empty();
-        this.secret = Codegen.empty();
+    private GoogleCloudRunOpV2VolumeArgs(GoogleCloudRunOpV2VolumeArgs $) {
+        this.cloudSqlInstance = $.cloudSqlInstance;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance;
-        private Output<String> name;
-        private @Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret;
+        private GoogleCloudRunOpV2VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VolumeArgs();
         }
 
         public Builder(GoogleCloudRunOpV2VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSqlInstance = defaults.cloudSqlInstance;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new GoogleCloudRunOpV2VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSqlInstance(@Nullable Output<GoogleCloudRunOpV2CloudSqlInstanceArgs> cloudSqlInstance) {
-            this.cloudSqlInstance = cloudSqlInstance;
+            $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
-        public Builder cloudSqlInstance(@Nullable GoogleCloudRunOpV2CloudSqlInstanceArgs cloudSqlInstance) {
-            this.cloudSqlInstance = Codegen.ofNullable(cloudSqlInstance);
-            return this;
+
+        public Builder cloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceArgs cloudSqlInstance) {
+            return cloudSqlInstance(Output.of(cloudSqlInstance));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder secret(@Nullable Output<GoogleCloudRunOpV2SecretVolumeSourceArgs> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable GoogleCloudRunOpV2SecretVolumeSourceArgs secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public GoogleCloudRunOpV2VolumeArgs build() {
-            return new GoogleCloudRunOpV2VolumeArgs(cloudSqlInstance, name, secret);
+
+        public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceArgs secret) {
+            return secret(Output.of(secret));
+        }
+
+        public GoogleCloudRunOpV2VolumeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

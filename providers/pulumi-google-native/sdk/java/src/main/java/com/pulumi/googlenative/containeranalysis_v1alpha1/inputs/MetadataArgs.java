@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.CompletenessArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildFinishedOn")
-      private final @Nullable Output<String> buildFinishedOn;
+    private @Nullable Output<String> buildFinishedOn;
 
-    public Output<String> buildFinishedOn() {
-        return this.buildFinishedOn == null ? Codegen.empty() : this.buildFinishedOn;
+    public Optional<Output<String>> buildFinishedOn() {
+        return Optional.ofNullable(this.buildFinishedOn);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildInvocationId")
-      private final @Nullable Output<String> buildInvocationId;
+    private @Nullable Output<String> buildInvocationId;
 
-    public Output<String> buildInvocationId() {
-        return this.buildInvocationId == null ? Codegen.empty() : this.buildInvocationId;
+    public Optional<Output<String>> buildInvocationId() {
+        return Optional.ofNullable(this.buildInvocationId);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildStartedOn")
-      private final @Nullable Output<String> buildStartedOn;
+    private @Nullable Output<String> buildStartedOn;
 
-    public Output<String> buildStartedOn() {
-        return this.buildStartedOn == null ? Codegen.empty() : this.buildStartedOn;
+    public Optional<Output<String>> buildStartedOn() {
+        return Optional.ofNullable(this.buildStartedOn);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="completeness")
-      private final @Nullable Output<CompletenessArgs> completeness;
+    private @Nullable Output<CompletenessArgs> completeness;
 
-    public Output<CompletenessArgs> completeness() {
-        return this.completeness == null ? Codegen.empty() : this.completeness;
+    public Optional<Output<CompletenessArgs>> completeness() {
+        return Optional.ofNullable(this.completeness);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class MetadataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reproducible")
-      private final @Nullable Output<Boolean> reproducible;
+    private @Nullable Output<Boolean> reproducible;
 
-    public Output<Boolean> reproducible() {
-        return this.reproducible == null ? Codegen.empty() : this.reproducible;
+    public Optional<Output<Boolean>> reproducible() {
+        return Optional.ofNullable(this.reproducible);
     }
 
-    public MetadataArgs(
-        @Nullable Output<String> buildFinishedOn,
-        @Nullable Output<String> buildInvocationId,
-        @Nullable Output<String> buildStartedOn,
-        @Nullable Output<CompletenessArgs> completeness,
-        @Nullable Output<Boolean> reproducible) {
-        this.buildFinishedOn = buildFinishedOn;
-        this.buildInvocationId = buildInvocationId;
-        this.buildStartedOn = buildStartedOn;
-        this.completeness = completeness;
-        this.reproducible = reproducible;
-    }
+    private MetadataArgs() {}
 
-    private MetadataArgs() {
-        this.buildFinishedOn = Codegen.empty();
-        this.buildInvocationId = Codegen.empty();
-        this.buildStartedOn = Codegen.empty();
-        this.completeness = Codegen.empty();
-        this.reproducible = Codegen.empty();
+    private MetadataArgs(MetadataArgs $) {
+        this.buildFinishedOn = $.buildFinishedOn;
+        this.buildInvocationId = $.buildInvocationId;
+        this.buildStartedOn = $.buildStartedOn;
+        this.completeness = $.completeness;
+        this.reproducible = $.reproducible;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> buildFinishedOn;
-        private @Nullable Output<String> buildInvocationId;
-        private @Nullable Output<String> buildStartedOn;
-        private @Nullable Output<CompletenessArgs> completeness;
-        private @Nullable Output<Boolean> reproducible;
+        private MetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataArgs();
         }
 
         public Builder(MetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildFinishedOn = defaults.buildFinishedOn;
-    	      this.buildInvocationId = defaults.buildInvocationId;
-    	      this.buildStartedOn = defaults.buildStartedOn;
-    	      this.completeness = defaults.completeness;
-    	      this.reproducible = defaults.reproducible;
+            $ = new MetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buildFinishedOn(@Nullable Output<String> buildFinishedOn) {
-            this.buildFinishedOn = buildFinishedOn;
+            $.buildFinishedOn = buildFinishedOn;
             return this;
         }
-        public Builder buildFinishedOn(@Nullable String buildFinishedOn) {
-            this.buildFinishedOn = Codegen.ofNullable(buildFinishedOn);
-            return this;
+
+        public Builder buildFinishedOn(String buildFinishedOn) {
+            return buildFinishedOn(Output.of(buildFinishedOn));
         }
+
         public Builder buildInvocationId(@Nullable Output<String> buildInvocationId) {
-            this.buildInvocationId = buildInvocationId;
+            $.buildInvocationId = buildInvocationId;
             return this;
         }
-        public Builder buildInvocationId(@Nullable String buildInvocationId) {
-            this.buildInvocationId = Codegen.ofNullable(buildInvocationId);
-            return this;
+
+        public Builder buildInvocationId(String buildInvocationId) {
+            return buildInvocationId(Output.of(buildInvocationId));
         }
+
         public Builder buildStartedOn(@Nullable Output<String> buildStartedOn) {
-            this.buildStartedOn = buildStartedOn;
+            $.buildStartedOn = buildStartedOn;
             return this;
         }
-        public Builder buildStartedOn(@Nullable String buildStartedOn) {
-            this.buildStartedOn = Codegen.ofNullable(buildStartedOn);
-            return this;
+
+        public Builder buildStartedOn(String buildStartedOn) {
+            return buildStartedOn(Output.of(buildStartedOn));
         }
+
         public Builder completeness(@Nullable Output<CompletenessArgs> completeness) {
-            this.completeness = completeness;
+            $.completeness = completeness;
             return this;
         }
-        public Builder completeness(@Nullable CompletenessArgs completeness) {
-            this.completeness = Codegen.ofNullable(completeness);
-            return this;
+
+        public Builder completeness(CompletenessArgs completeness) {
+            return completeness(Output.of(completeness));
         }
+
         public Builder reproducible(@Nullable Output<Boolean> reproducible) {
-            this.reproducible = reproducible;
+            $.reproducible = reproducible;
             return this;
         }
-        public Builder reproducible(@Nullable Boolean reproducible) {
-            this.reproducible = Codegen.ofNullable(reproducible);
-            return this;
-        }        public MetadataArgs build() {
-            return new MetadataArgs(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
+
+        public Builder reproducible(Boolean reproducible) {
+            return reproducible(Output.of(reproducible));
+        }
+
+        public MetadataArgs build() {
+            return $;
         }
     }
+
 }

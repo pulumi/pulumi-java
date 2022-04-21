@@ -17,7 +17,7 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -39,64 +39,59 @@ public final class RoutineReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="routineId", required=true)
-      private final String routineId;
+    private String routineId;
 
     public String routineId() {
         return this.routineId;
     }
 
-    public RoutineReferenceResponse(
-        String datasetId,
-        String project,
-        String routineId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.routineId = Objects.requireNonNull(routineId, "expected parameter 'routineId' to be non-null");
-    }
+    private RoutineReferenceResponse() {}
 
-    private RoutineReferenceResponse() {
-        this.datasetId = null;
-        this.project = null;
-        this.routineId = null;
+    private RoutineReferenceResponse(RoutineReferenceResponse $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.routineId = $.routineId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoutineReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String project;
-        private String routineId;
+        private RoutineReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoutineReferenceResponse();
         }
 
         public Builder(RoutineReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.routineId = defaults.routineId;
+            $ = new RoutineReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder routineId(String routineId) {
-            this.routineId = Objects.requireNonNull(routineId);
+            $.routineId = routineId;
             return this;
-        }        public RoutineReferenceResponse build() {
-            return new RoutineReferenceResponse(datasetId, project, routineId);
+        }
+
+        public RoutineReferenceResponse build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.routineId = Objects.requireNonNull($.routineId, "expected parameter 'routineId' to be non-null");
+            return $;
         }
     }
+
 }

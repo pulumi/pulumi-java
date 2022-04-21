@@ -21,45 +21,45 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse extends co
      * 
      */
     @Import(name="languageCode", required=true)
-      private final String languageCode;
+    private String languageCode;
 
     public String languageCode() {
         return this.languageCode;
     }
 
-    public GoogleCloudDatalabelingV1beta1TextMetadataResponse(String languageCode) {
-        this.languageCode = Objects.requireNonNull(languageCode, "expected parameter 'languageCode' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1TextMetadataResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1TextMetadataResponse() {
-        this.languageCode = null;
+    private GoogleCloudDatalabelingV1beta1TextMetadataResponse(GoogleCloudDatalabelingV1beta1TextMetadataResponse $) {
+        this.languageCode = $.languageCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1TextMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String languageCode;
+        private GoogleCloudDatalabelingV1beta1TextMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1TextMetadataResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1TextMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.languageCode = defaults.languageCode;
+            $ = new GoogleCloudDatalabelingV1beta1TextMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder languageCode(String languageCode) {
-            this.languageCode = Objects.requireNonNull(languageCode);
+            $.languageCode = languageCode;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1TextMetadataResponse build() {
-            return new GoogleCloudDatalabelingV1beta1TextMetadataResponse(languageCode);
+        }
+
+        public GoogleCloudDatalabelingV1beta1TextMetadataResponse build() {
+            $.languageCode = Objects.requireNonNull($.languageCode, "expected parameter 'languageCode' to be non-null");
+            return $;
         }
     }
+
 }

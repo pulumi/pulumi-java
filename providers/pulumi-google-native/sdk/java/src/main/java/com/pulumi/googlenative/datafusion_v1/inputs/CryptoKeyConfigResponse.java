@@ -21,45 +21,45 @@ public final class CryptoKeyConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="keyReference", required=true)
-      private final String keyReference;
+    private String keyReference;
 
     public String keyReference() {
         return this.keyReference;
     }
 
-    public CryptoKeyConfigResponse(String keyReference) {
-        this.keyReference = Objects.requireNonNull(keyReference, "expected parameter 'keyReference' to be non-null");
-    }
+    private CryptoKeyConfigResponse() {}
 
-    private CryptoKeyConfigResponse() {
-        this.keyReference = null;
+    private CryptoKeyConfigResponse(CryptoKeyConfigResponse $) {
+        this.keyReference = $.keyReference;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyReference;
+        private CryptoKeyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyConfigResponse();
         }
 
         public Builder(CryptoKeyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyReference = defaults.keyReference;
+            $ = new CryptoKeyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder keyReference(String keyReference) {
-            this.keyReference = Objects.requireNonNull(keyReference);
+            $.keyReference = keyReference;
             return this;
-        }        public CryptoKeyConfigResponse build() {
-            return new CryptoKeyConfigResponse(keyReference);
+        }
+
+        public CryptoKeyConfigResponse build() {
+            $.keyReference = Objects.requireNonNull($.keyReference, "expected parameter 'keyReference' to be non-null");
+            return $;
         }
     }
+
 }

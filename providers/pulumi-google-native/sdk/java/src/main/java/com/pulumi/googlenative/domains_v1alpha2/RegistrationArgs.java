@@ -5,7 +5,6 @@ package com.pulumi.googlenative.domains_v1alpha2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1alpha2.enums.RegistrationContactNoticesItem;
 import com.pulumi.googlenative.domains_v1alpha2.enums.RegistrationDomainNoticesItem;
 import com.pulumi.googlenative.domains_v1alpha2.inputs.ContactSettingsArgs;
@@ -17,6 +16,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactNotices")
-      private final @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
+    private @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
 
-    public Output<List<RegistrationContactNoticesItem>> contactNotices() {
-        return this.contactNotices == null ? Codegen.empty() : this.contactNotices;
+    public Optional<Output<List<RegistrationContactNoticesItem>>> contactNotices() {
+        return Optional.ofNullable(this.contactNotices);
     }
 
     /**
@@ -40,7 +40,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contactSettings", required=true)
-      private final Output<ContactSettingsArgs> contactSettings;
+    private Output<ContactSettingsArgs> contactSettings;
 
     public Output<ContactSettingsArgs> contactSettings() {
         return this.contactSettings;
@@ -51,10 +51,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dnsSettings")
-      private final @Nullable Output<DnsSettingsArgs> dnsSettings;
+    private @Nullable Output<DnsSettingsArgs> dnsSettings;
 
-    public Output<DnsSettingsArgs> dnsSettings() {
-        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
+    public Optional<Output<DnsSettingsArgs>> dnsSettings() {
+        return Optional.ofNullable(this.dnsSettings);
     }
 
     /**
@@ -62,7 +62,7 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -73,10 +73,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="domainNotices")
-      private final @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
+    private @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
 
-    public Output<List<RegistrationDomainNoticesItem>> domainNotices() {
-        return this.domainNotices == null ? Codegen.empty() : this.domainNotices;
+    public Optional<Output<List<RegistrationDomainNoticesItem>>> domainNotices() {
+        return Optional.ofNullable(this.domainNotices);
     }
 
     /**
@@ -84,17 +84,17 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -102,17 +102,17 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="managementSettings")
-      private final @Nullable Output<ManagementSettingsArgs> managementSettings;
+    private @Nullable Output<ManagementSettingsArgs> managementSettings;
 
-    public Output<ManagementSettingsArgs> managementSettings() {
-        return this.managementSettings == null ? Codegen.empty() : this.managementSettings;
+    public Optional<Output<ManagementSettingsArgs>> managementSettings() {
+        return Optional.ofNullable(this.managementSettings);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="validateOnly")
-      private final @Nullable Output<Boolean> validateOnly;
+    private @Nullable Output<Boolean> validateOnly;
 
-    public Output<Boolean> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<Boolean>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
     /**
@@ -131,186 +131,159 @@ public final class RegistrationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="yearlyPrice", required=true)
-      private final Output<MoneyArgs> yearlyPrice;
+    private Output<MoneyArgs> yearlyPrice;
 
     public Output<MoneyArgs> yearlyPrice() {
         return this.yearlyPrice;
     }
 
-    public RegistrationArgs(
-        @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices,
-        Output<ContactSettingsArgs> contactSettings,
-        @Nullable Output<DnsSettingsArgs> dnsSettings,
-        Output<String> domainName,
-        @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<ManagementSettingsArgs> managementSettings,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> validateOnly,
-        Output<MoneyArgs> yearlyPrice) {
-        this.contactNotices = contactNotices;
-        this.contactSettings = Objects.requireNonNull(contactSettings, "expected parameter 'contactSettings' to be non-null");
-        this.dnsSettings = dnsSettings;
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.domainNotices = domainNotices;
-        this.labels = labels;
-        this.location = location;
-        this.managementSettings = managementSettings;
-        this.project = project;
-        this.validateOnly = validateOnly;
-        this.yearlyPrice = Objects.requireNonNull(yearlyPrice, "expected parameter 'yearlyPrice' to be non-null");
-    }
+    private RegistrationArgs() {}
 
-    private RegistrationArgs() {
-        this.contactNotices = Codegen.empty();
-        this.contactSettings = Codegen.empty();
-        this.dnsSettings = Codegen.empty();
-        this.domainName = Codegen.empty();
-        this.domainNotices = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.managementSettings = Codegen.empty();
-        this.project = Codegen.empty();
-        this.validateOnly = Codegen.empty();
-        this.yearlyPrice = Codegen.empty();
+    private RegistrationArgs(RegistrationArgs $) {
+        this.contactNotices = $.contactNotices;
+        this.contactSettings = $.contactSettings;
+        this.dnsSettings = $.dnsSettings;
+        this.domainName = $.domainName;
+        this.domainNotices = $.domainNotices;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.managementSettings = $.managementSettings;
+        this.project = $.project;
+        this.validateOnly = $.validateOnly;
+        this.yearlyPrice = $.yearlyPrice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RegistrationContactNoticesItem>> contactNotices;
-        private Output<ContactSettingsArgs> contactSettings;
-        private @Nullable Output<DnsSettingsArgs> dnsSettings;
-        private Output<String> domainName;
-        private @Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<ManagementSettingsArgs> managementSettings;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> validateOnly;
-        private Output<MoneyArgs> yearlyPrice;
+        private RegistrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistrationArgs();
         }
 
         public Builder(RegistrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactNotices = defaults.contactNotices;
-    	      this.contactSettings = defaults.contactSettings;
-    	      this.dnsSettings = defaults.dnsSettings;
-    	      this.domainName = defaults.domainName;
-    	      this.domainNotices = defaults.domainNotices;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.managementSettings = defaults.managementSettings;
-    	      this.project = defaults.project;
-    	      this.validateOnly = defaults.validateOnly;
-    	      this.yearlyPrice = defaults.yearlyPrice;
+            $ = new RegistrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactNotices(@Nullable Output<List<RegistrationContactNoticesItem>> contactNotices) {
-            this.contactNotices = contactNotices;
+            $.contactNotices = contactNotices;
             return this;
         }
-        public Builder contactNotices(@Nullable List<RegistrationContactNoticesItem> contactNotices) {
-            this.contactNotices = Codegen.ofNullable(contactNotices);
-            return this;
+
+        public Builder contactNotices(List<RegistrationContactNoticesItem> contactNotices) {
+            return contactNotices(Output.of(contactNotices));
         }
+
         public Builder contactNotices(RegistrationContactNoticesItem... contactNotices) {
             return contactNotices(List.of(contactNotices));
         }
+
         public Builder contactSettings(Output<ContactSettingsArgs> contactSettings) {
-            this.contactSettings = Objects.requireNonNull(contactSettings);
+            $.contactSettings = contactSettings;
             return this;
         }
+
         public Builder contactSettings(ContactSettingsArgs contactSettings) {
-            this.contactSettings = Output.of(Objects.requireNonNull(contactSettings));
-            return this;
+            return contactSettings(Output.of(contactSettings));
         }
+
         public Builder dnsSettings(@Nullable Output<DnsSettingsArgs> dnsSettings) {
-            this.dnsSettings = dnsSettings;
+            $.dnsSettings = dnsSettings;
             return this;
         }
-        public Builder dnsSettings(@Nullable DnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Codegen.ofNullable(dnsSettings);
-            return this;
+
+        public Builder dnsSettings(DnsSettingsArgs dnsSettings) {
+            return dnsSettings(Output.of(dnsSettings));
         }
+
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder domainNotices(@Nullable Output<List<RegistrationDomainNoticesItem>> domainNotices) {
-            this.domainNotices = domainNotices;
+            $.domainNotices = domainNotices;
             return this;
         }
-        public Builder domainNotices(@Nullable List<RegistrationDomainNoticesItem> domainNotices) {
-            this.domainNotices = Codegen.ofNullable(domainNotices);
-            return this;
+
+        public Builder domainNotices(List<RegistrationDomainNoticesItem> domainNotices) {
+            return domainNotices(Output.of(domainNotices));
         }
+
         public Builder domainNotices(RegistrationDomainNoticesItem... domainNotices) {
             return domainNotices(List.of(domainNotices));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder managementSettings(@Nullable Output<ManagementSettingsArgs> managementSettings) {
-            this.managementSettings = managementSettings;
+            $.managementSettings = managementSettings;
             return this;
         }
-        public Builder managementSettings(@Nullable ManagementSettingsArgs managementSettings) {
-            this.managementSettings = Codegen.ofNullable(managementSettings);
-            return this;
+
+        public Builder managementSettings(ManagementSettingsArgs managementSettings) {
+            return managementSettings(Output.of(managementSettings));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder validateOnly(@Nullable Output<Boolean> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable Boolean validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
+
+        public Builder validateOnly(Boolean validateOnly) {
+            return validateOnly(Output.of(validateOnly));
         }
+
         public Builder yearlyPrice(Output<MoneyArgs> yearlyPrice) {
-            this.yearlyPrice = Objects.requireNonNull(yearlyPrice);
+            $.yearlyPrice = yearlyPrice;
             return this;
         }
+
         public Builder yearlyPrice(MoneyArgs yearlyPrice) {
-            this.yearlyPrice = Output.of(Objects.requireNonNull(yearlyPrice));
-            return this;
-        }        public RegistrationArgs build() {
-            return new RegistrationArgs(contactNotices, contactSettings, dnsSettings, domainName, domainNotices, labels, location, managementSettings, project, validateOnly, yearlyPrice);
+            return yearlyPrice(Output.of(yearlyPrice));
+        }
+
+        public RegistrationArgs build() {
+            $.contactSettings = Objects.requireNonNull($.contactSettings, "expected parameter 'contactSettings' to be non-null");
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.yearlyPrice = Objects.requireNonNull($.yearlyPrice, "expected parameter 'yearlyPrice' to be non-null");
+            return $;
         }
     }
+
 }

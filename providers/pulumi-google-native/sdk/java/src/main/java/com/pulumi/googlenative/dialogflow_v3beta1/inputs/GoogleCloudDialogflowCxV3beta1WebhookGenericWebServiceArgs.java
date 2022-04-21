@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * 
      */
     @Import(name="allowedCaCerts")
-      private final @Nullable Output<List<String>> allowedCaCerts;
+    private @Nullable Output<List<String>> allowedCaCerts;
 
-    public Output<List<String>> allowedCaCerts() {
-        return this.allowedCaCerts == null ? Codegen.empty() : this.allowedCaCerts;
+    public Optional<Output<List<String>>> allowedCaCerts() {
+        return Optional.ofNullable(this.allowedCaCerts);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * 
      */
     @Import(name="password")
-      private final @Nullable Output<String> password;
+    private @Nullable Output<String> password;
 
-    public Output<String> password() {
-        return this.password == null ? Codegen.empty() : this.password;
+    public Optional<Output<String>> password() {
+        return Optional.ofNullable(this.password);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * 
      */
     @Import(name="requestHeaders")
-      private final @Nullable Output<Map<String,String>> requestHeaders;
+    private @Nullable Output<Map<String,String>> requestHeaders;
 
-    public Output<Map<String,String>> requestHeaders() {
-        return this.requestHeaders == null ? Codegen.empty() : this.requestHeaders;
+    public Optional<Output<Map<String,String>>> requestHeaders() {
+        return Optional.ofNullable(this.requestHeaders);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
@@ -70,105 +70,93 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * 
      */
     @Import(name="username")
-      private final @Nullable Output<String> username;
+    private @Nullable Output<String> username;
 
-    public Output<String> username() {
-        return this.username == null ? Codegen.empty() : this.username;
+    public Optional<Output<String>> username() {
+        return Optional.ofNullable(this.username);
     }
 
-    public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs(
-        @Nullable Output<List<String>> allowedCaCerts,
-        @Nullable Output<String> password,
-        @Nullable Output<Map<String,String>> requestHeaders,
-        Output<String> uri,
-        @Nullable Output<String> username) {
-        this.allowedCaCerts = allowedCaCerts;
-        this.password = password;
-        this.requestHeaders = requestHeaders;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.username = username;
-    }
+    private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs() {
-        this.allowedCaCerts = Codegen.empty();
-        this.password = Codegen.empty();
-        this.requestHeaders = Codegen.empty();
-        this.uri = Codegen.empty();
-        this.username = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs $) {
+        this.allowedCaCerts = $.allowedCaCerts;
+        this.password = $.password;
+        this.requestHeaders = $.requestHeaders;
+        this.uri = $.uri;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedCaCerts;
-        private @Nullable Output<String> password;
-        private @Nullable Output<Map<String,String>> requestHeaders;
-        private Output<String> uri;
-        private @Nullable Output<String> username;
+        private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedCaCerts = defaults.allowedCaCerts;
-    	      this.password = defaults.password;
-    	      this.requestHeaders = defaults.requestHeaders;
-    	      this.uri = defaults.uri;
-    	      this.username = defaults.username;
+            $ = new GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedCaCerts(@Nullable Output<List<String>> allowedCaCerts) {
-            this.allowedCaCerts = allowedCaCerts;
+            $.allowedCaCerts = allowedCaCerts;
             return this;
         }
-        public Builder allowedCaCerts(@Nullable List<String> allowedCaCerts) {
-            this.allowedCaCerts = Codegen.ofNullable(allowedCaCerts);
-            return this;
+
+        public Builder allowedCaCerts(List<String> allowedCaCerts) {
+            return allowedCaCerts(Output.of(allowedCaCerts));
         }
+
         public Builder allowedCaCerts(String... allowedCaCerts) {
             return allowedCaCerts(List.of(allowedCaCerts));
         }
+
         public Builder password(@Nullable Output<String> password) {
-            this.password = password;
+            $.password = password;
             return this;
         }
-        public Builder password(@Nullable String password) {
-            this.password = Codegen.ofNullable(password);
-            return this;
+
+        public Builder password(String password) {
+            return password(Output.of(password));
         }
+
         public Builder requestHeaders(@Nullable Output<Map<String,String>> requestHeaders) {
-            this.requestHeaders = requestHeaders;
+            $.requestHeaders = requestHeaders;
             return this;
         }
-        public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
-            this.requestHeaders = Codegen.ofNullable(requestHeaders);
-            return this;
+
+        public Builder requestHeaders(Map<String,String> requestHeaders) {
+            return requestHeaders(Output.of(requestHeaders));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
+            return uri(Output.of(uri));
         }
+
         public Builder username(@Nullable Output<String> username) {
-            this.username = username;
+            $.username = username;
             return this;
         }
-        public Builder username(@Nullable String username) {
-            this.username = Codegen.ofNullable(username);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs(allowedCaCerts, password, requestHeaders, uri, username);
+
+        public Builder username(String username) {
+            return username(Output.of(username));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

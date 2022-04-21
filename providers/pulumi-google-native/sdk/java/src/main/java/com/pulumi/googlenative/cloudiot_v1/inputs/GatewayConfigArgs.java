@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudiot_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayAuthMethod;
 import com.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayType;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayAuthMethod")
-      private final @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
+    private @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
-    public Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod() {
-        return this.gatewayAuthMethod == null ? Codegen.empty() : this.gatewayAuthMethod;
+    public Optional<Output<GatewayConfigGatewayAuthMethod>> gatewayAuthMethod() {
+        return Optional.ofNullable(this.gatewayAuthMethod);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GatewayConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gatewayType")
-      private final @Nullable Output<GatewayConfigGatewayType> gatewayType;
+    private @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
-    public Output<GatewayConfigGatewayType> gatewayType() {
-        return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
+    public Optional<Output<GatewayConfigGatewayType>> gatewayType() {
+        return Optional.ofNullable(this.gatewayType);
     }
 
-    public GatewayConfigArgs(
-        @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod,
-        @Nullable Output<GatewayConfigGatewayType> gatewayType) {
-        this.gatewayAuthMethod = gatewayAuthMethod;
-        this.gatewayType = gatewayType;
-    }
+    private GatewayConfigArgs() {}
 
-    private GatewayConfigArgs() {
-        this.gatewayAuthMethod = Codegen.empty();
-        this.gatewayType = Codegen.empty();
+    private GatewayConfigArgs(GatewayConfigArgs $) {
+        this.gatewayAuthMethod = $.gatewayAuthMethod;
+        this.gatewayType = $.gatewayType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GatewayConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
-        private @Nullable Output<GatewayConfigGatewayType> gatewayType;
+        private GatewayConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GatewayConfigArgs();
         }
 
         public Builder(GatewayConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gatewayAuthMethod = defaults.gatewayAuthMethod;
-    	      this.gatewayType = defaults.gatewayType;
+            $ = new GatewayConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gatewayAuthMethod(@Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod) {
-            this.gatewayAuthMethod = gatewayAuthMethod;
+            $.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
-        public Builder gatewayAuthMethod(@Nullable GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
-            this.gatewayAuthMethod = Codegen.ofNullable(gatewayAuthMethod);
-            return this;
+
+        public Builder gatewayAuthMethod(GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
+            return gatewayAuthMethod(Output.of(gatewayAuthMethod));
         }
+
         public Builder gatewayType(@Nullable Output<GatewayConfigGatewayType> gatewayType) {
-            this.gatewayType = gatewayType;
+            $.gatewayType = gatewayType;
             return this;
         }
-        public Builder gatewayType(@Nullable GatewayConfigGatewayType gatewayType) {
-            this.gatewayType = Codegen.ofNullable(gatewayType);
-            return this;
-        }        public GatewayConfigArgs build() {
-            return new GatewayConfigArgs(gatewayAuthMethod, gatewayType);
+
+        public Builder gatewayType(GatewayConfigGatewayType gatewayType) {
+            return gatewayType(Output.of(gatewayType));
+        }
+
+        public GatewayConfigArgs build() {
+            return $;
         }
     }
+
 }

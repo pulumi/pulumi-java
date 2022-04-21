@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.MysqlDatabaseArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MysqlRdbmsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mysqlDatabases")
-      private final @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
+    private @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
 
-    public Output<List<MysqlDatabaseArgs>> mysqlDatabases() {
-        return this.mysqlDatabases == null ? Codegen.empty() : this.mysqlDatabases;
+    public Optional<Output<List<MysqlDatabaseArgs>>> mysqlDatabases() {
+        return Optional.ofNullable(this.mysqlDatabases);
     }
 
-    public MysqlRdbmsArgs(@Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases) {
-        this.mysqlDatabases = mysqlDatabases;
-    }
+    private MysqlRdbmsArgs() {}
 
-    private MysqlRdbmsArgs() {
-        this.mysqlDatabases = Codegen.empty();
+    private MysqlRdbmsArgs(MysqlRdbmsArgs $) {
+        this.mysqlDatabases = $.mysqlDatabases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlRdbmsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases;
+        private MysqlRdbmsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlRdbmsArgs();
         }
 
         public Builder(MysqlRdbmsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlDatabases = defaults.mysqlDatabases;
+            $ = new MysqlRdbmsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlDatabases(@Nullable Output<List<MysqlDatabaseArgs>> mysqlDatabases) {
-            this.mysqlDatabases = mysqlDatabases;
+            $.mysqlDatabases = mysqlDatabases;
             return this;
         }
-        public Builder mysqlDatabases(@Nullable List<MysqlDatabaseArgs> mysqlDatabases) {
-            this.mysqlDatabases = Codegen.ofNullable(mysqlDatabases);
-            return this;
+
+        public Builder mysqlDatabases(List<MysqlDatabaseArgs> mysqlDatabases) {
+            return mysqlDatabases(Output.of(mysqlDatabases));
         }
+
         public Builder mysqlDatabases(MysqlDatabaseArgs... mysqlDatabases) {
             return mysqlDatabases(List.of(mysqlDatabases));
-        }        public MysqlRdbmsArgs build() {
-            return new MysqlRdbmsArgs(mysqlDatabases);
+        }
+
+        public MysqlRdbmsArgs build() {
+            return $;
         }
     }
+
 }

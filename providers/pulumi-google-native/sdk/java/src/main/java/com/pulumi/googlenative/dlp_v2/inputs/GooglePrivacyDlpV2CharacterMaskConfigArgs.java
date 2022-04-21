@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharsToIgnoreArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends com.pulumi.
      * 
      */
     @Import(name="charactersToIgnore")
-      private final @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
+    private @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
 
-    public Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore() {
-        return this.charactersToIgnore == null ? Codegen.empty() : this.charactersToIgnore;
+    public Optional<Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>>> charactersToIgnore() {
+        return Optional.ofNullable(this.charactersToIgnore);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends com.pulumi.
      * 
      */
     @Import(name="maskingCharacter")
-      private final @Nullable Output<String> maskingCharacter;
+    private @Nullable Output<String> maskingCharacter;
 
-    public Output<String> maskingCharacter() {
-        return this.maskingCharacter == null ? Codegen.empty() : this.maskingCharacter;
+    public Optional<Output<String>> maskingCharacter() {
+        return Optional.ofNullable(this.maskingCharacter);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends com.pulumi.
      * 
      */
     @Import(name="numberToMask")
-      private final @Nullable Output<Integer> numberToMask;
+    private @Nullable Output<Integer> numberToMask;
 
-    public Output<Integer> numberToMask() {
-        return this.numberToMask == null ? Codegen.empty() : this.numberToMask;
+    public Optional<Output<Integer>> numberToMask() {
+        return Optional.ofNullable(this.numberToMask);
     }
 
     /**
@@ -61,92 +61,82 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigArgs extends com.pulumi.
      * 
      */
     @Import(name="reverseOrder")
-      private final @Nullable Output<Boolean> reverseOrder;
+    private @Nullable Output<Boolean> reverseOrder;
 
-    public Output<Boolean> reverseOrder() {
-        return this.reverseOrder == null ? Codegen.empty() : this.reverseOrder;
+    public Optional<Output<Boolean>> reverseOrder() {
+        return Optional.ofNullable(this.reverseOrder);
     }
 
-    public GooglePrivacyDlpV2CharacterMaskConfigArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore,
-        @Nullable Output<String> maskingCharacter,
-        @Nullable Output<Integer> numberToMask,
-        @Nullable Output<Boolean> reverseOrder) {
-        this.charactersToIgnore = charactersToIgnore;
-        this.maskingCharacter = maskingCharacter;
-        this.numberToMask = numberToMask;
-        this.reverseOrder = reverseOrder;
-    }
+    private GooglePrivacyDlpV2CharacterMaskConfigArgs() {}
 
-    private GooglePrivacyDlpV2CharacterMaskConfigArgs() {
-        this.charactersToIgnore = Codegen.empty();
-        this.maskingCharacter = Codegen.empty();
-        this.numberToMask = Codegen.empty();
-        this.reverseOrder = Codegen.empty();
+    private GooglePrivacyDlpV2CharacterMaskConfigArgs(GooglePrivacyDlpV2CharacterMaskConfigArgs $) {
+        this.charactersToIgnore = $.charactersToIgnore;
+        this.maskingCharacter = $.maskingCharacter;
+        this.numberToMask = $.numberToMask;
+        this.reverseOrder = $.reverseOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CharacterMaskConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore;
-        private @Nullable Output<String> maskingCharacter;
-        private @Nullable Output<Integer> numberToMask;
-        private @Nullable Output<Boolean> reverseOrder;
+        private GooglePrivacyDlpV2CharacterMaskConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CharacterMaskConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2CharacterMaskConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.charactersToIgnore = defaults.charactersToIgnore;
-    	      this.maskingCharacter = defaults.maskingCharacter;
-    	      this.numberToMask = defaults.numberToMask;
-    	      this.reverseOrder = defaults.reverseOrder;
+            $ = new GooglePrivacyDlpV2CharacterMaskConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder charactersToIgnore(@Nullable Output<List<GooglePrivacyDlpV2CharsToIgnoreArgs>> charactersToIgnore) {
-            this.charactersToIgnore = charactersToIgnore;
+            $.charactersToIgnore = charactersToIgnore;
             return this;
         }
-        public Builder charactersToIgnore(@Nullable List<GooglePrivacyDlpV2CharsToIgnoreArgs> charactersToIgnore) {
-            this.charactersToIgnore = Codegen.ofNullable(charactersToIgnore);
-            return this;
+
+        public Builder charactersToIgnore(List<GooglePrivacyDlpV2CharsToIgnoreArgs> charactersToIgnore) {
+            return charactersToIgnore(Output.of(charactersToIgnore));
         }
+
         public Builder charactersToIgnore(GooglePrivacyDlpV2CharsToIgnoreArgs... charactersToIgnore) {
             return charactersToIgnore(List.of(charactersToIgnore));
         }
+
         public Builder maskingCharacter(@Nullable Output<String> maskingCharacter) {
-            this.maskingCharacter = maskingCharacter;
+            $.maskingCharacter = maskingCharacter;
             return this;
         }
-        public Builder maskingCharacter(@Nullable String maskingCharacter) {
-            this.maskingCharacter = Codegen.ofNullable(maskingCharacter);
-            return this;
+
+        public Builder maskingCharacter(String maskingCharacter) {
+            return maskingCharacter(Output.of(maskingCharacter));
         }
+
         public Builder numberToMask(@Nullable Output<Integer> numberToMask) {
-            this.numberToMask = numberToMask;
+            $.numberToMask = numberToMask;
             return this;
         }
-        public Builder numberToMask(@Nullable Integer numberToMask) {
-            this.numberToMask = Codegen.ofNullable(numberToMask);
-            return this;
+
+        public Builder numberToMask(Integer numberToMask) {
+            return numberToMask(Output.of(numberToMask));
         }
+
         public Builder reverseOrder(@Nullable Output<Boolean> reverseOrder) {
-            this.reverseOrder = reverseOrder;
+            $.reverseOrder = reverseOrder;
             return this;
         }
-        public Builder reverseOrder(@Nullable Boolean reverseOrder) {
-            this.reverseOrder = Codegen.ofNullable(reverseOrder);
-            return this;
-        }        public GooglePrivacyDlpV2CharacterMaskConfigArgs build() {
-            return new GooglePrivacyDlpV2CharacterMaskConfigArgs(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
+
+        public Builder reverseOrder(Boolean reverseOrder) {
+            return reverseOrder(Output.of(reverseOrder));
+        }
+
+        public GooglePrivacyDlpV2CharacterMaskConfigArgs build() {
+            return $;
         }
     }
+
 }

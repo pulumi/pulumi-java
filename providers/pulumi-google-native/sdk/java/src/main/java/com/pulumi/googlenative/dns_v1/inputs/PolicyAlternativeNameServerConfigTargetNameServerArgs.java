@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1.enums.PolicyAlternativeNameServerConfigTargetNameServerForwardingPath;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @Import(name="forwardingPath")
-      private final @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
+    private @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
-    public Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath() {
-        return this.forwardingPath == null ? Codegen.empty() : this.forwardingPath;
+    public Optional<Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath>> forwardingPath() {
+        return Optional.ofNullable(this.forwardingPath);
     }
 
     /**
@@ -32,83 +32,75 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * 
      */
     @Import(name="ipv4Address")
-      private final @Nullable Output<String> ipv4Address;
+    private @Nullable Output<String> ipv4Address;
 
-    public Output<String> ipv4Address() {
-        return this.ipv4Address == null ? Codegen.empty() : this.ipv4Address;
+    public Optional<Output<String>> ipv4Address() {
+        return Optional.ofNullable(this.ipv4Address);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public PolicyAlternativeNameServerConfigTargetNameServerArgs(
-        @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath,
-        @Nullable Output<String> ipv4Address,
-        @Nullable Output<String> kind) {
-        this.forwardingPath = forwardingPath;
-        this.ipv4Address = ipv4Address;
-        this.kind = kind;
-    }
+    private PolicyAlternativeNameServerConfigTargetNameServerArgs() {}
 
-    private PolicyAlternativeNameServerConfigTargetNameServerArgs() {
-        this.forwardingPath = Codegen.empty();
-        this.ipv4Address = Codegen.empty();
-        this.kind = Codegen.empty();
+    private PolicyAlternativeNameServerConfigTargetNameServerArgs(PolicyAlternativeNameServerConfigTargetNameServerArgs $) {
+        this.forwardingPath = $.forwardingPath;
+        this.ipv4Address = $.ipv4Address;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyAlternativeNameServerConfigTargetNameServerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
-        private @Nullable Output<String> ipv4Address;
-        private @Nullable Output<String> kind;
+        private PolicyAlternativeNameServerConfigTargetNameServerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyAlternativeNameServerConfigTargetNameServerArgs();
         }
 
         public Builder(PolicyAlternativeNameServerConfigTargetNameServerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardingPath = defaults.forwardingPath;
-    	      this.ipv4Address = defaults.ipv4Address;
-    	      this.kind = defaults.kind;
+            $ = new PolicyAlternativeNameServerConfigTargetNameServerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardingPath(@Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath) {
-            this.forwardingPath = forwardingPath;
+            $.forwardingPath = forwardingPath;
             return this;
         }
-        public Builder forwardingPath(@Nullable PolicyAlternativeNameServerConfigTargetNameServerForwardingPath forwardingPath) {
-            this.forwardingPath = Codegen.ofNullable(forwardingPath);
-            return this;
+
+        public Builder forwardingPath(PolicyAlternativeNameServerConfigTargetNameServerForwardingPath forwardingPath) {
+            return forwardingPath(Output.of(forwardingPath));
         }
+
         public Builder ipv4Address(@Nullable Output<String> ipv4Address) {
-            this.ipv4Address = ipv4Address;
+            $.ipv4Address = ipv4Address;
             return this;
         }
-        public Builder ipv4Address(@Nullable String ipv4Address) {
-            this.ipv4Address = Codegen.ofNullable(ipv4Address);
-            return this;
+
+        public Builder ipv4Address(String ipv4Address) {
+            return ipv4Address(Output.of(ipv4Address));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
-            return new PolicyAlternativeNameServerConfigTargetNameServerArgs(forwardingPath, ipv4Address, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public PolicyAlternativeNameServerConfigTargetNameServerArgs build() {
+            return $;
         }
     }
+
 }

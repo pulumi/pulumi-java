@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.FixedOrPercentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class OSPolicyAssignmentRolloutArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="disruptionBudget", required=true)
-      private final Output<FixedOrPercentArgs> disruptionBudget;
+    private Output<FixedOrPercentArgs> disruptionBudget;
 
     public Output<FixedOrPercentArgs> disruptionBudget() {
         return this.disruptionBudget;
@@ -35,63 +34,60 @@ public final class OSPolicyAssignmentRolloutArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minWaitDuration", required=true)
-      private final Output<String> minWaitDuration;
+    private Output<String> minWaitDuration;
 
     public Output<String> minWaitDuration() {
         return this.minWaitDuration;
     }
 
-    public OSPolicyAssignmentRolloutArgs(
-        Output<FixedOrPercentArgs> disruptionBudget,
-        Output<String> minWaitDuration) {
-        this.disruptionBudget = Objects.requireNonNull(disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
-        this.minWaitDuration = Objects.requireNonNull(minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
-    }
+    private OSPolicyAssignmentRolloutArgs() {}
 
-    private OSPolicyAssignmentRolloutArgs() {
-        this.disruptionBudget = Codegen.empty();
-        this.minWaitDuration = Codegen.empty();
+    private OSPolicyAssignmentRolloutArgs(OSPolicyAssignmentRolloutArgs $) {
+        this.disruptionBudget = $.disruptionBudget;
+        this.minWaitDuration = $.minWaitDuration;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyAssignmentRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FixedOrPercentArgs> disruptionBudget;
-        private Output<String> minWaitDuration;
+        private OSPolicyAssignmentRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyAssignmentRolloutArgs();
         }
 
         public Builder(OSPolicyAssignmentRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disruptionBudget = defaults.disruptionBudget;
-    	      this.minWaitDuration = defaults.minWaitDuration;
+            $ = new OSPolicyAssignmentRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disruptionBudget(Output<FixedOrPercentArgs> disruptionBudget) {
-            this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
+            $.disruptionBudget = disruptionBudget;
             return this;
         }
+
         public Builder disruptionBudget(FixedOrPercentArgs disruptionBudget) {
-            this.disruptionBudget = Output.of(Objects.requireNonNull(disruptionBudget));
-            return this;
+            return disruptionBudget(Output.of(disruptionBudget));
         }
+
         public Builder minWaitDuration(Output<String> minWaitDuration) {
-            this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
+            $.minWaitDuration = minWaitDuration;
             return this;
         }
+
         public Builder minWaitDuration(String minWaitDuration) {
-            this.minWaitDuration = Output.of(Objects.requireNonNull(minWaitDuration));
-            return this;
-        }        public OSPolicyAssignmentRolloutArgs build() {
-            return new OSPolicyAssignmentRolloutArgs(disruptionBudget, minWaitDuration);
+            return minWaitDuration(Output.of(minWaitDuration));
+        }
+
+        public OSPolicyAssignmentRolloutArgs build() {
+            $.disruptionBudget = Objects.requireNonNull($.disruptionBudget, "expected parameter 'disruptionBudget' to be non-null");
+            $.minWaitDuration = Objects.requireNonNull($.minWaitDuration, "expected parameter 'minWaitDuration' to be non-null");
+            return $;
         }
     }
+
 }

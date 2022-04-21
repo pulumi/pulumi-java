@@ -15,78 +15,72 @@ public final class GetDebugTokenArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDebugTokenArgs Empty = new GetDebugTokenArgs();
 
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
     @Import(name="debugTokenId", required=true)
-      private final String debugTokenId;
+    private String debugTokenId;
 
     public String debugTokenId() {
         return this.debugTokenId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDebugTokenArgs(
-        String appId,
-        String debugTokenId,
-        @Nullable String project) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.debugTokenId = Objects.requireNonNull(debugTokenId, "expected parameter 'debugTokenId' to be non-null");
-        this.project = project;
-    }
+    private GetDebugTokenArgs() {}
 
-    private GetDebugTokenArgs() {
-        this.appId = null;
-        this.debugTokenId = null;
-        this.project = null;
+    private GetDebugTokenArgs(GetDebugTokenArgs $) {
+        this.appId = $.appId;
+        this.debugTokenId = $.debugTokenId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDebugTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private String debugTokenId;
-        private @Nullable String project;
+        private GetDebugTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDebugTokenArgs();
         }
 
         public Builder(GetDebugTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.debugTokenId = defaults.debugTokenId;
-    	      this.project = defaults.project;
+            $ = new GetDebugTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder debugTokenId(String debugTokenId) {
-            this.debugTokenId = Objects.requireNonNull(debugTokenId);
+            $.debugTokenId = debugTokenId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDebugTokenArgs build() {
-            return new GetDebugTokenArgs(appId, debugTokenId, project);
+        }
+
+        public GetDebugTokenArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.debugTokenId = Objects.requireNonNull($.debugTokenId, "expected parameter 'debugTokenId' to be non-null");
+            return $;
         }
     }
+
 }

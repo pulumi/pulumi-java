@@ -5,10 +5,10 @@ package com.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cpuAverage")
-      private final @Nullable Output<Integer> cpuAverage;
+    private @Nullable Output<Integer> cpuAverage;
 
-    public Output<Integer> cpuAverage() {
-        return this.cpuAverage == null ? Codegen.empty() : this.cpuAverage;
+    public Optional<Output<Integer>> cpuAverage() {
+        return Optional.ofNullable(this.cpuAverage);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cpuAveragePercent")
-      private final @Nullable Output<Integer> cpuAveragePercent;
+    private @Nullable Output<Integer> cpuAveragePercent;
 
-    public Output<Integer> cpuAveragePercent() {
-        return this.cpuAveragePercent == null ? Codegen.empty() : this.cpuAveragePercent;
+    public Optional<Output<Integer>> cpuAveragePercent() {
+        return Optional.ofNullable(this.cpuAveragePercent);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cpuMax")
-      private final @Nullable Output<Integer> cpuMax;
+    private @Nullable Output<Integer> cpuMax;
 
-    public Output<Integer> cpuMax() {
-        return this.cpuMax == null ? Codegen.empty() : this.cpuMax;
+    public Optional<Output<Integer>> cpuMax() {
+        return Optional.ofNullable(this.cpuMax);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="cpuMaxPercent")
-      private final @Nullable Output<Integer> cpuMaxPercent;
+    private @Nullable Output<Integer> cpuMaxPercent;
 
-    public Output<Integer> cpuMaxPercent() {
-        return this.cpuMaxPercent == null ? Codegen.empty() : this.cpuMaxPercent;
+    public Optional<Output<Integer>> cpuMaxPercent() {
+        return Optional.ofNullable(this.cpuMaxPercent);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="diskIoRateAverage")
-      private final @Nullable Output<String> diskIoRateAverage;
+    private @Nullable Output<String> diskIoRateAverage;
 
-    public Output<String> diskIoRateAverage() {
-        return this.diskIoRateAverage == null ? Codegen.empty() : this.diskIoRateAverage;
+    public Optional<Output<String>> diskIoRateAverage() {
+        return Optional.ofNullable(this.diskIoRateAverage);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="diskIoRateAverageKbps")
-      private final @Nullable Output<String> diskIoRateAverageKbps;
+    private @Nullable Output<String> diskIoRateAverageKbps;
 
-    public Output<String> diskIoRateAverageKbps() {
-        return this.diskIoRateAverageKbps == null ? Codegen.empty() : this.diskIoRateAverageKbps;
+    public Optional<Output<String>> diskIoRateAverageKbps() {
+        return Optional.ofNullable(this.diskIoRateAverageKbps);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="diskIoRateMax")
-      private final @Nullable Output<String> diskIoRateMax;
+    private @Nullable Output<String> diskIoRateMax;
 
-    public Output<String> diskIoRateMax() {
-        return this.diskIoRateMax == null ? Codegen.empty() : this.diskIoRateMax;
+    public Optional<Output<String>> diskIoRateMax() {
+        return Optional.ofNullable(this.diskIoRateMax);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="diskIoRateMaxKbps")
-      private final @Nullable Output<String> diskIoRateMaxKbps;
+    private @Nullable Output<String> diskIoRateMaxKbps;
 
-    public Output<String> diskIoRateMaxKbps() {
-        return this.diskIoRateMaxKbps == null ? Codegen.empty() : this.diskIoRateMaxKbps;
+    public Optional<Output<String>> diskIoRateMaxKbps() {
+        return Optional.ofNullable(this.diskIoRateMaxKbps);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="memoryAverage")
-      private final @Nullable Output<Integer> memoryAverage;
+    private @Nullable Output<Integer> memoryAverage;
 
-    public Output<Integer> memoryAverage() {
-        return this.memoryAverage == null ? Codegen.empty() : this.memoryAverage;
+    public Optional<Output<Integer>> memoryAverage() {
+        return Optional.ofNullable(this.memoryAverage);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="memoryAveragePercent")
-      private final @Nullable Output<Integer> memoryAveragePercent;
+    private @Nullable Output<Integer> memoryAveragePercent;
 
-    public Output<Integer> memoryAveragePercent() {
-        return this.memoryAveragePercent == null ? Codegen.empty() : this.memoryAveragePercent;
+    public Optional<Output<Integer>> memoryAveragePercent() {
+        return Optional.ofNullable(this.memoryAveragePercent);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="memoryMax")
-      private final @Nullable Output<Integer> memoryMax;
+    private @Nullable Output<Integer> memoryMax;
 
-    public Output<Integer> memoryMax() {
-        return this.memoryMax == null ? Codegen.empty() : this.memoryMax;
+    public Optional<Output<Integer>> memoryMax() {
+        return Optional.ofNullable(this.memoryMax);
     }
 
     /**
@@ -146,10 +146,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="memoryMaxPercent")
-      private final @Nullable Output<Integer> memoryMaxPercent;
+    private @Nullable Output<Integer> memoryMaxPercent;
 
-    public Output<Integer> memoryMaxPercent() {
-        return this.memoryMaxPercent == null ? Codegen.empty() : this.memoryMaxPercent;
+    public Optional<Output<Integer>> memoryMaxPercent() {
+        return Optional.ofNullable(this.memoryMaxPercent);
     }
 
     /**
@@ -157,10 +157,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkThroughputAverage")
-      private final @Nullable Output<String> networkThroughputAverage;
+    private @Nullable Output<String> networkThroughputAverage;
 
-    public Output<String> networkThroughputAverage() {
-        return this.networkThroughputAverage == null ? Codegen.empty() : this.networkThroughputAverage;
+    public Optional<Output<String>> networkThroughputAverage() {
+        return Optional.ofNullable(this.networkThroughputAverage);
     }
 
     /**
@@ -168,10 +168,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkThroughputAverageKbps")
-      private final @Nullable Output<String> networkThroughputAverageKbps;
+    private @Nullable Output<String> networkThroughputAverageKbps;
 
-    public Output<String> networkThroughputAverageKbps() {
-        return this.networkThroughputAverageKbps == null ? Codegen.empty() : this.networkThroughputAverageKbps;
+    public Optional<Output<String>> networkThroughputAverageKbps() {
+        return Optional.ofNullable(this.networkThroughputAverageKbps);
     }
 
     /**
@@ -179,10 +179,10 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkThroughputMax")
-      private final @Nullable Output<String> networkThroughputMax;
+    private @Nullable Output<String> networkThroughputMax;
 
-    public Output<String> networkThroughputMax() {
-        return this.networkThroughputMax == null ? Codegen.empty() : this.networkThroughputMax;
+    public Optional<Output<String>> networkThroughputMax() {
+        return Optional.ofNullable(this.networkThroughputMax);
     }
 
     /**
@@ -190,245 +190,198 @@ public final class VmUtilizationMetricsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="networkThroughputMaxKbps")
-      private final @Nullable Output<String> networkThroughputMaxKbps;
+    private @Nullable Output<String> networkThroughputMaxKbps;
 
-    public Output<String> networkThroughputMaxKbps() {
-        return this.networkThroughputMaxKbps == null ? Codegen.empty() : this.networkThroughputMaxKbps;
+    public Optional<Output<String>> networkThroughputMaxKbps() {
+        return Optional.ofNullable(this.networkThroughputMaxKbps);
     }
 
-    public VmUtilizationMetricsArgs(
-        @Nullable Output<Integer> cpuAverage,
-        @Nullable Output<Integer> cpuAveragePercent,
-        @Nullable Output<Integer> cpuMax,
-        @Nullable Output<Integer> cpuMaxPercent,
-        @Nullable Output<String> diskIoRateAverage,
-        @Nullable Output<String> diskIoRateAverageKbps,
-        @Nullable Output<String> diskIoRateMax,
-        @Nullable Output<String> diskIoRateMaxKbps,
-        @Nullable Output<Integer> memoryAverage,
-        @Nullable Output<Integer> memoryAveragePercent,
-        @Nullable Output<Integer> memoryMax,
-        @Nullable Output<Integer> memoryMaxPercent,
-        @Nullable Output<String> networkThroughputAverage,
-        @Nullable Output<String> networkThroughputAverageKbps,
-        @Nullable Output<String> networkThroughputMax,
-        @Nullable Output<String> networkThroughputMaxKbps) {
-        this.cpuAverage = cpuAverage;
-        this.cpuAveragePercent = cpuAveragePercent;
-        this.cpuMax = cpuMax;
-        this.cpuMaxPercent = cpuMaxPercent;
-        this.diskIoRateAverage = diskIoRateAverage;
-        this.diskIoRateAverageKbps = diskIoRateAverageKbps;
-        this.diskIoRateMax = diskIoRateMax;
-        this.diskIoRateMaxKbps = diskIoRateMaxKbps;
-        this.memoryAverage = memoryAverage;
-        this.memoryAveragePercent = memoryAveragePercent;
-        this.memoryMax = memoryMax;
-        this.memoryMaxPercent = memoryMaxPercent;
-        this.networkThroughputAverage = networkThroughputAverage;
-        this.networkThroughputAverageKbps = networkThroughputAverageKbps;
-        this.networkThroughputMax = networkThroughputMax;
-        this.networkThroughputMaxKbps = networkThroughputMaxKbps;
-    }
+    private VmUtilizationMetricsArgs() {}
 
-    private VmUtilizationMetricsArgs() {
-        this.cpuAverage = Codegen.empty();
-        this.cpuAveragePercent = Codegen.empty();
-        this.cpuMax = Codegen.empty();
-        this.cpuMaxPercent = Codegen.empty();
-        this.diskIoRateAverage = Codegen.empty();
-        this.diskIoRateAverageKbps = Codegen.empty();
-        this.diskIoRateMax = Codegen.empty();
-        this.diskIoRateMaxKbps = Codegen.empty();
-        this.memoryAverage = Codegen.empty();
-        this.memoryAveragePercent = Codegen.empty();
-        this.memoryMax = Codegen.empty();
-        this.memoryMaxPercent = Codegen.empty();
-        this.networkThroughputAverage = Codegen.empty();
-        this.networkThroughputAverageKbps = Codegen.empty();
-        this.networkThroughputMax = Codegen.empty();
-        this.networkThroughputMaxKbps = Codegen.empty();
+    private VmUtilizationMetricsArgs(VmUtilizationMetricsArgs $) {
+        this.cpuAverage = $.cpuAverage;
+        this.cpuAveragePercent = $.cpuAveragePercent;
+        this.cpuMax = $.cpuMax;
+        this.cpuMaxPercent = $.cpuMaxPercent;
+        this.diskIoRateAverage = $.diskIoRateAverage;
+        this.diskIoRateAverageKbps = $.diskIoRateAverageKbps;
+        this.diskIoRateMax = $.diskIoRateMax;
+        this.diskIoRateMaxKbps = $.diskIoRateMaxKbps;
+        this.memoryAverage = $.memoryAverage;
+        this.memoryAveragePercent = $.memoryAveragePercent;
+        this.memoryMax = $.memoryMax;
+        this.memoryMaxPercent = $.memoryMaxPercent;
+        this.networkThroughputAverage = $.networkThroughputAverage;
+        this.networkThroughputAverageKbps = $.networkThroughputAverageKbps;
+        this.networkThroughputMax = $.networkThroughputMax;
+        this.networkThroughputMaxKbps = $.networkThroughputMaxKbps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmUtilizationMetricsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> cpuAverage;
-        private @Nullable Output<Integer> cpuAveragePercent;
-        private @Nullable Output<Integer> cpuMax;
-        private @Nullable Output<Integer> cpuMaxPercent;
-        private @Nullable Output<String> diskIoRateAverage;
-        private @Nullable Output<String> diskIoRateAverageKbps;
-        private @Nullable Output<String> diskIoRateMax;
-        private @Nullable Output<String> diskIoRateMaxKbps;
-        private @Nullable Output<Integer> memoryAverage;
-        private @Nullable Output<Integer> memoryAveragePercent;
-        private @Nullable Output<Integer> memoryMax;
-        private @Nullable Output<Integer> memoryMaxPercent;
-        private @Nullable Output<String> networkThroughputAverage;
-        private @Nullable Output<String> networkThroughputAverageKbps;
-        private @Nullable Output<String> networkThroughputMax;
-        private @Nullable Output<String> networkThroughputMaxKbps;
+        private VmUtilizationMetricsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmUtilizationMetricsArgs();
         }
 
         public Builder(VmUtilizationMetricsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuAverage = defaults.cpuAverage;
-    	      this.cpuAveragePercent = defaults.cpuAveragePercent;
-    	      this.cpuMax = defaults.cpuMax;
-    	      this.cpuMaxPercent = defaults.cpuMaxPercent;
-    	      this.diskIoRateAverage = defaults.diskIoRateAverage;
-    	      this.diskIoRateAverageKbps = defaults.diskIoRateAverageKbps;
-    	      this.diskIoRateMax = defaults.diskIoRateMax;
-    	      this.diskIoRateMaxKbps = defaults.diskIoRateMaxKbps;
-    	      this.memoryAverage = defaults.memoryAverage;
-    	      this.memoryAveragePercent = defaults.memoryAveragePercent;
-    	      this.memoryMax = defaults.memoryMax;
-    	      this.memoryMaxPercent = defaults.memoryMaxPercent;
-    	      this.networkThroughputAverage = defaults.networkThroughputAverage;
-    	      this.networkThroughputAverageKbps = defaults.networkThroughputAverageKbps;
-    	      this.networkThroughputMax = defaults.networkThroughputMax;
-    	      this.networkThroughputMaxKbps = defaults.networkThroughputMaxKbps;
+            $ = new VmUtilizationMetricsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuAverage(@Nullable Output<Integer> cpuAverage) {
-            this.cpuAverage = cpuAverage;
+            $.cpuAverage = cpuAverage;
             return this;
         }
-        public Builder cpuAverage(@Nullable Integer cpuAverage) {
-            this.cpuAverage = Codegen.ofNullable(cpuAverage);
-            return this;
+
+        public Builder cpuAverage(Integer cpuAverage) {
+            return cpuAverage(Output.of(cpuAverage));
         }
+
         public Builder cpuAveragePercent(@Nullable Output<Integer> cpuAveragePercent) {
-            this.cpuAveragePercent = cpuAveragePercent;
+            $.cpuAveragePercent = cpuAveragePercent;
             return this;
         }
-        public Builder cpuAveragePercent(@Nullable Integer cpuAveragePercent) {
-            this.cpuAveragePercent = Codegen.ofNullable(cpuAveragePercent);
-            return this;
+
+        public Builder cpuAveragePercent(Integer cpuAveragePercent) {
+            return cpuAveragePercent(Output.of(cpuAveragePercent));
         }
+
         public Builder cpuMax(@Nullable Output<Integer> cpuMax) {
-            this.cpuMax = cpuMax;
+            $.cpuMax = cpuMax;
             return this;
         }
-        public Builder cpuMax(@Nullable Integer cpuMax) {
-            this.cpuMax = Codegen.ofNullable(cpuMax);
-            return this;
+
+        public Builder cpuMax(Integer cpuMax) {
+            return cpuMax(Output.of(cpuMax));
         }
+
         public Builder cpuMaxPercent(@Nullable Output<Integer> cpuMaxPercent) {
-            this.cpuMaxPercent = cpuMaxPercent;
+            $.cpuMaxPercent = cpuMaxPercent;
             return this;
         }
-        public Builder cpuMaxPercent(@Nullable Integer cpuMaxPercent) {
-            this.cpuMaxPercent = Codegen.ofNullable(cpuMaxPercent);
-            return this;
+
+        public Builder cpuMaxPercent(Integer cpuMaxPercent) {
+            return cpuMaxPercent(Output.of(cpuMaxPercent));
         }
+
         public Builder diskIoRateAverage(@Nullable Output<String> diskIoRateAverage) {
-            this.diskIoRateAverage = diskIoRateAverage;
+            $.diskIoRateAverage = diskIoRateAverage;
             return this;
         }
-        public Builder diskIoRateAverage(@Nullable String diskIoRateAverage) {
-            this.diskIoRateAverage = Codegen.ofNullable(diskIoRateAverage);
-            return this;
+
+        public Builder diskIoRateAverage(String diskIoRateAverage) {
+            return diskIoRateAverage(Output.of(diskIoRateAverage));
         }
+
         public Builder diskIoRateAverageKbps(@Nullable Output<String> diskIoRateAverageKbps) {
-            this.diskIoRateAverageKbps = diskIoRateAverageKbps;
+            $.diskIoRateAverageKbps = diskIoRateAverageKbps;
             return this;
         }
-        public Builder diskIoRateAverageKbps(@Nullable String diskIoRateAverageKbps) {
-            this.diskIoRateAverageKbps = Codegen.ofNullable(diskIoRateAverageKbps);
-            return this;
+
+        public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
+            return diskIoRateAverageKbps(Output.of(diskIoRateAverageKbps));
         }
+
         public Builder diskIoRateMax(@Nullable Output<String> diskIoRateMax) {
-            this.diskIoRateMax = diskIoRateMax;
+            $.diskIoRateMax = diskIoRateMax;
             return this;
         }
-        public Builder diskIoRateMax(@Nullable String diskIoRateMax) {
-            this.diskIoRateMax = Codegen.ofNullable(diskIoRateMax);
-            return this;
+
+        public Builder diskIoRateMax(String diskIoRateMax) {
+            return diskIoRateMax(Output.of(diskIoRateMax));
         }
+
         public Builder diskIoRateMaxKbps(@Nullable Output<String> diskIoRateMaxKbps) {
-            this.diskIoRateMaxKbps = diskIoRateMaxKbps;
+            $.diskIoRateMaxKbps = diskIoRateMaxKbps;
             return this;
         }
-        public Builder diskIoRateMaxKbps(@Nullable String diskIoRateMaxKbps) {
-            this.diskIoRateMaxKbps = Codegen.ofNullable(diskIoRateMaxKbps);
-            return this;
+
+        public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
+            return diskIoRateMaxKbps(Output.of(diskIoRateMaxKbps));
         }
+
         public Builder memoryAverage(@Nullable Output<Integer> memoryAverage) {
-            this.memoryAverage = memoryAverage;
+            $.memoryAverage = memoryAverage;
             return this;
         }
-        public Builder memoryAverage(@Nullable Integer memoryAverage) {
-            this.memoryAverage = Codegen.ofNullable(memoryAverage);
-            return this;
+
+        public Builder memoryAverage(Integer memoryAverage) {
+            return memoryAverage(Output.of(memoryAverage));
         }
+
         public Builder memoryAveragePercent(@Nullable Output<Integer> memoryAveragePercent) {
-            this.memoryAveragePercent = memoryAveragePercent;
+            $.memoryAveragePercent = memoryAveragePercent;
             return this;
         }
-        public Builder memoryAveragePercent(@Nullable Integer memoryAveragePercent) {
-            this.memoryAveragePercent = Codegen.ofNullable(memoryAveragePercent);
-            return this;
+
+        public Builder memoryAveragePercent(Integer memoryAveragePercent) {
+            return memoryAveragePercent(Output.of(memoryAveragePercent));
         }
+
         public Builder memoryMax(@Nullable Output<Integer> memoryMax) {
-            this.memoryMax = memoryMax;
+            $.memoryMax = memoryMax;
             return this;
         }
-        public Builder memoryMax(@Nullable Integer memoryMax) {
-            this.memoryMax = Codegen.ofNullable(memoryMax);
-            return this;
+
+        public Builder memoryMax(Integer memoryMax) {
+            return memoryMax(Output.of(memoryMax));
         }
+
         public Builder memoryMaxPercent(@Nullable Output<Integer> memoryMaxPercent) {
-            this.memoryMaxPercent = memoryMaxPercent;
+            $.memoryMaxPercent = memoryMaxPercent;
             return this;
         }
-        public Builder memoryMaxPercent(@Nullable Integer memoryMaxPercent) {
-            this.memoryMaxPercent = Codegen.ofNullable(memoryMaxPercent);
-            return this;
+
+        public Builder memoryMaxPercent(Integer memoryMaxPercent) {
+            return memoryMaxPercent(Output.of(memoryMaxPercent));
         }
+
         public Builder networkThroughputAverage(@Nullable Output<String> networkThroughputAverage) {
-            this.networkThroughputAverage = networkThroughputAverage;
+            $.networkThroughputAverage = networkThroughputAverage;
             return this;
         }
-        public Builder networkThroughputAverage(@Nullable String networkThroughputAverage) {
-            this.networkThroughputAverage = Codegen.ofNullable(networkThroughputAverage);
-            return this;
+
+        public Builder networkThroughputAverage(String networkThroughputAverage) {
+            return networkThroughputAverage(Output.of(networkThroughputAverage));
         }
+
         public Builder networkThroughputAverageKbps(@Nullable Output<String> networkThroughputAverageKbps) {
-            this.networkThroughputAverageKbps = networkThroughputAverageKbps;
+            $.networkThroughputAverageKbps = networkThroughputAverageKbps;
             return this;
         }
-        public Builder networkThroughputAverageKbps(@Nullable String networkThroughputAverageKbps) {
-            this.networkThroughputAverageKbps = Codegen.ofNullable(networkThroughputAverageKbps);
-            return this;
+
+        public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
+            return networkThroughputAverageKbps(Output.of(networkThroughputAverageKbps));
         }
+
         public Builder networkThroughputMax(@Nullable Output<String> networkThroughputMax) {
-            this.networkThroughputMax = networkThroughputMax;
+            $.networkThroughputMax = networkThroughputMax;
             return this;
         }
-        public Builder networkThroughputMax(@Nullable String networkThroughputMax) {
-            this.networkThroughputMax = Codegen.ofNullable(networkThroughputMax);
-            return this;
+
+        public Builder networkThroughputMax(String networkThroughputMax) {
+            return networkThroughputMax(Output.of(networkThroughputMax));
         }
+
         public Builder networkThroughputMaxKbps(@Nullable Output<String> networkThroughputMaxKbps) {
-            this.networkThroughputMaxKbps = networkThroughputMaxKbps;
+            $.networkThroughputMaxKbps = networkThroughputMaxKbps;
             return this;
         }
-        public Builder networkThroughputMaxKbps(@Nullable String networkThroughputMaxKbps) {
-            this.networkThroughputMaxKbps = Codegen.ofNullable(networkThroughputMaxKbps);
-            return this;
-        }        public VmUtilizationMetricsArgs build() {
-            return new VmUtilizationMetricsArgs(cpuAverage, cpuAveragePercent, cpuMax, cpuMaxPercent, diskIoRateAverage, diskIoRateAverageKbps, diskIoRateMax, diskIoRateMaxKbps, memoryAverage, memoryAveragePercent, memoryMax, memoryMaxPercent, networkThroughputAverage, networkThroughputAverageKbps, networkThroughputMax, networkThroughputMaxKbps);
+
+        public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
+            return networkThroughputMaxKbps(Output.of(networkThroughputMaxKbps));
+        }
+
+        public VmUtilizationMetricsArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class InstanceAttemptResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="exitCode", required=true)
-      private final Integer exitCode;
+    private Integer exitCode;
 
     public Integer exitCode() {
         return this.exitCode;
@@ -33,55 +33,52 @@ public final class InstanceAttemptResultResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="status", required=true)
-      private final GoogleRpcStatusResponse status;
+    private GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse status() {
         return this.status;
     }
 
-    public InstanceAttemptResultResponse(
-        Integer exitCode,
-        GoogleRpcStatusResponse status) {
-        this.exitCode = Objects.requireNonNull(exitCode, "expected parameter 'exitCode' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private InstanceAttemptResultResponse() {}
 
-    private InstanceAttemptResultResponse() {
-        this.exitCode = null;
-        this.status = null;
+    private InstanceAttemptResultResponse(InstanceAttemptResultResponse $) {
+        this.exitCode = $.exitCode;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceAttemptResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer exitCode;
-        private GoogleRpcStatusResponse status;
+        private InstanceAttemptResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceAttemptResultResponse();
         }
 
         public Builder(InstanceAttemptResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exitCode = defaults.exitCode;
-    	      this.status = defaults.status;
+            $ = new InstanceAttemptResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exitCode(Integer exitCode) {
-            this.exitCode = Objects.requireNonNull(exitCode);
+            $.exitCode = exitCode;
             return this;
         }
+
         public Builder status(GoogleRpcStatusResponse status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public InstanceAttemptResultResponse build() {
-            return new InstanceAttemptResultResponse(exitCode, status);
+        }
+
+        public InstanceAttemptResultResponse build() {
+            $.exitCode = Objects.requireNonNull($.exitCode, "expected parameter 'exitCode' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

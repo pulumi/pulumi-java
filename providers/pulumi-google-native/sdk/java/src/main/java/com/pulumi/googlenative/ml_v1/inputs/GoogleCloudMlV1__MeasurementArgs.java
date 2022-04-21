@@ -5,11 +5,11 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Measurement_MetricArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudMlV1__MeasurementArgs extends com.pulumi.resources
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
+    private @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
 
-    public Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<GoogleCloudMlV1_Measurement_MetricArgs>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleCloudMlV1__MeasurementArgs extends com.pulumi.resources
      * 
      */
     @Import(name="stepCount")
-      private final @Nullable Output<String> stepCount;
+    private @Nullable Output<String> stepCount;
 
-    public Output<String> stepCount() {
-        return this.stepCount == null ? Codegen.empty() : this.stepCount;
+    public Optional<Output<String>> stepCount() {
+        return Optional.ofNullable(this.stepCount);
     }
 
-    public GoogleCloudMlV1__MeasurementArgs(
-        @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics,
-        @Nullable Output<String> stepCount) {
-        this.metrics = metrics;
-        this.stepCount = stepCount;
-    }
+    private GoogleCloudMlV1__MeasurementArgs() {}
 
-    private GoogleCloudMlV1__MeasurementArgs() {
-        this.metrics = Codegen.empty();
-        this.stepCount = Codegen.empty();
+    private GoogleCloudMlV1__MeasurementArgs(GoogleCloudMlV1__MeasurementArgs $) {
+        this.metrics = $.metrics;
+        this.stepCount = $.stepCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__MeasurementArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
-        private @Nullable Output<String> stepCount;
+        private GoogleCloudMlV1__MeasurementArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__MeasurementArgs();
         }
 
         public Builder(GoogleCloudMlV1__MeasurementArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metrics = defaults.metrics;
-    	      this.stepCount = defaults.stepCount;
+            $ = new GoogleCloudMlV1__MeasurementArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(GoogleCloudMlV1_Measurement_MetricArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder stepCount(@Nullable Output<String> stepCount) {
-            this.stepCount = stepCount;
+            $.stepCount = stepCount;
             return this;
         }
-        public Builder stepCount(@Nullable String stepCount) {
-            this.stepCount = Codegen.ofNullable(stepCount);
-            return this;
-        }        public GoogleCloudMlV1__MeasurementArgs build() {
-            return new GoogleCloudMlV1__MeasurementArgs(metrics, stepCount);
+
+        public Builder stepCount(String stepCount) {
+            return stepCount(Output.of(stepCount));
+        }
+
+        public GoogleCloudMlV1__MeasurementArgs build() {
+            return $;
         }
     }
+
 }

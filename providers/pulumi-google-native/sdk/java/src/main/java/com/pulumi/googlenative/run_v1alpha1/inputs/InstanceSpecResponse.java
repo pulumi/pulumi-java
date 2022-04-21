@@ -24,7 +24,7 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="activeDeadlineSeconds", required=true)
-      private final String activeDeadlineSeconds;
+    private String activeDeadlineSeconds;
 
     public String activeDeadlineSeconds() {
         return this.activeDeadlineSeconds;
@@ -35,7 +35,7 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containers", required=true)
-      private final List<ContainerResponse> containers;
+    private List<ContainerResponse> containers;
 
     public List<ContainerResponse> containers() {
         return this.containers;
@@ -46,7 +46,7 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="restartPolicy", required=true)
-      private final String restartPolicy;
+    private String restartPolicy;
 
     public String restartPolicy() {
         return this.restartPolicy;
@@ -57,7 +57,7 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceAccountName", required=true)
-      private final String serviceAccountName;
+    private String serviceAccountName;
 
     public String serviceAccountName() {
         return this.serviceAccountName;
@@ -68,7 +68,7 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="terminationGracePeriodSeconds", required=true)
-      private final String terminationGracePeriodSeconds;
+    private String terminationGracePeriodSeconds;
 
     public String terminationGracePeriodSeconds() {
         return this.terminationGracePeriodSeconds;
@@ -79,97 +79,88 @@ public final class InstanceSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="volumes", required=true)
-      private final List<VolumeResponse> volumes;
+    private List<VolumeResponse> volumes;
 
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 
-    public InstanceSpecResponse(
-        String activeDeadlineSeconds,
-        List<ContainerResponse> containers,
-        String restartPolicy,
-        String serviceAccountName,
-        String terminationGracePeriodSeconds,
-        List<VolumeResponse> volumes) {
-        this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds, "expected parameter 'activeDeadlineSeconds' to be non-null");
-        this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
-        this.restartPolicy = Objects.requireNonNull(restartPolicy, "expected parameter 'restartPolicy' to be non-null");
-        this.serviceAccountName = Objects.requireNonNull(serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
-        this.terminationGracePeriodSeconds = Objects.requireNonNull(terminationGracePeriodSeconds, "expected parameter 'terminationGracePeriodSeconds' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-    }
+    private InstanceSpecResponse() {}
 
-    private InstanceSpecResponse() {
-        this.activeDeadlineSeconds = null;
-        this.containers = List.of();
-        this.restartPolicy = null;
-        this.serviceAccountName = null;
-        this.terminationGracePeriodSeconds = null;
-        this.volumes = List.of();
+    private InstanceSpecResponse(InstanceSpecResponse $) {
+        this.activeDeadlineSeconds = $.activeDeadlineSeconds;
+        this.containers = $.containers;
+        this.restartPolicy = $.restartPolicy;
+        this.serviceAccountName = $.serviceAccountName;
+        this.terminationGracePeriodSeconds = $.terminationGracePeriodSeconds;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activeDeadlineSeconds;
-        private List<ContainerResponse> containers;
-        private String restartPolicy;
-        private String serviceAccountName;
-        private String terminationGracePeriodSeconds;
-        private List<VolumeResponse> volumes;
+        private InstanceSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceSpecResponse();
         }
 
         public Builder(InstanceSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activeDeadlineSeconds = defaults.activeDeadlineSeconds;
-    	      this.containers = defaults.containers;
-    	      this.restartPolicy = defaults.restartPolicy;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.terminationGracePeriodSeconds = defaults.terminationGracePeriodSeconds;
-    	      this.volumes = defaults.volumes;
+            $ = new InstanceSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
+            $.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
+
         public Builder containers(List<ContainerResponse> containers) {
-            this.containers = Objects.requireNonNull(containers);
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(ContainerResponse... containers) {
             return containers(List.of(containers));
         }
+
         public Builder restartPolicy(String restartPolicy) {
-            this.restartPolicy = Objects.requireNonNull(restartPolicy);
+            $.restartPolicy = restartPolicy;
             return this;
         }
+
         public Builder serviceAccountName(String serviceAccountName) {
-            this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
+
         public Builder terminationGracePeriodSeconds(String terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = Objects.requireNonNull(terminationGracePeriodSeconds);
+            $.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
+
         public Builder volumes(List<VolumeResponse> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
-        }        public InstanceSpecResponse build() {
-            return new InstanceSpecResponse(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
+        }
+
+        public InstanceSpecResponse build() {
+            $.activeDeadlineSeconds = Objects.requireNonNull($.activeDeadlineSeconds, "expected parameter 'activeDeadlineSeconds' to be non-null");
+            $.containers = Objects.requireNonNull($.containers, "expected parameter 'containers' to be non-null");
+            $.restartPolicy = Objects.requireNonNull($.restartPolicy, "expected parameter 'restartPolicy' to be non-null");
+            $.serviceAccountName = Objects.requireNonNull($.serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
+            $.terminationGracePeriodSeconds = Objects.requireNonNull($.terminationGracePeriodSeconds, "expected parameter 'terminationGracePeriodSeconds' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            return $;
         }
     }
+
 }

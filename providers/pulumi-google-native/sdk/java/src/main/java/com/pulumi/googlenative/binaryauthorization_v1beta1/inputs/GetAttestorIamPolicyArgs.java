@@ -15,78 +15,71 @@ public final class GetAttestorIamPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetAttestorIamPolicyArgs Empty = new GetAttestorIamPolicyArgs();
 
     @Import(name="attestorId", required=true)
-      private final String attestorId;
+    private String attestorId;
 
     public String attestorId() {
         return this.attestorId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAttestorIamPolicyArgs(
-        String attestorId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.attestorId = Objects.requireNonNull(attestorId, "expected parameter 'attestorId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetAttestorIamPolicyArgs() {}
 
-    private GetAttestorIamPolicyArgs() {
-        this.attestorId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetAttestorIamPolicyArgs(GetAttestorIamPolicyArgs $) {
+        this.attestorId = $.attestorId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAttestorIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String attestorId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetAttestorIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAttestorIamPolicyArgs();
         }
 
         public Builder(GetAttestorIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestorId = defaults.attestorId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetAttestorIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestorId(String attestorId) {
-            this.attestorId = Objects.requireNonNull(attestorId);
+            $.attestorId = attestorId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAttestorIamPolicyArgs build() {
-            return new GetAttestorIamPolicyArgs(attestorId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetAttestorIamPolicyArgs build() {
+            $.attestorId = Objects.requireNonNull($.attestorId, "expected parameter 'attestorId' to be non-null");
+            return $;
         }
     }
+
 }

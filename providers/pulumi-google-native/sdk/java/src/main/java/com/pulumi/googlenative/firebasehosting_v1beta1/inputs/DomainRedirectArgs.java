@@ -5,7 +5,6 @@ package com.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.firebasehosting_v1beta1.enums.DomainRedirectType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class DomainRedirectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="domainName", required=true)
-      private final Output<String> domainName;
+    private Output<String> domainName;
 
     public Output<String> domainName() {
         return this.domainName;
@@ -35,63 +34,60 @@ public final class DomainRedirectArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<DomainRedirectType> type;
+    private Output<DomainRedirectType> type;
 
     public Output<DomainRedirectType> type() {
         return this.type;
     }
 
-    public DomainRedirectArgs(
-        Output<String> domainName,
-        Output<DomainRedirectType> type) {
-        this.domainName = Objects.requireNonNull(domainName, "expected parameter 'domainName' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DomainRedirectArgs() {}
 
-    private DomainRedirectArgs() {
-        this.domainName = Codegen.empty();
-        this.type = Codegen.empty();
+    private DomainRedirectArgs(DomainRedirectArgs $) {
+        this.domainName = $.domainName;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainRedirectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> domainName;
-        private Output<DomainRedirectType> type;
+        private DomainRedirectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainRedirectArgs();
         }
 
         public Builder(DomainRedirectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainName = defaults.domainName;
-    	      this.type = defaults.type;
+            $ = new DomainRedirectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domainName(Output<String> domainName) {
-            this.domainName = Objects.requireNonNull(domainName);
+            $.domainName = domainName;
             return this;
         }
+
         public Builder domainName(String domainName) {
-            this.domainName = Output.of(Objects.requireNonNull(domainName));
-            return this;
+            return domainName(Output.of(domainName));
         }
+
         public Builder type(Output<DomainRedirectType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(DomainRedirectType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DomainRedirectArgs build() {
-            return new DomainRedirectArgs(domainName, type);
+            return type(Output.of(type));
+        }
+
+        public DomainRedirectArgs build() {
+            $.domainName = Objects.requireNonNull($.domainName, "expected parameter 'domainName' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

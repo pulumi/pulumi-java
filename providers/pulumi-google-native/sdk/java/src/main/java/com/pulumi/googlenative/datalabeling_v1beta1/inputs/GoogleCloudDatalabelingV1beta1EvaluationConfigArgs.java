@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends co
      * 
      */
     @Import(name="boundingBoxEvaluationOptions")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
-    public Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions() {
-        return this.boundingBoxEvaluationOptions == null ? Codegen.empty() : this.boundingBoxEvaluationOptions;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs>> boundingBoxEvaluationOptions() {
+        return Optional.ofNullable(this.boundingBoxEvaluationOptions);
     }
 
-    public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
-        this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
-    }
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1EvaluationConfigArgs() {
-        this.boundingBoxEvaluationOptions = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs $) {
+        this.boundingBoxEvaluationOptions = $.boundingBoxEvaluationOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
+        private GoogleCloudDatalabelingV1beta1EvaluationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1EvaluationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boundingBoxEvaluationOptions = defaults.boundingBoxEvaluationOptions;
+            $ = new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boundingBoxEvaluationOptions(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
-            this.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
+            $.boundingBoxEvaluationOptions = boundingBoxEvaluationOptions;
             return this;
         }
-        public Builder boundingBoxEvaluationOptions(@Nullable GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs boundingBoxEvaluationOptions) {
-            this.boundingBoxEvaluationOptions = Codegen.ofNullable(boundingBoxEvaluationOptions);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
-            return new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(boundingBoxEvaluationOptions);
+
+        public Builder boundingBoxEvaluationOptions(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs boundingBoxEvaluationOptions) {
+            return boundingBoxEvaluationOptions(Output.of(boundingBoxEvaluationOptions));
+        }
+
+        public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
+            return $;
         }
     }
+
 }

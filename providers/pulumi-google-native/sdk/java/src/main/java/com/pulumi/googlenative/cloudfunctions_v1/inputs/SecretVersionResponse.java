@@ -21,7 +21,7 @@ public final class SecretVersionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -32,55 +32,52 @@ public final class SecretVersionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public SecretVersionResponse(
-        String path,
-        String version) {
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private SecretVersionResponse() {}
 
-    private SecretVersionResponse() {
-        this.path = null;
-        this.version = null;
+    private SecretVersionResponse(SecretVersionResponse $) {
+        this.path = $.path;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String path;
-        private String version;
+        private SecretVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVersionResponse();
         }
 
         public Builder(SecretVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.version = defaults.version;
+            $ = new SecretVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public SecretVersionResponse build() {
-            return new SecretVersionResponse(path, version);
+        }
+
+        public SecretVersionResponse build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

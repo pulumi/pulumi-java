@@ -21,45 +21,45 @@ public final class StateNotificationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pubsubTopicName", required=true)
-      private final String pubsubTopicName;
+    private String pubsubTopicName;
 
     public String pubsubTopicName() {
         return this.pubsubTopicName;
     }
 
-    public StateNotificationConfigResponse(String pubsubTopicName) {
-        this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
-    }
+    private StateNotificationConfigResponse() {}
 
-    private StateNotificationConfigResponse() {
-        this.pubsubTopicName = null;
+    private StateNotificationConfigResponse(StateNotificationConfigResponse $) {
+        this.pubsubTopicName = $.pubsubTopicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StateNotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String pubsubTopicName;
+        private StateNotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StateNotificationConfigResponse();
         }
 
         public Builder(StateNotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsubTopicName = defaults.pubsubTopicName;
+            $ = new StateNotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsubTopicName(String pubsubTopicName) {
-            this.pubsubTopicName = Objects.requireNonNull(pubsubTopicName);
+            $.pubsubTopicName = pubsubTopicName;
             return this;
-        }        public StateNotificationConfigResponse build() {
-            return new StateNotificationConfigResponse(pubsubTopicName);
+        }
+
+        public StateNotificationConfigResponse build() {
+            $.pubsubTopicName = Objects.requireNonNull($.pubsubTopicName, "expected parameter 'pubsubTopicName' to be non-null");
+            return $;
         }
     }
+
 }

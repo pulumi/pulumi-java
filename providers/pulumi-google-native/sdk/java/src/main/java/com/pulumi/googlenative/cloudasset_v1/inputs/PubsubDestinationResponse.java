@@ -21,45 +21,45 @@ public final class PubsubDestinationResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public PubsubDestinationResponse(String topic) {
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private PubsubDestinationResponse() {}
 
-    private PubsubDestinationResponse() {
-        this.topic = null;
+    private PubsubDestinationResponse(PubsubDestinationResponse $) {
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String topic;
+        private PubsubDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubDestinationResponse();
         }
 
         public Builder(PubsubDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
+            $ = new PubsubDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public PubsubDestinationResponse build() {
-            return new PubsubDestinationResponse(topic);
+        }
+
+        public PubsubDestinationResponse build() {
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetRowAccessPolicyIamPolicyArgs extends com.pulumi.resources.
     public static final GetRowAccessPolicyIamPolicyArgs Empty = new GetRowAccessPolicyIamPolicyArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="rowAccessPolicyId", required=true)
-      private final String rowAccessPolicyId;
+    private String rowAccessPolicyId;
 
     public String rowAccessPolicyId() {
         return this.rowAccessPolicyId;
     }
 
     @Import(name="tableId", required=true)
-      private final String tableId;
+    private String tableId;
 
     public String tableId() {
         return this.tableId;
     }
 
-    public GetRowAccessPolicyIamPolicyArgs(
-        String datasetId,
-        @Nullable String project,
-        String rowAccessPolicyId,
-        String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = project;
-        this.rowAccessPolicyId = Objects.requireNonNull(rowAccessPolicyId, "expected parameter 'rowAccessPolicyId' to be non-null");
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private GetRowAccessPolicyIamPolicyArgs() {}
 
-    private GetRowAccessPolicyIamPolicyArgs() {
-        this.datasetId = null;
-        this.project = null;
-        this.rowAccessPolicyId = null;
-        this.tableId = null;
+    private GetRowAccessPolicyIamPolicyArgs(GetRowAccessPolicyIamPolicyArgs $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.rowAccessPolicyId = $.rowAccessPolicyId;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRowAccessPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private @Nullable String project;
-        private String rowAccessPolicyId;
-        private String tableId;
+        private GetRowAccessPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRowAccessPolicyIamPolicyArgs();
         }
 
         public Builder(GetRowAccessPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.rowAccessPolicyId = defaults.rowAccessPolicyId;
-    	      this.tableId = defaults.tableId;
+            $ = new GetRowAccessPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder rowAccessPolicyId(String rowAccessPolicyId) {
-            this.rowAccessPolicyId = Objects.requireNonNull(rowAccessPolicyId);
+            $.rowAccessPolicyId = rowAccessPolicyId;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
-        }        public GetRowAccessPolicyIamPolicyArgs build() {
-            return new GetRowAccessPolicyIamPolicyArgs(datasetId, project, rowAccessPolicyId, tableId);
+        }
+
+        public GetRowAccessPolicyIamPolicyArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.rowAccessPolicyId = Objects.requireNonNull($.rowAccessPolicyId, "expected parameter 'rowAccessPolicyId' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

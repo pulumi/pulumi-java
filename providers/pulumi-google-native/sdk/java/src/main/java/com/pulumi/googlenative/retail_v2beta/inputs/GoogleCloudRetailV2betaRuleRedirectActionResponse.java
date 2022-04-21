@@ -21,45 +21,45 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse extends com
      * 
      */
     @Import(name="redirectUri", required=true)
-      private final String redirectUri;
+    private String redirectUri;
 
     public String redirectUri() {
         return this.redirectUri;
     }
 
-    public GoogleCloudRetailV2betaRuleRedirectActionResponse(String redirectUri) {
-        this.redirectUri = Objects.requireNonNull(redirectUri, "expected parameter 'redirectUri' to be non-null");
-    }
+    private GoogleCloudRetailV2betaRuleRedirectActionResponse() {}
 
-    private GoogleCloudRetailV2betaRuleRedirectActionResponse() {
-        this.redirectUri = null;
+    private GoogleCloudRetailV2betaRuleRedirectActionResponse(GoogleCloudRetailV2betaRuleRedirectActionResponse $) {
+        this.redirectUri = $.redirectUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleRedirectActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String redirectUri;
+        private GoogleCloudRetailV2betaRuleRedirectActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleRedirectActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleRedirectActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.redirectUri = defaults.redirectUri;
+            $ = new GoogleCloudRetailV2betaRuleRedirectActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder redirectUri(String redirectUri) {
-            this.redirectUri = Objects.requireNonNull(redirectUri);
+            $.redirectUri = redirectUri;
             return this;
-        }        public GoogleCloudRetailV2betaRuleRedirectActionResponse build() {
-            return new GoogleCloudRetailV2betaRuleRedirectActionResponse(redirectUri);
+        }
+
+        public GoogleCloudRetailV2betaRuleRedirectActionResponse build() {
+            $.redirectUri = Objects.requireNonNull($.redirectUri, "expected parameter 'redirectUri' to be non-null");
+            return $;
         }
     }
+
 }

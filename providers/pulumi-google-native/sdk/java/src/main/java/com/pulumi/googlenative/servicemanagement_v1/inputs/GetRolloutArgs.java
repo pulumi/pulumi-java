@@ -13,62 +13,59 @@ public final class GetRolloutArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
     @Import(name="rolloutId", required=true)
-      private final String rolloutId;
+    private String rolloutId;
 
     public String rolloutId() {
         return this.rolloutId;
     }
 
     @Import(name="serviceName", required=true)
-      private final String serviceName;
+    private String serviceName;
 
     public String serviceName() {
         return this.serviceName;
     }
 
-    public GetRolloutArgs(
-        String rolloutId,
-        String serviceName) {
-        this.rolloutId = Objects.requireNonNull(rolloutId, "expected parameter 'rolloutId' to be non-null");
-        this.serviceName = Objects.requireNonNull(serviceName, "expected parameter 'serviceName' to be non-null");
-    }
+    private GetRolloutArgs() {}
 
-    private GetRolloutArgs() {
-        this.rolloutId = null;
-        this.serviceName = null;
+    private GetRolloutArgs(GetRolloutArgs $) {
+        this.rolloutId = $.rolloutId;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRolloutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String rolloutId;
-        private String serviceName;
+        private GetRolloutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRolloutArgs();
         }
 
         public Builder(GetRolloutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rolloutId = defaults.rolloutId;
-    	      this.serviceName = defaults.serviceName;
+            $ = new GetRolloutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rolloutId(String rolloutId) {
-            this.rolloutId = Objects.requireNonNull(rolloutId);
+            $.rolloutId = rolloutId;
             return this;
         }
+
         public Builder serviceName(String serviceName) {
-            this.serviceName = Objects.requireNonNull(serviceName);
+            $.serviceName = serviceName;
             return this;
-        }        public GetRolloutArgs build() {
-            return new GetRolloutArgs(rolloutId, serviceName);
+        }
+
+        public GetRolloutArgs build() {
+            $.rolloutId = Objects.requireNonNull($.rolloutId, "expected parameter 'rolloutId' to be non-null");
+            $.serviceName = Objects.requireNonNull($.serviceName, "expected parameter 'serviceName' to be non-null");
+            return $;
         }
     }
+
 }

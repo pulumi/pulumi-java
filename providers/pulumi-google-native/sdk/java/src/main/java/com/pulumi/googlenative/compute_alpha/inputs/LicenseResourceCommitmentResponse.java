@@ -21,7 +21,7 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="amount", required=true)
-      private final String amount;
+    private String amount;
 
     public String amount() {
         return this.amount;
@@ -32,7 +32,7 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="coresPerLicense", required=true)
-      private final String coresPerLicense;
+    private String coresPerLicense;
 
     public String coresPerLicense() {
         return this.coresPerLicense;
@@ -43,64 +43,59 @@ public final class LicenseResourceCommitmentResponse extends com.pulumi.resource
      * 
      */
     @Import(name="license", required=true)
-      private final String license;
+    private String license;
 
     public String license() {
         return this.license;
     }
 
-    public LicenseResourceCommitmentResponse(
-        String amount,
-        String coresPerLicense,
-        String license) {
-        this.amount = Objects.requireNonNull(amount, "expected parameter 'amount' to be non-null");
-        this.coresPerLicense = Objects.requireNonNull(coresPerLicense, "expected parameter 'coresPerLicense' to be non-null");
-        this.license = Objects.requireNonNull(license, "expected parameter 'license' to be non-null");
-    }
+    private LicenseResourceCommitmentResponse() {}
 
-    private LicenseResourceCommitmentResponse() {
-        this.amount = null;
-        this.coresPerLicense = null;
-        this.license = null;
+    private LicenseResourceCommitmentResponse(LicenseResourceCommitmentResponse $) {
+        this.amount = $.amount;
+        this.coresPerLicense = $.coresPerLicense;
+        this.license = $.license;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LicenseResourceCommitmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String amount;
-        private String coresPerLicense;
-        private String license;
+        private LicenseResourceCommitmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LicenseResourceCommitmentResponse();
         }
 
         public Builder(LicenseResourceCommitmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.amount = defaults.amount;
-    	      this.coresPerLicense = defaults.coresPerLicense;
-    	      this.license = defaults.license;
+            $ = new LicenseResourceCommitmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder amount(String amount) {
-            this.amount = Objects.requireNonNull(amount);
+            $.amount = amount;
             return this;
         }
+
         public Builder coresPerLicense(String coresPerLicense) {
-            this.coresPerLicense = Objects.requireNonNull(coresPerLicense);
+            $.coresPerLicense = coresPerLicense;
             return this;
         }
+
         public Builder license(String license) {
-            this.license = Objects.requireNonNull(license);
+            $.license = license;
             return this;
-        }        public LicenseResourceCommitmentResponse build() {
-            return new LicenseResourceCommitmentResponse(amount, coresPerLicense, license);
+        }
+
+        public LicenseResourceCommitmentResponse build() {
+            $.amount = Objects.requireNonNull($.amount, "expected parameter 'amount' to be non-null");
+            $.coresPerLicense = Objects.requireNonNull($.coresPerLicense, "expected parameter 'coresPerLicense' to be non-null");
+            $.license = Objects.requireNonNull($.license, "expected parameter 'license' to be non-null");
+            return $;
         }
     }
+
 }

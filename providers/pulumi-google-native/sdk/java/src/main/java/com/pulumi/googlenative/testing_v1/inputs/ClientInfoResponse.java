@@ -23,7 +23,7 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientInfoDetails", required=true)
-      private final List<ClientInfoDetailResponse> clientInfoDetails;
+    private List<ClientInfoDetailResponse> clientInfoDetails;
 
     public List<ClientInfoDetailResponse> clientInfoDetails() {
         return this.clientInfoDetails;
@@ -34,58 +34,56 @@ public final class ClientInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ClientInfoResponse(
-        List<ClientInfoDetailResponse> clientInfoDetails,
-        String name) {
-        this.clientInfoDetails = Objects.requireNonNull(clientInfoDetails, "expected parameter 'clientInfoDetails' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ClientInfoResponse() {}
 
-    private ClientInfoResponse() {
-        this.clientInfoDetails = List.of();
-        this.name = null;
+    private ClientInfoResponse(ClientInfoResponse $) {
+        this.clientInfoDetails = $.clientInfoDetails;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ClientInfoDetailResponse> clientInfoDetails;
-        private String name;
+        private ClientInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientInfoResponse();
         }
 
         public Builder(ClientInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientInfoDetails = defaults.clientInfoDetails;
-    	      this.name = defaults.name;
+            $ = new ClientInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientInfoDetails(List<ClientInfoDetailResponse> clientInfoDetails) {
-            this.clientInfoDetails = Objects.requireNonNull(clientInfoDetails);
+            $.clientInfoDetails = clientInfoDetails;
             return this;
         }
+
         public Builder clientInfoDetails(ClientInfoDetailResponse... clientInfoDetails) {
             return clientInfoDetails(List.of(clientInfoDetails));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ClientInfoResponse build() {
-            return new ClientInfoResponse(clientInfoDetails, name);
+        }
+
+        public ClientInfoResponse build() {
+            $.clientInfoDetails = Objects.requireNonNull($.clientInfoDetails, "expected parameter 'clientInfoDetails' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

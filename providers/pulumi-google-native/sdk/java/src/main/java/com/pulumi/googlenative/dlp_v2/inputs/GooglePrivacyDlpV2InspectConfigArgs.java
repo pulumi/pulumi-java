@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2InspectConfigMinLikelihood;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CustomInfoTypeArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FindingLimitsArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectionRuleSet
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="customInfoTypes")
-      private final @Nullable Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
+    private @Nullable Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
 
-    public Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes() {
-        return this.customInfoTypes == null ? Codegen.empty() : this.customInfoTypes;
+    public Optional<Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>>> customInfoTypes() {
+        return Optional.ofNullable(this.customInfoTypes);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="excludeInfoTypes")
-      private final @Nullable Output<Boolean> excludeInfoTypes;
+    private @Nullable Output<Boolean> excludeInfoTypes;
 
-    public Output<Boolean> excludeInfoTypes() {
-        return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
+    public Optional<Output<Boolean>> excludeInfoTypes() {
+        return Optional.ofNullable(this.excludeInfoTypes);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="includeQuote")
-      private final @Nullable Output<Boolean> includeQuote;
+    private @Nullable Output<Boolean> includeQuote;
 
-    public Output<Boolean> includeQuote() {
-        return this.includeQuote == null ? Codegen.empty() : this.includeQuote;
+    public Optional<Output<Boolean>> includeQuote() {
+        return Optional.ofNullable(this.includeQuote);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="infoTypes")
-      private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+    private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
-    public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes() {
-        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
+    public Optional<Output<List<GooglePrivacyDlpV2InfoTypeArgs>>> infoTypes() {
+        return Optional.ofNullable(this.infoTypes);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits;
+    private @Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits;
 
-    public Output<GooglePrivacyDlpV2FindingLimitsArgs> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<GooglePrivacyDlpV2FindingLimitsArgs>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="minLikelihood")
-      private final @Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
+    private @Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
 
-    public Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood() {
-        return this.minLikelihood == null ? Codegen.empty() : this.minLikelihood;
+    public Optional<Output<GooglePrivacyDlpV2InspectConfigMinLikelihood>> minLikelihood() {
+        return Optional.ofNullable(this.minLikelihood);
     }
 
     /**
@@ -96,137 +96,120 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends com.pulumi.resour
      * 
      */
     @Import(name="ruleSet")
-      private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
+    private @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
 
-    public Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet() {
-        return this.ruleSet == null ? Codegen.empty() : this.ruleSet;
+    public Optional<Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>>> ruleSet() {
+        return Optional.ofNullable(this.ruleSet);
     }
 
-    public GooglePrivacyDlpV2InspectConfigArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes,
-        @Nullable Output<Boolean> excludeInfoTypes,
-        @Nullable Output<Boolean> includeQuote,
-        @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes,
-        @Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits,
-        @Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood,
-        @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet) {
-        this.customInfoTypes = customInfoTypes;
-        this.excludeInfoTypes = excludeInfoTypes;
-        this.includeQuote = includeQuote;
-        this.infoTypes = infoTypes;
-        this.limits = limits;
-        this.minLikelihood = minLikelihood;
-        this.ruleSet = ruleSet;
-    }
+    private GooglePrivacyDlpV2InspectConfigArgs() {}
 
-    private GooglePrivacyDlpV2InspectConfigArgs() {
-        this.customInfoTypes = Codegen.empty();
-        this.excludeInfoTypes = Codegen.empty();
-        this.includeQuote = Codegen.empty();
-        this.infoTypes = Codegen.empty();
-        this.limits = Codegen.empty();
-        this.minLikelihood = Codegen.empty();
-        this.ruleSet = Codegen.empty();
+    private GooglePrivacyDlpV2InspectConfigArgs(GooglePrivacyDlpV2InspectConfigArgs $) {
+        this.customInfoTypes = $.customInfoTypes;
+        this.excludeInfoTypes = $.excludeInfoTypes;
+        this.includeQuote = $.includeQuote;
+        this.infoTypes = $.infoTypes;
+        this.limits = $.limits;
+        this.minLikelihood = $.minLikelihood;
+        this.ruleSet = $.ruleSet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes;
-        private @Nullable Output<Boolean> excludeInfoTypes;
-        private @Nullable Output<Boolean> includeQuote;
-        private @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
-        private @Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits;
-        private @Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood;
-        private @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet;
+        private GooglePrivacyDlpV2InspectConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2InspectConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customInfoTypes = defaults.customInfoTypes;
-    	      this.excludeInfoTypes = defaults.excludeInfoTypes;
-    	      this.includeQuote = defaults.includeQuote;
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.limits = defaults.limits;
-    	      this.minLikelihood = defaults.minLikelihood;
-    	      this.ruleSet = defaults.ruleSet;
+            $ = new GooglePrivacyDlpV2InspectConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customInfoTypes(@Nullable Output<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes) {
-            this.customInfoTypes = customInfoTypes;
+            $.customInfoTypes = customInfoTypes;
             return this;
         }
-        public Builder customInfoTypes(@Nullable List<GooglePrivacyDlpV2CustomInfoTypeArgs> customInfoTypes) {
-            this.customInfoTypes = Codegen.ofNullable(customInfoTypes);
-            return this;
+
+        public Builder customInfoTypes(List<GooglePrivacyDlpV2CustomInfoTypeArgs> customInfoTypes) {
+            return customInfoTypes(Output.of(customInfoTypes));
         }
+
         public Builder customInfoTypes(GooglePrivacyDlpV2CustomInfoTypeArgs... customInfoTypes) {
             return customInfoTypes(List.of(customInfoTypes));
         }
+
         public Builder excludeInfoTypes(@Nullable Output<Boolean> excludeInfoTypes) {
-            this.excludeInfoTypes = excludeInfoTypes;
+            $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
-        public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
-            this.excludeInfoTypes = Codegen.ofNullable(excludeInfoTypes);
-            return this;
+
+        public Builder excludeInfoTypes(Boolean excludeInfoTypes) {
+            return excludeInfoTypes(Output.of(excludeInfoTypes));
         }
+
         public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
-            this.includeQuote = includeQuote;
+            $.includeQuote = includeQuote;
             return this;
         }
-        public Builder includeQuote(@Nullable Boolean includeQuote) {
-            this.includeQuote = Codegen.ofNullable(includeQuote);
-            return this;
+
+        public Builder includeQuote(Boolean includeQuote) {
+            return includeQuote(Output.of(includeQuote));
         }
+
         public Builder infoTypes(@Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
-            this.infoTypes = infoTypes;
+            $.infoTypes = infoTypes;
             return this;
         }
-        public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
-            this.infoTypes = Codegen.ofNullable(infoTypes);
-            return this;
+
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
+            return infoTypes(Output.of(infoTypes));
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeArgs... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder limits(@Nullable Output<GooglePrivacyDlpV2FindingLimitsArgs> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable GooglePrivacyDlpV2FindingLimitsArgs limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(GooglePrivacyDlpV2FindingLimitsArgs limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder minLikelihood(@Nullable Output<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood) {
-            this.minLikelihood = minLikelihood;
+            $.minLikelihood = minLikelihood;
             return this;
         }
-        public Builder minLikelihood(@Nullable GooglePrivacyDlpV2InspectConfigMinLikelihood minLikelihood) {
-            this.minLikelihood = Codegen.ofNullable(minLikelihood);
-            return this;
+
+        public Builder minLikelihood(GooglePrivacyDlpV2InspectConfigMinLikelihood minLikelihood) {
+            return minLikelihood(Output.of(minLikelihood));
         }
+
         public Builder ruleSet(@Nullable Output<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet) {
-            this.ruleSet = ruleSet;
+            $.ruleSet = ruleSet;
             return this;
         }
-        public Builder ruleSet(@Nullable List<GooglePrivacyDlpV2InspectionRuleSetArgs> ruleSet) {
-            this.ruleSet = Codegen.ofNullable(ruleSet);
-            return this;
+
+        public Builder ruleSet(List<GooglePrivacyDlpV2InspectionRuleSetArgs> ruleSet) {
+            return ruleSet(Output.of(ruleSet));
         }
+
         public Builder ruleSet(GooglePrivacyDlpV2InspectionRuleSetArgs... ruleSet) {
             return ruleSet(List.of(ruleSet));
-        }        public GooglePrivacyDlpV2InspectConfigArgs build() {
-            return new GooglePrivacyDlpV2InspectConfigArgs(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
+        }
+
+        public GooglePrivacyDlpV2InspectConfigArgs build() {
+            return $;
         }
     }
+
 }

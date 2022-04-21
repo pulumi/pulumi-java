@@ -23,7 +23,7 @@ public final class AuditConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="auditLogConfigs", required=true)
-      private final List<AuditLogConfigResponse> auditLogConfigs;
+    private List<AuditLogConfigResponse> auditLogConfigs;
 
     public List<AuditLogConfigResponse> auditLogConfigs() {
         return this.auditLogConfigs;
@@ -34,7 +34,7 @@ public final class AuditConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exemptedMembers", required=true)
-      private final List<String> exemptedMembers;
+    private List<String> exemptedMembers;
 
     public List<String> exemptedMembers() {
         return this.exemptedMembers;
@@ -45,70 +45,67 @@ public final class AuditConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public AuditConfigResponse(
-        List<AuditLogConfigResponse> auditLogConfigs,
-        List<String> exemptedMembers,
-        String service) {
-        this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
-        this.exemptedMembers = Objects.requireNonNull(exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private AuditConfigResponse() {}
 
-    private AuditConfigResponse() {
-        this.auditLogConfigs = List.of();
-        this.exemptedMembers = List.of();
-        this.service = null;
+    private AuditConfigResponse(AuditConfigResponse $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.exemptedMembers = $.exemptedMembers;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuditConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AuditLogConfigResponse> auditLogConfigs;
-        private List<String> exemptedMembers;
-        private String service;
+        private AuditConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuditConfigResponse();
         }
 
         public Builder(AuditConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.exemptedMembers = defaults.exemptedMembers;
-    	      this.service = defaults.service;
+            $ = new AuditConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(List<AuditLogConfigResponse> auditLogConfigs) {
-            this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
+
         public Builder auditLogConfigs(AuditLogConfigResponse... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder exemptedMembers(List<String> exemptedMembers) {
-            this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
+            $.exemptedMembers = exemptedMembers;
             return this;
         }
+
         public Builder exemptedMembers(String... exemptedMembers) {
             return exemptedMembers(List.of(exemptedMembers));
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public AuditConfigResponse build() {
-            return new AuditConfigResponse(auditLogConfigs, exemptedMembers, service);
+        }
+
+        public AuditConfigResponse build() {
+            $.auditLogConfigs = Objects.requireNonNull($.auditLogConfigs, "expected parameter 'auditLogConfigs' to be non-null");
+            $.exemptedMembers = Objects.requireNonNull($.exemptedMembers, "expected parameter 'exemptedMembers' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

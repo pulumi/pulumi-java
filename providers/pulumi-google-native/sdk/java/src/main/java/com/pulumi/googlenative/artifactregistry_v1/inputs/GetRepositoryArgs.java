@@ -15,78 +15,72 @@ public final class GetRepositoryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRepositoryArgs Empty = new GetRepositoryArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repositoryId", required=true)
-      private final String repositoryId;
+    private String repositoryId;
 
     public String repositoryId() {
         return this.repositoryId;
     }
 
-    public GetRepositoryArgs(
-        String location,
-        @Nullable String project,
-        String repositoryId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.repositoryId = Objects.requireNonNull(repositoryId, "expected parameter 'repositoryId' to be non-null");
-    }
+    private GetRepositoryArgs() {}
 
-    private GetRepositoryArgs() {
-        this.location = null;
-        this.project = null;
-        this.repositoryId = null;
+    private GetRepositoryArgs(GetRepositoryArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.repositoryId = $.repositoryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepositoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String repositoryId;
+        private GetRepositoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepositoryArgs();
         }
 
         public Builder(GetRepositoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.repositoryId = defaults.repositoryId;
+            $ = new GetRepositoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder repositoryId(String repositoryId) {
-            this.repositoryId = Objects.requireNonNull(repositoryId);
+            $.repositoryId = repositoryId;
             return this;
-        }        public GetRepositoryArgs build() {
-            return new GetRepositoryArgs(location, project, repositoryId);
+        }
+
+        public GetRepositoryArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.repositoryId = Objects.requireNonNull($.repositoryId, "expected parameter 'repositoryId' to be non-null");
+            return $;
         }
     }
+
 }

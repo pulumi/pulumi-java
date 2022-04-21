@@ -15,110 +15,99 @@ public final class GetEntityTypeArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetEntityTypeArgs Empty = new GetEntityTypeArgs();
 
     @Import(name="agentId", required=true)
-      private final String agentId;
+    private String agentId;
 
     public String agentId() {
         return this.agentId;
     }
 
     @Import(name="entityTypeId", required=true)
-      private final String entityTypeId;
+    private String entityTypeId;
 
     public String entityTypeId() {
         return this.entityTypeId;
     }
 
     @Import(name="languageCode")
-      private final @Nullable String languageCode;
+    private @Nullable String languageCode;
 
     public Optional<String> languageCode() {
-        return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
+        return Optional.ofNullable(this.languageCode);
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetEntityTypeArgs(
-        String agentId,
-        String entityTypeId,
-        @Nullable String languageCode,
-        String location,
-        @Nullable String project) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.entityTypeId = Objects.requireNonNull(entityTypeId, "expected parameter 'entityTypeId' to be non-null");
-        this.languageCode = languageCode;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetEntityTypeArgs() {}
 
-    private GetEntityTypeArgs() {
-        this.agentId = null;
-        this.entityTypeId = null;
-        this.languageCode = null;
-        this.location = null;
-        this.project = null;
+    private GetEntityTypeArgs(GetEntityTypeArgs $) {
+        this.agentId = $.agentId;
+        this.entityTypeId = $.entityTypeId;
+        this.languageCode = $.languageCode;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentId;
-        private String entityTypeId;
-        private @Nullable String languageCode;
-        private String location;
-        private @Nullable String project;
+        private GetEntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEntityTypeArgs();
         }
 
         public Builder(GetEntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.entityTypeId = defaults.entityTypeId;
-    	      this.languageCode = defaults.languageCode;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(String agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder entityTypeId(String entityTypeId) {
-            this.entityTypeId = Objects.requireNonNull(entityTypeId);
+            $.entityTypeId = entityTypeId;
             return this;
         }
+
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetEntityTypeArgs build() {
-            return new GetEntityTypeArgs(agentId, entityTypeId, languageCode, location, project);
+        }
+
+        public GetEntityTypeArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.entityTypeId = Objects.requireNonNull($.entityTypeId, "expected parameter 'entityTypeId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagKey")
-      private final @Nullable Output<String> tagKey;
+    private @Nullable Output<String> tagKey;
 
-    public Output<String> tagKey() {
-        return this.tagKey == null ? Codegen.empty() : this.tagKey;
+    public Optional<Output<String>> tagKey() {
+        return Optional.ofNullable(this.tagKey);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class DatasetTagsItemArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="tagValue")
-      private final @Nullable Output<String> tagValue;
+    private @Nullable Output<String> tagValue;
 
-    public Output<String> tagValue() {
-        return this.tagValue == null ? Codegen.empty() : this.tagValue;
+    public Optional<Output<String>> tagValue() {
+        return Optional.ofNullable(this.tagValue);
     }
 
-    public DatasetTagsItemArgs(
-        @Nullable Output<String> tagKey,
-        @Nullable Output<String> tagValue) {
-        this.tagKey = tagKey;
-        this.tagValue = tagValue;
-    }
+    private DatasetTagsItemArgs() {}
 
-    private DatasetTagsItemArgs() {
-        this.tagKey = Codegen.empty();
-        this.tagValue = Codegen.empty();
+    private DatasetTagsItemArgs(DatasetTagsItemArgs $) {
+        this.tagKey = $.tagKey;
+        this.tagValue = $.tagValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetTagsItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> tagKey;
-        private @Nullable Output<String> tagValue;
+        private DatasetTagsItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetTagsItemArgs();
         }
 
         public Builder(DatasetTagsItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagKey = defaults.tagKey;
-    	      this.tagValue = defaults.tagValue;
+            $ = new DatasetTagsItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tagKey(@Nullable Output<String> tagKey) {
-            this.tagKey = tagKey;
+            $.tagKey = tagKey;
             return this;
         }
-        public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Codegen.ofNullable(tagKey);
-            return this;
+
+        public Builder tagKey(String tagKey) {
+            return tagKey(Output.of(tagKey));
         }
+
         public Builder tagValue(@Nullable Output<String> tagValue) {
-            this.tagValue = tagValue;
+            $.tagValue = tagValue;
             return this;
         }
-        public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Codegen.ofNullable(tagValue);
-            return this;
-        }        public DatasetTagsItemArgs build() {
-            return new DatasetTagsItemArgs(tagKey, tagValue);
+
+        public Builder tagValue(String tagValue) {
+            return tagValue(Output.of(tagValue));
+        }
+
+        public DatasetTagsItemArgs build() {
+            return $;
         }
     }
+
 }

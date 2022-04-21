@@ -21,45 +21,45 @@ public final class CaseClassificationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
     }
 
-    public CaseClassificationResponse(String displayName) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-    }
+    private CaseClassificationResponse() {}
 
-    private CaseClassificationResponse() {
-        this.displayName = null;
+    private CaseClassificationResponse(CaseClassificationResponse $) {
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaseClassificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
+        private CaseClassificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaseClassificationResponse();
         }
 
         public Builder(CaseClassificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
+            $ = new CaseClassificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
-        }        public CaseClassificationResponse build() {
-            return new CaseClassificationResponse(displayName);
+        }
+
+        public CaseClassificationResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

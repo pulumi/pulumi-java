@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataArgs extends com.pu
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
-    public GoogleCloudDatalabelingV1beta1TextMetadataArgs(@Nullable Output<String> languageCode) {
-        this.languageCode = languageCode;
-    }
+    private GoogleCloudDatalabelingV1beta1TextMetadataArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1TextMetadataArgs() {
-        this.languageCode = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1TextMetadataArgs(GoogleCloudDatalabelingV1beta1TextMetadataArgs $) {
+        this.languageCode = $.languageCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1TextMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> languageCode;
+        private GoogleCloudDatalabelingV1beta1TextMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1TextMetadataArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1TextMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.languageCode = defaults.languageCode;
+            $ = new GoogleCloudDatalabelingV1beta1TextMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {
-            return new GoogleCloudDatalabelingV1beta1TextMetadataArgs(languageCode);
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
+        }
+
+        public GoogleCloudDatalabelingV1beta1TextMetadataArgs build() {
+            return $;
         }
     }
+
 }

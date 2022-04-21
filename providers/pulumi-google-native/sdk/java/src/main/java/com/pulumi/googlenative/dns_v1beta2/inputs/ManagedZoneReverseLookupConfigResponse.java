@@ -13,45 +13,45 @@ public final class ManagedZoneReverseLookupConfigResponse extends com.pulumi.res
     public static final ManagedZoneReverseLookupConfigResponse Empty = new ManagedZoneReverseLookupConfigResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public ManagedZoneReverseLookupConfigResponse(String kind) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private ManagedZoneReverseLookupConfigResponse() {}
 
-    private ManagedZoneReverseLookupConfigResponse() {
-        this.kind = null;
+    private ManagedZoneReverseLookupConfigResponse(ManagedZoneReverseLookupConfigResponse $) {
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneReverseLookupConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
+        private ManagedZoneReverseLookupConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneReverseLookupConfigResponse();
         }
 
         public Builder(ManagedZoneReverseLookupConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
+            $ = new ManagedZoneReverseLookupConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public ManagedZoneReverseLookupConfigResponse build() {
-            return new ManagedZoneReverseLookupConfigResponse(kind);
+        }
+
+        public ManagedZoneReverseLookupConfigResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EmailPreferencesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enableFailureEmail")
-      private final @Nullable Output<Boolean> enableFailureEmail;
+    private @Nullable Output<Boolean> enableFailureEmail;
 
-    public Output<Boolean> enableFailureEmail() {
-        return this.enableFailureEmail == null ? Codegen.empty() : this.enableFailureEmail;
+    public Optional<Output<Boolean>> enableFailureEmail() {
+        return Optional.ofNullable(this.enableFailureEmail);
     }
 
-    public EmailPreferencesArgs(@Nullable Output<Boolean> enableFailureEmail) {
-        this.enableFailureEmail = enableFailureEmail;
-    }
+    private EmailPreferencesArgs() {}
 
-    private EmailPreferencesArgs() {
-        this.enableFailureEmail = Codegen.empty();
+    private EmailPreferencesArgs(EmailPreferencesArgs $) {
+        this.enableFailureEmail = $.enableFailureEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmailPreferencesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableFailureEmail;
+        private EmailPreferencesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmailPreferencesArgs();
         }
 
         public Builder(EmailPreferencesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableFailureEmail = defaults.enableFailureEmail;
+            $ = new EmailPreferencesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableFailureEmail(@Nullable Output<Boolean> enableFailureEmail) {
-            this.enableFailureEmail = enableFailureEmail;
+            $.enableFailureEmail = enableFailureEmail;
             return this;
         }
-        public Builder enableFailureEmail(@Nullable Boolean enableFailureEmail) {
-            this.enableFailureEmail = Codegen.ofNullable(enableFailureEmail);
-            return this;
-        }        public EmailPreferencesArgs build() {
-            return new EmailPreferencesArgs(enableFailureEmail);
+
+        public Builder enableFailureEmail(Boolean enableFailureEmail) {
+            return enableFailureEmail(Output.of(enableFailureEmail));
+        }
+
+        public EmailPreferencesArgs build() {
+            return $;
         }
     }
+
 }

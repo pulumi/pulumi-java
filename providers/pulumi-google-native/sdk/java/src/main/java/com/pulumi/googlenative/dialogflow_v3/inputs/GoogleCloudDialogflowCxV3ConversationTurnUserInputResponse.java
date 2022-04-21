@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
      * 
      */
     @Import(name="enableSentimentAnalysis", required=true)
-      private final Boolean enableSentimentAnalysis;
+    private Boolean enableSentimentAnalysis;
 
     public Boolean enableSentimentAnalysis() {
         return this.enableSentimentAnalysis;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
      * 
      */
     @Import(name="injectedParameters", required=true)
-      private final Map<String,String> injectedParameters;
+    private Map<String,String> injectedParameters;
 
     public Map<String,String> injectedParameters() {
         return this.injectedParameters;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
      * 
      */
     @Import(name="input", required=true)
-      private final GoogleCloudDialogflowCxV3QueryInputResponse input;
+    private GoogleCloudDialogflowCxV3QueryInputResponse input;
 
     public GoogleCloudDialogflowCxV3QueryInputResponse input() {
         return this.input;
@@ -57,73 +57,66 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse ex
      * 
      */
     @Import(name="isWebhookEnabled", required=true)
-      private final Boolean isWebhookEnabled;
+    private Boolean isWebhookEnabled;
 
     public Boolean isWebhookEnabled() {
         return this.isWebhookEnabled;
     }
 
-    public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse(
-        Boolean enableSentimentAnalysis,
-        Map<String,String> injectedParameters,
-        GoogleCloudDialogflowCxV3QueryInputResponse input,
-        Boolean isWebhookEnabled) {
-        this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis, "expected parameter 'enableSentimentAnalysis' to be non-null");
-        this.injectedParameters = Objects.requireNonNull(injectedParameters, "expected parameter 'injectedParameters' to be non-null");
-        this.input = Objects.requireNonNull(input, "expected parameter 'input' to be non-null");
-        this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled, "expected parameter 'isWebhookEnabled' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse() {}
 
-    private GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse() {
-        this.enableSentimentAnalysis = null;
-        this.injectedParameters = Map.of();
-        this.input = null;
-        this.isWebhookEnabled = null;
+    private GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse $) {
+        this.enableSentimentAnalysis = $.enableSentimentAnalysis;
+        this.injectedParameters = $.injectedParameters;
+        this.input = $.input;
+        this.isWebhookEnabled = $.isWebhookEnabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableSentimentAnalysis;
-        private Map<String,String> injectedParameters;
-        private GoogleCloudDialogflowCxV3QueryInputResponse input;
-        private Boolean isWebhookEnabled;
+        private GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableSentimentAnalysis = defaults.enableSentimentAnalysis;
-    	      this.injectedParameters = defaults.injectedParameters;
-    	      this.input = defaults.input;
-    	      this.isWebhookEnabled = defaults.isWebhookEnabled;
+            $ = new GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
-            this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
+            $.enableSentimentAnalysis = enableSentimentAnalysis;
             return this;
         }
+
         public Builder injectedParameters(Map<String,String> injectedParameters) {
-            this.injectedParameters = Objects.requireNonNull(injectedParameters);
+            $.injectedParameters = injectedParameters;
             return this;
         }
+
         public Builder input(GoogleCloudDialogflowCxV3QueryInputResponse input) {
-            this.input = Objects.requireNonNull(input);
+            $.input = input;
             return this;
         }
+
         public Builder isWebhookEnabled(Boolean isWebhookEnabled) {
-            this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
+            $.isWebhookEnabled = isWebhookEnabled;
             return this;
-        }        public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse build() {
-            return new GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
+        }
+
+        public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse build() {
+            $.enableSentimentAnalysis = Objects.requireNonNull($.enableSentimentAnalysis, "expected parameter 'enableSentimentAnalysis' to be non-null");
+            $.injectedParameters = Objects.requireNonNull($.injectedParameters, "expected parameter 'injectedParameters' to be non-null");
+            $.input = Objects.requireNonNull($.input, "expected parameter 'input' to be non-null");
+            $.isWebhookEnabled = Objects.requireNonNull($.isWebhookEnabled, "expected parameter 'isWebhookEnabled' to be non-null");
+            return $;
         }
     }
+
 }

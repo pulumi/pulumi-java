@@ -22,48 +22,49 @@ public final class SubordinateConfigChainResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="pemCertificates", required=true)
-      private final List<String> pemCertificates;
+    private List<String> pemCertificates;
 
     public List<String> pemCertificates() {
         return this.pemCertificates;
     }
 
-    public SubordinateConfigChainResponse(List<String> pemCertificates) {
-        this.pemCertificates = Objects.requireNonNull(pemCertificates, "expected parameter 'pemCertificates' to be non-null");
-    }
+    private SubordinateConfigChainResponse() {}
 
-    private SubordinateConfigChainResponse() {
-        this.pemCertificates = List.of();
+    private SubordinateConfigChainResponse(SubordinateConfigChainResponse $) {
+        this.pemCertificates = $.pemCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubordinateConfigChainResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> pemCertificates;
+        private SubordinateConfigChainResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubordinateConfigChainResponse();
         }
 
         public Builder(SubordinateConfigChainResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pemCertificates = defaults.pemCertificates;
+            $ = new SubordinateConfigChainResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pemCertificates(List<String> pemCertificates) {
-            this.pemCertificates = Objects.requireNonNull(pemCertificates);
+            $.pemCertificates = pemCertificates;
             return this;
         }
+
         public Builder pemCertificates(String... pemCertificates) {
             return pemCertificates(List.of(pemCertificates));
-        }        public SubordinateConfigChainResponse build() {
-            return new SubordinateConfigChainResponse(pemCertificates);
+        }
+
+        public SubordinateConfigChainResponse build() {
+            $.pemCertificates = Objects.requireNonNull($.pemCertificates, "expected parameter 'pemCertificates' to be non-null");
+            return $;
         }
     }
+
 }

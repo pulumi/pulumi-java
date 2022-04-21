@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TransferManifestArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
-    public TransferManifestArgs(@Nullable Output<String> location) {
-        this.location = location;
-    }
+    private TransferManifestArgs() {}
 
-    private TransferManifestArgs() {
-        this.location = Codegen.empty();
+    private TransferManifestArgs(TransferManifestArgs $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransferManifestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> location;
+        private TransferManifestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransferManifestArgs();
         }
 
         public Builder(TransferManifestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new TransferManifestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
-        }        public TransferManifestArgs build() {
-            return new TransferManifestArgs(location);
+
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public TransferManifestArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class BigQueryDestinationResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
-    public BigQueryDestinationResponse(String datasetId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-    }
+    private BigQueryDestinationResponse() {}
 
-    private BigQueryDestinationResponse() {
-        this.datasetId = null;
+    private BigQueryDestinationResponse(BigQueryDestinationResponse $) {
+        this.datasetId = $.datasetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryDestinationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
+        private BigQueryDestinationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryDestinationResponse();
         }
 
         public Builder(BigQueryDestinationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
+            $ = new BigQueryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
-        }        public BigQueryDestinationResponse build() {
-            return new BigQueryDestinationResponse(datasetId);
+        }
+
+        public BigQueryDestinationResponse build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            return $;
         }
     }
+
 }

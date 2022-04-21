@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3AdvancedSettingsArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="advancedSettings")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings;
+    private @Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings;
 
-    public Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings() {
-        return this.advancedSettings == null ? Codegen.empty() : this.advancedSettings;
+    public Optional<Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs>> advancedSettings() {
+        return Optional.ofNullable(this.advancedSettings);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="avatarUri")
-      private final @Nullable Output<String> avatarUri;
+    private @Nullable Output<String> avatarUri;
 
-    public Output<String> avatarUri() {
-        return this.avatarUri == null ? Codegen.empty() : this.avatarUri;
+    public Optional<Output<String>> avatarUri() {
+        return Optional.ofNullable(this.avatarUri);
     }
 
     /**
@@ -46,7 +46,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="defaultLanguageCode", required=true)
-      private final Output<String> defaultLanguageCode;
+    private Output<String> defaultLanguageCode;
 
     public Output<String> defaultLanguageCode() {
         return this.defaultLanguageCode;
@@ -57,10 +57,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -79,10 +79,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableSpellCorrection")
-      private final @Nullable Output<Boolean> enableSpellCorrection;
+    private @Nullable Output<Boolean> enableSpellCorrection;
 
-    public Output<Boolean> enableSpellCorrection() {
-        return this.enableSpellCorrection == null ? Codegen.empty() : this.enableSpellCorrection;
+    public Optional<Output<Boolean>> enableSpellCorrection() {
+        return Optional.ofNullable(this.enableSpellCorrection);
     }
 
     /**
@@ -90,17 +90,17 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableStackdriverLogging")
-      private final @Nullable Output<Boolean> enableStackdriverLogging;
+    private @Nullable Output<Boolean> enableStackdriverLogging;
 
-    public Output<Boolean> enableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
+    public Optional<Output<Boolean>> enableStackdriverLogging() {
+        return Optional.ofNullable(this.enableStackdriverLogging);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -108,17 +108,17 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -126,10 +126,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securitySettings")
-      private final @Nullable Output<String> securitySettings;
+    private @Nullable Output<String> securitySettings;
 
-    public Output<String> securitySettings() {
-        return this.securitySettings == null ? Codegen.empty() : this.securitySettings;
+    public Optional<Output<String>> securitySettings() {
+        return Optional.ofNullable(this.securitySettings);
     }
 
     /**
@@ -137,10 +137,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="speechToTextSettings")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings;
+    private @Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings;
 
-    public Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings() {
-        return this.speechToTextSettings == null ? Codegen.empty() : this.speechToTextSettings;
+    public Optional<Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs>> speechToTextSettings() {
+        return Optional.ofNullable(this.speechToTextSettings);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startFlow")
-      private final @Nullable Output<String> startFlow;
+    private @Nullable Output<String> startFlow;
 
-    public Output<String> startFlow() {
-        return this.startFlow == null ? Codegen.empty() : this.startFlow;
+    public Optional<Output<String>> startFlow() {
+        return Optional.ofNullable(this.startFlow);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="supportedLanguageCodes")
-      private final @Nullable Output<List<String>> supportedLanguageCodes;
+    private @Nullable Output<List<String>> supportedLanguageCodes;
 
-    public Output<List<String>> supportedLanguageCodes() {
-        return this.supportedLanguageCodes == null ? Codegen.empty() : this.supportedLanguageCodes;
+    public Optional<Output<List<String>>> supportedLanguageCodes() {
+        return Optional.ofNullable(this.supportedLanguageCodes);
     }
 
     /**
@@ -170,235 +170,195 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone", required=true)
-      private final Output<String> timeZone;
+    private Output<String> timeZone;
 
     public Output<String> timeZone() {
         return this.timeZone;
     }
 
-    public AgentArgs(
-        @Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings,
-        @Nullable Output<String> avatarUri,
-        Output<String> defaultLanguageCode,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<Boolean> enableSpellCorrection,
-        @Nullable Output<Boolean> enableStackdriverLogging,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> securitySettings,
-        @Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings,
-        @Nullable Output<String> startFlow,
-        @Nullable Output<List<String>> supportedLanguageCodes,
-        Output<String> timeZone) {
-        this.advancedSettings = advancedSettings;
-        this.avatarUri = avatarUri;
-        this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode, "expected parameter 'defaultLanguageCode' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.enableSpellCorrection = enableSpellCorrection;
-        this.enableStackdriverLogging = enableStackdriverLogging;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.securitySettings = securitySettings;
-        this.speechToTextSettings = speechToTextSettings;
-        this.startFlow = startFlow;
-        this.supportedLanguageCodes = supportedLanguageCodes;
-        this.timeZone = Objects.requireNonNull(timeZone, "expected parameter 'timeZone' to be non-null");
-    }
+    private AgentArgs() {}
 
-    private AgentArgs() {
-        this.advancedSettings = Codegen.empty();
-        this.avatarUri = Codegen.empty();
-        this.defaultLanguageCode = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableSpellCorrection = Codegen.empty();
-        this.enableStackdriverLogging = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.securitySettings = Codegen.empty();
-        this.speechToTextSettings = Codegen.empty();
-        this.startFlow = Codegen.empty();
-        this.supportedLanguageCodes = Codegen.empty();
-        this.timeZone = Codegen.empty();
+    private AgentArgs(AgentArgs $) {
+        this.advancedSettings = $.advancedSettings;
+        this.avatarUri = $.avatarUri;
+        this.defaultLanguageCode = $.defaultLanguageCode;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.enableSpellCorrection = $.enableSpellCorrection;
+        this.enableStackdriverLogging = $.enableStackdriverLogging;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.securitySettings = $.securitySettings;
+        this.speechToTextSettings = $.speechToTextSettings;
+        this.startFlow = $.startFlow;
+        this.supportedLanguageCodes = $.supportedLanguageCodes;
+        this.timeZone = $.timeZone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AgentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings;
-        private @Nullable Output<String> avatarUri;
-        private Output<String> defaultLanguageCode;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<Boolean> enableSpellCorrection;
-        private @Nullable Output<Boolean> enableStackdriverLogging;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> securitySettings;
-        private @Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings;
-        private @Nullable Output<String> startFlow;
-        private @Nullable Output<List<String>> supportedLanguageCodes;
-        private Output<String> timeZone;
+        private AgentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AgentArgs();
         }
 
         public Builder(AgentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.advancedSettings = defaults.advancedSettings;
-    	      this.avatarUri = defaults.avatarUri;
-    	      this.defaultLanguageCode = defaults.defaultLanguageCode;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.enableSpellCorrection = defaults.enableSpellCorrection;
-    	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.securitySettings = defaults.securitySettings;
-    	      this.speechToTextSettings = defaults.speechToTextSettings;
-    	      this.startFlow = defaults.startFlow;
-    	      this.supportedLanguageCodes = defaults.supportedLanguageCodes;
-    	      this.timeZone = defaults.timeZone;
+            $ = new AgentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder advancedSettings(@Nullable Output<GoogleCloudDialogflowCxV3AdvancedSettingsArgs> advancedSettings) {
-            this.advancedSettings = advancedSettings;
+            $.advancedSettings = advancedSettings;
             return this;
         }
-        public Builder advancedSettings(@Nullable GoogleCloudDialogflowCxV3AdvancedSettingsArgs advancedSettings) {
-            this.advancedSettings = Codegen.ofNullable(advancedSettings);
-            return this;
+
+        public Builder advancedSettings(GoogleCloudDialogflowCxV3AdvancedSettingsArgs advancedSettings) {
+            return advancedSettings(Output.of(advancedSettings));
         }
+
         public Builder avatarUri(@Nullable Output<String> avatarUri) {
-            this.avatarUri = avatarUri;
+            $.avatarUri = avatarUri;
             return this;
         }
-        public Builder avatarUri(@Nullable String avatarUri) {
-            this.avatarUri = Codegen.ofNullable(avatarUri);
-            return this;
+
+        public Builder avatarUri(String avatarUri) {
+            return avatarUri(Output.of(avatarUri));
         }
+
         public Builder defaultLanguageCode(Output<String> defaultLanguageCode) {
-            this.defaultLanguageCode = Objects.requireNonNull(defaultLanguageCode);
+            $.defaultLanguageCode = defaultLanguageCode;
             return this;
         }
+
         public Builder defaultLanguageCode(String defaultLanguageCode) {
-            this.defaultLanguageCode = Output.of(Objects.requireNonNull(defaultLanguageCode));
-            return this;
+            return defaultLanguageCode(Output.of(defaultLanguageCode));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableSpellCorrection(@Nullable Output<Boolean> enableSpellCorrection) {
-            this.enableSpellCorrection = enableSpellCorrection;
+            $.enableSpellCorrection = enableSpellCorrection;
             return this;
         }
-        public Builder enableSpellCorrection(@Nullable Boolean enableSpellCorrection) {
-            this.enableSpellCorrection = Codegen.ofNullable(enableSpellCorrection);
-            return this;
+
+        public Builder enableSpellCorrection(Boolean enableSpellCorrection) {
+            return enableSpellCorrection(Output.of(enableSpellCorrection));
         }
+
         public Builder enableStackdriverLogging(@Nullable Output<Boolean> enableStackdriverLogging) {
-            this.enableStackdriverLogging = enableStackdriverLogging;
+            $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
         }
-        public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
-            return this;
+
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
+            return enableStackdriverLogging(Output.of(enableStackdriverLogging));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder securitySettings(@Nullable Output<String> securitySettings) {
-            this.securitySettings = securitySettings;
+            $.securitySettings = securitySettings;
             return this;
         }
-        public Builder securitySettings(@Nullable String securitySettings) {
-            this.securitySettings = Codegen.ofNullable(securitySettings);
-            return this;
+
+        public Builder securitySettings(String securitySettings) {
+            return securitySettings(Output.of(securitySettings));
         }
+
         public Builder speechToTextSettings(@Nullable Output<GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs> speechToTextSettings) {
-            this.speechToTextSettings = speechToTextSettings;
+            $.speechToTextSettings = speechToTextSettings;
             return this;
         }
-        public Builder speechToTextSettings(@Nullable GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs speechToTextSettings) {
-            this.speechToTextSettings = Codegen.ofNullable(speechToTextSettings);
-            return this;
+
+        public Builder speechToTextSettings(GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs speechToTextSettings) {
+            return speechToTextSettings(Output.of(speechToTextSettings));
         }
+
         public Builder startFlow(@Nullable Output<String> startFlow) {
-            this.startFlow = startFlow;
+            $.startFlow = startFlow;
             return this;
         }
-        public Builder startFlow(@Nullable String startFlow) {
-            this.startFlow = Codegen.ofNullable(startFlow);
-            return this;
+
+        public Builder startFlow(String startFlow) {
+            return startFlow(Output.of(startFlow));
         }
+
         public Builder supportedLanguageCodes(@Nullable Output<List<String>> supportedLanguageCodes) {
-            this.supportedLanguageCodes = supportedLanguageCodes;
+            $.supportedLanguageCodes = supportedLanguageCodes;
             return this;
         }
-        public Builder supportedLanguageCodes(@Nullable List<String> supportedLanguageCodes) {
-            this.supportedLanguageCodes = Codegen.ofNullable(supportedLanguageCodes);
-            return this;
+
+        public Builder supportedLanguageCodes(List<String> supportedLanguageCodes) {
+            return supportedLanguageCodes(Output.of(supportedLanguageCodes));
         }
+
         public Builder supportedLanguageCodes(String... supportedLanguageCodes) {
             return supportedLanguageCodes(List.of(supportedLanguageCodes));
         }
+
         public Builder timeZone(Output<String> timeZone) {
-            this.timeZone = Objects.requireNonNull(timeZone);
+            $.timeZone = timeZone;
             return this;
         }
+
         public Builder timeZone(String timeZone) {
-            this.timeZone = Output.of(Objects.requireNonNull(timeZone));
-            return this;
-        }        public AgentArgs build() {
-            return new AgentArgs(advancedSettings, avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, location, name, project, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
+            return timeZone(Output.of(timeZone));
+        }
+
+        public AgentArgs build() {
+            $.defaultLanguageCode = Objects.requireNonNull($.defaultLanguageCode, "expected parameter 'defaultLanguageCode' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.timeZone = Objects.requireNonNull($.timeZone, "expected parameter 'timeZone' to be non-null");
+            return $;
         }
     }
+
 }

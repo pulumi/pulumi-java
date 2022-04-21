@@ -5,11 +5,11 @@ package com.pulumi.googlenative.vision_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vision_v1.inputs.BoundingPolyArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,17 +22,17 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="boundingPolys")
-      private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
+    private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
-    public Output<List<BoundingPolyArgs>> boundingPolys() {
-        return this.boundingPolys == null ? Codegen.empty() : this.boundingPolys;
+    public Optional<Output<List<BoundingPolyArgs>>> boundingPolys() {
+        return Optional.ofNullable(this.boundingPolys);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -40,31 +40,31 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="productId", required=true)
-      private final Output<String> productId;
+    private Output<String> productId;
 
     public Output<String> productId() {
         return this.productId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="referenceImageId")
-      private final @Nullable Output<String> referenceImageId;
+    private @Nullable Output<String> referenceImageId;
 
-    public Output<String> referenceImageId() {
-        return this.referenceImageId == null ? Codegen.empty() : this.referenceImageId;
+    public Optional<Output<String>> referenceImageId() {
+        return Optional.ofNullable(this.referenceImageId);
     }
 
     /**
@@ -72,131 +72,114 @@ public final class ReferenceImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public ReferenceImageArgs(
-        @Nullable Output<List<BoundingPolyArgs>> boundingPolys,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        Output<String> productId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> referenceImageId,
-        Output<String> uri) {
-        this.boundingPolys = boundingPolys;
-        this.location = location;
-        this.name = name;
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.project = project;
-        this.referenceImageId = referenceImageId;
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private ReferenceImageArgs() {}
 
-    private ReferenceImageArgs() {
-        this.boundingPolys = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.productId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.referenceImageId = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ReferenceImageArgs(ReferenceImageArgs $) {
+        this.boundingPolys = $.boundingPolys;
+        this.location = $.location;
+        this.name = $.name;
+        this.productId = $.productId;
+        this.project = $.project;
+        this.referenceImageId = $.referenceImageId;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReferenceImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private Output<String> productId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> referenceImageId;
-        private Output<String> uri;
+        private ReferenceImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReferenceImageArgs();
         }
 
         public Builder(ReferenceImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boundingPolys = defaults.boundingPolys;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.productId = defaults.productId;
-    	      this.project = defaults.project;
-    	      this.referenceImageId = defaults.referenceImageId;
-    	      this.uri = defaults.uri;
+            $ = new ReferenceImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boundingPolys(@Nullable Output<List<BoundingPolyArgs>> boundingPolys) {
-            this.boundingPolys = boundingPolys;
+            $.boundingPolys = boundingPolys;
             return this;
         }
-        public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
-            this.boundingPolys = Codegen.ofNullable(boundingPolys);
-            return this;
+
+        public Builder boundingPolys(List<BoundingPolyArgs> boundingPolys) {
+            return boundingPolys(Output.of(boundingPolys));
         }
+
         public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
             return boundingPolys(List.of(boundingPolys));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder productId(Output<String> productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Output.of(Objects.requireNonNull(productId));
-            return this;
+            return productId(Output.of(productId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder referenceImageId(@Nullable Output<String> referenceImageId) {
-            this.referenceImageId = referenceImageId;
+            $.referenceImageId = referenceImageId;
             return this;
         }
-        public Builder referenceImageId(@Nullable String referenceImageId) {
-            this.referenceImageId = Codegen.ofNullable(referenceImageId);
-            return this;
+
+        public Builder referenceImageId(String referenceImageId) {
+            return referenceImageId(Output.of(referenceImageId));
         }
+
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public ReferenceImageArgs build() {
-            return new ReferenceImageArgs(boundingPolys, location, name, productId, project, referenceImageId, uri);
+            return uri(Output.of(uri));
+        }
+
+        public ReferenceImageArgs build() {
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

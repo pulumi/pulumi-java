@@ -5,10 +5,10 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class SensitiveTextAnnotationArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="details")
-      private final @Nullable Output<Map<String,String>> details;
+    private @Nullable Output<Map<String,String>> details;
 
-    public Output<Map<String,String>> details() {
-        return this.details == null ? Codegen.empty() : this.details;
+    public Optional<Output<Map<String,String>>> details() {
+        return Optional.ofNullable(this.details);
     }
 
-    public SensitiveTextAnnotationArgs(@Nullable Output<Map<String,String>> details) {
-        this.details = details;
-    }
+    private SensitiveTextAnnotationArgs() {}
 
-    private SensitiveTextAnnotationArgs() {
-        this.details = Codegen.empty();
+    private SensitiveTextAnnotationArgs(SensitiveTextAnnotationArgs $) {
+        this.details = $.details;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SensitiveTextAnnotationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> details;
+        private SensitiveTextAnnotationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SensitiveTextAnnotationArgs();
         }
 
         public Builder(SensitiveTextAnnotationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
+            $ = new SensitiveTextAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder details(@Nullable Output<Map<String,String>> details) {
-            this.details = details;
+            $.details = details;
             return this;
         }
-        public Builder details(@Nullable Map<String,String> details) {
-            this.details = Codegen.ofNullable(details);
-            return this;
-        }        public SensitiveTextAnnotationArgs build() {
-            return new SensitiveTextAnnotationArgs(details);
+
+        public Builder details(Map<String,String> details) {
+            return details(Output.of(details));
+        }
+
+        public SensitiveTextAnnotationArgs build() {
+            return $;
         }
     }
+
 }

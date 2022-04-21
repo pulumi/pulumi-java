@@ -18,62 +18,59 @@ public final class ResourceStatusResponse extends com.pulumi.resources.InvokeArg
     public static final ResourceStatusResponse Empty = new ResourceStatusResponse();
 
     @Import(name="scheduling", required=true)
-      private final ResourceStatusSchedulingResponse scheduling;
+    private ResourceStatusSchedulingResponse scheduling;
 
     public ResourceStatusSchedulingResponse scheduling() {
         return this.scheduling;
     }
 
     @Import(name="upcomingMaintenance", required=true)
-      private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
+    private ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
     public ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance() {
         return this.upcomingMaintenance;
     }
 
-    public ResourceStatusResponse(
-        ResourceStatusSchedulingResponse scheduling,
-        ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
-        this.scheduling = Objects.requireNonNull(scheduling, "expected parameter 'scheduling' to be non-null");
-        this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance, "expected parameter 'upcomingMaintenance' to be non-null");
-    }
+    private ResourceStatusResponse() {}
 
-    private ResourceStatusResponse() {
-        this.scheduling = null;
-        this.upcomingMaintenance = null;
+    private ResourceStatusResponse(ResourceStatusResponse $) {
+        this.scheduling = $.scheduling;
+        this.upcomingMaintenance = $.upcomingMaintenance;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceStatusResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourceStatusSchedulingResponse scheduling;
-        private ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
+        private ResourceStatusResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceStatusResponse();
         }
 
         public Builder(ResourceStatusResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scheduling = defaults.scheduling;
-    	      this.upcomingMaintenance = defaults.upcomingMaintenance;
+            $ = new ResourceStatusResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder scheduling(ResourceStatusSchedulingResponse scheduling) {
-            this.scheduling = Objects.requireNonNull(scheduling);
+            $.scheduling = scheduling;
             return this;
         }
+
         public Builder upcomingMaintenance(ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
-            this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
+            $.upcomingMaintenance = upcomingMaintenance;
             return this;
-        }        public ResourceStatusResponse build() {
-            return new ResourceStatusResponse(scheduling, upcomingMaintenance);
+        }
+
+        public ResourceStatusResponse build() {
+            $.scheduling = Objects.requireNonNull($.scheduling, "expected parameter 'scheduling' to be non-null");
+            $.upcomingMaintenance = Objects.requireNonNull($.upcomingMaintenance, "expected parameter 'upcomingMaintenance' to be non-null");
+            return $;
         }
     }
+
 }

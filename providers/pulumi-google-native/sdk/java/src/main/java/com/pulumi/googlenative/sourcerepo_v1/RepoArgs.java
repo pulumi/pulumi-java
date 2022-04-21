@@ -5,11 +5,11 @@ package com.pulumi.googlenative.sourcerepo_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sourcerepo_v1.inputs.MirrorConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mirrorConfig")
-      private final @Nullable Output<MirrorConfigArgs> mirrorConfig;
+    private @Nullable Output<MirrorConfigArgs> mirrorConfig;
 
-    public Output<MirrorConfigArgs> mirrorConfig() {
-        return this.mirrorConfig == null ? Codegen.empty() : this.mirrorConfig;
+    public Optional<Output<MirrorConfigArgs>> mirrorConfig() {
+        return Optional.ofNullable(this.mirrorConfig);
     }
 
     /**
@@ -33,17 +33,17 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubConfigs")
-      private final @Nullable Output<Map<String,String>> pubsubConfigs;
+    private @Nullable Output<Map<String,String>> pubsubConfigs;
 
-    public Output<Map<String,String>> pubsubConfigs() {
-        return this.pubsubConfigs == null ? Codegen.empty() : this.pubsubConfigs;
+    public Optional<Output<Map<String,String>>> pubsubConfigs() {
+        return Optional.ofNullable(this.pubsubConfigs);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="size")
-      private final @Nullable Output<String> size;
+    private @Nullable Output<String> size;
 
-    public Output<String> size() {
-        return this.size == null ? Codegen.empty() : this.size;
+    public Optional<Output<String>> size() {
+        return Optional.ofNullable(this.size);
     }
 
     /**
@@ -73,115 +73,98 @@ public final class RepoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public RepoArgs(
-        @Nullable Output<MirrorConfigArgs> mirrorConfig,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Map<String,String>> pubsubConfigs,
-        @Nullable Output<String> size,
-        @Nullable Output<String> url) {
-        this.mirrorConfig = mirrorConfig;
-        this.name = name;
-        this.project = project;
-        this.pubsubConfigs = pubsubConfigs;
-        this.size = size;
-        this.url = url;
-    }
+    private RepoArgs() {}
 
-    private RepoArgs() {
-        this.mirrorConfig = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pubsubConfigs = Codegen.empty();
-        this.size = Codegen.empty();
-        this.url = Codegen.empty();
+    private RepoArgs(RepoArgs $) {
+        this.mirrorConfig = $.mirrorConfig;
+        this.name = $.name;
+        this.project = $.project;
+        this.pubsubConfigs = $.pubsubConfigs;
+        this.size = $.size;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MirrorConfigArgs> mirrorConfig;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Map<String,String>> pubsubConfigs;
-        private @Nullable Output<String> size;
-        private @Nullable Output<String> url;
+        private RepoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoArgs();
         }
 
         public Builder(RepoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mirrorConfig = defaults.mirrorConfig;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.pubsubConfigs = defaults.pubsubConfigs;
-    	      this.size = defaults.size;
-    	      this.url = defaults.url;
+            $ = new RepoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mirrorConfig(@Nullable Output<MirrorConfigArgs> mirrorConfig) {
-            this.mirrorConfig = mirrorConfig;
+            $.mirrorConfig = mirrorConfig;
             return this;
         }
-        public Builder mirrorConfig(@Nullable MirrorConfigArgs mirrorConfig) {
-            this.mirrorConfig = Codegen.ofNullable(mirrorConfig);
-            return this;
+
+        public Builder mirrorConfig(MirrorConfigArgs mirrorConfig) {
+            return mirrorConfig(Output.of(mirrorConfig));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pubsubConfigs(@Nullable Output<Map<String,String>> pubsubConfigs) {
-            this.pubsubConfigs = pubsubConfigs;
+            $.pubsubConfigs = pubsubConfigs;
             return this;
         }
-        public Builder pubsubConfigs(@Nullable Map<String,String> pubsubConfigs) {
-            this.pubsubConfigs = Codegen.ofNullable(pubsubConfigs);
-            return this;
+
+        public Builder pubsubConfigs(Map<String,String> pubsubConfigs) {
+            return pubsubConfigs(Output.of(pubsubConfigs));
         }
+
         public Builder size(@Nullable Output<String> size) {
-            this.size = size;
+            $.size = size;
             return this;
         }
-        public Builder size(@Nullable String size) {
-            this.size = Codegen.ofNullable(size);
-            return this;
+
+        public Builder size(String size) {
+            return size(Output.of(size));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public RepoArgs build() {
-            return new RepoArgs(mirrorConfig, name, project, pubsubConfigs, size, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public RepoArgs build() {
+            return $;
         }
     }
+
 }

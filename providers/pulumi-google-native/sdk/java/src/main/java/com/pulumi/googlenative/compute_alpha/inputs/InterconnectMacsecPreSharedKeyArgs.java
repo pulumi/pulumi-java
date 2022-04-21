@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -35,63 +35,59 @@ public final class InterconnectMacsecPreSharedKeyArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public InterconnectMacsecPreSharedKeyArgs(
-        Output<String> name,
-        @Nullable Output<String> startTime) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.startTime = startTime;
-    }
+    private InterconnectMacsecPreSharedKeyArgs() {}
 
-    private InterconnectMacsecPreSharedKeyArgs() {
-        this.name = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private InterconnectMacsecPreSharedKeyArgs(InterconnectMacsecPreSharedKeyArgs $) {
+        this.name = $.name;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectMacsecPreSharedKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> startTime;
+        private InterconnectMacsecPreSharedKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectMacsecPreSharedKeyArgs();
         }
 
         public Builder(InterconnectMacsecPreSharedKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.startTime = defaults.startTime;
+            $ = new InterconnectMacsecPreSharedKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public InterconnectMacsecPreSharedKeyArgs build() {
-            return new InterconnectMacsecPreSharedKeyArgs(name, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public InterconnectMacsecPreSharedKeyArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

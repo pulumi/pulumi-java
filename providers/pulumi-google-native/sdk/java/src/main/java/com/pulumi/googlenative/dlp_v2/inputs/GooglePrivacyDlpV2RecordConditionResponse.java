@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2RecordConditionResponse extends com.pulumi.
      * 
      */
     @Import(name="expressions", required=true)
-      private final GooglePrivacyDlpV2ExpressionsResponse expressions;
+    private GooglePrivacyDlpV2ExpressionsResponse expressions;
 
     public GooglePrivacyDlpV2ExpressionsResponse expressions() {
         return this.expressions;
     }
 
-    public GooglePrivacyDlpV2RecordConditionResponse(GooglePrivacyDlpV2ExpressionsResponse expressions) {
-        this.expressions = Objects.requireNonNull(expressions, "expected parameter 'expressions' to be non-null");
-    }
+    private GooglePrivacyDlpV2RecordConditionResponse() {}
 
-    private GooglePrivacyDlpV2RecordConditionResponse() {
-        this.expressions = null;
+    private GooglePrivacyDlpV2RecordConditionResponse(GooglePrivacyDlpV2RecordConditionResponse $) {
+        this.expressions = $.expressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RecordConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2ExpressionsResponse expressions;
+        private GooglePrivacyDlpV2RecordConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RecordConditionResponse();
         }
 
         public Builder(GooglePrivacyDlpV2RecordConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expressions = defaults.expressions;
+            $ = new GooglePrivacyDlpV2RecordConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expressions(GooglePrivacyDlpV2ExpressionsResponse expressions) {
-            this.expressions = Objects.requireNonNull(expressions);
+            $.expressions = expressions;
             return this;
-        }        public GooglePrivacyDlpV2RecordConditionResponse build() {
-            return new GooglePrivacyDlpV2RecordConditionResponse(expressions);
+        }
+
+        public GooglePrivacyDlpV2RecordConditionResponse build() {
+            $.expressions = Objects.requireNonNull($.expressions, "expected parameter 'expressions' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
      * 
      */
     @Import(name="parameter", required=true)
-      private final String parameter;
+    private String parameter;
 
     public String parameter() {
         return this.parameter;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionRespons
      * 
      */
     @Import(name="value", required=true)
-      private final Object value;
+    private Object value;
 
     public Object value() {
         return this.value;
     }
 
-    public GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(
-        String parameter,
-        Object value) {
-        this.parameter = Objects.requireNonNull(parameter, "expected parameter 'parameter' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse() {}
 
-    private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse() {
-        this.parameter = null;
-        this.value = null;
+    private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse $) {
+        this.parameter = $.parameter;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameter;
-        private Object value;
+        private GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameter = defaults.parameter;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameter(String parameter) {
-            this.parameter = Objects.requireNonNull(parameter);
+            $.parameter = parameter;
             return this;
         }
+
         public Builder value(Object value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse build() {
-            return new GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse(parameter, value);
+        }
+
+        public GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse build() {
+            $.parameter = Objects.requireNonNull($.parameter, "expected parameter 'parameter' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

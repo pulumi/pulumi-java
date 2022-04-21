@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.enums.StatusConditionCanonicalCode;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="canonicalCode")
-      private final @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
+    private @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
 
-    public Output<StatusConditionCanonicalCode> canonicalCode() {
-        return this.canonicalCode == null ? Codegen.empty() : this.canonicalCode;
+    public Optional<Output<StatusConditionCanonicalCode>> canonicalCode() {
+        return Optional.ofNullable(this.canonicalCode);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class StatusConditionArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
-    public StatusConditionArgs(
-        @Nullable Output<StatusConditionCanonicalCode> canonicalCode,
-        @Nullable Output<String> message) {
-        this.canonicalCode = canonicalCode;
-        this.message = message;
-    }
+    private StatusConditionArgs() {}
 
-    private StatusConditionArgs() {
-        this.canonicalCode = Codegen.empty();
-        this.message = Codegen.empty();
+    private StatusConditionArgs(StatusConditionArgs $) {
+        this.canonicalCode = $.canonicalCode;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<StatusConditionCanonicalCode> canonicalCode;
-        private @Nullable Output<String> message;
+        private StatusConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusConditionArgs();
         }
 
         public Builder(StatusConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalCode = defaults.canonicalCode;
-    	      this.message = defaults.message;
+            $ = new StatusConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalCode(@Nullable Output<StatusConditionCanonicalCode> canonicalCode) {
-            this.canonicalCode = canonicalCode;
+            $.canonicalCode = canonicalCode;
             return this;
         }
-        public Builder canonicalCode(@Nullable StatusConditionCanonicalCode canonicalCode) {
-            this.canonicalCode = Codegen.ofNullable(canonicalCode);
-            return this;
+
+        public Builder canonicalCode(StatusConditionCanonicalCode canonicalCode) {
+            return canonicalCode(Output.of(canonicalCode));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
-        }        public StatusConditionArgs build() {
-            return new StatusConditionArgs(canonicalCode, message);
+
+        public Builder message(String message) {
+            return message(Output.of(message));
+        }
+
+        public StatusConditionArgs build() {
+            return $;
         }
     }
+
 }

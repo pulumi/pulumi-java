@@ -15,62 +15,58 @@ public final class GetDataSourceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
     @Import(name="datasourceId", required=true)
-      private final String datasourceId;
+    private String datasourceId;
 
     public String datasourceId() {
         return this.datasourceId;
     }
 
     @Import(name="debugOptionsEnableDebugging")
-      private final @Nullable String debugOptionsEnableDebugging;
+    private @Nullable String debugOptionsEnableDebugging;
 
     public Optional<String> debugOptionsEnableDebugging() {
-        return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
+        return Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
-    public GetDataSourceArgs(
-        String datasourceId,
-        @Nullable String debugOptionsEnableDebugging) {
-        this.datasourceId = Objects.requireNonNull(datasourceId, "expected parameter 'datasourceId' to be non-null");
-        this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
-    }
+    private GetDataSourceArgs() {}
 
-    private GetDataSourceArgs() {
-        this.datasourceId = null;
-        this.debugOptionsEnableDebugging = null;
+    private GetDataSourceArgs(GetDataSourceArgs $) {
+        this.datasourceId = $.datasourceId;
+        this.debugOptionsEnableDebugging = $.debugOptionsEnableDebugging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDataSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasourceId;
-        private @Nullable String debugOptionsEnableDebugging;
+        private GetDataSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDataSourceArgs();
         }
 
         public Builder(GetDataSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasourceId = defaults.datasourceId;
-    	      this.debugOptionsEnableDebugging = defaults.debugOptionsEnableDebugging;
+            $ = new GetDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasourceId(String datasourceId) {
-            this.datasourceId = Objects.requireNonNull(datasourceId);
+            $.datasourceId = datasourceId;
             return this;
         }
+
         public Builder debugOptionsEnableDebugging(@Nullable String debugOptionsEnableDebugging) {
-            this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
+            $.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
             return this;
-        }        public GetDataSourceArgs build() {
-            return new GetDataSourceArgs(datasourceId, debugOptionsEnableDebugging);
+        }
+
+        public GetDataSourceArgs build() {
+            $.datasourceId = Objects.requireNonNull($.datasourceId, "expected parameter 'datasourceId' to be non-null");
+            return $;
         }
     }
+
 }

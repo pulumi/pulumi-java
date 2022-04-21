@@ -23,7 +23,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -34,7 +34,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="lastKnownTrustConnectedHeartbeatTime", required=true)
-      private final String lastKnownTrustConnectedHeartbeatTime;
+    private String lastKnownTrustConnectedHeartbeatTime;
 
     public String lastKnownTrustConnectedHeartbeatTime() {
         return this.lastKnownTrustConnectedHeartbeatTime;
@@ -45,7 +45,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selectiveAuthentication", required=true)
-      private final Boolean selectiveAuthentication;
+    private Boolean selectiveAuthentication;
 
     public Boolean selectiveAuthentication() {
         return this.selectiveAuthentication;
@@ -56,7 +56,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -67,7 +67,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stateDescription", required=true)
-      private final String stateDescription;
+    private String stateDescription;
 
     public String stateDescription() {
         return this.stateDescription;
@@ -78,7 +78,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetDnsIpAddresses", required=true)
-      private final List<String> targetDnsIpAddresses;
+    private List<String> targetDnsIpAddresses;
 
     public List<String> targetDnsIpAddresses() {
         return this.targetDnsIpAddresses;
@@ -89,7 +89,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetDomainName", required=true)
-      private final String targetDomainName;
+    private String targetDomainName;
 
     public String targetDomainName() {
         return this.targetDomainName;
@@ -100,7 +100,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustDirection", required=true)
-      private final String trustDirection;
+    private String trustDirection;
 
     public String trustDirection() {
         return this.trustDirection;
@@ -111,7 +111,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustHandshakeSecret", required=true)
-      private final String trustHandshakeSecret;
+    private String trustHandshakeSecret;
 
     public String trustHandshakeSecret() {
         return this.trustHandshakeSecret;
@@ -122,7 +122,7 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="trustType", required=true)
-      private final String trustType;
+    private String trustType;
 
     public String trustType() {
         return this.trustType;
@@ -133,139 +133,119 @@ public final class TrustResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public TrustResponse(
-        String createTime,
-        String lastKnownTrustConnectedHeartbeatTime,
-        Boolean selectiveAuthentication,
-        String state,
-        String stateDescription,
-        List<String> targetDnsIpAddresses,
-        String targetDomainName,
-        String trustDirection,
-        String trustHandshakeSecret,
-        String trustType,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.lastKnownTrustConnectedHeartbeatTime = Objects.requireNonNull(lastKnownTrustConnectedHeartbeatTime, "expected parameter 'lastKnownTrustConnectedHeartbeatTime' to be non-null");
-        this.selectiveAuthentication = Objects.requireNonNull(selectiveAuthentication, "expected parameter 'selectiveAuthentication' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateDescription = Objects.requireNonNull(stateDescription, "expected parameter 'stateDescription' to be non-null");
-        this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses, "expected parameter 'targetDnsIpAddresses' to be non-null");
-        this.targetDomainName = Objects.requireNonNull(targetDomainName, "expected parameter 'targetDomainName' to be non-null");
-        this.trustDirection = Objects.requireNonNull(trustDirection, "expected parameter 'trustDirection' to be non-null");
-        this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret, "expected parameter 'trustHandshakeSecret' to be non-null");
-        this.trustType = Objects.requireNonNull(trustType, "expected parameter 'trustType' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private TrustResponse() {}
 
-    private TrustResponse() {
-        this.createTime = null;
-        this.lastKnownTrustConnectedHeartbeatTime = null;
-        this.selectiveAuthentication = null;
-        this.state = null;
-        this.stateDescription = null;
-        this.targetDnsIpAddresses = List.of();
-        this.targetDomainName = null;
-        this.trustDirection = null;
-        this.trustHandshakeSecret = null;
-        this.trustType = null;
-        this.updateTime = null;
+    private TrustResponse(TrustResponse $) {
+        this.createTime = $.createTime;
+        this.lastKnownTrustConnectedHeartbeatTime = $.lastKnownTrustConnectedHeartbeatTime;
+        this.selectiveAuthentication = $.selectiveAuthentication;
+        this.state = $.state;
+        this.stateDescription = $.stateDescription;
+        this.targetDnsIpAddresses = $.targetDnsIpAddresses;
+        this.targetDomainName = $.targetDomainName;
+        this.trustDirection = $.trustDirection;
+        this.trustHandshakeSecret = $.trustHandshakeSecret;
+        this.trustType = $.trustType;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrustResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String lastKnownTrustConnectedHeartbeatTime;
-        private Boolean selectiveAuthentication;
-        private String state;
-        private String stateDescription;
-        private List<String> targetDnsIpAddresses;
-        private String targetDomainName;
-        private String trustDirection;
-        private String trustHandshakeSecret;
-        private String trustType;
-        private String updateTime;
+        private TrustResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrustResponse();
         }
 
         public Builder(TrustResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.lastKnownTrustConnectedHeartbeatTime = defaults.lastKnownTrustConnectedHeartbeatTime;
-    	      this.selectiveAuthentication = defaults.selectiveAuthentication;
-    	      this.state = defaults.state;
-    	      this.stateDescription = defaults.stateDescription;
-    	      this.targetDnsIpAddresses = defaults.targetDnsIpAddresses;
-    	      this.targetDomainName = defaults.targetDomainName;
-    	      this.trustDirection = defaults.trustDirection;
-    	      this.trustHandshakeSecret = defaults.trustHandshakeSecret;
-    	      this.trustType = defaults.trustType;
-    	      this.updateTime = defaults.updateTime;
+            $ = new TrustResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder lastKnownTrustConnectedHeartbeatTime(String lastKnownTrustConnectedHeartbeatTime) {
-            this.lastKnownTrustConnectedHeartbeatTime = Objects.requireNonNull(lastKnownTrustConnectedHeartbeatTime);
+            $.lastKnownTrustConnectedHeartbeatTime = lastKnownTrustConnectedHeartbeatTime;
             return this;
         }
+
         public Builder selectiveAuthentication(Boolean selectiveAuthentication) {
-            this.selectiveAuthentication = Objects.requireNonNull(selectiveAuthentication);
+            $.selectiveAuthentication = selectiveAuthentication;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateDescription(String stateDescription) {
-            this.stateDescription = Objects.requireNonNull(stateDescription);
+            $.stateDescription = stateDescription;
             return this;
         }
+
         public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
-            this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
+            $.targetDnsIpAddresses = targetDnsIpAddresses;
             return this;
         }
+
         public Builder targetDnsIpAddresses(String... targetDnsIpAddresses) {
             return targetDnsIpAddresses(List.of(targetDnsIpAddresses));
         }
+
         public Builder targetDomainName(String targetDomainName) {
-            this.targetDomainName = Objects.requireNonNull(targetDomainName);
+            $.targetDomainName = targetDomainName;
             return this;
         }
+
         public Builder trustDirection(String trustDirection) {
-            this.trustDirection = Objects.requireNonNull(trustDirection);
+            $.trustDirection = trustDirection;
             return this;
         }
+
         public Builder trustHandshakeSecret(String trustHandshakeSecret) {
-            this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
+            $.trustHandshakeSecret = trustHandshakeSecret;
             return this;
         }
+
         public Builder trustType(String trustType) {
-            this.trustType = Objects.requireNonNull(trustType);
+            $.trustType = trustType;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public TrustResponse build() {
-            return new TrustResponse(createTime, lastKnownTrustConnectedHeartbeatTime, selectiveAuthentication, state, stateDescription, targetDnsIpAddresses, targetDomainName, trustDirection, trustHandshakeSecret, trustType, updateTime);
+        }
+
+        public TrustResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.lastKnownTrustConnectedHeartbeatTime = Objects.requireNonNull($.lastKnownTrustConnectedHeartbeatTime, "expected parameter 'lastKnownTrustConnectedHeartbeatTime' to be non-null");
+            $.selectiveAuthentication = Objects.requireNonNull($.selectiveAuthentication, "expected parameter 'selectiveAuthentication' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateDescription = Objects.requireNonNull($.stateDescription, "expected parameter 'stateDescription' to be non-null");
+            $.targetDnsIpAddresses = Objects.requireNonNull($.targetDnsIpAddresses, "expected parameter 'targetDnsIpAddresses' to be non-null");
+            $.targetDomainName = Objects.requireNonNull($.targetDomainName, "expected parameter 'targetDomainName' to be non-null");
+            $.trustDirection = Objects.requireNonNull($.trustDirection, "expected parameter 'trustDirection' to be non-null");
+            $.trustHandshakeSecret = Objects.requireNonNull($.trustHandshakeSecret, "expected parameter 'trustHandshakeSecret' to be non-null");
+            $.trustType = Objects.requireNonNull($.trustType, "expected parameter 'trustType' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaImageResponse extends com.pulumi.resou
      * 
      */
     @Import(name="height", required=true)
-      private final Integer height;
+    private Integer height;
 
     public Integer height() {
         return this.height;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaImageResponse extends com.pulumi.resou
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
@@ -44,64 +44,59 @@ public final class GoogleCloudRetailV2betaImageResponse extends com.pulumi.resou
      * 
      */
     @Import(name="width", required=true)
-      private final Integer width;
+    private Integer width;
 
     public Integer width() {
         return this.width;
     }
 
-    public GoogleCloudRetailV2betaImageResponse(
-        Integer height,
-        String uri,
-        Integer width) {
-        this.height = Objects.requireNonNull(height, "expected parameter 'height' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-        this.width = Objects.requireNonNull(width, "expected parameter 'width' to be non-null");
-    }
+    private GoogleCloudRetailV2betaImageResponse() {}
 
-    private GoogleCloudRetailV2betaImageResponse() {
-        this.height = null;
-        this.uri = null;
-        this.width = null;
+    private GoogleCloudRetailV2betaImageResponse(GoogleCloudRetailV2betaImageResponse $) {
+        this.height = $.height;
+        this.uri = $.uri;
+        this.width = $.width;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaImageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer height;
-        private String uri;
-        private Integer width;
+        private GoogleCloudRetailV2betaImageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaImageResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaImageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.uri = defaults.uri;
-    	      this.width = defaults.width;
+            $ = new GoogleCloudRetailV2betaImageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(Integer height) {
-            this.height = Objects.requireNonNull(height);
+            $.height = height;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder width(Integer width) {
-            this.width = Objects.requireNonNull(width);
+            $.width = width;
             return this;
-        }        public GoogleCloudRetailV2betaImageResponse build() {
-            return new GoogleCloudRetailV2betaImageResponse(height, uri, width);
+        }
+
+        public GoogleCloudRetailV2betaImageResponse build() {
+            $.height = Objects.requireNonNull($.height, "expected parameter 'height' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            $.width = Objects.requireNonNull($.width, "expected parameter 'width' to be non-null");
+            return $;
         }
     }
+
 }

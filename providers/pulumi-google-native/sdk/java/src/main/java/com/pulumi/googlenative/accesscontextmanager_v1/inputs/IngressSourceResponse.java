@@ -21,7 +21,7 @@ public final class IngressSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="accessLevel", required=true)
-      private final String accessLevel;
+    private String accessLevel;
 
     public String accessLevel() {
         return this.accessLevel;
@@ -32,55 +32,52 @@ public final class IngressSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public IngressSourceResponse(
-        String accessLevel,
-        String resource) {
-        this.accessLevel = Objects.requireNonNull(accessLevel, "expected parameter 'accessLevel' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private IngressSourceResponse() {}
 
-    private IngressSourceResponse() {
-        this.accessLevel = null;
-        this.resource = null;
+    private IngressSourceResponse(IngressSourceResponse $) {
+        this.accessLevel = $.accessLevel;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessLevel;
-        private String resource;
+        private IngressSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressSourceResponse();
         }
 
         public Builder(IngressSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevel = defaults.accessLevel;
-    	      this.resource = defaults.resource;
+            $ = new IngressSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevel(String accessLevel) {
-            this.accessLevel = Objects.requireNonNull(accessLevel);
+            $.accessLevel = accessLevel;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public IngressSourceResponse build() {
-            return new IngressSourceResponse(accessLevel, resource);
+        }
+
+        public IngressSourceResponse build() {
+            $.accessLevel = Objects.requireNonNull($.accessLevel, "expected parameter 'accessLevel' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

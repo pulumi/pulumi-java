@@ -21,45 +21,45 @@ public final class GoogleCloudMlV1__IntegratedGradientsAttributionResponse exten
      * 
      */
     @Import(name="numIntegralSteps", required=true)
-      private final Integer numIntegralSteps;
+    private Integer numIntegralSteps;
 
     public Integer numIntegralSteps() {
         return this.numIntegralSteps;
     }
 
-    public GoogleCloudMlV1__IntegratedGradientsAttributionResponse(Integer numIntegralSteps) {
-        this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps, "expected parameter 'numIntegralSteps' to be non-null");
-    }
+    private GoogleCloudMlV1__IntegratedGradientsAttributionResponse() {}
 
-    private GoogleCloudMlV1__IntegratedGradientsAttributionResponse() {
-        this.numIntegralSteps = null;
+    private GoogleCloudMlV1__IntegratedGradientsAttributionResponse(GoogleCloudMlV1__IntegratedGradientsAttributionResponse $) {
+        this.numIntegralSteps = $.numIntegralSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__IntegratedGradientsAttributionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numIntegralSteps;
+        private GoogleCloudMlV1__IntegratedGradientsAttributionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__IntegratedGradientsAttributionResponse();
         }
 
         public Builder(GoogleCloudMlV1__IntegratedGradientsAttributionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numIntegralSteps = defaults.numIntegralSteps;
+            $ = new GoogleCloudMlV1__IntegratedGradientsAttributionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numIntegralSteps(Integer numIntegralSteps) {
-            this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps);
+            $.numIntegralSteps = numIntegralSteps;
             return this;
-        }        public GoogleCloudMlV1__IntegratedGradientsAttributionResponse build() {
-            return new GoogleCloudMlV1__IntegratedGradientsAttributionResponse(numIntegralSteps);
+        }
+
+        public GoogleCloudMlV1__IntegratedGradientsAttributionResponse build() {
+            $.numIntegralSteps = Objects.requireNonNull($.numIntegralSteps, "expected parameter 'numIntegralSteps' to be non-null");
+            return $;
         }
     }
+
 }

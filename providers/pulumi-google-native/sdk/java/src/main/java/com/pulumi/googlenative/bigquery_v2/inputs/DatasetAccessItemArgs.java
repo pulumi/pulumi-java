@@ -5,12 +5,12 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import com.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataset")
-      private final @Nullable Output<DatasetAccessEntryArgs> dataset;
+    private @Nullable Output<DatasetAccessEntryArgs> dataset;
 
-    public Output<DatasetAccessEntryArgs> dataset() {
-        return this.dataset == null ? Codegen.empty() : this.dataset;
+    public Optional<Output<DatasetAccessEntryArgs>> dataset() {
+        return Optional.ofNullable(this.dataset);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="groupByEmail")
-      private final @Nullable Output<String> groupByEmail;
+    private @Nullable Output<String> groupByEmail;
 
-    public Output<String> groupByEmail() {
-        return this.groupByEmail == null ? Codegen.empty() : this.groupByEmail;
+    public Optional<Output<String>> groupByEmail() {
+        return Optional.ofNullable(this.groupByEmail);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="iamMember")
-      private final @Nullable Output<String> iamMember;
+    private @Nullable Output<String> iamMember;
 
-    public Output<String> iamMember() {
-        return this.iamMember == null ? Codegen.empty() : this.iamMember;
+    public Optional<Output<String>> iamMember() {
+        return Optional.ofNullable(this.iamMember);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="routine")
-      private final @Nullable Output<RoutineReferenceArgs> routine;
+    private @Nullable Output<RoutineReferenceArgs> routine;
 
-    public Output<RoutineReferenceArgs> routine() {
-        return this.routine == null ? Codegen.empty() : this.routine;
+    public Optional<Output<RoutineReferenceArgs>> routine() {
+        return Optional.ofNullable(this.routine);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="specialGroup")
-      private final @Nullable Output<String> specialGroup;
+    private @Nullable Output<String> specialGroup;
 
-    public Output<String> specialGroup() {
-        return this.specialGroup == null ? Codegen.empty() : this.specialGroup;
+    public Optional<Output<String>> specialGroup() {
+        return Optional.ofNullable(this.specialGroup);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="userByEmail")
-      private final @Nullable Output<String> userByEmail;
+    private @Nullable Output<String> userByEmail;
 
-    public Output<String> userByEmail() {
-        return this.userByEmail == null ? Codegen.empty() : this.userByEmail;
+    public Optional<Output<String>> userByEmail() {
+        return Optional.ofNullable(this.userByEmail);
     }
 
     /**
@@ -111,154 +111,128 @@ public final class DatasetAccessItemArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="view")
-      private final @Nullable Output<TableReferenceArgs> view;
+    private @Nullable Output<TableReferenceArgs> view;
 
-    public Output<TableReferenceArgs> view() {
-        return this.view == null ? Codegen.empty() : this.view;
+    public Optional<Output<TableReferenceArgs>> view() {
+        return Optional.ofNullable(this.view);
     }
 
-    public DatasetAccessItemArgs(
-        @Nullable Output<DatasetAccessEntryArgs> dataset,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> groupByEmail,
-        @Nullable Output<String> iamMember,
-        @Nullable Output<String> role,
-        @Nullable Output<RoutineReferenceArgs> routine,
-        @Nullable Output<String> specialGroup,
-        @Nullable Output<String> userByEmail,
-        @Nullable Output<TableReferenceArgs> view) {
-        this.dataset = dataset;
-        this.domain = domain;
-        this.groupByEmail = groupByEmail;
-        this.iamMember = iamMember;
-        this.role = role;
-        this.routine = routine;
-        this.specialGroup = specialGroup;
-        this.userByEmail = userByEmail;
-        this.view = view;
-    }
+    private DatasetAccessItemArgs() {}
 
-    private DatasetAccessItemArgs() {
-        this.dataset = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.groupByEmail = Codegen.empty();
-        this.iamMember = Codegen.empty();
-        this.role = Codegen.empty();
-        this.routine = Codegen.empty();
-        this.specialGroup = Codegen.empty();
-        this.userByEmail = Codegen.empty();
-        this.view = Codegen.empty();
+    private DatasetAccessItemArgs(DatasetAccessItemArgs $) {
+        this.dataset = $.dataset;
+        this.domain = $.domain;
+        this.groupByEmail = $.groupByEmail;
+        this.iamMember = $.iamMember;
+        this.role = $.role;
+        this.routine = $.routine;
+        this.specialGroup = $.specialGroup;
+        this.userByEmail = $.userByEmail;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetAccessItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatasetAccessEntryArgs> dataset;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> groupByEmail;
-        private @Nullable Output<String> iamMember;
-        private @Nullable Output<String> role;
-        private @Nullable Output<RoutineReferenceArgs> routine;
-        private @Nullable Output<String> specialGroup;
-        private @Nullable Output<String> userByEmail;
-        private @Nullable Output<TableReferenceArgs> view;
+        private DatasetAccessItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetAccessItemArgs();
         }
 
         public Builder(DatasetAccessItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.domain = defaults.domain;
-    	      this.groupByEmail = defaults.groupByEmail;
-    	      this.iamMember = defaults.iamMember;
-    	      this.role = defaults.role;
-    	      this.routine = defaults.routine;
-    	      this.specialGroup = defaults.specialGroup;
-    	      this.userByEmail = defaults.userByEmail;
-    	      this.view = defaults.view;
+            $ = new DatasetAccessItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(@Nullable Output<DatasetAccessEntryArgs> dataset) {
-            this.dataset = dataset;
+            $.dataset = dataset;
             return this;
         }
-        public Builder dataset(@Nullable DatasetAccessEntryArgs dataset) {
-            this.dataset = Codegen.ofNullable(dataset);
-            return this;
+
+        public Builder dataset(DatasetAccessEntryArgs dataset) {
+            return dataset(Output.of(dataset));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder groupByEmail(@Nullable Output<String> groupByEmail) {
-            this.groupByEmail = groupByEmail;
+            $.groupByEmail = groupByEmail;
             return this;
         }
-        public Builder groupByEmail(@Nullable String groupByEmail) {
-            this.groupByEmail = Codegen.ofNullable(groupByEmail);
-            return this;
+
+        public Builder groupByEmail(String groupByEmail) {
+            return groupByEmail(Output.of(groupByEmail));
         }
+
         public Builder iamMember(@Nullable Output<String> iamMember) {
-            this.iamMember = iamMember;
+            $.iamMember = iamMember;
             return this;
         }
-        public Builder iamMember(@Nullable String iamMember) {
-            this.iamMember = Codegen.ofNullable(iamMember);
-            return this;
+
+        public Builder iamMember(String iamMember) {
+            return iamMember(Output.of(iamMember));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder routine(@Nullable Output<RoutineReferenceArgs> routine) {
-            this.routine = routine;
+            $.routine = routine;
             return this;
         }
-        public Builder routine(@Nullable RoutineReferenceArgs routine) {
-            this.routine = Codegen.ofNullable(routine);
-            return this;
+
+        public Builder routine(RoutineReferenceArgs routine) {
+            return routine(Output.of(routine));
         }
+
         public Builder specialGroup(@Nullable Output<String> specialGroup) {
-            this.specialGroup = specialGroup;
+            $.specialGroup = specialGroup;
             return this;
         }
-        public Builder specialGroup(@Nullable String specialGroup) {
-            this.specialGroup = Codegen.ofNullable(specialGroup);
-            return this;
+
+        public Builder specialGroup(String specialGroup) {
+            return specialGroup(Output.of(specialGroup));
         }
+
         public Builder userByEmail(@Nullable Output<String> userByEmail) {
-            this.userByEmail = userByEmail;
+            $.userByEmail = userByEmail;
             return this;
         }
-        public Builder userByEmail(@Nullable String userByEmail) {
-            this.userByEmail = Codegen.ofNullable(userByEmail);
-            return this;
+
+        public Builder userByEmail(String userByEmail) {
+            return userByEmail(Output.of(userByEmail));
         }
+
         public Builder view(@Nullable Output<TableReferenceArgs> view) {
-            this.view = view;
+            $.view = view;
             return this;
         }
-        public Builder view(@Nullable TableReferenceArgs view) {
-            this.view = Codegen.ofNullable(view);
-            return this;
-        }        public DatasetAccessItemArgs build() {
-            return new DatasetAccessItemArgs(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
+
+        public Builder view(TableReferenceArgs view) {
+            return view(Output.of(view));
+        }
+
+        public DatasetAccessItemArgs build() {
+            return $;
         }
     }
+
 }

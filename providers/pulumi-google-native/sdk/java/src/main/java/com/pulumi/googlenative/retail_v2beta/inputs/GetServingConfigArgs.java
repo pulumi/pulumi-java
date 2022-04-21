@@ -15,94 +15,86 @@ public final class GetServingConfigArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetServingConfigArgs Empty = new GetServingConfigArgs();
 
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="servingConfigId", required=true)
-      private final String servingConfigId;
+    private String servingConfigId;
 
     public String servingConfigId() {
         return this.servingConfigId;
     }
 
-    public GetServingConfigArgs(
-        String catalogId,
-        String location,
-        @Nullable String project,
-        String servingConfigId) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.servingConfigId = Objects.requireNonNull(servingConfigId, "expected parameter 'servingConfigId' to be non-null");
-    }
+    private GetServingConfigArgs() {}
 
-    private GetServingConfigArgs() {
-        this.catalogId = null;
-        this.location = null;
-        this.project = null;
-        this.servingConfigId = null;
+    private GetServingConfigArgs(GetServingConfigArgs $) {
+        this.catalogId = $.catalogId;
+        this.location = $.location;
+        this.project = $.project;
+        this.servingConfigId = $.servingConfigId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogId;
-        private String location;
-        private @Nullable String project;
-        private String servingConfigId;
+        private GetServingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServingConfigArgs();
         }
 
         public Builder(GetServingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.servingConfigId = defaults.servingConfigId;
+            $ = new GetServingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder servingConfigId(String servingConfigId) {
-            this.servingConfigId = Objects.requireNonNull(servingConfigId);
+            $.servingConfigId = servingConfigId;
             return this;
-        }        public GetServingConfigArgs build() {
-            return new GetServingConfigArgs(catalogId, location, project, servingConfigId);
+        }
+
+        public GetServingConfigArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.servingConfigId = Objects.requireNonNull($.servingConfigId, "expected parameter 'servingConfigId' to be non-null");
+            return $;
         }
     }
+
 }

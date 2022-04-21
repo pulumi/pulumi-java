@@ -17,7 +17,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
      * 
      */
     @Import(name="day", required=true)
-      private final String day;
+    private String day;
 
     public String day() {
         return this.day;
@@ -28,7 +28,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -39,64 +39,59 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse extends com.pulumi
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public ResourcePolicyWeeklyCycleDayOfWeekResponse(
-        String day,
-        String duration,
-        String startTime) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ResourcePolicyWeeklyCycleDayOfWeekResponse() {}
 
-    private ResourcePolicyWeeklyCycleDayOfWeekResponse() {
-        this.day = null;
-        this.duration = null;
-        this.startTime = null;
+    private ResourcePolicyWeeklyCycleDayOfWeekResponse(ResourcePolicyWeeklyCycleDayOfWeekResponse $) {
+        this.day = $.day;
+        this.duration = $.duration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyWeeklyCycleDayOfWeekResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String day;
-        private String duration;
-        private String startTime;
+        private ResourcePolicyWeeklyCycleDayOfWeekResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyWeeklyCycleDayOfWeekResponse();
         }
 
         public Builder(ResourcePolicyWeeklyCycleDayOfWeekResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.duration = defaults.duration;
-    	      this.startTime = defaults.startTime;
+            $ = new ResourcePolicyWeeklyCycleDayOfWeekResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(String day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public ResourcePolicyWeeklyCycleDayOfWeekResponse build() {
-            return new ResourcePolicyWeeklyCycleDayOfWeekResponse(day, duration, startTime);
+        }
+
+        public ResourcePolicyWeeklyCycleDayOfWeekResponse build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

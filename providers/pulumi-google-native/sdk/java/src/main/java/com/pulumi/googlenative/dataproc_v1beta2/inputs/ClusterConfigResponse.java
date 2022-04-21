@@ -33,7 +33,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="autoscalingConfig", required=true)
-      private final AutoscalingConfigResponse autoscalingConfig;
+    private AutoscalingConfigResponse autoscalingConfig;
 
     public AutoscalingConfigResponse autoscalingConfig() {
         return this.autoscalingConfig;
@@ -44,7 +44,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configBucket", required=true)
-      private final String configBucket;
+    private String configBucket;
 
     public String configBucket() {
         return this.configBucket;
@@ -55,7 +55,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="encryptionConfig", required=true)
-      private final EncryptionConfigResponse encryptionConfig;
+    private EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
@@ -66,7 +66,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="endpointConfig", required=true)
-      private final EndpointConfigResponse endpointConfig;
+    private EndpointConfigResponse endpointConfig;
 
     public EndpointConfigResponse endpointConfig() {
         return this.endpointConfig;
@@ -77,7 +77,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gceClusterConfig", required=true)
-      private final GceClusterConfigResponse gceClusterConfig;
+    private GceClusterConfigResponse gceClusterConfig;
 
     public GceClusterConfigResponse gceClusterConfig() {
         return this.gceClusterConfig;
@@ -88,7 +88,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="gkeClusterConfig", required=true)
-      private final GkeClusterConfigResponse gkeClusterConfig;
+    private GkeClusterConfigResponse gkeClusterConfig;
 
     public GkeClusterConfigResponse gkeClusterConfig() {
         return this.gkeClusterConfig;
@@ -99,7 +99,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="initializationActions", required=true)
-      private final List<NodeInitializationActionResponse> initializationActions;
+    private List<NodeInitializationActionResponse> initializationActions;
 
     public List<NodeInitializationActionResponse> initializationActions() {
         return this.initializationActions;
@@ -110,7 +110,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="lifecycleConfig", required=true)
-      private final LifecycleConfigResponse lifecycleConfig;
+    private LifecycleConfigResponse lifecycleConfig;
 
     public LifecycleConfigResponse lifecycleConfig() {
         return this.lifecycleConfig;
@@ -121,7 +121,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="masterConfig", required=true)
-      private final InstanceGroupConfigResponse masterConfig;
+    private InstanceGroupConfigResponse masterConfig;
 
     public InstanceGroupConfigResponse masterConfig() {
         return this.masterConfig;
@@ -132,7 +132,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="metastoreConfig", required=true)
-      private final MetastoreConfigResponse metastoreConfig;
+    private MetastoreConfigResponse metastoreConfig;
 
     public MetastoreConfigResponse metastoreConfig() {
         return this.metastoreConfig;
@@ -143,7 +143,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="secondaryWorkerConfig", required=true)
-      private final InstanceGroupConfigResponse secondaryWorkerConfig;
+    private InstanceGroupConfigResponse secondaryWorkerConfig;
 
     public InstanceGroupConfigResponse secondaryWorkerConfig() {
         return this.secondaryWorkerConfig;
@@ -154,7 +154,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="securityConfig", required=true)
-      private final SecurityConfigResponse securityConfig;
+    private SecurityConfigResponse securityConfig;
 
     public SecurityConfigResponse securityConfig() {
         return this.securityConfig;
@@ -165,7 +165,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="softwareConfig", required=true)
-      private final SoftwareConfigResponse softwareConfig;
+    private SoftwareConfigResponse softwareConfig;
 
     public SoftwareConfigResponse softwareConfig() {
         return this.softwareConfig;
@@ -176,7 +176,7 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tempBucket", required=true)
-      private final String tempBucket;
+    private String tempBucket;
 
     public String tempBucket() {
         return this.tempBucket;
@@ -187,175 +187,147 @@ public final class ClusterConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="workerConfig", required=true)
-      private final InstanceGroupConfigResponse workerConfig;
+    private InstanceGroupConfigResponse workerConfig;
 
     public InstanceGroupConfigResponse workerConfig() {
         return this.workerConfig;
     }
 
-    public ClusterConfigResponse(
-        AutoscalingConfigResponse autoscalingConfig,
-        String configBucket,
-        EncryptionConfigResponse encryptionConfig,
-        EndpointConfigResponse endpointConfig,
-        GceClusterConfigResponse gceClusterConfig,
-        GkeClusterConfigResponse gkeClusterConfig,
-        List<NodeInitializationActionResponse> initializationActions,
-        LifecycleConfigResponse lifecycleConfig,
-        InstanceGroupConfigResponse masterConfig,
-        MetastoreConfigResponse metastoreConfig,
-        InstanceGroupConfigResponse secondaryWorkerConfig,
-        SecurityConfigResponse securityConfig,
-        SoftwareConfigResponse softwareConfig,
-        String tempBucket,
-        InstanceGroupConfigResponse workerConfig) {
-        this.autoscalingConfig = Objects.requireNonNull(autoscalingConfig, "expected parameter 'autoscalingConfig' to be non-null");
-        this.configBucket = Objects.requireNonNull(configBucket, "expected parameter 'configBucket' to be non-null");
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
-        this.endpointConfig = Objects.requireNonNull(endpointConfig, "expected parameter 'endpointConfig' to be non-null");
-        this.gceClusterConfig = Objects.requireNonNull(gceClusterConfig, "expected parameter 'gceClusterConfig' to be non-null");
-        this.gkeClusterConfig = Objects.requireNonNull(gkeClusterConfig, "expected parameter 'gkeClusterConfig' to be non-null");
-        this.initializationActions = Objects.requireNonNull(initializationActions, "expected parameter 'initializationActions' to be non-null");
-        this.lifecycleConfig = Objects.requireNonNull(lifecycleConfig, "expected parameter 'lifecycleConfig' to be non-null");
-        this.masterConfig = Objects.requireNonNull(masterConfig, "expected parameter 'masterConfig' to be non-null");
-        this.metastoreConfig = Objects.requireNonNull(metastoreConfig, "expected parameter 'metastoreConfig' to be non-null");
-        this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig, "expected parameter 'secondaryWorkerConfig' to be non-null");
-        this.securityConfig = Objects.requireNonNull(securityConfig, "expected parameter 'securityConfig' to be non-null");
-        this.softwareConfig = Objects.requireNonNull(softwareConfig, "expected parameter 'softwareConfig' to be non-null");
-        this.tempBucket = Objects.requireNonNull(tempBucket, "expected parameter 'tempBucket' to be non-null");
-        this.workerConfig = Objects.requireNonNull(workerConfig, "expected parameter 'workerConfig' to be non-null");
-    }
+    private ClusterConfigResponse() {}
 
-    private ClusterConfigResponse() {
-        this.autoscalingConfig = null;
-        this.configBucket = null;
-        this.encryptionConfig = null;
-        this.endpointConfig = null;
-        this.gceClusterConfig = null;
-        this.gkeClusterConfig = null;
-        this.initializationActions = List.of();
-        this.lifecycleConfig = null;
-        this.masterConfig = null;
-        this.metastoreConfig = null;
-        this.secondaryWorkerConfig = null;
-        this.securityConfig = null;
-        this.softwareConfig = null;
-        this.tempBucket = null;
-        this.workerConfig = null;
+    private ClusterConfigResponse(ClusterConfigResponse $) {
+        this.autoscalingConfig = $.autoscalingConfig;
+        this.configBucket = $.configBucket;
+        this.encryptionConfig = $.encryptionConfig;
+        this.endpointConfig = $.endpointConfig;
+        this.gceClusterConfig = $.gceClusterConfig;
+        this.gkeClusterConfig = $.gkeClusterConfig;
+        this.initializationActions = $.initializationActions;
+        this.lifecycleConfig = $.lifecycleConfig;
+        this.masterConfig = $.masterConfig;
+        this.metastoreConfig = $.metastoreConfig;
+        this.secondaryWorkerConfig = $.secondaryWorkerConfig;
+        this.securityConfig = $.securityConfig;
+        this.softwareConfig = $.softwareConfig;
+        this.tempBucket = $.tempBucket;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AutoscalingConfigResponse autoscalingConfig;
-        private String configBucket;
-        private EncryptionConfigResponse encryptionConfig;
-        private EndpointConfigResponse endpointConfig;
-        private GceClusterConfigResponse gceClusterConfig;
-        private GkeClusterConfigResponse gkeClusterConfig;
-        private List<NodeInitializationActionResponse> initializationActions;
-        private LifecycleConfigResponse lifecycleConfig;
-        private InstanceGroupConfigResponse masterConfig;
-        private MetastoreConfigResponse metastoreConfig;
-        private InstanceGroupConfigResponse secondaryWorkerConfig;
-        private SecurityConfigResponse securityConfig;
-        private SoftwareConfigResponse softwareConfig;
-        private String tempBucket;
-        private InstanceGroupConfigResponse workerConfig;
+        private ClusterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterConfigResponse();
         }
 
         public Builder(ClusterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingConfig = defaults.autoscalingConfig;
-    	      this.configBucket = defaults.configBucket;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.endpointConfig = defaults.endpointConfig;
-    	      this.gceClusterConfig = defaults.gceClusterConfig;
-    	      this.gkeClusterConfig = defaults.gkeClusterConfig;
-    	      this.initializationActions = defaults.initializationActions;
-    	      this.lifecycleConfig = defaults.lifecycleConfig;
-    	      this.masterConfig = defaults.masterConfig;
-    	      this.metastoreConfig = defaults.metastoreConfig;
-    	      this.secondaryWorkerConfig = defaults.secondaryWorkerConfig;
-    	      this.securityConfig = defaults.securityConfig;
-    	      this.softwareConfig = defaults.softwareConfig;
-    	      this.tempBucket = defaults.tempBucket;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new ClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingConfig(AutoscalingConfigResponse autoscalingConfig) {
-            this.autoscalingConfig = Objects.requireNonNull(autoscalingConfig);
+            $.autoscalingConfig = autoscalingConfig;
             return this;
         }
+
         public Builder configBucket(String configBucket) {
-            this.configBucket = Objects.requireNonNull(configBucket);
+            $.configBucket = configBucket;
             return this;
         }
+
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
-            this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
+
         public Builder endpointConfig(EndpointConfigResponse endpointConfig) {
-            this.endpointConfig = Objects.requireNonNull(endpointConfig);
+            $.endpointConfig = endpointConfig;
             return this;
         }
+
         public Builder gceClusterConfig(GceClusterConfigResponse gceClusterConfig) {
-            this.gceClusterConfig = Objects.requireNonNull(gceClusterConfig);
+            $.gceClusterConfig = gceClusterConfig;
             return this;
         }
+
         public Builder gkeClusterConfig(GkeClusterConfigResponse gkeClusterConfig) {
-            this.gkeClusterConfig = Objects.requireNonNull(gkeClusterConfig);
+            $.gkeClusterConfig = gkeClusterConfig;
             return this;
         }
+
         public Builder initializationActions(List<NodeInitializationActionResponse> initializationActions) {
-            this.initializationActions = Objects.requireNonNull(initializationActions);
+            $.initializationActions = initializationActions;
             return this;
         }
+
         public Builder initializationActions(NodeInitializationActionResponse... initializationActions) {
             return initializationActions(List.of(initializationActions));
         }
+
         public Builder lifecycleConfig(LifecycleConfigResponse lifecycleConfig) {
-            this.lifecycleConfig = Objects.requireNonNull(lifecycleConfig);
+            $.lifecycleConfig = lifecycleConfig;
             return this;
         }
+
         public Builder masterConfig(InstanceGroupConfigResponse masterConfig) {
-            this.masterConfig = Objects.requireNonNull(masterConfig);
+            $.masterConfig = masterConfig;
             return this;
         }
+
         public Builder metastoreConfig(MetastoreConfigResponse metastoreConfig) {
-            this.metastoreConfig = Objects.requireNonNull(metastoreConfig);
+            $.metastoreConfig = metastoreConfig;
             return this;
         }
+
         public Builder secondaryWorkerConfig(InstanceGroupConfigResponse secondaryWorkerConfig) {
-            this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
+            $.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
+
         public Builder securityConfig(SecurityConfigResponse securityConfig) {
-            this.securityConfig = Objects.requireNonNull(securityConfig);
+            $.securityConfig = securityConfig;
             return this;
         }
+
         public Builder softwareConfig(SoftwareConfigResponse softwareConfig) {
-            this.softwareConfig = Objects.requireNonNull(softwareConfig);
+            $.softwareConfig = softwareConfig;
             return this;
         }
+
         public Builder tempBucket(String tempBucket) {
-            this.tempBucket = Objects.requireNonNull(tempBucket);
+            $.tempBucket = tempBucket;
             return this;
         }
+
         public Builder workerConfig(InstanceGroupConfigResponse workerConfig) {
-            this.workerConfig = Objects.requireNonNull(workerConfig);
+            $.workerConfig = workerConfig;
             return this;
-        }        public ClusterConfigResponse build() {
-            return new ClusterConfigResponse(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
+        }
+
+        public ClusterConfigResponse build() {
+            $.autoscalingConfig = Objects.requireNonNull($.autoscalingConfig, "expected parameter 'autoscalingConfig' to be non-null");
+            $.configBucket = Objects.requireNonNull($.configBucket, "expected parameter 'configBucket' to be non-null");
+            $.encryptionConfig = Objects.requireNonNull($.encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
+            $.endpointConfig = Objects.requireNonNull($.endpointConfig, "expected parameter 'endpointConfig' to be non-null");
+            $.gceClusterConfig = Objects.requireNonNull($.gceClusterConfig, "expected parameter 'gceClusterConfig' to be non-null");
+            $.gkeClusterConfig = Objects.requireNonNull($.gkeClusterConfig, "expected parameter 'gkeClusterConfig' to be non-null");
+            $.initializationActions = Objects.requireNonNull($.initializationActions, "expected parameter 'initializationActions' to be non-null");
+            $.lifecycleConfig = Objects.requireNonNull($.lifecycleConfig, "expected parameter 'lifecycleConfig' to be non-null");
+            $.masterConfig = Objects.requireNonNull($.masterConfig, "expected parameter 'masterConfig' to be non-null");
+            $.metastoreConfig = Objects.requireNonNull($.metastoreConfig, "expected parameter 'metastoreConfig' to be non-null");
+            $.secondaryWorkerConfig = Objects.requireNonNull($.secondaryWorkerConfig, "expected parameter 'secondaryWorkerConfig' to be non-null");
+            $.securityConfig = Objects.requireNonNull($.securityConfig, "expected parameter 'securityConfig' to be non-null");
+            $.softwareConfig = Objects.requireNonNull($.softwareConfig, "expected parameter 'softwareConfig' to be non-null");
+            $.tempBucket = Objects.requireNonNull($.tempBucket, "expected parameter 'tempBucket' to be non-null");
+            $.workerConfig = Objects.requireNonNull($.workerConfig, "expected parameter 'workerConfig' to be non-null");
+            return $;
         }
     }
+
 }

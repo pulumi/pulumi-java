@@ -22,7 +22,7 @@ public final class HostRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -33,7 +33,7 @@ public final class HostRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hosts", required=true)
-      private final List<String> hosts;
+    private List<String> hosts;
 
     public List<String> hosts() {
         return this.hosts;
@@ -44,67 +44,63 @@ public final class HostRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathMatcher", required=true)
-      private final String pathMatcher;
+    private String pathMatcher;
 
     public String pathMatcher() {
         return this.pathMatcher;
     }
 
-    public HostRuleResponse(
-        String description,
-        List<String> hosts,
-        String pathMatcher) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.hosts = Objects.requireNonNull(hosts, "expected parameter 'hosts' to be non-null");
-        this.pathMatcher = Objects.requireNonNull(pathMatcher, "expected parameter 'pathMatcher' to be non-null");
-    }
+    private HostRuleResponse() {}
 
-    private HostRuleResponse() {
-        this.description = null;
-        this.hosts = List.of();
-        this.pathMatcher = null;
+    private HostRuleResponse(HostRuleResponse $) {
+        this.description = $.description;
+        this.hosts = $.hosts;
+        this.pathMatcher = $.pathMatcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HostRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private List<String> hosts;
-        private String pathMatcher;
+        private HostRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HostRuleResponse();
         }
 
         public Builder(HostRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.hosts = defaults.hosts;
-    	      this.pathMatcher = defaults.pathMatcher;
+            $ = new HostRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder hosts(List<String> hosts) {
-            this.hosts = Objects.requireNonNull(hosts);
+            $.hosts = hosts;
             return this;
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder pathMatcher(String pathMatcher) {
-            this.pathMatcher = Objects.requireNonNull(pathMatcher);
+            $.pathMatcher = pathMatcher;
             return this;
-        }        public HostRuleResponse build() {
-            return new HostRuleResponse(description, hosts, pathMatcher);
+        }
+
+        public HostRuleResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.hosts = Objects.requireNonNull($.hosts, "expected parameter 'hosts' to be non-null");
+            $.pathMatcher = Objects.requireNonNull($.pathMatcher, "expected parameter 'pathMatcher' to be non-null");
+            return $;
         }
     }
+
 }

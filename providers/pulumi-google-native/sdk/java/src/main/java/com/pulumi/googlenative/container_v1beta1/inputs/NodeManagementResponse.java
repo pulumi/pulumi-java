@@ -22,7 +22,7 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="autoRepair", required=true)
-      private final Boolean autoRepair;
+    private Boolean autoRepair;
 
     public Boolean autoRepair() {
         return this.autoRepair;
@@ -33,7 +33,7 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="autoUpgrade", required=true)
-      private final Boolean autoUpgrade;
+    private Boolean autoUpgrade;
 
     public Boolean autoUpgrade() {
         return this.autoUpgrade;
@@ -44,64 +44,59 @@ public final class NodeManagementResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="upgradeOptions", required=true)
-      private final AutoUpgradeOptionsResponse upgradeOptions;
+    private AutoUpgradeOptionsResponse upgradeOptions;
 
     public AutoUpgradeOptionsResponse upgradeOptions() {
         return this.upgradeOptions;
     }
 
-    public NodeManagementResponse(
-        Boolean autoRepair,
-        Boolean autoUpgrade,
-        AutoUpgradeOptionsResponse upgradeOptions) {
-        this.autoRepair = Objects.requireNonNull(autoRepair, "expected parameter 'autoRepair' to be non-null");
-        this.autoUpgrade = Objects.requireNonNull(autoUpgrade, "expected parameter 'autoUpgrade' to be non-null");
-        this.upgradeOptions = Objects.requireNonNull(upgradeOptions, "expected parameter 'upgradeOptions' to be non-null");
-    }
+    private NodeManagementResponse() {}
 
-    private NodeManagementResponse() {
-        this.autoRepair = null;
-        this.autoUpgrade = null;
-        this.upgradeOptions = null;
+    private NodeManagementResponse(NodeManagementResponse $) {
+        this.autoRepair = $.autoRepair;
+        this.autoUpgrade = $.autoUpgrade;
+        this.upgradeOptions = $.upgradeOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeManagementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoRepair;
-        private Boolean autoUpgrade;
-        private AutoUpgradeOptionsResponse upgradeOptions;
+        private NodeManagementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeManagementResponse();
         }
 
         public Builder(NodeManagementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoRepair = defaults.autoRepair;
-    	      this.autoUpgrade = defaults.autoUpgrade;
-    	      this.upgradeOptions = defaults.upgradeOptions;
+            $ = new NodeManagementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoRepair(Boolean autoRepair) {
-            this.autoRepair = Objects.requireNonNull(autoRepair);
+            $.autoRepair = autoRepair;
             return this;
         }
+
         public Builder autoUpgrade(Boolean autoUpgrade) {
-            this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
+            $.autoUpgrade = autoUpgrade;
             return this;
         }
+
         public Builder upgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
-            this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
+            $.upgradeOptions = upgradeOptions;
             return this;
-        }        public NodeManagementResponse build() {
-            return new NodeManagementResponse(autoRepair, autoUpgrade, upgradeOptions);
+        }
+
+        public NodeManagementResponse build() {
+            $.autoRepair = Objects.requireNonNull($.autoRepair, "expected parameter 'autoRepair' to be non-null");
+            $.autoUpgrade = Objects.requireNonNull($.autoUpgrade, "expected parameter 'autoUpgrade' to be non-null");
+            $.upgradeOptions = Objects.requireNonNull($.upgradeOptions, "expected parameter 'upgradeOptions' to be non-null");
+            return $;
         }
     }
+
 }

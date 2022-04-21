@@ -5,7 +5,6 @@ package com.pulumi.googlenative.redis_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.redis_v1beta1.enums.InstanceConnectMode;
 import com.pulumi.googlenative.redis_v1beta1.enums.InstanceReadReplicasMode;
 import com.pulumi.googlenative.redis_v1beta1.enums.InstanceTier;
@@ -17,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alternativeLocationId")
-      private final @Nullable Output<String> alternativeLocationId;
+    private @Nullable Output<String> alternativeLocationId;
 
-    public Output<String> alternativeLocationId() {
-        return this.alternativeLocationId == null ? Codegen.empty() : this.alternativeLocationId;
+    public Optional<Output<String>> alternativeLocationId() {
+        return Optional.ofNullable(this.alternativeLocationId);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authEnabled")
-      private final @Nullable Output<Boolean> authEnabled;
+    private @Nullable Output<Boolean> authEnabled;
 
-    public Output<Boolean> authEnabled() {
-        return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
+    public Optional<Output<Boolean>> authEnabled() {
+        return Optional.ofNullable(this.authEnabled);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetwork")
-      private final @Nullable Output<String> authorizedNetwork;
+    private @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> authorizedNetwork() {
-        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
+    public Optional<Output<String>> authorizedNetwork() {
+        return Optional.ofNullable(this.authorizedNetwork);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectMode")
-      private final @Nullable Output<InstanceConnectMode> connectMode;
+    private @Nullable Output<InstanceConnectMode> connectMode;
 
-    public Output<InstanceConnectMode> connectMode() {
-        return this.connectMode == null ? Codegen.empty() : this.connectMode;
+    public Optional<Output<InstanceConnectMode>> connectMode() {
+        return Optional.ofNullable(this.connectMode);
     }
 
     /**
@@ -73,14 +73,14 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -91,10 +91,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenancePolicy")
-      private final @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
+    private @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
-    public Output<MaintenancePolicyArgs> maintenancePolicy() {
-        return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
+    public Optional<Output<MaintenancePolicyArgs>> maintenancePolicy() {
+        return Optional.ofNullable(this.maintenancePolicy);
     }
 
     /**
@@ -124,7 +124,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="memorySizeGb", required=true)
-      private final Output<Integer> memorySizeGb;
+    private Output<Integer> memorySizeGb;
 
     public Output<Integer> memorySizeGb() {
         return this.memorySizeGb;
@@ -135,10 +135,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -146,17 +146,17 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="persistenceConfig")
-      private final @Nullable Output<PersistenceConfigArgs> persistenceConfig;
+    private @Nullable Output<PersistenceConfigArgs> persistenceConfig;
 
-    public Output<PersistenceConfigArgs> persistenceConfig() {
-        return this.persistenceConfig == null ? Codegen.empty() : this.persistenceConfig;
+    public Optional<Output<PersistenceConfigArgs>> persistenceConfig() {
+        return Optional.ofNullable(this.persistenceConfig);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -164,10 +164,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readReplicasMode")
-      private final @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
+    private @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
 
-    public Output<InstanceReadReplicasMode> readReplicasMode() {
-        return this.readReplicasMode == null ? Codegen.empty() : this.readReplicasMode;
+    public Optional<Output<InstanceReadReplicasMode>> readReplicasMode() {
+        return Optional.ofNullable(this.readReplicasMode);
     }
 
     /**
@@ -175,10 +175,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redisConfigs")
-      private final @Nullable Output<Map<String,String>> redisConfigs;
+    private @Nullable Output<Map<String,String>> redisConfigs;
 
-    public Output<Map<String,String>> redisConfigs() {
-        return this.redisConfigs == null ? Codegen.empty() : this.redisConfigs;
+    public Optional<Output<Map<String,String>>> redisConfigs() {
+        return Optional.ofNullable(this.redisConfigs);
     }
 
     /**
@@ -186,10 +186,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redisVersion")
-      private final @Nullable Output<String> redisVersion;
+    private @Nullable Output<String> redisVersion;
 
-    public Output<String> redisVersion() {
-        return this.redisVersion == null ? Codegen.empty() : this.redisVersion;
+    public Optional<Output<String>> redisVersion() {
+        return Optional.ofNullable(this.redisVersion);
     }
 
     /**
@@ -197,10 +197,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicaCount")
-      private final @Nullable Output<Integer> replicaCount;
+    private @Nullable Output<Integer> replicaCount;
 
-    public Output<Integer> replicaCount() {
-        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
+    public Optional<Output<Integer>> replicaCount() {
+        return Optional.ofNullable(this.replicaCount);
     }
 
     /**
@@ -208,10 +208,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reservedIpRange")
-      private final @Nullable Output<String> reservedIpRange;
+    private @Nullable Output<String> reservedIpRange;
 
-    public Output<String> reservedIpRange() {
-        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
+    public Optional<Output<String>> reservedIpRange() {
+        return Optional.ofNullable(this.reservedIpRange);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryIpRange")
-      private final @Nullable Output<String> secondaryIpRange;
+    private @Nullable Output<String> secondaryIpRange;
 
-    public Output<String> secondaryIpRange() {
-        return this.secondaryIpRange == null ? Codegen.empty() : this.secondaryIpRange;
+    public Optional<Output<String>> secondaryIpRange() {
+        return Optional.ofNullable(this.secondaryIpRange);
     }
 
     /**
@@ -230,7 +230,7 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final Output<InstanceTier> tier;
+    private Output<InstanceTier> tier;
 
     public Output<InstanceTier> tier() {
         return this.tier;
@@ -241,310 +241,251 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transitEncryptionMode")
-      private final @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
+    private @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
 
-    public Output<InstanceTransitEncryptionMode> transitEncryptionMode() {
-        return this.transitEncryptionMode == null ? Codegen.empty() : this.transitEncryptionMode;
+    public Optional<Output<InstanceTransitEncryptionMode>> transitEncryptionMode() {
+        return Optional.ofNullable(this.transitEncryptionMode);
     }
 
-    public InstanceArgs(
-        @Nullable Output<String> alternativeLocationId,
-        @Nullable Output<Boolean> authEnabled,
-        @Nullable Output<String> authorizedNetwork,
-        @Nullable Output<InstanceConnectMode> connectMode,
-        @Nullable Output<String> displayName,
-        Output<String> instanceId,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<MaintenancePolicyArgs> maintenancePolicy,
-        Output<Integer> memorySizeGb,
-        @Nullable Output<String> name,
-        @Nullable Output<PersistenceConfigArgs> persistenceConfig,
-        @Nullable Output<String> project,
-        @Nullable Output<InstanceReadReplicasMode> readReplicasMode,
-        @Nullable Output<Map<String,String>> redisConfigs,
-        @Nullable Output<String> redisVersion,
-        @Nullable Output<Integer> replicaCount,
-        @Nullable Output<String> reservedIpRange,
-        @Nullable Output<String> secondaryIpRange,
-        Output<InstanceTier> tier,
-        @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode) {
-        this.alternativeLocationId = alternativeLocationId;
-        this.authEnabled = authEnabled;
-        this.authorizedNetwork = authorizedNetwork;
-        this.connectMode = connectMode;
-        this.displayName = displayName;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.labels = labels;
-        this.location = location;
-        this.maintenancePolicy = maintenancePolicy;
-        this.memorySizeGb = Objects.requireNonNull(memorySizeGb, "expected parameter 'memorySizeGb' to be non-null");
-        this.name = name;
-        this.persistenceConfig = persistenceConfig;
-        this.project = project;
-        this.readReplicasMode = readReplicasMode;
-        this.redisConfigs = redisConfigs;
-        this.redisVersion = redisVersion;
-        this.replicaCount = replicaCount;
-        this.reservedIpRange = reservedIpRange;
-        this.secondaryIpRange = secondaryIpRange;
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-        this.transitEncryptionMode = transitEncryptionMode;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.alternativeLocationId = Codegen.empty();
-        this.authEnabled = Codegen.empty();
-        this.authorizedNetwork = Codegen.empty();
-        this.connectMode = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenancePolicy = Codegen.empty();
-        this.memorySizeGb = Codegen.empty();
-        this.name = Codegen.empty();
-        this.persistenceConfig = Codegen.empty();
-        this.project = Codegen.empty();
-        this.readReplicasMode = Codegen.empty();
-        this.redisConfigs = Codegen.empty();
-        this.redisVersion = Codegen.empty();
-        this.replicaCount = Codegen.empty();
-        this.reservedIpRange = Codegen.empty();
-        this.secondaryIpRange = Codegen.empty();
-        this.tier = Codegen.empty();
-        this.transitEncryptionMode = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.alternativeLocationId = $.alternativeLocationId;
+        this.authEnabled = $.authEnabled;
+        this.authorizedNetwork = $.authorizedNetwork;
+        this.connectMode = $.connectMode;
+        this.displayName = $.displayName;
+        this.instanceId = $.instanceId;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.maintenancePolicy = $.maintenancePolicy;
+        this.memorySizeGb = $.memorySizeGb;
+        this.name = $.name;
+        this.persistenceConfig = $.persistenceConfig;
+        this.project = $.project;
+        this.readReplicasMode = $.readReplicasMode;
+        this.redisConfigs = $.redisConfigs;
+        this.redisVersion = $.redisVersion;
+        this.replicaCount = $.replicaCount;
+        this.reservedIpRange = $.reservedIpRange;
+        this.secondaryIpRange = $.secondaryIpRange;
+        this.tier = $.tier;
+        this.transitEncryptionMode = $.transitEncryptionMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> alternativeLocationId;
-        private @Nullable Output<Boolean> authEnabled;
-        private @Nullable Output<String> authorizedNetwork;
-        private @Nullable Output<InstanceConnectMode> connectMode;
-        private @Nullable Output<String> displayName;
-        private Output<String> instanceId;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
-        private Output<Integer> memorySizeGb;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PersistenceConfigArgs> persistenceConfig;
-        private @Nullable Output<String> project;
-        private @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
-        private @Nullable Output<Map<String,String>> redisConfigs;
-        private @Nullable Output<String> redisVersion;
-        private @Nullable Output<Integer> replicaCount;
-        private @Nullable Output<String> reservedIpRange;
-        private @Nullable Output<String> secondaryIpRange;
-        private Output<InstanceTier> tier;
-        private @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alternativeLocationId = defaults.alternativeLocationId;
-    	      this.authEnabled = defaults.authEnabled;
-    	      this.authorizedNetwork = defaults.authorizedNetwork;
-    	      this.connectMode = defaults.connectMode;
-    	      this.displayName = defaults.displayName;
-    	      this.instanceId = defaults.instanceId;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.maintenancePolicy = defaults.maintenancePolicy;
-    	      this.memorySizeGb = defaults.memorySizeGb;
-    	      this.name = defaults.name;
-    	      this.persistenceConfig = defaults.persistenceConfig;
-    	      this.project = defaults.project;
-    	      this.readReplicasMode = defaults.readReplicasMode;
-    	      this.redisConfigs = defaults.redisConfigs;
-    	      this.redisVersion = defaults.redisVersion;
-    	      this.replicaCount = defaults.replicaCount;
-    	      this.reservedIpRange = defaults.reservedIpRange;
-    	      this.secondaryIpRange = defaults.secondaryIpRange;
-    	      this.tier = defaults.tier;
-    	      this.transitEncryptionMode = defaults.transitEncryptionMode;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alternativeLocationId(@Nullable Output<String> alternativeLocationId) {
-            this.alternativeLocationId = alternativeLocationId;
+            $.alternativeLocationId = alternativeLocationId;
             return this;
         }
-        public Builder alternativeLocationId(@Nullable String alternativeLocationId) {
-            this.alternativeLocationId = Codegen.ofNullable(alternativeLocationId);
-            return this;
+
+        public Builder alternativeLocationId(String alternativeLocationId) {
+            return alternativeLocationId(Output.of(alternativeLocationId));
         }
+
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
-            this.authEnabled = authEnabled;
+            $.authEnabled = authEnabled;
             return this;
         }
-        public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = Codegen.ofNullable(authEnabled);
-            return this;
+
+        public Builder authEnabled(Boolean authEnabled) {
+            return authEnabled(Output.of(authEnabled));
         }
+
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
-            this.authorizedNetwork = authorizedNetwork;
+            $.authorizedNetwork = authorizedNetwork;
             return this;
         }
-        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
-            return this;
+
+        public Builder authorizedNetwork(String authorizedNetwork) {
+            return authorizedNetwork(Output.of(authorizedNetwork));
         }
+
         public Builder connectMode(@Nullable Output<InstanceConnectMode> connectMode) {
-            this.connectMode = connectMode;
+            $.connectMode = connectMode;
             return this;
         }
-        public Builder connectMode(@Nullable InstanceConnectMode connectMode) {
-            this.connectMode = Codegen.ofNullable(connectMode);
-            return this;
+
+        public Builder connectMode(InstanceConnectMode connectMode) {
+            return connectMode(Output.of(connectMode));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenancePolicy(@Nullable Output<MaintenancePolicyArgs> maintenancePolicy) {
-            this.maintenancePolicy = maintenancePolicy;
+            $.maintenancePolicy = maintenancePolicy;
             return this;
         }
-        public Builder maintenancePolicy(@Nullable MaintenancePolicyArgs maintenancePolicy) {
-            this.maintenancePolicy = Codegen.ofNullable(maintenancePolicy);
-            return this;
+
+        public Builder maintenancePolicy(MaintenancePolicyArgs maintenancePolicy) {
+            return maintenancePolicy(Output.of(maintenancePolicy));
         }
+
         public Builder memorySizeGb(Output<Integer> memorySizeGb) {
-            this.memorySizeGb = Objects.requireNonNull(memorySizeGb);
+            $.memorySizeGb = memorySizeGb;
             return this;
         }
+
         public Builder memorySizeGb(Integer memorySizeGb) {
-            this.memorySizeGb = Output.of(Objects.requireNonNull(memorySizeGb));
-            return this;
+            return memorySizeGb(Output.of(memorySizeGb));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder persistenceConfig(@Nullable Output<PersistenceConfigArgs> persistenceConfig) {
-            this.persistenceConfig = persistenceConfig;
+            $.persistenceConfig = persistenceConfig;
             return this;
         }
-        public Builder persistenceConfig(@Nullable PersistenceConfigArgs persistenceConfig) {
-            this.persistenceConfig = Codegen.ofNullable(persistenceConfig);
-            return this;
+
+        public Builder persistenceConfig(PersistenceConfigArgs persistenceConfig) {
+            return persistenceConfig(Output.of(persistenceConfig));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder readReplicasMode(@Nullable Output<InstanceReadReplicasMode> readReplicasMode) {
-            this.readReplicasMode = readReplicasMode;
+            $.readReplicasMode = readReplicasMode;
             return this;
         }
-        public Builder readReplicasMode(@Nullable InstanceReadReplicasMode readReplicasMode) {
-            this.readReplicasMode = Codegen.ofNullable(readReplicasMode);
-            return this;
+
+        public Builder readReplicasMode(InstanceReadReplicasMode readReplicasMode) {
+            return readReplicasMode(Output.of(readReplicasMode));
         }
+
         public Builder redisConfigs(@Nullable Output<Map<String,String>> redisConfigs) {
-            this.redisConfigs = redisConfigs;
+            $.redisConfigs = redisConfigs;
             return this;
         }
-        public Builder redisConfigs(@Nullable Map<String,String> redisConfigs) {
-            this.redisConfigs = Codegen.ofNullable(redisConfigs);
-            return this;
+
+        public Builder redisConfigs(Map<String,String> redisConfigs) {
+            return redisConfigs(Output.of(redisConfigs));
         }
+
         public Builder redisVersion(@Nullable Output<String> redisVersion) {
-            this.redisVersion = redisVersion;
+            $.redisVersion = redisVersion;
             return this;
         }
-        public Builder redisVersion(@Nullable String redisVersion) {
-            this.redisVersion = Codegen.ofNullable(redisVersion);
-            return this;
+
+        public Builder redisVersion(String redisVersion) {
+            return redisVersion(Output.of(redisVersion));
         }
+
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
-            this.replicaCount = replicaCount;
+            $.replicaCount = replicaCount;
             return this;
         }
-        public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Codegen.ofNullable(replicaCount);
-            return this;
+
+        public Builder replicaCount(Integer replicaCount) {
+            return replicaCount(Output.of(replicaCount));
         }
+
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
-            this.reservedIpRange = reservedIpRange;
+            $.reservedIpRange = reservedIpRange;
             return this;
         }
-        public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
-            return this;
+
+        public Builder reservedIpRange(String reservedIpRange) {
+            return reservedIpRange(Output.of(reservedIpRange));
         }
+
         public Builder secondaryIpRange(@Nullable Output<String> secondaryIpRange) {
-            this.secondaryIpRange = secondaryIpRange;
+            $.secondaryIpRange = secondaryIpRange;
             return this;
         }
-        public Builder secondaryIpRange(@Nullable String secondaryIpRange) {
-            this.secondaryIpRange = Codegen.ofNullable(secondaryIpRange);
-            return this;
+
+        public Builder secondaryIpRange(String secondaryIpRange) {
+            return secondaryIpRange(Output.of(secondaryIpRange));
         }
+
         public Builder tier(Output<InstanceTier> tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder tier(InstanceTier tier) {
-            this.tier = Output.of(Objects.requireNonNull(tier));
-            return this;
+            return tier(Output.of(tier));
         }
+
         public Builder transitEncryptionMode(@Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode) {
-            this.transitEncryptionMode = transitEncryptionMode;
+            $.transitEncryptionMode = transitEncryptionMode;
             return this;
         }
-        public Builder transitEncryptionMode(@Nullable InstanceTransitEncryptionMode transitEncryptionMode) {
-            this.transitEncryptionMode = Codegen.ofNullable(transitEncryptionMode);
-            return this;
-        }        public InstanceArgs build() {
-            return new InstanceArgs(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, displayName, instanceId, labels, location, maintenancePolicy, memorySizeGb, name, persistenceConfig, project, readReplicasMode, redisConfigs, redisVersion, replicaCount, reservedIpRange, secondaryIpRange, tier, transitEncryptionMode);
+
+        public Builder transitEncryptionMode(InstanceTransitEncryptionMode transitEncryptionMode) {
+            return transitEncryptionMode(Output.of(transitEncryptionMode));
+        }
+
+        public InstanceArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.memorySizeGb = Objects.requireNonNull($.memorySizeGb, "expected parameter 'memorySizeGb' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="domainMappingReason", required=true)
-      private final String domainMappingReason;
+    private String domainMappingReason;
 
     public String domainMappingReason() {
         return this.domainMappingReason;
@@ -32,7 +32,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="executionReason", required=true)
-      private final String executionReason;
+    private String executionReason;
 
     public String executionReason() {
         return this.executionReason;
@@ -43,7 +43,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="internalReason", required=true)
-      private final String internalReason;
+    private String internalReason;
 
     public String internalReason() {
         return this.internalReason;
@@ -54,7 +54,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="lastTransitionTime", required=true)
-      private final String lastTransitionTime;
+    private String lastTransitionTime;
 
     public String lastTransitionTime() {
         return this.lastTransitionTime;
@@ -65,7 +65,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -76,7 +76,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
@@ -87,7 +87,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="revisionReason", required=true)
-      private final String revisionReason;
+    private String revisionReason;
 
     public String revisionReason() {
         return this.revisionReason;
@@ -98,7 +98,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
@@ -109,7 +109,7 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -120,127 +120,108 @@ public final class GoogleCloudRunOpV2ConditionResponse extends com.pulumi.resour
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudRunOpV2ConditionResponse(
-        String domainMappingReason,
-        String executionReason,
-        String internalReason,
-        String lastTransitionTime,
-        String message,
-        String reason,
-        String revisionReason,
-        String severity,
-        String state,
-        String type) {
-        this.domainMappingReason = Objects.requireNonNull(domainMappingReason, "expected parameter 'domainMappingReason' to be non-null");
-        this.executionReason = Objects.requireNonNull(executionReason, "expected parameter 'executionReason' to be non-null");
-        this.internalReason = Objects.requireNonNull(internalReason, "expected parameter 'internalReason' to be non-null");
-        this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime, "expected parameter 'lastTransitionTime' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-        this.revisionReason = Objects.requireNonNull(revisionReason, "expected parameter 'revisionReason' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudRunOpV2ConditionResponse() {}
 
-    private GoogleCloudRunOpV2ConditionResponse() {
-        this.domainMappingReason = null;
-        this.executionReason = null;
-        this.internalReason = null;
-        this.lastTransitionTime = null;
-        this.message = null;
-        this.reason = null;
-        this.revisionReason = null;
-        this.severity = null;
-        this.state = null;
-        this.type = null;
+    private GoogleCloudRunOpV2ConditionResponse(GoogleCloudRunOpV2ConditionResponse $) {
+        this.domainMappingReason = $.domainMappingReason;
+        this.executionReason = $.executionReason;
+        this.internalReason = $.internalReason;
+        this.lastTransitionTime = $.lastTransitionTime;
+        this.message = $.message;
+        this.reason = $.reason;
+        this.revisionReason = $.revisionReason;
+        this.severity = $.severity;
+        this.state = $.state;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String domainMappingReason;
-        private String executionReason;
-        private String internalReason;
-        private String lastTransitionTime;
-        private String message;
-        private String reason;
-        private String revisionReason;
-        private String severity;
-        private String state;
-        private String type;
+        private GoogleCloudRunOpV2ConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ConditionResponse();
         }
 
         public Builder(GoogleCloudRunOpV2ConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domainMappingReason = defaults.domainMappingReason;
-    	      this.executionReason = defaults.executionReason;
-    	      this.internalReason = defaults.internalReason;
-    	      this.lastTransitionTime = defaults.lastTransitionTime;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.revisionReason = defaults.revisionReason;
-    	      this.severity = defaults.severity;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudRunOpV2ConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder domainMappingReason(String domainMappingReason) {
-            this.domainMappingReason = Objects.requireNonNull(domainMappingReason);
+            $.domainMappingReason = domainMappingReason;
             return this;
         }
+
         public Builder executionReason(String executionReason) {
-            this.executionReason = Objects.requireNonNull(executionReason);
+            $.executionReason = executionReason;
             return this;
         }
+
         public Builder internalReason(String internalReason) {
-            this.internalReason = Objects.requireNonNull(internalReason);
+            $.internalReason = internalReason;
             return this;
         }
+
         public Builder lastTransitionTime(String lastTransitionTime) {
-            this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
+            $.lastTransitionTime = lastTransitionTime;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
         }
+
         public Builder revisionReason(String revisionReason) {
-            this.revisionReason = Objects.requireNonNull(revisionReason);
+            $.revisionReason = revisionReason;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudRunOpV2ConditionResponse build() {
-            return new GoogleCloudRunOpV2ConditionResponse(domainMappingReason, executionReason, internalReason, lastTransitionTime, message, reason, revisionReason, severity, state, type);
+        }
+
+        public GoogleCloudRunOpV2ConditionResponse build() {
+            $.domainMappingReason = Objects.requireNonNull($.domainMappingReason, "expected parameter 'domainMappingReason' to be non-null");
+            $.executionReason = Objects.requireNonNull($.executionReason, "expected parameter 'executionReason' to be non-null");
+            $.internalReason = Objects.requireNonNull($.internalReason, "expected parameter 'internalReason' to be non-null");
+            $.lastTransitionTime = Objects.requireNonNull($.lastTransitionTime, "expected parameter 'lastTransitionTime' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            $.revisionReason = Objects.requireNonNull($.revisionReason, "expected parameter 'revisionReason' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

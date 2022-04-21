@@ -18,7 +18,7 @@ public final class AttestationResponse extends com.pulumi.resources.InvokeArgs {
     public static final AttestationResponse Empty = new AttestationResponse();
 
     @Import(name="genericSignedAttestation", required=true)
-      private final GenericSignedAttestationResponse genericSignedAttestation;
+    private GenericSignedAttestationResponse genericSignedAttestation;
 
     public GenericSignedAttestationResponse genericSignedAttestation() {
         return this.genericSignedAttestation;
@@ -29,55 +29,52 @@ public final class AttestationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pgpSignedAttestation", required=true)
-      private final PgpSignedAttestationResponse pgpSignedAttestation;
+    private PgpSignedAttestationResponse pgpSignedAttestation;
 
     public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
 
-    public AttestationResponse(
-        GenericSignedAttestationResponse genericSignedAttestation,
-        PgpSignedAttestationResponse pgpSignedAttestation) {
-        this.genericSignedAttestation = Objects.requireNonNull(genericSignedAttestation, "expected parameter 'genericSignedAttestation' to be non-null");
-        this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation, "expected parameter 'pgpSignedAttestation' to be non-null");
-    }
+    private AttestationResponse() {}
 
-    private AttestationResponse() {
-        this.genericSignedAttestation = null;
-        this.pgpSignedAttestation = null;
+    private AttestationResponse(AttestationResponse $) {
+        this.genericSignedAttestation = $.genericSignedAttestation;
+        this.pgpSignedAttestation = $.pgpSignedAttestation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GenericSignedAttestationResponse genericSignedAttestation;
-        private PgpSignedAttestationResponse pgpSignedAttestation;
+        private AttestationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationResponse();
         }
 
         public Builder(AttestationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.genericSignedAttestation = defaults.genericSignedAttestation;
-    	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
+            $ = new AttestationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder genericSignedAttestation(GenericSignedAttestationResponse genericSignedAttestation) {
-            this.genericSignedAttestation = Objects.requireNonNull(genericSignedAttestation);
+            $.genericSignedAttestation = genericSignedAttestation;
             return this;
         }
+
         public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
-            this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
+            $.pgpSignedAttestation = pgpSignedAttestation;
             return this;
-        }        public AttestationResponse build() {
-            return new AttestationResponse(genericSignedAttestation, pgpSignedAttestation);
+        }
+
+        public AttestationResponse build() {
+            $.genericSignedAttestation = Objects.requireNonNull($.genericSignedAttestation, "expected parameter 'genericSignedAttestation' to be non-null");
+            $.pgpSignedAttestation = Objects.requireNonNull($.pgpSignedAttestation, "expected parameter 'pgpSignedAttestation' to be non-null");
+            return $;
         }
     }
+
 }

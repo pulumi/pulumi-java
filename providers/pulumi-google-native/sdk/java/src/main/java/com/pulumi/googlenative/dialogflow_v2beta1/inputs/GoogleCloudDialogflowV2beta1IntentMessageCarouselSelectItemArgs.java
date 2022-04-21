@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @Import(name="info", required=true)
-      private final Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
+    private Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info() {
         return this.info;
@@ -59,89 +59,80 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemAr
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image,
-        Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info,
-        Output<String> title) {
-        this.description = description;
-        this.image = image;
-        this.info = Objects.requireNonNull(info, "expected parameter 'info' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs() {
-        this.description = Codegen.empty();
-        this.image = Codegen.empty();
-        this.info = Codegen.empty();
-        this.title = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs $) {
+        this.description = $.description;
+        this.image = $.image;
+        this.info = $.info;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image;
-        private Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info;
-        private Output<String> title;
+        private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.image = defaults.image;
-    	      this.info = defaults.info;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageArgs image) {
+            return image(Output.of(image));
         }
+
         public Builder info(Output<GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs> info) {
-            this.info = Objects.requireNonNull(info);
+            $.info = info;
             return this;
         }
+
         public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoArgs info) {
-            this.info = Output.of(Objects.requireNonNull(info));
-            return this;
+            return info(Output.of(info));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs(description, image, info, title);
+            return title(Output.of(title));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemArgs build() {
+            $.info = Objects.requireNonNull($.info, "expected parameter 'info' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

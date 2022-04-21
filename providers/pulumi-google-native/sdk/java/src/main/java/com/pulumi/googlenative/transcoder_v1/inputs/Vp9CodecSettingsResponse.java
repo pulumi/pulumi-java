@@ -23,7 +23,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="bitrateBps", required=true)
-      private final Integer bitrateBps;
+    private Integer bitrateBps;
 
     public Integer bitrateBps() {
         return this.bitrateBps;
@@ -34,7 +34,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="crfLevel", required=true)
-      private final Integer crfLevel;
+    private Integer crfLevel;
 
     public Integer crfLevel() {
         return this.crfLevel;
@@ -45,7 +45,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="frameRate", required=true)
-      private final Double frameRate;
+    private Double frameRate;
 
     public Double frameRate() {
         return this.frameRate;
@@ -56,7 +56,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="gopDuration", required=true)
-      private final String gopDuration;
+    private String gopDuration;
 
     public String gopDuration() {
         return this.gopDuration;
@@ -67,7 +67,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="gopFrameCount", required=true)
-      private final Integer gopFrameCount;
+    private Integer gopFrameCount;
 
     public Integer gopFrameCount() {
         return this.gopFrameCount;
@@ -78,7 +78,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="heightPixels", required=true)
-      private final Integer heightPixels;
+    private Integer heightPixels;
 
     public Integer heightPixels() {
         return this.heightPixels;
@@ -89,7 +89,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pixelFormat", required=true)
-      private final String pixelFormat;
+    private String pixelFormat;
 
     public String pixelFormat() {
         return this.pixelFormat;
@@ -100,7 +100,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="profile", required=true)
-      private final String profile;
+    private String profile;
 
     public String profile() {
         return this.profile;
@@ -111,7 +111,7 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rateControlMode", required=true)
-      private final String rateControlMode;
+    private String rateControlMode;
 
     public String rateControlMode() {
         return this.rateControlMode;
@@ -122,127 +122,108 @@ public final class Vp9CodecSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="widthPixels", required=true)
-      private final Integer widthPixels;
+    private Integer widthPixels;
 
     public Integer widthPixels() {
         return this.widthPixels;
     }
 
-    public Vp9CodecSettingsResponse(
-        Integer bitrateBps,
-        Integer crfLevel,
-        Double frameRate,
-        String gopDuration,
-        Integer gopFrameCount,
-        Integer heightPixels,
-        String pixelFormat,
-        String profile,
-        String rateControlMode,
-        Integer widthPixels) {
-        this.bitrateBps = Objects.requireNonNull(bitrateBps, "expected parameter 'bitrateBps' to be non-null");
-        this.crfLevel = Objects.requireNonNull(crfLevel, "expected parameter 'crfLevel' to be non-null");
-        this.frameRate = Objects.requireNonNull(frameRate, "expected parameter 'frameRate' to be non-null");
-        this.gopDuration = Objects.requireNonNull(gopDuration, "expected parameter 'gopDuration' to be non-null");
-        this.gopFrameCount = Objects.requireNonNull(gopFrameCount, "expected parameter 'gopFrameCount' to be non-null");
-        this.heightPixels = Objects.requireNonNull(heightPixels, "expected parameter 'heightPixels' to be non-null");
-        this.pixelFormat = Objects.requireNonNull(pixelFormat, "expected parameter 'pixelFormat' to be non-null");
-        this.profile = Objects.requireNonNull(profile, "expected parameter 'profile' to be non-null");
-        this.rateControlMode = Objects.requireNonNull(rateControlMode, "expected parameter 'rateControlMode' to be non-null");
-        this.widthPixels = Objects.requireNonNull(widthPixels, "expected parameter 'widthPixels' to be non-null");
-    }
+    private Vp9CodecSettingsResponse() {}
 
-    private Vp9CodecSettingsResponse() {
-        this.bitrateBps = null;
-        this.crfLevel = null;
-        this.frameRate = null;
-        this.gopDuration = null;
-        this.gopFrameCount = null;
-        this.heightPixels = null;
-        this.pixelFormat = null;
-        this.profile = null;
-        this.rateControlMode = null;
-        this.widthPixels = null;
+    private Vp9CodecSettingsResponse(Vp9CodecSettingsResponse $) {
+        this.bitrateBps = $.bitrateBps;
+        this.crfLevel = $.crfLevel;
+        this.frameRate = $.frameRate;
+        this.gopDuration = $.gopDuration;
+        this.gopFrameCount = $.gopFrameCount;
+        this.heightPixels = $.heightPixels;
+        this.pixelFormat = $.pixelFormat;
+        this.profile = $.profile;
+        this.rateControlMode = $.rateControlMode;
+        this.widthPixels = $.widthPixels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Vp9CodecSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer bitrateBps;
-        private Integer crfLevel;
-        private Double frameRate;
-        private String gopDuration;
-        private Integer gopFrameCount;
-        private Integer heightPixels;
-        private String pixelFormat;
-        private String profile;
-        private String rateControlMode;
-        private Integer widthPixels;
+        private Vp9CodecSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Vp9CodecSettingsResponse();
         }
 
         public Builder(Vp9CodecSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrateBps = defaults.bitrateBps;
-    	      this.crfLevel = defaults.crfLevel;
-    	      this.frameRate = defaults.frameRate;
-    	      this.gopDuration = defaults.gopDuration;
-    	      this.gopFrameCount = defaults.gopFrameCount;
-    	      this.heightPixels = defaults.heightPixels;
-    	      this.pixelFormat = defaults.pixelFormat;
-    	      this.profile = defaults.profile;
-    	      this.rateControlMode = defaults.rateControlMode;
-    	      this.widthPixels = defaults.widthPixels;
+            $ = new Vp9CodecSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrateBps(Integer bitrateBps) {
-            this.bitrateBps = Objects.requireNonNull(bitrateBps);
+            $.bitrateBps = bitrateBps;
             return this;
         }
+
         public Builder crfLevel(Integer crfLevel) {
-            this.crfLevel = Objects.requireNonNull(crfLevel);
+            $.crfLevel = crfLevel;
             return this;
         }
+
         public Builder frameRate(Double frameRate) {
-            this.frameRate = Objects.requireNonNull(frameRate);
+            $.frameRate = frameRate;
             return this;
         }
+
         public Builder gopDuration(String gopDuration) {
-            this.gopDuration = Objects.requireNonNull(gopDuration);
+            $.gopDuration = gopDuration;
             return this;
         }
+
         public Builder gopFrameCount(Integer gopFrameCount) {
-            this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
+            $.gopFrameCount = gopFrameCount;
             return this;
         }
+
         public Builder heightPixels(Integer heightPixels) {
-            this.heightPixels = Objects.requireNonNull(heightPixels);
+            $.heightPixels = heightPixels;
             return this;
         }
+
         public Builder pixelFormat(String pixelFormat) {
-            this.pixelFormat = Objects.requireNonNull(pixelFormat);
+            $.pixelFormat = pixelFormat;
             return this;
         }
+
         public Builder profile(String profile) {
-            this.profile = Objects.requireNonNull(profile);
+            $.profile = profile;
             return this;
         }
+
         public Builder rateControlMode(String rateControlMode) {
-            this.rateControlMode = Objects.requireNonNull(rateControlMode);
+            $.rateControlMode = rateControlMode;
             return this;
         }
+
         public Builder widthPixels(Integer widthPixels) {
-            this.widthPixels = Objects.requireNonNull(widthPixels);
+            $.widthPixels = widthPixels;
             return this;
-        }        public Vp9CodecSettingsResponse build() {
-            return new Vp9CodecSettingsResponse(bitrateBps, crfLevel, frameRate, gopDuration, gopFrameCount, heightPixels, pixelFormat, profile, rateControlMode, widthPixels);
+        }
+
+        public Vp9CodecSettingsResponse build() {
+            $.bitrateBps = Objects.requireNonNull($.bitrateBps, "expected parameter 'bitrateBps' to be non-null");
+            $.crfLevel = Objects.requireNonNull($.crfLevel, "expected parameter 'crfLevel' to be non-null");
+            $.frameRate = Objects.requireNonNull($.frameRate, "expected parameter 'frameRate' to be non-null");
+            $.gopDuration = Objects.requireNonNull($.gopDuration, "expected parameter 'gopDuration' to be non-null");
+            $.gopFrameCount = Objects.requireNonNull($.gopFrameCount, "expected parameter 'gopFrameCount' to be non-null");
+            $.heightPixels = Objects.requireNonNull($.heightPixels, "expected parameter 'heightPixels' to be non-null");
+            $.pixelFormat = Objects.requireNonNull($.pixelFormat, "expected parameter 'pixelFormat' to be non-null");
+            $.profile = Objects.requireNonNull($.profile, "expected parameter 'profile' to be non-null");
+            $.rateControlMode = Objects.requireNonNull($.rateControlMode, "expected parameter 'rateControlMode' to be non-null");
+            $.widthPixels = Objects.requireNonNull($.widthPixels, "expected parameter 'widthPixels' to be non-null");
+            return $;
         }
     }
+
 }

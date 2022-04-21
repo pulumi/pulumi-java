@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse extend
      * 
      */
     @Import(name="loggingSettings", required=true)
-      private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
+    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
     public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings() {
         return this.loggingSettings;
     }
 
-    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
-        this.loggingSettings = Objects.requireNonNull(loggingSettings, "expected parameter 'loggingSettings' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse() {
-        this.loggingSettings = null;
+    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse $) {
+        this.loggingSettings = $.loggingSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
+        private GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loggingSettings = defaults.loggingSettings;
+            $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder loggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
-            this.loggingSettings = Objects.requireNonNull(loggingSettings);
+            $.loggingSettings = loggingSettings;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(loggingSettings);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse build() {
+            $.loggingSettings = Objects.requireNonNull($.loggingSettings, "expected parameter 'loggingSettings' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,85 @@ public final class GetRegionWorkflowTemplateIamPolicyArgs extends com.pulumi.res
     public static final GetRegionWorkflowTemplateIamPolicyArgs Empty = new GetRegionWorkflowTemplateIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final String regionId;
+    private String regionId;
 
     public String regionId() {
         return this.regionId;
     }
 
     @Import(name="workflowTemplateId", required=true)
-      private final String workflowTemplateId;
+    private String workflowTemplateId;
 
     public String workflowTemplateId() {
         return this.workflowTemplateId;
     }
 
-    public GetRegionWorkflowTemplateIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String regionId,
-        String workflowTemplateId) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-        this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId, "expected parameter 'workflowTemplateId' to be non-null");
-    }
+    private GetRegionWorkflowTemplateIamPolicyArgs() {}
 
-    private GetRegionWorkflowTemplateIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.regionId = null;
-        this.workflowTemplateId = null;
+    private GetRegionWorkflowTemplateIamPolicyArgs(GetRegionWorkflowTemplateIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.regionId = $.regionId;
+        this.workflowTemplateId = $.workflowTemplateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionWorkflowTemplateIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String regionId;
-        private String workflowTemplateId;
+        private GetRegionWorkflowTemplateIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionWorkflowTemplateIamPolicyArgs();
         }
 
         public Builder(GetRegionWorkflowTemplateIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
-    	      this.workflowTemplateId = defaults.workflowTemplateId;
+            $ = new GetRegionWorkflowTemplateIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
         }
+
         public Builder workflowTemplateId(String workflowTemplateId) {
-            this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
+            $.workflowTemplateId = workflowTemplateId;
             return this;
-        }        public GetRegionWorkflowTemplateIamPolicyArgs build() {
-            return new GetRegionWorkflowTemplateIamPolicyArgs(optionsRequestedPolicyVersion, project, regionId, workflowTemplateId);
+        }
+
+        public GetRegionWorkflowTemplateIamPolicyArgs build() {
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            $.workflowTemplateId = Objects.requireNonNull($.workflowTemplateId, "expected parameter 'workflowTemplateId' to be non-null");
+            return $;
         }
     }
+
 }

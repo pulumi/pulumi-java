@@ -22,7 +22,7 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
@@ -33,7 +33,7 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="faxNumber", required=true)
-      private final String faxNumber;
+    private String faxNumber;
 
     public String faxNumber() {
         return this.faxNumber;
@@ -44,7 +44,7 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
@@ -55,73 +55,66 @@ public final class ContactResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="postalAddress", required=true)
-      private final PostalAddressResponse postalAddress;
+    private PostalAddressResponse postalAddress;
 
     public PostalAddressResponse postalAddress() {
         return this.postalAddress;
     }
 
-    public ContactResponse(
-        String email,
-        String faxNumber,
-        String phoneNumber,
-        PostalAddressResponse postalAddress) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.faxNumber = Objects.requireNonNull(faxNumber, "expected parameter 'faxNumber' to be non-null");
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-        this.postalAddress = Objects.requireNonNull(postalAddress, "expected parameter 'postalAddress' to be non-null");
-    }
+    private ContactResponse() {}
 
-    private ContactResponse() {
-        this.email = null;
-        this.faxNumber = null;
-        this.phoneNumber = null;
-        this.postalAddress = null;
+    private ContactResponse(ContactResponse $) {
+        this.email = $.email;
+        this.faxNumber = $.faxNumber;
+        this.phoneNumber = $.phoneNumber;
+        this.postalAddress = $.postalAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
-        private String faxNumber;
-        private String phoneNumber;
-        private PostalAddressResponse postalAddress;
+        private ContactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactResponse();
         }
 
         public Builder(ContactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.faxNumber = defaults.faxNumber;
-    	      this.phoneNumber = defaults.phoneNumber;
-    	      this.postalAddress = defaults.postalAddress;
+            $ = new ContactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder faxNumber(String faxNumber) {
-            this.faxNumber = Objects.requireNonNull(faxNumber);
+            $.faxNumber = faxNumber;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
         }
+
         public Builder postalAddress(PostalAddressResponse postalAddress) {
-            this.postalAddress = Objects.requireNonNull(postalAddress);
+            $.postalAddress = postalAddress;
             return this;
-        }        public ContactResponse build() {
-            return new ContactResponse(email, faxNumber, phoneNumber, postalAddress);
+        }
+
+        public ContactResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.faxNumber = Objects.requireNonNull($.faxNumber, "expected parameter 'faxNumber' to be non-null");
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            $.postalAddress = Objects.requireNonNull($.postalAddress, "expected parameter 'postalAddress' to be non-null");
+            return $;
         }
     }
+
 }

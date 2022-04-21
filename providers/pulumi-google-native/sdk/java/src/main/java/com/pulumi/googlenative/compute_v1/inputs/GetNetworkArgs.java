@@ -15,62 +15,58 @@ public final class GetNetworkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNetworkArgs Empty = new GetNetworkArgs();
 
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNetworkArgs(
-        String network,
-        @Nullable String project) {
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = project;
-    }
+    private GetNetworkArgs() {}
 
-    private GetNetworkArgs() {
-        this.network = null;
-        this.project = null;
+    private GetNetworkArgs(GetNetworkArgs $) {
+        this.network = $.network;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String network;
-        private @Nullable String project;
+        private GetNetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkArgs();
         }
 
         public Builder(GetNetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
+            $ = new GetNetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNetworkArgs build() {
-            return new GetNetworkArgs(network, project);
+        }
+
+        public GetNetworkArgs build() {
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

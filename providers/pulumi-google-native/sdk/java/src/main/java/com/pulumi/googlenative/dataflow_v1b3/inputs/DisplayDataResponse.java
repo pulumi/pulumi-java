@@ -23,7 +23,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="boolValue", required=true)
-      private final Boolean boolValue;
+    private Boolean boolValue;
 
     public Boolean boolValue() {
         return this.boolValue;
@@ -34,7 +34,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="durationValue", required=true)
-      private final String durationValue;
+    private String durationValue;
 
     public String durationValue() {
         return this.durationValue;
@@ -45,7 +45,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="floatValue", required=true)
-      private final Double floatValue;
+    private Double floatValue;
 
     public Double floatValue() {
         return this.floatValue;
@@ -56,7 +56,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="int64Value", required=true)
-      private final String int64Value;
+    private String int64Value;
 
     public String int64Value() {
         return this.int64Value;
@@ -67,7 +67,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="javaClassValue", required=true)
-      private final String javaClassValue;
+    private String javaClassValue;
 
     public String javaClassValue() {
         return this.javaClassValue;
@@ -78,7 +78,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -89,7 +89,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -100,7 +100,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -111,7 +111,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shortStrValue", required=true)
-      private final String shortStrValue;
+    private String shortStrValue;
 
     public String shortStrValue() {
         return this.shortStrValue;
@@ -122,7 +122,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="strValue", required=true)
-      private final String strValue;
+    private String strValue;
 
     public String strValue() {
         return this.strValue;
@@ -133,7 +133,7 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timestampValue", required=true)
-      private final String timestampValue;
+    private String timestampValue;
 
     public String timestampValue() {
         return this.timestampValue;
@@ -144,145 +144,122 @@ public final class DisplayDataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public DisplayDataResponse(
-        Boolean boolValue,
-        String durationValue,
-        Double floatValue,
-        String int64Value,
-        String javaClassValue,
-        String key,
-        String label,
-        String namespace,
-        String shortStrValue,
-        String strValue,
-        String timestampValue,
-        String url) {
-        this.boolValue = Objects.requireNonNull(boolValue, "expected parameter 'boolValue' to be non-null");
-        this.durationValue = Objects.requireNonNull(durationValue, "expected parameter 'durationValue' to be non-null");
-        this.floatValue = Objects.requireNonNull(floatValue, "expected parameter 'floatValue' to be non-null");
-        this.int64Value = Objects.requireNonNull(int64Value, "expected parameter 'int64Value' to be non-null");
-        this.javaClassValue = Objects.requireNonNull(javaClassValue, "expected parameter 'javaClassValue' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.shortStrValue = Objects.requireNonNull(shortStrValue, "expected parameter 'shortStrValue' to be non-null");
-        this.strValue = Objects.requireNonNull(strValue, "expected parameter 'strValue' to be non-null");
-        this.timestampValue = Objects.requireNonNull(timestampValue, "expected parameter 'timestampValue' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private DisplayDataResponse() {}
 
-    private DisplayDataResponse() {
-        this.boolValue = null;
-        this.durationValue = null;
-        this.floatValue = null;
-        this.int64Value = null;
-        this.javaClassValue = null;
-        this.key = null;
-        this.label = null;
-        this.namespace = null;
-        this.shortStrValue = null;
-        this.strValue = null;
-        this.timestampValue = null;
-        this.url = null;
+    private DisplayDataResponse(DisplayDataResponse $) {
+        this.boolValue = $.boolValue;
+        this.durationValue = $.durationValue;
+        this.floatValue = $.floatValue;
+        this.int64Value = $.int64Value;
+        this.javaClassValue = $.javaClassValue;
+        this.key = $.key;
+        this.label = $.label;
+        this.namespace = $.namespace;
+        this.shortStrValue = $.shortStrValue;
+        this.strValue = $.strValue;
+        this.timestampValue = $.timestampValue;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisplayDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean boolValue;
-        private String durationValue;
-        private Double floatValue;
-        private String int64Value;
-        private String javaClassValue;
-        private String key;
-        private String label;
-        private String namespace;
-        private String shortStrValue;
-        private String strValue;
-        private String timestampValue;
-        private String url;
+        private DisplayDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisplayDataResponse();
         }
 
         public Builder(DisplayDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boolValue = defaults.boolValue;
-    	      this.durationValue = defaults.durationValue;
-    	      this.floatValue = defaults.floatValue;
-    	      this.int64Value = defaults.int64Value;
-    	      this.javaClassValue = defaults.javaClassValue;
-    	      this.key = defaults.key;
-    	      this.label = defaults.label;
-    	      this.namespace = defaults.namespace;
-    	      this.shortStrValue = defaults.shortStrValue;
-    	      this.strValue = defaults.strValue;
-    	      this.timestampValue = defaults.timestampValue;
-    	      this.url = defaults.url;
+            $ = new DisplayDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boolValue(Boolean boolValue) {
-            this.boolValue = Objects.requireNonNull(boolValue);
+            $.boolValue = boolValue;
             return this;
         }
+
         public Builder durationValue(String durationValue) {
-            this.durationValue = Objects.requireNonNull(durationValue);
+            $.durationValue = durationValue;
             return this;
         }
+
         public Builder floatValue(Double floatValue) {
-            this.floatValue = Objects.requireNonNull(floatValue);
+            $.floatValue = floatValue;
             return this;
         }
+
         public Builder int64Value(String int64Value) {
-            this.int64Value = Objects.requireNonNull(int64Value);
+            $.int64Value = int64Value;
             return this;
         }
+
         public Builder javaClassValue(String javaClassValue) {
-            this.javaClassValue = Objects.requireNonNull(javaClassValue);
+            $.javaClassValue = javaClassValue;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder shortStrValue(String shortStrValue) {
-            this.shortStrValue = Objects.requireNonNull(shortStrValue);
+            $.shortStrValue = shortStrValue;
             return this;
         }
+
         public Builder strValue(String strValue) {
-            this.strValue = Objects.requireNonNull(strValue);
+            $.strValue = strValue;
             return this;
         }
+
         public Builder timestampValue(String timestampValue) {
-            this.timestampValue = Objects.requireNonNull(timestampValue);
+            $.timestampValue = timestampValue;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public DisplayDataResponse build() {
-            return new DisplayDataResponse(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
+        }
+
+        public DisplayDataResponse build() {
+            $.boolValue = Objects.requireNonNull($.boolValue, "expected parameter 'boolValue' to be non-null");
+            $.durationValue = Objects.requireNonNull($.durationValue, "expected parameter 'durationValue' to be non-null");
+            $.floatValue = Objects.requireNonNull($.floatValue, "expected parameter 'floatValue' to be non-null");
+            $.int64Value = Objects.requireNonNull($.int64Value, "expected parameter 'int64Value' to be non-null");
+            $.javaClassValue = Objects.requireNonNull($.javaClassValue, "expected parameter 'javaClassValue' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.shortStrValue = Objects.requireNonNull($.shortStrValue, "expected parameter 'shortStrValue' to be non-null");
+            $.strValue = Objects.requireNonNull($.strValue, "expected parameter 'strValue' to be non-null");
+            $.timestampValue = Objects.requireNonNull($.timestampValue, "expected parameter 'timestampValue' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

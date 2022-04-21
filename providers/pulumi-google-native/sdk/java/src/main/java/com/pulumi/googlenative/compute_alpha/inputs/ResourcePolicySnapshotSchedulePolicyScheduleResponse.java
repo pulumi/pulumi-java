@@ -19,78 +19,73 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse extends 
     public static final ResourcePolicySnapshotSchedulePolicyScheduleResponse Empty = new ResourcePolicySnapshotSchedulePolicyScheduleResponse();
 
     @Import(name="dailySchedule", required=true)
-      private final ResourcePolicyDailyCycleResponse dailySchedule;
+    private ResourcePolicyDailyCycleResponse dailySchedule;
 
     public ResourcePolicyDailyCycleResponse dailySchedule() {
         return this.dailySchedule;
     }
 
     @Import(name="hourlySchedule", required=true)
-      private final ResourcePolicyHourlyCycleResponse hourlySchedule;
+    private ResourcePolicyHourlyCycleResponse hourlySchedule;
 
     public ResourcePolicyHourlyCycleResponse hourlySchedule() {
         return this.hourlySchedule;
     }
 
     @Import(name="weeklySchedule", required=true)
-      private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
+    private ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
     public ResourcePolicyWeeklyCycleResponse weeklySchedule() {
         return this.weeklySchedule;
     }
 
-    public ResourcePolicySnapshotSchedulePolicyScheduleResponse(
-        ResourcePolicyDailyCycleResponse dailySchedule,
-        ResourcePolicyHourlyCycleResponse hourlySchedule,
-        ResourcePolicyWeeklyCycleResponse weeklySchedule) {
-        this.dailySchedule = Objects.requireNonNull(dailySchedule, "expected parameter 'dailySchedule' to be non-null");
-        this.hourlySchedule = Objects.requireNonNull(hourlySchedule, "expected parameter 'hourlySchedule' to be non-null");
-        this.weeklySchedule = Objects.requireNonNull(weeklySchedule, "expected parameter 'weeklySchedule' to be non-null");
-    }
+    private ResourcePolicySnapshotSchedulePolicyScheduleResponse() {}
 
-    private ResourcePolicySnapshotSchedulePolicyScheduleResponse() {
-        this.dailySchedule = null;
-        this.hourlySchedule = null;
-        this.weeklySchedule = null;
+    private ResourcePolicySnapshotSchedulePolicyScheduleResponse(ResourcePolicySnapshotSchedulePolicyScheduleResponse $) {
+        this.dailySchedule = $.dailySchedule;
+        this.hourlySchedule = $.hourlySchedule;
+        this.weeklySchedule = $.weeklySchedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ResourcePolicyDailyCycleResponse dailySchedule;
-        private ResourcePolicyHourlyCycleResponse hourlySchedule;
-        private ResourcePolicyWeeklyCycleResponse weeklySchedule;
+        private ResourcePolicySnapshotSchedulePolicyScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleResponse();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailySchedule = defaults.dailySchedule;
-    	      this.hourlySchedule = defaults.hourlySchedule;
-    	      this.weeklySchedule = defaults.weeklySchedule;
+            $ = new ResourcePolicySnapshotSchedulePolicyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dailySchedule(ResourcePolicyDailyCycleResponse dailySchedule) {
-            this.dailySchedule = Objects.requireNonNull(dailySchedule);
+            $.dailySchedule = dailySchedule;
             return this;
         }
+
         public Builder hourlySchedule(ResourcePolicyHourlyCycleResponse hourlySchedule) {
-            this.hourlySchedule = Objects.requireNonNull(hourlySchedule);
+            $.hourlySchedule = hourlySchedule;
             return this;
         }
+
         public Builder weeklySchedule(ResourcePolicyWeeklyCycleResponse weeklySchedule) {
-            this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
+            $.weeklySchedule = weeklySchedule;
             return this;
-        }        public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
-            return new ResourcePolicySnapshotSchedulePolicyScheduleResponse(dailySchedule, hourlySchedule, weeklySchedule);
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
+            $.dailySchedule = Objects.requireNonNull($.dailySchedule, "expected parameter 'dailySchedule' to be non-null");
+            $.hourlySchedule = Objects.requireNonNull($.hourlySchedule, "expected parameter 'hourlySchedule' to be non-null");
+            $.weeklySchedule = Objects.requireNonNull($.weeklySchedule, "expected parameter 'weeklySchedule' to be non-null");
+            return $;
         }
     }
+
 }

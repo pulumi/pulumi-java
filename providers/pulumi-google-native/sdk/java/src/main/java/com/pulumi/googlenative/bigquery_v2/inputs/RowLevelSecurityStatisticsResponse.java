@@ -17,45 +17,45 @@ public final class RowLevelSecurityStatisticsResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="rowLevelSecurityApplied", required=true)
-      private final Boolean rowLevelSecurityApplied;
+    private Boolean rowLevelSecurityApplied;
 
     public Boolean rowLevelSecurityApplied() {
         return this.rowLevelSecurityApplied;
     }
 
-    public RowLevelSecurityStatisticsResponse(Boolean rowLevelSecurityApplied) {
-        this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied, "expected parameter 'rowLevelSecurityApplied' to be non-null");
-    }
+    private RowLevelSecurityStatisticsResponse() {}
 
-    private RowLevelSecurityStatisticsResponse() {
-        this.rowLevelSecurityApplied = null;
+    private RowLevelSecurityStatisticsResponse(RowLevelSecurityStatisticsResponse $) {
+        this.rowLevelSecurityApplied = $.rowLevelSecurityApplied;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RowLevelSecurityStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean rowLevelSecurityApplied;
+        private RowLevelSecurityStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RowLevelSecurityStatisticsResponse();
         }
 
         public Builder(RowLevelSecurityStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rowLevelSecurityApplied = defaults.rowLevelSecurityApplied;
+            $ = new RowLevelSecurityStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rowLevelSecurityApplied(Boolean rowLevelSecurityApplied) {
-            this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
+            $.rowLevelSecurityApplied = rowLevelSecurityApplied;
             return this;
-        }        public RowLevelSecurityStatisticsResponse build() {
-            return new RowLevelSecurityStatisticsResponse(rowLevelSecurityApplied);
+        }
+
+        public RowLevelSecurityStatisticsResponse build() {
+            $.rowLevelSecurityApplied = Objects.requireNonNull($.rowLevelSecurityApplied, "expected parameter 'rowLevelSecurityApplied' to be non-null");
+            return $;
         }
     }
+
 }

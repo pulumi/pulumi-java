@@ -22,7 +22,7 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientCertificate", required=true)
-      private final String clientCertificate;
+    private String clientCertificate;
 
     public String clientCertificate() {
         return this.clientCertificate;
@@ -33,7 +33,7 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientCertificateConfig", required=true)
-      private final ClientCertificateConfigResponse clientCertificateConfig;
+    private ClientCertificateConfigResponse clientCertificateConfig;
 
     public ClientCertificateConfigResponse clientCertificateConfig() {
         return this.clientCertificateConfig;
@@ -44,14 +44,14 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientKey", required=true)
-      private final String clientKey;
+    private String clientKey;
 
     public String clientKey() {
         return this.clientKey;
     }
 
     @Import(name="clusterCaCertificate", required=true)
-      private final String clusterCaCertificate;
+    private String clusterCaCertificate;
 
     public String clusterCaCertificate() {
         return this.clusterCaCertificate;
@@ -62,7 +62,7 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -73,91 +73,80 @@ public final class MasterAuthResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public MasterAuthResponse(
-        String clientCertificate,
-        ClientCertificateConfigResponse clientCertificateConfig,
-        String clientKey,
-        String clusterCaCertificate,
-        String password,
-        String username) {
-        this.clientCertificate = Objects.requireNonNull(clientCertificate, "expected parameter 'clientCertificate' to be non-null");
-        this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig, "expected parameter 'clientCertificateConfig' to be non-null");
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate, "expected parameter 'clusterCaCertificate' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private MasterAuthResponse() {}
 
-    private MasterAuthResponse() {
-        this.clientCertificate = null;
-        this.clientCertificateConfig = null;
-        this.clientKey = null;
-        this.clusterCaCertificate = null;
-        this.password = null;
-        this.username = null;
+    private MasterAuthResponse(MasterAuthResponse $) {
+        this.clientCertificate = $.clientCertificate;
+        this.clientCertificateConfig = $.clientCertificateConfig;
+        this.clientKey = $.clientKey;
+        this.clusterCaCertificate = $.clusterCaCertificate;
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MasterAuthResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clientCertificate;
-        private ClientCertificateConfigResponse clientCertificateConfig;
-        private String clientKey;
-        private String clusterCaCertificate;
-        private String password;
-        private String username;
+        private MasterAuthResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MasterAuthResponse();
         }
 
         public Builder(MasterAuthResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientCertificateConfig = defaults.clientCertificateConfig;
-    	      this.clientKey = defaults.clientKey;
-    	      this.clusterCaCertificate = defaults.clusterCaCertificate;
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new MasterAuthResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientCertificate(String clientCertificate) {
-            this.clientCertificate = Objects.requireNonNull(clientCertificate);
+            $.clientCertificate = clientCertificate;
             return this;
         }
+
         public Builder clientCertificateConfig(ClientCertificateConfigResponse clientCertificateConfig) {
-            this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
+            $.clientCertificateConfig = clientCertificateConfig;
             return this;
         }
+
         public Builder clientKey(String clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder clusterCaCertificate(String clusterCaCertificate) {
-            this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
+            $.clusterCaCertificate = clusterCaCertificate;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public MasterAuthResponse build() {
-            return new MasterAuthResponse(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate, password, username);
+        }
+
+        public MasterAuthResponse build() {
+            $.clientCertificate = Objects.requireNonNull($.clientCertificate, "expected parameter 'clientCertificate' to be non-null");
+            $.clientCertificateConfig = Objects.requireNonNull($.clientCertificateConfig, "expected parameter 'clientCertificateConfig' to be non-null");
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.clusterCaCertificate = Objects.requireNonNull($.clusterCaCertificate, "expected parameter 'clusterCaCertificate' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class PrivateConnectivityResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="privateConnection", required=true)
-      private final String privateConnection;
+    private String privateConnection;
 
     public String privateConnection() {
         return this.privateConnection;
     }
 
-    public PrivateConnectivityResponse(String privateConnection) {
-        this.privateConnection = Objects.requireNonNull(privateConnection, "expected parameter 'privateConnection' to be non-null");
-    }
+    private PrivateConnectivityResponse() {}
 
-    private PrivateConnectivityResponse() {
-        this.privateConnection = null;
+    private PrivateConnectivityResponse(PrivateConnectivityResponse $) {
+        this.privateConnection = $.privateConnection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateConnectivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String privateConnection;
+        private PrivateConnectivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateConnectivityResponse();
         }
 
         public Builder(PrivateConnectivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateConnection = defaults.privateConnection;
+            $ = new PrivateConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder privateConnection(String privateConnection) {
-            this.privateConnection = Objects.requireNonNull(privateConnection);
+            $.privateConnection = privateConnection;
             return this;
-        }        public PrivateConnectivityResponse build() {
-            return new PrivateConnectivityResponse(privateConnection);
+        }
+
+        public PrivateConnectivityResponse build() {
+            $.privateConnection = Objects.requireNonNull($.privateConnection, "expected parameter 'privateConnection' to be non-null");
+            return $;
         }
     }
+
 }

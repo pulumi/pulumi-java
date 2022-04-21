@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.enums.MaintenanceExclusionOptionsScope;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MaintenanceExclusionOptionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<MaintenanceExclusionOptionsScope> scope;
+    private @Nullable Output<MaintenanceExclusionOptionsScope> scope;
 
-    public Output<MaintenanceExclusionOptionsScope> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<MaintenanceExclusionOptionsScope>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public MaintenanceExclusionOptionsArgs(@Nullable Output<MaintenanceExclusionOptionsScope> scope) {
-        this.scope = scope;
-    }
+    private MaintenanceExclusionOptionsArgs() {}
 
-    private MaintenanceExclusionOptionsArgs() {
-        this.scope = Codegen.empty();
+    private MaintenanceExclusionOptionsArgs(MaintenanceExclusionOptionsArgs $) {
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceExclusionOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MaintenanceExclusionOptionsScope> scope;
+        private MaintenanceExclusionOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceExclusionOptionsArgs();
         }
 
         public Builder(MaintenanceExclusionOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.scope = defaults.scope;
+            $ = new MaintenanceExclusionOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder scope(@Nullable Output<MaintenanceExclusionOptionsScope> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable MaintenanceExclusionOptionsScope scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public MaintenanceExclusionOptionsArgs build() {
-            return new MaintenanceExclusionOptionsArgs(scope);
+
+        public Builder scope(MaintenanceExclusionOptionsScope scope) {
+            return scope(Output.of(scope));
+        }
+
+        public MaintenanceExclusionOptionsArgs build() {
+            return $;
         }
     }
+
 }

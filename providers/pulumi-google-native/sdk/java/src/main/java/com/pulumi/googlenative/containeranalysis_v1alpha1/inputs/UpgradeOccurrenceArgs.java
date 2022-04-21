@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionArgs;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="distribution")
-      private final @Nullable Output<UpgradeDistributionArgs> distribution;
+    private @Nullable Output<UpgradeDistributionArgs> distribution;
 
-    public Output<UpgradeDistributionArgs> distribution() {
-        return this.distribution == null ? Codegen.empty() : this.distribution;
+    public Optional<Output<UpgradeDistributionArgs>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="package")
-      private final @Nullable Output<String> package_;
+    private @Nullable Output<String> package_;
 
-    public Output<String> package_() {
-        return this.package_ == null ? Codegen.empty() : this.package_;
+    public Optional<Output<String>> package_() {
+        return Optional.ofNullable(this.package_);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class UpgradeOccurrenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="parsedVersion")
-      private final @Nullable Output<VersionArgs> parsedVersion;
+    private @Nullable Output<VersionArgs> parsedVersion;
 
-    public Output<VersionArgs> parsedVersion() {
-        return this.parsedVersion == null ? Codegen.empty() : this.parsedVersion;
+    public Optional<Output<VersionArgs>> parsedVersion() {
+        return Optional.ofNullable(this.parsedVersion);
     }
 
-    public UpgradeOccurrenceArgs(
-        @Nullable Output<UpgradeDistributionArgs> distribution,
-        @Nullable Output<String> package_,
-        @Nullable Output<VersionArgs> parsedVersion) {
-        this.distribution = distribution;
-        this.package_ = package_;
-        this.parsedVersion = parsedVersion;
-    }
+    private UpgradeOccurrenceArgs() {}
 
-    private UpgradeOccurrenceArgs() {
-        this.distribution = Codegen.empty();
-        this.package_ = Codegen.empty();
-        this.parsedVersion = Codegen.empty();
+    private UpgradeOccurrenceArgs(UpgradeOccurrenceArgs $) {
+        this.distribution = $.distribution;
+        this.package_ = $.package_;
+        this.parsedVersion = $.parsedVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<UpgradeDistributionArgs> distribution;
-        private @Nullable Output<String> package_;
-        private @Nullable Output<VersionArgs> parsedVersion;
+        private UpgradeOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeOccurrenceArgs();
         }
 
         public Builder(UpgradeOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distribution = defaults.distribution;
-    	      this.package_ = defaults.package_;
-    	      this.parsedVersion = defaults.parsedVersion;
+            $ = new UpgradeOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder distribution(@Nullable Output<UpgradeDistributionArgs> distribution) {
-            this.distribution = distribution;
+            $.distribution = distribution;
             return this;
         }
-        public Builder distribution(@Nullable UpgradeDistributionArgs distribution) {
-            this.distribution = Codegen.ofNullable(distribution);
-            return this;
+
+        public Builder distribution(UpgradeDistributionArgs distribution) {
+            return distribution(Output.of(distribution));
         }
+
         public Builder package_(@Nullable Output<String> package_) {
-            this.package_ = package_;
+            $.package_ = package_;
             return this;
         }
-        public Builder package_(@Nullable String package_) {
-            this.package_ = Codegen.ofNullable(package_);
-            return this;
+
+        public Builder package_(String package_) {
+            return package_(Output.of(package_));
         }
+
         public Builder parsedVersion(@Nullable Output<VersionArgs> parsedVersion) {
-            this.parsedVersion = parsedVersion;
+            $.parsedVersion = parsedVersion;
             return this;
         }
-        public Builder parsedVersion(@Nullable VersionArgs parsedVersion) {
-            this.parsedVersion = Codegen.ofNullable(parsedVersion);
-            return this;
-        }        public UpgradeOccurrenceArgs build() {
-            return new UpgradeOccurrenceArgs(distribution, package_, parsedVersion);
+
+        public Builder parsedVersion(VersionArgs parsedVersion) {
+            return parsedVersion(Output.of(parsedVersion));
+        }
+
+        public UpgradeOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

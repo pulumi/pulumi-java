@@ -15,94 +15,86 @@ public final class GetImportJobArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetImportJobArgs Empty = new GetImportJobArgs();
 
     @Import(name="importJobId", required=true)
-      private final String importJobId;
+    private String importJobId;
 
     public String importJobId() {
         return this.importJobId;
     }
 
     @Import(name="keyRingId", required=true)
-      private final String keyRingId;
+    private String keyRingId;
 
     public String keyRingId() {
         return this.keyRingId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetImportJobArgs(
-        String importJobId,
-        String keyRingId,
-        String location,
-        @Nullable String project) {
-        this.importJobId = Objects.requireNonNull(importJobId, "expected parameter 'importJobId' to be non-null");
-        this.keyRingId = Objects.requireNonNull(keyRingId, "expected parameter 'keyRingId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetImportJobArgs() {}
 
-    private GetImportJobArgs() {
-        this.importJobId = null;
-        this.keyRingId = null;
-        this.location = null;
-        this.project = null;
+    private GetImportJobArgs(GetImportJobArgs $) {
+        this.importJobId = $.importJobId;
+        this.keyRingId = $.keyRingId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetImportJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String importJobId;
-        private String keyRingId;
-        private String location;
-        private @Nullable String project;
+        private GetImportJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetImportJobArgs();
         }
 
         public Builder(GetImportJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importJobId = defaults.importJobId;
-    	      this.keyRingId = defaults.keyRingId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetImportJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder importJobId(String importJobId) {
-            this.importJobId = Objects.requireNonNull(importJobId);
+            $.importJobId = importJobId;
             return this;
         }
+
         public Builder keyRingId(String keyRingId) {
-            this.keyRingId = Objects.requireNonNull(keyRingId);
+            $.keyRingId = keyRingId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetImportJobArgs build() {
-            return new GetImportJobArgs(importJobId, keyRingId, location, project);
+        }
+
+        public GetImportJobArgs build() {
+            $.importJobId = Objects.requireNonNull($.importJobId, "expected parameter 'importJobId' to be non-null");
+            $.keyRingId = Objects.requireNonNull($.keyRingId, "expected parameter 'keyRingId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

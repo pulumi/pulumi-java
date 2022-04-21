@@ -21,45 +21,45 @@ public final class TransportResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pubsub", required=true)
-      private final PubsubResponse pubsub;
+    private PubsubResponse pubsub;
 
     public PubsubResponse pubsub() {
         return this.pubsub;
     }
 
-    public TransportResponse(PubsubResponse pubsub) {
-        this.pubsub = Objects.requireNonNull(pubsub, "expected parameter 'pubsub' to be non-null");
-    }
+    private TransportResponse() {}
 
-    private TransportResponse() {
-        this.pubsub = null;
+    private TransportResponse(TransportResponse $) {
+        this.pubsub = $.pubsub;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TransportResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PubsubResponse pubsub;
+        private TransportResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TransportResponse();
         }
 
         public Builder(TransportResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsub = defaults.pubsub;
+            $ = new TransportResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsub(PubsubResponse pubsub) {
-            this.pubsub = Objects.requireNonNull(pubsub);
+            $.pubsub = pubsub;
             return this;
-        }        public TransportResponse build() {
-            return new TransportResponse(pubsub);
+        }
+
+        public TransportResponse build() {
+            $.pubsub = Objects.requireNonNull($.pubsub, "expected parameter 'pubsub' to be non-null");
+            return $;
         }
     }
+
 }

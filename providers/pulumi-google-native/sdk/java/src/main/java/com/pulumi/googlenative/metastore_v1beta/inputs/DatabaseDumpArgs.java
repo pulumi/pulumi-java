@@ -5,11 +5,11 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.enums.DatabaseDumpDatabaseType;
 import com.pulumi.googlenative.metastore_v1beta.enums.DatabaseDumpType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseType")
-      private final @Nullable Output<DatabaseDumpDatabaseType> databaseType;
+    private @Nullable Output<DatabaseDumpDatabaseType> databaseType;
 
-    public Output<DatabaseDumpDatabaseType> databaseType() {
-        return this.databaseType == null ? Codegen.empty() : this.databaseType;
+    public Optional<Output<DatabaseDumpDatabaseType>> databaseType() {
+        return Optional.ofNullable(this.databaseType);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcsUri")
-      private final @Nullable Output<String> gcsUri;
+    private @Nullable Output<String> gcsUri;
 
-    public Output<String> gcsUri() {
-        return this.gcsUri == null ? Codegen.empty() : this.gcsUri;
+    public Optional<Output<String>> gcsUri() {
+        return Optional.ofNullable(this.gcsUri);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDatabase")
-      private final @Nullable Output<String> sourceDatabase;
+    private @Nullable Output<String> sourceDatabase;
 
-    public Output<String> sourceDatabase() {
-        return this.sourceDatabase == null ? Codegen.empty() : this.sourceDatabase;
+    public Optional<Output<String>> sourceDatabase() {
+        return Optional.ofNullable(this.sourceDatabase);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class DatabaseDumpArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<DatabaseDumpType> type;
+    private @Nullable Output<DatabaseDumpType> type;
 
-    public Output<DatabaseDumpType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<DatabaseDumpType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DatabaseDumpArgs(
-        @Nullable Output<DatabaseDumpDatabaseType> databaseType,
-        @Nullable Output<String> gcsUri,
-        @Nullable Output<String> sourceDatabase,
-        @Nullable Output<DatabaseDumpType> type) {
-        this.databaseType = databaseType;
-        this.gcsUri = gcsUri;
-        this.sourceDatabase = sourceDatabase;
-        this.type = type;
-    }
+    private DatabaseDumpArgs() {}
 
-    private DatabaseDumpArgs() {
-        this.databaseType = Codegen.empty();
-        this.gcsUri = Codegen.empty();
-        this.sourceDatabase = Codegen.empty();
-        this.type = Codegen.empty();
+    private DatabaseDumpArgs(DatabaseDumpArgs $) {
+        this.databaseType = $.databaseType;
+        this.gcsUri = $.gcsUri;
+        this.sourceDatabase = $.sourceDatabase;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseDumpArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DatabaseDumpDatabaseType> databaseType;
-        private @Nullable Output<String> gcsUri;
-        private @Nullable Output<String> sourceDatabase;
-        private @Nullable Output<DatabaseDumpType> type;
+        private DatabaseDumpArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseDumpArgs();
         }
 
         public Builder(DatabaseDumpArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseType = defaults.databaseType;
-    	      this.gcsUri = defaults.gcsUri;
-    	      this.sourceDatabase = defaults.sourceDatabase;
-    	      this.type = defaults.type;
+            $ = new DatabaseDumpArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseType(@Nullable Output<DatabaseDumpDatabaseType> databaseType) {
-            this.databaseType = databaseType;
+            $.databaseType = databaseType;
             return this;
         }
-        public Builder databaseType(@Nullable DatabaseDumpDatabaseType databaseType) {
-            this.databaseType = Codegen.ofNullable(databaseType);
-            return this;
+
+        public Builder databaseType(DatabaseDumpDatabaseType databaseType) {
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder gcsUri(@Nullable Output<String> gcsUri) {
-            this.gcsUri = gcsUri;
+            $.gcsUri = gcsUri;
             return this;
         }
-        public Builder gcsUri(@Nullable String gcsUri) {
-            this.gcsUri = Codegen.ofNullable(gcsUri);
-            return this;
+
+        public Builder gcsUri(String gcsUri) {
+            return gcsUri(Output.of(gcsUri));
         }
+
         public Builder sourceDatabase(@Nullable Output<String> sourceDatabase) {
-            this.sourceDatabase = sourceDatabase;
+            $.sourceDatabase = sourceDatabase;
             return this;
         }
-        public Builder sourceDatabase(@Nullable String sourceDatabase) {
-            this.sourceDatabase = Codegen.ofNullable(sourceDatabase);
-            return this;
+
+        public Builder sourceDatabase(String sourceDatabase) {
+            return sourceDatabase(Output.of(sourceDatabase));
         }
+
         public Builder type(@Nullable Output<DatabaseDumpType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable DatabaseDumpType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DatabaseDumpArgs build() {
-            return new DatabaseDumpArgs(databaseType, gcsUri, sourceDatabase, type);
+
+        public Builder type(DatabaseDumpType type) {
+            return type(Output.of(type));
+        }
+
+        public DatabaseDumpArgs build() {
+            return $;
         }
     }
+
 }

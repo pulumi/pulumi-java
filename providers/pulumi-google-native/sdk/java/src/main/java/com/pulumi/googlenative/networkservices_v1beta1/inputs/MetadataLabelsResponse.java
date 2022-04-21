@@ -21,7 +21,7 @@ public final class MetadataLabelsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="labelName", required=true)
-      private final String labelName;
+    private String labelName;
 
     public String labelName() {
         return this.labelName;
@@ -32,55 +32,52 @@ public final class MetadataLabelsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="labelValue", required=true)
-      private final String labelValue;
+    private String labelValue;
 
     public String labelValue() {
         return this.labelValue;
     }
 
-    public MetadataLabelsResponse(
-        String labelName,
-        String labelValue) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-        this.labelValue = Objects.requireNonNull(labelValue, "expected parameter 'labelValue' to be non-null");
-    }
+    private MetadataLabelsResponse() {}
 
-    private MetadataLabelsResponse() {
-        this.labelName = null;
-        this.labelValue = null;
+    private MetadataLabelsResponse(MetadataLabelsResponse $) {
+        this.labelName = $.labelName;
+        this.labelValue = $.labelValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataLabelsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String labelName;
-        private String labelValue;
+        private MetadataLabelsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataLabelsResponse();
         }
 
         public Builder(MetadataLabelsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
-    	      this.labelValue = defaults.labelValue;
+            $ = new MetadataLabelsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(String labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
         }
+
         public Builder labelValue(String labelValue) {
-            this.labelValue = Objects.requireNonNull(labelValue);
+            $.labelValue = labelValue;
             return this;
-        }        public MetadataLabelsResponse build() {
-            return new MetadataLabelsResponse(labelName, labelValue);
+        }
+
+        public MetadataLabelsResponse build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            $.labelValue = Objects.requireNonNull($.labelValue, "expected parameter 'labelValue' to be non-null");
+            return $;
         }
     }
+
 }

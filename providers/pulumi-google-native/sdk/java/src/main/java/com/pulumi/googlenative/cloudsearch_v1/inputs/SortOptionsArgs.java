@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.enums.SortOptionsSortOrder;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SortOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatorName")
-      private final @Nullable Output<String> operatorName;
+    private @Nullable Output<String> operatorName;
 
-    public Output<String> operatorName() {
-        return this.operatorName == null ? Codegen.empty() : this.operatorName;
+    public Optional<Output<String>> operatorName() {
+        return Optional.ofNullable(this.operatorName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SortOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sortOrder")
-      private final @Nullable Output<SortOptionsSortOrder> sortOrder;
+    private @Nullable Output<SortOptionsSortOrder> sortOrder;
 
-    public Output<SortOptionsSortOrder> sortOrder() {
-        return this.sortOrder == null ? Codegen.empty() : this.sortOrder;
+    public Optional<Output<SortOptionsSortOrder>> sortOrder() {
+        return Optional.ofNullable(this.sortOrder);
     }
 
-    public SortOptionsArgs(
-        @Nullable Output<String> operatorName,
-        @Nullable Output<SortOptionsSortOrder> sortOrder) {
-        this.operatorName = operatorName;
-        this.sortOrder = sortOrder;
-    }
+    private SortOptionsArgs() {}
 
-    private SortOptionsArgs() {
-        this.operatorName = Codegen.empty();
-        this.sortOrder = Codegen.empty();
+    private SortOptionsArgs(SortOptionsArgs $) {
+        this.operatorName = $.operatorName;
+        this.sortOrder = $.sortOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SortOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> operatorName;
-        private @Nullable Output<SortOptionsSortOrder> sortOrder;
+        private SortOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SortOptionsArgs();
         }
 
         public Builder(SortOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operatorName = defaults.operatorName;
-    	      this.sortOrder = defaults.sortOrder;
+            $ = new SortOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operatorName(@Nullable Output<String> operatorName) {
-            this.operatorName = operatorName;
+            $.operatorName = operatorName;
             return this;
         }
-        public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Codegen.ofNullable(operatorName);
-            return this;
+
+        public Builder operatorName(String operatorName) {
+            return operatorName(Output.of(operatorName));
         }
+
         public Builder sortOrder(@Nullable Output<SortOptionsSortOrder> sortOrder) {
-            this.sortOrder = sortOrder;
+            $.sortOrder = sortOrder;
             return this;
         }
-        public Builder sortOrder(@Nullable SortOptionsSortOrder sortOrder) {
-            this.sortOrder = Codegen.ofNullable(sortOrder);
-            return this;
-        }        public SortOptionsArgs build() {
-            return new SortOptionsArgs(operatorName, sortOrder);
+
+        public Builder sortOrder(SortOptionsSortOrder sortOrder) {
+            return sortOrder(Output.of(sortOrder));
+        }
+
+        public SortOptionsArgs build() {
+            return $;
         }
     }
+
 }

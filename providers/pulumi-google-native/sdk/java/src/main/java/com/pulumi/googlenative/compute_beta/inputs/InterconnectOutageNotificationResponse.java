@@ -22,7 +22,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="affectedCircuits", required=true)
-      private final List<String> affectedCircuits;
+    private List<String> affectedCircuits;
 
     public List<String> affectedCircuits() {
         return this.affectedCircuits;
@@ -33,7 +33,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -55,7 +55,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="issueType", required=true)
-      private final String issueType;
+    private String issueType;
 
     public String issueType() {
         return this.issueType;
@@ -66,7 +66,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,7 +77,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
@@ -88,7 +88,7 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -99,112 +99,98 @@ public final class InterconnectOutageNotificationResponse extends com.pulumi.res
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public InterconnectOutageNotificationResponse(
-        List<String> affectedCircuits,
-        String description,
-        String endTime,
-        String issueType,
-        String name,
-        String source,
-        String startTime,
-        String state) {
-        this.affectedCircuits = Objects.requireNonNull(affectedCircuits, "expected parameter 'affectedCircuits' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.issueType = Objects.requireNonNull(issueType, "expected parameter 'issueType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private InterconnectOutageNotificationResponse() {}
 
-    private InterconnectOutageNotificationResponse() {
-        this.affectedCircuits = List.of();
-        this.description = null;
-        this.endTime = null;
-        this.issueType = null;
-        this.name = null;
-        this.source = null;
-        this.startTime = null;
-        this.state = null;
+    private InterconnectOutageNotificationResponse(InterconnectOutageNotificationResponse $) {
+        this.affectedCircuits = $.affectedCircuits;
+        this.description = $.description;
+        this.endTime = $.endTime;
+        this.issueType = $.issueType;
+        this.name = $.name;
+        this.source = $.source;
+        this.startTime = $.startTime;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectOutageNotificationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> affectedCircuits;
-        private String description;
-        private String endTime;
-        private String issueType;
-        private String name;
-        private String source;
-        private String startTime;
-        private String state;
+        private InterconnectOutageNotificationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectOutageNotificationResponse();
         }
 
         public Builder(InterconnectOutageNotificationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedCircuits = defaults.affectedCircuits;
-    	      this.description = defaults.description;
-    	      this.endTime = defaults.endTime;
-    	      this.issueType = defaults.issueType;
-    	      this.name = defaults.name;
-    	      this.source = defaults.source;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
+            $ = new InterconnectOutageNotificationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedCircuits(List<String> affectedCircuits) {
-            this.affectedCircuits = Objects.requireNonNull(affectedCircuits);
+            $.affectedCircuits = affectedCircuits;
             return this;
         }
+
         public Builder affectedCircuits(String... affectedCircuits) {
             return affectedCircuits(List.of(affectedCircuits));
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder issueType(String issueType) {
-            this.issueType = Objects.requireNonNull(issueType);
+            $.issueType = issueType;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public InterconnectOutageNotificationResponse build() {
-            return new InterconnectOutageNotificationResponse(affectedCircuits, description, endTime, issueType, name, source, startTime, state);
+        }
+
+        public InterconnectOutageNotificationResponse build() {
+            $.affectedCircuits = Objects.requireNonNull($.affectedCircuits, "expected parameter 'affectedCircuits' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.issueType = Objects.requireNonNull($.issueType, "expected parameter 'issueType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

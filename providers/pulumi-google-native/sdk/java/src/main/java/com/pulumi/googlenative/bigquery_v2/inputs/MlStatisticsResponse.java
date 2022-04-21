@@ -19,7 +19,7 @@ public final class MlStatisticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="iterationResults", required=true)
-      private final List<IterationResultResponse> iterationResults;
+    private List<IterationResultResponse> iterationResults;
 
     public List<IterationResultResponse> iterationResults() {
         return this.iterationResults;
@@ -30,58 +30,56 @@ public final class MlStatisticsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="maxIterations", required=true)
-      private final String maxIterations;
+    private String maxIterations;
 
     public String maxIterations() {
         return this.maxIterations;
     }
 
-    public MlStatisticsResponse(
-        List<IterationResultResponse> iterationResults,
-        String maxIterations) {
-        this.iterationResults = Objects.requireNonNull(iterationResults, "expected parameter 'iterationResults' to be non-null");
-        this.maxIterations = Objects.requireNonNull(maxIterations, "expected parameter 'maxIterations' to be non-null");
-    }
+    private MlStatisticsResponse() {}
 
-    private MlStatisticsResponse() {
-        this.iterationResults = List.of();
-        this.maxIterations = null;
+    private MlStatisticsResponse(MlStatisticsResponse $) {
+        this.iterationResults = $.iterationResults;
+        this.maxIterations = $.maxIterations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MlStatisticsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<IterationResultResponse> iterationResults;
-        private String maxIterations;
+        private MlStatisticsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MlStatisticsResponse();
         }
 
         public Builder(MlStatisticsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iterationResults = defaults.iterationResults;
-    	      this.maxIterations = defaults.maxIterations;
+            $ = new MlStatisticsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iterationResults(List<IterationResultResponse> iterationResults) {
-            this.iterationResults = Objects.requireNonNull(iterationResults);
+            $.iterationResults = iterationResults;
             return this;
         }
+
         public Builder iterationResults(IterationResultResponse... iterationResults) {
             return iterationResults(List.of(iterationResults));
         }
+
         public Builder maxIterations(String maxIterations) {
-            this.maxIterations = Objects.requireNonNull(maxIterations);
+            $.maxIterations = maxIterations;
             return this;
-        }        public MlStatisticsResponse build() {
-            return new MlStatisticsResponse(iterationResults, maxIterations);
+        }
+
+        public MlStatisticsResponse build() {
+            $.iterationResults = Objects.requireNonNull($.iterationResults, "expected parameter 'iterationResults' to be non-null");
+            $.maxIterations = Objects.requireNonNull($.maxIterations, "expected parameter 'maxIterations' to be non-null");
+            return $;
         }
     }
+
 }

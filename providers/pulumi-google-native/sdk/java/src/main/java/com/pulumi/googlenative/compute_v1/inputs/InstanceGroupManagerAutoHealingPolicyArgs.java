@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends com.pulumi.
      * 
      */
     @Import(name="healthCheck")
-      private final @Nullable Output<String> healthCheck;
+    private @Nullable Output<String> healthCheck;
 
-    public Output<String> healthCheck() {
-        return this.healthCheck == null ? Codegen.empty() : this.healthCheck;
+    public Optional<Output<String>> healthCheck() {
+        return Optional.ofNullable(this.healthCheck);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends com.pulumi.
      * 
      */
     @Import(name="initialDelaySec")
-      private final @Nullable Output<Integer> initialDelaySec;
+    private @Nullable Output<Integer> initialDelaySec;
 
-    public Output<Integer> initialDelaySec() {
-        return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
+    public Optional<Output<Integer>> initialDelaySec() {
+        return Optional.ofNullable(this.initialDelaySec);
     }
 
-    public InstanceGroupManagerAutoHealingPolicyArgs(
-        @Nullable Output<String> healthCheck,
-        @Nullable Output<Integer> initialDelaySec) {
-        this.healthCheck = healthCheck;
-        this.initialDelaySec = initialDelaySec;
-    }
+    private InstanceGroupManagerAutoHealingPolicyArgs() {}
 
-    private InstanceGroupManagerAutoHealingPolicyArgs() {
-        this.healthCheck = Codegen.empty();
-        this.initialDelaySec = Codegen.empty();
+    private InstanceGroupManagerAutoHealingPolicyArgs(InstanceGroupManagerAutoHealingPolicyArgs $) {
+        this.healthCheck = $.healthCheck;
+        this.initialDelaySec = $.initialDelaySec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAutoHealingPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> healthCheck;
-        private @Nullable Output<Integer> initialDelaySec;
+        private InstanceGroupManagerAutoHealingPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAutoHealingPolicyArgs();
         }
 
         public Builder(InstanceGroupManagerAutoHealingPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.healthCheck = defaults.healthCheck;
-    	      this.initialDelaySec = defaults.initialDelaySec;
+            $ = new InstanceGroupManagerAutoHealingPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder healthCheck(@Nullable Output<String> healthCheck) {
-            this.healthCheck = healthCheck;
+            $.healthCheck = healthCheck;
             return this;
         }
-        public Builder healthCheck(@Nullable String healthCheck) {
-            this.healthCheck = Codegen.ofNullable(healthCheck);
-            return this;
+
+        public Builder healthCheck(String healthCheck) {
+            return healthCheck(Output.of(healthCheck));
         }
+
         public Builder initialDelaySec(@Nullable Output<Integer> initialDelaySec) {
-            this.initialDelaySec = initialDelaySec;
+            $.initialDelaySec = initialDelaySec;
             return this;
         }
-        public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Codegen.ofNullable(initialDelaySec);
-            return this;
-        }        public InstanceGroupManagerAutoHealingPolicyArgs build() {
-            return new InstanceGroupManagerAutoHealingPolicyArgs(healthCheck, initialDelaySec);
+
+        public Builder initialDelaySec(Integer initialDelaySec) {
+            return initialDelaySec(Output.of(initialDelaySec));
+        }
+
+        public InstanceGroupManagerAutoHealingPolicyArgs build() {
+            return $;
         }
     }
+
 }

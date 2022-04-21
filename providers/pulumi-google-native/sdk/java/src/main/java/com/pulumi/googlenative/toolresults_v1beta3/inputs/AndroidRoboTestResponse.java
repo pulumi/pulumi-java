@@ -22,7 +22,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="appInitialActivity", required=true)
-      private final String appInitialActivity;
+    private String appInitialActivity;
 
     public String appInitialActivity() {
         return this.appInitialActivity;
@@ -33,7 +33,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bootstrapPackageId", required=true)
-      private final String bootstrapPackageId;
+    private String bootstrapPackageId;
 
     public String bootstrapPackageId() {
         return this.bootstrapPackageId;
@@ -44,7 +44,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="bootstrapRunnerClass", required=true)
-      private final String bootstrapRunnerClass;
+    private String bootstrapRunnerClass;
 
     public String bootstrapRunnerClass() {
         return this.bootstrapRunnerClass;
@@ -55,7 +55,7 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxDepth", required=true)
-      private final Integer maxDepth;
+    private Integer maxDepth;
 
     public Integer maxDepth() {
         return this.maxDepth;
@@ -66,82 +66,73 @@ public final class AndroidRoboTestResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="maxSteps", required=true)
-      private final Integer maxSteps;
+    private Integer maxSteps;
 
     public Integer maxSteps() {
         return this.maxSteps;
     }
 
-    public AndroidRoboTestResponse(
-        String appInitialActivity,
-        String bootstrapPackageId,
-        String bootstrapRunnerClass,
-        Integer maxDepth,
-        Integer maxSteps) {
-        this.appInitialActivity = Objects.requireNonNull(appInitialActivity, "expected parameter 'appInitialActivity' to be non-null");
-        this.bootstrapPackageId = Objects.requireNonNull(bootstrapPackageId, "expected parameter 'bootstrapPackageId' to be non-null");
-        this.bootstrapRunnerClass = Objects.requireNonNull(bootstrapRunnerClass, "expected parameter 'bootstrapRunnerClass' to be non-null");
-        this.maxDepth = Objects.requireNonNull(maxDepth, "expected parameter 'maxDepth' to be non-null");
-        this.maxSteps = Objects.requireNonNull(maxSteps, "expected parameter 'maxSteps' to be non-null");
-    }
+    private AndroidRoboTestResponse() {}
 
-    private AndroidRoboTestResponse() {
-        this.appInitialActivity = null;
-        this.bootstrapPackageId = null;
-        this.bootstrapRunnerClass = null;
-        this.maxDepth = null;
-        this.maxSteps = null;
+    private AndroidRoboTestResponse(AndroidRoboTestResponse $) {
+        this.appInitialActivity = $.appInitialActivity;
+        this.bootstrapPackageId = $.bootstrapPackageId;
+        this.bootstrapRunnerClass = $.bootstrapRunnerClass;
+        this.maxDepth = $.maxDepth;
+        this.maxSteps = $.maxSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidRoboTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appInitialActivity;
-        private String bootstrapPackageId;
-        private String bootstrapRunnerClass;
-        private Integer maxDepth;
-        private Integer maxSteps;
+        private AndroidRoboTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidRoboTestResponse();
         }
 
         public Builder(AndroidRoboTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appInitialActivity = defaults.appInitialActivity;
-    	      this.bootstrapPackageId = defaults.bootstrapPackageId;
-    	      this.bootstrapRunnerClass = defaults.bootstrapRunnerClass;
-    	      this.maxDepth = defaults.maxDepth;
-    	      this.maxSteps = defaults.maxSteps;
+            $ = new AndroidRoboTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appInitialActivity(String appInitialActivity) {
-            this.appInitialActivity = Objects.requireNonNull(appInitialActivity);
+            $.appInitialActivity = appInitialActivity;
             return this;
         }
+
         public Builder bootstrapPackageId(String bootstrapPackageId) {
-            this.bootstrapPackageId = Objects.requireNonNull(bootstrapPackageId);
+            $.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
+
         public Builder bootstrapRunnerClass(String bootstrapRunnerClass) {
-            this.bootstrapRunnerClass = Objects.requireNonNull(bootstrapRunnerClass);
+            $.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
+
         public Builder maxDepth(Integer maxDepth) {
-            this.maxDepth = Objects.requireNonNull(maxDepth);
+            $.maxDepth = maxDepth;
             return this;
         }
+
         public Builder maxSteps(Integer maxSteps) {
-            this.maxSteps = Objects.requireNonNull(maxSteps);
+            $.maxSteps = maxSteps;
             return this;
-        }        public AndroidRoboTestResponse build() {
-            return new AndroidRoboTestResponse(appInitialActivity, bootstrapPackageId, bootstrapRunnerClass, maxDepth, maxSteps);
+        }
+
+        public AndroidRoboTestResponse build() {
+            $.appInitialActivity = Objects.requireNonNull($.appInitialActivity, "expected parameter 'appInitialActivity' to be non-null");
+            $.bootstrapPackageId = Objects.requireNonNull($.bootstrapPackageId, "expected parameter 'bootstrapPackageId' to be non-null");
+            $.bootstrapRunnerClass = Objects.requireNonNull($.bootstrapRunnerClass, "expected parameter 'bootstrapRunnerClass' to be non-null");
+            $.maxDepth = Objects.requireNonNull($.maxDepth, "expected parameter 'maxDepth' to be non-null");
+            $.maxSteps = Objects.requireNonNull($.maxSteps, "expected parameter 'maxSteps' to be non-null");
+            return $;
         }
     }
+
 }

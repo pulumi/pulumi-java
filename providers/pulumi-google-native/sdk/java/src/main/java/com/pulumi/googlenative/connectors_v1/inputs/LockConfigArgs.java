@@ -5,10 +5,10 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LockConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locked")
-      private final @Nullable Output<Boolean> locked;
+    private @Nullable Output<Boolean> locked;
 
-    public Output<Boolean> locked() {
-        return this.locked == null ? Codegen.empty() : this.locked;
+    public Optional<Output<Boolean>> locked() {
+        return Optional.ofNullable(this.locked);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class LockConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
-    public LockConfigArgs(
-        @Nullable Output<Boolean> locked,
-        @Nullable Output<String> reason) {
-        this.locked = locked;
-        this.reason = reason;
-    }
+    private LockConfigArgs() {}
 
-    private LockConfigArgs() {
-        this.locked = Codegen.empty();
-        this.reason = Codegen.empty();
+    private LockConfigArgs(LockConfigArgs $) {
+        this.locked = $.locked;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LockConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> locked;
-        private @Nullable Output<String> reason;
+        private LockConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LockConfigArgs();
         }
 
         public Builder(LockConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.locked = defaults.locked;
-    	      this.reason = defaults.reason;
+            $ = new LockConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder locked(@Nullable Output<Boolean> locked) {
-            this.locked = locked;
+            $.locked = locked;
             return this;
         }
-        public Builder locked(@Nullable Boolean locked) {
-            this.locked = Codegen.ofNullable(locked);
-            return this;
+
+        public Builder locked(Boolean locked) {
+            return locked(Output.of(locked));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
-        }        public LockConfigArgs build() {
-            return new LockConfigArgs(locked, reason);
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
+        }
+
+        public LockConfigArgs build() {
+            return $;
         }
     }
+
 }

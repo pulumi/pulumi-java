@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends com
      * 
      */
     @Import(name="bigqueryDestination")
-      private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
+    private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
-    public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination() {
-        return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
+    public Optional<Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs>> bigqueryDestination() {
+        return Optional.ofNullable(this.bigqueryDestination);
     }
 
-    public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
-        this.bigqueryDestination = bigqueryDestination;
-    }
+    private GoogleCloudHealthcareV1beta1DicomStreamConfigArgs() {}
 
-    private GoogleCloudHealthcareV1beta1DicomStreamConfigArgs() {
-        this.bigqueryDestination = Codegen.empty();
+    private GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(GoogleCloudHealthcareV1beta1DicomStreamConfigArgs $) {
+        this.bigqueryDestination = $.bigqueryDestination;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudHealthcareV1beta1DicomStreamConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
+        private GoogleCloudHealthcareV1beta1DicomStreamConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs();
         }
 
         public Builder(GoogleCloudHealthcareV1beta1DicomStreamConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
+            $ = new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination) {
-            this.bigqueryDestination = bigqueryDestination;
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
-        public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Codegen.ofNullable(bigqueryDestination);
-            return this;
-        }        public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
-            return new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(bigqueryDestination);
+
+        public Builder bigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs bigqueryDestination) {
+            return bigqueryDestination(Output.of(bigqueryDestination));
+        }
+
+        public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
+            return $;
         }
     }
+
 }

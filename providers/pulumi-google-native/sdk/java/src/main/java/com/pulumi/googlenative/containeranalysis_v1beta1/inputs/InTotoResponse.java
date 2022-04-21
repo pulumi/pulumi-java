@@ -24,7 +24,7 @@ public final class InTotoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expectedCommand", required=true)
-      private final List<String> expectedCommand;
+    private List<String> expectedCommand;
 
     public List<String> expectedCommand() {
         return this.expectedCommand;
@@ -35,14 +35,14 @@ public final class InTotoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expectedMaterials", required=true)
-      private final List<ArtifactRuleResponse> expectedMaterials;
+    private List<ArtifactRuleResponse> expectedMaterials;
 
     public List<ArtifactRuleResponse> expectedMaterials() {
         return this.expectedMaterials;
     }
 
     @Import(name="expectedProducts", required=true)
-      private final List<ArtifactRuleResponse> expectedProducts;
+    private List<ArtifactRuleResponse> expectedProducts;
 
     public List<ArtifactRuleResponse> expectedProducts() {
         return this.expectedProducts;
@@ -53,7 +53,7 @@ public final class InTotoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signingKeys", required=true)
-      private final List<SigningKeyResponse> signingKeys;
+    private List<SigningKeyResponse> signingKeys;
 
     public List<SigningKeyResponse> signingKeys() {
         return this.signingKeys;
@@ -64,7 +64,7 @@ public final class InTotoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stepName", required=true)
-      private final String stepName;
+    private String stepName;
 
     public String stepName() {
         return this.stepName;
@@ -75,103 +75,96 @@ public final class InTotoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="threshold", required=true)
-      private final String threshold;
+    private String threshold;
 
     public String threshold() {
         return this.threshold;
     }
 
-    public InTotoResponse(
-        List<String> expectedCommand,
-        List<ArtifactRuleResponse> expectedMaterials,
-        List<ArtifactRuleResponse> expectedProducts,
-        List<SigningKeyResponse> signingKeys,
-        String stepName,
-        String threshold) {
-        this.expectedCommand = Objects.requireNonNull(expectedCommand, "expected parameter 'expectedCommand' to be non-null");
-        this.expectedMaterials = Objects.requireNonNull(expectedMaterials, "expected parameter 'expectedMaterials' to be non-null");
-        this.expectedProducts = Objects.requireNonNull(expectedProducts, "expected parameter 'expectedProducts' to be non-null");
-        this.signingKeys = Objects.requireNonNull(signingKeys, "expected parameter 'signingKeys' to be non-null");
-        this.stepName = Objects.requireNonNull(stepName, "expected parameter 'stepName' to be non-null");
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-    }
+    private InTotoResponse() {}
 
-    private InTotoResponse() {
-        this.expectedCommand = List.of();
-        this.expectedMaterials = List.of();
-        this.expectedProducts = List.of();
-        this.signingKeys = List.of();
-        this.stepName = null;
-        this.threshold = null;
+    private InTotoResponse(InTotoResponse $) {
+        this.expectedCommand = $.expectedCommand;
+        this.expectedMaterials = $.expectedMaterials;
+        this.expectedProducts = $.expectedProducts;
+        this.signingKeys = $.signingKeys;
+        this.stepName = $.stepName;
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InTotoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> expectedCommand;
-        private List<ArtifactRuleResponse> expectedMaterials;
-        private List<ArtifactRuleResponse> expectedProducts;
-        private List<SigningKeyResponse> signingKeys;
-        private String stepName;
-        private String threshold;
+        private InTotoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InTotoResponse();
         }
 
         public Builder(InTotoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expectedCommand = defaults.expectedCommand;
-    	      this.expectedMaterials = defaults.expectedMaterials;
-    	      this.expectedProducts = defaults.expectedProducts;
-    	      this.signingKeys = defaults.signingKeys;
-    	      this.stepName = defaults.stepName;
-    	      this.threshold = defaults.threshold;
+            $ = new InTotoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expectedCommand(List<String> expectedCommand) {
-            this.expectedCommand = Objects.requireNonNull(expectedCommand);
+            $.expectedCommand = expectedCommand;
             return this;
         }
+
         public Builder expectedCommand(String... expectedCommand) {
             return expectedCommand(List.of(expectedCommand));
         }
+
         public Builder expectedMaterials(List<ArtifactRuleResponse> expectedMaterials) {
-            this.expectedMaterials = Objects.requireNonNull(expectedMaterials);
+            $.expectedMaterials = expectedMaterials;
             return this;
         }
+
         public Builder expectedMaterials(ArtifactRuleResponse... expectedMaterials) {
             return expectedMaterials(List.of(expectedMaterials));
         }
+
         public Builder expectedProducts(List<ArtifactRuleResponse> expectedProducts) {
-            this.expectedProducts = Objects.requireNonNull(expectedProducts);
+            $.expectedProducts = expectedProducts;
             return this;
         }
+
         public Builder expectedProducts(ArtifactRuleResponse... expectedProducts) {
             return expectedProducts(List.of(expectedProducts));
         }
+
         public Builder signingKeys(List<SigningKeyResponse> signingKeys) {
-            this.signingKeys = Objects.requireNonNull(signingKeys);
+            $.signingKeys = signingKeys;
             return this;
         }
+
         public Builder signingKeys(SigningKeyResponse... signingKeys) {
             return signingKeys(List.of(signingKeys));
         }
+
         public Builder stepName(String stepName) {
-            this.stepName = Objects.requireNonNull(stepName);
+            $.stepName = stepName;
             return this;
         }
+
         public Builder threshold(String threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
-        }        public InTotoResponse build() {
-            return new InTotoResponse(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
+        }
+
+        public InTotoResponse build() {
+            $.expectedCommand = Objects.requireNonNull($.expectedCommand, "expected parameter 'expectedCommand' to be non-null");
+            $.expectedMaterials = Objects.requireNonNull($.expectedMaterials, "expected parameter 'expectedMaterials' to be non-null");
+            $.expectedProducts = Objects.requireNonNull($.expectedProducts, "expected parameter 'expectedProducts' to be non-null");
+            $.signingKeys = Objects.requireNonNull($.signingKeys, "expected parameter 'signingKeys' to be non-null");
+            $.stepName = Objects.requireNonNull($.stepName, "expected parameter 'stepName' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class AndroidDeviceListResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="androidDevices", required=true)
-      private final List<AndroidDeviceResponse> androidDevices;
+    private List<AndroidDeviceResponse> androidDevices;
 
     public List<AndroidDeviceResponse> androidDevices() {
         return this.androidDevices;
     }
 
-    public AndroidDeviceListResponse(List<AndroidDeviceResponse> androidDevices) {
-        this.androidDevices = Objects.requireNonNull(androidDevices, "expected parameter 'androidDevices' to be non-null");
-    }
+    private AndroidDeviceListResponse() {}
 
-    private AndroidDeviceListResponse() {
-        this.androidDevices = List.of();
+    private AndroidDeviceListResponse(AndroidDeviceListResponse $) {
+        this.androidDevices = $.androidDevices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidDeviceListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AndroidDeviceResponse> androidDevices;
+        private AndroidDeviceListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidDeviceListResponse();
         }
 
         public Builder(AndroidDeviceListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidDevices = defaults.androidDevices;
+            $ = new AndroidDeviceListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder androidDevices(List<AndroidDeviceResponse> androidDevices) {
-            this.androidDevices = Objects.requireNonNull(androidDevices);
+            $.androidDevices = androidDevices;
             return this;
         }
+
         public Builder androidDevices(AndroidDeviceResponse... androidDevices) {
             return androidDevices(List.of(androidDevices));
-        }        public AndroidDeviceListResponse build() {
-            return new AndroidDeviceListResponse(androidDevices);
+        }
+
+        public AndroidDeviceListResponse build() {
+            $.androidDevices = Objects.requireNonNull($.androidDevices, "expected parameter 'androidDevices' to be non-null");
+            return $;
         }
     }
+
 }

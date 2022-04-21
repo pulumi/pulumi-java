@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datacatalog_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecArgs extends com.pulumi
 
     public static final GoogleCloudDatacatalogV1beta1TableSpecArgs Empty = new GoogleCloudDatacatalogV1beta1TableSpecArgs();
 
-    public GoogleCloudDatacatalogV1beta1TableSpecArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleCloudDatacatalogV1beta1TableSpecArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleCloudDatacatalogV1beta1TableSpecArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleCloudDatacatalogV1beta1TableSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleCloudDatacatalogV1beta1TableSpecArgs();
         }
         public GoogleCloudDatacatalogV1beta1TableSpecArgs build() {
-            return new GoogleCloudDatacatalogV1beta1TableSpecArgs();
+            return $;
         }
     }
+
 }

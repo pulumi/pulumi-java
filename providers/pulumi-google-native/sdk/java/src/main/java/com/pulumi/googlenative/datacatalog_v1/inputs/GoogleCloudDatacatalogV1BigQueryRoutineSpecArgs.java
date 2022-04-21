@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends com.p
      * 
      */
     @Import(name="importedLibraries")
-      private final @Nullable Output<List<String>> importedLibraries;
+    private @Nullable Output<List<String>> importedLibraries;
 
-    public Output<List<String>> importedLibraries() {
-        return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
+    public Optional<Output<List<String>>> importedLibraries() {
+        return Optional.ofNullable(this.importedLibraries);
     }
 
-    public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(@Nullable Output<List<String>> importedLibraries) {
-        this.importedLibraries = importedLibraries;
-    }
+    private GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs() {}
 
-    private GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs() {
-        this.importedLibraries = Codegen.empty();
+    private GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs $) {
+        this.importedLibraries = $.importedLibraries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> importedLibraries;
+        private GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.importedLibraries = defaults.importedLibraries;
+            $ = new GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
-            this.importedLibraries = importedLibraries;
+            $.importedLibraries = importedLibraries;
             return this;
         }
-        public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Codegen.ofNullable(importedLibraries);
-            return this;
+
+        public Builder importedLibraries(List<String> importedLibraries) {
+            return importedLibraries(Output.of(importedLibraries));
         }
+
         public Builder importedLibraries(String... importedLibraries) {
             return importedLibraries(List.of(importedLibraries));
-        }        public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs build() {
-            return new GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(importedLibraries);
+        }
+
+        public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs build() {
+            return $;
         }
     }
+
 }

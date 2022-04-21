@@ -26,7 +26,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="fullPathMatch", required=true)
-      private final String fullPathMatch;
+    private String fullPathMatch;
 
     public String fullPathMatch() {
         return this.fullPathMatch;
@@ -37,7 +37,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="headerMatches", required=true)
-      private final List<HttpHeaderMatchResponse> headerMatches;
+    private List<HttpHeaderMatchResponse> headerMatches;
 
     public List<HttpHeaderMatchResponse> headerMatches() {
         return this.headerMatches;
@@ -48,7 +48,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ignoreCase", required=true)
-      private final Boolean ignoreCase;
+    private Boolean ignoreCase;
 
     public Boolean ignoreCase() {
         return this.ignoreCase;
@@ -59,7 +59,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="metadataFilters", required=true)
-      private final List<MetadataFilterResponse> metadataFilters;
+    private List<MetadataFilterResponse> metadataFilters;
 
     public List<MetadataFilterResponse> metadataFilters() {
         return this.metadataFilters;
@@ -70,7 +70,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="prefixMatch", required=true)
-      private final String prefixMatch;
+    private String prefixMatch;
 
     public String prefixMatch() {
         return this.prefixMatch;
@@ -81,7 +81,7 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="queryParameterMatches", required=true)
-      private final List<HttpQueryParameterMatchResponse> queryParameterMatches;
+    private List<HttpQueryParameterMatchResponse> queryParameterMatches;
 
     public List<HttpQueryParameterMatchResponse> queryParameterMatches() {
         return this.queryParameterMatches;
@@ -92,109 +92,99 @@ public final class HttpRouteRuleMatchResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="regexMatch", required=true)
-      private final String regexMatch;
+    private String regexMatch;
 
     public String regexMatch() {
         return this.regexMatch;
     }
 
-    public HttpRouteRuleMatchResponse(
-        String fullPathMatch,
-        List<HttpHeaderMatchResponse> headerMatches,
-        Boolean ignoreCase,
-        List<MetadataFilterResponse> metadataFilters,
-        String prefixMatch,
-        List<HttpQueryParameterMatchResponse> queryParameterMatches,
-        String regexMatch) {
-        this.fullPathMatch = Objects.requireNonNull(fullPathMatch, "expected parameter 'fullPathMatch' to be non-null");
-        this.headerMatches = Objects.requireNonNull(headerMatches, "expected parameter 'headerMatches' to be non-null");
-        this.ignoreCase = Objects.requireNonNull(ignoreCase, "expected parameter 'ignoreCase' to be non-null");
-        this.metadataFilters = Objects.requireNonNull(metadataFilters, "expected parameter 'metadataFilters' to be non-null");
-        this.prefixMatch = Objects.requireNonNull(prefixMatch, "expected parameter 'prefixMatch' to be non-null");
-        this.queryParameterMatches = Objects.requireNonNull(queryParameterMatches, "expected parameter 'queryParameterMatches' to be non-null");
-        this.regexMatch = Objects.requireNonNull(regexMatch, "expected parameter 'regexMatch' to be non-null");
-    }
+    private HttpRouteRuleMatchResponse() {}
 
-    private HttpRouteRuleMatchResponse() {
-        this.fullPathMatch = null;
-        this.headerMatches = List.of();
-        this.ignoreCase = null;
-        this.metadataFilters = List.of();
-        this.prefixMatch = null;
-        this.queryParameterMatches = List.of();
-        this.regexMatch = null;
+    private HttpRouteRuleMatchResponse(HttpRouteRuleMatchResponse $) {
+        this.fullPathMatch = $.fullPathMatch;
+        this.headerMatches = $.headerMatches;
+        this.ignoreCase = $.ignoreCase;
+        this.metadataFilters = $.metadataFilters;
+        this.prefixMatch = $.prefixMatch;
+        this.queryParameterMatches = $.queryParameterMatches;
+        this.regexMatch = $.regexMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRouteRuleMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fullPathMatch;
-        private List<HttpHeaderMatchResponse> headerMatches;
-        private Boolean ignoreCase;
-        private List<MetadataFilterResponse> metadataFilters;
-        private String prefixMatch;
-        private List<HttpQueryParameterMatchResponse> queryParameterMatches;
-        private String regexMatch;
+        private HttpRouteRuleMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRouteRuleMatchResponse();
         }
 
         public Builder(HttpRouteRuleMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullPathMatch = defaults.fullPathMatch;
-    	      this.headerMatches = defaults.headerMatches;
-    	      this.ignoreCase = defaults.ignoreCase;
-    	      this.metadataFilters = defaults.metadataFilters;
-    	      this.prefixMatch = defaults.prefixMatch;
-    	      this.queryParameterMatches = defaults.queryParameterMatches;
-    	      this.regexMatch = defaults.regexMatch;
+            $ = new HttpRouteRuleMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fullPathMatch(String fullPathMatch) {
-            this.fullPathMatch = Objects.requireNonNull(fullPathMatch);
+            $.fullPathMatch = fullPathMatch;
             return this;
         }
+
         public Builder headerMatches(List<HttpHeaderMatchResponse> headerMatches) {
-            this.headerMatches = Objects.requireNonNull(headerMatches);
+            $.headerMatches = headerMatches;
             return this;
         }
+
         public Builder headerMatches(HttpHeaderMatchResponse... headerMatches) {
             return headerMatches(List.of(headerMatches));
         }
+
         public Builder ignoreCase(Boolean ignoreCase) {
-            this.ignoreCase = Objects.requireNonNull(ignoreCase);
+            $.ignoreCase = ignoreCase;
             return this;
         }
+
         public Builder metadataFilters(List<MetadataFilterResponse> metadataFilters) {
-            this.metadataFilters = Objects.requireNonNull(metadataFilters);
+            $.metadataFilters = metadataFilters;
             return this;
         }
+
         public Builder metadataFilters(MetadataFilterResponse... metadataFilters) {
             return metadataFilters(List.of(metadataFilters));
         }
+
         public Builder prefixMatch(String prefixMatch) {
-            this.prefixMatch = Objects.requireNonNull(prefixMatch);
+            $.prefixMatch = prefixMatch;
             return this;
         }
+
         public Builder queryParameterMatches(List<HttpQueryParameterMatchResponse> queryParameterMatches) {
-            this.queryParameterMatches = Objects.requireNonNull(queryParameterMatches);
+            $.queryParameterMatches = queryParameterMatches;
             return this;
         }
+
         public Builder queryParameterMatches(HttpQueryParameterMatchResponse... queryParameterMatches) {
             return queryParameterMatches(List.of(queryParameterMatches));
         }
+
         public Builder regexMatch(String regexMatch) {
-            this.regexMatch = Objects.requireNonNull(regexMatch);
+            $.regexMatch = regexMatch;
             return this;
-        }        public HttpRouteRuleMatchResponse build() {
-            return new HttpRouteRuleMatchResponse(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
+        }
+
+        public HttpRouteRuleMatchResponse build() {
+            $.fullPathMatch = Objects.requireNonNull($.fullPathMatch, "expected parameter 'fullPathMatch' to be non-null");
+            $.headerMatches = Objects.requireNonNull($.headerMatches, "expected parameter 'headerMatches' to be non-null");
+            $.ignoreCase = Objects.requireNonNull($.ignoreCase, "expected parameter 'ignoreCase' to be non-null");
+            $.metadataFilters = Objects.requireNonNull($.metadataFilters, "expected parameter 'metadataFilters' to be non-null");
+            $.prefixMatch = Objects.requireNonNull($.prefixMatch, "expected parameter 'prefixMatch' to be non-null");
+            $.queryParameterMatches = Objects.requireNonNull($.queryParameterMatches, "expected parameter 'queryParameterMatches' to be non-null");
+            $.regexMatch = Objects.requireNonNull($.regexMatch, "expected parameter 'regexMatch' to be non-null");
+            return $;
         }
     }
+
 }

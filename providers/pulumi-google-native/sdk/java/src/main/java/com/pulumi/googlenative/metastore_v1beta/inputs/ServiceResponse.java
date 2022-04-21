@@ -29,7 +29,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="artifactGcsUri", required=true)
-      private final String artifactGcsUri;
+    private String artifactGcsUri;
 
     public String artifactGcsUri() {
         return this.artifactGcsUri;
@@ -40,7 +40,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -51,7 +51,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseType", required=true)
-      private final String databaseType;
+    private String databaseType;
 
     public String databaseType() {
         return this.databaseType;
@@ -62,7 +62,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encryptionConfig", required=true)
-      private final EncryptionConfigResponse encryptionConfig;
+    private EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
@@ -73,7 +73,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointUri", required=true)
-      private final String endpointUri;
+    private String endpointUri;
 
     public String endpointUri() {
         return this.endpointUri;
@@ -84,7 +84,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hiveMetastoreConfig", required=true)
-      private final HiveMetastoreConfigResponse hiveMetastoreConfig;
+    private HiveMetastoreConfigResponse hiveMetastoreConfig;
 
     public HiveMetastoreConfigResponse hiveMetastoreConfig() {
         return this.hiveMetastoreConfig;
@@ -95,7 +95,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -106,7 +106,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maintenanceWindow", required=true)
-      private final MaintenanceWindowResponse maintenanceWindow;
+    private MaintenanceWindowResponse maintenanceWindow;
 
     public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
@@ -117,7 +117,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadataIntegration", required=true)
-      private final MetadataIntegrationResponse metadataIntegration;
+    private MetadataIntegrationResponse metadataIntegration;
 
     public MetadataIntegrationResponse metadataIntegration() {
         return this.metadataIntegration;
@@ -128,7 +128,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadataManagementActivity", required=true)
-      private final MetadataManagementActivityResponse metadataManagementActivity;
+    private MetadataManagementActivityResponse metadataManagementActivity;
 
     public MetadataManagementActivityResponse metadataManagementActivity() {
         return this.metadataManagementActivity;
@@ -139,7 +139,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -150,7 +150,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -161,7 +161,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkConfig", required=true)
-      private final NetworkConfigResponse networkConfig;
+    private NetworkConfigResponse networkConfig;
 
     public NetworkConfigResponse networkConfig() {
         return this.networkConfig;
@@ -172,7 +172,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -183,7 +183,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="releaseChannel", required=true)
-      private final String releaseChannel;
+    private String releaseChannel;
 
     public String releaseChannel() {
         return this.releaseChannel;
@@ -194,7 +194,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -205,7 +205,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stateMessage", required=true)
-      private final String stateMessage;
+    private String stateMessage;
 
     public String stateMessage() {
         return this.stateMessage;
@@ -216,7 +216,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
@@ -227,7 +227,7 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
@@ -238,217 +238,178 @@ public final class ServiceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public ServiceResponse(
-        String artifactGcsUri,
-        String createTime,
-        String databaseType,
-        EncryptionConfigResponse encryptionConfig,
-        String endpointUri,
-        HiveMetastoreConfigResponse hiveMetastoreConfig,
-        Map<String,String> labels,
-        MaintenanceWindowResponse maintenanceWindow,
-        MetadataIntegrationResponse metadataIntegration,
-        MetadataManagementActivityResponse metadataManagementActivity,
-        String name,
-        String network,
-        NetworkConfigResponse networkConfig,
-        Integer port,
-        String releaseChannel,
-        String state,
-        String stateMessage,
-        String tier,
-        String uid,
-        String updateTime) {
-        this.artifactGcsUri = Objects.requireNonNull(artifactGcsUri, "expected parameter 'artifactGcsUri' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.databaseType = Objects.requireNonNull(databaseType, "expected parameter 'databaseType' to be non-null");
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
-        this.endpointUri = Objects.requireNonNull(endpointUri, "expected parameter 'endpointUri' to be non-null");
-        this.hiveMetastoreConfig = Objects.requireNonNull(hiveMetastoreConfig, "expected parameter 'hiveMetastoreConfig' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow, "expected parameter 'maintenanceWindow' to be non-null");
-        this.metadataIntegration = Objects.requireNonNull(metadataIntegration, "expected parameter 'metadataIntegration' to be non-null");
-        this.metadataManagementActivity = Objects.requireNonNull(metadataManagementActivity, "expected parameter 'metadataManagementActivity' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.networkConfig = Objects.requireNonNull(networkConfig, "expected parameter 'networkConfig' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.releaseChannel = Objects.requireNonNull(releaseChannel, "expected parameter 'releaseChannel' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateMessage = Objects.requireNonNull(stateMessage, "expected parameter 'stateMessage' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private ServiceResponse() {}
 
-    private ServiceResponse() {
-        this.artifactGcsUri = null;
-        this.createTime = null;
-        this.databaseType = null;
-        this.encryptionConfig = null;
-        this.endpointUri = null;
-        this.hiveMetastoreConfig = null;
-        this.labels = Map.of();
-        this.maintenanceWindow = null;
-        this.metadataIntegration = null;
-        this.metadataManagementActivity = null;
-        this.name = null;
-        this.network = null;
-        this.networkConfig = null;
-        this.port = null;
-        this.releaseChannel = null;
-        this.state = null;
-        this.stateMessage = null;
-        this.tier = null;
-        this.uid = null;
-        this.updateTime = null;
+    private ServiceResponse(ServiceResponse $) {
+        this.artifactGcsUri = $.artifactGcsUri;
+        this.createTime = $.createTime;
+        this.databaseType = $.databaseType;
+        this.encryptionConfig = $.encryptionConfig;
+        this.endpointUri = $.endpointUri;
+        this.hiveMetastoreConfig = $.hiveMetastoreConfig;
+        this.labels = $.labels;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.metadataIntegration = $.metadataIntegration;
+        this.metadataManagementActivity = $.metadataManagementActivity;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkConfig = $.networkConfig;
+        this.port = $.port;
+        this.releaseChannel = $.releaseChannel;
+        this.state = $.state;
+        this.stateMessage = $.stateMessage;
+        this.tier = $.tier;
+        this.uid = $.uid;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String artifactGcsUri;
-        private String createTime;
-        private String databaseType;
-        private EncryptionConfigResponse encryptionConfig;
-        private String endpointUri;
-        private HiveMetastoreConfigResponse hiveMetastoreConfig;
-        private Map<String,String> labels;
-        private MaintenanceWindowResponse maintenanceWindow;
-        private MetadataIntegrationResponse metadataIntegration;
-        private MetadataManagementActivityResponse metadataManagementActivity;
-        private String name;
-        private String network;
-        private NetworkConfigResponse networkConfig;
-        private Integer port;
-        private String releaseChannel;
-        private String state;
-        private String stateMessage;
-        private String tier;
-        private String uid;
-        private String updateTime;
+        private ServiceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceResponse();
         }
 
         public Builder(ServiceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactGcsUri = defaults.artifactGcsUri;
-    	      this.createTime = defaults.createTime;
-    	      this.databaseType = defaults.databaseType;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.endpointUri = defaults.endpointUri;
-    	      this.hiveMetastoreConfig = defaults.hiveMetastoreConfig;
-    	      this.labels = defaults.labels;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.metadataIntegration = defaults.metadataIntegration;
-    	      this.metadataManagementActivity = defaults.metadataManagementActivity;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.port = defaults.port;
-    	      this.releaseChannel = defaults.releaseChannel;
-    	      this.state = defaults.state;
-    	      this.stateMessage = defaults.stateMessage;
-    	      this.tier = defaults.tier;
-    	      this.uid = defaults.uid;
-    	      this.updateTime = defaults.updateTime;
+            $ = new ServiceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactGcsUri(String artifactGcsUri) {
-            this.artifactGcsUri = Objects.requireNonNull(artifactGcsUri);
+            $.artifactGcsUri = artifactGcsUri;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder databaseType(String databaseType) {
-            this.databaseType = Objects.requireNonNull(databaseType);
+            $.databaseType = databaseType;
             return this;
         }
+
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
-            this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
+
         public Builder endpointUri(String endpointUri) {
-            this.endpointUri = Objects.requireNonNull(endpointUri);
+            $.endpointUri = endpointUri;
             return this;
         }
+
         public Builder hiveMetastoreConfig(HiveMetastoreConfigResponse hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = Objects.requireNonNull(hiveMetastoreConfig);
+            $.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
-            this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
+
         public Builder metadataIntegration(MetadataIntegrationResponse metadataIntegration) {
-            this.metadataIntegration = Objects.requireNonNull(metadataIntegration);
+            $.metadataIntegration = metadataIntegration;
             return this;
         }
+
         public Builder metadataManagementActivity(MetadataManagementActivityResponse metadataManagementActivity) {
-            this.metadataManagementActivity = Objects.requireNonNull(metadataManagementActivity);
+            $.metadataManagementActivity = metadataManagementActivity;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder networkConfig(NetworkConfigResponse networkConfig) {
-            this.networkConfig = Objects.requireNonNull(networkConfig);
+            $.networkConfig = networkConfig;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder releaseChannel(String releaseChannel) {
-            this.releaseChannel = Objects.requireNonNull(releaseChannel);
+            $.releaseChannel = releaseChannel;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateMessage(String stateMessage) {
-            this.stateMessage = Objects.requireNonNull(stateMessage);
+            $.stateMessage = stateMessage;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public ServiceResponse build() {
-            return new ServiceResponse(artifactGcsUri, createTime, databaseType, encryptionConfig, endpointUri, hiveMetastoreConfig, labels, maintenanceWindow, metadataIntegration, metadataManagementActivity, name, network, networkConfig, port, releaseChannel, state, stateMessage, tier, uid, updateTime);
+        }
+
+        public ServiceResponse build() {
+            $.artifactGcsUri = Objects.requireNonNull($.artifactGcsUri, "expected parameter 'artifactGcsUri' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.databaseType = Objects.requireNonNull($.databaseType, "expected parameter 'databaseType' to be non-null");
+            $.encryptionConfig = Objects.requireNonNull($.encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
+            $.endpointUri = Objects.requireNonNull($.endpointUri, "expected parameter 'endpointUri' to be non-null");
+            $.hiveMetastoreConfig = Objects.requireNonNull($.hiveMetastoreConfig, "expected parameter 'hiveMetastoreConfig' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.maintenanceWindow = Objects.requireNonNull($.maintenanceWindow, "expected parameter 'maintenanceWindow' to be non-null");
+            $.metadataIntegration = Objects.requireNonNull($.metadataIntegration, "expected parameter 'metadataIntegration' to be non-null");
+            $.metadataManagementActivity = Objects.requireNonNull($.metadataManagementActivity, "expected parameter 'metadataManagementActivity' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.networkConfig = Objects.requireNonNull($.networkConfig, "expected parameter 'networkConfig' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.releaseChannel = Objects.requireNonNull($.releaseChannel, "expected parameter 'releaseChannel' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateMessage = Objects.requireNonNull($.stateMessage, "expected parameter 'stateMessage' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

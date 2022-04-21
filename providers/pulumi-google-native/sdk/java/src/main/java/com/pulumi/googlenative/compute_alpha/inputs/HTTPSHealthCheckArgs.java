@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.HTTPSHealthCheckPortSpecification;
 import com.pulumi.googlenative.compute_alpha.enums.HTTPSHealthCheckProxyHeader;
 import com.pulumi.googlenative.compute_alpha.enums.HTTPSHealthCheckWeightReportMode;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="host")
-      private final @Nullable Output<String> host;
+    private @Nullable Output<String> host;
 
-    public Output<String> host() {
-        return this.host == null ? Codegen.empty() : this.host;
+    public Optional<Output<String>> host() {
+        return Optional.ofNullable(this.host);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="portName")
-      private final @Nullable Output<String> portName;
+    private @Nullable Output<String> portName;
 
-    public Output<String> portName() {
-        return this.portName == null ? Codegen.empty() : this.portName;
+    public Optional<Output<String>> portName() {
+        return Optional.ofNullable(this.portName);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="portSpecification")
-      private final @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification;
+    private @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification;
 
-    public Output<HTTPSHealthCheckPortSpecification> portSpecification() {
-        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
+    public Optional<Output<HTTPSHealthCheckPortSpecification>> portSpecification() {
+        return Optional.ofNullable(this.portSpecification);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="proxyHeader")
-      private final @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader;
+    private @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader;
 
-    public Output<HTTPSHealthCheckProxyHeader> proxyHeader() {
-        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
+    public Optional<Output<HTTPSHealthCheckProxyHeader>> proxyHeader() {
+        return Optional.ofNullable(this.proxyHeader);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="requestPath")
-      private final @Nullable Output<String> requestPath;
+    private @Nullable Output<String> requestPath;
 
-    public Output<String> requestPath() {
-        return this.requestPath == null ? Codegen.empty() : this.requestPath;
+    public Optional<Output<String>> requestPath() {
+        return Optional.ofNullable(this.requestPath);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="response")
-      private final @Nullable Output<String> response;
+    private @Nullable Output<String> response;
 
-    public Output<String> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<String>> response() {
+        return Optional.ofNullable(this.response);
     }
 
     /**
@@ -101,141 +101,118 @@ public final class HTTPSHealthCheckArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="weightReportMode")
-      private final @Nullable Output<HTTPSHealthCheckWeightReportMode> weightReportMode;
+    private @Nullable Output<HTTPSHealthCheckWeightReportMode> weightReportMode;
 
-    public Output<HTTPSHealthCheckWeightReportMode> weightReportMode() {
-        return this.weightReportMode == null ? Codegen.empty() : this.weightReportMode;
+    public Optional<Output<HTTPSHealthCheckWeightReportMode>> weightReportMode() {
+        return Optional.ofNullable(this.weightReportMode);
     }
 
-    public HTTPSHealthCheckArgs(
-        @Nullable Output<String> host,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> portName,
-        @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification,
-        @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader,
-        @Nullable Output<String> requestPath,
-        @Nullable Output<String> response,
-        @Nullable Output<HTTPSHealthCheckWeightReportMode> weightReportMode) {
-        this.host = host;
-        this.port = port;
-        this.portName = portName;
-        this.portSpecification = portSpecification;
-        this.proxyHeader = proxyHeader;
-        this.requestPath = requestPath;
-        this.response = response;
-        this.weightReportMode = weightReportMode;
-    }
+    private HTTPSHealthCheckArgs() {}
 
-    private HTTPSHealthCheckArgs() {
-        this.host = Codegen.empty();
-        this.port = Codegen.empty();
-        this.portName = Codegen.empty();
-        this.portSpecification = Codegen.empty();
-        this.proxyHeader = Codegen.empty();
-        this.requestPath = Codegen.empty();
-        this.response = Codegen.empty();
-        this.weightReportMode = Codegen.empty();
+    private HTTPSHealthCheckArgs(HTTPSHealthCheckArgs $) {
+        this.host = $.host;
+        this.port = $.port;
+        this.portName = $.portName;
+        this.portSpecification = $.portSpecification;
+        this.proxyHeader = $.proxyHeader;
+        this.requestPath = $.requestPath;
+        this.response = $.response;
+        this.weightReportMode = $.weightReportMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HTTPSHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> host;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> portName;
-        private @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification;
-        private @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader;
-        private @Nullable Output<String> requestPath;
-        private @Nullable Output<String> response;
-        private @Nullable Output<HTTPSHealthCheckWeightReportMode> weightReportMode;
+        private HTTPSHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HTTPSHealthCheckArgs();
         }
 
         public Builder(HTTPSHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.host = defaults.host;
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.portSpecification = defaults.portSpecification;
-    	      this.proxyHeader = defaults.proxyHeader;
-    	      this.requestPath = defaults.requestPath;
-    	      this.response = defaults.response;
-    	      this.weightReportMode = defaults.weightReportMode;
+            $ = new HTTPSHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder host(@Nullable Output<String> host) {
-            this.host = host;
+            $.host = host;
             return this;
         }
-        public Builder host(@Nullable String host) {
-            this.host = Codegen.ofNullable(host);
-            return this;
+
+        public Builder host(String host) {
+            return host(Output.of(host));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder portName(@Nullable Output<String> portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
         }
-        public Builder portName(@Nullable String portName) {
-            this.portName = Codegen.ofNullable(portName);
-            return this;
+
+        public Builder portName(String portName) {
+            return portName(Output.of(portName));
         }
+
         public Builder portSpecification(@Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification) {
-            this.portSpecification = portSpecification;
+            $.portSpecification = portSpecification;
             return this;
         }
-        public Builder portSpecification(@Nullable HTTPSHealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Codegen.ofNullable(portSpecification);
-            return this;
+
+        public Builder portSpecification(HTTPSHealthCheckPortSpecification portSpecification) {
+            return portSpecification(Output.of(portSpecification));
         }
+
         public Builder proxyHeader(@Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader) {
-            this.proxyHeader = proxyHeader;
+            $.proxyHeader = proxyHeader;
             return this;
         }
-        public Builder proxyHeader(@Nullable HTTPSHealthCheckProxyHeader proxyHeader) {
-            this.proxyHeader = Codegen.ofNullable(proxyHeader);
-            return this;
+
+        public Builder proxyHeader(HTTPSHealthCheckProxyHeader proxyHeader) {
+            return proxyHeader(Output.of(proxyHeader));
         }
+
         public Builder requestPath(@Nullable Output<String> requestPath) {
-            this.requestPath = requestPath;
+            $.requestPath = requestPath;
             return this;
         }
-        public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Codegen.ofNullable(requestPath);
-            return this;
+
+        public Builder requestPath(String requestPath) {
+            return requestPath(Output.of(requestPath));
         }
+
         public Builder response(@Nullable Output<String> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable String response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
+
+        public Builder response(String response) {
+            return response(Output.of(response));
         }
+
         public Builder weightReportMode(@Nullable Output<HTTPSHealthCheckWeightReportMode> weightReportMode) {
-            this.weightReportMode = weightReportMode;
+            $.weightReportMode = weightReportMode;
             return this;
         }
-        public Builder weightReportMode(@Nullable HTTPSHealthCheckWeightReportMode weightReportMode) {
-            this.weightReportMode = Codegen.ofNullable(weightReportMode);
-            return this;
-        }        public HTTPSHealthCheckArgs build() {
-            return new HTTPSHealthCheckArgs(host, port, portName, portSpecification, proxyHeader, requestPath, response, weightReportMode);
+
+        public Builder weightReportMode(HTTPSHealthCheckWeightReportMode weightReportMode) {
+            return weightReportMode(Output.of(weightReportMode));
+        }
+
+        public HTTPSHealthCheckArgs build() {
+            return $;
         }
     }
+
 }

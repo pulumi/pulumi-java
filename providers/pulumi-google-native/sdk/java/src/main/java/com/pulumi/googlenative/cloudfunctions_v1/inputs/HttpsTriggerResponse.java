@@ -21,7 +21,7 @@ public final class HttpsTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="securityLevel", required=true)
-      private final String securityLevel;
+    private String securityLevel;
 
     public String securityLevel() {
         return this.securityLevel;
@@ -32,55 +32,52 @@ public final class HttpsTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public HttpsTriggerResponse(
-        String securityLevel,
-        String url) {
-        this.securityLevel = Objects.requireNonNull(securityLevel, "expected parameter 'securityLevel' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private HttpsTriggerResponse() {}
 
-    private HttpsTriggerResponse() {
-        this.securityLevel = null;
-        this.url = null;
+    private HttpsTriggerResponse(HttpsTriggerResponse $) {
+        this.securityLevel = $.securityLevel;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpsTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String securityLevel;
-        private String url;
+        private HttpsTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpsTriggerResponse();
         }
 
         public Builder(HttpsTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.url = defaults.url;
+            $ = new HttpsTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder securityLevel(String securityLevel) {
-            this.securityLevel = Objects.requireNonNull(securityLevel);
+            $.securityLevel = securityLevel;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public HttpsTriggerResponse build() {
-            return new HttpsTriggerResponse(securityLevel, url);
+        }
+
+        public HttpsTriggerResponse build() {
+            $.securityLevel = Objects.requireNonNull($.securityLevel, "expected parameter 'securityLevel' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

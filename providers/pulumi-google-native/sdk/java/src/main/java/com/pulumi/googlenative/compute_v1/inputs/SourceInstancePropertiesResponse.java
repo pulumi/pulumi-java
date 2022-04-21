@@ -31,7 +31,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="canIpForward", required=true)
-      private final Boolean canIpForward;
+    private Boolean canIpForward;
 
     public Boolean canIpForward() {
         return this.canIpForward;
@@ -42,7 +42,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="deletionProtection", required=true)
-      private final Boolean deletionProtection;
+    private Boolean deletionProtection;
 
     public Boolean deletionProtection() {
         return this.deletionProtection;
@@ -53,7 +53,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -64,7 +64,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="disks", required=true)
-      private final List<SavedAttachedDiskResponse> disks;
+    private List<SavedAttachedDiskResponse> disks;
 
     public List<SavedAttachedDiskResponse> disks() {
         return this.disks;
@@ -75,7 +75,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="guestAccelerators", required=true)
-      private final List<AcceleratorConfigResponse> guestAccelerators;
+    private List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> guestAccelerators() {
         return this.guestAccelerators;
@@ -86,7 +86,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -97,7 +97,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -108,7 +108,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="metadata", required=true)
-      private final MetadataResponse metadata;
+    private MetadataResponse metadata;
 
     public MetadataResponse metadata() {
         return this.metadata;
@@ -119,7 +119,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="minCpuPlatform", required=true)
-      private final String minCpuPlatform;
+    private String minCpuPlatform;
 
     public String minCpuPlatform() {
         return this.minCpuPlatform;
@@ -130,7 +130,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="networkInterfaces", required=true)
-      private final List<NetworkInterfaceResponse> networkInterfaces;
+    private List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> networkInterfaces() {
         return this.networkInterfaces;
@@ -141,7 +141,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="scheduling", required=true)
-      private final SchedulingResponse scheduling;
+    private SchedulingResponse scheduling;
 
     public SchedulingResponse scheduling() {
         return this.scheduling;
@@ -152,7 +152,7 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="serviceAccounts", required=true)
-      private final List<ServiceAccountResponse> serviceAccounts;
+    private List<ServiceAccountResponse> serviceAccounts;
 
     public List<ServiceAccountResponse> serviceAccounts() {
         return this.serviceAccounts;
@@ -163,166 +163,145 @@ public final class SourceInstancePropertiesResponse extends com.pulumi.resources
      * 
      */
     @Import(name="tags", required=true)
-      private final TagsResponse tags;
+    private TagsResponse tags;
 
     public TagsResponse tags() {
         return this.tags;
     }
 
-    public SourceInstancePropertiesResponse(
-        Boolean canIpForward,
-        Boolean deletionProtection,
-        String description,
-        List<SavedAttachedDiskResponse> disks,
-        List<AcceleratorConfigResponse> guestAccelerators,
-        Map<String,String> labels,
-        String machineType,
-        MetadataResponse metadata,
-        String minCpuPlatform,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        SchedulingResponse scheduling,
-        List<ServiceAccountResponse> serviceAccounts,
-        TagsResponse tags) {
-        this.canIpForward = Objects.requireNonNull(canIpForward, "expected parameter 'canIpForward' to be non-null");
-        this.deletionProtection = Objects.requireNonNull(deletionProtection, "expected parameter 'deletionProtection' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.disks = Objects.requireNonNull(disks, "expected parameter 'disks' to be non-null");
-        this.guestAccelerators = Objects.requireNonNull(guestAccelerators, "expected parameter 'guestAccelerators' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
-        this.networkInterfaces = Objects.requireNonNull(networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
-        this.scheduling = Objects.requireNonNull(scheduling, "expected parameter 'scheduling' to be non-null");
-        this.serviceAccounts = Objects.requireNonNull(serviceAccounts, "expected parameter 'serviceAccounts' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-    }
+    private SourceInstancePropertiesResponse() {}
 
-    private SourceInstancePropertiesResponse() {
-        this.canIpForward = null;
-        this.deletionProtection = null;
-        this.description = null;
-        this.disks = List.of();
-        this.guestAccelerators = List.of();
-        this.labels = Map.of();
-        this.machineType = null;
-        this.metadata = null;
-        this.minCpuPlatform = null;
-        this.networkInterfaces = List.of();
-        this.scheduling = null;
-        this.serviceAccounts = List.of();
-        this.tags = null;
+    private SourceInstancePropertiesResponse(SourceInstancePropertiesResponse $) {
+        this.canIpForward = $.canIpForward;
+        this.deletionProtection = $.deletionProtection;
+        this.description = $.description;
+        this.disks = $.disks;
+        this.guestAccelerators = $.guestAccelerators;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.networkInterfaces = $.networkInterfaces;
+        this.scheduling = $.scheduling;
+        this.serviceAccounts = $.serviceAccounts;
+        this.tags = $.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceInstancePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canIpForward;
-        private Boolean deletionProtection;
-        private String description;
-        private List<SavedAttachedDiskResponse> disks;
-        private List<AcceleratorConfigResponse> guestAccelerators;
-        private Map<String,String> labels;
-        private String machineType;
-        private MetadataResponse metadata;
-        private String minCpuPlatform;
-        private List<NetworkInterfaceResponse> networkInterfaces;
-        private SchedulingResponse scheduling;
-        private List<ServiceAccountResponse> serviceAccounts;
-        private TagsResponse tags;
+        private SourceInstancePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceInstancePropertiesResponse();
         }
 
         public Builder(SourceInstancePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canIpForward = defaults.canIpForward;
-    	      this.deletionProtection = defaults.deletionProtection;
-    	      this.description = defaults.description;
-    	      this.disks = defaults.disks;
-    	      this.guestAccelerators = defaults.guestAccelerators;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.networkInterfaces = defaults.networkInterfaces;
-    	      this.scheduling = defaults.scheduling;
-    	      this.serviceAccounts = defaults.serviceAccounts;
-    	      this.tags = defaults.tags;
+            $ = new SourceInstancePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canIpForward(Boolean canIpForward) {
-            this.canIpForward = Objects.requireNonNull(canIpForward);
+            $.canIpForward = canIpForward;
             return this;
         }
+
         public Builder deletionProtection(Boolean deletionProtection) {
-            this.deletionProtection = Objects.requireNonNull(deletionProtection);
+            $.deletionProtection = deletionProtection;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder disks(List<SavedAttachedDiskResponse> disks) {
-            this.disks = Objects.requireNonNull(disks);
+            $.disks = disks;
             return this;
         }
+
         public Builder disks(SavedAttachedDiskResponse... disks) {
             return disks(List.of(disks));
         }
+
         public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
-            this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
+            $.guestAccelerators = guestAccelerators;
             return this;
         }
+
         public Builder guestAccelerators(AcceleratorConfigResponse... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder metadata(MetadataResponse metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder minCpuPlatform(String minCpuPlatform) {
-            this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
+
         public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
-            this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
+            $.networkInterfaces = networkInterfaces;
             return this;
         }
+
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
+
         public Builder scheduling(SchedulingResponse scheduling) {
-            this.scheduling = Objects.requireNonNull(scheduling);
+            $.scheduling = scheduling;
             return this;
         }
+
         public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
-            this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
+            $.serviceAccounts = serviceAccounts;
             return this;
         }
+
         public Builder serviceAccounts(ServiceAccountResponse... serviceAccounts) {
             return serviceAccounts(List.of(serviceAccounts));
         }
+
         public Builder tags(TagsResponse tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
-        }        public SourceInstancePropertiesResponse build() {
-            return new SourceInstancePropertiesResponse(canIpForward, deletionProtection, description, disks, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, scheduling, serviceAccounts, tags);
+        }
+
+        public SourceInstancePropertiesResponse build() {
+            $.canIpForward = Objects.requireNonNull($.canIpForward, "expected parameter 'canIpForward' to be non-null");
+            $.deletionProtection = Objects.requireNonNull($.deletionProtection, "expected parameter 'deletionProtection' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.disks = Objects.requireNonNull($.disks, "expected parameter 'disks' to be non-null");
+            $.guestAccelerators = Objects.requireNonNull($.guestAccelerators, "expected parameter 'guestAccelerators' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.minCpuPlatform = Objects.requireNonNull($.minCpuPlatform, "expected parameter 'minCpuPlatform' to be non-null");
+            $.networkInterfaces = Objects.requireNonNull($.networkInterfaces, "expected parameter 'networkInterfaces' to be non-null");
+            $.scheduling = Objects.requireNonNull($.scheduling, "expected parameter 'scheduling' to be non-null");
+            $.serviceAccounts = Objects.requireNonNull($.serviceAccounts, "expected parameter 'serviceAccounts' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            return $;
         }
     }
+
 }

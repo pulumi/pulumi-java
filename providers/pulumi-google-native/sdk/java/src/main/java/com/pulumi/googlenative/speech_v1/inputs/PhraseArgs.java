@@ -5,10 +5,10 @@ package com.pulumi.googlenative.speech_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PhraseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="boost")
-      private final @Nullable Output<Double> boost;
+    private @Nullable Output<Double> boost;
 
-    public Output<Double> boost() {
-        return this.boost == null ? Codegen.empty() : this.boost;
+    public Optional<Output<Double>> boost() {
+        return Optional.ofNullable(this.boost);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PhraseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public PhraseArgs(
-        @Nullable Output<Double> boost,
-        @Nullable Output<String> value) {
-        this.boost = boost;
-        this.value = value;
-    }
+    private PhraseArgs() {}
 
-    private PhraseArgs() {
-        this.boost = Codegen.empty();
-        this.value = Codegen.empty();
+    private PhraseArgs(PhraseArgs $) {
+        this.boost = $.boost;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PhraseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> boost;
-        private @Nullable Output<String> value;
+        private PhraseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PhraseArgs();
         }
 
         public Builder(PhraseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boost = defaults.boost;
-    	      this.value = defaults.value;
+            $ = new PhraseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boost(@Nullable Output<Double> boost) {
-            this.boost = boost;
+            $.boost = boost;
             return this;
         }
-        public Builder boost(@Nullable Double boost) {
-            this.boost = Codegen.ofNullable(boost);
-            return this;
+
+        public Builder boost(Double boost) {
+            return boost(Output.of(boost));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public PhraseArgs build() {
-            return new PhraseArgs(boost, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public PhraseArgs build() {
+            return $;
         }
     }
+
 }

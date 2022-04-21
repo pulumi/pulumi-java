@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleProtobufEmptyResponse extends com.pulumi.resources.Invo
 
     public static final GoogleProtobufEmptyResponse Empty = new GoogleProtobufEmptyResponse();
 
-    public GoogleProtobufEmptyResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleProtobufEmptyResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleProtobufEmptyResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleProtobufEmptyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleProtobufEmptyResponse();
         }
         public GoogleProtobufEmptyResponse build() {
-            return new GoogleProtobufEmptyResponse();
+            return $;
         }
     }
+
 }

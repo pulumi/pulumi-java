@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateAlgorithm;
 import com.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionTemplateProtectionLevel;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<CryptoKeyVersionTemplateAlgorithm> algorithm;
+    private Output<CryptoKeyVersionTemplateAlgorithm> algorithm;
 
     public Output<CryptoKeyVersionTemplateAlgorithm> algorithm() {
         return this.algorithm;
@@ -36,63 +36,59 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="protectionLevel")
-      private final @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
+    private @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
 
-    public Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel() {
-        return this.protectionLevel == null ? Codegen.empty() : this.protectionLevel;
+    public Optional<Output<CryptoKeyVersionTemplateProtectionLevel>> protectionLevel() {
+        return Optional.ofNullable(this.protectionLevel);
     }
 
-    public CryptoKeyVersionTemplateArgs(
-        Output<CryptoKeyVersionTemplateAlgorithm> algorithm,
-        @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.protectionLevel = protectionLevel;
-    }
+    private CryptoKeyVersionTemplateArgs() {}
 
-    private CryptoKeyVersionTemplateArgs() {
-        this.algorithm = Codegen.empty();
-        this.protectionLevel = Codegen.empty();
+    private CryptoKeyVersionTemplateArgs(CryptoKeyVersionTemplateArgs $) {
+        this.algorithm = $.algorithm;
+        this.protectionLevel = $.protectionLevel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyVersionTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<CryptoKeyVersionTemplateAlgorithm> algorithm;
-        private @Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel;
+        private CryptoKeyVersionTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyVersionTemplateArgs();
         }
 
         public Builder(CryptoKeyVersionTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.protectionLevel = defaults.protectionLevel;
+            $ = new CryptoKeyVersionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<CryptoKeyVersionTemplateAlgorithm> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(CryptoKeyVersionTemplateAlgorithm algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder protectionLevel(@Nullable Output<CryptoKeyVersionTemplateProtectionLevel> protectionLevel) {
-            this.protectionLevel = protectionLevel;
+            $.protectionLevel = protectionLevel;
             return this;
         }
-        public Builder protectionLevel(@Nullable CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
-            this.protectionLevel = Codegen.ofNullable(protectionLevel);
-            return this;
-        }        public CryptoKeyVersionTemplateArgs build() {
-            return new CryptoKeyVersionTemplateArgs(algorithm, protectionLevel);
+
+        public Builder protectionLevel(CryptoKeyVersionTemplateProtectionLevel protectionLevel) {
+            return protectionLevel(Output.of(protectionLevel));
+        }
+
+        public CryptoKeyVersionTemplateArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            return $;
         }
     }
+
 }

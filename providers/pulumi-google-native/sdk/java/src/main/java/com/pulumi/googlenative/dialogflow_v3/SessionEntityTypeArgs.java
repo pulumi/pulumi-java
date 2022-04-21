@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.enums.SessionEntityTypeEntityOverrideMode;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EntityTypeEntityArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,7 +19,7 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
     public static final SessionEntityTypeArgs Empty = new SessionEntityTypeArgs();
 
     @Import(name="agentId", required=true)
-      private final Output<String> agentId;
+    private Output<String> agentId;
 
     public Output<String> agentId() {
         return this.agentId;
@@ -30,7 +30,7 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="entities", required=true)
-      private final Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
+    private Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
 
     public Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities() {
         return this.entities;
@@ -41,24 +41,24 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="entityOverrideMode", required=true)
-      private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
+    private Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
     public Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode() {
         return this.entityOverrideMode;
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -66,158 +66,141 @@ public final class SessionEntityTypeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="sessionId", required=true)
-      private final Output<String> sessionId;
+    private Output<String> sessionId;
 
     public Output<String> sessionId() {
         return this.sessionId;
     }
 
-    public SessionEntityTypeArgs(
-        Output<String> agentId,
-        Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities,
-        Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode,
-        Output<String> environmentId,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> sessionId) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.entities = Objects.requireNonNull(entities, "expected parameter 'entities' to be non-null");
-        this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode, "expected parameter 'entityOverrideMode' to be non-null");
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.sessionId = Objects.requireNonNull(sessionId, "expected parameter 'sessionId' to be non-null");
-    }
+    private SessionEntityTypeArgs() {}
 
-    private SessionEntityTypeArgs() {
-        this.agentId = Codegen.empty();
-        this.entities = Codegen.empty();
-        this.entityOverrideMode = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sessionId = Codegen.empty();
+    private SessionEntityTypeArgs(SessionEntityTypeArgs $) {
+        this.agentId = $.agentId;
+        this.entities = $.entities;
+        this.entityOverrideMode = $.entityOverrideMode;
+        this.environmentId = $.environmentId;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.sessionId = $.sessionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SessionEntityTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentId;
-        private Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities;
-        private Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
-        private Output<String> environmentId;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> sessionId;
+        private SessionEntityTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SessionEntityTypeArgs();
         }
 
         public Builder(SessionEntityTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.entities = defaults.entities;
-    	      this.entityOverrideMode = defaults.entityOverrideMode;
-    	      this.environmentId = defaults.environmentId;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.sessionId = defaults.sessionId;
+            $ = new SessionEntityTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(Output<String> agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder agentId(String agentId) {
-            this.agentId = Output.of(Objects.requireNonNull(agentId));
-            return this;
+            return agentId(Output.of(agentId));
         }
+
         public Builder entities(Output<List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs>> entities) {
-            this.entities = Objects.requireNonNull(entities);
+            $.entities = entities;
             return this;
         }
+
         public Builder entities(List<GoogleCloudDialogflowCxV3EntityTypeEntityArgs> entities) {
-            this.entities = Output.of(Objects.requireNonNull(entities));
-            return this;
+            return entities(Output.of(entities));
         }
+
         public Builder entities(GoogleCloudDialogflowCxV3EntityTypeEntityArgs... entities) {
             return entities(List.of(entities));
         }
+
         public Builder entityOverrideMode(Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode) {
-            this.entityOverrideMode = Objects.requireNonNull(entityOverrideMode);
+            $.entityOverrideMode = entityOverrideMode;
             return this;
         }
+
         public Builder entityOverrideMode(SessionEntityTypeEntityOverrideMode entityOverrideMode) {
-            this.entityOverrideMode = Output.of(Objects.requireNonNull(entityOverrideMode));
-            return this;
+            return entityOverrideMode(Output.of(entityOverrideMode));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sessionId(Output<String> sessionId) {
-            this.sessionId = Objects.requireNonNull(sessionId);
+            $.sessionId = sessionId;
             return this;
         }
+
         public Builder sessionId(String sessionId) {
-            this.sessionId = Output.of(Objects.requireNonNull(sessionId));
-            return this;
-        }        public SessionEntityTypeArgs build() {
-            return new SessionEntityTypeArgs(agentId, entities, entityOverrideMode, environmentId, location, name, project, sessionId);
+            return sessionId(Output.of(sessionId));
+        }
+
+        public SessionEntityTypeArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.entities = Objects.requireNonNull($.entities, "expected parameter 'entities' to be non-null");
+            $.entityOverrideMode = Objects.requireNonNull($.entityOverrideMode, "expected parameter 'entityOverrideMode' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.sessionId = Objects.requireNonNull($.sessionId, "expected parameter 'sessionId' to be non-null");
+            return $;
         }
     }
+
 }

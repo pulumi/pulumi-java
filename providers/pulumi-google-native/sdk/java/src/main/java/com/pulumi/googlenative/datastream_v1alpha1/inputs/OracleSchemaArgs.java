@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1alpha1.inputs.OracleTableArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OracleSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oracleTables")
-      private final @Nullable Output<List<OracleTableArgs>> oracleTables;
+    private @Nullable Output<List<OracleTableArgs>> oracleTables;
 
-    public Output<List<OracleTableArgs>> oracleTables() {
-        return this.oracleTables == null ? Codegen.empty() : this.oracleTables;
+    public Optional<Output<List<OracleTableArgs>>> oracleTables() {
+        return Optional.ofNullable(this.oracleTables);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class OracleSchemaArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaName")
-      private final @Nullable Output<String> schemaName;
+    private @Nullable Output<String> schemaName;
 
-    public Output<String> schemaName() {
-        return this.schemaName == null ? Codegen.empty() : this.schemaName;
+    public Optional<Output<String>> schemaName() {
+        return Optional.ofNullable(this.schemaName);
     }
 
-    public OracleSchemaArgs(
-        @Nullable Output<List<OracleTableArgs>> oracleTables,
-        @Nullable Output<String> schemaName) {
-        this.oracleTables = oracleTables;
-        this.schemaName = schemaName;
-    }
+    private OracleSchemaArgs() {}
 
-    private OracleSchemaArgs() {
-        this.oracleTables = Codegen.empty();
-        this.schemaName = Codegen.empty();
+    private OracleSchemaArgs(OracleSchemaArgs $) {
+        this.oracleTables = $.oracleTables;
+        this.schemaName = $.schemaName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<OracleTableArgs>> oracleTables;
-        private @Nullable Output<String> schemaName;
+        private OracleSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSchemaArgs();
         }
 
         public Builder(OracleSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleTables = defaults.oracleTables;
-    	      this.schemaName = defaults.schemaName;
+            $ = new OracleSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleTables(@Nullable Output<List<OracleTableArgs>> oracleTables) {
-            this.oracleTables = oracleTables;
+            $.oracleTables = oracleTables;
             return this;
         }
-        public Builder oracleTables(@Nullable List<OracleTableArgs> oracleTables) {
-            this.oracleTables = Codegen.ofNullable(oracleTables);
-            return this;
+
+        public Builder oracleTables(List<OracleTableArgs> oracleTables) {
+            return oracleTables(Output.of(oracleTables));
         }
+
         public Builder oracleTables(OracleTableArgs... oracleTables) {
             return oracleTables(List.of(oracleTables));
         }
+
         public Builder schemaName(@Nullable Output<String> schemaName) {
-            this.schemaName = schemaName;
+            $.schemaName = schemaName;
             return this;
         }
-        public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Codegen.ofNullable(schemaName);
-            return this;
-        }        public OracleSchemaArgs build() {
-            return new OracleSchemaArgs(oracleTables, schemaName);
+
+        public Builder schemaName(String schemaName) {
+            return schemaName(Output.of(schemaName));
+        }
+
+        public OracleSchemaArgs build() {
+            return $;
         }
     }
+
 }

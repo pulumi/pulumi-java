@@ -21,45 +21,45 @@ public final class NodeGroupAffinityResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nodeGroupUri", required=true)
-      private final String nodeGroupUri;
+    private String nodeGroupUri;
 
     public String nodeGroupUri() {
         return this.nodeGroupUri;
     }
 
-    public NodeGroupAffinityResponse(String nodeGroupUri) {
-        this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri, "expected parameter 'nodeGroupUri' to be non-null");
-    }
+    private NodeGroupAffinityResponse() {}
 
-    private NodeGroupAffinityResponse() {
-        this.nodeGroupUri = null;
+    private NodeGroupAffinityResponse(NodeGroupAffinityResponse $) {
+        this.nodeGroupUri = $.nodeGroupUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupAffinityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nodeGroupUri;
+        private NodeGroupAffinityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupAffinityResponse();
         }
 
         public Builder(NodeGroupAffinityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeGroupUri = defaults.nodeGroupUri;
+            $ = new NodeGroupAffinityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeGroupUri(String nodeGroupUri) {
-            this.nodeGroupUri = Objects.requireNonNull(nodeGroupUri);
+            $.nodeGroupUri = nodeGroupUri;
             return this;
-        }        public NodeGroupAffinityResponse build() {
-            return new NodeGroupAffinityResponse(nodeGroupUri);
+        }
+
+        public NodeGroupAffinityResponse build() {
+            $.nodeGroupUri = Objects.requireNonNull($.nodeGroupUri, "expected parameter 'nodeGroupUri' to be non-null");
+            return $;
         }
     }
+
 }

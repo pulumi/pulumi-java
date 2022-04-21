@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2FulfillmentFeatureArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="features")
-      private final @Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features;
+    private @Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features;
 
-    public Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features() {
-        return this.features == null ? Codegen.empty() : this.features;
+    public Optional<Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>>> features() {
+        return Optional.ofNullable(this.features);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="genericWebService")
-      private final @Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService;
+    private @Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService;
 
-    public Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService() {
-        return this.genericWebService == null ? Codegen.empty() : this.genericWebService;
+    public Optional<Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs>> genericWebService() {
+        return Optional.ofNullable(this.genericWebService);
     }
 
     /**
@@ -72,105 +72,93 @@ public final class GoogleCloudDialogflowV2FulfillmentArgs extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public GoogleCloudDialogflowV2FulfillmentArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features,
-        @Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService,
-        Output<String> name) {
-        this.displayName = displayName;
-        this.enabled = enabled;
-        this.features = features;
-        this.genericWebService = genericWebService;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudDialogflowV2FulfillmentArgs() {}
 
-    private GoogleCloudDialogflowV2FulfillmentArgs() {
-        this.displayName = Codegen.empty();
-        this.enabled = Codegen.empty();
-        this.features = Codegen.empty();
-        this.genericWebService = Codegen.empty();
-        this.name = Codegen.empty();
+    private GoogleCloudDialogflowV2FulfillmentArgs(GoogleCloudDialogflowV2FulfillmentArgs $) {
+        this.displayName = $.displayName;
+        this.enabled = $.enabled;
+        this.features = $.features;
+        this.genericWebService = $.genericWebService;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2FulfillmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features;
-        private @Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService;
-        private Output<String> name;
+        private GoogleCloudDialogflowV2FulfillmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2FulfillmentArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2FulfillmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.enabled = defaults.enabled;
-    	      this.features = defaults.features;
-    	      this.genericWebService = defaults.genericWebService;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudDialogflowV2FulfillmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder features(@Nullable Output<List<GoogleCloudDialogflowV2FulfillmentFeatureArgs>> features) {
-            this.features = features;
+            $.features = features;
             return this;
         }
-        public Builder features(@Nullable List<GoogleCloudDialogflowV2FulfillmentFeatureArgs> features) {
-            this.features = Codegen.ofNullable(features);
-            return this;
+
+        public Builder features(List<GoogleCloudDialogflowV2FulfillmentFeatureArgs> features) {
+            return features(Output.of(features));
         }
+
         public Builder features(GoogleCloudDialogflowV2FulfillmentFeatureArgs... features) {
             return features(List.of(features));
         }
+
         public Builder genericWebService(@Nullable Output<GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs> genericWebService) {
-            this.genericWebService = genericWebService;
+            $.genericWebService = genericWebService;
             return this;
         }
-        public Builder genericWebService(@Nullable GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs genericWebService) {
-            this.genericWebService = Codegen.ofNullable(genericWebService);
-            return this;
+
+        public Builder genericWebService(GoogleCloudDialogflowV2FulfillmentGenericWebServiceArgs genericWebService) {
+            return genericWebService(Output.of(genericWebService));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public GoogleCloudDialogflowV2FulfillmentArgs build() {
-            return new GoogleCloudDialogflowV2FulfillmentArgs(displayName, enabled, features, genericWebService, name);
+            return name(Output.of(name));
+        }
+
+        public GoogleCloudDialogflowV2FulfillmentArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

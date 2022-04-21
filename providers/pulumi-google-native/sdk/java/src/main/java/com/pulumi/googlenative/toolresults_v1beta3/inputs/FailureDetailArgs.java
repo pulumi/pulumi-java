@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="crashed")
-      private final @Nullable Output<Boolean> crashed;
+    private @Nullable Output<Boolean> crashed;
 
-    public Output<Boolean> crashed() {
-        return this.crashed == null ? Codegen.empty() : this.crashed;
+    public Optional<Output<Boolean>> crashed() {
+        return Optional.ofNullable(this.crashed);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="deviceOutOfMemory")
-      private final @Nullable Output<Boolean> deviceOutOfMemory;
+    private @Nullable Output<Boolean> deviceOutOfMemory;
 
-    public Output<Boolean> deviceOutOfMemory() {
-        return this.deviceOutOfMemory == null ? Codegen.empty() : this.deviceOutOfMemory;
+    public Optional<Output<Boolean>> deviceOutOfMemory() {
+        return Optional.ofNullable(this.deviceOutOfMemory);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failedRoboscript")
-      private final @Nullable Output<Boolean> failedRoboscript;
+    private @Nullable Output<Boolean> failedRoboscript;
 
-    public Output<Boolean> failedRoboscript() {
-        return this.failedRoboscript == null ? Codegen.empty() : this.failedRoboscript;
+    public Optional<Output<Boolean>> failedRoboscript() {
+        return Optional.ofNullable(this.failedRoboscript);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="notInstalled")
-      private final @Nullable Output<Boolean> notInstalled;
+    private @Nullable Output<Boolean> notInstalled;
 
-    public Output<Boolean> notInstalled() {
-        return this.notInstalled == null ? Codegen.empty() : this.notInstalled;
+    public Optional<Output<Boolean>> notInstalled() {
+        return Optional.ofNullable(this.notInstalled);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="otherNativeCrash")
-      private final @Nullable Output<Boolean> otherNativeCrash;
+    private @Nullable Output<Boolean> otherNativeCrash;
 
-    public Output<Boolean> otherNativeCrash() {
-        return this.otherNativeCrash == null ? Codegen.empty() : this.otherNativeCrash;
+    public Optional<Output<Boolean>> otherNativeCrash() {
+        return Optional.ofNullable(this.otherNativeCrash);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timedOut")
-      private final @Nullable Output<Boolean> timedOut;
+    private @Nullable Output<Boolean> timedOut;
 
-    public Output<Boolean> timedOut() {
-        return this.timedOut == null ? Codegen.empty() : this.timedOut;
+    public Optional<Output<Boolean>> timedOut() {
+        return Optional.ofNullable(this.timedOut);
     }
 
     /**
@@ -90,128 +90,108 @@ public final class FailureDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="unableToCrawl")
-      private final @Nullable Output<Boolean> unableToCrawl;
+    private @Nullable Output<Boolean> unableToCrawl;
 
-    public Output<Boolean> unableToCrawl() {
-        return this.unableToCrawl == null ? Codegen.empty() : this.unableToCrawl;
+    public Optional<Output<Boolean>> unableToCrawl() {
+        return Optional.ofNullable(this.unableToCrawl);
     }
 
-    public FailureDetailArgs(
-        @Nullable Output<Boolean> crashed,
-        @Nullable Output<Boolean> deviceOutOfMemory,
-        @Nullable Output<Boolean> failedRoboscript,
-        @Nullable Output<Boolean> notInstalled,
-        @Nullable Output<Boolean> otherNativeCrash,
-        @Nullable Output<Boolean> timedOut,
-        @Nullable Output<Boolean> unableToCrawl) {
-        this.crashed = crashed;
-        this.deviceOutOfMemory = deviceOutOfMemory;
-        this.failedRoboscript = failedRoboscript;
-        this.notInstalled = notInstalled;
-        this.otherNativeCrash = otherNativeCrash;
-        this.timedOut = timedOut;
-        this.unableToCrawl = unableToCrawl;
-    }
+    private FailureDetailArgs() {}
 
-    private FailureDetailArgs() {
-        this.crashed = Codegen.empty();
-        this.deviceOutOfMemory = Codegen.empty();
-        this.failedRoboscript = Codegen.empty();
-        this.notInstalled = Codegen.empty();
-        this.otherNativeCrash = Codegen.empty();
-        this.timedOut = Codegen.empty();
-        this.unableToCrawl = Codegen.empty();
+    private FailureDetailArgs(FailureDetailArgs $) {
+        this.crashed = $.crashed;
+        this.deviceOutOfMemory = $.deviceOutOfMemory;
+        this.failedRoboscript = $.failedRoboscript;
+        this.notInstalled = $.notInstalled;
+        this.otherNativeCrash = $.otherNativeCrash;
+        this.timedOut = $.timedOut;
+        this.unableToCrawl = $.unableToCrawl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailureDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> crashed;
-        private @Nullable Output<Boolean> deviceOutOfMemory;
-        private @Nullable Output<Boolean> failedRoboscript;
-        private @Nullable Output<Boolean> notInstalled;
-        private @Nullable Output<Boolean> otherNativeCrash;
-        private @Nullable Output<Boolean> timedOut;
-        private @Nullable Output<Boolean> unableToCrawl;
+        private FailureDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailureDetailArgs();
         }
 
         public Builder(FailureDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crashed = defaults.crashed;
-    	      this.deviceOutOfMemory = defaults.deviceOutOfMemory;
-    	      this.failedRoboscript = defaults.failedRoboscript;
-    	      this.notInstalled = defaults.notInstalled;
-    	      this.otherNativeCrash = defaults.otherNativeCrash;
-    	      this.timedOut = defaults.timedOut;
-    	      this.unableToCrawl = defaults.unableToCrawl;
+            $ = new FailureDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder crashed(@Nullable Output<Boolean> crashed) {
-            this.crashed = crashed;
+            $.crashed = crashed;
             return this;
         }
-        public Builder crashed(@Nullable Boolean crashed) {
-            this.crashed = Codegen.ofNullable(crashed);
-            return this;
+
+        public Builder crashed(Boolean crashed) {
+            return crashed(Output.of(crashed));
         }
+
         public Builder deviceOutOfMemory(@Nullable Output<Boolean> deviceOutOfMemory) {
-            this.deviceOutOfMemory = deviceOutOfMemory;
+            $.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
-        public Builder deviceOutOfMemory(@Nullable Boolean deviceOutOfMemory) {
-            this.deviceOutOfMemory = Codegen.ofNullable(deviceOutOfMemory);
-            return this;
+
+        public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
+            return deviceOutOfMemory(Output.of(deviceOutOfMemory));
         }
+
         public Builder failedRoboscript(@Nullable Output<Boolean> failedRoboscript) {
-            this.failedRoboscript = failedRoboscript;
+            $.failedRoboscript = failedRoboscript;
             return this;
         }
-        public Builder failedRoboscript(@Nullable Boolean failedRoboscript) {
-            this.failedRoboscript = Codegen.ofNullable(failedRoboscript);
-            return this;
+
+        public Builder failedRoboscript(Boolean failedRoboscript) {
+            return failedRoboscript(Output.of(failedRoboscript));
         }
+
         public Builder notInstalled(@Nullable Output<Boolean> notInstalled) {
-            this.notInstalled = notInstalled;
+            $.notInstalled = notInstalled;
             return this;
         }
-        public Builder notInstalled(@Nullable Boolean notInstalled) {
-            this.notInstalled = Codegen.ofNullable(notInstalled);
-            return this;
+
+        public Builder notInstalled(Boolean notInstalled) {
+            return notInstalled(Output.of(notInstalled));
         }
+
         public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
-            this.otherNativeCrash = otherNativeCrash;
+            $.otherNativeCrash = otherNativeCrash;
             return this;
         }
-        public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
-            this.otherNativeCrash = Codegen.ofNullable(otherNativeCrash);
-            return this;
+
+        public Builder otherNativeCrash(Boolean otherNativeCrash) {
+            return otherNativeCrash(Output.of(otherNativeCrash));
         }
+
         public Builder timedOut(@Nullable Output<Boolean> timedOut) {
-            this.timedOut = timedOut;
+            $.timedOut = timedOut;
             return this;
         }
-        public Builder timedOut(@Nullable Boolean timedOut) {
-            this.timedOut = Codegen.ofNullable(timedOut);
-            return this;
+
+        public Builder timedOut(Boolean timedOut) {
+            return timedOut(Output.of(timedOut));
         }
+
         public Builder unableToCrawl(@Nullable Output<Boolean> unableToCrawl) {
-            this.unableToCrawl = unableToCrawl;
+            $.unableToCrawl = unableToCrawl;
             return this;
         }
-        public Builder unableToCrawl(@Nullable Boolean unableToCrawl) {
-            this.unableToCrawl = Codegen.ofNullable(unableToCrawl);
-            return this;
-        }        public FailureDetailArgs build() {
-            return new FailureDetailArgs(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
+
+        public Builder unableToCrawl(Boolean unableToCrawl) {
+            return unableToCrawl(Output.of(unableToCrawl));
+        }
+
+        public FailureDetailArgs build() {
+            return $;
         }
     }
+
 }

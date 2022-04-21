@@ -5,10 +5,10 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.GoogleCloudStorageArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ToolResultsHistoryArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ResultStorageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="googleCloudStorage", required=true)
-      private final Output<GoogleCloudStorageArgs> googleCloudStorage;
+    private Output<GoogleCloudStorageArgs> googleCloudStorage;
 
     public Output<GoogleCloudStorageArgs> googleCloudStorage() {
         return this.googleCloudStorage;
@@ -36,63 +36,59 @@ public final class ResultStorageArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="toolResultsHistory")
-      private final @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
+    private @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
 
-    public Output<ToolResultsHistoryArgs> toolResultsHistory() {
-        return this.toolResultsHistory == null ? Codegen.empty() : this.toolResultsHistory;
+    public Optional<Output<ToolResultsHistoryArgs>> toolResultsHistory() {
+        return Optional.ofNullable(this.toolResultsHistory);
     }
 
-    public ResultStorageArgs(
-        Output<GoogleCloudStorageArgs> googleCloudStorage,
-        @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory) {
-        this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage, "expected parameter 'googleCloudStorage' to be non-null");
-        this.toolResultsHistory = toolResultsHistory;
-    }
+    private ResultStorageArgs() {}
 
-    private ResultStorageArgs() {
-        this.googleCloudStorage = Codegen.empty();
-        this.toolResultsHistory = Codegen.empty();
+    private ResultStorageArgs(ResultStorageArgs $) {
+        this.googleCloudStorage = $.googleCloudStorage;
+        this.toolResultsHistory = $.toolResultsHistory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResultStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudStorageArgs> googleCloudStorage;
-        private @Nullable Output<ToolResultsHistoryArgs> toolResultsHistory;
+        private ResultStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResultStorageArgs();
         }
 
         public Builder(ResultStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.googleCloudStorage = defaults.googleCloudStorage;
-    	      this.toolResultsHistory = defaults.toolResultsHistory;
+            $ = new ResultStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder googleCloudStorage(Output<GoogleCloudStorageArgs> googleCloudStorage) {
-            this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
+            $.googleCloudStorage = googleCloudStorage;
             return this;
         }
+
         public Builder googleCloudStorage(GoogleCloudStorageArgs googleCloudStorage) {
-            this.googleCloudStorage = Output.of(Objects.requireNonNull(googleCloudStorage));
-            return this;
+            return googleCloudStorage(Output.of(googleCloudStorage));
         }
+
         public Builder toolResultsHistory(@Nullable Output<ToolResultsHistoryArgs> toolResultsHistory) {
-            this.toolResultsHistory = toolResultsHistory;
+            $.toolResultsHistory = toolResultsHistory;
             return this;
         }
-        public Builder toolResultsHistory(@Nullable ToolResultsHistoryArgs toolResultsHistory) {
-            this.toolResultsHistory = Codegen.ofNullable(toolResultsHistory);
-            return this;
-        }        public ResultStorageArgs build() {
-            return new ResultStorageArgs(googleCloudStorage, toolResultsHistory);
+
+        public Builder toolResultsHistory(ToolResultsHistoryArgs toolResultsHistory) {
+            return toolResultsHistory(Output.of(toolResultsHistory));
+        }
+
+        public ResultStorageArgs build() {
+            $.googleCloudStorage = Objects.requireNonNull($.googleCloudStorage, "expected parameter 'googleCloudStorage' to be non-null");
+            return $;
         }
     }
+
 }

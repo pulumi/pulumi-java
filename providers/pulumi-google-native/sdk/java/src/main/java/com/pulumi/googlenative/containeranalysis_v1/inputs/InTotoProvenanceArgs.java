@@ -5,13 +5,13 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.BuilderConfigArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.MetadataArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.RecipeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="builderConfig")
-      private final @Nullable Output<BuilderConfigArgs> builderConfig;
+    private @Nullable Output<BuilderConfigArgs> builderConfig;
 
-    public Output<BuilderConfigArgs> builderConfig() {
-        return this.builderConfig == null ? Codegen.empty() : this.builderConfig;
+    public Optional<Output<BuilderConfigArgs>> builderConfig() {
+        return Optional.ofNullable(this.builderConfig);
     }
 
     /**
@@ -35,17 +35,17 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="materials")
-      private final @Nullable Output<List<String>> materials;
+    private @Nullable Output<List<String>> materials;
 
-    public Output<List<String>> materials() {
-        return this.materials == null ? Codegen.empty() : this.materials;
+    public Optional<Output<List<String>>> materials() {
+        return Optional.ofNullable(this.materials);
     }
 
     @Import(name="metadata")
-      private final @Nullable Output<MetadataArgs> metadata;
+    private @Nullable Output<MetadataArgs> metadata;
 
-    public Output<MetadataArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<MetadataArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -53,92 +53,82 @@ public final class InTotoProvenanceArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="recipe")
-      private final @Nullable Output<RecipeArgs> recipe;
+    private @Nullable Output<RecipeArgs> recipe;
 
-    public Output<RecipeArgs> recipe() {
-        return this.recipe == null ? Codegen.empty() : this.recipe;
+    public Optional<Output<RecipeArgs>> recipe() {
+        return Optional.ofNullable(this.recipe);
     }
 
-    public InTotoProvenanceArgs(
-        @Nullable Output<BuilderConfigArgs> builderConfig,
-        @Nullable Output<List<String>> materials,
-        @Nullable Output<MetadataArgs> metadata,
-        @Nullable Output<RecipeArgs> recipe) {
-        this.builderConfig = builderConfig;
-        this.materials = materials;
-        this.metadata = metadata;
-        this.recipe = recipe;
-    }
+    private InTotoProvenanceArgs() {}
 
-    private InTotoProvenanceArgs() {
-        this.builderConfig = Codegen.empty();
-        this.materials = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.recipe = Codegen.empty();
+    private InTotoProvenanceArgs(InTotoProvenanceArgs $) {
+        this.builderConfig = $.builderConfig;
+        this.materials = $.materials;
+        this.metadata = $.metadata;
+        this.recipe = $.recipe;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InTotoProvenanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BuilderConfigArgs> builderConfig;
-        private @Nullable Output<List<String>> materials;
-        private @Nullable Output<MetadataArgs> metadata;
-        private @Nullable Output<RecipeArgs> recipe;
+        private InTotoProvenanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InTotoProvenanceArgs();
         }
 
         public Builder(InTotoProvenanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builderConfig = defaults.builderConfig;
-    	      this.materials = defaults.materials;
-    	      this.metadata = defaults.metadata;
-    	      this.recipe = defaults.recipe;
+            $ = new InTotoProvenanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder builderConfig(@Nullable Output<BuilderConfigArgs> builderConfig) {
-            this.builderConfig = builderConfig;
+            $.builderConfig = builderConfig;
             return this;
         }
-        public Builder builderConfig(@Nullable BuilderConfigArgs builderConfig) {
-            this.builderConfig = Codegen.ofNullable(builderConfig);
-            return this;
+
+        public Builder builderConfig(BuilderConfigArgs builderConfig) {
+            return builderConfig(Output.of(builderConfig));
         }
+
         public Builder materials(@Nullable Output<List<String>> materials) {
-            this.materials = materials;
+            $.materials = materials;
             return this;
         }
-        public Builder materials(@Nullable List<String> materials) {
-            this.materials = Codegen.ofNullable(materials);
-            return this;
+
+        public Builder materials(List<String> materials) {
+            return materials(Output.of(materials));
         }
+
         public Builder materials(String... materials) {
             return materials(List.of(materials));
         }
+
         public Builder metadata(@Nullable Output<MetadataArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable MetadataArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(MetadataArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder recipe(@Nullable Output<RecipeArgs> recipe) {
-            this.recipe = recipe;
+            $.recipe = recipe;
             return this;
         }
-        public Builder recipe(@Nullable RecipeArgs recipe) {
-            this.recipe = Codegen.ofNullable(recipe);
-            return this;
-        }        public InTotoProvenanceArgs build() {
-            return new InTotoProvenanceArgs(builderConfig, materials, metadata, recipe);
+
+        public Builder recipe(RecipeArgs recipe) {
+            return recipe(Output.of(recipe));
+        }
+
+        public InTotoProvenanceArgs build() {
+            return $;
         }
     }
+
 }

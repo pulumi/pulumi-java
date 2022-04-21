@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="instanceProperties")
-      private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
+    private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
-    public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties() {
-        return this.instanceProperties == null ? Codegen.empty() : this.instanceProperties;
+    public Optional<Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs>> instanceProperties() {
+        return Optional.ofNullable(this.instanceProperties);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends com.pulumi
      * 
      */
     @Import(name="totalCount")
-      private final @Nullable Output<String> totalCount;
+    private @Nullable Output<String> totalCount;
 
-    public Output<String> totalCount() {
-        return this.totalCount == null ? Codegen.empty() : this.totalCount;
+    public Optional<Output<String>> totalCount() {
+        return Optional.ofNullable(this.totalCount);
     }
 
-    public FutureReservationSpecificSKUPropertiesArgs(
-        @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties,
-        @Nullable Output<String> totalCount) {
-        this.instanceProperties = instanceProperties;
-        this.totalCount = totalCount;
-    }
+    private FutureReservationSpecificSKUPropertiesArgs() {}
 
-    private FutureReservationSpecificSKUPropertiesArgs() {
-        this.instanceProperties = Codegen.empty();
-        this.totalCount = Codegen.empty();
+    private FutureReservationSpecificSKUPropertiesArgs(FutureReservationSpecificSKUPropertiesArgs $) {
+        this.instanceProperties = $.instanceProperties;
+        this.totalCount = $.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FutureReservationSpecificSKUPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
-        private @Nullable Output<String> totalCount;
+        private FutureReservationSpecificSKUPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FutureReservationSpecificSKUPropertiesArgs();
         }
 
         public Builder(FutureReservationSpecificSKUPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceProperties = defaults.instanceProperties;
-    	      this.totalCount = defaults.totalCount;
+            $ = new FutureReservationSpecificSKUPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceProperties(@Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties) {
-            this.instanceProperties = instanceProperties;
+            $.instanceProperties = instanceProperties;
             return this;
         }
-        public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Codegen.ofNullable(instanceProperties);
-            return this;
+
+        public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
+            return instanceProperties(Output.of(instanceProperties));
         }
+
         public Builder totalCount(@Nullable Output<String> totalCount) {
-            this.totalCount = totalCount;
+            $.totalCount = totalCount;
             return this;
         }
-        public Builder totalCount(@Nullable String totalCount) {
-            this.totalCount = Codegen.ofNullable(totalCount);
-            return this;
-        }        public FutureReservationSpecificSKUPropertiesArgs build() {
-            return new FutureReservationSpecificSKUPropertiesArgs(instanceProperties, totalCount);
+
+        public Builder totalCount(String totalCount) {
+            return totalCount(Output.of(totalCount));
+        }
+
+        public FutureReservationSpecificSKUPropertiesArgs build() {
+            return $;
         }
     }
+
 }

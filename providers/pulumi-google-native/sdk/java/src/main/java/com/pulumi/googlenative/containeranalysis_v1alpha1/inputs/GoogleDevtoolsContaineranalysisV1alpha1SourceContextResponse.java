@@ -25,7 +25,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @Import(name="cloudRepo", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
+    private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
 
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo() {
         return this.cloudRepo;
@@ -36,7 +36,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @Import(name="gerrit", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
+    private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
 
     public GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit() {
         return this.gerrit;
@@ -47,7 +47,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @Import(name="git", required=true)
-      private final GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
+    private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
 
     public GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git() {
         return this.git;
@@ -58,73 +58,66 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo,
-        GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit,
-        GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git,
-        Map<String,String> labels) {
-        this.cloudRepo = Objects.requireNonNull(cloudRepo, "expected parameter 'cloudRepo' to be non-null");
-        this.gerrit = Objects.requireNonNull(gerrit, "expected parameter 'gerrit' to be non-null");
-        this.git = Objects.requireNonNull(git, "expected parameter 'git' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse() {
-        this.cloudRepo = null;
-        this.gerrit = null;
-        this.git = null;
-        this.labels = Map.of();
+    private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse $) {
+        this.cloudRepo = $.cloudRepo;
+        this.gerrit = $.gerrit;
+        this.git = $.git;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo;
-        private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit;
-        private GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git;
-        private Map<String,String> labels;
+        private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRepo = defaults.cloudRepo;
-    	      this.gerrit = defaults.gerrit;
-    	      this.git = defaults.git;
-    	      this.labels = defaults.labels;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRepo(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo) {
-            this.cloudRepo = Objects.requireNonNull(cloudRepo);
+            $.cloudRepo = cloudRepo;
             return this;
         }
+
         public Builder gerrit(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit) {
-            this.gerrit = Objects.requireNonNull(gerrit);
+            $.gerrit = gerrit;
             return this;
         }
+
         public Builder git(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git) {
-            this.git = Objects.requireNonNull(git);
+            $.git = git;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(cloudRepo, gerrit, git, labels);
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
+            $.cloudRepo = Objects.requireNonNull($.cloudRepo, "expected parameter 'cloudRepo' to be non-null");
+            $.gerrit = Objects.requireNonNull($.gerrit, "expected parameter 'gerrit' to be non-null");
+            $.git = Objects.requireNonNull($.git, "expected parameter 'git' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

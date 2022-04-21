@@ -21,7 +21,7 @@ public final class DatabaseTypeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="engine", required=true)
-      private final String engine;
+    private String engine;
 
     public String engine() {
         return this.engine;
@@ -32,55 +32,52 @@ public final class DatabaseTypeResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="provider", required=true)
-      private final String provider;
+    private String provider;
 
     public String provider() {
         return this.provider;
     }
 
-    public DatabaseTypeResponse(
-        String engine,
-        String provider) {
-        this.engine = Objects.requireNonNull(engine, "expected parameter 'engine' to be non-null");
-        this.provider = Objects.requireNonNull(provider, "expected parameter 'provider' to be non-null");
-    }
+    private DatabaseTypeResponse() {}
 
-    private DatabaseTypeResponse() {
-        this.engine = null;
-        this.provider = null;
+    private DatabaseTypeResponse(DatabaseTypeResponse $) {
+        this.engine = $.engine;
+        this.provider = $.provider;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String engine;
-        private String provider;
+        private DatabaseTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseTypeResponse();
         }
 
         public Builder(DatabaseTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.engine = defaults.engine;
-    	      this.provider = defaults.provider;
+            $ = new DatabaseTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder engine(String engine) {
-            this.engine = Objects.requireNonNull(engine);
+            $.engine = engine;
             return this;
         }
+
         public Builder provider(String provider) {
-            this.provider = Objects.requireNonNull(provider);
+            $.provider = provider;
             return this;
-        }        public DatabaseTypeResponse build() {
-            return new DatabaseTypeResponse(engine, provider);
+        }
+
+        public DatabaseTypeResponse build() {
+            $.engine = Objects.requireNonNull($.engine, "expected parameter 'engine' to be non-null");
+            $.provider = Objects.requireNonNull($.provider, "expected parameter 'provider' to be non-null");
+            return $;
         }
     }
+
 }

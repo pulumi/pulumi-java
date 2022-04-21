@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class PrivateConnectivityArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="privateConnection", required=true)
-      private final Output<String> privateConnection;
+    private Output<String> privateConnection;
 
     public Output<String> privateConnection() {
         return this.privateConnection;
     }
 
-    public PrivateConnectivityArgs(Output<String> privateConnection) {
-        this.privateConnection = Objects.requireNonNull(privateConnection, "expected parameter 'privateConnection' to be non-null");
-    }
+    private PrivateConnectivityArgs() {}
 
-    private PrivateConnectivityArgs() {
-        this.privateConnection = Codegen.empty();
+    private PrivateConnectivityArgs(PrivateConnectivityArgs $) {
+        this.privateConnection = $.privateConnection;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivateConnectivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> privateConnection;
+        private PrivateConnectivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivateConnectivityArgs();
         }
 
         public Builder(PrivateConnectivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.privateConnection = defaults.privateConnection;
+            $ = new PrivateConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder privateConnection(Output<String> privateConnection) {
-            this.privateConnection = Objects.requireNonNull(privateConnection);
+            $.privateConnection = privateConnection;
             return this;
         }
+
         public Builder privateConnection(String privateConnection) {
-            this.privateConnection = Output.of(Objects.requireNonNull(privateConnection));
-            return this;
-        }        public PrivateConnectivityArgs build() {
-            return new PrivateConnectivityArgs(privateConnection);
+            return privateConnection(Output.of(privateConnection));
+        }
+
+        public PrivateConnectivityArgs build() {
+            $.privateConnection = Objects.requireNonNull($.privateConnection, "expected parameter 'privateConnection' to be non-null");
+            return $;
         }
     }
+
 }

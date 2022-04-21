@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAct
      * 
      */
     @Import(name="uri", required=true)
-      private final Output<String> uri;
+    private Output<String> uri;
 
     public Output<String> uri() {
         return this.uri;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs(Output<String> uri) {
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs() {
-        this.uri = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs $) {
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> uri;
+        private GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.uri = defaults.uri;
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder uri(Output<String> uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Output.of(Objects.requireNonNull(uri));
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs(uri);
+            return uri(Output.of(uri));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs build() {
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

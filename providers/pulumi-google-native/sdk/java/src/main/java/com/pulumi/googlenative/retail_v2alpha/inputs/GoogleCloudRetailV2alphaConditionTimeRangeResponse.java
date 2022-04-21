@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends co
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -32,55 +32,52 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeResponse extends co
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public GoogleCloudRetailV2alphaConditionTimeRangeResponse(
-        String endTime,
-        String startTime) {
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaConditionTimeRangeResponse() {}
 
-    private GoogleCloudRetailV2alphaConditionTimeRangeResponse() {
-        this.endTime = null;
-        this.startTime = null;
+    private GoogleCloudRetailV2alphaConditionTimeRangeResponse(GoogleCloudRetailV2alphaConditionTimeRangeResponse $) {
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaConditionTimeRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endTime;
-        private String startTime;
+        private GoogleCloudRetailV2alphaConditionTimeRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaConditionTimeRangeResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaConditionTimeRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new GoogleCloudRetailV2alphaConditionTimeRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public GoogleCloudRetailV2alphaConditionTimeRangeResponse build() {
-            return new GoogleCloudRetailV2alphaConditionTimeRangeResponse(endTime, startTime);
+        }
+
+        public GoogleCloudRetailV2alphaConditionTimeRangeResponse build() {
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

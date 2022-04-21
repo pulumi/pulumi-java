@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataflow_v1b3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.JobCurrentState;
 import com.pulumi.googlenative.dataflow_v1b3.enums.JobRequestedState;
 import com.pulumi.googlenative.dataflow_v1b3.enums.JobType;
@@ -19,6 +18,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientRequestId")
-      private final @Nullable Output<String> clientRequestId;
+    private @Nullable Output<String> clientRequestId;
 
-    public Output<String> clientRequestId() {
-        return this.clientRequestId == null ? Codegen.empty() : this.clientRequestId;
+    public Optional<Output<String>> clientRequestId() {
+        return Optional.ofNullable(this.clientRequestId);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createdFromSnapshotId")
-      private final @Nullable Output<String> createdFromSnapshotId;
+    private @Nullable Output<String> createdFromSnapshotId;
 
-    public Output<String> createdFromSnapshotId() {
-        return this.createdFromSnapshotId == null ? Codegen.empty() : this.createdFromSnapshotId;
+    public Optional<Output<String>> createdFromSnapshotId() {
+        return Optional.ofNullable(this.createdFromSnapshotId);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currentState")
-      private final @Nullable Output<JobCurrentState> currentState;
+    private @Nullable Output<JobCurrentState> currentState;
 
-    public Output<JobCurrentState> currentState() {
-        return this.currentState == null ? Codegen.empty() : this.currentState;
+    public Optional<Output<JobCurrentState>> currentState() {
+        return Optional.ofNullable(this.currentState);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currentStateTime")
-      private final @Nullable Output<String> currentStateTime;
+    private @Nullable Output<String> currentStateTime;
 
-    public Output<String> currentStateTime() {
-        return this.currentStateTime == null ? Codegen.empty() : this.currentStateTime;
+    public Optional<Output<String>> currentStateTime() {
+        return Optional.ofNullable(this.currentStateTime);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environment")
-      private final @Nullable Output<EnvironmentArgs> environment;
+    private @Nullable Output<EnvironmentArgs> environment;
 
-    public Output<EnvironmentArgs> environment() {
-        return this.environment == null ? Codegen.empty() : this.environment;
+    public Optional<Output<EnvironmentArgs>> environment() {
+        return Optional.ofNullable(this.environment);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jobMetadata")
-      private final @Nullable Output<JobMetadataArgs> jobMetadata;
+    private @Nullable Output<JobMetadataArgs> jobMetadata;
 
-    public Output<JobMetadataArgs> jobMetadata() {
-        return this.jobMetadata == null ? Codegen.empty() : this.jobMetadata;
+    public Optional<Output<JobMetadataArgs>> jobMetadata() {
+        return Optional.ofNullable(this.jobMetadata);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -152,10 +152,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelineDescription")
-      private final @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
+    private @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
 
-    public Output<PipelineDescriptionArgs> pipelineDescription() {
-        return this.pipelineDescription == null ? Codegen.empty() : this.pipelineDescription;
+    public Optional<Output<PipelineDescriptionArgs>> pipelineDescription() {
+        return Optional.ofNullable(this.pipelineDescription);
     }
 
     /**
@@ -163,10 +163,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -174,10 +174,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replaceJobId")
-      private final @Nullable Output<String> replaceJobId;
+    private @Nullable Output<String> replaceJobId;
 
-    public Output<String> replaceJobId() {
-        return this.replaceJobId == null ? Codegen.empty() : this.replaceJobId;
+    public Optional<Output<String>> replaceJobId() {
+        return Optional.ofNullable(this.replaceJobId);
     }
 
     /**
@@ -185,10 +185,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replacedByJobId")
-      private final @Nullable Output<String> replacedByJobId;
+    private @Nullable Output<String> replacedByJobId;
 
-    public Output<String> replacedByJobId() {
-        return this.replacedByJobId == null ? Codegen.empty() : this.replacedByJobId;
+    public Optional<Output<String>> replacedByJobId() {
+        return Optional.ofNullable(this.replacedByJobId);
     }
 
     /**
@@ -196,10 +196,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestedState")
-      private final @Nullable Output<JobRequestedState> requestedState;
+    private @Nullable Output<JobRequestedState> requestedState;
 
-    public Output<JobRequestedState> requestedState() {
-        return this.requestedState == null ? Codegen.empty() : this.requestedState;
+    public Optional<Output<JobRequestedState>> requestedState() {
+        return Optional.ofNullable(this.requestedState);
     }
 
     /**
@@ -207,10 +207,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="satisfiesPzs")
-      private final @Nullable Output<Boolean> satisfiesPzs;
+    private @Nullable Output<Boolean> satisfiesPzs;
 
-    public Output<Boolean> satisfiesPzs() {
-        return this.satisfiesPzs == null ? Codegen.empty() : this.satisfiesPzs;
+    public Optional<Output<Boolean>> satisfiesPzs() {
+        return Optional.ofNullable(this.satisfiesPzs);
     }
 
     /**
@@ -218,10 +218,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stageStates")
-      private final @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
+    private @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
 
-    public Output<List<ExecutionStageStateArgs>> stageStates() {
-        return this.stageStates == null ? Codegen.empty() : this.stageStates;
+    public Optional<Output<List<ExecutionStageStateArgs>>> stageStates() {
+        return Optional.ofNullable(this.stageStates);
     }
 
     /**
@@ -229,10 +229,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -240,10 +240,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="steps")
-      private final @Nullable Output<List<StepArgs>> steps;
+    private @Nullable Output<List<StepArgs>> steps;
 
-    public Output<List<StepArgs>> steps() {
-        return this.steps == null ? Codegen.empty() : this.steps;
+    public Optional<Output<List<StepArgs>>> steps() {
+        return Optional.ofNullable(this.steps);
     }
 
     /**
@@ -251,10 +251,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stepsLocation")
-      private final @Nullable Output<String> stepsLocation;
+    private @Nullable Output<String> stepsLocation;
 
-    public Output<String> stepsLocation() {
-        return this.stepsLocation == null ? Codegen.empty() : this.stepsLocation;
+    public Optional<Output<String>> stepsLocation() {
+        return Optional.ofNullable(this.stepsLocation);
     }
 
     /**
@@ -262,10 +262,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tempFiles")
-      private final @Nullable Output<List<String>> tempFiles;
+    private @Nullable Output<List<String>> tempFiles;
 
-    public Output<List<String>> tempFiles() {
-        return this.tempFiles == null ? Codegen.empty() : this.tempFiles;
+    public Optional<Output<List<String>>> tempFiles() {
+        return Optional.ofNullable(this.tempFiles);
     }
 
     /**
@@ -273,10 +273,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="transformNameMapping")
-      private final @Nullable Output<Map<String,String>> transformNameMapping;
+    private @Nullable Output<Map<String,String>> transformNameMapping;
 
-    public Output<Map<String,String>> transformNameMapping() {
-        return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
+    public Optional<Output<Map<String,String>>> transformNameMapping() {
+        return Optional.ofNullable(this.transformNameMapping);
     }
 
     /**
@@ -284,378 +284,307 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<JobType> type;
+    private @Nullable Output<JobType> type;
 
-    public Output<JobType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<JobType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     @Import(name="view")
-      private final @Nullable Output<String> view;
+    private @Nullable Output<String> view;
 
-    public Output<String> view() {
-        return this.view == null ? Codegen.empty() : this.view;
+    public Optional<Output<String>> view() {
+        return Optional.ofNullable(this.view);
     }
 
-    public JobArgs(
-        @Nullable Output<String> clientRequestId,
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> createdFromSnapshotId,
-        @Nullable Output<JobCurrentState> currentState,
-        @Nullable Output<String> currentStateTime,
-        @Nullable Output<EnvironmentArgs> environment,
-        @Nullable Output<String> id,
-        @Nullable Output<JobMetadataArgs> jobMetadata,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<PipelineDescriptionArgs> pipelineDescription,
-        @Nullable Output<String> project,
-        @Nullable Output<String> replaceJobId,
-        @Nullable Output<String> replacedByJobId,
-        @Nullable Output<JobRequestedState> requestedState,
-        @Nullable Output<Boolean> satisfiesPzs,
-        @Nullable Output<List<ExecutionStageStateArgs>> stageStates,
-        @Nullable Output<String> startTime,
-        @Nullable Output<List<StepArgs>> steps,
-        @Nullable Output<String> stepsLocation,
-        @Nullable Output<List<String>> tempFiles,
-        @Nullable Output<Map<String,String>> transformNameMapping,
-        @Nullable Output<JobType> type,
-        @Nullable Output<String> view) {
-        this.clientRequestId = clientRequestId;
-        this.createTime = createTime;
-        this.createdFromSnapshotId = createdFromSnapshotId;
-        this.currentState = currentState;
-        this.currentStateTime = currentStateTime;
-        this.environment = environment;
-        this.id = id;
-        this.jobMetadata = jobMetadata;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.pipelineDescription = pipelineDescription;
-        this.project = project;
-        this.replaceJobId = replaceJobId;
-        this.replacedByJobId = replacedByJobId;
-        this.requestedState = requestedState;
-        this.satisfiesPzs = satisfiesPzs;
-        this.stageStates = stageStates;
-        this.startTime = startTime;
-        this.steps = steps;
-        this.stepsLocation = stepsLocation;
-        this.tempFiles = tempFiles;
-        this.transformNameMapping = transformNameMapping;
-        this.type = type;
-        this.view = view;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.clientRequestId = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.createdFromSnapshotId = Codegen.empty();
-        this.currentState = Codegen.empty();
-        this.currentStateTime = Codegen.empty();
-        this.environment = Codegen.empty();
-        this.id = Codegen.empty();
-        this.jobMetadata = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pipelineDescription = Codegen.empty();
-        this.project = Codegen.empty();
-        this.replaceJobId = Codegen.empty();
-        this.replacedByJobId = Codegen.empty();
-        this.requestedState = Codegen.empty();
-        this.satisfiesPzs = Codegen.empty();
-        this.stageStates = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.steps = Codegen.empty();
-        this.stepsLocation = Codegen.empty();
-        this.tempFiles = Codegen.empty();
-        this.transformNameMapping = Codegen.empty();
-        this.type = Codegen.empty();
-        this.view = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.clientRequestId = $.clientRequestId;
+        this.createTime = $.createTime;
+        this.createdFromSnapshotId = $.createdFromSnapshotId;
+        this.currentState = $.currentState;
+        this.currentStateTime = $.currentStateTime;
+        this.environment = $.environment;
+        this.id = $.id;
+        this.jobMetadata = $.jobMetadata;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.pipelineDescription = $.pipelineDescription;
+        this.project = $.project;
+        this.replaceJobId = $.replaceJobId;
+        this.replacedByJobId = $.replacedByJobId;
+        this.requestedState = $.requestedState;
+        this.satisfiesPzs = $.satisfiesPzs;
+        this.stageStates = $.stageStates;
+        this.startTime = $.startTime;
+        this.steps = $.steps;
+        this.stepsLocation = $.stepsLocation;
+        this.tempFiles = $.tempFiles;
+        this.transformNameMapping = $.transformNameMapping;
+        this.type = $.type;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientRequestId;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> createdFromSnapshotId;
-        private @Nullable Output<JobCurrentState> currentState;
-        private @Nullable Output<String> currentStateTime;
-        private @Nullable Output<EnvironmentArgs> environment;
-        private @Nullable Output<String> id;
-        private @Nullable Output<JobMetadataArgs> jobMetadata;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<PipelineDescriptionArgs> pipelineDescription;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> replaceJobId;
-        private @Nullable Output<String> replacedByJobId;
-        private @Nullable Output<JobRequestedState> requestedState;
-        private @Nullable Output<Boolean> satisfiesPzs;
-        private @Nullable Output<List<ExecutionStageStateArgs>> stageStates;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<List<StepArgs>> steps;
-        private @Nullable Output<String> stepsLocation;
-        private @Nullable Output<List<String>> tempFiles;
-        private @Nullable Output<Map<String,String>> transformNameMapping;
-        private @Nullable Output<JobType> type;
-        private @Nullable Output<String> view;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientRequestId = defaults.clientRequestId;
-    	      this.createTime = defaults.createTime;
-    	      this.createdFromSnapshotId = defaults.createdFromSnapshotId;
-    	      this.currentState = defaults.currentState;
-    	      this.currentStateTime = defaults.currentStateTime;
-    	      this.environment = defaults.environment;
-    	      this.id = defaults.id;
-    	      this.jobMetadata = defaults.jobMetadata;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.pipelineDescription = defaults.pipelineDescription;
-    	      this.project = defaults.project;
-    	      this.replaceJobId = defaults.replaceJobId;
-    	      this.replacedByJobId = defaults.replacedByJobId;
-    	      this.requestedState = defaults.requestedState;
-    	      this.satisfiesPzs = defaults.satisfiesPzs;
-    	      this.stageStates = defaults.stageStates;
-    	      this.startTime = defaults.startTime;
-    	      this.steps = defaults.steps;
-    	      this.stepsLocation = defaults.stepsLocation;
-    	      this.tempFiles = defaults.tempFiles;
-    	      this.transformNameMapping = defaults.transformNameMapping;
-    	      this.type = defaults.type;
-    	      this.view = defaults.view;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientRequestId(@Nullable Output<String> clientRequestId) {
-            this.clientRequestId = clientRequestId;
+            $.clientRequestId = clientRequestId;
             return this;
         }
-        public Builder clientRequestId(@Nullable String clientRequestId) {
-            this.clientRequestId = Codegen.ofNullable(clientRequestId);
-            return this;
+
+        public Builder clientRequestId(String clientRequestId) {
+            return clientRequestId(Output.of(clientRequestId));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder createdFromSnapshotId(@Nullable Output<String> createdFromSnapshotId) {
-            this.createdFromSnapshotId = createdFromSnapshotId;
+            $.createdFromSnapshotId = createdFromSnapshotId;
             return this;
         }
-        public Builder createdFromSnapshotId(@Nullable String createdFromSnapshotId) {
-            this.createdFromSnapshotId = Codegen.ofNullable(createdFromSnapshotId);
-            return this;
+
+        public Builder createdFromSnapshotId(String createdFromSnapshotId) {
+            return createdFromSnapshotId(Output.of(createdFromSnapshotId));
         }
+
         public Builder currentState(@Nullable Output<JobCurrentState> currentState) {
-            this.currentState = currentState;
+            $.currentState = currentState;
             return this;
         }
-        public Builder currentState(@Nullable JobCurrentState currentState) {
-            this.currentState = Codegen.ofNullable(currentState);
-            return this;
+
+        public Builder currentState(JobCurrentState currentState) {
+            return currentState(Output.of(currentState));
         }
+
         public Builder currentStateTime(@Nullable Output<String> currentStateTime) {
-            this.currentStateTime = currentStateTime;
+            $.currentStateTime = currentStateTime;
             return this;
         }
-        public Builder currentStateTime(@Nullable String currentStateTime) {
-            this.currentStateTime = Codegen.ofNullable(currentStateTime);
-            return this;
+
+        public Builder currentStateTime(String currentStateTime) {
+            return currentStateTime(Output.of(currentStateTime));
         }
+
         public Builder environment(@Nullable Output<EnvironmentArgs> environment) {
-            this.environment = environment;
+            $.environment = environment;
             return this;
         }
-        public Builder environment(@Nullable EnvironmentArgs environment) {
-            this.environment = Codegen.ofNullable(environment);
-            return this;
+
+        public Builder environment(EnvironmentArgs environment) {
+            return environment(Output.of(environment));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder jobMetadata(@Nullable Output<JobMetadataArgs> jobMetadata) {
-            this.jobMetadata = jobMetadata;
+            $.jobMetadata = jobMetadata;
             return this;
         }
-        public Builder jobMetadata(@Nullable JobMetadataArgs jobMetadata) {
-            this.jobMetadata = Codegen.ofNullable(jobMetadata);
-            return this;
+
+        public Builder jobMetadata(JobMetadataArgs jobMetadata) {
+            return jobMetadata(Output.of(jobMetadata));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pipelineDescription(@Nullable Output<PipelineDescriptionArgs> pipelineDescription) {
-            this.pipelineDescription = pipelineDescription;
+            $.pipelineDescription = pipelineDescription;
             return this;
         }
-        public Builder pipelineDescription(@Nullable PipelineDescriptionArgs pipelineDescription) {
-            this.pipelineDescription = Codegen.ofNullable(pipelineDescription);
-            return this;
+
+        public Builder pipelineDescription(PipelineDescriptionArgs pipelineDescription) {
+            return pipelineDescription(Output.of(pipelineDescription));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder replaceJobId(@Nullable Output<String> replaceJobId) {
-            this.replaceJobId = replaceJobId;
+            $.replaceJobId = replaceJobId;
             return this;
         }
-        public Builder replaceJobId(@Nullable String replaceJobId) {
-            this.replaceJobId = Codegen.ofNullable(replaceJobId);
-            return this;
+
+        public Builder replaceJobId(String replaceJobId) {
+            return replaceJobId(Output.of(replaceJobId));
         }
+
         public Builder replacedByJobId(@Nullable Output<String> replacedByJobId) {
-            this.replacedByJobId = replacedByJobId;
+            $.replacedByJobId = replacedByJobId;
             return this;
         }
-        public Builder replacedByJobId(@Nullable String replacedByJobId) {
-            this.replacedByJobId = Codegen.ofNullable(replacedByJobId);
-            return this;
+
+        public Builder replacedByJobId(String replacedByJobId) {
+            return replacedByJobId(Output.of(replacedByJobId));
         }
+
         public Builder requestedState(@Nullable Output<JobRequestedState> requestedState) {
-            this.requestedState = requestedState;
+            $.requestedState = requestedState;
             return this;
         }
-        public Builder requestedState(@Nullable JobRequestedState requestedState) {
-            this.requestedState = Codegen.ofNullable(requestedState);
-            return this;
+
+        public Builder requestedState(JobRequestedState requestedState) {
+            return requestedState(Output.of(requestedState));
         }
+
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
-            this.satisfiesPzs = satisfiesPzs;
+            $.satisfiesPzs = satisfiesPzs;
             return this;
         }
-        public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Codegen.ofNullable(satisfiesPzs);
-            return this;
+
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
+            return satisfiesPzs(Output.of(satisfiesPzs));
         }
+
         public Builder stageStates(@Nullable Output<List<ExecutionStageStateArgs>> stageStates) {
-            this.stageStates = stageStates;
+            $.stageStates = stageStates;
             return this;
         }
-        public Builder stageStates(@Nullable List<ExecutionStageStateArgs> stageStates) {
-            this.stageStates = Codegen.ofNullable(stageStates);
-            return this;
+
+        public Builder stageStates(List<ExecutionStageStateArgs> stageStates) {
+            return stageStates(Output.of(stageStates));
         }
+
         public Builder stageStates(ExecutionStageStateArgs... stageStates) {
             return stageStates(List.of(stageStates));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder steps(@Nullable Output<List<StepArgs>> steps) {
-            this.steps = steps;
+            $.steps = steps;
             return this;
         }
-        public Builder steps(@Nullable List<StepArgs> steps) {
-            this.steps = Codegen.ofNullable(steps);
-            return this;
+
+        public Builder steps(List<StepArgs> steps) {
+            return steps(Output.of(steps));
         }
+
         public Builder steps(StepArgs... steps) {
             return steps(List.of(steps));
         }
+
         public Builder stepsLocation(@Nullable Output<String> stepsLocation) {
-            this.stepsLocation = stepsLocation;
+            $.stepsLocation = stepsLocation;
             return this;
         }
-        public Builder stepsLocation(@Nullable String stepsLocation) {
-            this.stepsLocation = Codegen.ofNullable(stepsLocation);
-            return this;
+
+        public Builder stepsLocation(String stepsLocation) {
+            return stepsLocation(Output.of(stepsLocation));
         }
+
         public Builder tempFiles(@Nullable Output<List<String>> tempFiles) {
-            this.tempFiles = tempFiles;
+            $.tempFiles = tempFiles;
             return this;
         }
-        public Builder tempFiles(@Nullable List<String> tempFiles) {
-            this.tempFiles = Codegen.ofNullable(tempFiles);
-            return this;
+
+        public Builder tempFiles(List<String> tempFiles) {
+            return tempFiles(Output.of(tempFiles));
         }
+
         public Builder tempFiles(String... tempFiles) {
             return tempFiles(List.of(tempFiles));
         }
+
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
-            this.transformNameMapping = transformNameMapping;
+            $.transformNameMapping = transformNameMapping;
             return this;
         }
-        public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
-            this.transformNameMapping = Codegen.ofNullable(transformNameMapping);
-            return this;
+
+        public Builder transformNameMapping(Map<String,String> transformNameMapping) {
+            return transformNameMapping(Output.of(transformNameMapping));
         }
+
         public Builder type(@Nullable Output<JobType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable JobType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
+
+        public Builder type(JobType type) {
+            return type(Output.of(type));
         }
+
         public Builder view(@Nullable Output<String> view) {
-            this.view = view;
+            $.view = view;
             return this;
         }
-        public Builder view(@Nullable String view) {
-            this.view = Codegen.ofNullable(view);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, id, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type, view);
+
+        public Builder view(String view) {
+            return view(Output.of(view));
+        }
+
+        public JobArgs build() {
+            return $;
         }
     }
+
 }

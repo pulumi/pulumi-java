@@ -22,7 +22,7 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="bundleId", required=true)
-      private final String bundleId;
+    private String bundleId;
 
     public String bundleId() {
         return this.bundleId;
@@ -33,7 +33,7 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="content", required=true)
-      private final FileReferenceResponse content;
+    private FileReferenceResponse content;
 
     public FileReferenceResponse content() {
         return this.content;
@@ -44,64 +44,59 @@ public final class IosDeviceFileResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="devicePath", required=true)
-      private final String devicePath;
+    private String devicePath;
 
     public String devicePath() {
         return this.devicePath;
     }
 
-    public IosDeviceFileResponse(
-        String bundleId,
-        FileReferenceResponse content,
-        String devicePath) {
-        this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.devicePath = Objects.requireNonNull(devicePath, "expected parameter 'devicePath' to be non-null");
-    }
+    private IosDeviceFileResponse() {}
 
-    private IosDeviceFileResponse() {
-        this.bundleId = null;
-        this.content = null;
-        this.devicePath = null;
+    private IosDeviceFileResponse(IosDeviceFileResponse $) {
+        this.bundleId = $.bundleId;
+        this.content = $.content;
+        this.devicePath = $.devicePath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosDeviceFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bundleId;
-        private FileReferenceResponse content;
-        private String devicePath;
+        private IosDeviceFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosDeviceFileResponse();
         }
 
         public Builder(IosDeviceFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
-    	      this.content = defaults.content;
-    	      this.devicePath = defaults.devicePath;
+            $ = new IosDeviceFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(String bundleId) {
-            this.bundleId = Objects.requireNonNull(bundleId);
+            $.bundleId = bundleId;
             return this;
         }
+
         public Builder content(FileReferenceResponse content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder devicePath(String devicePath) {
-            this.devicePath = Objects.requireNonNull(devicePath);
+            $.devicePath = devicePath;
             return this;
-        }        public IosDeviceFileResponse build() {
-            return new IosDeviceFileResponse(bundleId, content, devicePath);
+        }
+
+        public IosDeviceFileResponse build() {
+            $.bundleId = Objects.requireNonNull($.bundleId, "expected parameter 'bundleId' to be non-null");
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.devicePath = Objects.requireNonNull($.devicePath, "expected parameter 'devicePath' to be non-null");
+            return $;
         }
     }
+
 }

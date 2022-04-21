@@ -23,7 +23,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends co
      * 
      */
     @Import(name="allowAll", required=true)
-      private final Boolean allowAll;
+    private Boolean allowAll;
 
     public Boolean allowAll() {
         return this.allowAll;
@@ -34,7 +34,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends co
      * 
      */
     @Import(name="condition", required=true)
-      private final GoogleTypeExprResponse condition;
+    private GoogleTypeExprResponse condition;
 
     public GoogleTypeExprResponse condition() {
         return this.condition;
@@ -45,7 +45,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends co
      * 
      */
     @Import(name="denyAll", required=true)
-      private final Boolean denyAll;
+    private Boolean denyAll;
 
     public Boolean denyAll() {
         return this.denyAll;
@@ -56,7 +56,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends co
      * 
      */
     @Import(name="enforce", required=true)
-      private final Boolean enforce;
+    private Boolean enforce;
 
     public Boolean enforce() {
         return this.enforce;
@@ -67,82 +67,73 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends co
      * 
      */
     @Import(name="values", required=true)
-      private final GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
 
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values() {
         return this.values;
     }
 
-    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(
-        Boolean allowAll,
-        GoogleTypeExprResponse condition,
-        Boolean denyAll,
-        Boolean enforce,
-        GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
-        this.allowAll = Objects.requireNonNull(allowAll, "expected parameter 'allowAll' to be non-null");
-        this.condition = Objects.requireNonNull(condition, "expected parameter 'condition' to be non-null");
-        this.denyAll = Objects.requireNonNull(denyAll, "expected parameter 'denyAll' to be non-null");
-        this.enforce = Objects.requireNonNull(enforce, "expected parameter 'enforce' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse() {}
 
-    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse() {
-        this.allowAll = null;
-        this.condition = null;
-        this.denyAll = null;
-        this.enforce = null;
-        this.values = null;
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse $) {
+        this.allowAll = $.allowAll;
+        this.condition = $.condition;
+        this.denyAll = $.denyAll;
+        this.enforce = $.enforce;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowAll;
-        private GoogleTypeExprResponse condition;
-        private Boolean denyAll;
-        private Boolean enforce;
-        private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values;
+        private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse();
         }
 
         public Builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAll = defaults.allowAll;
-    	      this.condition = defaults.condition;
-    	      this.denyAll = defaults.denyAll;
-    	      this.enforce = defaults.enforce;
-    	      this.values = defaults.values;
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAll(Boolean allowAll) {
-            this.allowAll = Objects.requireNonNull(allowAll);
+            $.allowAll = allowAll;
             return this;
         }
+
         public Builder condition(GoogleTypeExprResponse condition) {
-            this.condition = Objects.requireNonNull(condition);
+            $.condition = condition;
             return this;
         }
+
         public Builder denyAll(Boolean denyAll) {
-            this.denyAll = Objects.requireNonNull(denyAll);
+            $.denyAll = denyAll;
             return this;
         }
+
         public Builder enforce(Boolean enforce) {
-            this.enforce = Objects.requireNonNull(enforce);
+            $.enforce = enforce;
             return this;
         }
+
         public Builder values(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
-        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse build() {
-            return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(allowAll, condition, denyAll, enforce, values);
+        }
+
+        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse build() {
+            $.allowAll = Objects.requireNonNull($.allowAll, "expected parameter 'allowAll' to be non-null");
+            $.condition = Objects.requireNonNull($.condition, "expected parameter 'condition' to be non-null");
+            $.denyAll = Objects.requireNonNull($.denyAll, "expected parameter 'denyAll' to be non-null");
+            $.enforce = Objects.requireNonNull($.enforce, "expected parameter 'enforce' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

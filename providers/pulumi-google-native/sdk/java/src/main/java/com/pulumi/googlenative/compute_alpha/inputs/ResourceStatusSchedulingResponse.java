@@ -17,45 +17,45 @@ public final class ResourceStatusSchedulingResponse extends com.pulumi.resources
      * 
      */
     @Import(name="availabilityDomain", required=true)
-      private final Integer availabilityDomain;
+    private Integer availabilityDomain;
 
     public Integer availabilityDomain() {
         return this.availabilityDomain;
     }
 
-    public ResourceStatusSchedulingResponse(Integer availabilityDomain) {
-        this.availabilityDomain = Objects.requireNonNull(availabilityDomain, "expected parameter 'availabilityDomain' to be non-null");
-    }
+    private ResourceStatusSchedulingResponse() {}
 
-    private ResourceStatusSchedulingResponse() {
-        this.availabilityDomain = null;
+    private ResourceStatusSchedulingResponse(ResourceStatusSchedulingResponse $) {
+        this.availabilityDomain = $.availabilityDomain;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceStatusSchedulingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer availabilityDomain;
+        private ResourceStatusSchedulingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceStatusSchedulingResponse();
         }
 
         public Builder(ResourceStatusSchedulingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availabilityDomain = defaults.availabilityDomain;
+            $ = new ResourceStatusSchedulingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availabilityDomain(Integer availabilityDomain) {
-            this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
+            $.availabilityDomain = availabilityDomain;
             return this;
-        }        public ResourceStatusSchedulingResponse build() {
-            return new ResourceStatusSchedulingResponse(availabilityDomain);
+        }
+
+        public ResourceStatusSchedulingResponse build() {
+            $.availabilityDomain = Objects.requireNonNull($.availabilityDomain, "expected parameter 'availabilityDomain' to be non-null");
+            return $;
         }
     }
+
 }

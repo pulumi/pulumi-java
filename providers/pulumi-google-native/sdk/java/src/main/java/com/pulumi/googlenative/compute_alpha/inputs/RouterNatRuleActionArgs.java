@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class RouterNatRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceNatActiveIps")
-      private final @Nullable Output<List<String>> sourceNatActiveIps;
+    private @Nullable Output<List<String>> sourceNatActiveIps;
 
-    public Output<List<String>> sourceNatActiveIps() {
-        return this.sourceNatActiveIps == null ? Codegen.empty() : this.sourceNatActiveIps;
+    public Optional<Output<List<String>>> sourceNatActiveIps() {
+        return Optional.ofNullable(this.sourceNatActiveIps);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class RouterNatRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceNatActiveRanges")
-      private final @Nullable Output<List<String>> sourceNatActiveRanges;
+    private @Nullable Output<List<String>> sourceNatActiveRanges;
 
-    public Output<List<String>> sourceNatActiveRanges() {
-        return this.sourceNatActiveRanges == null ? Codegen.empty() : this.sourceNatActiveRanges;
+    public Optional<Output<List<String>>> sourceNatActiveRanges() {
+        return Optional.ofNullable(this.sourceNatActiveRanges);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class RouterNatRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceNatDrainIps")
-      private final @Nullable Output<List<String>> sourceNatDrainIps;
+    private @Nullable Output<List<String>> sourceNatDrainIps;
 
-    public Output<List<String>> sourceNatDrainIps() {
-        return this.sourceNatDrainIps == null ? Codegen.empty() : this.sourceNatDrainIps;
+    public Optional<Output<List<String>>> sourceNatDrainIps() {
+        return Optional.ofNullable(this.sourceNatDrainIps);
     }
 
     /**
@@ -54,101 +54,94 @@ public final class RouterNatRuleActionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="sourceNatDrainRanges")
-      private final @Nullable Output<List<String>> sourceNatDrainRanges;
+    private @Nullable Output<List<String>> sourceNatDrainRanges;
 
-    public Output<List<String>> sourceNatDrainRanges() {
-        return this.sourceNatDrainRanges == null ? Codegen.empty() : this.sourceNatDrainRanges;
+    public Optional<Output<List<String>>> sourceNatDrainRanges() {
+        return Optional.ofNullable(this.sourceNatDrainRanges);
     }
 
-    public RouterNatRuleActionArgs(
-        @Nullable Output<List<String>> sourceNatActiveIps,
-        @Nullable Output<List<String>> sourceNatActiveRanges,
-        @Nullable Output<List<String>> sourceNatDrainIps,
-        @Nullable Output<List<String>> sourceNatDrainRanges) {
-        this.sourceNatActiveIps = sourceNatActiveIps;
-        this.sourceNatActiveRanges = sourceNatActiveRanges;
-        this.sourceNatDrainIps = sourceNatDrainIps;
-        this.sourceNatDrainRanges = sourceNatDrainRanges;
-    }
+    private RouterNatRuleActionArgs() {}
 
-    private RouterNatRuleActionArgs() {
-        this.sourceNatActiveIps = Codegen.empty();
-        this.sourceNatActiveRanges = Codegen.empty();
-        this.sourceNatDrainIps = Codegen.empty();
-        this.sourceNatDrainRanges = Codegen.empty();
+    private RouterNatRuleActionArgs(RouterNatRuleActionArgs $) {
+        this.sourceNatActiveIps = $.sourceNatActiveIps;
+        this.sourceNatActiveRanges = $.sourceNatActiveRanges;
+        this.sourceNatDrainIps = $.sourceNatDrainIps;
+        this.sourceNatDrainRanges = $.sourceNatDrainRanges;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterNatRuleActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> sourceNatActiveIps;
-        private @Nullable Output<List<String>> sourceNatActiveRanges;
-        private @Nullable Output<List<String>> sourceNatDrainIps;
-        private @Nullable Output<List<String>> sourceNatDrainRanges;
+        private RouterNatRuleActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterNatRuleActionArgs();
         }
 
         public Builder(RouterNatRuleActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceNatActiveIps = defaults.sourceNatActiveIps;
-    	      this.sourceNatActiveRanges = defaults.sourceNatActiveRanges;
-    	      this.sourceNatDrainIps = defaults.sourceNatDrainIps;
-    	      this.sourceNatDrainRanges = defaults.sourceNatDrainRanges;
+            $ = new RouterNatRuleActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceNatActiveIps(@Nullable Output<List<String>> sourceNatActiveIps) {
-            this.sourceNatActiveIps = sourceNatActiveIps;
+            $.sourceNatActiveIps = sourceNatActiveIps;
             return this;
         }
-        public Builder sourceNatActiveIps(@Nullable List<String> sourceNatActiveIps) {
-            this.sourceNatActiveIps = Codegen.ofNullable(sourceNatActiveIps);
-            return this;
+
+        public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
+            return sourceNatActiveIps(Output.of(sourceNatActiveIps));
         }
+
         public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
             return sourceNatActiveIps(List.of(sourceNatActiveIps));
         }
+
         public Builder sourceNatActiveRanges(@Nullable Output<List<String>> sourceNatActiveRanges) {
-            this.sourceNatActiveRanges = sourceNatActiveRanges;
+            $.sourceNatActiveRanges = sourceNatActiveRanges;
             return this;
         }
-        public Builder sourceNatActiveRanges(@Nullable List<String> sourceNatActiveRanges) {
-            this.sourceNatActiveRanges = Codegen.ofNullable(sourceNatActiveRanges);
-            return this;
+
+        public Builder sourceNatActiveRanges(List<String> sourceNatActiveRanges) {
+            return sourceNatActiveRanges(Output.of(sourceNatActiveRanges));
         }
+
         public Builder sourceNatActiveRanges(String... sourceNatActiveRanges) {
             return sourceNatActiveRanges(List.of(sourceNatActiveRanges));
         }
+
         public Builder sourceNatDrainIps(@Nullable Output<List<String>> sourceNatDrainIps) {
-            this.sourceNatDrainIps = sourceNatDrainIps;
+            $.sourceNatDrainIps = sourceNatDrainIps;
             return this;
         }
-        public Builder sourceNatDrainIps(@Nullable List<String> sourceNatDrainIps) {
-            this.sourceNatDrainIps = Codegen.ofNullable(sourceNatDrainIps);
-            return this;
+
+        public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
+            return sourceNatDrainIps(Output.of(sourceNatDrainIps));
         }
+
         public Builder sourceNatDrainIps(String... sourceNatDrainIps) {
             return sourceNatDrainIps(List.of(sourceNatDrainIps));
         }
+
         public Builder sourceNatDrainRanges(@Nullable Output<List<String>> sourceNatDrainRanges) {
-            this.sourceNatDrainRanges = sourceNatDrainRanges;
+            $.sourceNatDrainRanges = sourceNatDrainRanges;
             return this;
         }
-        public Builder sourceNatDrainRanges(@Nullable List<String> sourceNatDrainRanges) {
-            this.sourceNatDrainRanges = Codegen.ofNullable(sourceNatDrainRanges);
-            return this;
+
+        public Builder sourceNatDrainRanges(List<String> sourceNatDrainRanges) {
+            return sourceNatDrainRanges(Output.of(sourceNatDrainRanges));
         }
+
         public Builder sourceNatDrainRanges(String... sourceNatDrainRanges) {
             return sourceNatDrainRanges(List.of(sourceNatDrainRanges));
-        }        public RouterNatRuleActionArgs build() {
-            return new RouterNatRuleActionArgs(sourceNatActiveIps, sourceNatActiveRanges, sourceNatDrainIps, sourceNatDrainRanges);
+        }
+
+        public RouterNatRuleActionArgs build() {
+            return $;
         }
     }
+
 }

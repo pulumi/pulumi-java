@@ -5,7 +5,6 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.enums.OrganizationBillingType;
 import com.pulumi.googlenative.apigee_v1.enums.OrganizationRuntimeType;
 import com.pulumi.googlenative.apigee_v1.enums.OrganizationType;
@@ -15,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addonsConfig")
-      private final @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
+    private @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
 
-    public Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig() {
-        return this.addonsConfig == null ? Codegen.empty() : this.addonsConfig;
+    public Optional<Output<GoogleCloudApigeeV1AddonsConfigArgs>> addonsConfig() {
+        return Optional.ofNullable(this.addonsConfig);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analyticsRegion", required=true)
-      private final Output<String> analyticsRegion;
+    private Output<String> analyticsRegion;
 
     public Output<String> analyticsRegion() {
         return this.analyticsRegion;
@@ -49,10 +49,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<String>> attributes;
+    private @Nullable Output<List<String>> attributes;
 
-    public Output<List<String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authorizedNetwork")
-      private final @Nullable Output<String> authorizedNetwork;
+    private @Nullable Output<String> authorizedNetwork;
 
-    public Output<String> authorizedNetwork() {
-        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
+    public Optional<Output<String>> authorizedNetwork() {
+        return Optional.ofNullable(this.authorizedNetwork);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="billingType")
-      private final @Nullable Output<OrganizationBillingType> billingType;
+    private @Nullable Output<OrganizationBillingType> billingType;
 
-    public Output<OrganizationBillingType> billingType() {
-        return this.billingType == null ? Codegen.empty() : this.billingType;
+    public Optional<Output<OrganizationBillingType>> billingType() {
+        return Optional.ofNullable(this.billingType);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerName")
-      private final @Nullable Output<String> customerName;
+    private @Nullable Output<String> customerName;
 
-    public Output<String> customerName() {
-        return this.customerName == null ? Codegen.empty() : this.customerName;
+    public Optional<Output<String>> customerName() {
+        return Optional.ofNullable(this.customerName);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -104,14 +104,14 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     @Import(name="parent", required=true)
-      private final Output<String> parent;
+    private Output<String> parent;
 
     public Output<String> parent() {
         return this.parent;
@@ -122,10 +122,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portalDisabled")
-      private final @Nullable Output<Boolean> portalDisabled;
+    private @Nullable Output<Boolean> portalDisabled;
 
-    public Output<Boolean> portalDisabled() {
-        return this.portalDisabled == null ? Codegen.empty() : this.portalDisabled;
+    public Optional<Output<Boolean>> portalDisabled() {
+        return Optional.ofNullable(this.portalDisabled);
     }
 
     /**
@@ -133,10 +133,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="properties")
-      private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
+    private @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
-    public Output<GoogleCloudApigeeV1PropertiesArgs> properties() {
-        return this.properties == null ? Codegen.empty() : this.properties;
+    public Optional<Output<GoogleCloudApigeeV1PropertiesArgs>> properties() {
+        return Optional.ofNullable(this.properties);
     }
 
     /**
@@ -144,10 +144,10 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeDatabaseEncryptionKeyName")
-      private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
+    private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
-    public Output<String> runtimeDatabaseEncryptionKeyName() {
-        return this.runtimeDatabaseEncryptionKeyName == null ? Codegen.empty() : this.runtimeDatabaseEncryptionKeyName;
+    public Optional<Output<String>> runtimeDatabaseEncryptionKeyName() {
+        return Optional.ofNullable(this.runtimeDatabaseEncryptionKeyName);
     }
 
     /**
@@ -155,7 +155,7 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="runtimeType", required=true)
-      private final Output<OrganizationRuntimeType> runtimeType;
+    private Output<OrganizationRuntimeType> runtimeType;
 
     public Output<OrganizationRuntimeType> runtimeType() {
         return this.runtimeType;
@@ -166,222 +166,185 @@ public final class OrganizationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<OrganizationType> type;
+    private @Nullable Output<OrganizationType> type;
 
-    public Output<OrganizationType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<OrganizationType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public OrganizationArgs(
-        @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig,
-        Output<String> analyticsRegion,
-        @Nullable Output<List<String>> attributes,
-        @Nullable Output<String> authorizedNetwork,
-        @Nullable Output<OrganizationBillingType> billingType,
-        @Nullable Output<String> customerName,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> parent,
-        @Nullable Output<Boolean> portalDisabled,
-        @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties,
-        @Nullable Output<String> runtimeDatabaseEncryptionKeyName,
-        Output<OrganizationRuntimeType> runtimeType,
-        @Nullable Output<OrganizationType> type) {
-        this.addonsConfig = addonsConfig;
-        this.analyticsRegion = Objects.requireNonNull(analyticsRegion, "expected parameter 'analyticsRegion' to be non-null");
-        this.attributes = attributes;
-        this.authorizedNetwork = authorizedNetwork;
-        this.billingType = billingType;
-        this.customerName = customerName;
-        this.description = description;
-        this.displayName = displayName;
-        this.parent = Objects.requireNonNull(parent, "expected parameter 'parent' to be non-null");
-        this.portalDisabled = portalDisabled;
-        this.properties = properties;
-        this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
-        this.runtimeType = Objects.requireNonNull(runtimeType, "expected parameter 'runtimeType' to be non-null");
-        this.type = type;
-    }
+    private OrganizationArgs() {}
 
-    private OrganizationArgs() {
-        this.addonsConfig = Codegen.empty();
-        this.analyticsRegion = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.authorizedNetwork = Codegen.empty();
-        this.billingType = Codegen.empty();
-        this.customerName = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.portalDisabled = Codegen.empty();
-        this.properties = Codegen.empty();
-        this.runtimeDatabaseEncryptionKeyName = Codegen.empty();
-        this.runtimeType = Codegen.empty();
-        this.type = Codegen.empty();
+    private OrganizationArgs(OrganizationArgs $) {
+        this.addonsConfig = $.addonsConfig;
+        this.analyticsRegion = $.analyticsRegion;
+        this.attributes = $.attributes;
+        this.authorizedNetwork = $.authorizedNetwork;
+        this.billingType = $.billingType;
+        this.customerName = $.customerName;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.parent = $.parent;
+        this.portalDisabled = $.portalDisabled;
+        this.properties = $.properties;
+        this.runtimeDatabaseEncryptionKeyName = $.runtimeDatabaseEncryptionKeyName;
+        this.runtimeType = $.runtimeType;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
-        private Output<String> analyticsRegion;
-        private @Nullable Output<List<String>> attributes;
-        private @Nullable Output<String> authorizedNetwork;
-        private @Nullable Output<OrganizationBillingType> billingType;
-        private @Nullable Output<String> customerName;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> parent;
-        private @Nullable Output<Boolean> portalDisabled;
-        private @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
-        private @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
-        private Output<OrganizationRuntimeType> runtimeType;
-        private @Nullable Output<OrganizationType> type;
+        private OrganizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationArgs();
         }
 
         public Builder(OrganizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addonsConfig = defaults.addonsConfig;
-    	      this.analyticsRegion = defaults.analyticsRegion;
-    	      this.attributes = defaults.attributes;
-    	      this.authorizedNetwork = defaults.authorizedNetwork;
-    	      this.billingType = defaults.billingType;
-    	      this.customerName = defaults.customerName;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.parent = defaults.parent;
-    	      this.portalDisabled = defaults.portalDisabled;
-    	      this.properties = defaults.properties;
-    	      this.runtimeDatabaseEncryptionKeyName = defaults.runtimeDatabaseEncryptionKeyName;
-    	      this.runtimeType = defaults.runtimeType;
-    	      this.type = defaults.type;
+            $ = new OrganizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addonsConfig(@Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig) {
-            this.addonsConfig = addonsConfig;
+            $.addonsConfig = addonsConfig;
             return this;
         }
-        public Builder addonsConfig(@Nullable GoogleCloudApigeeV1AddonsConfigArgs addonsConfig) {
-            this.addonsConfig = Codegen.ofNullable(addonsConfig);
-            return this;
+
+        public Builder addonsConfig(GoogleCloudApigeeV1AddonsConfigArgs addonsConfig) {
+            return addonsConfig(Output.of(addonsConfig));
         }
+
         public Builder analyticsRegion(Output<String> analyticsRegion) {
-            this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
+            $.analyticsRegion = analyticsRegion;
             return this;
         }
+
         public Builder analyticsRegion(String analyticsRegion) {
-            this.analyticsRegion = Output.of(Objects.requireNonNull(analyticsRegion));
-            return this;
+            return analyticsRegion(Output.of(analyticsRegion));
         }
+
         public Builder attributes(@Nullable Output<List<String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(String... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
-            this.authorizedNetwork = authorizedNetwork;
+            $.authorizedNetwork = authorizedNetwork;
             return this;
         }
-        public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
-            return this;
+
+        public Builder authorizedNetwork(String authorizedNetwork) {
+            return authorizedNetwork(Output.of(authorizedNetwork));
         }
+
         public Builder billingType(@Nullable Output<OrganizationBillingType> billingType) {
-            this.billingType = billingType;
+            $.billingType = billingType;
             return this;
         }
-        public Builder billingType(@Nullable OrganizationBillingType billingType) {
-            this.billingType = Codegen.ofNullable(billingType);
-            return this;
+
+        public Builder billingType(OrganizationBillingType billingType) {
+            return billingType(Output.of(billingType));
         }
+
         public Builder customerName(@Nullable Output<String> customerName) {
-            this.customerName = customerName;
+            $.customerName = customerName;
             return this;
         }
-        public Builder customerName(@Nullable String customerName) {
-            this.customerName = Codegen.ofNullable(customerName);
-            return this;
+
+        public Builder customerName(String customerName) {
+            return customerName(Output.of(customerName));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder parent(Output<String> parent) {
-            this.parent = Objects.requireNonNull(parent);
+            $.parent = parent;
             return this;
         }
+
         public Builder parent(String parent) {
-            this.parent = Output.of(Objects.requireNonNull(parent));
-            return this;
+            return parent(Output.of(parent));
         }
+
         public Builder portalDisabled(@Nullable Output<Boolean> portalDisabled) {
-            this.portalDisabled = portalDisabled;
+            $.portalDisabled = portalDisabled;
             return this;
         }
-        public Builder portalDisabled(@Nullable Boolean portalDisabled) {
-            this.portalDisabled = Codegen.ofNullable(portalDisabled);
-            return this;
+
+        public Builder portalDisabled(Boolean portalDisabled) {
+            return portalDisabled(Output.of(portalDisabled));
         }
+
         public Builder properties(@Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties) {
-            this.properties = properties;
+            $.properties = properties;
             return this;
         }
-        public Builder properties(@Nullable GoogleCloudApigeeV1PropertiesArgs properties) {
-            this.properties = Codegen.ofNullable(properties);
-            return this;
+
+        public Builder properties(GoogleCloudApigeeV1PropertiesArgs properties) {
+            return properties(Output.of(properties));
         }
+
         public Builder runtimeDatabaseEncryptionKeyName(@Nullable Output<String> runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
+            $.runtimeDatabaseEncryptionKeyName = runtimeDatabaseEncryptionKeyName;
             return this;
         }
-        public Builder runtimeDatabaseEncryptionKeyName(@Nullable String runtimeDatabaseEncryptionKeyName) {
-            this.runtimeDatabaseEncryptionKeyName = Codegen.ofNullable(runtimeDatabaseEncryptionKeyName);
-            return this;
+
+        public Builder runtimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
+            return runtimeDatabaseEncryptionKeyName(Output.of(runtimeDatabaseEncryptionKeyName));
         }
+
         public Builder runtimeType(Output<OrganizationRuntimeType> runtimeType) {
-            this.runtimeType = Objects.requireNonNull(runtimeType);
+            $.runtimeType = runtimeType;
             return this;
         }
+
         public Builder runtimeType(OrganizationRuntimeType runtimeType) {
-            this.runtimeType = Output.of(Objects.requireNonNull(runtimeType));
-            return this;
+            return runtimeType(Output.of(runtimeType));
         }
+
         public Builder type(@Nullable Output<OrganizationType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable OrganizationType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public OrganizationArgs build() {
-            return new OrganizationArgs(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, customerName, description, displayName, parent, portalDisabled, properties, runtimeDatabaseEncryptionKeyName, runtimeType, type);
+
+        public Builder type(OrganizationType type) {
+            return type(Output.of(type));
+        }
+
+        public OrganizationArgs build() {
+            $.analyticsRegion = Objects.requireNonNull($.analyticsRegion, "expected parameter 'analyticsRegion' to be non-null");
+            $.parent = Objects.requireNonNull($.parent, "expected parameter 'parent' to be non-null");
+            $.runtimeType = Objects.requireNonNull($.runtimeType, "expected parameter 'runtimeType' to be non-null");
+            return $;
         }
     }
+
 }

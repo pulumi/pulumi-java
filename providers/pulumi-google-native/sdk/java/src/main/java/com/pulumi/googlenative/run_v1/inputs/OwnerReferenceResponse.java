@@ -22,7 +22,7 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="apiVersion", required=true)
-      private final String apiVersion;
+    private String apiVersion;
 
     public String apiVersion() {
         return this.apiVersion;
@@ -33,7 +33,7 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="blockOwnerDeletion", required=true)
-      private final Boolean blockOwnerDeletion;
+    private Boolean blockOwnerDeletion;
 
     public Boolean blockOwnerDeletion() {
         return this.blockOwnerDeletion;
@@ -44,7 +44,7 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="controller", required=true)
-      private final Boolean controller;
+    private Boolean controller;
 
     public Boolean controller() {
         return this.controller;
@@ -55,7 +55,7 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -66,7 +66,7 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,91 +77,80 @@ public final class OwnerReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="uid", required=true)
-      private final String uid;
+    private String uid;
 
     public String uid() {
         return this.uid;
     }
 
-    public OwnerReferenceResponse(
-        String apiVersion,
-        Boolean blockOwnerDeletion,
-        Boolean controller,
-        String kind,
-        String name,
-        String uid) {
-        this.apiVersion = Objects.requireNonNull(apiVersion, "expected parameter 'apiVersion' to be non-null");
-        this.blockOwnerDeletion = Objects.requireNonNull(blockOwnerDeletion, "expected parameter 'blockOwnerDeletion' to be non-null");
-        this.controller = Objects.requireNonNull(controller, "expected parameter 'controller' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.uid = Objects.requireNonNull(uid, "expected parameter 'uid' to be non-null");
-    }
+    private OwnerReferenceResponse() {}
 
-    private OwnerReferenceResponse() {
-        this.apiVersion = null;
-        this.blockOwnerDeletion = null;
-        this.controller = null;
-        this.kind = null;
-        this.name = null;
-        this.uid = null;
+    private OwnerReferenceResponse(OwnerReferenceResponse $) {
+        this.apiVersion = $.apiVersion;
+        this.blockOwnerDeletion = $.blockOwnerDeletion;
+        this.controller = $.controller;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OwnerReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String apiVersion;
-        private Boolean blockOwnerDeletion;
-        private Boolean controller;
-        private String kind;
-        private String name;
-        private String uid;
+        private OwnerReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OwnerReferenceResponse();
         }
 
         public Builder(OwnerReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.blockOwnerDeletion = defaults.blockOwnerDeletion;
-    	      this.controller = defaults.controller;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.uid = defaults.uid;
+            $ = new OwnerReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(String apiVersion) {
-            this.apiVersion = Objects.requireNonNull(apiVersion);
+            $.apiVersion = apiVersion;
             return this;
         }
+
         public Builder blockOwnerDeletion(Boolean blockOwnerDeletion) {
-            this.blockOwnerDeletion = Objects.requireNonNull(blockOwnerDeletion);
+            $.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
+
         public Builder controller(Boolean controller) {
-            this.controller = Objects.requireNonNull(controller);
+            $.controller = controller;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder uid(String uid) {
-            this.uid = Objects.requireNonNull(uid);
+            $.uid = uid;
             return this;
-        }        public OwnerReferenceResponse build() {
-            return new OwnerReferenceResponse(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
+        }
+
+        public OwnerReferenceResponse build() {
+            $.apiVersion = Objects.requireNonNull($.apiVersion, "expected parameter 'apiVersion' to be non-null");
+            $.blockOwnerDeletion = Objects.requireNonNull($.blockOwnerDeletion, "expected parameter 'blockOwnerDeletion' to be non-null");
+            $.controller = Objects.requireNonNull($.controller, "expected parameter 'controller' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.uid = Objects.requireNonNull($.uid, "expected parameter 'uid' to be non-null");
+            return $;
         }
     }
+
 }

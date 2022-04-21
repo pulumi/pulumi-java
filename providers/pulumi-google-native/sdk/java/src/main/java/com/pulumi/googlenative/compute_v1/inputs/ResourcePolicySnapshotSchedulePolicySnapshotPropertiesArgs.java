@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @Import(name="chainName")
-      private final @Nullable Output<String> chainName;
+    private @Nullable Output<String> chainName;
 
-    public Output<String> chainName() {
-        return this.chainName == null ? Codegen.empty() : this.chainName;
+    public Optional<Output<String>> chainName() {
+        return Optional.ofNullable(this.chainName);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @Import(name="guestFlush")
-      private final @Nullable Output<Boolean> guestFlush;
+    private @Nullable Output<Boolean> guestFlush;
 
-    public Output<Boolean> guestFlush() {
-        return this.guestFlush == null ? Codegen.empty() : this.guestFlush;
+    public Optional<Output<Boolean>> guestFlush() {
+        return Optional.ofNullable(this.guestFlush);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @Import(name="storageLocations")
-      private final @Nullable Output<List<String>> storageLocations;
+    private @Nullable Output<List<String>> storageLocations;
 
-    public Output<List<String>> storageLocations() {
-        return this.storageLocations == null ? Codegen.empty() : this.storageLocations;
+    public Optional<Output<List<String>>> storageLocations() {
+        return Optional.ofNullable(this.storageLocations);
     }
 
-    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(
-        @Nullable Output<String> chainName,
-        @Nullable Output<Boolean> guestFlush,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<List<String>> storageLocations) {
-        this.chainName = chainName;
-        this.guestFlush = guestFlush;
-        this.labels = labels;
-        this.storageLocations = storageLocations;
-    }
+    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs() {
-        this.chainName = Codegen.empty();
-        this.guestFlush = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.storageLocations = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs $) {
+        this.chainName = $.chainName;
+        this.guestFlush = $.guestFlush;
+        this.labels = $.labels;
+        this.storageLocations = $.storageLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> chainName;
-        private @Nullable Output<Boolean> guestFlush;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<List<String>> storageLocations;
+        private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chainName = defaults.chainName;
-    	      this.guestFlush = defaults.guestFlush;
-    	      this.labels = defaults.labels;
-    	      this.storageLocations = defaults.storageLocations;
+            $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder chainName(@Nullable Output<String> chainName) {
-            this.chainName = chainName;
+            $.chainName = chainName;
             return this;
         }
-        public Builder chainName(@Nullable String chainName) {
-            this.chainName = Codegen.ofNullable(chainName);
-            return this;
+
+        public Builder chainName(String chainName) {
+            return chainName(Output.of(chainName));
         }
+
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
-            this.guestFlush = guestFlush;
+            $.guestFlush = guestFlush;
             return this;
         }
-        public Builder guestFlush(@Nullable Boolean guestFlush) {
-            this.guestFlush = Codegen.ofNullable(guestFlush);
-            return this;
+
+        public Builder guestFlush(Boolean guestFlush) {
+            return guestFlush(Output.of(guestFlush));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder storageLocations(@Nullable Output<List<String>> storageLocations) {
-            this.storageLocations = storageLocations;
+            $.storageLocations = storageLocations;
             return this;
         }
-        public Builder storageLocations(@Nullable List<String> storageLocations) {
-            this.storageLocations = Codegen.ofNullable(storageLocations);
-            return this;
+
+        public Builder storageLocations(List<String> storageLocations) {
+            return storageLocations(Output.of(storageLocations));
         }
+
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
-        }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(chainName, guestFlush, labels, storageLocations);
+        }
+
+        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
+            return $;
         }
     }
+
 }

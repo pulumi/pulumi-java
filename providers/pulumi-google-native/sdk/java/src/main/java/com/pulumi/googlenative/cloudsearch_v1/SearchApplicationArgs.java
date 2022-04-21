@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudsearch_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.DataSourceRestrictionArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FacetOptionsArgs;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.QueryInterpretationConfigArgs;
@@ -16,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dataSourceRestrictions")
-      private final @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
+    private @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
-    public Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions() {
-        return this.dataSourceRestrictions == null ? Codegen.empty() : this.dataSourceRestrictions;
+    public Optional<Output<List<DataSourceRestrictionArgs>>> dataSourceRestrictions() {
+        return Optional.ofNullable(this.dataSourceRestrictions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="defaultFacetOptions")
-      private final @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
+    private @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
 
-    public Output<List<FacetOptionsArgs>> defaultFacetOptions() {
-        return this.defaultFacetOptions == null ? Codegen.empty() : this.defaultFacetOptions;
+    public Optional<Output<List<FacetOptionsArgs>>> defaultFacetOptions() {
+        return Optional.ofNullable(this.defaultFacetOptions);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="defaultSortOptions")
-      private final @Nullable Output<SortOptionsArgs> defaultSortOptions;
+    private @Nullable Output<SortOptionsArgs> defaultSortOptions;
 
-    public Output<SortOptionsArgs> defaultSortOptions() {
-        return this.defaultSortOptions == null ? Codegen.empty() : this.defaultSortOptions;
+    public Optional<Output<SortOptionsArgs>> defaultSortOptions() {
+        return Optional.ofNullable(this.defaultSortOptions);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="enableAuditLog")
-      private final @Nullable Output<Boolean> enableAuditLog;
+    private @Nullable Output<Boolean> enableAuditLog;
 
-    public Output<Boolean> enableAuditLog() {
-        return this.enableAuditLog == null ? Codegen.empty() : this.enableAuditLog;
+    public Optional<Output<Boolean>> enableAuditLog() {
+        return Optional.ofNullable(this.enableAuditLog);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="queryInterpretationConfig")
-      private final @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
+    private @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
-    public Output<QueryInterpretationConfigArgs> queryInterpretationConfig() {
-        return this.queryInterpretationConfig == null ? Codegen.empty() : this.queryInterpretationConfig;
+    public Optional<Output<QueryInterpretationConfigArgs>> queryInterpretationConfig() {
+        return Optional.ofNullable(this.queryInterpretationConfig);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="returnResultThumbnailUrls")
-      private final @Nullable Output<Boolean> returnResultThumbnailUrls;
+    private @Nullable Output<Boolean> returnResultThumbnailUrls;
 
-    public Output<Boolean> returnResultThumbnailUrls() {
-        return this.returnResultThumbnailUrls == null ? Codegen.empty() : this.returnResultThumbnailUrls;
+    public Optional<Output<Boolean>> returnResultThumbnailUrls() {
+        return Optional.ofNullable(this.returnResultThumbnailUrls);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="scoringConfig")
-      private final @Nullable Output<ScoringConfigArgs> scoringConfig;
+    private @Nullable Output<ScoringConfigArgs> scoringConfig;
 
-    public Output<ScoringConfigArgs> scoringConfig() {
-        return this.scoringConfig == null ? Codegen.empty() : this.scoringConfig;
+    public Optional<Output<ScoringConfigArgs>> scoringConfig() {
+        return Optional.ofNullable(this.scoringConfig);
     }
 
     /**
@@ -127,176 +127,150 @@ public final class SearchApplicationArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sourceConfig")
-      private final @Nullable Output<List<SourceConfigArgs>> sourceConfig;
+    private @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
-    public Output<List<SourceConfigArgs>> sourceConfig() {
-        return this.sourceConfig == null ? Codegen.empty() : this.sourceConfig;
+    public Optional<Output<List<SourceConfigArgs>>> sourceConfig() {
+        return Optional.ofNullable(this.sourceConfig);
     }
 
-    public SearchApplicationArgs(
-        @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions,
-        @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions,
-        @Nullable Output<SortOptionsArgs> defaultSortOptions,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> enableAuditLog,
-        @Nullable Output<String> name,
-        @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig,
-        @Nullable Output<Boolean> returnResultThumbnailUrls,
-        @Nullable Output<ScoringConfigArgs> scoringConfig,
-        @Nullable Output<List<SourceConfigArgs>> sourceConfig) {
-        this.dataSourceRestrictions = dataSourceRestrictions;
-        this.defaultFacetOptions = defaultFacetOptions;
-        this.defaultSortOptions = defaultSortOptions;
-        this.displayName = displayName;
-        this.enableAuditLog = enableAuditLog;
-        this.name = name;
-        this.queryInterpretationConfig = queryInterpretationConfig;
-        this.returnResultThumbnailUrls = returnResultThumbnailUrls;
-        this.scoringConfig = scoringConfig;
-        this.sourceConfig = sourceConfig;
-    }
+    private SearchApplicationArgs() {}
 
-    private SearchApplicationArgs() {
-        this.dataSourceRestrictions = Codegen.empty();
-        this.defaultFacetOptions = Codegen.empty();
-        this.defaultSortOptions = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.enableAuditLog = Codegen.empty();
-        this.name = Codegen.empty();
-        this.queryInterpretationConfig = Codegen.empty();
-        this.returnResultThumbnailUrls = Codegen.empty();
-        this.scoringConfig = Codegen.empty();
-        this.sourceConfig = Codegen.empty();
+    private SearchApplicationArgs(SearchApplicationArgs $) {
+        this.dataSourceRestrictions = $.dataSourceRestrictions;
+        this.defaultFacetOptions = $.defaultFacetOptions;
+        this.defaultSortOptions = $.defaultSortOptions;
+        this.displayName = $.displayName;
+        this.enableAuditLog = $.enableAuditLog;
+        this.name = $.name;
+        this.queryInterpretationConfig = $.queryInterpretationConfig;
+        this.returnResultThumbnailUrls = $.returnResultThumbnailUrls;
+        this.scoringConfig = $.scoringConfig;
+        this.sourceConfig = $.sourceConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchApplicationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
-        private @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
-        private @Nullable Output<SortOptionsArgs> defaultSortOptions;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> enableAuditLog;
-        private @Nullable Output<String> name;
-        private @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
-        private @Nullable Output<Boolean> returnResultThumbnailUrls;
-        private @Nullable Output<ScoringConfigArgs> scoringConfig;
-        private @Nullable Output<List<SourceConfigArgs>> sourceConfig;
+        private SearchApplicationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchApplicationArgs();
         }
 
         public Builder(SearchApplicationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataSourceRestrictions = defaults.dataSourceRestrictions;
-    	      this.defaultFacetOptions = defaults.defaultFacetOptions;
-    	      this.defaultSortOptions = defaults.defaultSortOptions;
-    	      this.displayName = defaults.displayName;
-    	      this.enableAuditLog = defaults.enableAuditLog;
-    	      this.name = defaults.name;
-    	      this.queryInterpretationConfig = defaults.queryInterpretationConfig;
-    	      this.returnResultThumbnailUrls = defaults.returnResultThumbnailUrls;
-    	      this.scoringConfig = defaults.scoringConfig;
-    	      this.sourceConfig = defaults.sourceConfig;
+            $ = new SearchApplicationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataSourceRestrictions(@Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions) {
-            this.dataSourceRestrictions = dataSourceRestrictions;
+            $.dataSourceRestrictions = dataSourceRestrictions;
             return this;
         }
-        public Builder dataSourceRestrictions(@Nullable List<DataSourceRestrictionArgs> dataSourceRestrictions) {
-            this.dataSourceRestrictions = Codegen.ofNullable(dataSourceRestrictions);
-            return this;
+
+        public Builder dataSourceRestrictions(List<DataSourceRestrictionArgs> dataSourceRestrictions) {
+            return dataSourceRestrictions(Output.of(dataSourceRestrictions));
         }
+
         public Builder dataSourceRestrictions(DataSourceRestrictionArgs... dataSourceRestrictions) {
             return dataSourceRestrictions(List.of(dataSourceRestrictions));
         }
+
         public Builder defaultFacetOptions(@Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions) {
-            this.defaultFacetOptions = defaultFacetOptions;
+            $.defaultFacetOptions = defaultFacetOptions;
             return this;
         }
-        public Builder defaultFacetOptions(@Nullable List<FacetOptionsArgs> defaultFacetOptions) {
-            this.defaultFacetOptions = Codegen.ofNullable(defaultFacetOptions);
-            return this;
+
+        public Builder defaultFacetOptions(List<FacetOptionsArgs> defaultFacetOptions) {
+            return defaultFacetOptions(Output.of(defaultFacetOptions));
         }
+
         public Builder defaultFacetOptions(FacetOptionsArgs... defaultFacetOptions) {
             return defaultFacetOptions(List.of(defaultFacetOptions));
         }
+
         public Builder defaultSortOptions(@Nullable Output<SortOptionsArgs> defaultSortOptions) {
-            this.defaultSortOptions = defaultSortOptions;
+            $.defaultSortOptions = defaultSortOptions;
             return this;
         }
-        public Builder defaultSortOptions(@Nullable SortOptionsArgs defaultSortOptions) {
-            this.defaultSortOptions = Codegen.ofNullable(defaultSortOptions);
-            return this;
+
+        public Builder defaultSortOptions(SortOptionsArgs defaultSortOptions) {
+            return defaultSortOptions(Output.of(defaultSortOptions));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder enableAuditLog(@Nullable Output<Boolean> enableAuditLog) {
-            this.enableAuditLog = enableAuditLog;
+            $.enableAuditLog = enableAuditLog;
             return this;
         }
-        public Builder enableAuditLog(@Nullable Boolean enableAuditLog) {
-            this.enableAuditLog = Codegen.ofNullable(enableAuditLog);
-            return this;
+
+        public Builder enableAuditLog(Boolean enableAuditLog) {
+            return enableAuditLog(Output.of(enableAuditLog));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder queryInterpretationConfig(@Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig) {
-            this.queryInterpretationConfig = queryInterpretationConfig;
+            $.queryInterpretationConfig = queryInterpretationConfig;
             return this;
         }
-        public Builder queryInterpretationConfig(@Nullable QueryInterpretationConfigArgs queryInterpretationConfig) {
-            this.queryInterpretationConfig = Codegen.ofNullable(queryInterpretationConfig);
-            return this;
+
+        public Builder queryInterpretationConfig(QueryInterpretationConfigArgs queryInterpretationConfig) {
+            return queryInterpretationConfig(Output.of(queryInterpretationConfig));
         }
+
         public Builder returnResultThumbnailUrls(@Nullable Output<Boolean> returnResultThumbnailUrls) {
-            this.returnResultThumbnailUrls = returnResultThumbnailUrls;
+            $.returnResultThumbnailUrls = returnResultThumbnailUrls;
             return this;
         }
-        public Builder returnResultThumbnailUrls(@Nullable Boolean returnResultThumbnailUrls) {
-            this.returnResultThumbnailUrls = Codegen.ofNullable(returnResultThumbnailUrls);
-            return this;
+
+        public Builder returnResultThumbnailUrls(Boolean returnResultThumbnailUrls) {
+            return returnResultThumbnailUrls(Output.of(returnResultThumbnailUrls));
         }
+
         public Builder scoringConfig(@Nullable Output<ScoringConfigArgs> scoringConfig) {
-            this.scoringConfig = scoringConfig;
+            $.scoringConfig = scoringConfig;
             return this;
         }
-        public Builder scoringConfig(@Nullable ScoringConfigArgs scoringConfig) {
-            this.scoringConfig = Codegen.ofNullable(scoringConfig);
-            return this;
+
+        public Builder scoringConfig(ScoringConfigArgs scoringConfig) {
+            return scoringConfig(Output.of(scoringConfig));
         }
+
         public Builder sourceConfig(@Nullable Output<List<SourceConfigArgs>> sourceConfig) {
-            this.sourceConfig = sourceConfig;
+            $.sourceConfig = sourceConfig;
             return this;
         }
-        public Builder sourceConfig(@Nullable List<SourceConfigArgs> sourceConfig) {
-            this.sourceConfig = Codegen.ofNullable(sourceConfig);
-            return this;
+
+        public Builder sourceConfig(List<SourceConfigArgs> sourceConfig) {
+            return sourceConfig(Output.of(sourceConfig));
         }
+
         public Builder sourceConfig(SourceConfigArgs... sourceConfig) {
             return sourceConfig(List.of(sourceConfig));
-        }        public SearchApplicationArgs build() {
-            return new SearchApplicationArgs(dataSourceRestrictions, defaultFacetOptions, defaultSortOptions, displayName, enableAuditLog, name, queryInterpretationConfig, returnResultThumbnailUrls, scoringConfig, sourceConfig);
+        }
+
+        public SearchApplicationArgs build() {
+            return $;
         }
     }
+
 }

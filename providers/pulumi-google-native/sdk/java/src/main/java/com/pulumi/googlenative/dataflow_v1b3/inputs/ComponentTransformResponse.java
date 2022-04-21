@@ -21,7 +21,7 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="originalTransform", required=true)
-      private final String originalTransform;
+    private String originalTransform;
 
     public String originalTransform() {
         return this.originalTransform;
@@ -43,64 +43,59 @@ public final class ComponentTransformResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ComponentTransformResponse(
-        String name,
-        String originalTransform,
-        String userName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.originalTransform = Objects.requireNonNull(originalTransform, "expected parameter 'originalTransform' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ComponentTransformResponse() {}
 
-    private ComponentTransformResponse() {
-        this.name = null;
-        this.originalTransform = null;
-        this.userName = null;
+    private ComponentTransformResponse(ComponentTransformResponse $) {
+        this.name = $.name;
+        this.originalTransform = $.originalTransform;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentTransformResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String originalTransform;
-        private String userName;
+        private ComponentTransformResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentTransformResponse();
         }
 
         public Builder(ComponentTransformResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.originalTransform = defaults.originalTransform;
-    	      this.userName = defaults.userName;
+            $ = new ComponentTransformResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder originalTransform(String originalTransform) {
-            this.originalTransform = Objects.requireNonNull(originalTransform);
+            $.originalTransform = originalTransform;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ComponentTransformResponse build() {
-            return new ComponentTransformResponse(name, originalTransform, userName);
+        }
+
+        public ComponentTransformResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.originalTransform = Objects.requireNonNull($.originalTransform, "expected parameter 'originalTransform' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

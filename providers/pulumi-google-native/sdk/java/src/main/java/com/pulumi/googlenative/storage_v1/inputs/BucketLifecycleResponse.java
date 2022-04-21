@@ -22,48 +22,49 @@ public final class BucketLifecycleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rule", required=true)
-      private final List<BucketLifecycleRuleItemResponse> rule;
+    private List<BucketLifecycleRuleItemResponse> rule;
 
     public List<BucketLifecycleRuleItemResponse> rule() {
         return this.rule;
     }
 
-    public BucketLifecycleResponse(List<BucketLifecycleRuleItemResponse> rule) {
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-    }
+    private BucketLifecycleResponse() {}
 
-    private BucketLifecycleResponse() {
-        this.rule = List.of();
+    private BucketLifecycleResponse(BucketLifecycleResponse $) {
+        this.rule = $.rule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketLifecycleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BucketLifecycleRuleItemResponse> rule;
+        private BucketLifecycleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketLifecycleResponse();
         }
 
         public Builder(BucketLifecycleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rule = defaults.rule;
+            $ = new BucketLifecycleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rule(List<BucketLifecycleRuleItemResponse> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
         public Builder rule(BucketLifecycleRuleItemResponse... rule) {
             return rule(List.of(rule));
-        }        public BucketLifecycleResponse build() {
-            return new BucketLifecycleResponse(rule);
+        }
+
+        public BucketLifecycleResponse build() {
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

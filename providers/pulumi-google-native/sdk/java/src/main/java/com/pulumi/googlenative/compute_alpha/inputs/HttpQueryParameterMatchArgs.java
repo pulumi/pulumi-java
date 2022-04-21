@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class HttpQueryParameterMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="exactMatch")
-      private final @Nullable Output<String> exactMatch;
+    private @Nullable Output<String> exactMatch;
 
-    public Output<String> exactMatch() {
-        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
+    public Optional<Output<String>> exactMatch() {
+        return Optional.ofNullable(this.exactMatch);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class HttpQueryParameterMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class HttpQueryParameterMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="presentMatch")
-      private final @Nullable Output<Boolean> presentMatch;
+    private @Nullable Output<Boolean> presentMatch;
 
-    public Output<Boolean> presentMatch() {
-        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
+    public Optional<Output<Boolean>> presentMatch() {
+        return Optional.ofNullable(this.presentMatch);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class HttpQueryParameterMatchArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="regexMatch")
-      private final @Nullable Output<String> regexMatch;
+    private @Nullable Output<String> regexMatch;
 
-    public Output<String> regexMatch() {
-        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
+    public Optional<Output<String>> regexMatch() {
+        return Optional.ofNullable(this.regexMatch);
     }
 
-    public HttpQueryParameterMatchArgs(
-        @Nullable Output<String> exactMatch,
-        @Nullable Output<String> name,
-        @Nullable Output<Boolean> presentMatch,
-        @Nullable Output<String> regexMatch) {
-        this.exactMatch = exactMatch;
-        this.name = name;
-        this.presentMatch = presentMatch;
-        this.regexMatch = regexMatch;
-    }
+    private HttpQueryParameterMatchArgs() {}
 
-    private HttpQueryParameterMatchArgs() {
-        this.exactMatch = Codegen.empty();
-        this.name = Codegen.empty();
-        this.presentMatch = Codegen.empty();
-        this.regexMatch = Codegen.empty();
+    private HttpQueryParameterMatchArgs(HttpQueryParameterMatchArgs $) {
+        this.exactMatch = $.exactMatch;
+        this.name = $.name;
+        this.presentMatch = $.presentMatch;
+        this.regexMatch = $.regexMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpQueryParameterMatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> exactMatch;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Boolean> presentMatch;
-        private @Nullable Output<String> regexMatch;
+        private HttpQueryParameterMatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpQueryParameterMatchArgs();
         }
 
         public Builder(HttpQueryParameterMatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatch = defaults.exactMatch;
-    	      this.name = defaults.name;
-    	      this.presentMatch = defaults.presentMatch;
-    	      this.regexMatch = defaults.regexMatch;
+            $ = new HttpQueryParameterMatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatch(@Nullable Output<String> exactMatch) {
-            this.exactMatch = exactMatch;
+            $.exactMatch = exactMatch;
             return this;
         }
-        public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Codegen.ofNullable(exactMatch);
-            return this;
+
+        public Builder exactMatch(String exactMatch) {
+            return exactMatch(Output.of(exactMatch));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
-            this.presentMatch = presentMatch;
+            $.presentMatch = presentMatch;
             return this;
         }
-        public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Codegen.ofNullable(presentMatch);
-            return this;
+
+        public Builder presentMatch(Boolean presentMatch) {
+            return presentMatch(Output.of(presentMatch));
         }
+
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
-            this.regexMatch = regexMatch;
+            $.regexMatch = regexMatch;
             return this;
         }
-        public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Codegen.ofNullable(regexMatch);
-            return this;
-        }        public HttpQueryParameterMatchArgs build() {
-            return new HttpQueryParameterMatchArgs(exactMatch, name, presentMatch, regexMatch);
+
+        public Builder regexMatch(String regexMatch) {
+            return regexMatch(Output.of(regexMatch));
+        }
+
+        public HttpQueryParameterMatchArgs build() {
+            return $;
         }
     }
+
 }

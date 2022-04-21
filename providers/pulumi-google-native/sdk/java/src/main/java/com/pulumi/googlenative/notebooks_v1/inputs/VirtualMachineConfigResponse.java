@@ -29,7 +29,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="acceleratorConfig", required=true)
-      private final RuntimeAcceleratorConfigResponse acceleratorConfig;
+    private RuntimeAcceleratorConfigResponse acceleratorConfig;
 
     public RuntimeAcceleratorConfigResponse acceleratorConfig() {
         return this.acceleratorConfig;
@@ -40,7 +40,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="containerImages", required=true)
-      private final List<ContainerImageResponse> containerImages;
+    private List<ContainerImageResponse> containerImages;
 
     public List<ContainerImageResponse> containerImages() {
         return this.containerImages;
@@ -51,7 +51,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="dataDisk", required=true)
-      private final LocalDiskResponse dataDisk;
+    private LocalDiskResponse dataDisk;
 
     public LocalDiskResponse dataDisk() {
         return this.dataDisk;
@@ -62,7 +62,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="encryptionConfig", required=true)
-      private final EncryptionConfigResponse encryptionConfig;
+    private EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse encryptionConfig() {
         return this.encryptionConfig;
@@ -73,7 +73,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="guestAttributes", required=true)
-      private final Map<String,String> guestAttributes;
+    private Map<String,String> guestAttributes;
 
     public Map<String,String> guestAttributes() {
         return this.guestAttributes;
@@ -84,7 +84,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="internalIpOnly", required=true)
-      private final Boolean internalIpOnly;
+    private Boolean internalIpOnly;
 
     public Boolean internalIpOnly() {
         return this.internalIpOnly;
@@ -95,7 +95,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -106,7 +106,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -117,7 +117,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -128,7 +128,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -139,7 +139,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="nicType", required=true)
-      private final String nicType;
+    private String nicType;
 
     public String nicType() {
         return this.nicType;
@@ -150,7 +150,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="shieldedInstanceConfig", required=true)
-      private final RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
+    private RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -161,7 +161,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="subnet", required=true)
-      private final String subnet;
+    private String subnet;
 
     public String subnet() {
         return this.subnet;
@@ -172,7 +172,7 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
@@ -183,178 +183,151 @@ public final class VirtualMachineConfigResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public VirtualMachineConfigResponse(
-        RuntimeAcceleratorConfigResponse acceleratorConfig,
-        List<ContainerImageResponse> containerImages,
-        LocalDiskResponse dataDisk,
-        EncryptionConfigResponse encryptionConfig,
-        Map<String,String> guestAttributes,
-        Boolean internalIpOnly,
-        Map<String,String> labels,
-        String machineType,
-        Map<String,String> metadata,
-        String network,
-        String nicType,
-        RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
-        String subnet,
-        List<String> tags,
-        String zone) {
-        this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
-        this.containerImages = Objects.requireNonNull(containerImages, "expected parameter 'containerImages' to be non-null");
-        this.dataDisk = Objects.requireNonNull(dataDisk, "expected parameter 'dataDisk' to be non-null");
-        this.encryptionConfig = Objects.requireNonNull(encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
-        this.guestAttributes = Objects.requireNonNull(guestAttributes, "expected parameter 'guestAttributes' to be non-null");
-        this.internalIpOnly = Objects.requireNonNull(internalIpOnly, "expected parameter 'internalIpOnly' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.nicType = Objects.requireNonNull(nicType, "expected parameter 'nicType' to be non-null");
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig, "expected parameter 'shieldedInstanceConfig' to be non-null");
-        this.subnet = Objects.requireNonNull(subnet, "expected parameter 'subnet' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private VirtualMachineConfigResponse() {}
 
-    private VirtualMachineConfigResponse() {
-        this.acceleratorConfig = null;
-        this.containerImages = List.of();
-        this.dataDisk = null;
-        this.encryptionConfig = null;
-        this.guestAttributes = Map.of();
-        this.internalIpOnly = null;
-        this.labels = Map.of();
-        this.machineType = null;
-        this.metadata = Map.of();
-        this.network = null;
-        this.nicType = null;
-        this.shieldedInstanceConfig = null;
-        this.subnet = null;
-        this.tags = List.of();
-        this.zone = null;
+    private VirtualMachineConfigResponse(VirtualMachineConfigResponse $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.containerImages = $.containerImages;
+        this.dataDisk = $.dataDisk;
+        this.encryptionConfig = $.encryptionConfig;
+        this.guestAttributes = $.guestAttributes;
+        this.internalIpOnly = $.internalIpOnly;
+        this.labels = $.labels;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.network = $.network;
+        this.nicType = $.nicType;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.subnet = $.subnet;
+        this.tags = $.tags;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualMachineConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private RuntimeAcceleratorConfigResponse acceleratorConfig;
-        private List<ContainerImageResponse> containerImages;
-        private LocalDiskResponse dataDisk;
-        private EncryptionConfigResponse encryptionConfig;
-        private Map<String,String> guestAttributes;
-        private Boolean internalIpOnly;
-        private Map<String,String> labels;
-        private String machineType;
-        private Map<String,String> metadata;
-        private String network;
-        private String nicType;
-        private RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
-        private String subnet;
-        private List<String> tags;
-        private String zone;
+        private VirtualMachineConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualMachineConfigResponse();
         }
 
         public Builder(VirtualMachineConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.containerImages = defaults.containerImages;
-    	      this.dataDisk = defaults.dataDisk;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.guestAttributes = defaults.guestAttributes;
-    	      this.internalIpOnly = defaults.internalIpOnly;
-    	      this.labels = defaults.labels;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.network = defaults.network;
-    	      this.nicType = defaults.nicType;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.subnet = defaults.subnet;
-    	      this.tags = defaults.tags;
-    	      this.zone = defaults.zone;
+            $ = new VirtualMachineConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(RuntimeAcceleratorConfigResponse acceleratorConfig) {
-            this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
+
         public Builder containerImages(List<ContainerImageResponse> containerImages) {
-            this.containerImages = Objects.requireNonNull(containerImages);
+            $.containerImages = containerImages;
             return this;
         }
+
         public Builder containerImages(ContainerImageResponse... containerImages) {
             return containerImages(List.of(containerImages));
         }
+
         public Builder dataDisk(LocalDiskResponse dataDisk) {
-            this.dataDisk = Objects.requireNonNull(dataDisk);
+            $.dataDisk = dataDisk;
             return this;
         }
+
         public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
-            this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
+
         public Builder guestAttributes(Map<String,String> guestAttributes) {
-            this.guestAttributes = Objects.requireNonNull(guestAttributes);
+            $.guestAttributes = guestAttributes;
             return this;
         }
+
         public Builder internalIpOnly(Boolean internalIpOnly) {
-            this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
+            $.internalIpOnly = internalIpOnly;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder nicType(String nicType) {
-            this.nicType = Objects.requireNonNull(nicType);
+            $.nicType = nicType;
             return this;
         }
+
         public Builder shieldedInstanceConfig(RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
+
         public Builder subnet(String subnet) {
-            this.subnet = Objects.requireNonNull(subnet);
+            $.subnet = subnet;
             return this;
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public VirtualMachineConfigResponse build() {
-            return new VirtualMachineConfigResponse(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
+        }
+
+        public VirtualMachineConfigResponse build() {
+            $.acceleratorConfig = Objects.requireNonNull($.acceleratorConfig, "expected parameter 'acceleratorConfig' to be non-null");
+            $.containerImages = Objects.requireNonNull($.containerImages, "expected parameter 'containerImages' to be non-null");
+            $.dataDisk = Objects.requireNonNull($.dataDisk, "expected parameter 'dataDisk' to be non-null");
+            $.encryptionConfig = Objects.requireNonNull($.encryptionConfig, "expected parameter 'encryptionConfig' to be non-null");
+            $.guestAttributes = Objects.requireNonNull($.guestAttributes, "expected parameter 'guestAttributes' to be non-null");
+            $.internalIpOnly = Objects.requireNonNull($.internalIpOnly, "expected parameter 'internalIpOnly' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.nicType = Objects.requireNonNull($.nicType, "expected parameter 'nicType' to be non-null");
+            $.shieldedInstanceConfig = Objects.requireNonNull($.shieldedInstanceConfig, "expected parameter 'shieldedInstanceConfig' to be non-null");
+            $.subnet = Objects.requireNonNull($.subnet, "expected parameter 'subnet' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

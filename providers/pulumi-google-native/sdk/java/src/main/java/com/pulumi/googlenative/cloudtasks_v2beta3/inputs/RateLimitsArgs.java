@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxBurstSize")
-      private final @Nullable Output<Integer> maxBurstSize;
+    private @Nullable Output<Integer> maxBurstSize;
 
-    public Output<Integer> maxBurstSize() {
-        return this.maxBurstSize == null ? Codegen.empty() : this.maxBurstSize;
+    public Optional<Output<Integer>> maxBurstSize() {
+        return Optional.ofNullable(this.maxBurstSize);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxConcurrentDispatches")
-      private final @Nullable Output<Integer> maxConcurrentDispatches;
+    private @Nullable Output<Integer> maxConcurrentDispatches;
 
-    public Output<Integer> maxConcurrentDispatches() {
-        return this.maxConcurrentDispatches == null ? Codegen.empty() : this.maxConcurrentDispatches;
+    public Optional<Output<Integer>> maxConcurrentDispatches() {
+        return Optional.ofNullable(this.maxConcurrentDispatches);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class RateLimitsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxDispatchesPerSecond")
-      private final @Nullable Output<Double> maxDispatchesPerSecond;
+    private @Nullable Output<Double> maxDispatchesPerSecond;
 
-    public Output<Double> maxDispatchesPerSecond() {
-        return this.maxDispatchesPerSecond == null ? Codegen.empty() : this.maxDispatchesPerSecond;
+    public Optional<Output<Double>> maxDispatchesPerSecond() {
+        return Optional.ofNullable(this.maxDispatchesPerSecond);
     }
 
-    public RateLimitsArgs(
-        @Nullable Output<Integer> maxBurstSize,
-        @Nullable Output<Integer> maxConcurrentDispatches,
-        @Nullable Output<Double> maxDispatchesPerSecond) {
-        this.maxBurstSize = maxBurstSize;
-        this.maxConcurrentDispatches = maxConcurrentDispatches;
-        this.maxDispatchesPerSecond = maxDispatchesPerSecond;
-    }
+    private RateLimitsArgs() {}
 
-    private RateLimitsArgs() {
-        this.maxBurstSize = Codegen.empty();
-        this.maxConcurrentDispatches = Codegen.empty();
-        this.maxDispatchesPerSecond = Codegen.empty();
+    private RateLimitsArgs(RateLimitsArgs $) {
+        this.maxBurstSize = $.maxBurstSize;
+        this.maxConcurrentDispatches = $.maxConcurrentDispatches;
+        this.maxDispatchesPerSecond = $.maxDispatchesPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxBurstSize;
-        private @Nullable Output<Integer> maxConcurrentDispatches;
-        private @Nullable Output<Double> maxDispatchesPerSecond;
+        private RateLimitsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitsArgs();
         }
 
         public Builder(RateLimitsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxBurstSize = defaults.maxBurstSize;
-    	      this.maxConcurrentDispatches = defaults.maxConcurrentDispatches;
-    	      this.maxDispatchesPerSecond = defaults.maxDispatchesPerSecond;
+            $ = new RateLimitsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxBurstSize(@Nullable Output<Integer> maxBurstSize) {
-            this.maxBurstSize = maxBurstSize;
+            $.maxBurstSize = maxBurstSize;
             return this;
         }
-        public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
-            this.maxBurstSize = Codegen.ofNullable(maxBurstSize);
-            return this;
+
+        public Builder maxBurstSize(Integer maxBurstSize) {
+            return maxBurstSize(Output.of(maxBurstSize));
         }
+
         public Builder maxConcurrentDispatches(@Nullable Output<Integer> maxConcurrentDispatches) {
-            this.maxConcurrentDispatches = maxConcurrentDispatches;
+            $.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
-        public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
-            this.maxConcurrentDispatches = Codegen.ofNullable(maxConcurrentDispatches);
-            return this;
+
+        public Builder maxConcurrentDispatches(Integer maxConcurrentDispatches) {
+            return maxConcurrentDispatches(Output.of(maxConcurrentDispatches));
         }
+
         public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
-            this.maxDispatchesPerSecond = maxDispatchesPerSecond;
+            $.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }
-        public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
-            this.maxDispatchesPerSecond = Codegen.ofNullable(maxDispatchesPerSecond);
-            return this;
-        }        public RateLimitsArgs build() {
-            return new RateLimitsArgs(maxBurstSize, maxConcurrentDispatches, maxDispatchesPerSecond);
+
+        public Builder maxDispatchesPerSecond(Double maxDispatchesPerSecond) {
+            return maxDispatchesPerSecond(Output.of(maxDispatchesPerSecond));
+        }
+
+        public RateLimitsArgs build() {
+            return $;
         }
     }
+
 }

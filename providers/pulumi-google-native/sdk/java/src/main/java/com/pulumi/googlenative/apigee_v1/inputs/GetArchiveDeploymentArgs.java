@@ -13,78 +13,73 @@ public final class GetArchiveDeploymentArgs extends com.pulumi.resources.InvokeA
     public static final GetArchiveDeploymentArgs Empty = new GetArchiveDeploymentArgs();
 
     @Import(name="archiveDeploymentId", required=true)
-      private final String archiveDeploymentId;
+    private String archiveDeploymentId;
 
     public String archiveDeploymentId() {
         return this.archiveDeploymentId;
     }
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetArchiveDeploymentArgs(
-        String archiveDeploymentId,
-        String environmentId,
-        String organizationId) {
-        this.archiveDeploymentId = Objects.requireNonNull(archiveDeploymentId, "expected parameter 'archiveDeploymentId' to be non-null");
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetArchiveDeploymentArgs() {}
 
-    private GetArchiveDeploymentArgs() {
-        this.archiveDeploymentId = null;
-        this.environmentId = null;
-        this.organizationId = null;
+    private GetArchiveDeploymentArgs(GetArchiveDeploymentArgs $) {
+        this.archiveDeploymentId = $.archiveDeploymentId;
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetArchiveDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String archiveDeploymentId;
-        private String environmentId;
-        private String organizationId;
+        private GetArchiveDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetArchiveDeploymentArgs();
         }
 
         public Builder(GetArchiveDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveDeploymentId = defaults.archiveDeploymentId;
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetArchiveDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveDeploymentId(String archiveDeploymentId) {
-            this.archiveDeploymentId = Objects.requireNonNull(archiveDeploymentId);
+            $.archiveDeploymentId = archiveDeploymentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetArchiveDeploymentArgs build() {
-            return new GetArchiveDeploymentArgs(archiveDeploymentId, environmentId, organizationId);
+        }
+
+        public GetArchiveDeploymentArgs build() {
+            $.archiveDeploymentId = Objects.requireNonNull($.archiveDeploymentId, "expected parameter 'archiveDeploymentId' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.ClientInfoDetailArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ClientInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientInfoDetails")
-      private final @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
+    private @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
 
-    public Output<List<ClientInfoDetailArgs>> clientInfoDetails() {
-        return this.clientInfoDetails == null ? Codegen.empty() : this.clientInfoDetails;
+    public Optional<Output<List<ClientInfoDetailArgs>>> clientInfoDetails() {
+        return Optional.ofNullable(this.clientInfoDetails);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class ClientInfoArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public ClientInfoArgs(
-        @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails,
-        Output<String> name) {
-        this.clientInfoDetails = clientInfoDetails;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ClientInfoArgs() {}
 
-    private ClientInfoArgs() {
-        this.clientInfoDetails = Codegen.empty();
-        this.name = Codegen.empty();
+    private ClientInfoArgs(ClientInfoArgs $) {
+        this.clientInfoDetails = $.clientInfoDetails;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClientInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails;
-        private Output<String> name;
+        private ClientInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClientInfoArgs();
         }
 
         public Builder(ClientInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientInfoDetails = defaults.clientInfoDetails;
-    	      this.name = defaults.name;
+            $ = new ClientInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientInfoDetails(@Nullable Output<List<ClientInfoDetailArgs>> clientInfoDetails) {
-            this.clientInfoDetails = clientInfoDetails;
+            $.clientInfoDetails = clientInfoDetails;
             return this;
         }
-        public Builder clientInfoDetails(@Nullable List<ClientInfoDetailArgs> clientInfoDetails) {
-            this.clientInfoDetails = Codegen.ofNullable(clientInfoDetails);
-            return this;
+
+        public Builder clientInfoDetails(List<ClientInfoDetailArgs> clientInfoDetails) {
+            return clientInfoDetails(Output.of(clientInfoDetails));
         }
+
         public Builder clientInfoDetails(ClientInfoDetailArgs... clientInfoDetails) {
             return clientInfoDetails(List.of(clientInfoDetails));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public ClientInfoArgs build() {
-            return new ClientInfoArgs(clientInfoDetails, name);
+            return name(Output.of(name));
+        }
+
+        public ClientInfoArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

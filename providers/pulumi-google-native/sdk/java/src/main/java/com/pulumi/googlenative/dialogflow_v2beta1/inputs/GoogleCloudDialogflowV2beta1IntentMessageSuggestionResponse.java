@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse e
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(String title) {
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse() {
-        this.title = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse $) {
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String title;
+        private GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(title);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse build() {
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

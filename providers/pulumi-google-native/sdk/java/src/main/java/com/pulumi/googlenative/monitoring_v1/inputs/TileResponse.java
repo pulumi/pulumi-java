@@ -22,7 +22,7 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="height", required=true)
-      private final Integer height;
+    private Integer height;
 
     public Integer height() {
         return this.height;
@@ -33,7 +33,7 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="widget", required=true)
-      private final WidgetResponse widget;
+    private WidgetResponse widget;
 
     public WidgetResponse widget() {
         return this.widget;
@@ -44,7 +44,7 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="width", required=true)
-      private final Integer width;
+    private Integer width;
 
     public Integer width() {
         return this.width;
@@ -55,7 +55,7 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xPos", required=true)
-      private final Integer xPos;
+    private Integer xPos;
 
     public Integer xPos() {
         return this.xPos;
@@ -66,82 +66,73 @@ public final class TileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="yPos", required=true)
-      private final Integer yPos;
+    private Integer yPos;
 
     public Integer yPos() {
         return this.yPos;
     }
 
-    public TileResponse(
-        Integer height,
-        WidgetResponse widget,
-        Integer width,
-        Integer xPos,
-        Integer yPos) {
-        this.height = Objects.requireNonNull(height, "expected parameter 'height' to be non-null");
-        this.widget = Objects.requireNonNull(widget, "expected parameter 'widget' to be non-null");
-        this.width = Objects.requireNonNull(width, "expected parameter 'width' to be non-null");
-        this.xPos = Objects.requireNonNull(xPos, "expected parameter 'xPos' to be non-null");
-        this.yPos = Objects.requireNonNull(yPos, "expected parameter 'yPos' to be non-null");
-    }
+    private TileResponse() {}
 
-    private TileResponse() {
-        this.height = null;
-        this.widget = null;
-        this.width = null;
-        this.xPos = null;
-        this.yPos = null;
+    private TileResponse(TileResponse $) {
+        this.height = $.height;
+        this.widget = $.widget;
+        this.width = $.width;
+        this.xPos = $.xPos;
+        this.yPos = $.yPos;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer height;
-        private WidgetResponse widget;
-        private Integer width;
-        private Integer xPos;
-        private Integer yPos;
+        private TileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TileResponse();
         }
 
         public Builder(TileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.height = defaults.height;
-    	      this.widget = defaults.widget;
-    	      this.width = defaults.width;
-    	      this.xPos = defaults.xPos;
-    	      this.yPos = defaults.yPos;
+            $ = new TileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder height(Integer height) {
-            this.height = Objects.requireNonNull(height);
+            $.height = height;
             return this;
         }
+
         public Builder widget(WidgetResponse widget) {
-            this.widget = Objects.requireNonNull(widget);
+            $.widget = widget;
             return this;
         }
+
         public Builder width(Integer width) {
-            this.width = Objects.requireNonNull(width);
+            $.width = width;
             return this;
         }
+
         public Builder xPos(Integer xPos) {
-            this.xPos = Objects.requireNonNull(xPos);
+            $.xPos = xPos;
             return this;
         }
+
         public Builder yPos(Integer yPos) {
-            this.yPos = Objects.requireNonNull(yPos);
+            $.yPos = yPos;
             return this;
-        }        public TileResponse build() {
-            return new TileResponse(height, widget, width, xPos, yPos);
+        }
+
+        public TileResponse build() {
+            $.height = Objects.requireNonNull($.height, "expected parameter 'height' to be non-null");
+            $.widget = Objects.requireNonNull($.widget, "expected parameter 'widget' to be non-null");
+            $.width = Objects.requireNonNull($.width, "expected parameter 'width' to be non-null");
+            $.xPos = Objects.requireNonNull($.xPos, "expected parameter 'xPos' to be non-null");
+            $.yPos = Objects.requireNonNull($.yPos, "expected parameter 'yPos' to be non-null");
+            return $;
         }
     }
+
 }

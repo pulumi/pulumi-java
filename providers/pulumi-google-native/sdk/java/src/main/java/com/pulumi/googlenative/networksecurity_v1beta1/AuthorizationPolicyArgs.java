@@ -5,13 +5,13 @@ package com.pulumi.googlenative.networksecurity_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networksecurity_v1beta1.enums.AuthorizationPolicyAction;
 import com.pulumi.googlenative.networksecurity_v1beta1.inputs.RuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,14 +24,14 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="action", required=true)
-      private final Output<AuthorizationPolicyAction> action;
+    private Output<AuthorizationPolicyAction> action;
 
     public Output<AuthorizationPolicyAction> action() {
         return this.action;
     }
 
     @Import(name="authorizationPolicyId", required=true)
-      private final Output<String> authorizationPolicyId;
+    private Output<String> authorizationPolicyId;
 
     public Output<String> authorizationPolicyId() {
         return this.authorizationPolicyId;
@@ -42,10 +42,10 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -53,17 +53,17 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -71,17 +71,17 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -89,144 +89,124 @@ public final class AuthorizationPolicyArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RuleArgs>> rules;
+    private @Nullable Output<List<RuleArgs>> rules;
 
-    public Output<List<RuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
-    public AuthorizationPolicyArgs(
-        Output<AuthorizationPolicyAction> action,
-        Output<String> authorizationPolicyId,
-        @Nullable Output<String> description,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<List<RuleArgs>> rules) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId, "expected parameter 'authorizationPolicyId' to be non-null");
-        this.description = description;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.rules = rules;
-    }
+    private AuthorizationPolicyArgs() {}
 
-    private AuthorizationPolicyArgs() {
-        this.action = Codegen.empty();
-        this.authorizationPolicyId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.rules = Codegen.empty();
+    private AuthorizationPolicyArgs(AuthorizationPolicyArgs $) {
+        this.action = $.action;
+        this.authorizationPolicyId = $.authorizationPolicyId;
+        this.description = $.description;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.rules = $.rules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AuthorizationPolicyAction> action;
-        private Output<String> authorizationPolicyId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<List<RuleArgs>> rules;
+        private AuthorizationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationPolicyArgs();
         }
 
         public Builder(AuthorizationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.authorizationPolicyId = defaults.authorizationPolicyId;
-    	      this.description = defaults.description;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.rules = defaults.rules;
+            $ = new AuthorizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(Output<AuthorizationPolicyAction> action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder action(AuthorizationPolicyAction action) {
-            this.action = Output.of(Objects.requireNonNull(action));
-            return this;
+            return action(Output.of(action));
         }
+
         public Builder authorizationPolicyId(Output<String> authorizationPolicyId) {
-            this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId);
+            $.authorizationPolicyId = authorizationPolicyId;
             return this;
         }
+
         public Builder authorizationPolicyId(String authorizationPolicyId) {
-            this.authorizationPolicyId = Output.of(Objects.requireNonNull(authorizationPolicyId));
-            return this;
+            return authorizationPolicyId(Output.of(authorizationPolicyId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder rules(@Nullable Output<List<RuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RuleArgs... rules) {
             return rules(List.of(rules));
-        }        public AuthorizationPolicyArgs build() {
-            return new AuthorizationPolicyArgs(action, authorizationPolicyId, description, labels, location, name, project, rules);
+        }
+
+        public AuthorizationPolicyArgs build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.authorizationPolicyId = Objects.requireNonNull($.authorizationPolicyId, "expected parameter 'authorizationPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

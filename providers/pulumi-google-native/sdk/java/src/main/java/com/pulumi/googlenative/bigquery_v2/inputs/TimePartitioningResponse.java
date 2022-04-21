@@ -18,7 +18,7 @@ public final class TimePartitioningResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expirationMs", required=true)
-      private final String expirationMs;
+    private String expirationMs;
 
     public String expirationMs() {
         return this.expirationMs;
@@ -29,14 +29,14 @@ public final class TimePartitioningResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="field", required=true)
-      private final String field;
+    private String field;
 
     public String field() {
         return this.field;
     }
 
     @Import(name="requirePartitionFilter", required=true)
-      private final Boolean requirePartitionFilter;
+    private Boolean requirePartitionFilter;
 
     public Boolean requirePartitionFilter() {
         return this.requirePartitionFilter;
@@ -47,73 +47,66 @@ public final class TimePartitioningResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public TimePartitioningResponse(
-        String expirationMs,
-        String field,
-        Boolean requirePartitionFilter,
-        String type) {
-        this.expirationMs = Objects.requireNonNull(expirationMs, "expected parameter 'expirationMs' to be non-null");
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter, "expected parameter 'requirePartitionFilter' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private TimePartitioningResponse() {}
 
-    private TimePartitioningResponse() {
-        this.expirationMs = null;
-        this.field = null;
-        this.requirePartitionFilter = null;
-        this.type = null;
+    private TimePartitioningResponse(TimePartitioningResponse $) {
+        this.expirationMs = $.expirationMs;
+        this.field = $.field;
+        this.requirePartitionFilter = $.requirePartitionFilter;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimePartitioningResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expirationMs;
-        private String field;
-        private Boolean requirePartitionFilter;
-        private String type;
+        private TimePartitioningResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimePartitioningResponse();
         }
 
         public Builder(TimePartitioningResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationMs = defaults.expirationMs;
-    	      this.field = defaults.field;
-    	      this.requirePartitionFilter = defaults.requirePartitionFilter;
-    	      this.type = defaults.type;
+            $ = new TimePartitioningResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationMs(String expirationMs) {
-            this.expirationMs = Objects.requireNonNull(expirationMs);
+            $.expirationMs = expirationMs;
             return this;
         }
+
         public Builder field(String field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
+            $.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public TimePartitioningResponse build() {
-            return new TimePartitioningResponse(expirationMs, field, requirePartitionFilter, type);
+        }
+
+        public TimePartitioningResponse build() {
+            $.expirationMs = Objects.requireNonNull($.expirationMs, "expected parameter 'expirationMs' to be non-null");
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.requirePartitionFilter = Objects.requireNonNull($.requirePartitionFilter, "expected parameter 'requirePartitionFilter' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

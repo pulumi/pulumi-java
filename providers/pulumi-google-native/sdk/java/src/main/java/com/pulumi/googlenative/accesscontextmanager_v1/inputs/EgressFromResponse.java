@@ -22,7 +22,7 @@ public final class EgressFromResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identities", required=true)
-      private final List<String> identities;
+    private List<String> identities;
 
     public List<String> identities() {
         return this.identities;
@@ -33,58 +33,56 @@ public final class EgressFromResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="identityType", required=true)
-      private final String identityType;
+    private String identityType;
 
     public String identityType() {
         return this.identityType;
     }
 
-    public EgressFromResponse(
-        List<String> identities,
-        String identityType) {
-        this.identities = Objects.requireNonNull(identities, "expected parameter 'identities' to be non-null");
-        this.identityType = Objects.requireNonNull(identityType, "expected parameter 'identityType' to be non-null");
-    }
+    private EgressFromResponse() {}
 
-    private EgressFromResponse() {
-        this.identities = List.of();
-        this.identityType = null;
+    private EgressFromResponse(EgressFromResponse $) {
+        this.identities = $.identities;
+        this.identityType = $.identityType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EgressFromResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> identities;
-        private String identityType;
+        private EgressFromResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EgressFromResponse();
         }
 
         public Builder(EgressFromResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identities = defaults.identities;
-    	      this.identityType = defaults.identityType;
+            $ = new EgressFromResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identities(List<String> identities) {
-            this.identities = Objects.requireNonNull(identities);
+            $.identities = identities;
             return this;
         }
+
         public Builder identities(String... identities) {
             return identities(List.of(identities));
         }
+
         public Builder identityType(String identityType) {
-            this.identityType = Objects.requireNonNull(identityType);
+            $.identityType = identityType;
             return this;
-        }        public EgressFromResponse build() {
-            return new EgressFromResponse(identities, identityType);
+        }
+
+        public EgressFromResponse build() {
+            $.identities = Objects.requireNonNull($.identities, "expected parameter 'identities' to be non-null");
+            $.identityType = Objects.requireNonNull($.identityType, "expected parameter 'identityType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends com.pulu
      * 
      */
     @Import(name="flow")
-      private final @Nullable Output<String> flow;
+    private @Nullable Output<String> flow;
 
-    public Output<String> flow() {
-        return this.flow == null ? Codegen.empty() : this.flow;
+    public Optional<Output<String>> flow() {
+        return Optional.ofNullable(this.flow);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigArgs extends com.pulu
      * 
      */
     @Import(name="trackingParameters")
-      private final @Nullable Output<List<String>> trackingParameters;
+    private @Nullable Output<List<String>> trackingParameters;
 
-    public Output<List<String>> trackingParameters() {
-        return this.trackingParameters == null ? Codegen.empty() : this.trackingParameters;
+    public Optional<Output<List<String>>> trackingParameters() {
+        return Optional.ofNullable(this.trackingParameters);
     }
 
-    public GoogleCloudDialogflowCxV3beta1TestConfigArgs(
-        @Nullable Output<String> flow,
-        @Nullable Output<List<String>> trackingParameters) {
-        this.flow = flow;
-        this.trackingParameters = trackingParameters;
-    }
+    private GoogleCloudDialogflowCxV3beta1TestConfigArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1TestConfigArgs() {
-        this.flow = Codegen.empty();
-        this.trackingParameters = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1TestConfigArgs(GoogleCloudDialogflowCxV3beta1TestConfigArgs $) {
+        this.flow = $.flow;
+        this.trackingParameters = $.trackingParameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1TestConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> flow;
-        private @Nullable Output<List<String>> trackingParameters;
+        private GoogleCloudDialogflowCxV3beta1TestConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1TestConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1TestConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.flow = defaults.flow;
-    	      this.trackingParameters = defaults.trackingParameters;
+            $ = new GoogleCloudDialogflowCxV3beta1TestConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder flow(@Nullable Output<String> flow) {
-            this.flow = flow;
+            $.flow = flow;
             return this;
         }
-        public Builder flow(@Nullable String flow) {
-            this.flow = Codegen.ofNullable(flow);
-            return this;
+
+        public Builder flow(String flow) {
+            return flow(Output.of(flow));
         }
+
         public Builder trackingParameters(@Nullable Output<List<String>> trackingParameters) {
-            this.trackingParameters = trackingParameters;
+            $.trackingParameters = trackingParameters;
             return this;
         }
-        public Builder trackingParameters(@Nullable List<String> trackingParameters) {
-            this.trackingParameters = Codegen.ofNullable(trackingParameters);
-            return this;
+
+        public Builder trackingParameters(List<String> trackingParameters) {
+            return trackingParameters(Output.of(trackingParameters));
         }
+
         public Builder trackingParameters(String... trackingParameters) {
             return trackingParameters(List.of(trackingParameters));
-        }        public GoogleCloudDialogflowCxV3beta1TestConfigArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1TestConfigArgs(flow, trackingParameters);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1TestConfigArgs build() {
+            return $;
         }
     }
+
 }

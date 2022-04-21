@@ -21,7 +21,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -32,55 +32,52 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse e
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(
-        String kind,
-        String name) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse() {
-        this.kind = null;
-        this.name = null;
+    private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse $) {
+        this.kind = $.kind;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String name;
+        private GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse(kind, name);
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Output<String> fileName;
+    private @Nullable Output<String> fileName;
 
-    public Output<String> fileName() {
-        return this.fileName == null ? Codegen.empty() : this.fileName;
+    public Optional<Output<String>> fileName() {
+        return Optional.ofNullable(this.fileName);
     }
 
-    public SourceContextArgs(@Nullable Output<String> fileName) {
-        this.fileName = fileName;
-    }
+    private SourceContextArgs() {}
 
-    private SourceContextArgs() {
-        this.fileName = Codegen.empty();
+    private SourceContextArgs(SourceContextArgs $) {
+        this.fileName = $.fileName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fileName;
+        private SourceContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceContextArgs();
         }
 
         public Builder(SourceContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
+            $ = new SourceContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Output<String> fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
-        public Builder fileName(@Nullable String fileName) {
-            this.fileName = Codegen.ofNullable(fileName);
-            return this;
-        }        public SourceContextArgs build() {
-            return new SourceContextArgs(fileName);
+
+        public Builder fileName(String fileName) {
+            return fileName(Output.of(fileName));
+        }
+
+        public SourceContextArgs build() {
+            return $;
         }
     }
+
 }

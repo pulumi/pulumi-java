@@ -21,45 +21,45 @@ public final class ServiceAccountResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="email", required=true)
-      private final String email;
+    private String email;
 
     public String email() {
         return this.email;
     }
 
-    public ServiceAccountResponse(String email) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-    }
+    private ServiceAccountResponse() {}
 
-    private ServiceAccountResponse() {
-        this.email = null;
+    private ServiceAccountResponse(ServiceAccountResponse $) {
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String email;
+        private ServiceAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountResponse();
         }
 
         public Builder(ServiceAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
+            $ = new ServiceAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder email(String email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
-        }        public ServiceAccountResponse build() {
-            return new ServiceAccountResponse(email);
+        }
+
+        public ServiceAccountResponse build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            return $;
         }
     }
+
 }

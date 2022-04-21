@@ -21,7 +21,7 @@ public final class FailureInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="detail", required=true)
-      private final String detail;
+    private String detail;
 
     public String detail() {
         return this.detail;
@@ -32,55 +32,52 @@ public final class FailureInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public FailureInfoResponse(
-        String detail,
-        String type) {
-        this.detail = Objects.requireNonNull(detail, "expected parameter 'detail' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private FailureInfoResponse() {}
 
-    private FailureInfoResponse() {
-        this.detail = null;
-        this.type = null;
+    private FailureInfoResponse(FailureInfoResponse $) {
+        this.detail = $.detail;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailureInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String detail;
-        private String type;
+        private FailureInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailureInfoResponse();
         }
 
         public Builder(FailureInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.detail = defaults.detail;
-    	      this.type = defaults.type;
+            $ = new FailureInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder detail(String detail) {
-            this.detail = Objects.requireNonNull(detail);
+            $.detail = detail;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public FailureInfoResponse build() {
-            return new FailureInfoResponse(detail, type);
+        }
+
+        public FailureInfoResponse build() {
+            $.detail = Objects.requireNonNull($.detail, "expected parameter 'detail' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

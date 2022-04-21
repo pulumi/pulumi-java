@@ -21,7 +21,7 @@ public final class JsonFileFormatResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="compression", required=true)
-      private final String compression;
+    private String compression;
 
     public String compression() {
         return this.compression;
@@ -32,55 +32,52 @@ public final class JsonFileFormatResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="schemaFileFormat", required=true)
-      private final String schemaFileFormat;
+    private String schemaFileFormat;
 
     public String schemaFileFormat() {
         return this.schemaFileFormat;
     }
 
-    public JsonFileFormatResponse(
-        String compression,
-        String schemaFileFormat) {
-        this.compression = Objects.requireNonNull(compression, "expected parameter 'compression' to be non-null");
-        this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat, "expected parameter 'schemaFileFormat' to be non-null");
-    }
+    private JsonFileFormatResponse() {}
 
-    private JsonFileFormatResponse() {
-        this.compression = null;
-        this.schemaFileFormat = null;
+    private JsonFileFormatResponse(JsonFileFormatResponse $) {
+        this.compression = $.compression;
+        this.schemaFileFormat = $.schemaFileFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JsonFileFormatResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String compression;
-        private String schemaFileFormat;
+        private JsonFileFormatResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JsonFileFormatResponse();
         }
 
         public Builder(JsonFileFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compression = defaults.compression;
-    	      this.schemaFileFormat = defaults.schemaFileFormat;
+            $ = new JsonFileFormatResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compression(String compression) {
-            this.compression = Objects.requireNonNull(compression);
+            $.compression = compression;
             return this;
         }
+
         public Builder schemaFileFormat(String schemaFileFormat) {
-            this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
+            $.schemaFileFormat = schemaFileFormat;
             return this;
-        }        public JsonFileFormatResponse build() {
-            return new JsonFileFormatResponse(compression, schemaFileFormat);
+        }
+
+        public JsonFileFormatResponse build() {
+            $.compression = Objects.requireNonNull($.compression, "expected parameter 'compression' to be non-null");
+            $.schemaFileFormat = Objects.requireNonNull($.schemaFileFormat, "expected parameter 'schemaFileFormat' to be non-null");
+            return $;
         }
     }
+
 }

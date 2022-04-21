@@ -22,45 +22,45 @@ public final class LoggingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="driverLogLevels", required=true)
-      private final Map<String,String> driverLogLevels;
+    private Map<String,String> driverLogLevels;
 
     public Map<String,String> driverLogLevels() {
         return this.driverLogLevels;
     }
 
-    public LoggingConfigResponse(Map<String,String> driverLogLevels) {
-        this.driverLogLevels = Objects.requireNonNull(driverLogLevels, "expected parameter 'driverLogLevels' to be non-null");
-    }
+    private LoggingConfigResponse() {}
 
-    private LoggingConfigResponse() {
-        this.driverLogLevels = Map.of();
+    private LoggingConfigResponse(LoggingConfigResponse $) {
+        this.driverLogLevels = $.driverLogLevels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> driverLogLevels;
+        private LoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LoggingConfigResponse();
         }
 
         public Builder(LoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driverLogLevels = defaults.driverLogLevels;
+            $ = new LoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder driverLogLevels(Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
+            $.driverLogLevels = driverLogLevels;
             return this;
-        }        public LoggingConfigResponse build() {
-            return new LoggingConfigResponse(driverLogLevels);
+        }
+
+        public LoggingConfigResponse build() {
+            $.driverLogLevels = Objects.requireNonNull($.driverLogLevels, "expected parameter 'driverLogLevels' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudSecret")
-      private final @Nullable Output<String> cloudSecret;
+    private @Nullable Output<String> cloudSecret;
 
-    public Output<String> cloudSecret() {
-        return this.cloudSecret == null ? Codegen.empty() : this.cloudSecret;
+    public Optional<Output<String>> cloudSecret() {
+        return Optional.ofNullable(this.cloudSecret);
     }
 
-    public SecretArgs(@Nullable Output<String> cloudSecret) {
-        this.cloudSecret = cloudSecret;
-    }
+    private SecretArgs() {}
 
-    private SecretArgs() {
-        this.cloudSecret = Codegen.empty();
+    private SecretArgs(SecretArgs $) {
+        this.cloudSecret = $.cloudSecret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudSecret;
+        private SecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretArgs();
         }
 
         public Builder(SecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSecret = defaults.cloudSecret;
+            $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSecret(@Nullable Output<String> cloudSecret) {
-            this.cloudSecret = cloudSecret;
+            $.cloudSecret = cloudSecret;
             return this;
         }
-        public Builder cloudSecret(@Nullable String cloudSecret) {
-            this.cloudSecret = Codegen.ofNullable(cloudSecret);
-            return this;
-        }        public SecretArgs build() {
-            return new SecretArgs(cloudSecret);
+
+        public Builder cloudSecret(String cloudSecret) {
+            return cloudSecret(Output.of(cloudSecret));
+        }
+
+        public SecretArgs build() {
+            return $;
         }
     }
+
 }

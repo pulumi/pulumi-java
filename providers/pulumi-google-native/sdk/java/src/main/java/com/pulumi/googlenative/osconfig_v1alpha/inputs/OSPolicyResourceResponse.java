@@ -24,7 +24,7 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="exec", required=true)
-      private final OSPolicyResourceExecResourceResponse exec;
+    private OSPolicyResourceExecResourceResponse exec;
 
     public OSPolicyResourceExecResourceResponse exec() {
         return this.exec;
@@ -35,7 +35,7 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="file", required=true)
-      private final OSPolicyResourceFileResourceResponse file;
+    private OSPolicyResourceFileResourceResponse file;
 
     public OSPolicyResourceFileResourceResponse file() {
         return this.file;
@@ -46,7 +46,7 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="pkg", required=true)
-      private final OSPolicyResourcePackageResourceResponse pkg;
+    private OSPolicyResourcePackageResourceResponse pkg;
 
     public OSPolicyResourcePackageResourceResponse pkg() {
         return this.pkg;
@@ -57,73 +57,66 @@ public final class OSPolicyResourceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="repository", required=true)
-      private final OSPolicyResourceRepositoryResourceResponse repository;
+    private OSPolicyResourceRepositoryResourceResponse repository;
 
     public OSPolicyResourceRepositoryResourceResponse repository() {
         return this.repository;
     }
 
-    public OSPolicyResourceResponse(
-        OSPolicyResourceExecResourceResponse exec,
-        OSPolicyResourceFileResourceResponse file,
-        OSPolicyResourcePackageResourceResponse pkg,
-        OSPolicyResourceRepositoryResourceResponse repository) {
-        this.exec = Objects.requireNonNull(exec, "expected parameter 'exec' to be non-null");
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.pkg = Objects.requireNonNull(pkg, "expected parameter 'pkg' to be non-null");
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-    }
+    private OSPolicyResourceResponse() {}
 
-    private OSPolicyResourceResponse() {
-        this.exec = null;
-        this.file = null;
-        this.pkg = null;
-        this.repository = null;
+    private OSPolicyResourceResponse(OSPolicyResourceResponse $) {
+        this.exec = $.exec;
+        this.file = $.file;
+        this.pkg = $.pkg;
+        this.repository = $.repository;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private OSPolicyResourceExecResourceResponse exec;
-        private OSPolicyResourceFileResourceResponse file;
-        private OSPolicyResourcePackageResourceResponse pkg;
-        private OSPolicyResourceRepositoryResourceResponse repository;
+        private OSPolicyResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceResponse();
         }
 
         public Builder(OSPolicyResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exec = defaults.exec;
-    	      this.file = defaults.file;
-    	      this.pkg = defaults.pkg;
-    	      this.repository = defaults.repository;
+            $ = new OSPolicyResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exec(OSPolicyResourceExecResourceResponse exec) {
-            this.exec = Objects.requireNonNull(exec);
+            $.exec = exec;
             return this;
         }
+
         public Builder file(OSPolicyResourceFileResourceResponse file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder pkg(OSPolicyResourcePackageResourceResponse pkg) {
-            this.pkg = Objects.requireNonNull(pkg);
+            $.pkg = pkg;
             return this;
         }
+
         public Builder repository(OSPolicyResourceRepositoryResourceResponse repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
-        }        public OSPolicyResourceResponse build() {
-            return new OSPolicyResourceResponse(exec, file, pkg, repository);
+        }
+
+        public OSPolicyResourceResponse build() {
+            $.exec = Objects.requireNonNull($.exec, "expected parameter 'exec' to be non-null");
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            $.pkg = Objects.requireNonNull($.pkg, "expected parameter 'pkg' to be non-null");
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

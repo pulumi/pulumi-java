@@ -21,7 +21,7 @@ public final class SubnetworkSecondaryRangeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="ipCidrRange", required=true)
-      private final String ipCidrRange;
+    private String ipCidrRange;
 
     public String ipCidrRange() {
         return this.ipCidrRange;
@@ -32,7 +32,7 @@ public final class SubnetworkSecondaryRangeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="rangeName", required=true)
-      private final String rangeName;
+    private String rangeName;
 
     public String rangeName() {
         return this.rangeName;
@@ -43,64 +43,59 @@ public final class SubnetworkSecondaryRangeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="reservedInternalRange", required=true)
-      private final String reservedInternalRange;
+    private String reservedInternalRange;
 
     public String reservedInternalRange() {
         return this.reservedInternalRange;
     }
 
-    public SubnetworkSecondaryRangeResponse(
-        String ipCidrRange,
-        String rangeName,
-        String reservedInternalRange) {
-        this.ipCidrRange = Objects.requireNonNull(ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
-        this.rangeName = Objects.requireNonNull(rangeName, "expected parameter 'rangeName' to be non-null");
-        this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange, "expected parameter 'reservedInternalRange' to be non-null");
-    }
+    private SubnetworkSecondaryRangeResponse() {}
 
-    private SubnetworkSecondaryRangeResponse() {
-        this.ipCidrRange = null;
-        this.rangeName = null;
-        this.reservedInternalRange = null;
+    private SubnetworkSecondaryRangeResponse(SubnetworkSecondaryRangeResponse $) {
+        this.ipCidrRange = $.ipCidrRange;
+        this.rangeName = $.rangeName;
+        this.reservedInternalRange = $.reservedInternalRange;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubnetworkSecondaryRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipCidrRange;
-        private String rangeName;
-        private String reservedInternalRange;
+        private SubnetworkSecondaryRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubnetworkSecondaryRangeResponse();
         }
 
         public Builder(SubnetworkSecondaryRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipCidrRange = defaults.ipCidrRange;
-    	      this.rangeName = defaults.rangeName;
-    	      this.reservedInternalRange = defaults.reservedInternalRange;
+            $ = new SubnetworkSecondaryRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipCidrRange(String ipCidrRange) {
-            this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
+            $.ipCidrRange = ipCidrRange;
             return this;
         }
+
         public Builder rangeName(String rangeName) {
-            this.rangeName = Objects.requireNonNull(rangeName);
+            $.rangeName = rangeName;
             return this;
         }
+
         public Builder reservedInternalRange(String reservedInternalRange) {
-            this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
+            $.reservedInternalRange = reservedInternalRange;
             return this;
-        }        public SubnetworkSecondaryRangeResponse build() {
-            return new SubnetworkSecondaryRangeResponse(ipCidrRange, rangeName, reservedInternalRange);
+        }
+
+        public SubnetworkSecondaryRangeResponse build() {
+            $.ipCidrRange = Objects.requireNonNull($.ipCidrRange, "expected parameter 'ipCidrRange' to be non-null");
+            $.rangeName = Objects.requireNonNull($.rangeName, "expected parameter 'rangeName' to be non-null");
+            $.reservedInternalRange = Objects.requireNonNull($.reservedInternalRange, "expected parameter 'reservedInternalRange' to be non-null");
+            return $;
         }
     }
+
 }

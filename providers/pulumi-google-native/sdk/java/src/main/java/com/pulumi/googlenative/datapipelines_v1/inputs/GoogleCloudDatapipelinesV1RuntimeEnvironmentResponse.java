@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="additionalExperiments", required=true)
-      private final List<String> additionalExperiments;
+    private List<String> additionalExperiments;
 
     public List<String> additionalExperiments() {
         return this.additionalExperiments;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="additionalUserLabels", required=true)
-      private final Map<String,String> additionalUserLabels;
+    private Map<String,String> additionalUserLabels;
 
     public Map<String,String> additionalUserLabels() {
         return this.additionalUserLabels;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="bypassTempDirValidation", required=true)
-      private final Boolean bypassTempDirValidation;
+    private Boolean bypassTempDirValidation;
 
     public Boolean bypassTempDirValidation() {
         return this.bypassTempDirValidation;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="enableStreamingEngine", required=true)
-      private final Boolean enableStreamingEngine;
+    private Boolean enableStreamingEngine;
 
     public Boolean enableStreamingEngine() {
         return this.enableStreamingEngine;
@@ -69,7 +69,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="ipConfiguration", required=true)
-      private final String ipConfiguration;
+    private String ipConfiguration;
 
     public String ipConfiguration() {
         return this.ipConfiguration;
@@ -80,7 +80,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
@@ -91,7 +91,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -102,7 +102,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="maxWorkers", required=true)
-      private final Integer maxWorkers;
+    private Integer maxWorkers;
 
     public Integer maxWorkers() {
         return this.maxWorkers;
@@ -113,7 +113,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -124,7 +124,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="numWorkers", required=true)
-      private final Integer numWorkers;
+    private Integer numWorkers;
 
     public Integer numWorkers() {
         return this.numWorkers;
@@ -135,7 +135,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="serviceAccountEmail", required=true)
-      private final String serviceAccountEmail;
+    private String serviceAccountEmail;
 
     public String serviceAccountEmail() {
         return this.serviceAccountEmail;
@@ -146,7 +146,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
@@ -157,7 +157,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="tempLocation", required=true)
-      private final String tempLocation;
+    private String tempLocation;
 
     public String tempLocation() {
         return this.tempLocation;
@@ -168,7 +168,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="workerRegion", required=true)
-      private final String workerRegion;
+    private String workerRegion;
 
     public String workerRegion() {
         return this.workerRegion;
@@ -179,7 +179,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="workerZone", required=true)
-      private final String workerZone;
+    private String workerZone;
 
     public String workerZone() {
         return this.workerZone;
@@ -190,184 +190,154 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(
-        List<String> additionalExperiments,
-        Map<String,String> additionalUserLabels,
-        Boolean bypassTempDirValidation,
-        Boolean enableStreamingEngine,
-        String ipConfiguration,
-        String kmsKeyName,
-        String machineType,
-        Integer maxWorkers,
-        String network,
-        Integer numWorkers,
-        String serviceAccountEmail,
-        String subnetwork,
-        String tempLocation,
-        String workerRegion,
-        String workerZone,
-        String zone) {
-        this.additionalExperiments = Objects.requireNonNull(additionalExperiments, "expected parameter 'additionalExperiments' to be non-null");
-        this.additionalUserLabels = Objects.requireNonNull(additionalUserLabels, "expected parameter 'additionalUserLabels' to be non-null");
-        this.bypassTempDirValidation = Objects.requireNonNull(bypassTempDirValidation, "expected parameter 'bypassTempDirValidation' to be non-null");
-        this.enableStreamingEngine = Objects.requireNonNull(enableStreamingEngine, "expected parameter 'enableStreamingEngine' to be non-null");
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.maxWorkers = Objects.requireNonNull(maxWorkers, "expected parameter 'maxWorkers' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.numWorkers = Objects.requireNonNull(numWorkers, "expected parameter 'numWorkers' to be non-null");
-        this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-        this.tempLocation = Objects.requireNonNull(tempLocation, "expected parameter 'tempLocation' to be non-null");
-        this.workerRegion = Objects.requireNonNull(workerRegion, "expected parameter 'workerRegion' to be non-null");
-        this.workerZone = Objects.requireNonNull(workerZone, "expected parameter 'workerZone' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse() {}
 
-    private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse() {
-        this.additionalExperiments = List.of();
-        this.additionalUserLabels = Map.of();
-        this.bypassTempDirValidation = null;
-        this.enableStreamingEngine = null;
-        this.ipConfiguration = null;
-        this.kmsKeyName = null;
-        this.machineType = null;
-        this.maxWorkers = null;
-        this.network = null;
-        this.numWorkers = null;
-        this.serviceAccountEmail = null;
-        this.subnetwork = null;
-        this.tempLocation = null;
-        this.workerRegion = null;
-        this.workerZone = null;
-        this.zone = null;
+    private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse $) {
+        this.additionalExperiments = $.additionalExperiments;
+        this.additionalUserLabels = $.additionalUserLabels;
+        this.bypassTempDirValidation = $.bypassTempDirValidation;
+        this.enableStreamingEngine = $.enableStreamingEngine;
+        this.ipConfiguration = $.ipConfiguration;
+        this.kmsKeyName = $.kmsKeyName;
+        this.machineType = $.machineType;
+        this.maxWorkers = $.maxWorkers;
+        this.network = $.network;
+        this.numWorkers = $.numWorkers;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.subnetwork = $.subnetwork;
+        this.tempLocation = $.tempLocation;
+        this.workerRegion = $.workerRegion;
+        this.workerZone = $.workerZone;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> additionalExperiments;
-        private Map<String,String> additionalUserLabels;
-        private Boolean bypassTempDirValidation;
-        private Boolean enableStreamingEngine;
-        private String ipConfiguration;
-        private String kmsKeyName;
-        private String machineType;
-        private Integer maxWorkers;
-        private String network;
-        private Integer numWorkers;
-        private String serviceAccountEmail;
-        private String subnetwork;
-        private String tempLocation;
-        private String workerRegion;
-        private String workerZone;
-        private String zone;
+        private GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExperiments = defaults.additionalExperiments;
-    	      this.additionalUserLabels = defaults.additionalUserLabels;
-    	      this.bypassTempDirValidation = defaults.bypassTempDirValidation;
-    	      this.enableStreamingEngine = defaults.enableStreamingEngine;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.machineType = defaults.machineType;
-    	      this.maxWorkers = defaults.maxWorkers;
-    	      this.network = defaults.network;
-    	      this.numWorkers = defaults.numWorkers;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.tempLocation = defaults.tempLocation;
-    	      this.workerRegion = defaults.workerRegion;
-    	      this.workerZone = defaults.workerZone;
-    	      this.zone = defaults.zone;
+            $ = new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExperiments(List<String> additionalExperiments) {
-            this.additionalExperiments = Objects.requireNonNull(additionalExperiments);
+            $.additionalExperiments = additionalExperiments;
             return this;
         }
+
         public Builder additionalExperiments(String... additionalExperiments) {
             return additionalExperiments(List.of(additionalExperiments));
         }
+
         public Builder additionalUserLabels(Map<String,String> additionalUserLabels) {
-            this.additionalUserLabels = Objects.requireNonNull(additionalUserLabels);
+            $.additionalUserLabels = additionalUserLabels;
             return this;
         }
+
         public Builder bypassTempDirValidation(Boolean bypassTempDirValidation) {
-            this.bypassTempDirValidation = Objects.requireNonNull(bypassTempDirValidation);
+            $.bypassTempDirValidation = bypassTempDirValidation;
             return this;
         }
+
         public Builder enableStreamingEngine(Boolean enableStreamingEngine) {
-            this.enableStreamingEngine = Objects.requireNonNull(enableStreamingEngine);
+            $.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
+
         public Builder ipConfiguration(String ipConfiguration) {
-            this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder maxWorkers(Integer maxWorkers) {
-            this.maxWorkers = Objects.requireNonNull(maxWorkers);
+            $.maxWorkers = maxWorkers;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder numWorkers(Integer numWorkers) {
-            this.numWorkers = Objects.requireNonNull(numWorkers);
+            $.numWorkers = numWorkers;
             return this;
         }
+
         public Builder serviceAccountEmail(String serviceAccountEmail) {
-            this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
         }
+
         public Builder tempLocation(String tempLocation) {
-            this.tempLocation = Objects.requireNonNull(tempLocation);
+            $.tempLocation = tempLocation;
             return this;
         }
+
         public Builder workerRegion(String workerRegion) {
-            this.workerRegion = Objects.requireNonNull(workerRegion);
+            $.workerRegion = workerRegion;
             return this;
         }
+
         public Builder workerZone(String workerZone) {
-            this.workerZone = Objects.requireNonNull(workerZone);
+            $.workerZone = workerZone;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse build() {
-            return new GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse(additionalExperiments, additionalUserLabels, bypassTempDirValidation, enableStreamingEngine, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
+        }
+
+        public GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse build() {
+            $.additionalExperiments = Objects.requireNonNull($.additionalExperiments, "expected parameter 'additionalExperiments' to be non-null");
+            $.additionalUserLabels = Objects.requireNonNull($.additionalUserLabels, "expected parameter 'additionalUserLabels' to be non-null");
+            $.bypassTempDirValidation = Objects.requireNonNull($.bypassTempDirValidation, "expected parameter 'bypassTempDirValidation' to be non-null");
+            $.enableStreamingEngine = Objects.requireNonNull($.enableStreamingEngine, "expected parameter 'enableStreamingEngine' to be non-null");
+            $.ipConfiguration = Objects.requireNonNull($.ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.maxWorkers = Objects.requireNonNull($.maxWorkers, "expected parameter 'maxWorkers' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.numWorkers = Objects.requireNonNull($.numWorkers, "expected parameter 'numWorkers' to be non-null");
+            $.serviceAccountEmail = Objects.requireNonNull($.serviceAccountEmail, "expected parameter 'serviceAccountEmail' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            $.tempLocation = Objects.requireNonNull($.tempLocation, "expected parameter 'tempLocation' to be non-null");
+            $.workerRegion = Objects.requireNonNull($.workerRegion, "expected parameter 'workerRegion' to be non-null");
+            $.workerZone = Objects.requireNonNull($.workerZone, "expected parameter 'workerZone' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

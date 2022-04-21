@@ -21,7 +21,7 @@ public final class AnyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="typeUrl", required=true)
-      private final String typeUrl;
+    private String typeUrl;
 
     public String typeUrl() {
         return this.typeUrl;
@@ -32,55 +32,52 @@ public final class AnyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public AnyResponse(
-        String typeUrl,
-        String value) {
-        this.typeUrl = Objects.requireNonNull(typeUrl, "expected parameter 'typeUrl' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private AnyResponse() {}
 
-    private AnyResponse() {
-        this.typeUrl = null;
-        this.value = null;
+    private AnyResponse(AnyResponse $) {
+        this.typeUrl = $.typeUrl;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String typeUrl;
-        private String value;
+        private AnyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnyResponse();
         }
 
         public Builder(AnyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.typeUrl = defaults.typeUrl;
-    	      this.value = defaults.value;
+            $ = new AnyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder typeUrl(String typeUrl) {
-            this.typeUrl = Objects.requireNonNull(typeUrl);
+            $.typeUrl = typeUrl;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public AnyResponse build() {
-            return new AnyResponse(typeUrl, value);
+        }
+
+        public AnyResponse build() {
+            $.typeUrl = Objects.requireNonNull($.typeUrl, "expected parameter 'typeUrl' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

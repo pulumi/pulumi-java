@@ -5,12 +5,12 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.enums.OSPolicyResourceExecResourceExecInterpreter;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends com.pulumi.resou
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends com.pulumi.resou
      * 
      */
     @Import(name="file")
-      private final @Nullable Output<OSPolicyResourceFileArgs> file;
+    private @Nullable Output<OSPolicyResourceFileArgs> file;
 
-    public Output<OSPolicyResourceFileArgs> file() {
-        return this.file == null ? Codegen.empty() : this.file;
+    public Optional<Output<OSPolicyResourceFileArgs>> file() {
+        return Optional.ofNullable(this.file);
     }
 
     /**
@@ -49,7 +49,7 @@ public final class OSPolicyResourceExecResourceExecArgs extends com.pulumi.resou
      * 
      */
     @Import(name="interpreter", required=true)
-      private final Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
+    private Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
 
     public Output<OSPolicyResourceExecResourceExecInterpreter> interpreter() {
         return this.interpreter;
@@ -60,10 +60,10 @@ public final class OSPolicyResourceExecResourceExecArgs extends com.pulumi.resou
      * 
      */
     @Import(name="outputFilePath")
-      private final @Nullable Output<String> outputFilePath;
+    private @Nullable Output<String> outputFilePath;
 
-    public Output<String> outputFilePath() {
-        return this.outputFilePath == null ? Codegen.empty() : this.outputFilePath;
+    public Optional<Output<String>> outputFilePath() {
+        return Optional.ofNullable(this.outputFilePath);
     }
 
     /**
@@ -71,105 +71,93 @@ public final class OSPolicyResourceExecResourceExecArgs extends com.pulumi.resou
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
-    public OSPolicyResourceExecResourceExecArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<OSPolicyResourceFileArgs> file,
-        Output<OSPolicyResourceExecResourceExecInterpreter> interpreter,
-        @Nullable Output<String> outputFilePath,
-        @Nullable Output<String> script) {
-        this.args = args;
-        this.file = file;
-        this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
-        this.outputFilePath = outputFilePath;
-        this.script = script;
-    }
+    private OSPolicyResourceExecResourceExecArgs() {}
 
-    private OSPolicyResourceExecResourceExecArgs() {
-        this.args = Codegen.empty();
-        this.file = Codegen.empty();
-        this.interpreter = Codegen.empty();
-        this.outputFilePath = Codegen.empty();
-        this.script = Codegen.empty();
+    private OSPolicyResourceExecResourceExecArgs(OSPolicyResourceExecResourceExecArgs $) {
+        this.args = $.args;
+        this.file = $.file;
+        this.interpreter = $.interpreter;
+        this.outputFilePath = $.outputFilePath;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceExecResourceExecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<OSPolicyResourceFileArgs> file;
-        private Output<OSPolicyResourceExecResourceExecInterpreter> interpreter;
-        private @Nullable Output<String> outputFilePath;
-        private @Nullable Output<String> script;
+        private OSPolicyResourceExecResourceExecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceExecResourceExecArgs();
         }
 
         public Builder(OSPolicyResourceExecResourceExecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.file = defaults.file;
-    	      this.interpreter = defaults.interpreter;
-    	      this.outputFilePath = defaults.outputFilePath;
-    	      this.script = defaults.script;
+            $ = new OSPolicyResourceExecResourceExecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder file(@Nullable Output<OSPolicyResourceFileArgs> file) {
-            this.file = file;
+            $.file = file;
             return this;
         }
-        public Builder file(@Nullable OSPolicyResourceFileArgs file) {
-            this.file = Codegen.ofNullable(file);
-            return this;
+
+        public Builder file(OSPolicyResourceFileArgs file) {
+            return file(Output.of(file));
         }
+
         public Builder interpreter(Output<OSPolicyResourceExecResourceExecInterpreter> interpreter) {
-            this.interpreter = Objects.requireNonNull(interpreter);
+            $.interpreter = interpreter;
             return this;
         }
+
         public Builder interpreter(OSPolicyResourceExecResourceExecInterpreter interpreter) {
-            this.interpreter = Output.of(Objects.requireNonNull(interpreter));
-            return this;
+            return interpreter(Output.of(interpreter));
         }
+
         public Builder outputFilePath(@Nullable Output<String> outputFilePath) {
-            this.outputFilePath = outputFilePath;
+            $.outputFilePath = outputFilePath;
             return this;
         }
-        public Builder outputFilePath(@Nullable String outputFilePath) {
-            this.outputFilePath = Codegen.ofNullable(outputFilePath);
-            return this;
+
+        public Builder outputFilePath(String outputFilePath) {
+            return outputFilePath(Output.of(outputFilePath));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
-        }        public OSPolicyResourceExecResourceExecArgs build() {
-            return new OSPolicyResourceExecResourceExecArgs(args, file, interpreter, outputFilePath, script);
+
+        public Builder script(String script) {
+            return script(Output.of(script));
+        }
+
+        public OSPolicyResourceExecResourceExecArgs build() {
+            $.interpreter = Objects.requireNonNull($.interpreter, "expected parameter 'interpreter' to be non-null");
+            return $;
         }
     }
+
 }

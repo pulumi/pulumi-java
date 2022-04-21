@@ -21,7 +21,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @Import(name="acceleratorCount", required=true)
-      private final String acceleratorCount;
+    private String acceleratorCount;
 
     public String acceleratorCount() {
         return this.acceleratorCount;
@@ -32,55 +32,52 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @Import(name="acceleratorType", required=true)
-      private final String acceleratorType;
+    private String acceleratorType;
 
     public String acceleratorType() {
         return this.acceleratorType;
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(
-        String acceleratorCount,
-        String acceleratorType) {
-        this.acceleratorCount = Objects.requireNonNull(acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
-        this.acceleratorType = Objects.requireNonNull(acceleratorType, "expected parameter 'acceleratorType' to be non-null");
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse() {
-        this.acceleratorCount = null;
-        this.acceleratorType = null;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String acceleratorCount;
-        private String acceleratorType;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(String acceleratorCount) {
-            this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
+
         public Builder acceleratorType(String acceleratorType) {
-            this.acceleratorType = Objects.requireNonNull(acceleratorType);
+            $.acceleratorType = acceleratorType;
             return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse(acceleratorCount, acceleratorType);
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse build() {
+            $.acceleratorCount = Objects.requireNonNull($.acceleratorCount, "expected parameter 'acceleratorCount' to be non-null");
+            $.acceleratorType = Objects.requireNonNull($.acceleratorType, "expected parameter 'acceleratorType' to be non-null");
+            return $;
         }
     }
+
 }

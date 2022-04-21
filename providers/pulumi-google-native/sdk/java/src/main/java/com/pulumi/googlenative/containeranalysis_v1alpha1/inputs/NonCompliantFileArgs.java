@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="displayCommand")
-      private final @Nullable Output<String> displayCommand;
+    private @Nullable Output<String> displayCommand;
 
-    public Output<String> displayCommand() {
-        return this.displayCommand == null ? Codegen.empty() : this.displayCommand;
+    public Optional<Output<String>> displayCommand() {
+        return Optional.ofNullable(this.displayCommand);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class NonCompliantFileArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
-    public NonCompliantFileArgs(
-        @Nullable Output<String> displayCommand,
-        @Nullable Output<String> path,
-        @Nullable Output<String> reason) {
-        this.displayCommand = displayCommand;
-        this.path = path;
-        this.reason = reason;
-    }
+    private NonCompliantFileArgs() {}
 
-    private NonCompliantFileArgs() {
-        this.displayCommand = Codegen.empty();
-        this.path = Codegen.empty();
-        this.reason = Codegen.empty();
+    private NonCompliantFileArgs(NonCompliantFileArgs $) {
+        this.displayCommand = $.displayCommand;
+        this.path = $.path;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NonCompliantFileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayCommand;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> reason;
+        private NonCompliantFileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NonCompliantFileArgs();
         }
 
         public Builder(NonCompliantFileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayCommand = defaults.displayCommand;
-    	      this.path = defaults.path;
-    	      this.reason = defaults.reason;
+            $ = new NonCompliantFileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayCommand(@Nullable Output<String> displayCommand) {
-            this.displayCommand = displayCommand;
+            $.displayCommand = displayCommand;
             return this;
         }
-        public Builder displayCommand(@Nullable String displayCommand) {
-            this.displayCommand = Codegen.ofNullable(displayCommand);
-            return this;
+
+        public Builder displayCommand(String displayCommand) {
+            return displayCommand(Output.of(displayCommand));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
-        }        public NonCompliantFileArgs build() {
-            return new NonCompliantFileArgs(displayCommand, path, reason);
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
+        }
+
+        public NonCompliantFileArgs build() {
+            return $;
         }
     }
+
 }

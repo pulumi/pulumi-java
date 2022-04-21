@@ -15,78 +15,72 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
     public static final GetNetworkEndpointGroupArgs Empty = new GetNetworkEndpointGroupArgs();
 
     @Import(name="networkEndpointGroup", required=true)
-      private final String networkEndpointGroup;
+    private String networkEndpointGroup;
 
     public String networkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetNetworkEndpointGroupArgs(
-        String networkEndpointGroup,
-        @Nullable String project,
-        String zone) {
-        this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
-        this.project = project;
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetNetworkEndpointGroupArgs() {}
 
-    private GetNetworkEndpointGroupArgs() {
-        this.networkEndpointGroup = null;
-        this.project = null;
-        this.zone = null;
+    private GetNetworkEndpointGroupArgs(GetNetworkEndpointGroupArgs $) {
+        this.networkEndpointGroup = $.networkEndpointGroup;
+        this.project = $.project;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNetworkEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkEndpointGroup;
-        private @Nullable String project;
-        private String zone;
+        private GetNetworkEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNetworkEndpointGroupArgs();
         }
 
         public Builder(GetNetworkEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkEndpointGroup = defaults.networkEndpointGroup;
-    	      this.project = defaults.project;
-    	      this.zone = defaults.zone;
+            $ = new GetNetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkEndpointGroup(String networkEndpointGroup) {
-            this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup);
+            $.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetNetworkEndpointGroupArgs build() {
-            return new GetNetworkEndpointGroupArgs(networkEndpointGroup, project, zone);
+        }
+
+        public GetNetworkEndpointGroupArgs build() {
+            $.networkEndpointGroup = Objects.requireNonNull($.networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

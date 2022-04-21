@@ -13,45 +13,45 @@ public final class GetBillingAccountArgs extends com.pulumi.resources.InvokeArgs
     public static final GetBillingAccountArgs Empty = new GetBillingAccountArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
     }
 
-    public GetBillingAccountArgs(String billingAccountId) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-    }
+    private GetBillingAccountArgs() {}
 
-    private GetBillingAccountArgs() {
-        this.billingAccountId = null;
+    private GetBillingAccountArgs(GetBillingAccountArgs $) {
+        this.billingAccountId = $.billingAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
+        private GetBillingAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingAccountArgs();
         }
 
         public Builder(GetBillingAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
+            $ = new GetBillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
-        }        public GetBillingAccountArgs build() {
-            return new GetBillingAccountArgs(billingAccountId);
+        }
+
+        public GetBillingAccountArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            return $;
         }
     }
+
 }

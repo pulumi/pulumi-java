@@ -21,7 +21,7 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bundleId", required=true)
-      private final String bundleId;
+    private String bundleId;
 
     public String bundleId() {
         return this.bundleId;
@@ -32,55 +32,52 @@ public final class IosXcTestResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="xcodeVersion", required=true)
-      private final String xcodeVersion;
+    private String xcodeVersion;
 
     public String xcodeVersion() {
         return this.xcodeVersion;
     }
 
-    public IosXcTestResponse(
-        String bundleId,
-        String xcodeVersion) {
-        this.bundleId = Objects.requireNonNull(bundleId, "expected parameter 'bundleId' to be non-null");
-        this.xcodeVersion = Objects.requireNonNull(xcodeVersion, "expected parameter 'xcodeVersion' to be non-null");
-    }
+    private IosXcTestResponse() {}
 
-    private IosXcTestResponse() {
-        this.bundleId = null;
-        this.xcodeVersion = null;
+    private IosXcTestResponse(IosXcTestResponse $) {
+        this.bundleId = $.bundleId;
+        this.xcodeVersion = $.xcodeVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosXcTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bundleId;
-        private String xcodeVersion;
+        private IosXcTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosXcTestResponse();
         }
 
         public Builder(IosXcTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
-    	      this.xcodeVersion = defaults.xcodeVersion;
+            $ = new IosXcTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(String bundleId) {
-            this.bundleId = Objects.requireNonNull(bundleId);
+            $.bundleId = bundleId;
             return this;
         }
+
         public Builder xcodeVersion(String xcodeVersion) {
-            this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
+            $.xcodeVersion = xcodeVersion;
             return this;
-        }        public IosXcTestResponse build() {
-            return new IosXcTestResponse(bundleId, xcodeVersion);
+        }
+
+        public IosXcTestResponse build() {
+            $.bundleId = Objects.requireNonNull($.bundleId, "expected parameter 'bundleId' to be non-null");
+            $.xcodeVersion = Objects.requireNonNull($.xcodeVersion, "expected parameter 'xcodeVersion' to be non-null");
+            return $;
         }
     }
+
 }

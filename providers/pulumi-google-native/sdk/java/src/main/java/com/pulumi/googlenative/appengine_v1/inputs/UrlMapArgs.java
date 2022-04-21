@@ -5,7 +5,6 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1.enums.UrlMapAuthFailAction;
 import com.pulumi.googlenative.appengine_v1.enums.UrlMapLogin;
 import com.pulumi.googlenative.appengine_v1.enums.UrlMapRedirectHttpResponseCode;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.appengine_v1.inputs.ScriptHandlerArgs;
 import com.pulumi.googlenative.appengine_v1.inputs.StaticFilesHandlerArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiEndpoint")
-      private final @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
+    private @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
 
-    public Output<ApiEndpointHandlerArgs> apiEndpoint() {
-        return this.apiEndpoint == null ? Codegen.empty() : this.apiEndpoint;
+    public Optional<Output<ApiEndpointHandlerArgs>> apiEndpoint() {
+        return Optional.ofNullable(this.apiEndpoint);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="authFailAction")
-      private final @Nullable Output<UrlMapAuthFailAction> authFailAction;
+    private @Nullable Output<UrlMapAuthFailAction> authFailAction;
 
-    public Output<UrlMapAuthFailAction> authFailAction() {
-        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
+    public Optional<Output<UrlMapAuthFailAction>> authFailAction() {
+        return Optional.ofNullable(this.authFailAction);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="login")
-      private final @Nullable Output<UrlMapLogin> login;
+    private @Nullable Output<UrlMapLogin> login;
 
-    public Output<UrlMapLogin> login() {
-        return this.login == null ? Codegen.empty() : this.login;
+    public Optional<Output<UrlMapLogin>> login() {
+        return Optional.ofNullable(this.login);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="redirectHttpResponseCode")
-      private final @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
+    private @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
 
-    public Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode() {
-        return this.redirectHttpResponseCode == null ? Codegen.empty() : this.redirectHttpResponseCode;
+    public Optional<Output<UrlMapRedirectHttpResponseCode>> redirectHttpResponseCode() {
+        return Optional.ofNullable(this.redirectHttpResponseCode);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<ScriptHandlerArgs> script;
+    private @Nullable Output<ScriptHandlerArgs> script;
 
-    public Output<ScriptHandlerArgs> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<ScriptHandlerArgs>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="securityLevel")
-      private final @Nullable Output<UrlMapSecurityLevel> securityLevel;
+    private @Nullable Output<UrlMapSecurityLevel> securityLevel;
 
-    public Output<UrlMapSecurityLevel> securityLevel() {
-        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
+    public Optional<Output<UrlMapSecurityLevel>> securityLevel() {
+        return Optional.ofNullable(this.securityLevel);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="staticFiles")
-      private final @Nullable Output<StaticFilesHandlerArgs> staticFiles;
+    private @Nullable Output<StaticFilesHandlerArgs> staticFiles;
 
-    public Output<StaticFilesHandlerArgs> staticFiles() {
-        return this.staticFiles == null ? Codegen.empty() : this.staticFiles;
+    public Optional<Output<StaticFilesHandlerArgs>> staticFiles() {
+        return Optional.ofNullable(this.staticFiles);
     }
 
     /**
@@ -108,141 +108,118 @@ public final class UrlMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="urlRegex")
-      private final @Nullable Output<String> urlRegex;
+    private @Nullable Output<String> urlRegex;
 
-    public Output<String> urlRegex() {
-        return this.urlRegex == null ? Codegen.empty() : this.urlRegex;
+    public Optional<Output<String>> urlRegex() {
+        return Optional.ofNullable(this.urlRegex);
     }
 
-    public UrlMapArgs(
-        @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint,
-        @Nullable Output<UrlMapAuthFailAction> authFailAction,
-        @Nullable Output<UrlMapLogin> login,
-        @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode,
-        @Nullable Output<ScriptHandlerArgs> script,
-        @Nullable Output<UrlMapSecurityLevel> securityLevel,
-        @Nullable Output<StaticFilesHandlerArgs> staticFiles,
-        @Nullable Output<String> urlRegex) {
-        this.apiEndpoint = apiEndpoint;
-        this.authFailAction = authFailAction;
-        this.login = login;
-        this.redirectHttpResponseCode = redirectHttpResponseCode;
-        this.script = script;
-        this.securityLevel = securityLevel;
-        this.staticFiles = staticFiles;
-        this.urlRegex = urlRegex;
-    }
+    private UrlMapArgs() {}
 
-    private UrlMapArgs() {
-        this.apiEndpoint = Codegen.empty();
-        this.authFailAction = Codegen.empty();
-        this.login = Codegen.empty();
-        this.redirectHttpResponseCode = Codegen.empty();
-        this.script = Codegen.empty();
-        this.securityLevel = Codegen.empty();
-        this.staticFiles = Codegen.empty();
-        this.urlRegex = Codegen.empty();
+    private UrlMapArgs(UrlMapArgs $) {
+        this.apiEndpoint = $.apiEndpoint;
+        this.authFailAction = $.authFailAction;
+        this.login = $.login;
+        this.redirectHttpResponseCode = $.redirectHttpResponseCode;
+        this.script = $.script;
+        this.securityLevel = $.securityLevel;
+        this.staticFiles = $.staticFiles;
+        this.urlRegex = $.urlRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApiEndpointHandlerArgs> apiEndpoint;
-        private @Nullable Output<UrlMapAuthFailAction> authFailAction;
-        private @Nullable Output<UrlMapLogin> login;
-        private @Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
-        private @Nullable Output<ScriptHandlerArgs> script;
-        private @Nullable Output<UrlMapSecurityLevel> securityLevel;
-        private @Nullable Output<StaticFilesHandlerArgs> staticFiles;
-        private @Nullable Output<String> urlRegex;
+        private UrlMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlMapArgs();
         }
 
         public Builder(UrlMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiEndpoint = defaults.apiEndpoint;
-    	      this.authFailAction = defaults.authFailAction;
-    	      this.login = defaults.login;
-    	      this.redirectHttpResponseCode = defaults.redirectHttpResponseCode;
-    	      this.script = defaults.script;
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.staticFiles = defaults.staticFiles;
-    	      this.urlRegex = defaults.urlRegex;
+            $ = new UrlMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiEndpoint(@Nullable Output<ApiEndpointHandlerArgs> apiEndpoint) {
-            this.apiEndpoint = apiEndpoint;
+            $.apiEndpoint = apiEndpoint;
             return this;
         }
-        public Builder apiEndpoint(@Nullable ApiEndpointHandlerArgs apiEndpoint) {
-            this.apiEndpoint = Codegen.ofNullable(apiEndpoint);
-            return this;
+
+        public Builder apiEndpoint(ApiEndpointHandlerArgs apiEndpoint) {
+            return apiEndpoint(Output.of(apiEndpoint));
         }
+
         public Builder authFailAction(@Nullable Output<UrlMapAuthFailAction> authFailAction) {
-            this.authFailAction = authFailAction;
+            $.authFailAction = authFailAction;
             return this;
         }
-        public Builder authFailAction(@Nullable UrlMapAuthFailAction authFailAction) {
-            this.authFailAction = Codegen.ofNullable(authFailAction);
-            return this;
+
+        public Builder authFailAction(UrlMapAuthFailAction authFailAction) {
+            return authFailAction(Output.of(authFailAction));
         }
+
         public Builder login(@Nullable Output<UrlMapLogin> login) {
-            this.login = login;
+            $.login = login;
             return this;
         }
-        public Builder login(@Nullable UrlMapLogin login) {
-            this.login = Codegen.ofNullable(login);
-            return this;
+
+        public Builder login(UrlMapLogin login) {
+            return login(Output.of(login));
         }
+
         public Builder redirectHttpResponseCode(@Nullable Output<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = redirectHttpResponseCode;
+            $.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
-        public Builder redirectHttpResponseCode(@Nullable UrlMapRedirectHttpResponseCode redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = Codegen.ofNullable(redirectHttpResponseCode);
-            return this;
+
+        public Builder redirectHttpResponseCode(UrlMapRedirectHttpResponseCode redirectHttpResponseCode) {
+            return redirectHttpResponseCode(Output.of(redirectHttpResponseCode));
         }
+
         public Builder script(@Nullable Output<ScriptHandlerArgs> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable ScriptHandlerArgs script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(ScriptHandlerArgs script) {
+            return script(Output.of(script));
         }
+
         public Builder securityLevel(@Nullable Output<UrlMapSecurityLevel> securityLevel) {
-            this.securityLevel = securityLevel;
+            $.securityLevel = securityLevel;
             return this;
         }
-        public Builder securityLevel(@Nullable UrlMapSecurityLevel securityLevel) {
-            this.securityLevel = Codegen.ofNullable(securityLevel);
-            return this;
+
+        public Builder securityLevel(UrlMapSecurityLevel securityLevel) {
+            return securityLevel(Output.of(securityLevel));
         }
+
         public Builder staticFiles(@Nullable Output<StaticFilesHandlerArgs> staticFiles) {
-            this.staticFiles = staticFiles;
+            $.staticFiles = staticFiles;
             return this;
         }
-        public Builder staticFiles(@Nullable StaticFilesHandlerArgs staticFiles) {
-            this.staticFiles = Codegen.ofNullable(staticFiles);
-            return this;
+
+        public Builder staticFiles(StaticFilesHandlerArgs staticFiles) {
+            return staticFiles(Output.of(staticFiles));
         }
+
         public Builder urlRegex(@Nullable Output<String> urlRegex) {
-            this.urlRegex = urlRegex;
+            $.urlRegex = urlRegex;
             return this;
         }
-        public Builder urlRegex(@Nullable String urlRegex) {
-            this.urlRegex = Codegen.ofNullable(urlRegex);
-            return this;
-        }        public UrlMapArgs build() {
-            return new UrlMapArgs(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
+
+        public Builder urlRegex(String urlRegex) {
+            return urlRegex(Output.of(urlRegex));
+        }
+
+        public UrlMapArgs build() {
+            return $;
         }
     }
+
 }

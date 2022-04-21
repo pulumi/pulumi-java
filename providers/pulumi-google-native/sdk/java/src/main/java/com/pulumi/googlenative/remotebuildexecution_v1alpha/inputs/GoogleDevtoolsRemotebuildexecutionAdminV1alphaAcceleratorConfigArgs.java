@@ -5,9 +5,9 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @Import(name="acceleratorCount")
-      private final @Nullable Output<String> acceleratorCount;
+    private @Nullable Output<String> acceleratorCount;
 
-    public Output<String> acceleratorCount() {
-        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
+    public Optional<Output<String>> acceleratorCount() {
+        return Optional.ofNullable(this.acceleratorCount);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConf
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(
-        @Nullable Output<String> acceleratorCount,
-        @Nullable Output<String> acceleratorType) {
-        this.acceleratorCount = acceleratorCount;
-        this.acceleratorType = acceleratorType;
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceleratorCount;
-        private @Nullable Output<String> acceleratorType;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(@Nullable Output<String> acceleratorCount) {
-            this.acceleratorCount = acceleratorCount;
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
-        public Builder acceleratorCount(@Nullable String acceleratorCount) {
-            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
-            return this;
+
+        public Builder acceleratorCount(String acceleratorCount) {
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs(acceleratorCount, acceleratorType);
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

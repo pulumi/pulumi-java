@@ -15,78 +15,72 @@ public final class GetVersionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetVersionArgs Empty = new GetVersionArgs();
 
     @Import(name="modelId", required=true)
-      private final String modelId;
+    private String modelId;
 
     public String modelId() {
         return this.modelId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="versionId", required=true)
-      private final String versionId;
+    private String versionId;
 
     public String versionId() {
         return this.versionId;
     }
 
-    public GetVersionArgs(
-        String modelId,
-        @Nullable String project,
-        String versionId) {
-        this.modelId = Objects.requireNonNull(modelId, "expected parameter 'modelId' to be non-null");
-        this.project = project;
-        this.versionId = Objects.requireNonNull(versionId, "expected parameter 'versionId' to be non-null");
-    }
+    private GetVersionArgs() {}
 
-    private GetVersionArgs() {
-        this.modelId = null;
-        this.project = null;
-        this.versionId = null;
+    private GetVersionArgs(GetVersionArgs $) {
+        this.modelId = $.modelId;
+        this.project = $.project;
+        this.versionId = $.versionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String modelId;
-        private @Nullable String project;
-        private String versionId;
+        private GetVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetVersionArgs();
         }
 
         public Builder(GetVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.modelId = defaults.modelId;
-    	      this.project = defaults.project;
-    	      this.versionId = defaults.versionId;
+            $ = new GetVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder modelId(String modelId) {
-            this.modelId = Objects.requireNonNull(modelId);
+            $.modelId = modelId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder versionId(String versionId) {
-            this.versionId = Objects.requireNonNull(versionId);
+            $.versionId = versionId;
             return this;
-        }        public GetVersionArgs build() {
-            return new GetVersionArgs(modelId, project, versionId);
+        }
+
+        public GetVersionArgs build() {
+            $.modelId = Objects.requireNonNull($.modelId, "expected parameter 'modelId' to be non-null");
+            $.versionId = Objects.requireNonNull($.versionId, "expected parameter 'versionId' to be non-null");
+            return $;
         }
     }
+
 }

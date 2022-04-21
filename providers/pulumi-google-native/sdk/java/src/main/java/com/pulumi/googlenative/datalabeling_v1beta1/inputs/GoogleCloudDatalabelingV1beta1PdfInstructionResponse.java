@@ -21,45 +21,45 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse extends 
      * 
      */
     @Import(name="gcsFileUri", required=true)
-      private final String gcsFileUri;
+    private String gcsFileUri;
 
     public String gcsFileUri() {
         return this.gcsFileUri;
     }
 
-    public GoogleCloudDatalabelingV1beta1PdfInstructionResponse(String gcsFileUri) {
-        this.gcsFileUri = Objects.requireNonNull(gcsFileUri, "expected parameter 'gcsFileUri' to be non-null");
-    }
+    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse() {}
 
-    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse() {
-        this.gcsFileUri = null;
+    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse(GoogleCloudDatalabelingV1beta1PdfInstructionResponse $) {
+        this.gcsFileUri = $.gcsFileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1PdfInstructionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gcsFileUri;
+        private GoogleCloudDatalabelingV1beta1PdfInstructionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1PdfInstructionResponse();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1PdfInstructionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsFileUri = defaults.gcsFileUri;
+            $ = new GoogleCloudDatalabelingV1beta1PdfInstructionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsFileUri(String gcsFileUri) {
-            this.gcsFileUri = Objects.requireNonNull(gcsFileUri);
+            $.gcsFileUri = gcsFileUri;
             return this;
-        }        public GoogleCloudDatalabelingV1beta1PdfInstructionResponse build() {
-            return new GoogleCloudDatalabelingV1beta1PdfInstructionResponse(gcsFileUri);
+        }
+
+        public GoogleCloudDatalabelingV1beta1PdfInstructionResponse build() {
+            $.gcsFileUri = Objects.requireNonNull($.gcsFileUri, "expected parameter 'gcsFileUri' to be non-null");
+            return $;
         }
     }
+
 }

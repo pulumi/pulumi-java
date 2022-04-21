@@ -5,12 +5,12 @@ package com.pulumi.googlenative.datastream_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.inputs.AvroFileFormatArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.JsonFileFormatArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="avroFileFormat")
-      private final @Nullable Output<AvroFileFormatArgs> avroFileFormat;
+    private @Nullable Output<AvroFileFormatArgs> avroFileFormat;
 
-    public Output<AvroFileFormatArgs> avroFileFormat() {
-        return this.avroFileFormat == null ? Codegen.empty() : this.avroFileFormat;
+    public Optional<Output<AvroFileFormatArgs>> avroFileFormat() {
+        return Optional.ofNullable(this.avroFileFormat);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fileRotationInterval")
-      private final @Nullable Output<String> fileRotationInterval;
+    private @Nullable Output<String> fileRotationInterval;
 
-    public Output<String> fileRotationInterval() {
-        return this.fileRotationInterval == null ? Codegen.empty() : this.fileRotationInterval;
+    public Optional<Output<String>> fileRotationInterval() {
+        return Optional.ofNullable(this.fileRotationInterval);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="fileRotationMb")
-      private final @Nullable Output<Integer> fileRotationMb;
+    private @Nullable Output<Integer> fileRotationMb;
 
-    public Output<Integer> fileRotationMb() {
-        return this.fileRotationMb == null ? Codegen.empty() : this.fileRotationMb;
+    public Optional<Output<Integer>> fileRotationMb() {
+        return Optional.ofNullable(this.fileRotationMb);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="jsonFileFormat")
-      private final @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
+    private @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
 
-    public Output<JsonFileFormatArgs> jsonFileFormat() {
-        return this.jsonFileFormat == null ? Codegen.empty() : this.jsonFileFormat;
+    public Optional<Output<JsonFileFormatArgs>> jsonFileFormat() {
+        return Optional.ofNullable(this.jsonFileFormat);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class GcsDestinationConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public GcsDestinationConfigArgs(
-        @Nullable Output<AvroFileFormatArgs> avroFileFormat,
-        @Nullable Output<String> fileRotationInterval,
-        @Nullable Output<Integer> fileRotationMb,
-        @Nullable Output<JsonFileFormatArgs> jsonFileFormat,
-        @Nullable Output<String> path) {
-        this.avroFileFormat = avroFileFormat;
-        this.fileRotationInterval = fileRotationInterval;
-        this.fileRotationMb = fileRotationMb;
-        this.jsonFileFormat = jsonFileFormat;
-        this.path = path;
-    }
+    private GcsDestinationConfigArgs() {}
 
-    private GcsDestinationConfigArgs() {
-        this.avroFileFormat = Codegen.empty();
-        this.fileRotationInterval = Codegen.empty();
-        this.fileRotationMb = Codegen.empty();
-        this.jsonFileFormat = Codegen.empty();
-        this.path = Codegen.empty();
+    private GcsDestinationConfigArgs(GcsDestinationConfigArgs $) {
+        this.avroFileFormat = $.avroFileFormat;
+        this.fileRotationInterval = $.fileRotationInterval;
+        this.fileRotationMb = $.fileRotationMb;
+        this.jsonFileFormat = $.jsonFileFormat;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GcsDestinationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AvroFileFormatArgs> avroFileFormat;
-        private @Nullable Output<String> fileRotationInterval;
-        private @Nullable Output<Integer> fileRotationMb;
-        private @Nullable Output<JsonFileFormatArgs> jsonFileFormat;
-        private @Nullable Output<String> path;
+        private GcsDestinationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GcsDestinationConfigArgs();
         }
 
         public Builder(GcsDestinationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.avroFileFormat = defaults.avroFileFormat;
-    	      this.fileRotationInterval = defaults.fileRotationInterval;
-    	      this.fileRotationMb = defaults.fileRotationMb;
-    	      this.jsonFileFormat = defaults.jsonFileFormat;
-    	      this.path = defaults.path;
+            $ = new GcsDestinationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder avroFileFormat(@Nullable Output<AvroFileFormatArgs> avroFileFormat) {
-            this.avroFileFormat = avroFileFormat;
+            $.avroFileFormat = avroFileFormat;
             return this;
         }
-        public Builder avroFileFormat(@Nullable AvroFileFormatArgs avroFileFormat) {
-            this.avroFileFormat = Codegen.ofNullable(avroFileFormat);
-            return this;
+
+        public Builder avroFileFormat(AvroFileFormatArgs avroFileFormat) {
+            return avroFileFormat(Output.of(avroFileFormat));
         }
+
         public Builder fileRotationInterval(@Nullable Output<String> fileRotationInterval) {
-            this.fileRotationInterval = fileRotationInterval;
+            $.fileRotationInterval = fileRotationInterval;
             return this;
         }
-        public Builder fileRotationInterval(@Nullable String fileRotationInterval) {
-            this.fileRotationInterval = Codegen.ofNullable(fileRotationInterval);
-            return this;
+
+        public Builder fileRotationInterval(String fileRotationInterval) {
+            return fileRotationInterval(Output.of(fileRotationInterval));
         }
+
         public Builder fileRotationMb(@Nullable Output<Integer> fileRotationMb) {
-            this.fileRotationMb = fileRotationMb;
+            $.fileRotationMb = fileRotationMb;
             return this;
         }
-        public Builder fileRotationMb(@Nullable Integer fileRotationMb) {
-            this.fileRotationMb = Codegen.ofNullable(fileRotationMb);
-            return this;
+
+        public Builder fileRotationMb(Integer fileRotationMb) {
+            return fileRotationMb(Output.of(fileRotationMb));
         }
+
         public Builder jsonFileFormat(@Nullable Output<JsonFileFormatArgs> jsonFileFormat) {
-            this.jsonFileFormat = jsonFileFormat;
+            $.jsonFileFormat = jsonFileFormat;
             return this;
         }
-        public Builder jsonFileFormat(@Nullable JsonFileFormatArgs jsonFileFormat) {
-            this.jsonFileFormat = Codegen.ofNullable(jsonFileFormat);
-            return this;
+
+        public Builder jsonFileFormat(JsonFileFormatArgs jsonFileFormat) {
+            return jsonFileFormat(Output.of(jsonFileFormat));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public GcsDestinationConfigArgs build() {
-            return new GcsDestinationConfigArgs(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public GcsDestinationConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -34,7 +34,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="activationPolicy", required=true)
-      private final String activationPolicy;
+    private String activationPolicy;
 
     public String activationPolicy() {
         return this.activationPolicy;
@@ -45,7 +45,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="activeDirectoryConfig", required=true)
-      private final SqlActiveDirectoryConfigResponse activeDirectoryConfig;
+    private SqlActiveDirectoryConfigResponse activeDirectoryConfig;
 
     public SqlActiveDirectoryConfigResponse activeDirectoryConfig() {
         return this.activeDirectoryConfig;
@@ -56,7 +56,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availabilityType", required=true)
-      private final String availabilityType;
+    private String availabilityType;
 
     public String availabilityType() {
         return this.availabilityType;
@@ -67,7 +67,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupConfiguration", required=true)
-      private final BackupConfigurationResponse backupConfiguration;
+    private BackupConfigurationResponse backupConfiguration;
 
     public BackupConfigurationResponse backupConfiguration() {
         return this.backupConfiguration;
@@ -78,7 +78,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="collation", required=true)
-      private final String collation;
+    private String collation;
 
     public String collation() {
         return this.collation;
@@ -89,7 +89,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="crashSafeReplicationEnabled", required=true)
-      private final Boolean crashSafeReplicationEnabled;
+    private Boolean crashSafeReplicationEnabled;
 
     public Boolean crashSafeReplicationEnabled() {
         return this.crashSafeReplicationEnabled;
@@ -100,7 +100,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataDiskSizeGb", required=true)
-      private final String dataDiskSizeGb;
+    private String dataDiskSizeGb;
 
     public String dataDiskSizeGb() {
         return this.dataDiskSizeGb;
@@ -111,7 +111,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataDiskType", required=true)
-      private final String dataDiskType;
+    private String dataDiskType;
 
     public String dataDiskType() {
         return this.dataDiskType;
@@ -122,7 +122,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseFlags", required=true)
-      private final List<DatabaseFlagsResponse> databaseFlags;
+    private List<DatabaseFlagsResponse> databaseFlags;
 
     public List<DatabaseFlagsResponse> databaseFlags() {
         return this.databaseFlags;
@@ -133,7 +133,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="databaseReplicationEnabled", required=true)
-      private final Boolean databaseReplicationEnabled;
+    private Boolean databaseReplicationEnabled;
 
     public Boolean databaseReplicationEnabled() {
         return this.databaseReplicationEnabled;
@@ -144,7 +144,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="denyMaintenancePeriods", required=true)
-      private final List<DenyMaintenancePeriodResponse> denyMaintenancePeriods;
+    private List<DenyMaintenancePeriodResponse> denyMaintenancePeriods;
 
     public List<DenyMaintenancePeriodResponse> denyMaintenancePeriods() {
         return this.denyMaintenancePeriods;
@@ -155,7 +155,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="insightsConfig", required=true)
-      private final InsightsConfigResponse insightsConfig;
+    private InsightsConfigResponse insightsConfig;
 
     public InsightsConfigResponse insightsConfig() {
         return this.insightsConfig;
@@ -166,7 +166,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipConfiguration", required=true)
-      private final IpConfigurationResponse ipConfiguration;
+    private IpConfigurationResponse ipConfiguration;
 
     public IpConfigurationResponse ipConfiguration() {
         return this.ipConfiguration;
@@ -177,7 +177,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -188,7 +188,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locationPreference", required=true)
-      private final LocationPreferenceResponse locationPreference;
+    private LocationPreferenceResponse locationPreference;
 
     public LocationPreferenceResponse locationPreference() {
         return this.locationPreference;
@@ -199,7 +199,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maintenanceWindow", required=true)
-      private final MaintenanceWindowResponse maintenanceWindow;
+    private MaintenanceWindowResponse maintenanceWindow;
 
     public MaintenanceWindowResponse maintenanceWindow() {
         return this.maintenanceWindow;
@@ -210,7 +210,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="passwordValidationPolicy", required=true)
-      private final PasswordValidationPolicyResponse passwordValidationPolicy;
+    private PasswordValidationPolicyResponse passwordValidationPolicy;
 
     public PasswordValidationPolicyResponse passwordValidationPolicy() {
         return this.passwordValidationPolicy;
@@ -221,7 +221,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pricingPlan", required=true)
-      private final String pricingPlan;
+    private String pricingPlan;
 
     public String pricingPlan() {
         return this.pricingPlan;
@@ -232,7 +232,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="settingsVersion", required=true)
-      private final String settingsVersion;
+    private String settingsVersion;
 
     public String settingsVersion() {
         return this.settingsVersion;
@@ -243,7 +243,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sqlServerAuditConfig", required=true)
-      private final SqlServerAuditConfigResponse sqlServerAuditConfig;
+    private SqlServerAuditConfigResponse sqlServerAuditConfig;
 
     public SqlServerAuditConfigResponse sqlServerAuditConfig() {
         return this.sqlServerAuditConfig;
@@ -254,7 +254,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAutoResize", required=true)
-      private final Boolean storageAutoResize;
+    private Boolean storageAutoResize;
 
     public Boolean storageAutoResize() {
         return this.storageAutoResize;
@@ -265,7 +265,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="storageAutoResizeLimit", required=true)
-      private final String storageAutoResizeLimit;
+    private String storageAutoResizeLimit;
 
     public String storageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
@@ -276,7 +276,7 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
@@ -287,259 +287,214 @@ public final class SettingsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userLabels", required=true)
-      private final Map<String,String> userLabels;
+    private Map<String,String> userLabels;
 
     public Map<String,String> userLabels() {
         return this.userLabels;
     }
 
-    public SettingsResponse(
-        String activationPolicy,
-        SqlActiveDirectoryConfigResponse activeDirectoryConfig,
-        String availabilityType,
-        BackupConfigurationResponse backupConfiguration,
-        String collation,
-        Boolean crashSafeReplicationEnabled,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        List<DatabaseFlagsResponse> databaseFlags,
-        Boolean databaseReplicationEnabled,
-        List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
-        InsightsConfigResponse insightsConfig,
-        IpConfigurationResponse ipConfiguration,
-        String kind,
-        LocationPreferenceResponse locationPreference,
-        MaintenanceWindowResponse maintenanceWindow,
-        PasswordValidationPolicyResponse passwordValidationPolicy,
-        String pricingPlan,
-        String settingsVersion,
-        SqlServerAuditConfigResponse sqlServerAuditConfig,
-        Boolean storageAutoResize,
-        String storageAutoResizeLimit,
-        String tier,
-        Map<String,String> userLabels) {
-        this.activationPolicy = Objects.requireNonNull(activationPolicy, "expected parameter 'activationPolicy' to be non-null");
-        this.activeDirectoryConfig = Objects.requireNonNull(activeDirectoryConfig, "expected parameter 'activeDirectoryConfig' to be non-null");
-        this.availabilityType = Objects.requireNonNull(availabilityType, "expected parameter 'availabilityType' to be non-null");
-        this.backupConfiguration = Objects.requireNonNull(backupConfiguration, "expected parameter 'backupConfiguration' to be non-null");
-        this.collation = Objects.requireNonNull(collation, "expected parameter 'collation' to be non-null");
-        this.crashSafeReplicationEnabled = Objects.requireNonNull(crashSafeReplicationEnabled, "expected parameter 'crashSafeReplicationEnabled' to be non-null");
-        this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb, "expected parameter 'dataDiskSizeGb' to be non-null");
-        this.dataDiskType = Objects.requireNonNull(dataDiskType, "expected parameter 'dataDiskType' to be non-null");
-        this.databaseFlags = Objects.requireNonNull(databaseFlags, "expected parameter 'databaseFlags' to be non-null");
-        this.databaseReplicationEnabled = Objects.requireNonNull(databaseReplicationEnabled, "expected parameter 'databaseReplicationEnabled' to be non-null");
-        this.denyMaintenancePeriods = Objects.requireNonNull(denyMaintenancePeriods, "expected parameter 'denyMaintenancePeriods' to be non-null");
-        this.insightsConfig = Objects.requireNonNull(insightsConfig, "expected parameter 'insightsConfig' to be non-null");
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.locationPreference = Objects.requireNonNull(locationPreference, "expected parameter 'locationPreference' to be non-null");
-        this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow, "expected parameter 'maintenanceWindow' to be non-null");
-        this.passwordValidationPolicy = Objects.requireNonNull(passwordValidationPolicy, "expected parameter 'passwordValidationPolicy' to be non-null");
-        this.pricingPlan = Objects.requireNonNull(pricingPlan, "expected parameter 'pricingPlan' to be non-null");
-        this.settingsVersion = Objects.requireNonNull(settingsVersion, "expected parameter 'settingsVersion' to be non-null");
-        this.sqlServerAuditConfig = Objects.requireNonNull(sqlServerAuditConfig, "expected parameter 'sqlServerAuditConfig' to be non-null");
-        this.storageAutoResize = Objects.requireNonNull(storageAutoResize, "expected parameter 'storageAutoResize' to be non-null");
-        this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit, "expected parameter 'storageAutoResizeLimit' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-        this.userLabels = Objects.requireNonNull(userLabels, "expected parameter 'userLabels' to be non-null");
-    }
+    private SettingsResponse() {}
 
-    private SettingsResponse() {
-        this.activationPolicy = null;
-        this.activeDirectoryConfig = null;
-        this.availabilityType = null;
-        this.backupConfiguration = null;
-        this.collation = null;
-        this.crashSafeReplicationEnabled = null;
-        this.dataDiskSizeGb = null;
-        this.dataDiskType = null;
-        this.databaseFlags = List.of();
-        this.databaseReplicationEnabled = null;
-        this.denyMaintenancePeriods = List.of();
-        this.insightsConfig = null;
-        this.ipConfiguration = null;
-        this.kind = null;
-        this.locationPreference = null;
-        this.maintenanceWindow = null;
-        this.passwordValidationPolicy = null;
-        this.pricingPlan = null;
-        this.settingsVersion = null;
-        this.sqlServerAuditConfig = null;
-        this.storageAutoResize = null;
-        this.storageAutoResizeLimit = null;
-        this.tier = null;
-        this.userLabels = Map.of();
+    private SettingsResponse(SettingsResponse $) {
+        this.activationPolicy = $.activationPolicy;
+        this.activeDirectoryConfig = $.activeDirectoryConfig;
+        this.availabilityType = $.availabilityType;
+        this.backupConfiguration = $.backupConfiguration;
+        this.collation = $.collation;
+        this.crashSafeReplicationEnabled = $.crashSafeReplicationEnabled;
+        this.dataDiskSizeGb = $.dataDiskSizeGb;
+        this.dataDiskType = $.dataDiskType;
+        this.databaseFlags = $.databaseFlags;
+        this.databaseReplicationEnabled = $.databaseReplicationEnabled;
+        this.denyMaintenancePeriods = $.denyMaintenancePeriods;
+        this.insightsConfig = $.insightsConfig;
+        this.ipConfiguration = $.ipConfiguration;
+        this.kind = $.kind;
+        this.locationPreference = $.locationPreference;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.passwordValidationPolicy = $.passwordValidationPolicy;
+        this.pricingPlan = $.pricingPlan;
+        this.settingsVersion = $.settingsVersion;
+        this.sqlServerAuditConfig = $.sqlServerAuditConfig;
+        this.storageAutoResize = $.storageAutoResize;
+        this.storageAutoResizeLimit = $.storageAutoResizeLimit;
+        this.tier = $.tier;
+        this.userLabels = $.userLabels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activationPolicy;
-        private SqlActiveDirectoryConfigResponse activeDirectoryConfig;
-        private String availabilityType;
-        private BackupConfigurationResponse backupConfiguration;
-        private String collation;
-        private Boolean crashSafeReplicationEnabled;
-        private String dataDiskSizeGb;
-        private String dataDiskType;
-        private List<DatabaseFlagsResponse> databaseFlags;
-        private Boolean databaseReplicationEnabled;
-        private List<DenyMaintenancePeriodResponse> denyMaintenancePeriods;
-        private InsightsConfigResponse insightsConfig;
-        private IpConfigurationResponse ipConfiguration;
-        private String kind;
-        private LocationPreferenceResponse locationPreference;
-        private MaintenanceWindowResponse maintenanceWindow;
-        private PasswordValidationPolicyResponse passwordValidationPolicy;
-        private String pricingPlan;
-        private String settingsVersion;
-        private SqlServerAuditConfigResponse sqlServerAuditConfig;
-        private Boolean storageAutoResize;
-        private String storageAutoResizeLimit;
-        private String tier;
-        private Map<String,String> userLabels;
+        private SettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SettingsResponse();
         }
 
         public Builder(SettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationPolicy = defaults.activationPolicy;
-    	      this.activeDirectoryConfig = defaults.activeDirectoryConfig;
-    	      this.availabilityType = defaults.availabilityType;
-    	      this.backupConfiguration = defaults.backupConfiguration;
-    	      this.collation = defaults.collation;
-    	      this.crashSafeReplicationEnabled = defaults.crashSafeReplicationEnabled;
-    	      this.dataDiskSizeGb = defaults.dataDiskSizeGb;
-    	      this.dataDiskType = defaults.dataDiskType;
-    	      this.databaseFlags = defaults.databaseFlags;
-    	      this.databaseReplicationEnabled = defaults.databaseReplicationEnabled;
-    	      this.denyMaintenancePeriods = defaults.denyMaintenancePeriods;
-    	      this.insightsConfig = defaults.insightsConfig;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.kind = defaults.kind;
-    	      this.locationPreference = defaults.locationPreference;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.passwordValidationPolicy = defaults.passwordValidationPolicy;
-    	      this.pricingPlan = defaults.pricingPlan;
-    	      this.settingsVersion = defaults.settingsVersion;
-    	      this.sqlServerAuditConfig = defaults.sqlServerAuditConfig;
-    	      this.storageAutoResize = defaults.storageAutoResize;
-    	      this.storageAutoResizeLimit = defaults.storageAutoResizeLimit;
-    	      this.tier = defaults.tier;
-    	      this.userLabels = defaults.userLabels;
+            $ = new SettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activationPolicy(String activationPolicy) {
-            this.activationPolicy = Objects.requireNonNull(activationPolicy);
+            $.activationPolicy = activationPolicy;
             return this;
         }
+
         public Builder activeDirectoryConfig(SqlActiveDirectoryConfigResponse activeDirectoryConfig) {
-            this.activeDirectoryConfig = Objects.requireNonNull(activeDirectoryConfig);
+            $.activeDirectoryConfig = activeDirectoryConfig;
             return this;
         }
+
         public Builder availabilityType(String availabilityType) {
-            this.availabilityType = Objects.requireNonNull(availabilityType);
+            $.availabilityType = availabilityType;
             return this;
         }
+
         public Builder backupConfiguration(BackupConfigurationResponse backupConfiguration) {
-            this.backupConfiguration = Objects.requireNonNull(backupConfiguration);
+            $.backupConfiguration = backupConfiguration;
             return this;
         }
+
         public Builder collation(String collation) {
-            this.collation = Objects.requireNonNull(collation);
+            $.collation = collation;
             return this;
         }
+
         public Builder crashSafeReplicationEnabled(Boolean crashSafeReplicationEnabled) {
-            this.crashSafeReplicationEnabled = Objects.requireNonNull(crashSafeReplicationEnabled);
+            $.crashSafeReplicationEnabled = crashSafeReplicationEnabled;
             return this;
         }
+
         public Builder dataDiskSizeGb(String dataDiskSizeGb) {
-            this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
+            $.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
+
         public Builder dataDiskType(String dataDiskType) {
-            this.dataDiskType = Objects.requireNonNull(dataDiskType);
+            $.dataDiskType = dataDiskType;
             return this;
         }
+
         public Builder databaseFlags(List<DatabaseFlagsResponse> databaseFlags) {
-            this.databaseFlags = Objects.requireNonNull(databaseFlags);
+            $.databaseFlags = databaseFlags;
             return this;
         }
+
         public Builder databaseFlags(DatabaseFlagsResponse... databaseFlags) {
             return databaseFlags(List.of(databaseFlags));
         }
+
         public Builder databaseReplicationEnabled(Boolean databaseReplicationEnabled) {
-            this.databaseReplicationEnabled = Objects.requireNonNull(databaseReplicationEnabled);
+            $.databaseReplicationEnabled = databaseReplicationEnabled;
             return this;
         }
+
         public Builder denyMaintenancePeriods(List<DenyMaintenancePeriodResponse> denyMaintenancePeriods) {
-            this.denyMaintenancePeriods = Objects.requireNonNull(denyMaintenancePeriods);
+            $.denyMaintenancePeriods = denyMaintenancePeriods;
             return this;
         }
+
         public Builder denyMaintenancePeriods(DenyMaintenancePeriodResponse... denyMaintenancePeriods) {
             return denyMaintenancePeriods(List.of(denyMaintenancePeriods));
         }
+
         public Builder insightsConfig(InsightsConfigResponse insightsConfig) {
-            this.insightsConfig = Objects.requireNonNull(insightsConfig);
+            $.insightsConfig = insightsConfig;
             return this;
         }
+
         public Builder ipConfiguration(IpConfigurationResponse ipConfiguration) {
-            this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder locationPreference(LocationPreferenceResponse locationPreference) {
-            this.locationPreference = Objects.requireNonNull(locationPreference);
+            $.locationPreference = locationPreference;
             return this;
         }
+
         public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
-            this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
+
         public Builder passwordValidationPolicy(PasswordValidationPolicyResponse passwordValidationPolicy) {
-            this.passwordValidationPolicy = Objects.requireNonNull(passwordValidationPolicy);
+            $.passwordValidationPolicy = passwordValidationPolicy;
             return this;
         }
+
         public Builder pricingPlan(String pricingPlan) {
-            this.pricingPlan = Objects.requireNonNull(pricingPlan);
+            $.pricingPlan = pricingPlan;
             return this;
         }
+
         public Builder settingsVersion(String settingsVersion) {
-            this.settingsVersion = Objects.requireNonNull(settingsVersion);
+            $.settingsVersion = settingsVersion;
             return this;
         }
+
         public Builder sqlServerAuditConfig(SqlServerAuditConfigResponse sqlServerAuditConfig) {
-            this.sqlServerAuditConfig = Objects.requireNonNull(sqlServerAuditConfig);
+            $.sqlServerAuditConfig = sqlServerAuditConfig;
             return this;
         }
+
         public Builder storageAutoResize(Boolean storageAutoResize) {
-            this.storageAutoResize = Objects.requireNonNull(storageAutoResize);
+            $.storageAutoResize = storageAutoResize;
             return this;
         }
+
         public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
+            $.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder userLabels(Map<String,String> userLabels) {
-            this.userLabels = Objects.requireNonNull(userLabels);
+            $.userLabels = userLabels;
             return this;
-        }        public SettingsResponse build() {
-            return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
+        }
+
+        public SettingsResponse build() {
+            $.activationPolicy = Objects.requireNonNull($.activationPolicy, "expected parameter 'activationPolicy' to be non-null");
+            $.activeDirectoryConfig = Objects.requireNonNull($.activeDirectoryConfig, "expected parameter 'activeDirectoryConfig' to be non-null");
+            $.availabilityType = Objects.requireNonNull($.availabilityType, "expected parameter 'availabilityType' to be non-null");
+            $.backupConfiguration = Objects.requireNonNull($.backupConfiguration, "expected parameter 'backupConfiguration' to be non-null");
+            $.collation = Objects.requireNonNull($.collation, "expected parameter 'collation' to be non-null");
+            $.crashSafeReplicationEnabled = Objects.requireNonNull($.crashSafeReplicationEnabled, "expected parameter 'crashSafeReplicationEnabled' to be non-null");
+            $.dataDiskSizeGb = Objects.requireNonNull($.dataDiskSizeGb, "expected parameter 'dataDiskSizeGb' to be non-null");
+            $.dataDiskType = Objects.requireNonNull($.dataDiskType, "expected parameter 'dataDiskType' to be non-null");
+            $.databaseFlags = Objects.requireNonNull($.databaseFlags, "expected parameter 'databaseFlags' to be non-null");
+            $.databaseReplicationEnabled = Objects.requireNonNull($.databaseReplicationEnabled, "expected parameter 'databaseReplicationEnabled' to be non-null");
+            $.denyMaintenancePeriods = Objects.requireNonNull($.denyMaintenancePeriods, "expected parameter 'denyMaintenancePeriods' to be non-null");
+            $.insightsConfig = Objects.requireNonNull($.insightsConfig, "expected parameter 'insightsConfig' to be non-null");
+            $.ipConfiguration = Objects.requireNonNull($.ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.locationPreference = Objects.requireNonNull($.locationPreference, "expected parameter 'locationPreference' to be non-null");
+            $.maintenanceWindow = Objects.requireNonNull($.maintenanceWindow, "expected parameter 'maintenanceWindow' to be non-null");
+            $.passwordValidationPolicy = Objects.requireNonNull($.passwordValidationPolicy, "expected parameter 'passwordValidationPolicy' to be non-null");
+            $.pricingPlan = Objects.requireNonNull($.pricingPlan, "expected parameter 'pricingPlan' to be non-null");
+            $.settingsVersion = Objects.requireNonNull($.settingsVersion, "expected parameter 'settingsVersion' to be non-null");
+            $.sqlServerAuditConfig = Objects.requireNonNull($.sqlServerAuditConfig, "expected parameter 'sqlServerAuditConfig' to be non-null");
+            $.storageAutoResize = Objects.requireNonNull($.storageAutoResize, "expected parameter 'storageAutoResize' to be non-null");
+            $.storageAutoResizeLimit = Objects.requireNonNull($.storageAutoResizeLimit, "expected parameter 'storageAutoResizeLimit' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            $.userLabels = Objects.requireNonNull($.userLabels, "expected parameter 'userLabels' to be non-null");
+            return $;
         }
     }
+
 }

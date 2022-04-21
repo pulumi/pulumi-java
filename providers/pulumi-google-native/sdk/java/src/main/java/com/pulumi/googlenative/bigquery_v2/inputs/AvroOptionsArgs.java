@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class AvroOptionsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useAvroLogicalTypes")
-      private final @Nullable Output<Boolean> useAvroLogicalTypes;
+    private @Nullable Output<Boolean> useAvroLogicalTypes;
 
-    public Output<Boolean> useAvroLogicalTypes() {
-        return this.useAvroLogicalTypes == null ? Codegen.empty() : this.useAvroLogicalTypes;
+    public Optional<Output<Boolean>> useAvroLogicalTypes() {
+        return Optional.ofNullable(this.useAvroLogicalTypes);
     }
 
-    public AvroOptionsArgs(@Nullable Output<Boolean> useAvroLogicalTypes) {
-        this.useAvroLogicalTypes = useAvroLogicalTypes;
-    }
+    private AvroOptionsArgs() {}
 
-    private AvroOptionsArgs() {
-        this.useAvroLogicalTypes = Codegen.empty();
+    private AvroOptionsArgs(AvroOptionsArgs $) {
+        this.useAvroLogicalTypes = $.useAvroLogicalTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AvroOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> useAvroLogicalTypes;
+        private AvroOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AvroOptionsArgs();
         }
 
         public Builder(AvroOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
+            $ = new AvroOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder useAvroLogicalTypes(@Nullable Output<Boolean> useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = useAvroLogicalTypes;
+            $.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-        public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
-            this.useAvroLogicalTypes = Codegen.ofNullable(useAvroLogicalTypes);
-            return this;
-        }        public AvroOptionsArgs build() {
-            return new AvroOptionsArgs(useAvroLogicalTypes);
+
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+            return useAvroLogicalTypes(Output.of(useAvroLogicalTypes));
+        }
+
+        public AvroOptionsArgs build() {
+            return $;
         }
     }
+
 }

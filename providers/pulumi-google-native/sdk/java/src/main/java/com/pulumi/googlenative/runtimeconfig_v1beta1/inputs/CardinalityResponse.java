@@ -22,7 +22,7 @@ public final class CardinalityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="number", required=true)
-      private final Integer number;
+    private Integer number;
 
     public Integer number() {
         return this.number;
@@ -33,55 +33,52 @@ public final class CardinalityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public CardinalityResponse(
-        Integer number,
-        String path) {
-        this.number = Objects.requireNonNull(number, "expected parameter 'number' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private CardinalityResponse() {}
 
-    private CardinalityResponse() {
-        this.number = null;
-        this.path = null;
+    private CardinalityResponse(CardinalityResponse $) {
+        this.number = $.number;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CardinalityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer number;
-        private String path;
+        private CardinalityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CardinalityResponse();
         }
 
         public Builder(CardinalityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.number = defaults.number;
-    	      this.path = defaults.path;
+            $ = new CardinalityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder number(Integer number) {
-            this.number = Objects.requireNonNull(number);
+            $.number = number;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public CardinalityResponse build() {
-            return new CardinalityResponse(number, path);
+        }
+
+        public CardinalityResponse build() {
+            $.number = Objects.requireNonNull($.number, "expected parameter 'number' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

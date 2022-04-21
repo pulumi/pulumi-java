@@ -5,10 +5,10 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.connectors_v1.inputs.JwtClaimsArgs;
 import com.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class Oauth2JwtBearerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clientKey")
-      private final @Nullable Output<SecretArgs> clientKey;
+    private @Nullable Output<SecretArgs> clientKey;
 
-    public Output<SecretArgs> clientKey() {
-        return this.clientKey == null ? Codegen.empty() : this.clientKey;
+    public Optional<Output<SecretArgs>> clientKey() {
+        return Optional.ofNullable(this.clientKey);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class Oauth2JwtBearerArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="jwtClaims")
-      private final @Nullable Output<JwtClaimsArgs> jwtClaims;
+    private @Nullable Output<JwtClaimsArgs> jwtClaims;
 
-    public Output<JwtClaimsArgs> jwtClaims() {
-        return this.jwtClaims == null ? Codegen.empty() : this.jwtClaims;
+    public Optional<Output<JwtClaimsArgs>> jwtClaims() {
+        return Optional.ofNullable(this.jwtClaims);
     }
 
-    public Oauth2JwtBearerArgs(
-        @Nullable Output<SecretArgs> clientKey,
-        @Nullable Output<JwtClaimsArgs> jwtClaims) {
-        this.clientKey = clientKey;
-        this.jwtClaims = jwtClaims;
-    }
+    private Oauth2JwtBearerArgs() {}
 
-    private Oauth2JwtBearerArgs() {
-        this.clientKey = Codegen.empty();
-        this.jwtClaims = Codegen.empty();
+    private Oauth2JwtBearerArgs(Oauth2JwtBearerArgs $) {
+        this.clientKey = $.clientKey;
+        this.jwtClaims = $.jwtClaims;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Oauth2JwtBearerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SecretArgs> clientKey;
-        private @Nullable Output<JwtClaimsArgs> jwtClaims;
+        private Oauth2JwtBearerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Oauth2JwtBearerArgs();
         }
 
         public Builder(Oauth2JwtBearerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientKey = defaults.clientKey;
-    	      this.jwtClaims = defaults.jwtClaims;
+            $ = new Oauth2JwtBearerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientKey(@Nullable Output<SecretArgs> clientKey) {
-            this.clientKey = clientKey;
+            $.clientKey = clientKey;
             return this;
         }
-        public Builder clientKey(@Nullable SecretArgs clientKey) {
-            this.clientKey = Codegen.ofNullable(clientKey);
-            return this;
+
+        public Builder clientKey(SecretArgs clientKey) {
+            return clientKey(Output.of(clientKey));
         }
+
         public Builder jwtClaims(@Nullable Output<JwtClaimsArgs> jwtClaims) {
-            this.jwtClaims = jwtClaims;
+            $.jwtClaims = jwtClaims;
             return this;
         }
-        public Builder jwtClaims(@Nullable JwtClaimsArgs jwtClaims) {
-            this.jwtClaims = Codegen.ofNullable(jwtClaims);
-            return this;
-        }        public Oauth2JwtBearerArgs build() {
-            return new Oauth2JwtBearerArgs(clientKey, jwtClaims);
+
+        public Builder jwtClaims(JwtClaimsArgs jwtClaims) {
+            return jwtClaims(Output.of(jwtClaims));
+        }
+
+        public Oauth2JwtBearerArgs build() {
+            return $;
         }
     }
+
 }

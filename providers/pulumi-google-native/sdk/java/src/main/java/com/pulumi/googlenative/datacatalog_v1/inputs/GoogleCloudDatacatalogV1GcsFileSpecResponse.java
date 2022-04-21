@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
      * 
      */
     @Import(name="filePath", required=true)
-      private final String filePath;
+    private String filePath;
 
     public String filePath() {
         return this.filePath;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
      * 
      */
     @Import(name="gcsTimestamps", required=true)
-      private final GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
+    private GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
 
     public GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps() {
         return this.gcsTimestamps;
@@ -44,64 +44,59 @@ public final class GoogleCloudDatacatalogV1GcsFileSpecResponse extends com.pulum
      * 
      */
     @Import(name="sizeBytes", required=true)
-      private final String sizeBytes;
+    private String sizeBytes;
 
     public String sizeBytes() {
         return this.sizeBytes;
     }
 
-    public GoogleCloudDatacatalogV1GcsFileSpecResponse(
-        String filePath,
-        GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps,
-        String sizeBytes) {
-        this.filePath = Objects.requireNonNull(filePath, "expected parameter 'filePath' to be non-null");
-        this.gcsTimestamps = Objects.requireNonNull(gcsTimestamps, "expected parameter 'gcsTimestamps' to be non-null");
-        this.sizeBytes = Objects.requireNonNull(sizeBytes, "expected parameter 'sizeBytes' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1GcsFileSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1GcsFileSpecResponse() {
-        this.filePath = null;
-        this.gcsTimestamps = null;
-        this.sizeBytes = null;
+    private GoogleCloudDatacatalogV1GcsFileSpecResponse(GoogleCloudDatacatalogV1GcsFileSpecResponse $) {
+        this.filePath = $.filePath;
+        this.gcsTimestamps = $.gcsTimestamps;
+        this.sizeBytes = $.sizeBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1GcsFileSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filePath;
-        private GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps;
-        private String sizeBytes;
+        private GoogleCloudDatacatalogV1GcsFileSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1GcsFileSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1GcsFileSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filePath = defaults.filePath;
-    	      this.gcsTimestamps = defaults.gcsTimestamps;
-    	      this.sizeBytes = defaults.sizeBytes;
+            $ = new GoogleCloudDatacatalogV1GcsFileSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filePath(String filePath) {
-            this.filePath = Objects.requireNonNull(filePath);
+            $.filePath = filePath;
             return this;
         }
+
         public Builder gcsTimestamps(GoogleCloudDatacatalogV1SystemTimestampsResponse gcsTimestamps) {
-            this.gcsTimestamps = Objects.requireNonNull(gcsTimestamps);
+            $.gcsTimestamps = gcsTimestamps;
             return this;
         }
+
         public Builder sizeBytes(String sizeBytes) {
-            this.sizeBytes = Objects.requireNonNull(sizeBytes);
+            $.sizeBytes = sizeBytes;
             return this;
-        }        public GoogleCloudDatacatalogV1GcsFileSpecResponse build() {
-            return new GoogleCloudDatacatalogV1GcsFileSpecResponse(filePath, gcsTimestamps, sizeBytes);
+        }
+
+        public GoogleCloudDatacatalogV1GcsFileSpecResponse build() {
+            $.filePath = Objects.requireNonNull($.filePath, "expected parameter 'filePath' to be non-null");
+            $.gcsTimestamps = Objects.requireNonNull($.gcsTimestamps, "expected parameter 'gcsTimestamps' to be non-null");
+            $.sizeBytes = Objects.requireNonNull($.sizeBytes, "expected parameter 'sizeBytes' to be non-null");
+            return $;
         }
     }
+
 }

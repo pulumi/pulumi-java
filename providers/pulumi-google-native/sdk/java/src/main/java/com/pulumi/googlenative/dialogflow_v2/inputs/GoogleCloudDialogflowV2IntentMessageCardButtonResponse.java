@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
      * 
      */
     @Import(name="postback", required=true)
-      private final String postback;
+    private String postback;
 
     public String postback() {
         return this.postback;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2IntentMessageCardButtonResponse extend
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageCardButtonResponse(
-        String postback,
-        String text) {
-        this.postback = Objects.requireNonNull(postback, "expected parameter 'postback' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageCardButtonResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageCardButtonResponse() {
-        this.postback = null;
-        this.text = null;
+    private GoogleCloudDialogflowV2IntentMessageCardButtonResponse(GoogleCloudDialogflowV2IntentMessageCardButtonResponse $) {
+        this.postback = $.postback;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageCardButtonResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String postback;
-        private String text;
+        private GoogleCloudDialogflowV2IntentMessageCardButtonResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageCardButtonResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageCardButtonResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.postback = defaults.postback;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2IntentMessageCardButtonResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder postback(String postback) {
-            this.postback = Objects.requireNonNull(postback);
+            $.postback = postback;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageCardButtonResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageCardButtonResponse(postback, text);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageCardButtonResponse build() {
+            $.postback = Objects.requireNonNull($.postback, "expected parameter 'postback' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

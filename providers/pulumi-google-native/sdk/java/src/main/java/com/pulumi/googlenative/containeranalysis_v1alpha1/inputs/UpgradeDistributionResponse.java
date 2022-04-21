@@ -22,7 +22,7 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="classification", required=true)
-      private final String classification;
+    private String classification;
 
     public String classification() {
         return this.classification;
@@ -33,7 +33,7 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cpeUri", required=true)
-      private final String cpeUri;
+    private String cpeUri;
 
     public String cpeUri() {
         return this.cpeUri;
@@ -44,7 +44,7 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="cve", required=true)
-      private final List<String> cve;
+    private List<String> cve;
 
     public List<String> cve() {
         return this.cve;
@@ -55,76 +55,70 @@ public final class UpgradeDistributionResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
     }
 
-    public UpgradeDistributionResponse(
-        String classification,
-        String cpeUri,
-        List<String> cve,
-        String severity) {
-        this.classification = Objects.requireNonNull(classification, "expected parameter 'classification' to be non-null");
-        this.cpeUri = Objects.requireNonNull(cpeUri, "expected parameter 'cpeUri' to be non-null");
-        this.cve = Objects.requireNonNull(cve, "expected parameter 'cve' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-    }
+    private UpgradeDistributionResponse() {}
 
-    private UpgradeDistributionResponse() {
-        this.classification = null;
-        this.cpeUri = null;
-        this.cve = List.of();
-        this.severity = null;
+    private UpgradeDistributionResponse(UpgradeDistributionResponse $) {
+        this.classification = $.classification;
+        this.cpeUri = $.cpeUri;
+        this.cve = $.cve;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpgradeDistributionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String classification;
-        private String cpeUri;
-        private List<String> cve;
-        private String severity;
+        private UpgradeDistributionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpgradeDistributionResponse();
         }
 
         public Builder(UpgradeDistributionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.cpeUri = defaults.cpeUri;
-    	      this.cve = defaults.cve;
-    	      this.severity = defaults.severity;
+            $ = new UpgradeDistributionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(String classification) {
-            this.classification = Objects.requireNonNull(classification);
+            $.classification = classification;
             return this;
         }
+
         public Builder cpeUri(String cpeUri) {
-            this.cpeUri = Objects.requireNonNull(cpeUri);
+            $.cpeUri = cpeUri;
             return this;
         }
+
         public Builder cve(List<String> cve) {
-            this.cve = Objects.requireNonNull(cve);
+            $.cve = cve;
             return this;
         }
+
         public Builder cve(String... cve) {
             return cve(List.of(cve));
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
-        }        public UpgradeDistributionResponse build() {
-            return new UpgradeDistributionResponse(classification, cpeUri, cve, severity);
+        }
+
+        public UpgradeDistributionResponse build() {
+            $.classification = Objects.requireNonNull($.classification, "expected parameter 'classification' to be non-null");
+            $.cpeUri = Objects.requireNonNull($.cpeUri, "expected parameter 'cpeUri' to be non-null");
+            $.cve = Objects.requireNonNull($.cve, "expected parameter 'cve' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.DailyMaintenanceWindowArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.RecurringTimeWindowArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="dailyMaintenanceWindow")
-      private final @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
+    private @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
-    public Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow() {
-        return this.dailyMaintenanceWindow == null ? Codegen.empty() : this.dailyMaintenanceWindow;
+    public Optional<Output<DailyMaintenanceWindowArgs>> dailyMaintenanceWindow() {
+        return Optional.ofNullable(this.dailyMaintenanceWindow);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maintenanceExclusions")
-      private final @Nullable Output<Map<String,String>> maintenanceExclusions;
+    private @Nullable Output<Map<String,String>> maintenanceExclusions;
 
-    public Output<Map<String,String>> maintenanceExclusions() {
-        return this.maintenanceExclusions == null ? Codegen.empty() : this.maintenanceExclusions;
+    public Optional<Output<Map<String,String>>> maintenanceExclusions() {
+        return Optional.ofNullable(this.maintenanceExclusions);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="recurringWindow")
-      private final @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
+    private @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
-    public Output<RecurringTimeWindowArgs> recurringWindow() {
-        return this.recurringWindow == null ? Codegen.empty() : this.recurringWindow;
+    public Optional<Output<RecurringTimeWindowArgs>> recurringWindow() {
+        return Optional.ofNullable(this.recurringWindow);
     }
 
-    public MaintenanceWindowArgs(
-        @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow,
-        @Nullable Output<Map<String,String>> maintenanceExclusions,
-        @Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
-        this.dailyMaintenanceWindow = dailyMaintenanceWindow;
-        this.maintenanceExclusions = maintenanceExclusions;
-        this.recurringWindow = recurringWindow;
-    }
+    private MaintenanceWindowArgs() {}
 
-    private MaintenanceWindowArgs() {
-        this.dailyMaintenanceWindow = Codegen.empty();
-        this.maintenanceExclusions = Codegen.empty();
-        this.recurringWindow = Codegen.empty();
+    private MaintenanceWindowArgs(MaintenanceWindowArgs $) {
+        this.dailyMaintenanceWindow = $.dailyMaintenanceWindow;
+        this.maintenanceExclusions = $.maintenanceExclusions;
+        this.recurringWindow = $.recurringWindow;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
-        private @Nullable Output<Map<String,String>> maintenanceExclusions;
-        private @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
+        private MaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowArgs();
         }
 
         public Builder(MaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dailyMaintenanceWindow = defaults.dailyMaintenanceWindow;
-    	      this.maintenanceExclusions = defaults.maintenanceExclusions;
-    	      this.recurringWindow = defaults.recurringWindow;
+            $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dailyMaintenanceWindow(@Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = dailyMaintenanceWindow;
+            $.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
-        public Builder dailyMaintenanceWindow(@Nullable DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
-            this.dailyMaintenanceWindow = Codegen.ofNullable(dailyMaintenanceWindow);
-            return this;
+
+        public Builder dailyMaintenanceWindow(DailyMaintenanceWindowArgs dailyMaintenanceWindow) {
+            return dailyMaintenanceWindow(Output.of(dailyMaintenanceWindow));
         }
+
         public Builder maintenanceExclusions(@Nullable Output<Map<String,String>> maintenanceExclusions) {
-            this.maintenanceExclusions = maintenanceExclusions;
+            $.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
-        public Builder maintenanceExclusions(@Nullable Map<String,String> maintenanceExclusions) {
-            this.maintenanceExclusions = Codegen.ofNullable(maintenanceExclusions);
-            return this;
+
+        public Builder maintenanceExclusions(Map<String,String> maintenanceExclusions) {
+            return maintenanceExclusions(Output.of(maintenanceExclusions));
         }
+
         public Builder recurringWindow(@Nullable Output<RecurringTimeWindowArgs> recurringWindow) {
-            this.recurringWindow = recurringWindow;
+            $.recurringWindow = recurringWindow;
             return this;
         }
-        public Builder recurringWindow(@Nullable RecurringTimeWindowArgs recurringWindow) {
-            this.recurringWindow = Codegen.ofNullable(recurringWindow);
-            return this;
-        }        public MaintenanceWindowArgs build() {
-            return new MaintenanceWindowArgs(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
+
+        public Builder recurringWindow(RecurringTimeWindowArgs recurringWindow) {
+            return recurringWindow(Output.of(recurringWindow));
+        }
+
+        public MaintenanceWindowArgs build() {
+            return $;
         }
     }
+
 }

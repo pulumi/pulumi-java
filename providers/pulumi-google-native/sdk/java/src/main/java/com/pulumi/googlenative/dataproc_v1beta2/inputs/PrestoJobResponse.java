@@ -26,7 +26,7 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="clientTags", required=true)
-      private final List<String> clientTags;
+    private List<String> clientTags;
 
     public List<String> clientTags() {
         return this.clientTags;
@@ -37,7 +37,7 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="continueOnFailure", required=true)
-      private final Boolean continueOnFailure;
+    private Boolean continueOnFailure;
 
     public Boolean continueOnFailure() {
         return this.continueOnFailure;
@@ -48,7 +48,7 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loggingConfig", required=true)
-      private final LoggingConfigResponse loggingConfig;
+    private LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
@@ -59,7 +59,7 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputFormat", required=true)
-      private final String outputFormat;
+    private String outputFormat;
 
     public String outputFormat() {
         return this.outputFormat;
@@ -70,7 +70,7 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
@@ -81,7 +81,7 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryFileUri", required=true)
-      private final String queryFileUri;
+    private String queryFileUri;
 
     public String queryFileUri() {
         return this.queryFileUri;
@@ -92,103 +92,91 @@ public final class PrestoJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queryList", required=true)
-      private final QueryListResponse queryList;
+    private QueryListResponse queryList;
 
     public QueryListResponse queryList() {
         return this.queryList;
     }
 
-    public PrestoJobResponse(
-        List<String> clientTags,
-        Boolean continueOnFailure,
-        LoggingConfigResponse loggingConfig,
-        String outputFormat,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList) {
-        this.clientTags = Objects.requireNonNull(clientTags, "expected parameter 'clientTags' to be non-null");
-        this.continueOnFailure = Objects.requireNonNull(continueOnFailure, "expected parameter 'continueOnFailure' to be non-null");
-        this.loggingConfig = Objects.requireNonNull(loggingConfig, "expected parameter 'loggingConfig' to be non-null");
-        this.outputFormat = Objects.requireNonNull(outputFormat, "expected parameter 'outputFormat' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-        this.queryFileUri = Objects.requireNonNull(queryFileUri, "expected parameter 'queryFileUri' to be non-null");
-        this.queryList = Objects.requireNonNull(queryList, "expected parameter 'queryList' to be non-null");
-    }
+    private PrestoJobResponse() {}
 
-    private PrestoJobResponse() {
-        this.clientTags = List.of();
-        this.continueOnFailure = null;
-        this.loggingConfig = null;
-        this.outputFormat = null;
-        this.properties = Map.of();
-        this.queryFileUri = null;
-        this.queryList = null;
+    private PrestoJobResponse(PrestoJobResponse $) {
+        this.clientTags = $.clientTags;
+        this.continueOnFailure = $.continueOnFailure;
+        this.loggingConfig = $.loggingConfig;
+        this.outputFormat = $.outputFormat;
+        this.properties = $.properties;
+        this.queryFileUri = $.queryFileUri;
+        this.queryList = $.queryList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrestoJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> clientTags;
-        private Boolean continueOnFailure;
-        private LoggingConfigResponse loggingConfig;
-        private String outputFormat;
-        private Map<String,String> properties;
-        private String queryFileUri;
-        private QueryListResponse queryList;
+        private PrestoJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrestoJobResponse();
         }
 
         public Builder(PrestoJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTags = defaults.clientTags;
-    	      this.continueOnFailure = defaults.continueOnFailure;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.outputFormat = defaults.outputFormat;
-    	      this.properties = defaults.properties;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryList = defaults.queryList;
+            $ = new PrestoJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTags(List<String> clientTags) {
-            this.clientTags = Objects.requireNonNull(clientTags);
+            $.clientTags = clientTags;
             return this;
         }
+
         public Builder clientTags(String... clientTags) {
             return clientTags(List.of(clientTags));
         }
+
         public Builder continueOnFailure(Boolean continueOnFailure) {
-            this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
+            $.continueOnFailure = continueOnFailure;
             return this;
         }
+
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
-            this.loggingConfig = Objects.requireNonNull(loggingConfig);
+            $.loggingConfig = loggingConfig;
             return this;
         }
+
         public Builder outputFormat(String outputFormat) {
-            this.outputFormat = Objects.requireNonNull(outputFormat);
+            $.outputFormat = outputFormat;
             return this;
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
         }
+
         public Builder queryFileUri(String queryFileUri) {
-            this.queryFileUri = Objects.requireNonNull(queryFileUri);
+            $.queryFileUri = queryFileUri;
             return this;
         }
+
         public Builder queryList(QueryListResponse queryList) {
-            this.queryList = Objects.requireNonNull(queryList);
+            $.queryList = queryList;
             return this;
-        }        public PrestoJobResponse build() {
-            return new PrestoJobResponse(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
+        }
+
+        public PrestoJobResponse build() {
+            $.clientTags = Objects.requireNonNull($.clientTags, "expected parameter 'clientTags' to be non-null");
+            $.continueOnFailure = Objects.requireNonNull($.continueOnFailure, "expected parameter 'continueOnFailure' to be non-null");
+            $.loggingConfig = Objects.requireNonNull($.loggingConfig, "expected parameter 'loggingConfig' to be non-null");
+            $.outputFormat = Objects.requireNonNull($.outputFormat, "expected parameter 'outputFormat' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            $.queryFileUri = Objects.requireNonNull($.queryFileUri, "expected parameter 'queryFileUri' to be non-null");
+            $.queryList = Objects.requireNonNull($.queryList, "expected parameter 'queryList' to be non-null");
+            return $;
         }
     }
+
 }

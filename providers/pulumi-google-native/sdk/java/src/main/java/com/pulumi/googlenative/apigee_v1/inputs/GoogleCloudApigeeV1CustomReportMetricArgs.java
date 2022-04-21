@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends com.pulumi.
      * 
      */
     @Import(name="function")
-      private final @Nullable Output<String> function;
+    private @Nullable Output<String> function;
 
-    public Output<String> function() {
-        return this.function == null ? Codegen.empty() : this.function;
+    public Optional<Output<String>> function() {
+        return Optional.ofNullable(this.function);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudApigeeV1CustomReportMetricArgs extends com.pulumi.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GoogleCloudApigeeV1CustomReportMetricArgs(
-        @Nullable Output<String> function,
-        @Nullable Output<String> name) {
-        this.function = function;
-        this.name = name;
-    }
+    private GoogleCloudApigeeV1CustomReportMetricArgs() {}
 
-    private GoogleCloudApigeeV1CustomReportMetricArgs() {
-        this.function = Codegen.empty();
-        this.name = Codegen.empty();
+    private GoogleCloudApigeeV1CustomReportMetricArgs(GoogleCloudApigeeV1CustomReportMetricArgs $) {
+        this.function = $.function;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CustomReportMetricArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> function;
-        private @Nullable Output<String> name;
+        private GoogleCloudApigeeV1CustomReportMetricArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CustomReportMetricArgs();
         }
 
         public Builder(GoogleCloudApigeeV1CustomReportMetricArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.function = defaults.function;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudApigeeV1CustomReportMetricArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder function(@Nullable Output<String> function) {
-            this.function = function;
+            $.function = function;
             return this;
         }
-        public Builder function(@Nullable String function) {
-            this.function = Codegen.ofNullable(function);
-            return this;
+
+        public Builder function(String function) {
+            return function(Output.of(function));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GoogleCloudApigeeV1CustomReportMetricArgs build() {
-            return new GoogleCloudApigeeV1CustomReportMetricArgs(function, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GoogleCloudApigeeV1CustomReportMetricArgs build() {
+            return $;
         }
     }
+
 }

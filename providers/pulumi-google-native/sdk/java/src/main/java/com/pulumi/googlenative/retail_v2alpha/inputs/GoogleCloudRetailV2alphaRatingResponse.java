@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaRatingResponse extends com.pulumi.res
      * 
      */
     @Import(name="averageRating", required=true)
-      private final Double averageRating;
+    private Double averageRating;
 
     public Double averageRating() {
         return this.averageRating;
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaRatingResponse extends com.pulumi.res
      * 
      */
     @Import(name="ratingCount", required=true)
-      private final Integer ratingCount;
+    private Integer ratingCount;
 
     public Integer ratingCount() {
         return this.ratingCount;
@@ -45,67 +45,63 @@ public final class GoogleCloudRetailV2alphaRatingResponse extends com.pulumi.res
      * 
      */
     @Import(name="ratingHistogram", required=true)
-      private final List<Integer> ratingHistogram;
+    private List<Integer> ratingHistogram;
 
     public List<Integer> ratingHistogram() {
         return this.ratingHistogram;
     }
 
-    public GoogleCloudRetailV2alphaRatingResponse(
-        Double averageRating,
-        Integer ratingCount,
-        List<Integer> ratingHistogram) {
-        this.averageRating = Objects.requireNonNull(averageRating, "expected parameter 'averageRating' to be non-null");
-        this.ratingCount = Objects.requireNonNull(ratingCount, "expected parameter 'ratingCount' to be non-null");
-        this.ratingHistogram = Objects.requireNonNull(ratingHistogram, "expected parameter 'ratingHistogram' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaRatingResponse() {}
 
-    private GoogleCloudRetailV2alphaRatingResponse() {
-        this.averageRating = null;
-        this.ratingCount = null;
-        this.ratingHistogram = List.of();
+    private GoogleCloudRetailV2alphaRatingResponse(GoogleCloudRetailV2alphaRatingResponse $) {
+        this.averageRating = $.averageRating;
+        this.ratingCount = $.ratingCount;
+        this.ratingHistogram = $.ratingHistogram;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRatingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double averageRating;
-        private Integer ratingCount;
-        private List<Integer> ratingHistogram;
+        private GoogleCloudRetailV2alphaRatingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRatingResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaRatingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.averageRating = defaults.averageRating;
-    	      this.ratingCount = defaults.ratingCount;
-    	      this.ratingHistogram = defaults.ratingHistogram;
+            $ = new GoogleCloudRetailV2alphaRatingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder averageRating(Double averageRating) {
-            this.averageRating = Objects.requireNonNull(averageRating);
+            $.averageRating = averageRating;
             return this;
         }
+
         public Builder ratingCount(Integer ratingCount) {
-            this.ratingCount = Objects.requireNonNull(ratingCount);
+            $.ratingCount = ratingCount;
             return this;
         }
+
         public Builder ratingHistogram(List<Integer> ratingHistogram) {
-            this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
+            $.ratingHistogram = ratingHistogram;
             return this;
         }
+
         public Builder ratingHistogram(Integer... ratingHistogram) {
             return ratingHistogram(List.of(ratingHistogram));
-        }        public GoogleCloudRetailV2alphaRatingResponse build() {
-            return new GoogleCloudRetailV2alphaRatingResponse(averageRating, ratingCount, ratingHistogram);
+        }
+
+        public GoogleCloudRetailV2alphaRatingResponse build() {
+            $.averageRating = Objects.requireNonNull($.averageRating, "expected parameter 'averageRating' to be non-null");
+            $.ratingCount = Objects.requireNonNull($.ratingCount, "expected parameter 'ratingCount' to be non-null");
+            $.ratingHistogram = Objects.requireNonNull($.ratingHistogram, "expected parameter 'ratingHistogram' to be non-null");
+            return $;
         }
     }
+
 }

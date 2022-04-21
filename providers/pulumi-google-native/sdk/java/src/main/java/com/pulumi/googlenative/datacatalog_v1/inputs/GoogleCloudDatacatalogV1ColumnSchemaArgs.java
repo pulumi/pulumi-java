@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends com.pulumi.r
      * 
      */
     @Import(name="column", required=true)
-      private final Output<String> column;
+    private Output<String> column;
 
     public Output<String> column() {
         return this.column;
@@ -36,10 +36,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends com.pulumi.r
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends com.pulumi.r
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<String> mode;
+    private @Nullable Output<String> mode;
 
-    public Output<String> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<String>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends com.pulumi.r
      * 
      */
     @Import(name="subcolumns")
-      private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
+    private @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
 
-    public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns() {
-        return this.subcolumns == null ? Codegen.empty() : this.subcolumns;
+    public Optional<Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>>> subcolumns() {
+        return Optional.ofNullable(this.subcolumns);
     }
 
     /**
@@ -69,105 +69,94 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends com.pulumi.r
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public GoogleCloudDatacatalogV1ColumnSchemaArgs(
-        Output<String> column,
-        @Nullable Output<String> description,
-        @Nullable Output<String> mode,
-        @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns,
-        Output<String> type) {
-        this.column = Objects.requireNonNull(column, "expected parameter 'column' to be non-null");
-        this.description = description;
-        this.mode = mode;
-        this.subcolumns = subcolumns;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1ColumnSchemaArgs() {}
 
-    private GoogleCloudDatacatalogV1ColumnSchemaArgs() {
-        this.column = Codegen.empty();
-        this.description = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.subcolumns = Codegen.empty();
-        this.type = Codegen.empty();
+    private GoogleCloudDatacatalogV1ColumnSchemaArgs(GoogleCloudDatacatalogV1ColumnSchemaArgs $) {
+        this.column = $.column;
+        this.description = $.description;
+        this.mode = $.mode;
+        this.subcolumns = $.subcolumns;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1ColumnSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> column;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> mode;
-        private @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
-        private Output<String> type;
+        private GoogleCloudDatacatalogV1ColumnSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1ColumnSchemaArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1ColumnSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.column = defaults.column;
-    	      this.description = defaults.description;
-    	      this.mode = defaults.mode;
-    	      this.subcolumns = defaults.subcolumns;
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDatacatalogV1ColumnSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder column(Output<String> column) {
-            this.column = Objects.requireNonNull(column);
+            $.column = column;
             return this;
         }
+
         public Builder column(String column) {
-            this.column = Output.of(Objects.requireNonNull(column));
-            return this;
+            return column(Output.of(column));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder mode(@Nullable Output<String> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable String mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(String mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder subcolumns(@Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns) {
-            this.subcolumns = subcolumns;
+            $.subcolumns = subcolumns;
             return this;
         }
-        public Builder subcolumns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> subcolumns) {
-            this.subcolumns = Codegen.ofNullable(subcolumns);
-            return this;
+
+        public Builder subcolumns(List<GoogleCloudDatacatalogV1ColumnSchemaArgs> subcolumns) {
+            return subcolumns(Output.of(subcolumns));
         }
+
         public Builder subcolumns(GoogleCloudDatacatalogV1ColumnSchemaArgs... subcolumns) {
             return subcolumns(List.of(subcolumns));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public GoogleCloudDatacatalogV1ColumnSchemaArgs build() {
-            return new GoogleCloudDatacatalogV1ColumnSchemaArgs(column, description, mode, subcolumns, type);
+            return type(Output.of(type));
+        }
+
+        public GoogleCloudDatacatalogV1ColumnSchemaArgs build() {
+            $.column = Objects.requireNonNull($.column, "expected parameter 'column' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2PublishToStackdriverArgs extends com.pulumi
 
     public static final GooglePrivacyDlpV2PublishToStackdriverArgs Empty = new GooglePrivacyDlpV2PublishToStackdriverArgs();
 
-    public GooglePrivacyDlpV2PublishToStackdriverArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2PublishToStackdriverArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2PublishToStackdriverArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2PublishToStackdriverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2PublishToStackdriverArgs();
         }
         public GooglePrivacyDlpV2PublishToStackdriverArgs build() {
-            return new GooglePrivacyDlpV2PublishToStackdriverArgs();
+            return $;
         }
     }
+
 }

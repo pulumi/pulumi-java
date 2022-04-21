@@ -5,13 +5,13 @@ package com.pulumi.googlenative.dns_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.enums.ManagedZoneDnsSecConfigNonExistence;
 import com.pulumi.googlenative.dns_v1beta2.enums.ManagedZoneDnsSecConfigState;
 import com.pulumi.googlenative.dns_v1beta2.inputs.DnsKeySpecArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,17 +24,17 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="defaultKeySpecs")
-      private final @Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs;
+    private @Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs;
 
-    public Output<List<DnsKeySpecArgs>> defaultKeySpecs() {
-        return this.defaultKeySpecs == null ? Codegen.empty() : this.defaultKeySpecs;
+    public Optional<Output<List<DnsKeySpecArgs>>> defaultKeySpecs() {
+        return Optional.ofNullable(this.defaultKeySpecs);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="nonExistence")
-      private final @Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence;
+    private @Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence;
 
-    public Output<ManagedZoneDnsSecConfigNonExistence> nonExistence() {
-        return this.nonExistence == null ? Codegen.empty() : this.nonExistence;
+    public Optional<Output<ManagedZoneDnsSecConfigNonExistence>> nonExistence() {
+        return Optional.ofNullable(this.nonExistence);
     }
 
     /**
@@ -53,92 +53,82 @@ public final class ManagedZoneDnsSecConfigArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ManagedZoneDnsSecConfigState> state;
+    private @Nullable Output<ManagedZoneDnsSecConfigState> state;
 
-    public Output<ManagedZoneDnsSecConfigState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ManagedZoneDnsSecConfigState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public ManagedZoneDnsSecConfigArgs(
-        @Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs,
-        @Nullable Output<String> kind,
-        @Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence,
-        @Nullable Output<ManagedZoneDnsSecConfigState> state) {
-        this.defaultKeySpecs = defaultKeySpecs;
-        this.kind = kind;
-        this.nonExistence = nonExistence;
-        this.state = state;
-    }
+    private ManagedZoneDnsSecConfigArgs() {}
 
-    private ManagedZoneDnsSecConfigArgs() {
-        this.defaultKeySpecs = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.nonExistence = Codegen.empty();
-        this.state = Codegen.empty();
+    private ManagedZoneDnsSecConfigArgs(ManagedZoneDnsSecConfigArgs $) {
+        this.defaultKeySpecs = $.defaultKeySpecs;
+        this.kind = $.kind;
+        this.nonExistence = $.nonExistence;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneDnsSecConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence;
-        private @Nullable Output<ManagedZoneDnsSecConfigState> state;
+        private ManagedZoneDnsSecConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneDnsSecConfigArgs();
         }
 
         public Builder(ManagedZoneDnsSecConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKeySpecs = defaults.defaultKeySpecs;
-    	      this.kind = defaults.kind;
-    	      this.nonExistence = defaults.nonExistence;
-    	      this.state = defaults.state;
+            $ = new ManagedZoneDnsSecConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKeySpecs(@Nullable Output<List<DnsKeySpecArgs>> defaultKeySpecs) {
-            this.defaultKeySpecs = defaultKeySpecs;
+            $.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
-        public Builder defaultKeySpecs(@Nullable List<DnsKeySpecArgs> defaultKeySpecs) {
-            this.defaultKeySpecs = Codegen.ofNullable(defaultKeySpecs);
-            return this;
+
+        public Builder defaultKeySpecs(List<DnsKeySpecArgs> defaultKeySpecs) {
+            return defaultKeySpecs(Output.of(defaultKeySpecs));
         }
+
         public Builder defaultKeySpecs(DnsKeySpecArgs... defaultKeySpecs) {
             return defaultKeySpecs(List.of(defaultKeySpecs));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder nonExistence(@Nullable Output<ManagedZoneDnsSecConfigNonExistence> nonExistence) {
-            this.nonExistence = nonExistence;
+            $.nonExistence = nonExistence;
             return this;
         }
-        public Builder nonExistence(@Nullable ManagedZoneDnsSecConfigNonExistence nonExistence) {
-            this.nonExistence = Codegen.ofNullable(nonExistence);
-            return this;
+
+        public Builder nonExistence(ManagedZoneDnsSecConfigNonExistence nonExistence) {
+            return nonExistence(Output.of(nonExistence));
         }
+
         public Builder state(@Nullable Output<ManagedZoneDnsSecConfigState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ManagedZoneDnsSecConfigState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public ManagedZoneDnsSecConfigArgs build() {
-            return new ManagedZoneDnsSecConfigArgs(defaultKeySpecs, kind, nonExistence, state);
+
+        public Builder state(ManagedZoneDnsSecConfigState state) {
+            return state(Output.of(state));
+        }
+
+        public ManagedZoneDnsSecConfigArgs build() {
+            return $;
         }
     }
+
 }

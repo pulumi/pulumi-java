@@ -19,65 +19,63 @@ public final class DatasetAccessEntryResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="dataset", required=true)
-      private final DatasetReferenceResponse dataset;
+    private DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
 
     @Import(name="targetTypes", required=true)
-      private final List<String> targetTypes;
+    private List<String> targetTypes;
 
     public List<String> targetTypes() {
         return this.targetTypes;
     }
 
-    public DatasetAccessEntryResponse(
-        DatasetReferenceResponse dataset,
-        List<String> targetTypes) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.targetTypes = Objects.requireNonNull(targetTypes, "expected parameter 'targetTypes' to be non-null");
-    }
+    private DatasetAccessEntryResponse() {}
 
-    private DatasetAccessEntryResponse() {
-        this.dataset = null;
-        this.targetTypes = List.of();
+    private DatasetAccessEntryResponse(DatasetAccessEntryResponse $) {
+        this.dataset = $.dataset;
+        this.targetTypes = $.targetTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetAccessEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetReferenceResponse dataset;
-        private List<String> targetTypes;
+        private DatasetAccessEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetAccessEntryResponse();
         }
 
         public Builder(DatasetAccessEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.targetTypes = defaults.targetTypes;
+            $ = new DatasetAccessEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(DatasetReferenceResponse dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder targetTypes(List<String> targetTypes) {
-            this.targetTypes = Objects.requireNonNull(targetTypes);
+            $.targetTypes = targetTypes;
             return this;
         }
+
         public Builder targetTypes(String... targetTypes) {
             return targetTypes(List.of(targetTypes));
-        }        public DatasetAccessEntryResponse build() {
-            return new DatasetAccessEntryResponse(dataset, targetTypes);
+        }
+
+        public DatasetAccessEntryResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.targetTypes = Objects.requireNonNull($.targetTypes, "expected parameter 'targetTypes' to be non-null");
+            return $;
         }
     }
+
 }

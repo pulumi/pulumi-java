@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch;
 import com.pulumi.googlenative.compute_alpha.enums.ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,17 +26,17 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * 
      */
     @Import(name="maxRetentionDays")
-      private final @Nullable Output<Integer> maxRetentionDays;
+    private @Nullable Output<Integer> maxRetentionDays;
 
-    public Output<Integer> maxRetentionDays() {
-        return this.maxRetentionDays == null ? Codegen.empty() : this.maxRetentionDays;
+    public Optional<Output<Integer>> maxRetentionDays() {
+        return Optional.ofNullable(this.maxRetentionDays);
     }
 
     @Import(name="onPolicySwitch")
-      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch;
+    private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch() {
-        return this.onPolicySwitch == null ? Codegen.empty() : this.onPolicySwitch;
+    public Optional<Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch>> onPolicySwitch() {
+        return Optional.ofNullable(this.onPolicySwitch);
     }
 
     /**
@@ -44,76 +44,68 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * 
      */
     @Import(name="onSourceDiskDelete")
-      private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
+    private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
 
-    public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete() {
-        return this.onSourceDiskDelete == null ? Codegen.empty() : this.onSourceDiskDelete;
+    public Optional<Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete>> onSourceDiskDelete() {
+        return Optional.ofNullable(this.onSourceDiskDelete);
     }
 
-    public ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(
-        @Nullable Output<Integer> maxRetentionDays,
-        @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch,
-        @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete) {
-        this.maxRetentionDays = maxRetentionDays;
-        this.onPolicySwitch = onPolicySwitch;
-        this.onSourceDiskDelete = onSourceDiskDelete;
-    }
+    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs() {}
 
-    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs() {
-        this.maxRetentionDays = Codegen.empty();
-        this.onPolicySwitch = Codegen.empty();
-        this.onSourceDiskDelete = Codegen.empty();
+    private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs $) {
+        this.maxRetentionDays = $.maxRetentionDays;
+        this.onPolicySwitch = $.onPolicySwitch;
+        this.onSourceDiskDelete = $.onSourceDiskDelete;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxRetentionDays;
-        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch;
-        private @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
+        private ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxRetentionDays = defaults.maxRetentionDays;
-    	      this.onPolicySwitch = defaults.onPolicySwitch;
-    	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
+            $ = new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxRetentionDays(@Nullable Output<Integer> maxRetentionDays) {
-            this.maxRetentionDays = maxRetentionDays;
+            $.maxRetentionDays = maxRetentionDays;
             return this;
         }
-        public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
-            this.maxRetentionDays = Codegen.ofNullable(maxRetentionDays);
-            return this;
+
+        public Builder maxRetentionDays(Integer maxRetentionDays) {
+            return maxRetentionDays(Output.of(maxRetentionDays));
         }
+
         public Builder onPolicySwitch(@Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch) {
-            this.onPolicySwitch = onPolicySwitch;
+            $.onPolicySwitch = onPolicySwitch;
             return this;
         }
-        public Builder onPolicySwitch(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch onPolicySwitch) {
-            this.onPolicySwitch = Codegen.ofNullable(onPolicySwitch);
-            return this;
+
+        public Builder onPolicySwitch(ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch onPolicySwitch) {
+            return onPolicySwitch(Output.of(onPolicySwitch));
         }
+
         public Builder onSourceDiskDelete(@Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete) {
-            this.onSourceDiskDelete = onSourceDiskDelete;
+            $.onSourceDiskDelete = onSourceDiskDelete;
             return this;
         }
-        public Builder onSourceDiskDelete(@Nullable ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete onSourceDiskDelete) {
-            this.onSourceDiskDelete = Codegen.ofNullable(onSourceDiskDelete);
-            return this;
-        }        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs build() {
-            return new ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs(maxRetentionDays, onPolicySwitch, onSourceDiskDelete);
+
+        public Builder onSourceDiskDelete(ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete onSourceDiskDelete) {
+            return onSourceDiskDelete(Output.of(onSourceDiskDelete));
+        }
+
+        public ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs build() {
+            return $;
         }
     }
+
 }

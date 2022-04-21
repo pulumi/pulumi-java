@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkNetworkFirewallPolicyEnforcementOrder;
 import com.pulumi.googlenative.compute_alpha.inputs.NetworkRoutingConfigArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoCreateSubnetworks")
-      private final @Nullable Output<Boolean> autoCreateSubnetworks;
+    private @Nullable Output<Boolean> autoCreateSubnetworks;
 
-    public Output<Boolean> autoCreateSubnetworks() {
-        return this.autoCreateSubnetworks == null ? Codegen.empty() : this.autoCreateSubnetworks;
+    public Optional<Output<Boolean>> autoCreateSubnetworks() {
+        return Optional.ofNullable(this.autoCreateSubnetworks);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableUlaInternalIpv6")
-      private final @Nullable Output<Boolean> enableUlaInternalIpv6;
+    private @Nullable Output<Boolean> enableUlaInternalIpv6;
 
-    public Output<Boolean> enableUlaInternalIpv6() {
-        return this.enableUlaInternalIpv6 == null ? Codegen.empty() : this.enableUlaInternalIpv6;
+    public Optional<Output<Boolean>> enableUlaInternalIpv6() {
+        return Optional.ofNullable(this.enableUlaInternalIpv6);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="internalIpv6Range")
-      private final @Nullable Output<String> internalIpv6Range;
+    private @Nullable Output<String> internalIpv6Range;
 
-    public Output<String> internalIpv6Range() {
-        return this.internalIpv6Range == null ? Codegen.empty() : this.internalIpv6Range;
+    public Optional<Output<String>> internalIpv6Range() {
+        return Optional.ofNullable(this.internalIpv6Range);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mtu")
-      private final @Nullable Output<Integer> mtu;
+    private @Nullable Output<Integer> mtu;
 
-    public Output<Integer> mtu() {
-        return this.mtu == null ? Codegen.empty() : this.mtu;
+    public Optional<Output<Integer>> mtu() {
+        return Optional.ofNullable(this.mtu);
     }
 
     /**
@@ -79,31 +79,31 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="networkFirewallPolicyEnforcementOrder")
-      private final @Nullable Output<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
+    private @Nullable Output<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
 
-    public Output<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder() {
-        return this.networkFirewallPolicyEnforcementOrder == null ? Codegen.empty() : this.networkFirewallPolicyEnforcementOrder;
+    public Optional<Output<NetworkNetworkFirewallPolicyEnforcementOrder>> networkFirewallPolicyEnforcementOrder() {
+        return Optional.ofNullable(this.networkFirewallPolicyEnforcementOrder);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -111,167 +111,138 @@ public final class NetworkArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="routingConfig")
-      private final @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
+    private @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
 
-    public Output<NetworkRoutingConfigArgs> routingConfig() {
-        return this.routingConfig == null ? Codegen.empty() : this.routingConfig;
+    public Optional<Output<NetworkRoutingConfigArgs>> routingConfig() {
+        return Optional.ofNullable(this.routingConfig);
     }
 
-    public NetworkArgs(
-        @Nullable Output<Boolean> autoCreateSubnetworks,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enableUlaInternalIpv6,
-        @Nullable Output<String> internalIpv6Range,
-        @Nullable Output<Integer> mtu,
-        @Nullable Output<String> name,
-        @Nullable Output<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
-        this.autoCreateSubnetworks = autoCreateSubnetworks;
-        this.description = description;
-        this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
-        this.internalIpv6Range = internalIpv6Range;
-        this.mtu = mtu;
-        this.name = name;
-        this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
-        this.project = project;
-        this.requestId = requestId;
-        this.routingConfig = routingConfig;
-    }
+    private NetworkArgs() {}
 
-    private NetworkArgs() {
-        this.autoCreateSubnetworks = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enableUlaInternalIpv6 = Codegen.empty();
-        this.internalIpv6Range = Codegen.empty();
-        this.mtu = Codegen.empty();
-        this.name = Codegen.empty();
-        this.networkFirewallPolicyEnforcementOrder = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.routingConfig = Codegen.empty();
+    private NetworkArgs(NetworkArgs $) {
+        this.autoCreateSubnetworks = $.autoCreateSubnetworks;
+        this.description = $.description;
+        this.enableUlaInternalIpv6 = $.enableUlaInternalIpv6;
+        this.internalIpv6Range = $.internalIpv6Range;
+        this.mtu = $.mtu;
+        this.name = $.name;
+        this.networkFirewallPolicyEnforcementOrder = $.networkFirewallPolicyEnforcementOrder;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.routingConfig = $.routingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> autoCreateSubnetworks;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enableUlaInternalIpv6;
-        private @Nullable Output<String> internalIpv6Range;
-        private @Nullable Output<Integer> mtu;
-        private @Nullable Output<String> name;
-        private @Nullable Output<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<NetworkRoutingConfigArgs> routingConfig;
+        private NetworkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkArgs();
         }
 
         public Builder(NetworkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoCreateSubnetworks = defaults.autoCreateSubnetworks;
-    	      this.description = defaults.description;
-    	      this.enableUlaInternalIpv6 = defaults.enableUlaInternalIpv6;
-    	      this.internalIpv6Range = defaults.internalIpv6Range;
-    	      this.mtu = defaults.mtu;
-    	      this.name = defaults.name;
-    	      this.networkFirewallPolicyEnforcementOrder = defaults.networkFirewallPolicyEnforcementOrder;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.routingConfig = defaults.routingConfig;
+            $ = new NetworkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoCreateSubnetworks(@Nullable Output<Boolean> autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = autoCreateSubnetworks;
+            $.autoCreateSubnetworks = autoCreateSubnetworks;
             return this;
         }
-        public Builder autoCreateSubnetworks(@Nullable Boolean autoCreateSubnetworks) {
-            this.autoCreateSubnetworks = Codegen.ofNullable(autoCreateSubnetworks);
-            return this;
+
+        public Builder autoCreateSubnetworks(Boolean autoCreateSubnetworks) {
+            return autoCreateSubnetworks(Output.of(autoCreateSubnetworks));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableUlaInternalIpv6(@Nullable Output<Boolean> enableUlaInternalIpv6) {
-            this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
+            $.enableUlaInternalIpv6 = enableUlaInternalIpv6;
             return this;
         }
-        public Builder enableUlaInternalIpv6(@Nullable Boolean enableUlaInternalIpv6) {
-            this.enableUlaInternalIpv6 = Codegen.ofNullable(enableUlaInternalIpv6);
-            return this;
+
+        public Builder enableUlaInternalIpv6(Boolean enableUlaInternalIpv6) {
+            return enableUlaInternalIpv6(Output.of(enableUlaInternalIpv6));
         }
+
         public Builder internalIpv6Range(@Nullable Output<String> internalIpv6Range) {
-            this.internalIpv6Range = internalIpv6Range;
+            $.internalIpv6Range = internalIpv6Range;
             return this;
         }
-        public Builder internalIpv6Range(@Nullable String internalIpv6Range) {
-            this.internalIpv6Range = Codegen.ofNullable(internalIpv6Range);
-            return this;
+
+        public Builder internalIpv6Range(String internalIpv6Range) {
+            return internalIpv6Range(Output.of(internalIpv6Range));
         }
+
         public Builder mtu(@Nullable Output<Integer> mtu) {
-            this.mtu = mtu;
+            $.mtu = mtu;
             return this;
         }
-        public Builder mtu(@Nullable Integer mtu) {
-            this.mtu = Codegen.ofNullable(mtu);
-            return this;
+
+        public Builder mtu(Integer mtu) {
+            return mtu(Output.of(mtu));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder networkFirewallPolicyEnforcementOrder(@Nullable Output<NetworkNetworkFirewallPolicyEnforcementOrder> networkFirewallPolicyEnforcementOrder) {
-            this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
+            $.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
             return this;
         }
-        public Builder networkFirewallPolicyEnforcementOrder(@Nullable NetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
-            this.networkFirewallPolicyEnforcementOrder = Codegen.ofNullable(networkFirewallPolicyEnforcementOrder);
-            return this;
+
+        public Builder networkFirewallPolicyEnforcementOrder(NetworkNetworkFirewallPolicyEnforcementOrder networkFirewallPolicyEnforcementOrder) {
+            return networkFirewallPolicyEnforcementOrder(Output.of(networkFirewallPolicyEnforcementOrder));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder routingConfig(@Nullable Output<NetworkRoutingConfigArgs> routingConfig) {
-            this.routingConfig = routingConfig;
+            $.routingConfig = routingConfig;
             return this;
         }
-        public Builder routingConfig(@Nullable NetworkRoutingConfigArgs routingConfig) {
-            this.routingConfig = Codegen.ofNullable(routingConfig);
-            return this;
-        }        public NetworkArgs build() {
-            return new NetworkArgs(autoCreateSubnetworks, description, enableUlaInternalIpv6, internalIpv6Range, mtu, name, networkFirewallPolicyEnforcementOrder, project, requestId, routingConfig);
+
+        public Builder routingConfig(NetworkRoutingConfigArgs routingConfig) {
+            return routingConfig(Output.of(routingConfig));
+        }
+
+        public NetworkArgs build() {
+            return $;
         }
     }
+
 }

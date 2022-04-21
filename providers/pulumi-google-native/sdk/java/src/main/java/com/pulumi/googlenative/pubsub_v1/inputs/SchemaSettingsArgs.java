@@ -5,10 +5,10 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsub_v1.enums.SchemaSettingsEncoding;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SchemaSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="encoding")
-      private final @Nullable Output<SchemaSettingsEncoding> encoding;
+    private @Nullable Output<SchemaSettingsEncoding> encoding;
 
-    public Output<SchemaSettingsEncoding> encoding() {
-        return this.encoding == null ? Codegen.empty() : this.encoding;
+    public Optional<Output<SchemaSettingsEncoding>> encoding() {
+        return Optional.ofNullable(this.encoding);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class SchemaSettingsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="schema", required=true)
-      private final Output<String> schema;
+    private Output<String> schema;
 
     public Output<String> schema() {
         return this.schema;
     }
 
-    public SchemaSettingsArgs(
-        @Nullable Output<SchemaSettingsEncoding> encoding,
-        Output<String> schema) {
-        this.encoding = encoding;
-        this.schema = Objects.requireNonNull(schema, "expected parameter 'schema' to be non-null");
-    }
+    private SchemaSettingsArgs() {}
 
-    private SchemaSettingsArgs() {
-        this.encoding = Codegen.empty();
-        this.schema = Codegen.empty();
+    private SchemaSettingsArgs(SchemaSettingsArgs $) {
+        this.encoding = $.encoding;
+        this.schema = $.schema;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchemaSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SchemaSettingsEncoding> encoding;
-        private Output<String> schema;
+        private SchemaSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchemaSettingsArgs();
         }
 
         public Builder(SchemaSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.schema = defaults.schema;
+            $ = new SchemaSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(@Nullable Output<SchemaSettingsEncoding> encoding) {
-            this.encoding = encoding;
+            $.encoding = encoding;
             return this;
         }
-        public Builder encoding(@Nullable SchemaSettingsEncoding encoding) {
-            this.encoding = Codegen.ofNullable(encoding);
-            return this;
+
+        public Builder encoding(SchemaSettingsEncoding encoding) {
+            return encoding(Output.of(encoding));
         }
+
         public Builder schema(Output<String> schema) {
-            this.schema = Objects.requireNonNull(schema);
+            $.schema = schema;
             return this;
         }
+
         public Builder schema(String schema) {
-            this.schema = Output.of(Objects.requireNonNull(schema));
-            return this;
-        }        public SchemaSettingsArgs build() {
-            return new SchemaSettingsArgs(encoding, schema);
+            return schema(Output.of(schema));
+        }
+
+        public SchemaSettingsArgs build() {
+            $.schema = Objects.requireNonNull($.schema, "expected parameter 'schema' to be non-null");
+            return $;
         }
     }
+
 }

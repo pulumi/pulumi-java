@@ -5,11 +5,11 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1.enums.MaintenanceWindowUpdateTrack;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="day")
-      private final @Nullable Output<Integer> day;
+    private @Nullable Output<Integer> day;
 
-    public Output<Integer> day() {
-        return this.day == null ? Codegen.empty() : this.day;
+    public Optional<Output<Integer>> day() {
+        return Optional.ofNullable(this.day);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="hour")
-      private final @Nullable Output<Integer> hour;
+    private @Nullable Output<Integer> hour;
 
-    public Output<Integer> hour() {
-        return this.hour == null ? Codegen.empty() : this.hour;
+    public Optional<Output<Integer>> hour() {
+        return Optional.ofNullable(this.hour);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class MaintenanceWindowArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="updateTrack")
-      private final @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
+    private @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
 
-    public Output<MaintenanceWindowUpdateTrack> updateTrack() {
-        return this.updateTrack == null ? Codegen.empty() : this.updateTrack;
+    public Optional<Output<MaintenanceWindowUpdateTrack>> updateTrack() {
+        return Optional.ofNullable(this.updateTrack);
     }
 
-    public MaintenanceWindowArgs(
-        @Nullable Output<Integer> day,
-        @Nullable Output<Integer> hour,
-        @Nullable Output<String> kind,
-        @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
-        this.day = day;
-        this.hour = hour;
-        this.kind = kind;
-        this.updateTrack = updateTrack;
-    }
+    private MaintenanceWindowArgs() {}
 
-    private MaintenanceWindowArgs() {
-        this.day = Codegen.empty();
-        this.hour = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.updateTrack = Codegen.empty();
+    private MaintenanceWindowArgs(MaintenanceWindowArgs $) {
+        this.day = $.day;
+        this.hour = $.hour;
+        this.kind = $.kind;
+        this.updateTrack = $.updateTrack;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> day;
-        private @Nullable Output<Integer> hour;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<MaintenanceWindowUpdateTrack> updateTrack;
+        private MaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceWindowArgs();
         }
 
         public Builder(MaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.hour = defaults.hour;
-    	      this.kind = defaults.kind;
-    	      this.updateTrack = defaults.updateTrack;
+            $ = new MaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder day(@Nullable Output<Integer> day) {
-            this.day = day;
+            $.day = day;
             return this;
         }
-        public Builder day(@Nullable Integer day) {
-            this.day = Codegen.ofNullable(day);
-            return this;
+
+        public Builder day(Integer day) {
+            return day(Output.of(day));
         }
+
         public Builder hour(@Nullable Output<Integer> hour) {
-            this.hour = hour;
+            $.hour = hour;
             return this;
         }
-        public Builder hour(@Nullable Integer hour) {
-            this.hour = Codegen.ofNullable(hour);
-            return this;
+
+        public Builder hour(Integer hour) {
+            return hour(Output.of(hour));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder updateTrack(@Nullable Output<MaintenanceWindowUpdateTrack> updateTrack) {
-            this.updateTrack = updateTrack;
+            $.updateTrack = updateTrack;
             return this;
         }
-        public Builder updateTrack(@Nullable MaintenanceWindowUpdateTrack updateTrack) {
-            this.updateTrack = Codegen.ofNullable(updateTrack);
-            return this;
-        }        public MaintenanceWindowArgs build() {
-            return new MaintenanceWindowArgs(day, hour, kind, updateTrack);
+
+        public Builder updateTrack(MaintenanceWindowUpdateTrack updateTrack) {
+            return updateTrack(Output.of(updateTrack));
+        }
+
+        public MaintenanceWindowArgs build() {
+            return $;
         }
     }
+
 }

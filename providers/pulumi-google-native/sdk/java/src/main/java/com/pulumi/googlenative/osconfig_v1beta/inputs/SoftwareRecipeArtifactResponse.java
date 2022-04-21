@@ -23,7 +23,7 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="allowInsecure", required=true)
-      private final Boolean allowInsecure;
+    private Boolean allowInsecure;
 
     public Boolean allowInsecure() {
         return this.allowInsecure;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="gcs", required=true)
-      private final SoftwareRecipeArtifactGcsResponse gcs;
+    private SoftwareRecipeArtifactGcsResponse gcs;
 
     public SoftwareRecipeArtifactGcsResponse gcs() {
         return this.gcs;
@@ -45,64 +45,59 @@ public final class SoftwareRecipeArtifactResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="remote", required=true)
-      private final SoftwareRecipeArtifactRemoteResponse remote;
+    private SoftwareRecipeArtifactRemoteResponse remote;
 
     public SoftwareRecipeArtifactRemoteResponse remote() {
         return this.remote;
     }
 
-    public SoftwareRecipeArtifactResponse(
-        Boolean allowInsecure,
-        SoftwareRecipeArtifactGcsResponse gcs,
-        SoftwareRecipeArtifactRemoteResponse remote) {
-        this.allowInsecure = Objects.requireNonNull(allowInsecure, "expected parameter 'allowInsecure' to be non-null");
-        this.gcs = Objects.requireNonNull(gcs, "expected parameter 'gcs' to be non-null");
-        this.remote = Objects.requireNonNull(remote, "expected parameter 'remote' to be non-null");
-    }
+    private SoftwareRecipeArtifactResponse() {}
 
-    private SoftwareRecipeArtifactResponse() {
-        this.allowInsecure = null;
-        this.gcs = null;
-        this.remote = null;
+    private SoftwareRecipeArtifactResponse(SoftwareRecipeArtifactResponse $) {
+        this.allowInsecure = $.allowInsecure;
+        this.gcs = $.gcs;
+        this.remote = $.remote;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeArtifactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowInsecure;
-        private SoftwareRecipeArtifactGcsResponse gcs;
-        private SoftwareRecipeArtifactRemoteResponse remote;
+        private SoftwareRecipeArtifactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeArtifactResponse();
         }
 
         public Builder(SoftwareRecipeArtifactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowInsecure = defaults.allowInsecure;
-    	      this.gcs = defaults.gcs;
-    	      this.remote = defaults.remote;
+            $ = new SoftwareRecipeArtifactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowInsecure(Boolean allowInsecure) {
-            this.allowInsecure = Objects.requireNonNull(allowInsecure);
+            $.allowInsecure = allowInsecure;
             return this;
         }
+
         public Builder gcs(SoftwareRecipeArtifactGcsResponse gcs) {
-            this.gcs = Objects.requireNonNull(gcs);
+            $.gcs = gcs;
             return this;
         }
+
         public Builder remote(SoftwareRecipeArtifactRemoteResponse remote) {
-            this.remote = Objects.requireNonNull(remote);
+            $.remote = remote;
             return this;
-        }        public SoftwareRecipeArtifactResponse build() {
-            return new SoftwareRecipeArtifactResponse(allowInsecure, gcs, remote);
+        }
+
+        public SoftwareRecipeArtifactResponse build() {
+            $.allowInsecure = Objects.requireNonNull($.allowInsecure, "expected parameter 'allowInsecure' to be non-null");
+            $.gcs = Objects.requireNonNull($.gcs, "expected parameter 'gcs' to be non-null");
+            $.remote = Objects.requireNonNull($.remote, "expected parameter 'remote' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PySparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="archiveUris")
-      private final @Nullable Output<List<String>> archiveUris;
+    private @Nullable Output<List<String>> archiveUris;
 
-    public Output<List<String>> archiveUris() {
-        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
+    public Optional<Output<List<String>>> archiveUris() {
+        return Optional.ofNullable(this.archiveUris);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class PySparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class PySparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileUris")
-      private final @Nullable Output<List<String>> fileUris;
+    private @Nullable Output<List<String>> fileUris;
 
-    public Output<List<String>> fileUris() {
-        return this.fileUris == null ? Codegen.empty() : this.fileUris;
+    public Optional<Output<List<String>>> fileUris() {
+        return Optional.ofNullable(this.fileUris);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class PySparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="jarFileUris")
-      private final @Nullable Output<List<String>> jarFileUris;
+    private @Nullable Output<List<String>> jarFileUris;
 
-    public Output<List<String>> jarFileUris() {
-        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
+    public Optional<Output<List<String>>> jarFileUris() {
+        return Optional.ofNullable(this.jarFileUris);
     }
 
     /**
@@ -69,7 +69,7 @@ public final class PySparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mainPythonFileUri", required=true)
-      private final Output<String> mainPythonFileUri;
+    private Output<String> mainPythonFileUri;
 
     public Output<String> mainPythonFileUri() {
         return this.mainPythonFileUri;
@@ -80,130 +80,119 @@ public final class PySparkBatchArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pythonFileUris")
-      private final @Nullable Output<List<String>> pythonFileUris;
+    private @Nullable Output<List<String>> pythonFileUris;
 
-    public Output<List<String>> pythonFileUris() {
-        return this.pythonFileUris == null ? Codegen.empty() : this.pythonFileUris;
+    public Optional<Output<List<String>>> pythonFileUris() {
+        return Optional.ofNullable(this.pythonFileUris);
     }
 
-    public PySparkBatchArgs(
-        @Nullable Output<List<String>> archiveUris,
-        @Nullable Output<List<String>> args,
-        @Nullable Output<List<String>> fileUris,
-        @Nullable Output<List<String>> jarFileUris,
-        Output<String> mainPythonFileUri,
-        @Nullable Output<List<String>> pythonFileUris) {
-        this.archiveUris = archiveUris;
-        this.args = args;
-        this.fileUris = fileUris;
-        this.jarFileUris = jarFileUris;
-        this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri, "expected parameter 'mainPythonFileUri' to be non-null");
-        this.pythonFileUris = pythonFileUris;
-    }
+    private PySparkBatchArgs() {}
 
-    private PySparkBatchArgs() {
-        this.archiveUris = Codegen.empty();
-        this.args = Codegen.empty();
-        this.fileUris = Codegen.empty();
-        this.jarFileUris = Codegen.empty();
-        this.mainPythonFileUri = Codegen.empty();
-        this.pythonFileUris = Codegen.empty();
+    private PySparkBatchArgs(PySparkBatchArgs $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.jarFileUris = $.jarFileUris;
+        this.mainPythonFileUri = $.mainPythonFileUri;
+        this.pythonFileUris = $.pythonFileUris;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PySparkBatchArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> archiveUris;
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<List<String>> fileUris;
-        private @Nullable Output<List<String>> jarFileUris;
-        private Output<String> mainPythonFileUri;
-        private @Nullable Output<List<String>> pythonFileUris;
+        private PySparkBatchArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PySparkBatchArgs();
         }
 
         public Builder(PySparkBatchArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.mainPythonFileUri = defaults.mainPythonFileUri;
-    	      this.pythonFileUris = defaults.pythonFileUris;
+            $ = new PySparkBatchArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(@Nullable Output<List<String>> archiveUris) {
-            this.archiveUris = archiveUris;
+            $.archiveUris = archiveUris;
             return this;
         }
-        public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Codegen.ofNullable(archiveUris);
-            return this;
+
+        public Builder archiveUris(List<String> archiveUris) {
+            return archiveUris(Output.of(archiveUris));
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(@Nullable Output<List<String>> fileUris) {
-            this.fileUris = fileUris;
+            $.fileUris = fileUris;
             return this;
         }
-        public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Codegen.ofNullable(fileUris);
-            return this;
+
+        public Builder fileUris(List<String> fileUris) {
+            return fileUris(Output.of(fileUris));
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
-            this.jarFileUris = jarFileUris;
+            $.jarFileUris = jarFileUris;
             return this;
         }
-        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Codegen.ofNullable(jarFileUris);
-            return this;
+
+        public Builder jarFileUris(List<String> jarFileUris) {
+            return jarFileUris(Output.of(jarFileUris));
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder mainPythonFileUri(Output<String> mainPythonFileUri) {
-            this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
+            $.mainPythonFileUri = mainPythonFileUri;
             return this;
         }
+
         public Builder mainPythonFileUri(String mainPythonFileUri) {
-            this.mainPythonFileUri = Output.of(Objects.requireNonNull(mainPythonFileUri));
-            return this;
+            return mainPythonFileUri(Output.of(mainPythonFileUri));
         }
+
         public Builder pythonFileUris(@Nullable Output<List<String>> pythonFileUris) {
-            this.pythonFileUris = pythonFileUris;
+            $.pythonFileUris = pythonFileUris;
             return this;
         }
-        public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
-            this.pythonFileUris = Codegen.ofNullable(pythonFileUris);
-            return this;
+
+        public Builder pythonFileUris(List<String> pythonFileUris) {
+            return pythonFileUris(Output.of(pythonFileUris));
         }
+
         public Builder pythonFileUris(String... pythonFileUris) {
             return pythonFileUris(List.of(pythonFileUris));
-        }        public PySparkBatchArgs build() {
-            return new PySparkBatchArgs(archiveUris, args, fileUris, jarFileUris, mainPythonFileUri, pythonFileUris);
+        }
+
+        public PySparkBatchArgs build() {
+            $.mainPythonFileUri = Objects.requireNonNull($.mainPythonFileUri, "expected parameter 'mainPythonFileUri' to be non-null");
+            return $;
         }
     }
+
 }

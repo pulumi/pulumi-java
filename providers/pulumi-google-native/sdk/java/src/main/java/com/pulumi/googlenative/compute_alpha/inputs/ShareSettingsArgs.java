@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.ShareSettingsShareType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="folderMap")
-      private final @Nullable Output<Map<String,String>> folderMap;
+    private @Nullable Output<Map<String,String>> folderMap;
 
-    public Output<Map<String,String>> folderMap() {
-        return this.folderMap == null ? Codegen.empty() : this.folderMap;
+    public Optional<Output<Map<String,String>>> folderMap() {
+        return Optional.ofNullable(this.folderMap);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projectMap")
-      private final @Nullable Output<Map<String,String>> projectMap;
+    private @Nullable Output<Map<String,String>> projectMap;
 
-    public Output<Map<String,String>> projectMap() {
-        return this.projectMap == null ? Codegen.empty() : this.projectMap;
+    public Optional<Output<Map<String,String>>> projectMap() {
+        return Optional.ofNullable(this.projectMap);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projects")
-      private final @Nullable Output<List<String>> projects;
+    private @Nullable Output<List<String>> projects;
 
-    public Output<List<String>> projects() {
-        return this.projects == null ? Codegen.empty() : this.projects;
+    public Optional<Output<List<String>>> projects() {
+        return Optional.ofNullable(this.projects);
     }
 
     /**
@@ -60,92 +60,82 @@ public final class ShareSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shareType")
-      private final @Nullable Output<ShareSettingsShareType> shareType;
+    private @Nullable Output<ShareSettingsShareType> shareType;
 
-    public Output<ShareSettingsShareType> shareType() {
-        return this.shareType == null ? Codegen.empty() : this.shareType;
+    public Optional<Output<ShareSettingsShareType>> shareType() {
+        return Optional.ofNullable(this.shareType);
     }
 
-    public ShareSettingsArgs(
-        @Nullable Output<Map<String,String>> folderMap,
-        @Nullable Output<Map<String,String>> projectMap,
-        @Nullable Output<List<String>> projects,
-        @Nullable Output<ShareSettingsShareType> shareType) {
-        this.folderMap = folderMap;
-        this.projectMap = projectMap;
-        this.projects = projects;
-        this.shareType = shareType;
-    }
+    private ShareSettingsArgs() {}
 
-    private ShareSettingsArgs() {
-        this.folderMap = Codegen.empty();
-        this.projectMap = Codegen.empty();
-        this.projects = Codegen.empty();
-        this.shareType = Codegen.empty();
+    private ShareSettingsArgs(ShareSettingsArgs $) {
+        this.folderMap = $.folderMap;
+        this.projectMap = $.projectMap;
+        this.projects = $.projects;
+        this.shareType = $.shareType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShareSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> folderMap;
-        private @Nullable Output<Map<String,String>> projectMap;
-        private @Nullable Output<List<String>> projects;
-        private @Nullable Output<ShareSettingsShareType> shareType;
+        private ShareSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShareSettingsArgs();
         }
 
         public Builder(ShareSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderMap = defaults.folderMap;
-    	      this.projectMap = defaults.projectMap;
-    	      this.projects = defaults.projects;
-    	      this.shareType = defaults.shareType;
+            $ = new ShareSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folderMap(@Nullable Output<Map<String,String>> folderMap) {
-            this.folderMap = folderMap;
+            $.folderMap = folderMap;
             return this;
         }
-        public Builder folderMap(@Nullable Map<String,String> folderMap) {
-            this.folderMap = Codegen.ofNullable(folderMap);
-            return this;
+
+        public Builder folderMap(Map<String,String> folderMap) {
+            return folderMap(Output.of(folderMap));
         }
+
         public Builder projectMap(@Nullable Output<Map<String,String>> projectMap) {
-            this.projectMap = projectMap;
+            $.projectMap = projectMap;
             return this;
         }
-        public Builder projectMap(@Nullable Map<String,String> projectMap) {
-            this.projectMap = Codegen.ofNullable(projectMap);
-            return this;
+
+        public Builder projectMap(Map<String,String> projectMap) {
+            return projectMap(Output.of(projectMap));
         }
+
         public Builder projects(@Nullable Output<List<String>> projects) {
-            this.projects = projects;
+            $.projects = projects;
             return this;
         }
-        public Builder projects(@Nullable List<String> projects) {
-            this.projects = Codegen.ofNullable(projects);
-            return this;
+
+        public Builder projects(List<String> projects) {
+            return projects(Output.of(projects));
         }
+
         public Builder projects(String... projects) {
             return projects(List.of(projects));
         }
+
         public Builder shareType(@Nullable Output<ShareSettingsShareType> shareType) {
-            this.shareType = shareType;
+            $.shareType = shareType;
             return this;
         }
-        public Builder shareType(@Nullable ShareSettingsShareType shareType) {
-            this.shareType = Codegen.ofNullable(shareType);
-            return this;
-        }        public ShareSettingsArgs build() {
-            return new ShareSettingsArgs(folderMap, projectMap, projects, shareType);
+
+        public Builder shareType(ShareSettingsShareType shareType) {
+            return shareType(Output.of(shareType));
+        }
+
+        public ShareSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudkms_v1.inputs.CertificateArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="endpointFilter")
-      private final @Nullable Output<String> endpointFilter;
+    private @Nullable Output<String> endpointFilter;
 
-    public Output<String> endpointFilter() {
-        return this.endpointFilter == null ? Codegen.empty() : this.endpointFilter;
+    public Optional<Output<String>> endpointFilter() {
+        return Optional.ofNullable(this.endpointFilter);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="hostname", required=true)
-      private final Output<String> hostname;
+    private Output<String> hostname;
 
     public Output<String> hostname() {
         return this.hostname;
@@ -48,7 +48,7 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serverCertificates", required=true)
-      private final Output<List<CertificateArgs>> serverCertificates;
+    private Output<List<CertificateArgs>> serverCertificates;
 
     public Output<List<CertificateArgs>> serverCertificates() {
         return this.serverCertificates;
@@ -59,92 +59,85 @@ public final class ServiceResolverArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="serviceDirectoryService", required=true)
-      private final Output<String> serviceDirectoryService;
+    private Output<String> serviceDirectoryService;
 
     public Output<String> serviceDirectoryService() {
         return this.serviceDirectoryService;
     }
 
-    public ServiceResolverArgs(
-        @Nullable Output<String> endpointFilter,
-        Output<String> hostname,
-        Output<List<CertificateArgs>> serverCertificates,
-        Output<String> serviceDirectoryService) {
-        this.endpointFilter = endpointFilter;
-        this.hostname = Objects.requireNonNull(hostname, "expected parameter 'hostname' to be non-null");
-        this.serverCertificates = Objects.requireNonNull(serverCertificates, "expected parameter 'serverCertificates' to be non-null");
-        this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService, "expected parameter 'serviceDirectoryService' to be non-null");
-    }
+    private ServiceResolverArgs() {}
 
-    private ServiceResolverArgs() {
-        this.endpointFilter = Codegen.empty();
-        this.hostname = Codegen.empty();
-        this.serverCertificates = Codegen.empty();
-        this.serviceDirectoryService = Codegen.empty();
+    private ServiceResolverArgs(ServiceResolverArgs $) {
+        this.endpointFilter = $.endpointFilter;
+        this.hostname = $.hostname;
+        this.serverCertificates = $.serverCertificates;
+        this.serviceDirectoryService = $.serviceDirectoryService;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceResolverArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> endpointFilter;
-        private Output<String> hostname;
-        private Output<List<CertificateArgs>> serverCertificates;
-        private Output<String> serviceDirectoryService;
+        private ServiceResolverArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceResolverArgs();
         }
 
         public Builder(ServiceResolverArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointFilter = defaults.endpointFilter;
-    	      this.hostname = defaults.hostname;
-    	      this.serverCertificates = defaults.serverCertificates;
-    	      this.serviceDirectoryService = defaults.serviceDirectoryService;
+            $ = new ServiceResolverArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointFilter(@Nullable Output<String> endpointFilter) {
-            this.endpointFilter = endpointFilter;
+            $.endpointFilter = endpointFilter;
             return this;
         }
-        public Builder endpointFilter(@Nullable String endpointFilter) {
-            this.endpointFilter = Codegen.ofNullable(endpointFilter);
-            return this;
+
+        public Builder endpointFilter(String endpointFilter) {
+            return endpointFilter(Output.of(endpointFilter));
         }
+
         public Builder hostname(Output<String> hostname) {
-            this.hostname = Objects.requireNonNull(hostname);
+            $.hostname = hostname;
             return this;
         }
+
         public Builder hostname(String hostname) {
-            this.hostname = Output.of(Objects.requireNonNull(hostname));
-            return this;
+            return hostname(Output.of(hostname));
         }
+
         public Builder serverCertificates(Output<List<CertificateArgs>> serverCertificates) {
-            this.serverCertificates = Objects.requireNonNull(serverCertificates);
+            $.serverCertificates = serverCertificates;
             return this;
         }
+
         public Builder serverCertificates(List<CertificateArgs> serverCertificates) {
-            this.serverCertificates = Output.of(Objects.requireNonNull(serverCertificates));
-            return this;
+            return serverCertificates(Output.of(serverCertificates));
         }
+
         public Builder serverCertificates(CertificateArgs... serverCertificates) {
             return serverCertificates(List.of(serverCertificates));
         }
+
         public Builder serviceDirectoryService(Output<String> serviceDirectoryService) {
-            this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
+            $.serviceDirectoryService = serviceDirectoryService;
             return this;
         }
+
         public Builder serviceDirectoryService(String serviceDirectoryService) {
-            this.serviceDirectoryService = Output.of(Objects.requireNonNull(serviceDirectoryService));
-            return this;
-        }        public ServiceResolverArgs build() {
-            return new ServiceResolverArgs(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
+            return serviceDirectoryService(Output.of(serviceDirectoryService));
+        }
+
+        public ServiceResolverArgs build() {
+            $.hostname = Objects.requireNonNull($.hostname, "expected parameter 'hostname' to be non-null");
+            $.serverCertificates = Objects.requireNonNull($.serverCertificates, "expected parameter 'serverCertificates' to be non-null");
+            $.serviceDirectoryService = Objects.requireNonNull($.serviceDirectoryService, "expected parameter 'serviceDirectoryService' to be non-null");
+            return $;
         }
     }
+
 }

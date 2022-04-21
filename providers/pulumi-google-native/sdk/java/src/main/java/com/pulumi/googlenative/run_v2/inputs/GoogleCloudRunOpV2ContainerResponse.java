@@ -26,7 +26,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -37,7 +37,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="command", required=true)
-      private final List<String> command;
+    private List<String> command;
 
     public List<String> command() {
         return this.command;
@@ -48,7 +48,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="env", required=true)
-      private final List<GoogleCloudRunOpV2EnvVarResponse> env;
+    private List<GoogleCloudRunOpV2EnvVarResponse> env;
 
     public List<GoogleCloudRunOpV2EnvVarResponse> env() {
         return this.env;
@@ -59,7 +59,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -70,7 +70,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -81,7 +81,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="ports", required=true)
-      private final List<GoogleCloudRunOpV2ContainerPortResponse> ports;
+    private List<GoogleCloudRunOpV2ContainerPortResponse> ports;
 
     public List<GoogleCloudRunOpV2ContainerPortResponse> ports() {
         return this.ports;
@@ -92,7 +92,7 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="resources", required=true)
-      private final GoogleCloudRunOpV2ResourceRequirementsResponse resources;
+    private GoogleCloudRunOpV2ResourceRequirementsResponse resources;
 
     public GoogleCloudRunOpV2ResourceRequirementsResponse resources() {
         return this.resources;
@@ -103,124 +103,114 @@ public final class GoogleCloudRunOpV2ContainerResponse extends com.pulumi.resour
      * 
      */
     @Import(name="volumeMounts", required=true)
-      private final List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
+    private List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
 
     public List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts() {
         return this.volumeMounts;
     }
 
-    public GoogleCloudRunOpV2ContainerResponse(
-        List<String> args,
-        List<String> command,
-        List<GoogleCloudRunOpV2EnvVarResponse> env,
-        String image,
-        String name,
-        List<GoogleCloudRunOpV2ContainerPortResponse> ports,
-        GoogleCloudRunOpV2ResourceRequirementsResponse resources,
-        List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.command = Objects.requireNonNull(command, "expected parameter 'command' to be non-null");
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-        this.resources = Objects.requireNonNull(resources, "expected parameter 'resources' to be non-null");
-        this.volumeMounts = Objects.requireNonNull(volumeMounts, "expected parameter 'volumeMounts' to be non-null");
-    }
+    private GoogleCloudRunOpV2ContainerResponse() {}
 
-    private GoogleCloudRunOpV2ContainerResponse() {
-        this.args = List.of();
-        this.command = List.of();
-        this.env = List.of();
-        this.image = null;
-        this.name = null;
-        this.ports = List.of();
-        this.resources = null;
-        this.volumeMounts = List.of();
+    private GoogleCloudRunOpV2ContainerResponse(GoogleCloudRunOpV2ContainerResponse $) {
+        this.args = $.args;
+        this.command = $.command;
+        this.env = $.env;
+        this.image = $.image;
+        this.name = $.name;
+        this.ports = $.ports;
+        this.resources = $.resources;
+        this.volumeMounts = $.volumeMounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ContainerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> args;
-        private List<String> command;
-        private List<GoogleCloudRunOpV2EnvVarResponse> env;
-        private String image;
-        private String name;
-        private List<GoogleCloudRunOpV2ContainerPortResponse> ports;
-        private GoogleCloudRunOpV2ResourceRequirementsResponse resources;
-        private List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
+        private GoogleCloudRunOpV2ContainerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ContainerResponse();
         }
 
         public Builder(GoogleCloudRunOpV2ContainerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.command = defaults.command;
-    	      this.env = defaults.env;
-    	      this.image = defaults.image;
-    	      this.name = defaults.name;
-    	      this.ports = defaults.ports;
-    	      this.resources = defaults.resources;
-    	      this.volumeMounts = defaults.volumeMounts;
+            $ = new GoogleCloudRunOpV2ContainerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder command(List<String> command) {
-            this.command = Objects.requireNonNull(command);
+            $.command = command;
             return this;
         }
+
         public Builder command(String... command) {
             return command(List.of(command));
         }
+
         public Builder env(List<GoogleCloudRunOpV2EnvVarResponse> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder env(GoogleCloudRunOpV2EnvVarResponse... env) {
             return env(List.of(env));
         }
+
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder ports(List<GoogleCloudRunOpV2ContainerPortResponse> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(GoogleCloudRunOpV2ContainerPortResponse... ports) {
             return ports(List.of(ports));
         }
+
         public Builder resources(GoogleCloudRunOpV2ResourceRequirementsResponse resources) {
-            this.resources = Objects.requireNonNull(resources);
+            $.resources = resources;
             return this;
         }
+
         public Builder volumeMounts(List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
-            this.volumeMounts = Objects.requireNonNull(volumeMounts);
+            $.volumeMounts = volumeMounts;
             return this;
         }
+
         public Builder volumeMounts(GoogleCloudRunOpV2VolumeMountResponse... volumeMounts) {
             return volumeMounts(List.of(volumeMounts));
-        }        public GoogleCloudRunOpV2ContainerResponse build() {
-            return new GoogleCloudRunOpV2ContainerResponse(args, command, env, image, name, ports, resources, volumeMounts);
+        }
+
+        public GoogleCloudRunOpV2ContainerResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.command = Objects.requireNonNull($.command, "expected parameter 'command' to be non-null");
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            $.resources = Objects.requireNonNull($.resources, "expected parameter 'resources' to be non-null");
+            $.volumeMounts = Objects.requireNonNull($.volumeMounts, "expected parameter 'volumeMounts' to be non-null");
+            return $;
         }
     }
+
 }

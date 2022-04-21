@@ -24,7 +24,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="apiEndpoint", required=true)
-      private final ApiEndpointHandlerResponse apiEndpoint;
+    private ApiEndpointHandlerResponse apiEndpoint;
 
     public ApiEndpointHandlerResponse apiEndpoint() {
         return this.apiEndpoint;
@@ -35,7 +35,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="authFailAction", required=true)
-      private final String authFailAction;
+    private String authFailAction;
 
     public String authFailAction() {
         return this.authFailAction;
@@ -46,7 +46,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="login", required=true)
-      private final String login;
+    private String login;
 
     public String login() {
         return this.login;
@@ -57,7 +57,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="redirectHttpResponseCode", required=true)
-      private final String redirectHttpResponseCode;
+    private String redirectHttpResponseCode;
 
     public String redirectHttpResponseCode() {
         return this.redirectHttpResponseCode;
@@ -68,7 +68,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="script", required=true)
-      private final ScriptHandlerResponse script;
+    private ScriptHandlerResponse script;
 
     public ScriptHandlerResponse script() {
         return this.script;
@@ -79,7 +79,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="securityLevel", required=true)
-      private final String securityLevel;
+    private String securityLevel;
 
     public String securityLevel() {
         return this.securityLevel;
@@ -90,7 +90,7 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="staticFiles", required=true)
-      private final StaticFilesHandlerResponse staticFiles;
+    private StaticFilesHandlerResponse staticFiles;
 
     public StaticFilesHandlerResponse staticFiles() {
         return this.staticFiles;
@@ -101,109 +101,94 @@ public final class UrlMapResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="urlRegex", required=true)
-      private final String urlRegex;
+    private String urlRegex;
 
     public String urlRegex() {
         return this.urlRegex;
     }
 
-    public UrlMapResponse(
-        ApiEndpointHandlerResponse apiEndpoint,
-        String authFailAction,
-        String login,
-        String redirectHttpResponseCode,
-        ScriptHandlerResponse script,
-        String securityLevel,
-        StaticFilesHandlerResponse staticFiles,
-        String urlRegex) {
-        this.apiEndpoint = Objects.requireNonNull(apiEndpoint, "expected parameter 'apiEndpoint' to be non-null");
-        this.authFailAction = Objects.requireNonNull(authFailAction, "expected parameter 'authFailAction' to be non-null");
-        this.login = Objects.requireNonNull(login, "expected parameter 'login' to be non-null");
-        this.redirectHttpResponseCode = Objects.requireNonNull(redirectHttpResponseCode, "expected parameter 'redirectHttpResponseCode' to be non-null");
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-        this.securityLevel = Objects.requireNonNull(securityLevel, "expected parameter 'securityLevel' to be non-null");
-        this.staticFiles = Objects.requireNonNull(staticFiles, "expected parameter 'staticFiles' to be non-null");
-        this.urlRegex = Objects.requireNonNull(urlRegex, "expected parameter 'urlRegex' to be non-null");
-    }
+    private UrlMapResponse() {}
 
-    private UrlMapResponse() {
-        this.apiEndpoint = null;
-        this.authFailAction = null;
-        this.login = null;
-        this.redirectHttpResponseCode = null;
-        this.script = null;
-        this.securityLevel = null;
-        this.staticFiles = null;
-        this.urlRegex = null;
+    private UrlMapResponse(UrlMapResponse $) {
+        this.apiEndpoint = $.apiEndpoint;
+        this.authFailAction = $.authFailAction;
+        this.login = $.login;
+        this.redirectHttpResponseCode = $.redirectHttpResponseCode;
+        this.script = $.script;
+        this.securityLevel = $.securityLevel;
+        this.staticFiles = $.staticFiles;
+        this.urlRegex = $.urlRegex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ApiEndpointHandlerResponse apiEndpoint;
-        private String authFailAction;
-        private String login;
-        private String redirectHttpResponseCode;
-        private ScriptHandlerResponse script;
-        private String securityLevel;
-        private StaticFilesHandlerResponse staticFiles;
-        private String urlRegex;
+        private UrlMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlMapResponse();
         }
 
         public Builder(UrlMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiEndpoint = defaults.apiEndpoint;
-    	      this.authFailAction = defaults.authFailAction;
-    	      this.login = defaults.login;
-    	      this.redirectHttpResponseCode = defaults.redirectHttpResponseCode;
-    	      this.script = defaults.script;
-    	      this.securityLevel = defaults.securityLevel;
-    	      this.staticFiles = defaults.staticFiles;
-    	      this.urlRegex = defaults.urlRegex;
+            $ = new UrlMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder apiEndpoint(ApiEndpointHandlerResponse apiEndpoint) {
-            this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
+            $.apiEndpoint = apiEndpoint;
             return this;
         }
+
         public Builder authFailAction(String authFailAction) {
-            this.authFailAction = Objects.requireNonNull(authFailAction);
+            $.authFailAction = authFailAction;
             return this;
         }
+
         public Builder login(String login) {
-            this.login = Objects.requireNonNull(login);
+            $.login = login;
             return this;
         }
+
         public Builder redirectHttpResponseCode(String redirectHttpResponseCode) {
-            this.redirectHttpResponseCode = Objects.requireNonNull(redirectHttpResponseCode);
+            $.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
+
         public Builder script(ScriptHandlerResponse script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
         }
+
         public Builder securityLevel(String securityLevel) {
-            this.securityLevel = Objects.requireNonNull(securityLevel);
+            $.securityLevel = securityLevel;
             return this;
         }
+
         public Builder staticFiles(StaticFilesHandlerResponse staticFiles) {
-            this.staticFiles = Objects.requireNonNull(staticFiles);
+            $.staticFiles = staticFiles;
             return this;
         }
+
         public Builder urlRegex(String urlRegex) {
-            this.urlRegex = Objects.requireNonNull(urlRegex);
+            $.urlRegex = urlRegex;
             return this;
-        }        public UrlMapResponse build() {
-            return new UrlMapResponse(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
+        }
+
+        public UrlMapResponse build() {
+            $.apiEndpoint = Objects.requireNonNull($.apiEndpoint, "expected parameter 'apiEndpoint' to be non-null");
+            $.authFailAction = Objects.requireNonNull($.authFailAction, "expected parameter 'authFailAction' to be non-null");
+            $.login = Objects.requireNonNull($.login, "expected parameter 'login' to be non-null");
+            $.redirectHttpResponseCode = Objects.requireNonNull($.redirectHttpResponseCode, "expected parameter 'redirectHttpResponseCode' to be non-null");
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            $.securityLevel = Objects.requireNonNull($.securityLevel, "expected parameter 'securityLevel' to be non-null");
+            $.staticFiles = Objects.requireNonNull($.staticFiles, "expected parameter 'staticFiles' to be non-null");
+            $.urlRegex = Objects.requireNonNull($.urlRegex, "expected parameter 'urlRegex' to be non-null");
+            return $;
         }
     }
+
 }

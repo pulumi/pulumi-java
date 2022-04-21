@@ -26,7 +26,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="buildOptions", required=true)
-      private final Map<String,String> buildOptions;
+    private Map<String,String> buildOptions;
 
     public Map<String,String> buildOptions() {
         return this.buildOptions;
@@ -37,7 +37,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="builderVersion", required=true)
-      private final String builderVersion;
+    private String builderVersion;
 
     public String builderVersion() {
         return this.builderVersion;
@@ -48,7 +48,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="builtArtifacts", required=true)
-      private final List<ArtifactResponse> builtArtifacts;
+    private List<ArtifactResponse> builtArtifacts;
 
     public List<ArtifactResponse> builtArtifacts() {
         return this.builtArtifacts;
@@ -59,7 +59,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="commands", required=true)
-      private final List<CommandResponse> commands;
+    private List<CommandResponse> commands;
 
     public List<CommandResponse> commands() {
         return this.commands;
@@ -70,7 +70,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -81,7 +81,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="creator", required=true)
-      private final String creator;
+    private String creator;
 
     public String creator() {
         return this.creator;
@@ -92,7 +92,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="finishTime", required=true)
-      private final String finishTime;
+    private String finishTime;
 
     public String finishTime() {
         return this.finishTime;
@@ -103,7 +103,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="logsBucket", required=true)
-      private final String logsBucket;
+    private String logsBucket;
 
     public String logsBucket() {
         return this.logsBucket;
@@ -114,7 +114,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -125,7 +125,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sourceProvenance", required=true)
-      private final SourceResponse sourceProvenance;
+    private SourceResponse sourceProvenance;
 
     public SourceResponse sourceProvenance() {
         return this.sourceProvenance;
@@ -136,7 +136,7 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
@@ -147,151 +147,130 @@ public final class BuildProvenanceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="triggerId", required=true)
-      private final String triggerId;
+    private String triggerId;
 
     public String triggerId() {
         return this.triggerId;
     }
 
-    public BuildProvenanceResponse(
-        Map<String,String> buildOptions,
-        String builderVersion,
-        List<ArtifactResponse> builtArtifacts,
-        List<CommandResponse> commands,
-        String createTime,
-        String creator,
-        String finishTime,
-        String logsBucket,
-        String project,
-        SourceResponse sourceProvenance,
-        String startTime,
-        String triggerId) {
-        this.buildOptions = Objects.requireNonNull(buildOptions, "expected parameter 'buildOptions' to be non-null");
-        this.builderVersion = Objects.requireNonNull(builderVersion, "expected parameter 'builderVersion' to be non-null");
-        this.builtArtifacts = Objects.requireNonNull(builtArtifacts, "expected parameter 'builtArtifacts' to be non-null");
-        this.commands = Objects.requireNonNull(commands, "expected parameter 'commands' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.creator = Objects.requireNonNull(creator, "expected parameter 'creator' to be non-null");
-        this.finishTime = Objects.requireNonNull(finishTime, "expected parameter 'finishTime' to be non-null");
-        this.logsBucket = Objects.requireNonNull(logsBucket, "expected parameter 'logsBucket' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.sourceProvenance = Objects.requireNonNull(sourceProvenance, "expected parameter 'sourceProvenance' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-        this.triggerId = Objects.requireNonNull(triggerId, "expected parameter 'triggerId' to be non-null");
-    }
+    private BuildProvenanceResponse() {}
 
-    private BuildProvenanceResponse() {
-        this.buildOptions = Map.of();
-        this.builderVersion = null;
-        this.builtArtifacts = List.of();
-        this.commands = List.of();
-        this.createTime = null;
-        this.creator = null;
-        this.finishTime = null;
-        this.logsBucket = null;
-        this.project = null;
-        this.sourceProvenance = null;
-        this.startTime = null;
-        this.triggerId = null;
+    private BuildProvenanceResponse(BuildProvenanceResponse $) {
+        this.buildOptions = $.buildOptions;
+        this.builderVersion = $.builderVersion;
+        this.builtArtifacts = $.builtArtifacts;
+        this.commands = $.commands;
+        this.createTime = $.createTime;
+        this.creator = $.creator;
+        this.finishTime = $.finishTime;
+        this.logsBucket = $.logsBucket;
+        this.project = $.project;
+        this.sourceProvenance = $.sourceProvenance;
+        this.startTime = $.startTime;
+        this.triggerId = $.triggerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildProvenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> buildOptions;
-        private String builderVersion;
-        private List<ArtifactResponse> builtArtifacts;
-        private List<CommandResponse> commands;
-        private String createTime;
-        private String creator;
-        private String finishTime;
-        private String logsBucket;
-        private String project;
-        private SourceResponse sourceProvenance;
-        private String startTime;
-        private String triggerId;
+        private BuildProvenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildProvenanceResponse();
         }
 
         public Builder(BuildProvenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buildOptions = defaults.buildOptions;
-    	      this.builderVersion = defaults.builderVersion;
-    	      this.builtArtifacts = defaults.builtArtifacts;
-    	      this.commands = defaults.commands;
-    	      this.createTime = defaults.createTime;
-    	      this.creator = defaults.creator;
-    	      this.finishTime = defaults.finishTime;
-    	      this.logsBucket = defaults.logsBucket;
-    	      this.project = defaults.project;
-    	      this.sourceProvenance = defaults.sourceProvenance;
-    	      this.startTime = defaults.startTime;
-    	      this.triggerId = defaults.triggerId;
+            $ = new BuildProvenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buildOptions(Map<String,String> buildOptions) {
-            this.buildOptions = Objects.requireNonNull(buildOptions);
+            $.buildOptions = buildOptions;
             return this;
         }
+
         public Builder builderVersion(String builderVersion) {
-            this.builderVersion = Objects.requireNonNull(builderVersion);
+            $.builderVersion = builderVersion;
             return this;
         }
+
         public Builder builtArtifacts(List<ArtifactResponse> builtArtifacts) {
-            this.builtArtifacts = Objects.requireNonNull(builtArtifacts);
+            $.builtArtifacts = builtArtifacts;
             return this;
         }
+
         public Builder builtArtifacts(ArtifactResponse... builtArtifacts) {
             return builtArtifacts(List.of(builtArtifacts));
         }
+
         public Builder commands(List<CommandResponse> commands) {
-            this.commands = Objects.requireNonNull(commands);
+            $.commands = commands;
             return this;
         }
+
         public Builder commands(CommandResponse... commands) {
             return commands(List.of(commands));
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder creator(String creator) {
-            this.creator = Objects.requireNonNull(creator);
+            $.creator = creator;
             return this;
         }
+
         public Builder finishTime(String finishTime) {
-            this.finishTime = Objects.requireNonNull(finishTime);
+            $.finishTime = finishTime;
             return this;
         }
+
         public Builder logsBucket(String logsBucket) {
-            this.logsBucket = Objects.requireNonNull(logsBucket);
+            $.logsBucket = logsBucket;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder sourceProvenance(SourceResponse sourceProvenance) {
-            this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
+            $.sourceProvenance = sourceProvenance;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
         }
+
         public Builder triggerId(String triggerId) {
-            this.triggerId = Objects.requireNonNull(triggerId);
+            $.triggerId = triggerId;
             return this;
-        }        public BuildProvenanceResponse build() {
-            return new BuildProvenanceResponse(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, finishTime, logsBucket, project, sourceProvenance, startTime, triggerId);
+        }
+
+        public BuildProvenanceResponse build() {
+            $.buildOptions = Objects.requireNonNull($.buildOptions, "expected parameter 'buildOptions' to be non-null");
+            $.builderVersion = Objects.requireNonNull($.builderVersion, "expected parameter 'builderVersion' to be non-null");
+            $.builtArtifacts = Objects.requireNonNull($.builtArtifacts, "expected parameter 'builtArtifacts' to be non-null");
+            $.commands = Objects.requireNonNull($.commands, "expected parameter 'commands' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.creator = Objects.requireNonNull($.creator, "expected parameter 'creator' to be non-null");
+            $.finishTime = Objects.requireNonNull($.finishTime, "expected parameter 'finishTime' to be non-null");
+            $.logsBucket = Objects.requireNonNull($.logsBucket, "expected parameter 'logsBucket' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.sourceProvenance = Objects.requireNonNull($.sourceProvenance, "expected parameter 'sourceProvenance' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            $.triggerId = Objects.requireNonNull($.triggerId, "expected parameter 'triggerId' to be non-null");
+            return $;
         }
     }
+
 }

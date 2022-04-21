@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datamigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="caCertificate", required=true)
-      private final Output<String> caCertificate;
+    private Output<String> caCertificate;
 
     public Output<String> caCertificate() {
         return this.caCertificate;
@@ -35,10 +35,10 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientCertificate")
-      private final @Nullable Output<String> clientCertificate;
+    private @Nullable Output<String> clientCertificate;
 
-    public Output<String> clientCertificate() {
-        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
+    public Optional<Output<String>> clientCertificate() {
+        return Optional.ofNullable(this.clientCertificate);
     }
 
     /**
@@ -46,76 +46,69 @@ public final class SslConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientKey")
-      private final @Nullable Output<String> clientKey;
+    private @Nullable Output<String> clientKey;
 
-    public Output<String> clientKey() {
-        return this.clientKey == null ? Codegen.empty() : this.clientKey;
+    public Optional<Output<String>> clientKey() {
+        return Optional.ofNullable(this.clientKey);
     }
 
-    public SslConfigArgs(
-        Output<String> caCertificate,
-        @Nullable Output<String> clientCertificate,
-        @Nullable Output<String> clientKey) {
-        this.caCertificate = Objects.requireNonNull(caCertificate, "expected parameter 'caCertificate' to be non-null");
-        this.clientCertificate = clientCertificate;
-        this.clientKey = clientKey;
-    }
+    private SslConfigArgs() {}
 
-    private SslConfigArgs() {
-        this.caCertificate = Codegen.empty();
-        this.clientCertificate = Codegen.empty();
-        this.clientKey = Codegen.empty();
+    private SslConfigArgs(SslConfigArgs $) {
+        this.caCertificate = $.caCertificate;
+        this.clientCertificate = $.clientCertificate;
+        this.clientKey = $.clientKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> caCertificate;
-        private @Nullable Output<String> clientCertificate;
-        private @Nullable Output<String> clientKey;
+        private SslConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslConfigArgs();
         }
 
         public Builder(SslConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientKey = defaults.clientKey;
+            $ = new SslConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(Output<String> caCertificate) {
-            this.caCertificate = Objects.requireNonNull(caCertificate);
+            $.caCertificate = caCertificate;
             return this;
         }
+
         public Builder caCertificate(String caCertificate) {
-            this.caCertificate = Output.of(Objects.requireNonNull(caCertificate));
-            return this;
+            return caCertificate(Output.of(caCertificate));
         }
+
         public Builder clientCertificate(@Nullable Output<String> clientCertificate) {
-            this.clientCertificate = clientCertificate;
+            $.clientCertificate = clientCertificate;
             return this;
         }
-        public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Codegen.ofNullable(clientCertificate);
-            return this;
+
+        public Builder clientCertificate(String clientCertificate) {
+            return clientCertificate(Output.of(clientCertificate));
         }
+
         public Builder clientKey(@Nullable Output<String> clientKey) {
-            this.clientKey = clientKey;
+            $.clientKey = clientKey;
             return this;
         }
-        public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Codegen.ofNullable(clientKey);
-            return this;
-        }        public SslConfigArgs build() {
-            return new SslConfigArgs(caCertificate, clientCertificate, clientKey);
+
+        public Builder clientKey(String clientKey) {
+            return clientKey(Output.of(clientKey));
+        }
+
+        public SslConfigArgs build() {
+            $.caCertificate = Objects.requireNonNull($.caCertificate, "expected parameter 'caCertificate' to be non-null");
+            return $;
         }
     }
+
 }

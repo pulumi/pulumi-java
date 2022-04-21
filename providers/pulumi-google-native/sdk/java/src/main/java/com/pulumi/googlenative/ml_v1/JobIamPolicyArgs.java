@@ -5,13 +5,13 @@ package com.pulumi.googlenative.ml_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleIamV1__AuditConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleIamV1__BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JobIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auditConfigs")
-      private final @Nullable Output<List<GoogleIamV1__AuditConfigArgs>> auditConfigs;
+    private @Nullable Output<List<GoogleIamV1__AuditConfigArgs>> auditConfigs;
 
-    public Output<List<GoogleIamV1__AuditConfigArgs>> auditConfigs() {
-        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
+    public Optional<Output<List<GoogleIamV1__AuditConfigArgs>>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<GoogleIamV1__BindingArgs>> bindings;
+    private @Nullable Output<List<GoogleIamV1__BindingArgs>> bindings;
 
-    public Output<List<GoogleIamV1__BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<GoogleIamV1__BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -46,24 +46,24 @@ public final class JobIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="jobId", required=true)
-      private final Output<String> jobId;
+    private Output<String> jobId;
 
     public Output<String> jobId() {
         return this.jobId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class JobIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="updateMask")
-      private final @Nullable Output<String> updateMask;
+    private @Nullable Output<String> updateMask;
 
-    public Output<String> updateMask() {
-        return this.updateMask == null ? Codegen.empty() : this.updateMask;
+    public Optional<Output<String>> updateMask() {
+        return Optional.ofNullable(this.updateMask);
     }
 
     /**
@@ -82,134 +82,117 @@ public final class JobIamPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public JobIamPolicyArgs(
-        @Nullable Output<List<GoogleIamV1__AuditConfigArgs>> auditConfigs,
-        @Nullable Output<List<GoogleIamV1__BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        Output<String> jobId,
-        @Nullable Output<String> project,
-        @Nullable Output<String> updateMask,
-        @Nullable Output<Integer> version) {
-        this.auditConfigs = auditConfigs;
-        this.bindings = bindings;
-        this.etag = etag;
-        this.jobId = Objects.requireNonNull(jobId, "expected parameter 'jobId' to be non-null");
-        this.project = project;
-        this.updateMask = updateMask;
-        this.version = version;
-    }
+    private JobIamPolicyArgs() {}
 
-    private JobIamPolicyArgs() {
-        this.auditConfigs = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.jobId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.updateMask = Codegen.empty();
-        this.version = Codegen.empty();
+    private JobIamPolicyArgs(JobIamPolicyArgs $) {
+        this.auditConfigs = $.auditConfigs;
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.jobId = $.jobId;
+        this.project = $.project;
+        this.updateMask = $.updateMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleIamV1__AuditConfigArgs>> auditConfigs;
-        private @Nullable Output<List<GoogleIamV1__BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private Output<String> jobId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> updateMask;
-        private @Nullable Output<Integer> version;
+        private JobIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobIamPolicyArgs();
         }
 
         public Builder(JobIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditConfigs = defaults.auditConfigs;
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.jobId = defaults.jobId;
-    	      this.project = defaults.project;
-    	      this.updateMask = defaults.updateMask;
-    	      this.version = defaults.version;
+            $ = new JobIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditConfigs(@Nullable Output<List<GoogleIamV1__AuditConfigArgs>> auditConfigs) {
-            this.auditConfigs = auditConfigs;
+            $.auditConfigs = auditConfigs;
             return this;
         }
-        public Builder auditConfigs(@Nullable List<GoogleIamV1__AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Codegen.ofNullable(auditConfigs);
-            return this;
+
+        public Builder auditConfigs(List<GoogleIamV1__AuditConfigArgs> auditConfigs) {
+            return auditConfigs(Output.of(auditConfigs));
         }
+
         public Builder auditConfigs(GoogleIamV1__AuditConfigArgs... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
+
         public Builder bindings(@Nullable Output<List<GoogleIamV1__BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<GoogleIamV1__BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<GoogleIamV1__BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(GoogleIamV1__BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder jobId(Output<String> jobId) {
-            this.jobId = Objects.requireNonNull(jobId);
+            $.jobId = jobId;
             return this;
         }
+
         public Builder jobId(String jobId) {
-            this.jobId = Output.of(Objects.requireNonNull(jobId));
-            return this;
+            return jobId(Output.of(jobId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder updateMask(@Nullable Output<String> updateMask) {
-            this.updateMask = updateMask;
+            $.updateMask = updateMask;
             return this;
         }
-        public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Codegen.ofNullable(updateMask);
-            return this;
+
+        public Builder updateMask(String updateMask) {
+            return updateMask(Output.of(updateMask));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public JobIamPolicyArgs build() {
-            return new JobIamPolicyArgs(auditConfigs, bindings, etag, jobId, project, updateMask, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public JobIamPolicyArgs build() {
+            $.jobId = Objects.requireNonNull($.jobId, "expected parameter 'jobId' to be non-null");
+            return $;
         }
     }
+
 }

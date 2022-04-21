@@ -21,7 +21,7 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -32,7 +32,7 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -43,64 +43,59 @@ public final class BigTableIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="tableId", required=true)
-      private final String tableId;
+    private String tableId;
 
     public String tableId() {
         return this.tableId;
     }
 
-    public BigTableIODetailsResponse(
-        String instanceId,
-        String project,
-        String tableId) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private BigTableIODetailsResponse() {}
 
-    private BigTableIODetailsResponse() {
-        this.instanceId = null;
-        this.project = null;
-        this.tableId = null;
+    private BigTableIODetailsResponse(BigTableIODetailsResponse $) {
+        this.instanceId = $.instanceId;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigTableIODetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String project;
-        private String tableId;
+        private BigTableIODetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigTableIODetailsResponse();
         }
 
         public Builder(BigTableIODetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new BigTableIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
-        }        public BigTableIODetailsResponse build() {
-            return new BigTableIODetailsResponse(instanceId, project, tableId);
+        }
+
+        public BigTableIODetailsResponse build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

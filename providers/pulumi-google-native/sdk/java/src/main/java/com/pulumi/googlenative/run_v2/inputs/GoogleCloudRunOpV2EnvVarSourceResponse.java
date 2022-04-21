@@ -21,45 +21,45 @@ public final class GoogleCloudRunOpV2EnvVarSourceResponse extends com.pulumi.res
      * 
      */
     @Import(name="secretKeyRef", required=true)
-      private final GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
+    private GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
 
     public GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
 
-    public GoogleCloudRunOpV2EnvVarSourceResponse(GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
-        this.secretKeyRef = Objects.requireNonNull(secretKeyRef, "expected parameter 'secretKeyRef' to be non-null");
-    }
+    private GoogleCloudRunOpV2EnvVarSourceResponse() {}
 
-    private GoogleCloudRunOpV2EnvVarSourceResponse() {
-        this.secretKeyRef = null;
+    private GoogleCloudRunOpV2EnvVarSourceResponse(GoogleCloudRunOpV2EnvVarSourceResponse $) {
+        this.secretKeyRef = $.secretKeyRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2EnvVarSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef;
+        private GoogleCloudRunOpV2EnvVarSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2EnvVarSourceResponse();
         }
 
         public Builder(GoogleCloudRunOpV2EnvVarSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.secretKeyRef = defaults.secretKeyRef;
+            $ = new GoogleCloudRunOpV2EnvVarSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder secretKeyRef(GoogleCloudRunOpV2SecretKeySelectorResponse secretKeyRef) {
-            this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
+            $.secretKeyRef = secretKeyRef;
             return this;
-        }        public GoogleCloudRunOpV2EnvVarSourceResponse build() {
-            return new GoogleCloudRunOpV2EnvVarSourceResponse(secretKeyRef);
+        }
+
+        public GoogleCloudRunOpV2EnvVarSourceResponse build() {
+            $.secretKeyRef = Objects.requireNonNull($.secretKeyRef, "expected parameter 'secretKeyRef' to be non-null");
+            return $;
         }
     }
+
 }

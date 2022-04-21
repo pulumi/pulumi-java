@@ -21,7 +21,7 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="accessType", required=true)
-      private final String accessType;
+    private String accessType;
 
     public String accessType() {
         return this.accessType;
@@ -32,7 +32,7 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="proxyUri", required=true)
-      private final String proxyUri;
+    private String proxyUri;
 
     public String proxyUri() {
         return this.proxyUri;
@@ -43,64 +43,59 @@ public final class RuntimeAccessConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="runtimeOwner", required=true)
-      private final String runtimeOwner;
+    private String runtimeOwner;
 
     public String runtimeOwner() {
         return this.runtimeOwner;
     }
 
-    public RuntimeAccessConfigResponse(
-        String accessType,
-        String proxyUri,
-        String runtimeOwner) {
-        this.accessType = Objects.requireNonNull(accessType, "expected parameter 'accessType' to be non-null");
-        this.proxyUri = Objects.requireNonNull(proxyUri, "expected parameter 'proxyUri' to be non-null");
-        this.runtimeOwner = Objects.requireNonNull(runtimeOwner, "expected parameter 'runtimeOwner' to be non-null");
-    }
+    private RuntimeAccessConfigResponse() {}
 
-    private RuntimeAccessConfigResponse() {
-        this.accessType = null;
-        this.proxyUri = null;
-        this.runtimeOwner = null;
+    private RuntimeAccessConfigResponse(RuntimeAccessConfigResponse $) {
+        this.accessType = $.accessType;
+        this.proxyUri = $.proxyUri;
+        this.runtimeOwner = $.runtimeOwner;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeAccessConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessType;
-        private String proxyUri;
-        private String runtimeOwner;
+        private RuntimeAccessConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeAccessConfigResponse();
         }
 
         public Builder(RuntimeAccessConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessType = defaults.accessType;
-    	      this.proxyUri = defaults.proxyUri;
-    	      this.runtimeOwner = defaults.runtimeOwner;
+            $ = new RuntimeAccessConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessType(String accessType) {
-            this.accessType = Objects.requireNonNull(accessType);
+            $.accessType = accessType;
             return this;
         }
+
         public Builder proxyUri(String proxyUri) {
-            this.proxyUri = Objects.requireNonNull(proxyUri);
+            $.proxyUri = proxyUri;
             return this;
         }
+
         public Builder runtimeOwner(String runtimeOwner) {
-            this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
+            $.runtimeOwner = runtimeOwner;
             return this;
-        }        public RuntimeAccessConfigResponse build() {
-            return new RuntimeAccessConfigResponse(accessType, proxyUri, runtimeOwner);
+        }
+
+        public RuntimeAccessConfigResponse build() {
+            $.accessType = Objects.requireNonNull($.accessType, "expected parameter 'accessType' to be non-null");
+            $.proxyUri = Objects.requireNonNull($.proxyUri, "expected parameter 'proxyUri' to be non-null");
+            $.runtimeOwner = Objects.requireNonNull($.runtimeOwner, "expected parameter 'runtimeOwner' to be non-null");
+            return $;
         }
     }
+
 }

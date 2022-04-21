@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudasset_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ConditionContextArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="accessTime")
-      private final @Nullable Output<String> accessTime;
+    private @Nullable Output<String> accessTime;
 
-    public Output<String> accessTime() {
-        return this.accessTime == null ? Codegen.empty() : this.accessTime;
+    public Optional<Output<String>> accessTime() {
+        return Optional.ofNullable(this.accessTime);
     }
 
-    public ConditionContextArgs(@Nullable Output<String> accessTime) {
-        this.accessTime = accessTime;
-    }
+    private ConditionContextArgs() {}
 
-    private ConditionContextArgs() {
-        this.accessTime = Codegen.empty();
+    private ConditionContextArgs(ConditionContextArgs $) {
+        this.accessTime = $.accessTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> accessTime;
+        private ConditionContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionContextArgs();
         }
 
         public Builder(ConditionContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessTime = defaults.accessTime;
+            $ = new ConditionContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessTime(@Nullable Output<String> accessTime) {
-            this.accessTime = accessTime;
+            $.accessTime = accessTime;
             return this;
         }
-        public Builder accessTime(@Nullable String accessTime) {
-            this.accessTime = Codegen.ofNullable(accessTime);
-            return this;
-        }        public ConditionContextArgs build() {
-            return new ConditionContextArgs(accessTime);
+
+        public Builder accessTime(String accessTime) {
+            return accessTime(Output.of(accessTime));
+        }
+
+        public ConditionContextArgs build() {
+            return $;
         }
     }
+
 }

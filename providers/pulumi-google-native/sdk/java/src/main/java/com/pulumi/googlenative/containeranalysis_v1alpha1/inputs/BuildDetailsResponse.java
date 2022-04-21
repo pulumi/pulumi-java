@@ -23,7 +23,7 @@ public final class BuildDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="intotoStatement", required=true)
-      private final InTotoStatementResponse intotoStatement;
+    private InTotoStatementResponse intotoStatement;
 
     public InTotoStatementResponse intotoStatement() {
         return this.intotoStatement;
@@ -34,7 +34,7 @@ public final class BuildDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="provenance", required=true)
-      private final BuildProvenanceResponse provenance;
+    private BuildProvenanceResponse provenance;
 
     public BuildProvenanceResponse provenance() {
         return this.provenance;
@@ -45,64 +45,59 @@ public final class BuildDetailsResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="provenanceBytes", required=true)
-      private final String provenanceBytes;
+    private String provenanceBytes;
 
     public String provenanceBytes() {
         return this.provenanceBytes;
     }
 
-    public BuildDetailsResponse(
-        InTotoStatementResponse intotoStatement,
-        BuildProvenanceResponse provenance,
-        String provenanceBytes) {
-        this.intotoStatement = Objects.requireNonNull(intotoStatement, "expected parameter 'intotoStatement' to be non-null");
-        this.provenance = Objects.requireNonNull(provenance, "expected parameter 'provenance' to be non-null");
-        this.provenanceBytes = Objects.requireNonNull(provenanceBytes, "expected parameter 'provenanceBytes' to be non-null");
-    }
+    private BuildDetailsResponse() {}
 
-    private BuildDetailsResponse() {
-        this.intotoStatement = null;
-        this.provenance = null;
-        this.provenanceBytes = null;
+    private BuildDetailsResponse(BuildDetailsResponse $) {
+        this.intotoStatement = $.intotoStatement;
+        this.provenance = $.provenance;
+        this.provenanceBytes = $.provenanceBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InTotoStatementResponse intotoStatement;
-        private BuildProvenanceResponse provenance;
-        private String provenanceBytes;
+        private BuildDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildDetailsResponse();
         }
 
         public Builder(BuildDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intotoStatement = defaults.intotoStatement;
-    	      this.provenance = defaults.provenance;
-    	      this.provenanceBytes = defaults.provenanceBytes;
+            $ = new BuildDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder intotoStatement(InTotoStatementResponse intotoStatement) {
-            this.intotoStatement = Objects.requireNonNull(intotoStatement);
+            $.intotoStatement = intotoStatement;
             return this;
         }
+
         public Builder provenance(BuildProvenanceResponse provenance) {
-            this.provenance = Objects.requireNonNull(provenance);
+            $.provenance = provenance;
             return this;
         }
+
         public Builder provenanceBytes(String provenanceBytes) {
-            this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
+            $.provenanceBytes = provenanceBytes;
             return this;
-        }        public BuildDetailsResponse build() {
-            return new BuildDetailsResponse(intotoStatement, provenance, provenanceBytes);
+        }
+
+        public BuildDetailsResponse build() {
+            $.intotoStatement = Objects.requireNonNull($.intotoStatement, "expected parameter 'intotoStatement' to be non-null");
+            $.provenance = Objects.requireNonNull($.provenance, "expected parameter 'provenance' to be non-null");
+            $.provenanceBytes = Objects.requireNonNull($.provenanceBytes, "expected parameter 'provenanceBytes' to be non-null");
+            return $;
         }
     }
+
 }

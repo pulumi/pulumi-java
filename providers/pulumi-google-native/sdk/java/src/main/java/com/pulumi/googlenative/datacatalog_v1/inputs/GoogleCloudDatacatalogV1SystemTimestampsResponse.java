@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
      * 
      */
     @Import(name="expireTime", required=true)
-      private final String expireTime;
+    private String expireTime;
 
     public String expireTime() {
         return this.expireTime;
@@ -43,64 +43,59 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse extends com.
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public GoogleCloudDatacatalogV1SystemTimestampsResponse(
-        String createTime,
-        String expireTime,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.expireTime = Objects.requireNonNull(expireTime, "expected parameter 'expireTime' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1SystemTimestampsResponse() {}
 
-    private GoogleCloudDatacatalogV1SystemTimestampsResponse() {
-        this.createTime = null;
-        this.expireTime = null;
-        this.updateTime = null;
+    private GoogleCloudDatacatalogV1SystemTimestampsResponse(GoogleCloudDatacatalogV1SystemTimestampsResponse $) {
+        this.createTime = $.createTime;
+        this.expireTime = $.expireTime;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1SystemTimestampsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String expireTime;
-        private String updateTime;
+        private GoogleCloudDatacatalogV1SystemTimestampsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1SystemTimestampsResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1SystemTimestampsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.expireTime = defaults.expireTime;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GoogleCloudDatacatalogV1SystemTimestampsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder expireTime(String expireTime) {
-            this.expireTime = Objects.requireNonNull(expireTime);
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public GoogleCloudDatacatalogV1SystemTimestampsResponse build() {
-            return new GoogleCloudDatacatalogV1SystemTimestampsResponse(createTime, expireTime, updateTime);
+        }
+
+        public GoogleCloudDatacatalogV1SystemTimestampsResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.expireTime = Objects.requireNonNull($.expireTime, "expected parameter 'expireTime' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
      * 
      */
     @Import(name="categoricalFeatures", required=true)
-      private final Map<String,String> categoricalFeatures;
+    private Map<String,String> categoricalFeatures;
 
     public Map<String,String> categoricalFeatures() {
         return this.categoricalFeatures;
@@ -33,55 +33,52 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse exte
      * 
      */
     @Import(name="numericalFeatures", required=true)
-      private final Map<String,String> numericalFeatures;
+    private Map<String,String> numericalFeatures;
 
     public Map<String,String> numericalFeatures() {
         return this.numericalFeatures;
     }
 
-    public GoogleCloudRecommendationengineV1beta1FeatureMapResponse(
-        Map<String,String> categoricalFeatures,
-        Map<String,String> numericalFeatures) {
-        this.categoricalFeatures = Objects.requireNonNull(categoricalFeatures, "expected parameter 'categoricalFeatures' to be non-null");
-        this.numericalFeatures = Objects.requireNonNull(numericalFeatures, "expected parameter 'numericalFeatures' to be non-null");
-    }
+    private GoogleCloudRecommendationengineV1beta1FeatureMapResponse() {}
 
-    private GoogleCloudRecommendationengineV1beta1FeatureMapResponse() {
-        this.categoricalFeatures = Map.of();
-        this.numericalFeatures = Map.of();
+    private GoogleCloudRecommendationengineV1beta1FeatureMapResponse(GoogleCloudRecommendationengineV1beta1FeatureMapResponse $) {
+        this.categoricalFeatures = $.categoricalFeatures;
+        this.numericalFeatures = $.numericalFeatures;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecommendationengineV1beta1FeatureMapResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> categoricalFeatures;
-        private Map<String,String> numericalFeatures;
+        private GoogleCloudRecommendationengineV1beta1FeatureMapResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecommendationengineV1beta1FeatureMapResponse();
         }
 
         public Builder(GoogleCloudRecommendationengineV1beta1FeatureMapResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoricalFeatures = defaults.categoricalFeatures;
-    	      this.numericalFeatures = defaults.numericalFeatures;
+            $ = new GoogleCloudRecommendationengineV1beta1FeatureMapResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categoricalFeatures(Map<String,String> categoricalFeatures) {
-            this.categoricalFeatures = Objects.requireNonNull(categoricalFeatures);
+            $.categoricalFeatures = categoricalFeatures;
             return this;
         }
+
         public Builder numericalFeatures(Map<String,String> numericalFeatures) {
-            this.numericalFeatures = Objects.requireNonNull(numericalFeatures);
+            $.numericalFeatures = numericalFeatures;
             return this;
-        }        public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
-            return new GoogleCloudRecommendationengineV1beta1FeatureMapResponse(categoricalFeatures, numericalFeatures);
+        }
+
+        public GoogleCloudRecommendationengineV1beta1FeatureMapResponse build() {
+            $.categoricalFeatures = Objects.requireNonNull($.categoricalFeatures, "expected parameter 'categoricalFeatures' to be non-null");
+            $.numericalFeatures = Objects.requireNonNull($.numericalFeatures, "expected parameter 'numericalFeatures' to be non-null");
+            return $;
         }
     }
+
 }

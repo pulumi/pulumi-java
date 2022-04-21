@@ -23,7 +23,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="destIpRange", required=true)
-      private final String destIpRange;
+    private String destIpRange;
 
     public String destIpRange() {
         return this.destIpRange;
@@ -34,7 +34,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceTags", required=true)
-      private final List<String> instanceTags;
+    private List<String> instanceTags;
 
     public List<String> instanceTags() {
         return this.instanceTags;
@@ -56,7 +56,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -67,7 +67,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nextHop", required=true)
-      private final String nextHop;
+    private String nextHop;
 
     public String nextHop() {
         return this.nextHop;
@@ -78,7 +78,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nextHopType", required=true)
-      private final String nextHopType;
+    private String nextHopType;
 
     public String nextHopType() {
         return this.nextHopType;
@@ -89,7 +89,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -100,7 +100,7 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="routeType", required=true)
-      private final String routeType;
+    private String routeType;
 
     public String routeType() {
         return this.routeType;
@@ -111,121 +111,105 @@ public final class RouteInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public RouteInfoResponse(
-        String destIpRange,
-        String displayName,
-        List<String> instanceTags,
-        String networkUri,
-        String nextHop,
-        String nextHopType,
-        Integer priority,
-        String routeType,
-        String uri) {
-        this.destIpRange = Objects.requireNonNull(destIpRange, "expected parameter 'destIpRange' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.instanceTags = Objects.requireNonNull(instanceTags, "expected parameter 'instanceTags' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.nextHop = Objects.requireNonNull(nextHop, "expected parameter 'nextHop' to be non-null");
-        this.nextHopType = Objects.requireNonNull(nextHopType, "expected parameter 'nextHopType' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.routeType = Objects.requireNonNull(routeType, "expected parameter 'routeType' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private RouteInfoResponse() {}
 
-    private RouteInfoResponse() {
-        this.destIpRange = null;
-        this.displayName = null;
-        this.instanceTags = List.of();
-        this.networkUri = null;
-        this.nextHop = null;
-        this.nextHopType = null;
-        this.priority = null;
-        this.routeType = null;
-        this.uri = null;
+    private RouteInfoResponse(RouteInfoResponse $) {
+        this.destIpRange = $.destIpRange;
+        this.displayName = $.displayName;
+        this.instanceTags = $.instanceTags;
+        this.networkUri = $.networkUri;
+        this.nextHop = $.nextHop;
+        this.nextHopType = $.nextHopType;
+        this.priority = $.priority;
+        this.routeType = $.routeType;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouteInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String destIpRange;
-        private String displayName;
-        private List<String> instanceTags;
-        private String networkUri;
-        private String nextHop;
-        private String nextHopType;
-        private Integer priority;
-        private String routeType;
-        private String uri;
+        private RouteInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouteInfoResponse();
         }
 
         public Builder(RouteInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destIpRange = defaults.destIpRange;
-    	      this.displayName = defaults.displayName;
-    	      this.instanceTags = defaults.instanceTags;
-    	      this.networkUri = defaults.networkUri;
-    	      this.nextHop = defaults.nextHop;
-    	      this.nextHopType = defaults.nextHopType;
-    	      this.priority = defaults.priority;
-    	      this.routeType = defaults.routeType;
-    	      this.uri = defaults.uri;
+            $ = new RouteInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder destIpRange(String destIpRange) {
-            this.destIpRange = Objects.requireNonNull(destIpRange);
+            $.destIpRange = destIpRange;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder instanceTags(List<String> instanceTags) {
-            this.instanceTags = Objects.requireNonNull(instanceTags);
+            $.instanceTags = instanceTags;
             return this;
         }
+
         public Builder instanceTags(String... instanceTags) {
             return instanceTags(List.of(instanceTags));
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder nextHop(String nextHop) {
-            this.nextHop = Objects.requireNonNull(nextHop);
+            $.nextHop = nextHop;
             return this;
         }
+
         public Builder nextHopType(String nextHopType) {
-            this.nextHopType = Objects.requireNonNull(nextHopType);
+            $.nextHopType = nextHopType;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder routeType(String routeType) {
-            this.routeType = Objects.requireNonNull(routeType);
+            $.routeType = routeType;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public RouteInfoResponse build() {
-            return new RouteInfoResponse(destIpRange, displayName, instanceTags, networkUri, nextHop, nextHopType, priority, routeType, uri);
+        }
+
+        public RouteInfoResponse build() {
+            $.destIpRange = Objects.requireNonNull($.destIpRange, "expected parameter 'destIpRange' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.instanceTags = Objects.requireNonNull($.instanceTags, "expected parameter 'instanceTags' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.nextHop = Objects.requireNonNull($.nextHop, "expected parameter 'nextHop' to be non-null");
+            $.nextHopType = Objects.requireNonNull($.nextHopType, "expected parameter 'nextHopType' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.routeType = Objects.requireNonNull($.routeType, "expected parameter 'routeType' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

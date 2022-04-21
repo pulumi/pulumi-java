@@ -27,7 +27,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerConcurrency", required=true)
-      private final Integer containerConcurrency;
+    private Integer containerConcurrency;
 
     public Integer containerConcurrency() {
         return this.containerConcurrency;
@@ -38,7 +38,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containers", required=true)
-      private final List<ContainerResponse> containers;
+    private List<ContainerResponse> containers;
 
     public List<ContainerResponse> containers() {
         return this.containers;
@@ -49,7 +49,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="enableServiceLinks", required=true)
-      private final Boolean enableServiceLinks;
+    private Boolean enableServiceLinks;
 
     public Boolean enableServiceLinks() {
         return this.enableServiceLinks;
@@ -60,7 +60,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="imagePullSecrets", required=true)
-      private final List<LocalObjectReferenceResponse> imagePullSecrets;
+    private List<LocalObjectReferenceResponse> imagePullSecrets;
 
     public List<LocalObjectReferenceResponse> imagePullSecrets() {
         return this.imagePullSecrets;
@@ -71,7 +71,7 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="serviceAccountName", required=true)
-      private final String serviceAccountName;
+    private String serviceAccountName;
 
     public String serviceAccountName() {
         return this.serviceAccountName;
@@ -82,116 +82,106 @@ public final class RevisionSpecResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeoutSeconds", required=true)
-      private final Integer timeoutSeconds;
+    private Integer timeoutSeconds;
 
     public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
 
     @Import(name="volumes", required=true)
-      private final List<VolumeResponse> volumes;
+    private List<VolumeResponse> volumes;
 
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 
-    public RevisionSpecResponse(
-        Integer containerConcurrency,
-        List<ContainerResponse> containers,
-        Boolean enableServiceLinks,
-        List<LocalObjectReferenceResponse> imagePullSecrets,
-        String serviceAccountName,
-        Integer timeoutSeconds,
-        List<VolumeResponse> volumes) {
-        this.containerConcurrency = Objects.requireNonNull(containerConcurrency, "expected parameter 'containerConcurrency' to be non-null");
-        this.containers = Objects.requireNonNull(containers, "expected parameter 'containers' to be non-null");
-        this.enableServiceLinks = Objects.requireNonNull(enableServiceLinks, "expected parameter 'enableServiceLinks' to be non-null");
-        this.imagePullSecrets = Objects.requireNonNull(imagePullSecrets, "expected parameter 'imagePullSecrets' to be non-null");
-        this.serviceAccountName = Objects.requireNonNull(serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
-        this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds, "expected parameter 'timeoutSeconds' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-    }
+    private RevisionSpecResponse() {}
 
-    private RevisionSpecResponse() {
-        this.containerConcurrency = null;
-        this.containers = List.of();
-        this.enableServiceLinks = null;
-        this.imagePullSecrets = List.of();
-        this.serviceAccountName = null;
-        this.timeoutSeconds = null;
-        this.volumes = List.of();
+    private RevisionSpecResponse(RevisionSpecResponse $) {
+        this.containerConcurrency = $.containerConcurrency;
+        this.containers = $.containers;
+        this.enableServiceLinks = $.enableServiceLinks;
+        this.imagePullSecrets = $.imagePullSecrets;
+        this.serviceAccountName = $.serviceAccountName;
+        this.timeoutSeconds = $.timeoutSeconds;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RevisionSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer containerConcurrency;
-        private List<ContainerResponse> containers;
-        private Boolean enableServiceLinks;
-        private List<LocalObjectReferenceResponse> imagePullSecrets;
-        private String serviceAccountName;
-        private Integer timeoutSeconds;
-        private List<VolumeResponse> volumes;
+        private RevisionSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RevisionSpecResponse();
         }
 
         public Builder(RevisionSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerConcurrency = defaults.containerConcurrency;
-    	      this.containers = defaults.containers;
-    	      this.enableServiceLinks = defaults.enableServiceLinks;
-    	      this.imagePullSecrets = defaults.imagePullSecrets;
-    	      this.serviceAccountName = defaults.serviceAccountName;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
-    	      this.volumes = defaults.volumes;
+            $ = new RevisionSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerConcurrency(Integer containerConcurrency) {
-            this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
+            $.containerConcurrency = containerConcurrency;
             return this;
         }
+
         public Builder containers(List<ContainerResponse> containers) {
-            this.containers = Objects.requireNonNull(containers);
+            $.containers = containers;
             return this;
         }
+
         public Builder containers(ContainerResponse... containers) {
             return containers(List.of(containers));
         }
+
         public Builder enableServiceLinks(Boolean enableServiceLinks) {
-            this.enableServiceLinks = Objects.requireNonNull(enableServiceLinks);
+            $.enableServiceLinks = enableServiceLinks;
             return this;
         }
+
         public Builder imagePullSecrets(List<LocalObjectReferenceResponse> imagePullSecrets) {
-            this.imagePullSecrets = Objects.requireNonNull(imagePullSecrets);
+            $.imagePullSecrets = imagePullSecrets;
             return this;
         }
+
         public Builder imagePullSecrets(LocalObjectReferenceResponse... imagePullSecrets) {
             return imagePullSecrets(List.of(imagePullSecrets));
         }
+
         public Builder serviceAccountName(String serviceAccountName) {
-            this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
+            $.serviceAccountName = serviceAccountName;
             return this;
         }
+
         public Builder timeoutSeconds(Integer timeoutSeconds) {
-            this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
+
         public Builder volumes(List<VolumeResponse> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
-        }        public RevisionSpecResponse build() {
-            return new RevisionSpecResponse(containerConcurrency, containers, enableServiceLinks, imagePullSecrets, serviceAccountName, timeoutSeconds, volumes);
+        }
+
+        public RevisionSpecResponse build() {
+            $.containerConcurrency = Objects.requireNonNull($.containerConcurrency, "expected parameter 'containerConcurrency' to be non-null");
+            $.containers = Objects.requireNonNull($.containers, "expected parameter 'containers' to be non-null");
+            $.enableServiceLinks = Objects.requireNonNull($.enableServiceLinks, "expected parameter 'enableServiceLinks' to be non-null");
+            $.imagePullSecrets = Objects.requireNonNull($.imagePullSecrets, "expected parameter 'imagePullSecrets' to be non-null");
+            $.serviceAccountName = Objects.requireNonNull($.serviceAccountName, "expected parameter 'serviceAccountName' to be non-null");
+            $.timeoutSeconds = Objects.requireNonNull($.timeoutSeconds, "expected parameter 'timeoutSeconds' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            return $;
         }
     }
+
 }

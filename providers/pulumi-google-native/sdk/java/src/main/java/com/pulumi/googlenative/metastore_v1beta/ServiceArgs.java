@@ -5,7 +5,6 @@ package com.pulumi.googlenative.metastore_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.enums.ServiceDatabaseType;
 import com.pulumi.googlenative.metastore_v1beta.enums.ServiceReleaseChannel;
 import com.pulumi.googlenative.metastore_v1beta.enums.ServiceTier;
@@ -18,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseType")
-      private final @Nullable Output<ServiceDatabaseType> databaseType;
+    private @Nullable Output<ServiceDatabaseType> databaseType;
 
-    public Output<ServiceDatabaseType> databaseType() {
-        return this.databaseType == null ? Codegen.empty() : this.databaseType;
+    public Optional<Output<ServiceDatabaseType>> databaseType() {
+        return Optional.ofNullable(this.databaseType);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="encryptionConfig")
-      private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
+    private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
-    public Output<EncryptionConfigArgs> encryptionConfig() {
-        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
+    public Optional<Output<EncryptionConfigArgs>> encryptionConfig() {
+        return Optional.ofNullable(this.encryptionConfig);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hiveMetastoreConfig")
-      private final @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
+    private @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
 
-    public Output<HiveMetastoreConfigArgs> hiveMetastoreConfig() {
-        return this.hiveMetastoreConfig == null ? Codegen.empty() : this.hiveMetastoreConfig;
+    public Optional<Output<HiveMetastoreConfigArgs>> hiveMetastoreConfig() {
+        return Optional.ofNullable(this.hiveMetastoreConfig);
     }
 
     /**
@@ -63,17 +63,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maintenanceWindow")
-      private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
+    private @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
-    public Output<MaintenanceWindowArgs> maintenanceWindow() {
-        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
+    public Optional<Output<MaintenanceWindowArgs>> maintenanceWindow() {
+        return Optional.ofNullable(this.maintenanceWindow);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadataIntegration")
-      private final @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
+    private @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
 
-    public Output<MetadataIntegrationArgs> metadataIntegration() {
-        return this.metadataIntegration == null ? Codegen.empty() : this.metadataIntegration;
+    public Optional<Output<MetadataIntegrationArgs>> metadataIntegration() {
+        return Optional.ofNullable(this.metadataIntegration);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<NetworkConfigArgs> networkConfig;
+    private @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<NetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -136,17 +136,17 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -154,21 +154,21 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="releaseChannel")
-      private final @Nullable Output<ServiceReleaseChannel> releaseChannel;
+    private @Nullable Output<ServiceReleaseChannel> releaseChannel;
 
-    public Output<ServiceReleaseChannel> releaseChannel() {
-        return this.releaseChannel == null ? Codegen.empty() : this.releaseChannel;
+    public Optional<Output<ServiceReleaseChannel>> releaseChannel() {
+        return Optional.ofNullable(this.releaseChannel);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="serviceId", required=true)
-      private final Output<String> serviceId;
+    private Output<String> serviceId;
 
     public Output<String> serviceId() {
         return this.serviceId;
@@ -179,245 +179,199 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tier")
-      private final @Nullable Output<ServiceTier> tier;
+    private @Nullable Output<ServiceTier> tier;
 
-    public Output<ServiceTier> tier() {
-        return this.tier == null ? Codegen.empty() : this.tier;
+    public Optional<Output<ServiceTier>> tier() {
+        return Optional.ofNullable(this.tier);
     }
 
-    public ServiceArgs(
-        @Nullable Output<ServiceDatabaseType> databaseType,
-        @Nullable Output<EncryptionConfigArgs> encryptionConfig,
-        @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<MaintenanceWindowArgs> maintenanceWindow,
-        @Nullable Output<MetadataIntegrationArgs> metadataIntegration,
-        @Nullable Output<String> name,
-        @Nullable Output<String> network,
-        @Nullable Output<NetworkConfigArgs> networkConfig,
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> project,
-        @Nullable Output<ServiceReleaseChannel> releaseChannel,
-        @Nullable Output<String> requestId,
-        Output<String> serviceId,
-        @Nullable Output<ServiceTier> tier) {
-        this.databaseType = databaseType;
-        this.encryptionConfig = encryptionConfig;
-        this.hiveMetastoreConfig = hiveMetastoreConfig;
-        this.labels = labels;
-        this.location = location;
-        this.maintenanceWindow = maintenanceWindow;
-        this.metadataIntegration = metadataIntegration;
-        this.name = name;
-        this.network = network;
-        this.networkConfig = networkConfig;
-        this.port = port;
-        this.project = project;
-        this.releaseChannel = releaseChannel;
-        this.requestId = requestId;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-        this.tier = tier;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.databaseType = Codegen.empty();
-        this.encryptionConfig = Codegen.empty();
-        this.hiveMetastoreConfig = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.maintenanceWindow = Codegen.empty();
-        this.metadataIntegration = Codegen.empty();
-        this.name = Codegen.empty();
-        this.network = Codegen.empty();
-        this.networkConfig = Codegen.empty();
-        this.port = Codegen.empty();
-        this.project = Codegen.empty();
-        this.releaseChannel = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.tier = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.databaseType = $.databaseType;
+        this.encryptionConfig = $.encryptionConfig;
+        this.hiveMetastoreConfig = $.hiveMetastoreConfig;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.maintenanceWindow = $.maintenanceWindow;
+        this.metadataIntegration = $.metadataIntegration;
+        this.name = $.name;
+        this.network = $.network;
+        this.networkConfig = $.networkConfig;
+        this.port = $.port;
+        this.project = $.project;
+        this.releaseChannel = $.releaseChannel;
+        this.requestId = $.requestId;
+        this.serviceId = $.serviceId;
+        this.tier = $.tier;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ServiceDatabaseType> databaseType;
-        private @Nullable Output<EncryptionConfigArgs> encryptionConfig;
-        private @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
-        private @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> network;
-        private @Nullable Output<NetworkConfigArgs> networkConfig;
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> project;
-        private @Nullable Output<ServiceReleaseChannel> releaseChannel;
-        private @Nullable Output<String> requestId;
-        private Output<String> serviceId;
-        private @Nullable Output<ServiceTier> tier;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseType = defaults.databaseType;
-    	      this.encryptionConfig = defaults.encryptionConfig;
-    	      this.hiveMetastoreConfig = defaults.hiveMetastoreConfig;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.maintenanceWindow = defaults.maintenanceWindow;
-    	      this.metadataIntegration = defaults.metadataIntegration;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
-    	      this.releaseChannel = defaults.releaseChannel;
-    	      this.requestId = defaults.requestId;
-    	      this.serviceId = defaults.serviceId;
-    	      this.tier = defaults.tier;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseType(@Nullable Output<ServiceDatabaseType> databaseType) {
-            this.databaseType = databaseType;
+            $.databaseType = databaseType;
             return this;
         }
-        public Builder databaseType(@Nullable ServiceDatabaseType databaseType) {
-            this.databaseType = Codegen.ofNullable(databaseType);
-            return this;
+
+        public Builder databaseType(ServiceDatabaseType databaseType) {
+            return databaseType(Output.of(databaseType));
         }
+
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
-            this.encryptionConfig = encryptionConfig;
+            $.encryptionConfig = encryptionConfig;
             return this;
         }
-        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
-            return this;
+
+        public Builder encryptionConfig(EncryptionConfigArgs encryptionConfig) {
+            return encryptionConfig(Output.of(encryptionConfig));
         }
+
         public Builder hiveMetastoreConfig(@Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = hiveMetastoreConfig;
+            $.hiveMetastoreConfig = hiveMetastoreConfig;
             return this;
         }
-        public Builder hiveMetastoreConfig(@Nullable HiveMetastoreConfigArgs hiveMetastoreConfig) {
-            this.hiveMetastoreConfig = Codegen.ofNullable(hiveMetastoreConfig);
-            return this;
+
+        public Builder hiveMetastoreConfig(HiveMetastoreConfigArgs hiveMetastoreConfig) {
+            return hiveMetastoreConfig(Output.of(hiveMetastoreConfig));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder maintenanceWindow(@Nullable Output<MaintenanceWindowArgs> maintenanceWindow) {
-            this.maintenanceWindow = maintenanceWindow;
+            $.maintenanceWindow = maintenanceWindow;
             return this;
         }
-        public Builder maintenanceWindow(@Nullable MaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
-            return this;
+
+        public Builder maintenanceWindow(MaintenanceWindowArgs maintenanceWindow) {
+            return maintenanceWindow(Output.of(maintenanceWindow));
         }
+
         public Builder metadataIntegration(@Nullable Output<MetadataIntegrationArgs> metadataIntegration) {
-            this.metadataIntegration = metadataIntegration;
+            $.metadataIntegration = metadataIntegration;
             return this;
         }
-        public Builder metadataIntegration(@Nullable MetadataIntegrationArgs metadataIntegration) {
-            this.metadataIntegration = Codegen.ofNullable(metadataIntegration);
-            return this;
+
+        public Builder metadataIntegration(MetadataIntegrationArgs metadataIntegration) {
+            return metadataIntegration(Output.of(metadataIntegration));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(NetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder releaseChannel(@Nullable Output<ServiceReleaseChannel> releaseChannel) {
-            this.releaseChannel = releaseChannel;
+            $.releaseChannel = releaseChannel;
             return this;
         }
-        public Builder releaseChannel(@Nullable ServiceReleaseChannel releaseChannel) {
-            this.releaseChannel = Codegen.ofNullable(releaseChannel);
-            return this;
+
+        public Builder releaseChannel(ServiceReleaseChannel releaseChannel) {
+            return releaseChannel(Output.of(releaseChannel));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder serviceId(Output<String> serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
-            return this;
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder tier(@Nullable Output<ServiceTier> tier) {
-            this.tier = tier;
+            $.tier = tier;
             return this;
         }
-        public Builder tier(@Nullable ServiceTier tier) {
-            this.tier = Codegen.ofNullable(tier);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(databaseType, encryptionConfig, hiveMetastoreConfig, labels, location, maintenanceWindow, metadataIntegration, name, network, networkConfig, port, project, releaseChannel, requestId, serviceId, tier);
+
+        public Builder tier(ServiceTier tier) {
+            return tier(Output.of(tier));
+        }
+
+        public ServiceArgs build() {
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

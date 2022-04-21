@@ -21,45 +21,45 @@ public final class LocalObjectReferenceResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public LocalObjectReferenceResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private LocalObjectReferenceResponse() {}
 
-    private LocalObjectReferenceResponse() {
-        this.name = null;
+    private LocalObjectReferenceResponse(LocalObjectReferenceResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalObjectReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private LocalObjectReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalObjectReferenceResponse();
         }
 
         public Builder(LocalObjectReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new LocalObjectReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public LocalObjectReferenceResponse build() {
-            return new LocalObjectReferenceResponse(name);
+        }
+
+        public LocalObjectReferenceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

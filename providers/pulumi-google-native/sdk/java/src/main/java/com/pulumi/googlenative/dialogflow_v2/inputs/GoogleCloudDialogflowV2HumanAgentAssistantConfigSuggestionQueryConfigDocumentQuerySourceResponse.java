@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="documents", required=true)
-      private final List<String> documents;
+    private List<String> documents;
 
     public List<String> documents() {
         return this.documents;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(List<String> documents) {
-        this.documents = Objects.requireNonNull(documents, "expected parameter 'documents' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse() {
-        this.documents = List.of();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse $) {
+        this.documents = $.documents;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> documents;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documents = defaults.documents;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder documents(List<String> documents) {
-            this.documents = Objects.requireNonNull(documents);
+            $.documents = documents;
             return this;
         }
+
         public Builder documents(String... documents) {
             return documents(List.of(documents));
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(documents);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse build() {
+            $.documents = Objects.requireNonNull($.documents, "expected parameter 'documents' to be non-null");
+            return $;
         }
     }
+
 }

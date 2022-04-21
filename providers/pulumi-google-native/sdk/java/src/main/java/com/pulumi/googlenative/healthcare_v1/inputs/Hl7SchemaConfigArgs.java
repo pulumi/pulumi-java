@@ -5,12 +5,12 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.VersionSourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class Hl7SchemaConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="messageSchemaConfigs")
-      private final @Nullable Output<Map<String,String>> messageSchemaConfigs;
+    private @Nullable Output<Map<String,String>> messageSchemaConfigs;
 
-    public Output<Map<String,String>> messageSchemaConfigs() {
-        return this.messageSchemaConfigs == null ? Codegen.empty() : this.messageSchemaConfigs;
+    public Optional<Output<Map<String,String>>> messageSchemaConfigs() {
+        return Optional.ofNullable(this.messageSchemaConfigs);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class Hl7SchemaConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<List<VersionSourceArgs>> version;
+    private @Nullable Output<List<VersionSourceArgs>> version;
 
-    public Output<List<VersionSourceArgs>> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<List<VersionSourceArgs>>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public Hl7SchemaConfigArgs(
-        @Nullable Output<Map<String,String>> messageSchemaConfigs,
-        @Nullable Output<List<VersionSourceArgs>> version) {
-        this.messageSchemaConfigs = messageSchemaConfigs;
-        this.version = version;
-    }
+    private Hl7SchemaConfigArgs() {}
 
-    private Hl7SchemaConfigArgs() {
-        this.messageSchemaConfigs = Codegen.empty();
-        this.version = Codegen.empty();
+    private Hl7SchemaConfigArgs(Hl7SchemaConfigArgs $) {
+        this.messageSchemaConfigs = $.messageSchemaConfigs;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7SchemaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> messageSchemaConfigs;
-        private @Nullable Output<List<VersionSourceArgs>> version;
+        private Hl7SchemaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7SchemaConfigArgs();
         }
 
         public Builder(Hl7SchemaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageSchemaConfigs = defaults.messageSchemaConfigs;
-    	      this.version = defaults.version;
+            $ = new Hl7SchemaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder messageSchemaConfigs(@Nullable Output<Map<String,String>> messageSchemaConfigs) {
-            this.messageSchemaConfigs = messageSchemaConfigs;
+            $.messageSchemaConfigs = messageSchemaConfigs;
             return this;
         }
-        public Builder messageSchemaConfigs(@Nullable Map<String,String> messageSchemaConfigs) {
-            this.messageSchemaConfigs = Codegen.ofNullable(messageSchemaConfigs);
-            return this;
+
+        public Builder messageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
+            return messageSchemaConfigs(Output.of(messageSchemaConfigs));
         }
+
         public Builder version(@Nullable Output<List<VersionSourceArgs>> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable List<VersionSourceArgs> version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
+
+        public Builder version(List<VersionSourceArgs> version) {
+            return version(Output.of(version));
         }
+
         public Builder version(VersionSourceArgs... version) {
             return version(List.of(version));
-        }        public Hl7SchemaConfigArgs build() {
-            return new Hl7SchemaConfigArgs(messageSchemaConfigs, version);
+        }
+
+        public Hl7SchemaConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetAgentPoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAgentPoolArgs Empty = new GetAgentPoolArgs();
 
     @Import(name="agentPoolId", required=true)
-      private final String agentPoolId;
+    private String agentPoolId;
 
     public String agentPoolId() {
         return this.agentPoolId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAgentPoolArgs(
-        String agentPoolId,
-        @Nullable String project) {
-        this.agentPoolId = Objects.requireNonNull(agentPoolId, "expected parameter 'agentPoolId' to be non-null");
-        this.project = project;
-    }
+    private GetAgentPoolArgs() {}
 
-    private GetAgentPoolArgs() {
-        this.agentPoolId = null;
-        this.project = null;
+    private GetAgentPoolArgs(GetAgentPoolArgs $) {
+        this.agentPoolId = $.agentPoolId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAgentPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String agentPoolId;
-        private @Nullable String project;
+        private GetAgentPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAgentPoolArgs();
         }
 
         public Builder(GetAgentPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentPoolId = defaults.agentPoolId;
-    	      this.project = defaults.project;
+            $ = new GetAgentPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentPoolId(String agentPoolId) {
-            this.agentPoolId = Objects.requireNonNull(agentPoolId);
+            $.agentPoolId = agentPoolId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAgentPoolArgs build() {
-            return new GetAgentPoolArgs(agentPoolId, project);
+        }
+
+        public GetAgentPoolArgs build() {
+            $.agentPoolId = Objects.requireNonNull($.agentPoolId, "expected parameter 'agentPoolId' to be non-null");
+            return $;
         }
     }
+
 }

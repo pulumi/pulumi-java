@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SearchParameterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="canonicalUrl")
-      private final @Nullable Output<String> canonicalUrl;
+    private @Nullable Output<String> canonicalUrl;
 
-    public Output<String> canonicalUrl() {
-        return this.canonicalUrl == null ? Codegen.empty() : this.canonicalUrl;
+    public Optional<Output<String>> canonicalUrl() {
+        return Optional.ofNullable(this.canonicalUrl);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SearchParameterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="parameter")
-      private final @Nullable Output<String> parameter;
+    private @Nullable Output<String> parameter;
 
-    public Output<String> parameter() {
-        return this.parameter == null ? Codegen.empty() : this.parameter;
+    public Optional<Output<String>> parameter() {
+        return Optional.ofNullable(this.parameter);
     }
 
-    public SearchParameterArgs(
-        @Nullable Output<String> canonicalUrl,
-        @Nullable Output<String> parameter) {
-        this.canonicalUrl = canonicalUrl;
-        this.parameter = parameter;
-    }
+    private SearchParameterArgs() {}
 
-    private SearchParameterArgs() {
-        this.canonicalUrl = Codegen.empty();
-        this.parameter = Codegen.empty();
+    private SearchParameterArgs(SearchParameterArgs $) {
+        this.canonicalUrl = $.canonicalUrl;
+        this.parameter = $.parameter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SearchParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> canonicalUrl;
-        private @Nullable Output<String> parameter;
+        private SearchParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SearchParameterArgs();
         }
 
         public Builder(SearchParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canonicalUrl = defaults.canonicalUrl;
-    	      this.parameter = defaults.parameter;
+            $ = new SearchParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canonicalUrl(@Nullable Output<String> canonicalUrl) {
-            this.canonicalUrl = canonicalUrl;
+            $.canonicalUrl = canonicalUrl;
             return this;
         }
-        public Builder canonicalUrl(@Nullable String canonicalUrl) {
-            this.canonicalUrl = Codegen.ofNullable(canonicalUrl);
-            return this;
+
+        public Builder canonicalUrl(String canonicalUrl) {
+            return canonicalUrl(Output.of(canonicalUrl));
         }
+
         public Builder parameter(@Nullable Output<String> parameter) {
-            this.parameter = parameter;
+            $.parameter = parameter;
             return this;
         }
-        public Builder parameter(@Nullable String parameter) {
-            this.parameter = Codegen.ofNullable(parameter);
-            return this;
-        }        public SearchParameterArgs build() {
-            return new SearchParameterArgs(canonicalUrl, parameter);
+
+        public Builder parameter(String parameter) {
+            return parameter(Output.of(parameter));
+        }
+
+        public SearchParameterArgs build() {
+            return $;
         }
     }
+
 }

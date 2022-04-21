@@ -21,45 +21,45 @@ public final class IosAppInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public IosAppInfoResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private IosAppInfoResponse() {}
 
-    private IosAppInfoResponse() {
-        this.name = null;
+    private IosAppInfoResponse(IosAppInfoResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosAppInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private IosAppInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosAppInfoResponse();
         }
 
         public Builder(IosAppInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new IosAppInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public IosAppInfoResponse build() {
-            return new IosAppInfoResponse(name);
+        }
+
+        public IosAppInfoResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

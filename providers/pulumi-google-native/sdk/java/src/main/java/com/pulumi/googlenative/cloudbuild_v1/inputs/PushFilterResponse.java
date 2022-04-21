@@ -22,7 +22,7 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="branch", required=true)
-      private final String branch;
+    private String branch;
 
     public String branch() {
         return this.branch;
@@ -33,7 +33,7 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="invertRegex", required=true)
-      private final Boolean invertRegex;
+    private Boolean invertRegex;
 
     public Boolean invertRegex() {
         return this.invertRegex;
@@ -44,64 +44,59 @@ public final class PushFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
     }
 
-    public PushFilterResponse(
-        String branch,
-        Boolean invertRegex,
-        String tag) {
-        this.branch = Objects.requireNonNull(branch, "expected parameter 'branch' to be non-null");
-        this.invertRegex = Objects.requireNonNull(invertRegex, "expected parameter 'invertRegex' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private PushFilterResponse() {}
 
-    private PushFilterResponse() {
-        this.branch = null;
-        this.invertRegex = null;
-        this.tag = null;
+    private PushFilterResponse(PushFilterResponse $) {
+        this.branch = $.branch;
+        this.invertRegex = $.invertRegex;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String branch;
-        private Boolean invertRegex;
-        private String tag;
+        private PushFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushFilterResponse();
         }
 
         public Builder(PushFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branch = defaults.branch;
-    	      this.invertRegex = defaults.invertRegex;
-    	      this.tag = defaults.tag;
+            $ = new PushFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branch(String branch) {
-            this.branch = Objects.requireNonNull(branch);
+            $.branch = branch;
             return this;
         }
+
         public Builder invertRegex(Boolean invertRegex) {
-            this.invertRegex = Objects.requireNonNull(invertRegex);
+            $.invertRegex = invertRegex;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public PushFilterResponse build() {
-            return new PushFilterResponse(branch, invertRegex, tag);
+        }
+
+        public PushFilterResponse build() {
+            $.branch = Objects.requireNonNull($.branch, "expected parameter 'branch' to be non-null");
+            $.invertRegex = Objects.requireNonNull($.invertRegex, "expected parameter 'invertRegex' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ApprovalConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="approvalRequired")
-      private final @Nullable Output<Boolean> approvalRequired;
+    private @Nullable Output<Boolean> approvalRequired;
 
-    public Output<Boolean> approvalRequired() {
-        return this.approvalRequired == null ? Codegen.empty() : this.approvalRequired;
+    public Optional<Output<Boolean>> approvalRequired() {
+        return Optional.ofNullable(this.approvalRequired);
     }
 
-    public ApprovalConfigArgs(@Nullable Output<Boolean> approvalRequired) {
-        this.approvalRequired = approvalRequired;
-    }
+    private ApprovalConfigArgs() {}
 
-    private ApprovalConfigArgs() {
-        this.approvalRequired = Codegen.empty();
+    private ApprovalConfigArgs(ApprovalConfigArgs $) {
+        this.approvalRequired = $.approvalRequired;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApprovalConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> approvalRequired;
+        private ApprovalConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApprovalConfigArgs();
         }
 
         public Builder(ApprovalConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalRequired = defaults.approvalRequired;
+            $ = new ApprovalConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalRequired(@Nullable Output<Boolean> approvalRequired) {
-            this.approvalRequired = approvalRequired;
+            $.approvalRequired = approvalRequired;
             return this;
         }
-        public Builder approvalRequired(@Nullable Boolean approvalRequired) {
-            this.approvalRequired = Codegen.ofNullable(approvalRequired);
-            return this;
-        }        public ApprovalConfigArgs build() {
-            return new ApprovalConfigArgs(approvalRequired);
+
+        public Builder approvalRequired(Boolean approvalRequired) {
+            return approvalRequired(Output.of(approvalRequired));
+        }
+
+        public ApprovalConfigArgs build() {
+            return $;
         }
     }
+
 }

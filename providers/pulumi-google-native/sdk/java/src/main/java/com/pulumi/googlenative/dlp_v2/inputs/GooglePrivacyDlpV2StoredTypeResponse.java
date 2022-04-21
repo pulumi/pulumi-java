@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -32,55 +32,52 @@ public final class GooglePrivacyDlpV2StoredTypeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GooglePrivacyDlpV2StoredTypeResponse(
-        String createTime,
-        String name) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GooglePrivacyDlpV2StoredTypeResponse() {}
 
-    private GooglePrivacyDlpV2StoredTypeResponse() {
-        this.createTime = null;
-        this.name = null;
+    private GooglePrivacyDlpV2StoredTypeResponse(GooglePrivacyDlpV2StoredTypeResponse $) {
+        this.createTime = $.createTime;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StoredTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String name;
+        private GooglePrivacyDlpV2StoredTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StoredTypeResponse();
         }
 
         public Builder(GooglePrivacyDlpV2StoredTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.name = defaults.name;
+            $ = new GooglePrivacyDlpV2StoredTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GooglePrivacyDlpV2StoredTypeResponse build() {
-            return new GooglePrivacyDlpV2StoredTypeResponse(createTime, name);
+        }
+
+        public GooglePrivacyDlpV2StoredTypeResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

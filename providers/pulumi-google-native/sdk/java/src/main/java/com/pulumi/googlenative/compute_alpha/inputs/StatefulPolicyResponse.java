@@ -13,45 +13,45 @@ public final class StatefulPolicyResponse extends com.pulumi.resources.InvokeArg
     public static final StatefulPolicyResponse Empty = new StatefulPolicyResponse();
 
     @Import(name="preservedState", required=true)
-      private final StatefulPolicyPreservedStateResponse preservedState;
+    private StatefulPolicyPreservedStateResponse preservedState;
 
     public StatefulPolicyPreservedStateResponse preservedState() {
         return this.preservedState;
     }
 
-    public StatefulPolicyResponse(StatefulPolicyPreservedStateResponse preservedState) {
-        this.preservedState = Objects.requireNonNull(preservedState, "expected parameter 'preservedState' to be non-null");
-    }
+    private StatefulPolicyResponse() {}
 
-    private StatefulPolicyResponse() {
-        this.preservedState = null;
+    private StatefulPolicyResponse(StatefulPolicyResponse $) {
+        this.preservedState = $.preservedState;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private StatefulPolicyPreservedStateResponse preservedState;
+        private StatefulPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulPolicyResponse();
         }
 
         public Builder(StatefulPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.preservedState = defaults.preservedState;
+            $ = new StatefulPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder preservedState(StatefulPolicyPreservedStateResponse preservedState) {
-            this.preservedState = Objects.requireNonNull(preservedState);
+            $.preservedState = preservedState;
             return this;
-        }        public StatefulPolicyResponse build() {
-            return new StatefulPolicyResponse(preservedState);
+        }
+
+        public StatefulPolicyResponse build() {
+            $.preservedState = Objects.requireNonNull($.preservedState, "expected parameter 'preservedState' to be non-null");
+            return $;
         }
     }
+
 }

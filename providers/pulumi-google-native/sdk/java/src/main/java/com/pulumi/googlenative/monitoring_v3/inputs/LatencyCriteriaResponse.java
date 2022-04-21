@@ -21,45 +21,45 @@ public final class LatencyCriteriaResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="threshold", required=true)
-      private final String threshold;
+    private String threshold;
 
     public String threshold() {
         return this.threshold;
     }
 
-    public LatencyCriteriaResponse(String threshold) {
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-    }
+    private LatencyCriteriaResponse() {}
 
-    private LatencyCriteriaResponse() {
-        this.threshold = null;
+    private LatencyCriteriaResponse(LatencyCriteriaResponse $) {
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LatencyCriteriaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String threshold;
+        private LatencyCriteriaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LatencyCriteriaResponse();
         }
 
         public Builder(LatencyCriteriaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.threshold = defaults.threshold;
+            $ = new LatencyCriteriaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder threshold(String threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
-        }        public LatencyCriteriaResponse build() {
-            return new LatencyCriteriaResponse(threshold);
+        }
+
+        public LatencyCriteriaResponse build() {
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.BuildProvenanceArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="intotoStatement")
-      private final @Nullable Output<InTotoStatementArgs> intotoStatement;
+    private @Nullable Output<InTotoStatementArgs> intotoStatement;
 
-    public Output<InTotoStatementArgs> intotoStatement() {
-        return this.intotoStatement == null ? Codegen.empty() : this.intotoStatement;
+    public Optional<Output<InTotoStatementArgs>> intotoStatement() {
+        return Optional.ofNullable(this.intotoStatement);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="provenance")
-      private final @Nullable Output<BuildProvenanceArgs> provenance;
+    private @Nullable Output<BuildProvenanceArgs> provenance;
 
-    public Output<BuildProvenanceArgs> provenance() {
-        return this.provenance == null ? Codegen.empty() : this.provenance;
+    public Optional<Output<BuildProvenanceArgs>> provenance() {
+        return Optional.ofNullable(this.provenance);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class BuildOccurrenceArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="provenanceBytes")
-      private final @Nullable Output<String> provenanceBytes;
+    private @Nullable Output<String> provenanceBytes;
 
-    public Output<String> provenanceBytes() {
-        return this.provenanceBytes == null ? Codegen.empty() : this.provenanceBytes;
+    public Optional<Output<String>> provenanceBytes() {
+        return Optional.ofNullable(this.provenanceBytes);
     }
 
-    public BuildOccurrenceArgs(
-        @Nullable Output<InTotoStatementArgs> intotoStatement,
-        @Nullable Output<BuildProvenanceArgs> provenance,
-        @Nullable Output<String> provenanceBytes) {
-        this.intotoStatement = intotoStatement;
-        this.provenance = provenance;
-        this.provenanceBytes = provenanceBytes;
-    }
+    private BuildOccurrenceArgs() {}
 
-    private BuildOccurrenceArgs() {
-        this.intotoStatement = Codegen.empty();
-        this.provenance = Codegen.empty();
-        this.provenanceBytes = Codegen.empty();
+    private BuildOccurrenceArgs(BuildOccurrenceArgs $) {
+        this.intotoStatement = $.intotoStatement;
+        this.provenance = $.provenance;
+        this.provenanceBytes = $.provenanceBytes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InTotoStatementArgs> intotoStatement;
-        private @Nullable Output<BuildProvenanceArgs> provenance;
-        private @Nullable Output<String> provenanceBytes;
+        private BuildOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildOccurrenceArgs();
         }
 
         public Builder(BuildOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.intotoStatement = defaults.intotoStatement;
-    	      this.provenance = defaults.provenance;
-    	      this.provenanceBytes = defaults.provenanceBytes;
+            $ = new BuildOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder intotoStatement(@Nullable Output<InTotoStatementArgs> intotoStatement) {
-            this.intotoStatement = intotoStatement;
+            $.intotoStatement = intotoStatement;
             return this;
         }
-        public Builder intotoStatement(@Nullable InTotoStatementArgs intotoStatement) {
-            this.intotoStatement = Codegen.ofNullable(intotoStatement);
-            return this;
+
+        public Builder intotoStatement(InTotoStatementArgs intotoStatement) {
+            return intotoStatement(Output.of(intotoStatement));
         }
+
         public Builder provenance(@Nullable Output<BuildProvenanceArgs> provenance) {
-            this.provenance = provenance;
+            $.provenance = provenance;
             return this;
         }
-        public Builder provenance(@Nullable BuildProvenanceArgs provenance) {
-            this.provenance = Codegen.ofNullable(provenance);
-            return this;
+
+        public Builder provenance(BuildProvenanceArgs provenance) {
+            return provenance(Output.of(provenance));
         }
+
         public Builder provenanceBytes(@Nullable Output<String> provenanceBytes) {
-            this.provenanceBytes = provenanceBytes;
+            $.provenanceBytes = provenanceBytes;
             return this;
         }
-        public Builder provenanceBytes(@Nullable String provenanceBytes) {
-            this.provenanceBytes = Codegen.ofNullable(provenanceBytes);
-            return this;
-        }        public BuildOccurrenceArgs build() {
-            return new BuildOccurrenceArgs(intotoStatement, provenance, provenanceBytes);
+
+        public Builder provenanceBytes(String provenanceBytes) {
+            return provenanceBytes(Output.of(provenanceBytes));
+        }
+
+        public BuildOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

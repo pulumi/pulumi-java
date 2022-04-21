@@ -23,7 +23,7 @@ public final class HiveMetastoreConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="auxiliaryVersions", required=true)
-      private final Map<String,String> auxiliaryVersions;
+    private Map<String,String> auxiliaryVersions;
 
     public Map<String,String> auxiliaryVersions() {
         return this.auxiliaryVersions;
@@ -34,7 +34,7 @@ public final class HiveMetastoreConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="configOverrides", required=true)
-      private final Map<String,String> configOverrides;
+    private Map<String,String> configOverrides;
 
     public Map<String,String> configOverrides() {
         return this.configOverrides;
@@ -45,7 +45,7 @@ public final class HiveMetastoreConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endpointProtocol", required=true)
-      private final String endpointProtocol;
+    private String endpointProtocol;
 
     public String endpointProtocol() {
         return this.endpointProtocol;
@@ -56,7 +56,7 @@ public final class HiveMetastoreConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="kerberosConfig", required=true)
-      private final KerberosConfigResponse kerberosConfig;
+    private KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse kerberosConfig() {
         return this.kerberosConfig;
@@ -67,82 +67,73 @@ public final class HiveMetastoreConfigResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public HiveMetastoreConfigResponse(
-        Map<String,String> auxiliaryVersions,
-        Map<String,String> configOverrides,
-        String endpointProtocol,
-        KerberosConfigResponse kerberosConfig,
-        String version) {
-        this.auxiliaryVersions = Objects.requireNonNull(auxiliaryVersions, "expected parameter 'auxiliaryVersions' to be non-null");
-        this.configOverrides = Objects.requireNonNull(configOverrides, "expected parameter 'configOverrides' to be non-null");
-        this.endpointProtocol = Objects.requireNonNull(endpointProtocol, "expected parameter 'endpointProtocol' to be non-null");
-        this.kerberosConfig = Objects.requireNonNull(kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private HiveMetastoreConfigResponse() {}
 
-    private HiveMetastoreConfigResponse() {
-        this.auxiliaryVersions = Map.of();
-        this.configOverrides = Map.of();
-        this.endpointProtocol = null;
-        this.kerberosConfig = null;
-        this.version = null;
+    private HiveMetastoreConfigResponse(HiveMetastoreConfigResponse $) {
+        this.auxiliaryVersions = $.auxiliaryVersions;
+        this.configOverrides = $.configOverrides;
+        this.endpointProtocol = $.endpointProtocol;
+        this.kerberosConfig = $.kerberosConfig;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HiveMetastoreConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> auxiliaryVersions;
-        private Map<String,String> configOverrides;
-        private String endpointProtocol;
-        private KerberosConfigResponse kerberosConfig;
-        private String version;
+        private HiveMetastoreConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HiveMetastoreConfigResponse();
         }
 
         public Builder(HiveMetastoreConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auxiliaryVersions = defaults.auxiliaryVersions;
-    	      this.configOverrides = defaults.configOverrides;
-    	      this.endpointProtocol = defaults.endpointProtocol;
-    	      this.kerberosConfig = defaults.kerberosConfig;
-    	      this.version = defaults.version;
+            $ = new HiveMetastoreConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder auxiliaryVersions(Map<String,String> auxiliaryVersions) {
-            this.auxiliaryVersions = Objects.requireNonNull(auxiliaryVersions);
+            $.auxiliaryVersions = auxiliaryVersions;
             return this;
         }
+
         public Builder configOverrides(Map<String,String> configOverrides) {
-            this.configOverrides = Objects.requireNonNull(configOverrides);
+            $.configOverrides = configOverrides;
             return this;
         }
+
         public Builder endpointProtocol(String endpointProtocol) {
-            this.endpointProtocol = Objects.requireNonNull(endpointProtocol);
+            $.endpointProtocol = endpointProtocol;
             return this;
         }
+
         public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
-            this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
+            $.kerberosConfig = kerberosConfig;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public HiveMetastoreConfigResponse build() {
-            return new HiveMetastoreConfigResponse(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
+        }
+
+        public HiveMetastoreConfigResponse build() {
+            $.auxiliaryVersions = Objects.requireNonNull($.auxiliaryVersions, "expected parameter 'auxiliaryVersions' to be non-null");
+            $.configOverrides = Objects.requireNonNull($.configOverrides, "expected parameter 'configOverrides' to be non-null");
+            $.endpointProtocol = Objects.requireNonNull($.endpointProtocol, "expected parameter 'endpointProtocol' to be non-null");
+            $.kerberosConfig = Objects.requireNonNull($.kerberosConfig, "expected parameter 'kerberosConfig' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

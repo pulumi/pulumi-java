@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
      * 
      */
     @Import(name="bucketSize", required=true)
-      private final String bucketSize;
+    private String bucketSize;
 
     public String bucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
      * 
      */
     @Import(name="bucketValueCount", required=true)
-      private final String bucketValueCount;
+    private String bucketValueCount;
 
     public String bucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
      * 
      */
     @Import(name="bucketValues", required=true)
-      private final List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
+    private List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
      * 
      */
     @Import(name="equivalenceClassSizeLowerBound", required=true)
-      private final String equivalenceClassSizeLowerBound;
+    private String equivalenceClassSizeLowerBound;
 
     public String equivalenceClassSizeLowerBound() {
         return this.equivalenceClassSizeLowerBound;
@@ -67,85 +67,77 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse extends c
      * 
      */
     @Import(name="equivalenceClassSizeUpperBound", required=true)
-      private final String equivalenceClassSizeUpperBound;
+    private String equivalenceClassSizeUpperBound;
 
     public String equivalenceClassSizeUpperBound() {
         return this.equivalenceClassSizeUpperBound;
     }
 
-    public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
-        String equivalenceClassSizeLowerBound,
-        String equivalenceClassSizeUpperBound) {
-        this.bucketSize = Objects.requireNonNull(bucketSize, "expected parameter 'bucketSize' to be non-null");
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
-        this.bucketValues = Objects.requireNonNull(bucketValues, "expected parameter 'bucketValues' to be non-null");
-        this.equivalenceClassSizeLowerBound = Objects.requireNonNull(equivalenceClassSizeLowerBound, "expected parameter 'equivalenceClassSizeLowerBound' to be non-null");
-        this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound, "expected parameter 'equivalenceClassSizeUpperBound' to be non-null");
-    }
+    private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse() {}
 
-    private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse() {
-        this.bucketSize = null;
-        this.bucketValueCount = null;
-        this.bucketValues = List.of();
-        this.equivalenceClassSizeLowerBound = null;
-        this.equivalenceClassSizeUpperBound = null;
+    private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(GooglePrivacyDlpV2KAnonymityHistogramBucketResponse $) {
+        this.bucketSize = $.bucketSize;
+        this.bucketValueCount = $.bucketValueCount;
+        this.bucketValues = $.bucketValues;
+        this.equivalenceClassSizeLowerBound = $.equivalenceClassSizeLowerBound;
+        this.equivalenceClassSizeUpperBound = $.equivalenceClassSizeUpperBound;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KAnonymityHistogramBucketResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketSize;
-        private String bucketValueCount;
-        private List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues;
-        private String equivalenceClassSizeLowerBound;
-        private String equivalenceClassSizeUpperBound;
+        private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KAnonymityHistogramBucketResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketSize = defaults.bucketSize;
-    	      this.bucketValueCount = defaults.bucketValueCount;
-    	      this.bucketValues = defaults.bucketValues;
-    	      this.equivalenceClassSizeLowerBound = defaults.equivalenceClassSizeLowerBound;
-    	      this.equivalenceClassSizeUpperBound = defaults.equivalenceClassSizeUpperBound;
+            $ = new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketSize(String bucketSize) {
-            this.bucketSize = Objects.requireNonNull(bucketSize);
+            $.bucketSize = bucketSize;
             return this;
         }
+
         public Builder bucketValueCount(String bucketValueCount) {
-            this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
+            $.bucketValueCount = bucketValueCount;
             return this;
         }
+
         public Builder bucketValues(List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues) {
-            this.bucketValues = Objects.requireNonNull(bucketValues);
+            $.bucketValues = bucketValues;
             return this;
         }
+
         public Builder bucketValues(GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
+
         public Builder equivalenceClassSizeLowerBound(String equivalenceClassSizeLowerBound) {
-            this.equivalenceClassSizeLowerBound = Objects.requireNonNull(equivalenceClassSizeLowerBound);
+            $.equivalenceClassSizeLowerBound = equivalenceClassSizeLowerBound;
             return this;
         }
+
         public Builder equivalenceClassSizeUpperBound(String equivalenceClassSizeUpperBound) {
-            this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
+            $.equivalenceClassSizeUpperBound = equivalenceClassSizeUpperBound;
             return this;
-        }        public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
-            return new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, equivalenceClassSizeLowerBound, equivalenceClassSizeUpperBound);
+        }
+
+        public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
+            $.bucketSize = Objects.requireNonNull($.bucketSize, "expected parameter 'bucketSize' to be non-null");
+            $.bucketValueCount = Objects.requireNonNull($.bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
+            $.bucketValues = Objects.requireNonNull($.bucketValues, "expected parameter 'bucketValues' to be non-null");
+            $.equivalenceClassSizeLowerBound = Objects.requireNonNull($.equivalenceClassSizeLowerBound, "expected parameter 'equivalenceClassSizeLowerBound' to be non-null");
+            $.equivalenceClassSizeUpperBound = Objects.requireNonNull($.equivalenceClassSizeUpperBound, "expected parameter 'equivalenceClassSizeUpperBound' to be non-null");
+            return $;
         }
     }
+
 }

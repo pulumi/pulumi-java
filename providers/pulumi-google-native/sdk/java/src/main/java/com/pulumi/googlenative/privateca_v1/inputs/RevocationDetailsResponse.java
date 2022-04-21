@@ -21,7 +21,7 @@ public final class RevocationDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revocationState", required=true)
-      private final String revocationState;
+    private String revocationState;
 
     public String revocationState() {
         return this.revocationState;
@@ -32,55 +32,52 @@ public final class RevocationDetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="revocationTime", required=true)
-      private final String revocationTime;
+    private String revocationTime;
 
     public String revocationTime() {
         return this.revocationTime;
     }
 
-    public RevocationDetailsResponse(
-        String revocationState,
-        String revocationTime) {
-        this.revocationState = Objects.requireNonNull(revocationState, "expected parameter 'revocationState' to be non-null");
-        this.revocationTime = Objects.requireNonNull(revocationTime, "expected parameter 'revocationTime' to be non-null");
-    }
+    private RevocationDetailsResponse() {}
 
-    private RevocationDetailsResponse() {
-        this.revocationState = null;
-        this.revocationTime = null;
+    private RevocationDetailsResponse(RevocationDetailsResponse $) {
+        this.revocationState = $.revocationState;
+        this.revocationTime = $.revocationTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RevocationDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String revocationState;
-        private String revocationTime;
+        private RevocationDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RevocationDetailsResponse();
         }
 
         public Builder(RevocationDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revocationState = defaults.revocationState;
-    	      this.revocationTime = defaults.revocationTime;
+            $ = new RevocationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder revocationState(String revocationState) {
-            this.revocationState = Objects.requireNonNull(revocationState);
+            $.revocationState = revocationState;
             return this;
         }
+
         public Builder revocationTime(String revocationTime) {
-            this.revocationTime = Objects.requireNonNull(revocationTime);
+            $.revocationTime = revocationTime;
             return this;
-        }        public RevocationDetailsResponse build() {
-            return new RevocationDetailsResponse(revocationState, revocationTime);
+        }
+
+        public RevocationDetailsResponse build() {
+            $.revocationState = Objects.requireNonNull($.revocationState, "expected parameter 'revocationState' to be non-null");
+            $.revocationTime = Objects.requireNonNull($.revocationTime, "expected parameter 'revocationTime' to be non-null");
+            return $;
         }
     }
+
 }

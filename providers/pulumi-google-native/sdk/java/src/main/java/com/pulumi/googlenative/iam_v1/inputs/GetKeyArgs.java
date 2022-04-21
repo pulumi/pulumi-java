@@ -15,94 +15,85 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="publicKeyType")
-      private final @Nullable String publicKeyType;
+    private @Nullable String publicKeyType;
 
     public Optional<String> publicKeyType() {
-        return this.publicKeyType == null ? Optional.empty() : Optional.ofNullable(this.publicKeyType);
+        return Optional.ofNullable(this.publicKeyType);
     }
 
     @Import(name="serviceAccountId", required=true)
-      private final String serviceAccountId;
+    private String serviceAccountId;
 
     public String serviceAccountId() {
         return this.serviceAccountId;
     }
 
-    public GetKeyArgs(
-        String keyId,
-        @Nullable String project,
-        @Nullable String publicKeyType,
-        String serviceAccountId) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.project = project;
-        this.publicKeyType = publicKeyType;
-        this.serviceAccountId = Objects.requireNonNull(serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
-    }
+    private GetKeyArgs() {}
 
-    private GetKeyArgs() {
-        this.keyId = null;
-        this.project = null;
-        this.publicKeyType = null;
-        this.serviceAccountId = null;
+    private GetKeyArgs(GetKeyArgs $) {
+        this.keyId = $.keyId;
+        this.project = $.project;
+        this.publicKeyType = $.publicKeyType;
+        this.serviceAccountId = $.serviceAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private @Nullable String project;
-        private @Nullable String publicKeyType;
-        private String serviceAccountId;
+        private GetKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyArgs();
         }
 
         public Builder(GetKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.project = defaults.project;
-    	      this.publicKeyType = defaults.publicKeyType;
-    	      this.serviceAccountId = defaults.serviceAccountId;
+            $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder publicKeyType(@Nullable String publicKeyType) {
-            this.publicKeyType = publicKeyType;
+            $.publicKeyType = publicKeyType;
             return this;
         }
+
         public Builder serviceAccountId(String serviceAccountId) {
-            this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
+            $.serviceAccountId = serviceAccountId;
             return this;
-        }        public GetKeyArgs build() {
-            return new GetKeyArgs(keyId, project, publicKeyType, serviceAccountId);
+        }
+
+        public GetKeyArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.serviceAccountId = Objects.requireNonNull($.serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
+            return $;
         }
     }
+
 }

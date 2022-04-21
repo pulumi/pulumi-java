@@ -15,94 +15,85 @@ public final class GetConversationArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetConversationArgs Empty = new GetConversationArgs();
 
     @Import(name="conversationId", required=true)
-      private final String conversationId;
+    private String conversationId;
 
     public String conversationId() {
         return this.conversationId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetConversationArgs(
-        String conversationId,
-        String location,
-        @Nullable String project,
-        @Nullable String view) {
-        this.conversationId = Objects.requireNonNull(conversationId, "expected parameter 'conversationId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.view = view;
-    }
+    private GetConversationArgs() {}
 
-    private GetConversationArgs() {
-        this.conversationId = null;
-        this.location = null;
-        this.project = null;
-        this.view = null;
+    private GetConversationArgs(GetConversationArgs $) {
+        this.conversationId = $.conversationId;
+        this.location = $.location;
+        this.project = $.project;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetConversationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String conversationId;
-        private String location;
-        private @Nullable String project;
-        private @Nullable String view;
+        private GetConversationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetConversationArgs();
         }
 
         public Builder(GetConversationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationId = defaults.conversationId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.view = defaults.view;
+            $ = new GetConversationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationId(String conversationId) {
-            this.conversationId = Objects.requireNonNull(conversationId);
+            $.conversationId = conversationId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetConversationArgs build() {
-            return new GetConversationArgs(conversationId, location, project, view);
+        }
+
+        public GetConversationArgs build() {
+            $.conversationId = Objects.requireNonNull($.conversationId, "expected parameter 'conversationId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

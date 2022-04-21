@@ -5,9 +5,9 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class GoogleSheetsOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="range")
-      private final @Nullable Output<String> range;
+    private @Nullable Output<String> range;
 
-    public Output<String> range() {
-        return this.range == null ? Codegen.empty() : this.range;
+    public Optional<Output<String>> range() {
+        return Optional.ofNullable(this.range);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class GoogleSheetsOptionsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="skipLeadingRows")
-      private final @Nullable Output<String> skipLeadingRows;
+    private @Nullable Output<String> skipLeadingRows;
 
-    public Output<String> skipLeadingRows() {
-        return this.skipLeadingRows == null ? Codegen.empty() : this.skipLeadingRows;
+    public Optional<Output<String>> skipLeadingRows() {
+        return Optional.ofNullable(this.skipLeadingRows);
     }
 
-    public GoogleSheetsOptionsArgs(
-        @Nullable Output<String> range,
-        @Nullable Output<String> skipLeadingRows) {
-        this.range = range;
-        this.skipLeadingRows = skipLeadingRows;
-    }
+    private GoogleSheetsOptionsArgs() {}
 
-    private GoogleSheetsOptionsArgs() {
-        this.range = Codegen.empty();
-        this.skipLeadingRows = Codegen.empty();
+    private GoogleSheetsOptionsArgs(GoogleSheetsOptionsArgs $) {
+        this.range = $.range;
+        this.skipLeadingRows = $.skipLeadingRows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleSheetsOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> range;
-        private @Nullable Output<String> skipLeadingRows;
+        private GoogleSheetsOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleSheetsOptionsArgs();
         }
 
         public Builder(GoogleSheetsOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.range = defaults.range;
-    	      this.skipLeadingRows = defaults.skipLeadingRows;
+            $ = new GoogleSheetsOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder range(@Nullable Output<String> range) {
-            this.range = range;
+            $.range = range;
             return this;
         }
-        public Builder range(@Nullable String range) {
-            this.range = Codegen.ofNullable(range);
-            return this;
+
+        public Builder range(String range) {
+            return range(Output.of(range));
         }
+
         public Builder skipLeadingRows(@Nullable Output<String> skipLeadingRows) {
-            this.skipLeadingRows = skipLeadingRows;
+            $.skipLeadingRows = skipLeadingRows;
             return this;
         }
-        public Builder skipLeadingRows(@Nullable String skipLeadingRows) {
-            this.skipLeadingRows = Codegen.ofNullable(skipLeadingRows);
-            return this;
-        }        public GoogleSheetsOptionsArgs build() {
-            return new GoogleSheetsOptionsArgs(range, skipLeadingRows);
+
+        public Builder skipLeadingRows(String skipLeadingRows) {
+            return skipLeadingRows(Output.of(skipLeadingRows));
+        }
+
+        public GoogleSheetsOptionsArgs build() {
+            return $;
         }
     }
+
 }

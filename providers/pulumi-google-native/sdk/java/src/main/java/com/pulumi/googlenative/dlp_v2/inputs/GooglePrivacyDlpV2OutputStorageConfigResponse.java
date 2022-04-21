@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends com.pul
      * 
      */
     @Import(name="outputSchema", required=true)
-      private final String outputSchema;
+    private String outputSchema;
 
     public String outputSchema() {
         return this.outputSchema;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2OutputStorageConfigResponse extends com.pul
      * 
      */
     @Import(name="table", required=true)
-      private final GooglePrivacyDlpV2BigQueryTableResponse table;
+    private GooglePrivacyDlpV2BigQueryTableResponse table;
 
     public GooglePrivacyDlpV2BigQueryTableResponse table() {
         return this.table;
     }
 
-    public GooglePrivacyDlpV2OutputStorageConfigResponse(
-        String outputSchema,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
-        this.outputSchema = Objects.requireNonNull(outputSchema, "expected parameter 'outputSchema' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private GooglePrivacyDlpV2OutputStorageConfigResponse() {}
 
-    private GooglePrivacyDlpV2OutputStorageConfigResponse() {
-        this.outputSchema = null;
-        this.table = null;
+    private GooglePrivacyDlpV2OutputStorageConfigResponse(GooglePrivacyDlpV2OutputStorageConfigResponse $) {
+        this.outputSchema = $.outputSchema;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2OutputStorageConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String outputSchema;
-        private GooglePrivacyDlpV2BigQueryTableResponse table;
+        private GooglePrivacyDlpV2OutputStorageConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2OutputStorageConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2OutputStorageConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outputSchema = defaults.outputSchema;
-    	      this.table = defaults.table;
+            $ = new GooglePrivacyDlpV2OutputStorageConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder outputSchema(String outputSchema) {
-            this.outputSchema = Objects.requireNonNull(outputSchema);
+            $.outputSchema = outputSchema;
             return this;
         }
+
         public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
-        }        public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
-            return new GooglePrivacyDlpV2OutputStorageConfigResponse(outputSchema, table);
+        }
+
+        public GooglePrivacyDlpV2OutputStorageConfigResponse build() {
+            $.outputSchema = Objects.requireNonNull($.outputSchema, "expected parameter 'outputSchema' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

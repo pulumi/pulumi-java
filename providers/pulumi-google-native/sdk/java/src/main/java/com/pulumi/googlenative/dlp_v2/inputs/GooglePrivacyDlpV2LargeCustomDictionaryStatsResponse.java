@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse extends 
      * 
      */
     @Import(name="approxNumPhrases", required=true)
-      private final String approxNumPhrases;
+    private String approxNumPhrases;
 
     public String approxNumPhrases() {
         return this.approxNumPhrases;
     }
 
-    public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(String approxNumPhrases) {
-        this.approxNumPhrases = Objects.requireNonNull(approxNumPhrases, "expected parameter 'approxNumPhrases' to be non-null");
-    }
+    private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse() {}
 
-    private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse() {
-        this.approxNumPhrases = null;
+    private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse $) {
+        this.approxNumPhrases = $.approxNumPhrases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String approxNumPhrases;
+        private GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approxNumPhrases = defaults.approxNumPhrases;
+            $ = new GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder approxNumPhrases(String approxNumPhrases) {
-            this.approxNumPhrases = Objects.requireNonNull(approxNumPhrases);
+            $.approxNumPhrases = approxNumPhrases;
             return this;
-        }        public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse build() {
-            return new GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse(approxNumPhrases);
+        }
+
+        public GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse build() {
+            $.approxNumPhrases = Objects.requireNonNull($.approxNumPhrases, "expected parameter 'approxNumPhrases' to be non-null");
+            return $;
         }
     }
+
 }

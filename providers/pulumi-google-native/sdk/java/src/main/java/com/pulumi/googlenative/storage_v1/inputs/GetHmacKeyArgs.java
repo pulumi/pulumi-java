@@ -15,78 +15,71 @@ public final class GetHmacKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHmacKeyArgs Empty = new GetHmacKeyArgs();
 
     @Import(name="accessId", required=true)
-      private final String accessId;
+    private String accessId;
 
     public String accessId() {
         return this.accessId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetHmacKeyArgs(
-        String accessId,
-        @Nullable String project,
-        @Nullable String userProject) {
-        this.accessId = Objects.requireNonNull(accessId, "expected parameter 'accessId' to be non-null");
-        this.project = project;
-        this.userProject = userProject;
-    }
+    private GetHmacKeyArgs() {}
 
-    private GetHmacKeyArgs() {
-        this.accessId = null;
-        this.project = null;
-        this.userProject = null;
+    private GetHmacKeyArgs(GetHmacKeyArgs $) {
+        this.accessId = $.accessId;
+        this.project = $.project;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHmacKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accessId;
-        private @Nullable String project;
-        private @Nullable String userProject;
+        private GetHmacKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHmacKeyArgs();
         }
 
         public Builder(GetHmacKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessId = defaults.accessId;
-    	      this.project = defaults.project;
-    	      this.userProject = defaults.userProject;
+            $ = new GetHmacKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessId(String accessId) {
-            this.accessId = Objects.requireNonNull(accessId);
+            $.accessId = accessId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetHmacKeyArgs build() {
-            return new GetHmacKeyArgs(accessId, project, userProject);
+        }
+
+        public GetHmacKeyArgs build() {
+            $.accessId = Objects.requireNonNull($.accessId, "expected parameter 'accessId' to be non-null");
+            return $;
         }
     }
+
 }

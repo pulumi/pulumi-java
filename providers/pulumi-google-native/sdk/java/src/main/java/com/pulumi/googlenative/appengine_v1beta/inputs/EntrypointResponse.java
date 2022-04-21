@@ -21,45 +21,45 @@ public final class EntrypointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="shell", required=true)
-      private final String shell;
+    private String shell;
 
     public String shell() {
         return this.shell;
     }
 
-    public EntrypointResponse(String shell) {
-        this.shell = Objects.requireNonNull(shell, "expected parameter 'shell' to be non-null");
-    }
+    private EntrypointResponse() {}
 
-    private EntrypointResponse() {
-        this.shell = null;
+    private EntrypointResponse(EntrypointResponse $) {
+        this.shell = $.shell;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EntrypointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String shell;
+        private EntrypointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EntrypointResponse();
         }
 
         public Builder(EntrypointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shell = defaults.shell;
+            $ = new EntrypointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder shell(String shell) {
-            this.shell = Objects.requireNonNull(shell);
+            $.shell = shell;
             return this;
-        }        public EntrypointResponse build() {
-            return new EntrypointResponse(shell);
+        }
+
+        public EntrypointResponse build() {
+            $.shell = Objects.requireNonNull($.shell, "expected parameter 'shell' to be non-null");
+            return $;
         }
     }
+
 }

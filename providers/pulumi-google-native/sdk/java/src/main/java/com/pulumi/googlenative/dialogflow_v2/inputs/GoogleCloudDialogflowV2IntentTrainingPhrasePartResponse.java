@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @Import(name="alias", required=true)
-      private final String alias;
+    private String alias;
 
     public String alias() {
         return this.alias;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @Import(name="entityType", required=true)
-      private final String entityType;
+    private String entityType;
 
     public String entityType() {
         return this.entityType;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
@@ -55,73 +55,66 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @Import(name="userDefined", required=true)
-      private final Boolean userDefined;
+    private Boolean userDefined;
 
     public Boolean userDefined() {
         return this.userDefined;
     }
 
-    public GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(
-        String alias,
-        String entityType,
-        String text,
-        Boolean userDefined) {
-        this.alias = Objects.requireNonNull(alias, "expected parameter 'alias' to be non-null");
-        this.entityType = Objects.requireNonNull(entityType, "expected parameter 'entityType' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-        this.userDefined = Objects.requireNonNull(userDefined, "expected parameter 'userDefined' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse() {}
 
-    private GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse() {
-        this.alias = null;
-        this.entityType = null;
-        this.text = null;
-        this.userDefined = null;
+    private GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse $) {
+        this.alias = $.alias;
+        this.entityType = $.entityType;
+        this.text = $.text;
+        this.userDefined = $.userDefined;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String alias;
-        private String entityType;
-        private String text;
-        private Boolean userDefined;
+        private GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alias = defaults.alias;
-    	      this.entityType = defaults.entityType;
-    	      this.text = defaults.text;
-    	      this.userDefined = defaults.userDefined;
+            $ = new GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder alias(String alias) {
-            this.alias = Objects.requireNonNull(alias);
+            $.alias = alias;
             return this;
         }
+
         public Builder entityType(String entityType) {
-            this.entityType = Objects.requireNonNull(entityType);
+            $.entityType = entityType;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder userDefined(Boolean userDefined) {
-            this.userDefined = Objects.requireNonNull(userDefined);
+            $.userDefined = userDefined;
             return this;
-        }        public GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse build() {
-            return new GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(alias, entityType, text, userDefined);
+        }
+
+        public GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse build() {
+            $.alias = Objects.requireNonNull($.alias, "expected parameter 'alias' to be non-null");
+            $.entityType = Objects.requireNonNull($.entityType, "expected parameter 'entityType' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            $.userDefined = Objects.requireNonNull($.userDefined, "expected parameter 'userDefined' to be non-null");
+            return $;
         }
     }
+
 }

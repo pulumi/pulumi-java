@@ -5,7 +5,6 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.AudioArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.ColorArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.CropArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.transcoder_v1.inputs.DeblockArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.DenoiseArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.PadArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="audio")
-      private final @Nullable Output<AudioArgs> audio;
+    private @Nullable Output<AudioArgs> audio;
 
-    public Output<AudioArgs> audio() {
-        return this.audio == null ? Codegen.empty() : this.audio;
+    public Optional<Output<AudioArgs>> audio() {
+        return Optional.ofNullable(this.audio);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="color")
-      private final @Nullable Output<ColorArgs> color;
+    private @Nullable Output<ColorArgs> color;
 
-    public Output<ColorArgs> color() {
-        return this.color == null ? Codegen.empty() : this.color;
+    public Optional<Output<ColorArgs>> color() {
+        return Optional.ofNullable(this.color);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="crop")
-      private final @Nullable Output<CropArgs> crop;
+    private @Nullable Output<CropArgs> crop;
 
-    public Output<CropArgs> crop() {
-        return this.crop == null ? Codegen.empty() : this.crop;
+    public Optional<Output<CropArgs>> crop() {
+        return Optional.ofNullable(this.crop);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="deblock")
-      private final @Nullable Output<DeblockArgs> deblock;
+    private @Nullable Output<DeblockArgs> deblock;
 
-    public Output<DeblockArgs> deblock() {
-        return this.deblock == null ? Codegen.empty() : this.deblock;
+    public Optional<Output<DeblockArgs>> deblock() {
+        return Optional.ofNullable(this.deblock);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="denoise")
-      private final @Nullable Output<DenoiseArgs> denoise;
+    private @Nullable Output<DenoiseArgs> denoise;
 
-    public Output<DenoiseArgs> denoise() {
-        return this.denoise == null ? Codegen.empty() : this.denoise;
+    public Optional<Output<DenoiseArgs>> denoise() {
+        return Optional.ofNullable(this.denoise);
     }
 
     /**
@@ -84,115 +84,98 @@ public final class PreprocessingConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pad")
-      private final @Nullable Output<PadArgs> pad;
+    private @Nullable Output<PadArgs> pad;
 
-    public Output<PadArgs> pad() {
-        return this.pad == null ? Codegen.empty() : this.pad;
+    public Optional<Output<PadArgs>> pad() {
+        return Optional.ofNullable(this.pad);
     }
 
-    public PreprocessingConfigArgs(
-        @Nullable Output<AudioArgs> audio,
-        @Nullable Output<ColorArgs> color,
-        @Nullable Output<CropArgs> crop,
-        @Nullable Output<DeblockArgs> deblock,
-        @Nullable Output<DenoiseArgs> denoise,
-        @Nullable Output<PadArgs> pad) {
-        this.audio = audio;
-        this.color = color;
-        this.crop = crop;
-        this.deblock = deblock;
-        this.denoise = denoise;
-        this.pad = pad;
-    }
+    private PreprocessingConfigArgs() {}
 
-    private PreprocessingConfigArgs() {
-        this.audio = Codegen.empty();
-        this.color = Codegen.empty();
-        this.crop = Codegen.empty();
-        this.deblock = Codegen.empty();
-        this.denoise = Codegen.empty();
-        this.pad = Codegen.empty();
+    private PreprocessingConfigArgs(PreprocessingConfigArgs $) {
+        this.audio = $.audio;
+        this.color = $.color;
+        this.crop = $.crop;
+        this.deblock = $.deblock;
+        this.denoise = $.denoise;
+        this.pad = $.pad;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PreprocessingConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AudioArgs> audio;
-        private @Nullable Output<ColorArgs> color;
-        private @Nullable Output<CropArgs> crop;
-        private @Nullable Output<DeblockArgs> deblock;
-        private @Nullable Output<DenoiseArgs> denoise;
-        private @Nullable Output<PadArgs> pad;
+        private PreprocessingConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PreprocessingConfigArgs();
         }
 
         public Builder(PreprocessingConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audio = defaults.audio;
-    	      this.color = defaults.color;
-    	      this.crop = defaults.crop;
-    	      this.deblock = defaults.deblock;
-    	      this.denoise = defaults.denoise;
-    	      this.pad = defaults.pad;
+            $ = new PreprocessingConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audio(@Nullable Output<AudioArgs> audio) {
-            this.audio = audio;
+            $.audio = audio;
             return this;
         }
-        public Builder audio(@Nullable AudioArgs audio) {
-            this.audio = Codegen.ofNullable(audio);
-            return this;
+
+        public Builder audio(AudioArgs audio) {
+            return audio(Output.of(audio));
         }
+
         public Builder color(@Nullable Output<ColorArgs> color) {
-            this.color = color;
+            $.color = color;
             return this;
         }
-        public Builder color(@Nullable ColorArgs color) {
-            this.color = Codegen.ofNullable(color);
-            return this;
+
+        public Builder color(ColorArgs color) {
+            return color(Output.of(color));
         }
+
         public Builder crop(@Nullable Output<CropArgs> crop) {
-            this.crop = crop;
+            $.crop = crop;
             return this;
         }
-        public Builder crop(@Nullable CropArgs crop) {
-            this.crop = Codegen.ofNullable(crop);
-            return this;
+
+        public Builder crop(CropArgs crop) {
+            return crop(Output.of(crop));
         }
+
         public Builder deblock(@Nullable Output<DeblockArgs> deblock) {
-            this.deblock = deblock;
+            $.deblock = deblock;
             return this;
         }
-        public Builder deblock(@Nullable DeblockArgs deblock) {
-            this.deblock = Codegen.ofNullable(deblock);
-            return this;
+
+        public Builder deblock(DeblockArgs deblock) {
+            return deblock(Output.of(deblock));
         }
+
         public Builder denoise(@Nullable Output<DenoiseArgs> denoise) {
-            this.denoise = denoise;
+            $.denoise = denoise;
             return this;
         }
-        public Builder denoise(@Nullable DenoiseArgs denoise) {
-            this.denoise = Codegen.ofNullable(denoise);
-            return this;
+
+        public Builder denoise(DenoiseArgs denoise) {
+            return denoise(Output.of(denoise));
         }
+
         public Builder pad(@Nullable Output<PadArgs> pad) {
-            this.pad = pad;
+            $.pad = pad;
             return this;
         }
-        public Builder pad(@Nullable PadArgs pad) {
-            this.pad = Codegen.ofNullable(pad);
-            return this;
-        }        public PreprocessingConfigArgs build() {
-            return new PreprocessingConfigArgs(audio, color, crop, deblock, denoise, pad);
+
+        public Builder pad(PadArgs pad) {
+            return pad(Output.of(pad));
+        }
+
+        public PreprocessingConfigArgs build() {
+            return $;
         }
     }
+
 }

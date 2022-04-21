@@ -15,94 +15,86 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends com.pulumi.reso
     public static final GetInstanceClusterBackupIamPolicyArgs Empty = new GetInstanceClusterBackupIamPolicyArgs();
 
     @Import(name="backupId", required=true)
-      private final String backupId;
+    private String backupId;
 
     public String backupId() {
         return this.backupId;
     }
 
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
     }
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstanceClusterBackupIamPolicyArgs(
-        String backupId,
-        String clusterId,
-        String instanceId,
-        @Nullable String project) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-    }
+    private GetInstanceClusterBackupIamPolicyArgs() {}
 
-    private GetInstanceClusterBackupIamPolicyArgs() {
-        this.backupId = null;
-        this.clusterId = null;
-        this.instanceId = null;
-        this.project = null;
+    private GetInstanceClusterBackupIamPolicyArgs(GetInstanceClusterBackupIamPolicyArgs $) {
+        this.backupId = $.backupId;
+        this.clusterId = $.clusterId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceClusterBackupIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupId;
-        private String clusterId;
-        private String instanceId;
-        private @Nullable String project;
+        private GetInstanceClusterBackupIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceClusterBackupIamPolicyArgs();
         }
 
         public Builder(GetInstanceClusterBackupIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.clusterId = defaults.clusterId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new GetInstanceClusterBackupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstanceClusterBackupIamPolicyArgs build() {
-            return new GetInstanceClusterBackupIamPolicyArgs(backupId, clusterId, instanceId, project);
+        }
+
+        public GetInstanceClusterBackupIamPolicyArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

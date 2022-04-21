@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2ContextArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="lifespanCount")
-      private final @Nullable Output<Integer> lifespanCount;
+    private @Nullable Output<Integer> lifespanCount;
 
-    public Output<Integer> lifespanCount() {
-        return this.lifespanCount == null ? Codegen.empty() : this.lifespanCount;
+    public Optional<Output<Integer>> lifespanCount() {
+        return Optional.ofNullable(this.lifespanCount);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2ContextArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -48,76 +48,69 @@ public final class GoogleCloudDialogflowV2ContextArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public GoogleCloudDialogflowV2ContextArgs(
-        @Nullable Output<Integer> lifespanCount,
-        Output<String> name,
-        @Nullable Output<Map<String,String>> parameters) {
-        this.lifespanCount = lifespanCount;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.parameters = parameters;
-    }
+    private GoogleCloudDialogflowV2ContextArgs() {}
 
-    private GoogleCloudDialogflowV2ContextArgs() {
-        this.lifespanCount = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parameters = Codegen.empty();
+    private GoogleCloudDialogflowV2ContextArgs(GoogleCloudDialogflowV2ContextArgs $) {
+        this.lifespanCount = $.lifespanCount;
+        this.name = $.name;
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2ContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> lifespanCount;
-        private Output<String> name;
-        private @Nullable Output<Map<String,String>> parameters;
+        private GoogleCloudDialogflowV2ContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2ContextArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2ContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lifespanCount = defaults.lifespanCount;
-    	      this.name = defaults.name;
-    	      this.parameters = defaults.parameters;
+            $ = new GoogleCloudDialogflowV2ContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lifespanCount(@Nullable Output<Integer> lifespanCount) {
-            this.lifespanCount = lifespanCount;
+            $.lifespanCount = lifespanCount;
             return this;
         }
-        public Builder lifespanCount(@Nullable Integer lifespanCount) {
-            this.lifespanCount = Codegen.ofNullable(lifespanCount);
-            return this;
+
+        public Builder lifespanCount(Integer lifespanCount) {
+            return lifespanCount(Output.of(lifespanCount));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
-        }        public GoogleCloudDialogflowV2ContextArgs build() {
-            return new GoogleCloudDialogflowV2ContextArgs(lifespanCount, name, parameters);
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
+        }
+
+        public GoogleCloudDialogflowV2ContextArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

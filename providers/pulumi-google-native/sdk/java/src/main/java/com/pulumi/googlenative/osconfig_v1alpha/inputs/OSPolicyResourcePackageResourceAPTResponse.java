@@ -21,45 +21,45 @@ public final class OSPolicyResourcePackageResourceAPTResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public OSPolicyResourcePackageResourceAPTResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private OSPolicyResourcePackageResourceAPTResponse() {}
 
-    private OSPolicyResourcePackageResourceAPTResponse() {
-        this.name = null;
+    private OSPolicyResourcePackageResourceAPTResponse(OSPolicyResourcePackageResourceAPTResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourcePackageResourceAPTResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private OSPolicyResourcePackageResourceAPTResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourcePackageResourceAPTResponse();
         }
 
         public Builder(OSPolicyResourcePackageResourceAPTResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new OSPolicyResourcePackageResourceAPTResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public OSPolicyResourcePackageResourceAPTResponse build() {
-            return new OSPolicyResourcePackageResourceAPTResponse(name);
+        }
+
+        public OSPolicyResourcePackageResourceAPTResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

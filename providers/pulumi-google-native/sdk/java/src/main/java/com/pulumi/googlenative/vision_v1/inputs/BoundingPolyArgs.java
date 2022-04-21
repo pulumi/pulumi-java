@@ -5,11 +5,11 @@ package com.pulumi.googlenative.vision_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vision_v1.inputs.NormalizedVertexArgs;
 import com.pulumi.googlenative.vision_v1.inputs.VertexArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="normalizedVertices")
-      private final @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
+    private @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
 
-    public Output<List<NormalizedVertexArgs>> normalizedVertices() {
-        return this.normalizedVertices == null ? Codegen.empty() : this.normalizedVertices;
+    public Optional<Output<List<NormalizedVertexArgs>>> normalizedVertices() {
+        return Optional.ofNullable(this.normalizedVertices);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class BoundingPolyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vertices")
-      private final @Nullable Output<List<VertexArgs>> vertices;
+    private @Nullable Output<List<VertexArgs>> vertices;
 
-    public Output<List<VertexArgs>> vertices() {
-        return this.vertices == null ? Codegen.empty() : this.vertices;
+    public Optional<Output<List<VertexArgs>>> vertices() {
+        return Optional.ofNullable(this.vertices);
     }
 
-    public BoundingPolyArgs(
-        @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices,
-        @Nullable Output<List<VertexArgs>> vertices) {
-        this.normalizedVertices = normalizedVertices;
-        this.vertices = vertices;
-    }
+    private BoundingPolyArgs() {}
 
-    private BoundingPolyArgs() {
-        this.normalizedVertices = Codegen.empty();
-        this.vertices = Codegen.empty();
+    private BoundingPolyArgs(BoundingPolyArgs $) {
+        this.normalizedVertices = $.normalizedVertices;
+        this.vertices = $.vertices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BoundingPolyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
-        private @Nullable Output<List<VertexArgs>> vertices;
+        private BoundingPolyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BoundingPolyArgs();
         }
 
         public Builder(BoundingPolyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.normalizedVertices = defaults.normalizedVertices;
-    	      this.vertices = defaults.vertices;
+            $ = new BoundingPolyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder normalizedVertices(@Nullable Output<List<NormalizedVertexArgs>> normalizedVertices) {
-            this.normalizedVertices = normalizedVertices;
+            $.normalizedVertices = normalizedVertices;
             return this;
         }
-        public Builder normalizedVertices(@Nullable List<NormalizedVertexArgs> normalizedVertices) {
-            this.normalizedVertices = Codegen.ofNullable(normalizedVertices);
-            return this;
+
+        public Builder normalizedVertices(List<NormalizedVertexArgs> normalizedVertices) {
+            return normalizedVertices(Output.of(normalizedVertices));
         }
+
         public Builder normalizedVertices(NormalizedVertexArgs... normalizedVertices) {
             return normalizedVertices(List.of(normalizedVertices));
         }
+
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
-            this.vertices = vertices;
+            $.vertices = vertices;
             return this;
         }
-        public Builder vertices(@Nullable List<VertexArgs> vertices) {
-            this.vertices = Codegen.ofNullable(vertices);
-            return this;
+
+        public Builder vertices(List<VertexArgs> vertices) {
+            return vertices(Output.of(vertices));
         }
+
         public Builder vertices(VertexArgs... vertices) {
             return vertices(List.of(vertices));
-        }        public BoundingPolyArgs build() {
-            return new BoundingPolyArgs(normalizedVertices, vertices);
+        }
+
+        public BoundingPolyArgs build() {
+            return $;
         }
     }
+
 }

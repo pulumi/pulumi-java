@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
      * 
      */
     @Import(name="platform")
-      private final @Nullable Output<String> platform;
+    private @Nullable Output<String> platform;
 
-    public Output<String> platform() {
-        return this.platform == null ? Codegen.empty() : this.platform;
+    public Optional<Output<String>> platform() {
+        return Optional.ofNullable(this.platform);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
      * 
      */
     @Import(name="resource")
-      private final @Nullable Output<String> resource;
+    private @Nullable Output<String> resource;
 
-    public Output<String> resource() {
-        return this.resource == null ? Codegen.empty() : this.resource;
+    public Optional<Output<String>> resource() {
+        return Optional.ofNullable(this.resource);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
      * 
      */
     @Import(name="urlMask")
-      private final @Nullable Output<String> urlMask;
+    private @Nullable Output<String> urlMask;
 
-    public Output<String> urlMask() {
-        return this.urlMask == null ? Codegen.empty() : this.urlMask;
+    public Optional<Output<String>> urlMask() {
+        return Optional.ofNullable(this.urlMask);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends com.pulu
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NetworkEndpointGroupServerlessDeploymentArgs(
-        @Nullable Output<String> platform,
-        @Nullable Output<String> resource,
-        @Nullable Output<String> urlMask,
-        @Nullable Output<String> version) {
-        this.platform = platform;
-        this.resource = resource;
-        this.urlMask = urlMask;
-        this.version = version;
-    }
+    private NetworkEndpointGroupServerlessDeploymentArgs() {}
 
-    private NetworkEndpointGroupServerlessDeploymentArgs() {
-        this.platform = Codegen.empty();
-        this.resource = Codegen.empty();
-        this.urlMask = Codegen.empty();
-        this.version = Codegen.empty();
+    private NetworkEndpointGroupServerlessDeploymentArgs(NetworkEndpointGroupServerlessDeploymentArgs $) {
+        this.platform = $.platform;
+        this.resource = $.resource;
+        this.urlMask = $.urlMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupServerlessDeploymentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> platform;
-        private @Nullable Output<String> resource;
-        private @Nullable Output<String> urlMask;
-        private @Nullable Output<String> version;
+        private NetworkEndpointGroupServerlessDeploymentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupServerlessDeploymentArgs();
         }
 
         public Builder(NetworkEndpointGroupServerlessDeploymentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.platform = defaults.platform;
-    	      this.resource = defaults.resource;
-    	      this.urlMask = defaults.urlMask;
-    	      this.version = defaults.version;
+            $ = new NetworkEndpointGroupServerlessDeploymentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder platform(@Nullable Output<String> platform) {
-            this.platform = platform;
+            $.platform = platform;
             return this;
         }
-        public Builder platform(@Nullable String platform) {
-            this.platform = Codegen.ofNullable(platform);
-            return this;
+
+        public Builder platform(String platform) {
+            return platform(Output.of(platform));
         }
+
         public Builder resource(@Nullable Output<String> resource) {
-            this.resource = resource;
+            $.resource = resource;
             return this;
         }
-        public Builder resource(@Nullable String resource) {
-            this.resource = Codegen.ofNullable(resource);
-            return this;
+
+        public Builder resource(String resource) {
+            return resource(Output.of(resource));
         }
+
         public Builder urlMask(@Nullable Output<String> urlMask) {
-            this.urlMask = urlMask;
+            $.urlMask = urlMask;
             return this;
         }
-        public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Codegen.ofNullable(urlMask);
-            return this;
+
+        public Builder urlMask(String urlMask) {
+            return urlMask(Output.of(urlMask));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NetworkEndpointGroupServerlessDeploymentArgs build() {
-            return new NetworkEndpointGroupServerlessDeploymentArgs(platform, resource, urlMask, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public NetworkEndpointGroupServerlessDeploymentArgs build() {
+            return $;
         }
     }
+
 }

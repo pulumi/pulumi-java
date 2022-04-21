@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1PropertyArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudApigeeV1PropertiesArgs extends com.pulumi.resource
      * 
      */
     @Import(name="property")
-      private final @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
+    private @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
 
-    public Output<List<GoogleCloudApigeeV1PropertyArgs>> property() {
-        return this.property == null ? Codegen.empty() : this.property;
+    public Optional<Output<List<GoogleCloudApigeeV1PropertyArgs>>> property() {
+        return Optional.ofNullable(this.property);
     }
 
-    public GoogleCloudApigeeV1PropertiesArgs(@Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property) {
-        this.property = property;
-    }
+    private GoogleCloudApigeeV1PropertiesArgs() {}
 
-    private GoogleCloudApigeeV1PropertiesArgs() {
-        this.property = Codegen.empty();
+    private GoogleCloudApigeeV1PropertiesArgs(GoogleCloudApigeeV1PropertiesArgs $) {
+        this.property = $.property;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1PropertiesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property;
+        private GoogleCloudApigeeV1PropertiesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1PropertiesArgs();
         }
 
         public Builder(GoogleCloudApigeeV1PropertiesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.property = defaults.property;
+            $ = new GoogleCloudApigeeV1PropertiesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder property(@Nullable Output<List<GoogleCloudApigeeV1PropertyArgs>> property) {
-            this.property = property;
+            $.property = property;
             return this;
         }
-        public Builder property(@Nullable List<GoogleCloudApigeeV1PropertyArgs> property) {
-            this.property = Codegen.ofNullable(property);
-            return this;
+
+        public Builder property(List<GoogleCloudApigeeV1PropertyArgs> property) {
+            return property(Output.of(property));
         }
+
         public Builder property(GoogleCloudApigeeV1PropertyArgs... property) {
             return property(List.of(property));
-        }        public GoogleCloudApigeeV1PropertiesArgs build() {
-            return new GoogleCloudApigeeV1PropertiesArgs(property);
+        }
+
+        public GoogleCloudApigeeV1PropertiesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends com.pulumi.res
      * 
      */
     @Import(name="connections")
-      private final @Nullable Output<List<String>> connections;
+    private @Nullable Output<List<String>> connections;
 
-    public Output<List<String>> connections() {
-        return this.connections == null ? Codegen.empty() : this.connections;
+    public Optional<Output<List<String>>> connections() {
+        return Optional.ofNullable(this.connections);
     }
 
-    public GoogleCloudRunOpV2CloudSqlInstanceArgs(@Nullable Output<List<String>> connections) {
-        this.connections = connections;
-    }
+    private GoogleCloudRunOpV2CloudSqlInstanceArgs() {}
 
-    private GoogleCloudRunOpV2CloudSqlInstanceArgs() {
-        this.connections = Codegen.empty();
+    private GoogleCloudRunOpV2CloudSqlInstanceArgs(GoogleCloudRunOpV2CloudSqlInstanceArgs $) {
+        this.connections = $.connections;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2CloudSqlInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> connections;
+        private GoogleCloudRunOpV2CloudSqlInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2CloudSqlInstanceArgs();
         }
 
         public Builder(GoogleCloudRunOpV2CloudSqlInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connections = defaults.connections;
+            $ = new GoogleCloudRunOpV2CloudSqlInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connections(@Nullable Output<List<String>> connections) {
-            this.connections = connections;
+            $.connections = connections;
             return this;
         }
-        public Builder connections(@Nullable List<String> connections) {
-            this.connections = Codegen.ofNullable(connections);
-            return this;
+
+        public Builder connections(List<String> connections) {
+            return connections(Output.of(connections));
         }
+
         public Builder connections(String... connections) {
             return connections(List.of(connections));
-        }        public GoogleCloudRunOpV2CloudSqlInstanceArgs build() {
-            return new GoogleCloudRunOpV2CloudSqlInstanceArgs(connections);
+        }
+
+        public GoogleCloudRunOpV2CloudSqlInstanceArgs build() {
+            return $;
         }
     }
+
 }

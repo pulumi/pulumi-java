@@ -21,7 +21,7 @@ public final class RuntimeAcceleratorConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="coreCount", required=true)
-      private final String coreCount;
+    private String coreCount;
 
     public String coreCount() {
         return this.coreCount;
@@ -32,55 +32,52 @@ public final class RuntimeAcceleratorConfigResponse extends com.pulumi.resources
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public RuntimeAcceleratorConfigResponse(
-        String coreCount,
-        String type) {
-        this.coreCount = Objects.requireNonNull(coreCount, "expected parameter 'coreCount' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private RuntimeAcceleratorConfigResponse() {}
 
-    private RuntimeAcceleratorConfigResponse() {
-        this.coreCount = null;
-        this.type = null;
+    private RuntimeAcceleratorConfigResponse(RuntimeAcceleratorConfigResponse $) {
+        this.coreCount = $.coreCount;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeAcceleratorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String coreCount;
-        private String type;
+        private RuntimeAcceleratorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeAcceleratorConfigResponse();
         }
 
         public Builder(RuntimeAcceleratorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.coreCount = defaults.coreCount;
-    	      this.type = defaults.type;
+            $ = new RuntimeAcceleratorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder coreCount(String coreCount) {
-            this.coreCount = Objects.requireNonNull(coreCount);
+            $.coreCount = coreCount;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public RuntimeAcceleratorConfigResponse build() {
-            return new RuntimeAcceleratorConfigResponse(coreCount, type);
+        }
+
+        public RuntimeAcceleratorConfigResponse build() {
+            $.coreCount = Objects.requireNonNull($.coreCount, "expected parameter 'coreCount' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

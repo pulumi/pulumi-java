@@ -28,7 +28,7 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bigTableDetails", required=true)
-      private final List<BigTableIODetailsResponse> bigTableDetails;
+    private List<BigTableIODetailsResponse> bigTableDetails;
 
     public List<BigTableIODetailsResponse> bigTableDetails() {
         return this.bigTableDetails;
@@ -39,7 +39,7 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bigqueryDetails", required=true)
-      private final List<BigQueryIODetailsResponse> bigqueryDetails;
+    private List<BigQueryIODetailsResponse> bigqueryDetails;
 
     public List<BigQueryIODetailsResponse> bigqueryDetails() {
         return this.bigqueryDetails;
@@ -50,7 +50,7 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="datastoreDetails", required=true)
-      private final List<DatastoreIODetailsResponse> datastoreDetails;
+    private List<DatastoreIODetailsResponse> datastoreDetails;
 
     public List<DatastoreIODetailsResponse> datastoreDetails() {
         return this.datastoreDetails;
@@ -61,7 +61,7 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileDetails", required=true)
-      private final List<FileIODetailsResponse> fileDetails;
+    private List<FileIODetailsResponse> fileDetails;
 
     public List<FileIODetailsResponse> fileDetails() {
         return this.fileDetails;
@@ -72,7 +72,7 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pubsubDetails", required=true)
-      private final List<PubSubIODetailsResponse> pubsubDetails;
+    private List<PubSubIODetailsResponse> pubsubDetails;
 
     public List<PubSubIODetailsResponse> pubsubDetails() {
         return this.pubsubDetails;
@@ -83,7 +83,7 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdkVersion", required=true)
-      private final SdkVersionResponse sdkVersion;
+    private SdkVersionResponse sdkVersion;
 
     public SdkVersionResponse sdkVersion() {
         return this.sdkVersion;
@@ -94,118 +94,111 @@ public final class JobMetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spannerDetails", required=true)
-      private final List<SpannerIODetailsResponse> spannerDetails;
+    private List<SpannerIODetailsResponse> spannerDetails;
 
     public List<SpannerIODetailsResponse> spannerDetails() {
         return this.spannerDetails;
     }
 
-    public JobMetadataResponse(
-        List<BigTableIODetailsResponse> bigTableDetails,
-        List<BigQueryIODetailsResponse> bigqueryDetails,
-        List<DatastoreIODetailsResponse> datastoreDetails,
-        List<FileIODetailsResponse> fileDetails,
-        List<PubSubIODetailsResponse> pubsubDetails,
-        SdkVersionResponse sdkVersion,
-        List<SpannerIODetailsResponse> spannerDetails) {
-        this.bigTableDetails = Objects.requireNonNull(bigTableDetails, "expected parameter 'bigTableDetails' to be non-null");
-        this.bigqueryDetails = Objects.requireNonNull(bigqueryDetails, "expected parameter 'bigqueryDetails' to be non-null");
-        this.datastoreDetails = Objects.requireNonNull(datastoreDetails, "expected parameter 'datastoreDetails' to be non-null");
-        this.fileDetails = Objects.requireNonNull(fileDetails, "expected parameter 'fileDetails' to be non-null");
-        this.pubsubDetails = Objects.requireNonNull(pubsubDetails, "expected parameter 'pubsubDetails' to be non-null");
-        this.sdkVersion = Objects.requireNonNull(sdkVersion, "expected parameter 'sdkVersion' to be non-null");
-        this.spannerDetails = Objects.requireNonNull(spannerDetails, "expected parameter 'spannerDetails' to be non-null");
-    }
+    private JobMetadataResponse() {}
 
-    private JobMetadataResponse() {
-        this.bigTableDetails = List.of();
-        this.bigqueryDetails = List.of();
-        this.datastoreDetails = List.of();
-        this.fileDetails = List.of();
-        this.pubsubDetails = List.of();
-        this.sdkVersion = null;
-        this.spannerDetails = List.of();
+    private JobMetadataResponse(JobMetadataResponse $) {
+        this.bigTableDetails = $.bigTableDetails;
+        this.bigqueryDetails = $.bigqueryDetails;
+        this.datastoreDetails = $.datastoreDetails;
+        this.fileDetails = $.fileDetails;
+        this.pubsubDetails = $.pubsubDetails;
+        this.sdkVersion = $.sdkVersion;
+        this.spannerDetails = $.spannerDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<BigTableIODetailsResponse> bigTableDetails;
-        private List<BigQueryIODetailsResponse> bigqueryDetails;
-        private List<DatastoreIODetailsResponse> datastoreDetails;
-        private List<FileIODetailsResponse> fileDetails;
-        private List<PubSubIODetailsResponse> pubsubDetails;
-        private SdkVersionResponse sdkVersion;
-        private List<SpannerIODetailsResponse> spannerDetails;
+        private JobMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobMetadataResponse();
         }
 
         public Builder(JobMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigTableDetails = defaults.bigTableDetails;
-    	      this.bigqueryDetails = defaults.bigqueryDetails;
-    	      this.datastoreDetails = defaults.datastoreDetails;
-    	      this.fileDetails = defaults.fileDetails;
-    	      this.pubsubDetails = defaults.pubsubDetails;
-    	      this.sdkVersion = defaults.sdkVersion;
-    	      this.spannerDetails = defaults.spannerDetails;
+            $ = new JobMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigTableDetails(List<BigTableIODetailsResponse> bigTableDetails) {
-            this.bigTableDetails = Objects.requireNonNull(bigTableDetails);
+            $.bigTableDetails = bigTableDetails;
             return this;
         }
+
         public Builder bigTableDetails(BigTableIODetailsResponse... bigTableDetails) {
             return bigTableDetails(List.of(bigTableDetails));
         }
+
         public Builder bigqueryDetails(List<BigQueryIODetailsResponse> bigqueryDetails) {
-            this.bigqueryDetails = Objects.requireNonNull(bigqueryDetails);
+            $.bigqueryDetails = bigqueryDetails;
             return this;
         }
+
         public Builder bigqueryDetails(BigQueryIODetailsResponse... bigqueryDetails) {
             return bigqueryDetails(List.of(bigqueryDetails));
         }
+
         public Builder datastoreDetails(List<DatastoreIODetailsResponse> datastoreDetails) {
-            this.datastoreDetails = Objects.requireNonNull(datastoreDetails);
+            $.datastoreDetails = datastoreDetails;
             return this;
         }
+
         public Builder datastoreDetails(DatastoreIODetailsResponse... datastoreDetails) {
             return datastoreDetails(List.of(datastoreDetails));
         }
+
         public Builder fileDetails(List<FileIODetailsResponse> fileDetails) {
-            this.fileDetails = Objects.requireNonNull(fileDetails);
+            $.fileDetails = fileDetails;
             return this;
         }
+
         public Builder fileDetails(FileIODetailsResponse... fileDetails) {
             return fileDetails(List.of(fileDetails));
         }
+
         public Builder pubsubDetails(List<PubSubIODetailsResponse> pubsubDetails) {
-            this.pubsubDetails = Objects.requireNonNull(pubsubDetails);
+            $.pubsubDetails = pubsubDetails;
             return this;
         }
+
         public Builder pubsubDetails(PubSubIODetailsResponse... pubsubDetails) {
             return pubsubDetails(List.of(pubsubDetails));
         }
+
         public Builder sdkVersion(SdkVersionResponse sdkVersion) {
-            this.sdkVersion = Objects.requireNonNull(sdkVersion);
+            $.sdkVersion = sdkVersion;
             return this;
         }
+
         public Builder spannerDetails(List<SpannerIODetailsResponse> spannerDetails) {
-            this.spannerDetails = Objects.requireNonNull(spannerDetails);
+            $.spannerDetails = spannerDetails;
             return this;
         }
+
         public Builder spannerDetails(SpannerIODetailsResponse... spannerDetails) {
             return spannerDetails(List.of(spannerDetails));
-        }        public JobMetadataResponse build() {
-            return new JobMetadataResponse(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
+        }
+
+        public JobMetadataResponse build() {
+            $.bigTableDetails = Objects.requireNonNull($.bigTableDetails, "expected parameter 'bigTableDetails' to be non-null");
+            $.bigqueryDetails = Objects.requireNonNull($.bigqueryDetails, "expected parameter 'bigqueryDetails' to be non-null");
+            $.datastoreDetails = Objects.requireNonNull($.datastoreDetails, "expected parameter 'datastoreDetails' to be non-null");
+            $.fileDetails = Objects.requireNonNull($.fileDetails, "expected parameter 'fileDetails' to be non-null");
+            $.pubsubDetails = Objects.requireNonNull($.pubsubDetails, "expected parameter 'pubsubDetails' to be non-null");
+            $.sdkVersion = Objects.requireNonNull($.sdkVersion, "expected parameter 'sdkVersion' to be non-null");
+            $.spannerDetails = Objects.requireNonNull($.spannerDetails, "expected parameter 'spannerDetails' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class CaOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="isCa", required=true)
-      private final Boolean isCa;
+    private Boolean isCa;
 
     public Boolean isCa() {
         return this.isCa;
@@ -33,55 +33,52 @@ public final class CaOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxIssuerPathLength", required=true)
-      private final Integer maxIssuerPathLength;
+    private Integer maxIssuerPathLength;
 
     public Integer maxIssuerPathLength() {
         return this.maxIssuerPathLength;
     }
 
-    public CaOptionsResponse(
-        Boolean isCa,
-        Integer maxIssuerPathLength) {
-        this.isCa = Objects.requireNonNull(isCa, "expected parameter 'isCa' to be non-null");
-        this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength, "expected parameter 'maxIssuerPathLength' to be non-null");
-    }
+    private CaOptionsResponse() {}
 
-    private CaOptionsResponse() {
-        this.isCa = null;
-        this.maxIssuerPathLength = null;
+    private CaOptionsResponse(CaOptionsResponse $) {
+        this.isCa = $.isCa;
+        this.maxIssuerPathLength = $.maxIssuerPathLength;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean isCa;
-        private Integer maxIssuerPathLength;
+        private CaOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaOptionsResponse();
         }
 
         public Builder(CaOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.isCa = defaults.isCa;
-    	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
+            $ = new CaOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder isCa(Boolean isCa) {
-            this.isCa = Objects.requireNonNull(isCa);
+            $.isCa = isCa;
             return this;
         }
+
         public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
-            this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
+            $.maxIssuerPathLength = maxIssuerPathLength;
             return this;
-        }        public CaOptionsResponse build() {
-            return new CaOptionsResponse(isCa, maxIssuerPathLength);
+        }
+
+        public CaOptionsResponse build() {
+            $.isCa = Objects.requireNonNull($.isCa, "expected parameter 'isCa' to be non-null");
+            $.maxIssuerPathLength = Objects.requireNonNull($.maxIssuerPathLength, "expected parameter 'maxIssuerPathLength' to be non-null");
+            return $;
         }
     }
+
 }

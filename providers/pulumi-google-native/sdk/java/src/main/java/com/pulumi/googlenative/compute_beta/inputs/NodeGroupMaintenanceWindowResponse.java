@@ -22,7 +22,7 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="maintenanceDuration", required=true)
-      private final DurationResponse maintenanceDuration;
+    private DurationResponse maintenanceDuration;
 
     public DurationResponse maintenanceDuration() {
         return this.maintenanceDuration;
@@ -33,55 +33,52 @@ public final class NodeGroupMaintenanceWindowResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public NodeGroupMaintenanceWindowResponse(
-        DurationResponse maintenanceDuration,
-        String startTime) {
-        this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration, "expected parameter 'maintenanceDuration' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private NodeGroupMaintenanceWindowResponse() {}
 
-    private NodeGroupMaintenanceWindowResponse() {
-        this.maintenanceDuration = null;
-        this.startTime = null;
+    private NodeGroupMaintenanceWindowResponse(NodeGroupMaintenanceWindowResponse $) {
+        this.maintenanceDuration = $.maintenanceDuration;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupMaintenanceWindowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse maintenanceDuration;
-        private String startTime;
+        private NodeGroupMaintenanceWindowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupMaintenanceWindowResponse();
         }
 
         public Builder(NodeGroupMaintenanceWindowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maintenanceDuration = defaults.maintenanceDuration;
-    	      this.startTime = defaults.startTime;
+            $ = new NodeGroupMaintenanceWindowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maintenanceDuration(DurationResponse maintenanceDuration) {
-            this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration);
+            $.maintenanceDuration = maintenanceDuration;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public NodeGroupMaintenanceWindowResponse build() {
-            return new NodeGroupMaintenanceWindowResponse(maintenanceDuration, startTime);
+        }
+
+        public NodeGroupMaintenanceWindowResponse build() {
+            $.maintenanceDuration = Objects.requireNonNull($.maintenanceDuration, "expected parameter 'maintenanceDuration' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

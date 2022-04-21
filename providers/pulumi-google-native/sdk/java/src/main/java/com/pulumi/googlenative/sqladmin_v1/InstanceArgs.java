@@ -5,7 +5,6 @@ package com.pulumi.googlenative.sqladmin_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1.enums.InstanceBackendType;
 import com.pulumi.googlenative.sqladmin_v1.enums.InstanceDatabaseVersion;
 import com.pulumi.googlenative.sqladmin_v1.enums.InstanceInstanceType;
@@ -25,6 +24,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +37,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backendType")
-      private final @Nullable Output<InstanceBackendType> backendType;
+    private @Nullable Output<InstanceBackendType> backendType;
 
-    public Output<InstanceBackendType> backendType() {
-        return this.backendType == null ? Codegen.empty() : this.backendType;
+    public Optional<Output<InstanceBackendType>> backendType() {
+        return Optional.ofNullable(this.backendType);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="connectionName")
-      private final @Nullable Output<String> connectionName;
+    private @Nullable Output<String> connectionName;
 
-    public Output<String> connectionName() {
-        return this.connectionName == null ? Codegen.empty() : this.connectionName;
+    public Optional<Output<String>> connectionName() {
+        return Optional.ofNullable(this.connectionName);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="currentDiskSize")
-      private final @Nullable Output<String> currentDiskSize;
+    private @Nullable Output<String> currentDiskSize;
 
-    public Output<String> currentDiskSize() {
-        return this.currentDiskSize == null ? Codegen.empty() : this.currentDiskSize;
+    public Optional<Output<String>> currentDiskSize() {
+        return Optional.ofNullable(this.currentDiskSize);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="databaseVersion")
-      private final @Nullable Output<InstanceDatabaseVersion> databaseVersion;
+    private @Nullable Output<InstanceDatabaseVersion> databaseVersion;
 
-    public Output<InstanceDatabaseVersion> databaseVersion() {
-        return this.databaseVersion == null ? Codegen.empty() : this.databaseVersion;
+    public Optional<Output<InstanceDatabaseVersion>> databaseVersion() {
+        return Optional.ofNullable(this.databaseVersion);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionConfiguration")
-      private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+    private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
-    public Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration() {
-        return this.diskEncryptionConfiguration == null ? Codegen.empty() : this.diskEncryptionConfiguration;
+    public Optional<Output<DiskEncryptionConfigurationArgs>> diskEncryptionConfiguration() {
+        return Optional.ofNullable(this.diskEncryptionConfiguration);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="diskEncryptionStatus")
-      private final @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
+    private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
-    public Output<DiskEncryptionStatusArgs> diskEncryptionStatus() {
-        return this.diskEncryptionStatus == null ? Codegen.empty() : this.diskEncryptionStatus;
+    public Optional<Output<DiskEncryptionStatusArgs>> diskEncryptionStatus() {
+        return Optional.ofNullable(this.diskEncryptionStatus);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failoverReplica")
-      private final @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
+    private @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
 
-    public Output<InstanceFailoverReplicaArgs> failoverReplica() {
-        return this.failoverReplica == null ? Codegen.empty() : this.failoverReplica;
+    public Optional<Output<InstanceFailoverReplicaArgs>> failoverReplica() {
+        return Optional.ofNullable(this.failoverReplica);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gceZone")
-      private final @Nullable Output<String> gceZone;
+    private @Nullable Output<String> gceZone;
 
-    public Output<String> gceZone() {
-        return this.gceZone == null ? Codegen.empty() : this.gceZone;
+    public Optional<Output<String>> gceZone() {
+        return Optional.ofNullable(this.gceZone);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="instanceType")
-      private final @Nullable Output<InstanceInstanceType> instanceType;
+    private @Nullable Output<InstanceInstanceType> instanceType;
 
-    public Output<InstanceInstanceType> instanceType() {
-        return this.instanceType == null ? Codegen.empty() : this.instanceType;
+    public Optional<Output<InstanceInstanceType>> instanceType() {
+        return Optional.ofNullable(this.instanceType);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddresses")
-      private final @Nullable Output<List<IpMappingArgs>> ipAddresses;
+    private @Nullable Output<List<IpMappingArgs>> ipAddresses;
 
-    public Output<List<IpMappingArgs>> ipAddresses() {
-        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
+    public Optional<Output<List<IpMappingArgs>>> ipAddresses() {
+        return Optional.ofNullable(this.ipAddresses);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="masterInstanceName")
-      private final @Nullable Output<String> masterInstanceName;
+    private @Nullable Output<String> masterInstanceName;
 
-    public Output<String> masterInstanceName() {
-        return this.masterInstanceName == null ? Codegen.empty() : this.masterInstanceName;
+    public Optional<Output<String>> masterInstanceName() {
+        return Optional.ofNullable(this.masterInstanceName);
     }
 
     /**
@@ -169,10 +169,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="maxDiskSize")
-      private final @Nullable Output<String> maxDiskSize;
+    private @Nullable Output<String> maxDiskSize;
 
-    public Output<String> maxDiskSize() {
-        return this.maxDiskSize == null ? Codegen.empty() : this.maxDiskSize;
+    public Optional<Output<String>> maxDiskSize() {
+        return Optional.ofNullable(this.maxDiskSize);
     }
 
     /**
@@ -180,10 +180,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -191,10 +191,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="onPremisesConfiguration")
-      private final @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
+    private @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
 
-    public Output<OnPremisesConfigurationArgs> onPremisesConfiguration() {
-        return this.onPremisesConfiguration == null ? Codegen.empty() : this.onPremisesConfiguration;
+    public Optional<Output<OnPremisesConfigurationArgs>> onPremisesConfiguration() {
+        return Optional.ofNullable(this.onPremisesConfiguration);
     }
 
     /**
@@ -202,10 +202,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="outOfDiskReport")
-      private final @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
+    private @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
 
-    public Output<SqlOutOfDiskReportArgs> outOfDiskReport() {
-        return this.outOfDiskReport == null ? Codegen.empty() : this.outOfDiskReport;
+    public Optional<Output<SqlOutOfDiskReportArgs>> outOfDiskReport() {
+        return Optional.ofNullable(this.outOfDiskReport);
     }
 
     /**
@@ -213,10 +213,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -224,10 +224,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="region")
-      private final @Nullable Output<String> region;
+    private @Nullable Output<String> region;
 
-    public Output<String> region() {
-        return this.region == null ? Codegen.empty() : this.region;
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
     }
 
     /**
@@ -235,10 +235,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicaConfiguration")
-      private final @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
+    private @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
 
-    public Output<ReplicaConfigurationArgs> replicaConfiguration() {
-        return this.replicaConfiguration == null ? Codegen.empty() : this.replicaConfiguration;
+    public Optional<Output<ReplicaConfigurationArgs>> replicaConfiguration() {
+        return Optional.ofNullable(this.replicaConfiguration);
     }
 
     /**
@@ -246,10 +246,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="replicaNames")
-      private final @Nullable Output<List<String>> replicaNames;
+    private @Nullable Output<List<String>> replicaNames;
 
-    public Output<List<String>> replicaNames() {
-        return this.replicaNames == null ? Codegen.empty() : this.replicaNames;
+    public Optional<Output<List<String>>> replicaNames() {
+        return Optional.ofNullable(this.replicaNames);
     }
 
     /**
@@ -257,10 +257,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rootPassword")
-      private final @Nullable Output<String> rootPassword;
+    private @Nullable Output<String> rootPassword;
 
-    public Output<String> rootPassword() {
-        return this.rootPassword == null ? Codegen.empty() : this.rootPassword;
+    public Optional<Output<String>> rootPassword() {
+        return Optional.ofNullable(this.rootPassword);
     }
 
     /**
@@ -268,10 +268,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="satisfiesPzs")
-      private final @Nullable Output<Boolean> satisfiesPzs;
+    private @Nullable Output<Boolean> satisfiesPzs;
 
-    public Output<Boolean> satisfiesPzs() {
-        return this.satisfiesPzs == null ? Codegen.empty() : this.satisfiesPzs;
+    public Optional<Output<Boolean>> satisfiesPzs() {
+        return Optional.ofNullable(this.satisfiesPzs);
     }
 
     /**
@@ -279,10 +279,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduledMaintenance")
-      private final @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
+    private @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
 
-    public Output<SqlScheduledMaintenanceArgs> scheduledMaintenance() {
-        return this.scheduledMaintenance == null ? Codegen.empty() : this.scheduledMaintenance;
+    public Optional<Output<SqlScheduledMaintenanceArgs>> scheduledMaintenance() {
+        return Optional.ofNullable(this.scheduledMaintenance);
     }
 
     /**
@@ -290,10 +290,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secondaryGceZone")
-      private final @Nullable Output<String> secondaryGceZone;
+    private @Nullable Output<String> secondaryGceZone;
 
-    public Output<String> secondaryGceZone() {
-        return this.secondaryGceZone == null ? Codegen.empty() : this.secondaryGceZone;
+    public Optional<Output<String>> secondaryGceZone() {
+        return Optional.ofNullable(this.secondaryGceZone);
     }
 
     /**
@@ -301,10 +301,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
     /**
@@ -312,10 +312,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serverCaCert")
-      private final @Nullable Output<SslCertArgs> serverCaCert;
+    private @Nullable Output<SslCertArgs> serverCaCert;
 
-    public Output<SslCertArgs> serverCaCert() {
-        return this.serverCaCert == null ? Codegen.empty() : this.serverCaCert;
+    public Optional<Output<SslCertArgs>> serverCaCert() {
+        return Optional.ofNullable(this.serverCaCert);
     }
 
     /**
@@ -323,10 +323,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountEmailAddress")
-      private final @Nullable Output<String> serviceAccountEmailAddress;
+    private @Nullable Output<String> serviceAccountEmailAddress;
 
-    public Output<String> serviceAccountEmailAddress() {
-        return this.serviceAccountEmailAddress == null ? Codegen.empty() : this.serviceAccountEmailAddress;
+    public Optional<Output<String>> serviceAccountEmailAddress() {
+        return Optional.ofNullable(this.serviceAccountEmailAddress);
     }
 
     /**
@@ -334,10 +334,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<SettingsArgs> settings;
+    private @Nullable Output<SettingsArgs> settings;
 
-    public Output<SettingsArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<SettingsArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
     /**
@@ -345,10 +345,10 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<InstanceState> state;
+    private @Nullable Output<InstanceState> state;
 
-    public Output<InstanceState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<InstanceState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -356,436 +356,350 @@ public final class InstanceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="suspensionReason")
-      private final @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
+    private @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
 
-    public Output<List<InstanceSuspensionReasonItem>> suspensionReason() {
-        return this.suspensionReason == null ? Codegen.empty() : this.suspensionReason;
+    public Optional<Output<List<InstanceSuspensionReasonItem>>> suspensionReason() {
+        return Optional.ofNullable(this.suspensionReason);
     }
 
-    public InstanceArgs(
-        @Nullable Output<InstanceBackendType> backendType,
-        @Nullable Output<String> connectionName,
-        @Nullable Output<String> currentDiskSize,
-        @Nullable Output<InstanceDatabaseVersion> databaseVersion,
-        @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration,
-        @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus,
-        @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica,
-        @Nullable Output<String> gceZone,
-        @Nullable Output<InstanceInstanceType> instanceType,
-        @Nullable Output<List<IpMappingArgs>> ipAddresses,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> masterInstanceName,
-        @Nullable Output<String> maxDiskSize,
-        @Nullable Output<String> name,
-        @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration,
-        @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport,
-        @Nullable Output<String> project,
-        @Nullable Output<String> region,
-        @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration,
-        @Nullable Output<List<String>> replicaNames,
-        @Nullable Output<String> rootPassword,
-        @Nullable Output<Boolean> satisfiesPzs,
-        @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance,
-        @Nullable Output<String> secondaryGceZone,
-        @Nullable Output<String> selfLink,
-        @Nullable Output<SslCertArgs> serverCaCert,
-        @Nullable Output<String> serviceAccountEmailAddress,
-        @Nullable Output<SettingsArgs> settings,
-        @Nullable Output<InstanceState> state,
-        @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason) {
-        this.backendType = backendType;
-        this.connectionName = connectionName;
-        this.currentDiskSize = currentDiskSize;
-        this.databaseVersion = databaseVersion;
-        this.diskEncryptionConfiguration = diskEncryptionConfiguration;
-        this.diskEncryptionStatus = diskEncryptionStatus;
-        this.failoverReplica = failoverReplica;
-        this.gceZone = gceZone;
-        this.instanceType = instanceType;
-        this.ipAddresses = ipAddresses;
-        this.kind = kind;
-        this.masterInstanceName = masterInstanceName;
-        this.maxDiskSize = maxDiskSize;
-        this.name = name;
-        this.onPremisesConfiguration = onPremisesConfiguration;
-        this.outOfDiskReport = outOfDiskReport;
-        this.project = project;
-        this.region = region;
-        this.replicaConfiguration = replicaConfiguration;
-        this.replicaNames = replicaNames;
-        this.rootPassword = rootPassword;
-        this.satisfiesPzs = satisfiesPzs;
-        this.scheduledMaintenance = scheduledMaintenance;
-        this.secondaryGceZone = secondaryGceZone;
-        this.selfLink = selfLink;
-        this.serverCaCert = serverCaCert;
-        this.serviceAccountEmailAddress = serviceAccountEmailAddress;
-        this.settings = settings;
-        this.state = state;
-        this.suspensionReason = suspensionReason;
-    }
+    private InstanceArgs() {}
 
-    private InstanceArgs() {
-        this.backendType = Codegen.empty();
-        this.connectionName = Codegen.empty();
-        this.currentDiskSize = Codegen.empty();
-        this.databaseVersion = Codegen.empty();
-        this.diskEncryptionConfiguration = Codegen.empty();
-        this.diskEncryptionStatus = Codegen.empty();
-        this.failoverReplica = Codegen.empty();
-        this.gceZone = Codegen.empty();
-        this.instanceType = Codegen.empty();
-        this.ipAddresses = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.masterInstanceName = Codegen.empty();
-        this.maxDiskSize = Codegen.empty();
-        this.name = Codegen.empty();
-        this.onPremisesConfiguration = Codegen.empty();
-        this.outOfDiskReport = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.replicaConfiguration = Codegen.empty();
-        this.replicaNames = Codegen.empty();
-        this.rootPassword = Codegen.empty();
-        this.satisfiesPzs = Codegen.empty();
-        this.scheduledMaintenance = Codegen.empty();
-        this.secondaryGceZone = Codegen.empty();
-        this.selfLink = Codegen.empty();
-        this.serverCaCert = Codegen.empty();
-        this.serviceAccountEmailAddress = Codegen.empty();
-        this.settings = Codegen.empty();
-        this.state = Codegen.empty();
-        this.suspensionReason = Codegen.empty();
+    private InstanceArgs(InstanceArgs $) {
+        this.backendType = $.backendType;
+        this.connectionName = $.connectionName;
+        this.currentDiskSize = $.currentDiskSize;
+        this.databaseVersion = $.databaseVersion;
+        this.diskEncryptionConfiguration = $.diskEncryptionConfiguration;
+        this.diskEncryptionStatus = $.diskEncryptionStatus;
+        this.failoverReplica = $.failoverReplica;
+        this.gceZone = $.gceZone;
+        this.instanceType = $.instanceType;
+        this.ipAddresses = $.ipAddresses;
+        this.kind = $.kind;
+        this.masterInstanceName = $.masterInstanceName;
+        this.maxDiskSize = $.maxDiskSize;
+        this.name = $.name;
+        this.onPremisesConfiguration = $.onPremisesConfiguration;
+        this.outOfDiskReport = $.outOfDiskReport;
+        this.project = $.project;
+        this.region = $.region;
+        this.replicaConfiguration = $.replicaConfiguration;
+        this.replicaNames = $.replicaNames;
+        this.rootPassword = $.rootPassword;
+        this.satisfiesPzs = $.satisfiesPzs;
+        this.scheduledMaintenance = $.scheduledMaintenance;
+        this.secondaryGceZone = $.secondaryGceZone;
+        this.selfLink = $.selfLink;
+        this.serverCaCert = $.serverCaCert;
+        this.serviceAccountEmailAddress = $.serviceAccountEmailAddress;
+        this.settings = $.settings;
+        this.state = $.state;
+        this.suspensionReason = $.suspensionReason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceBackendType> backendType;
-        private @Nullable Output<String> connectionName;
-        private @Nullable Output<String> currentDiskSize;
-        private @Nullable Output<InstanceDatabaseVersion> databaseVersion;
-        private @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
-        private @Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus;
-        private @Nullable Output<InstanceFailoverReplicaArgs> failoverReplica;
-        private @Nullable Output<String> gceZone;
-        private @Nullable Output<InstanceInstanceType> instanceType;
-        private @Nullable Output<List<IpMappingArgs>> ipAddresses;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> masterInstanceName;
-        private @Nullable Output<String> maxDiskSize;
-        private @Nullable Output<String> name;
-        private @Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration;
-        private @Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> region;
-        private @Nullable Output<ReplicaConfigurationArgs> replicaConfiguration;
-        private @Nullable Output<List<String>> replicaNames;
-        private @Nullable Output<String> rootPassword;
-        private @Nullable Output<Boolean> satisfiesPzs;
-        private @Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance;
-        private @Nullable Output<String> secondaryGceZone;
-        private @Nullable Output<String> selfLink;
-        private @Nullable Output<SslCertArgs> serverCaCert;
-        private @Nullable Output<String> serviceAccountEmailAddress;
-        private @Nullable Output<SettingsArgs> settings;
-        private @Nullable Output<InstanceState> state;
-        private @Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason;
+        private InstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceArgs();
         }
 
         public Builder(InstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backendType = defaults.backendType;
-    	      this.connectionName = defaults.connectionName;
-    	      this.currentDiskSize = defaults.currentDiskSize;
-    	      this.databaseVersion = defaults.databaseVersion;
-    	      this.diskEncryptionConfiguration = defaults.diskEncryptionConfiguration;
-    	      this.diskEncryptionStatus = defaults.diskEncryptionStatus;
-    	      this.failoverReplica = defaults.failoverReplica;
-    	      this.gceZone = defaults.gceZone;
-    	      this.instanceType = defaults.instanceType;
-    	      this.ipAddresses = defaults.ipAddresses;
-    	      this.kind = defaults.kind;
-    	      this.masterInstanceName = defaults.masterInstanceName;
-    	      this.maxDiskSize = defaults.maxDiskSize;
-    	      this.name = defaults.name;
-    	      this.onPremisesConfiguration = defaults.onPremisesConfiguration;
-    	      this.outOfDiskReport = defaults.outOfDiskReport;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.replicaConfiguration = defaults.replicaConfiguration;
-    	      this.replicaNames = defaults.replicaNames;
-    	      this.rootPassword = defaults.rootPassword;
-    	      this.satisfiesPzs = defaults.satisfiesPzs;
-    	      this.scheduledMaintenance = defaults.scheduledMaintenance;
-    	      this.secondaryGceZone = defaults.secondaryGceZone;
-    	      this.selfLink = defaults.selfLink;
-    	      this.serverCaCert = defaults.serverCaCert;
-    	      this.serviceAccountEmailAddress = defaults.serviceAccountEmailAddress;
-    	      this.settings = defaults.settings;
-    	      this.state = defaults.state;
-    	      this.suspensionReason = defaults.suspensionReason;
+            $ = new InstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backendType(@Nullable Output<InstanceBackendType> backendType) {
-            this.backendType = backendType;
+            $.backendType = backendType;
             return this;
         }
-        public Builder backendType(@Nullable InstanceBackendType backendType) {
-            this.backendType = Codegen.ofNullable(backendType);
-            return this;
+
+        public Builder backendType(InstanceBackendType backendType) {
+            return backendType(Output.of(backendType));
         }
+
         public Builder connectionName(@Nullable Output<String> connectionName) {
-            this.connectionName = connectionName;
+            $.connectionName = connectionName;
             return this;
         }
-        public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Codegen.ofNullable(connectionName);
-            return this;
+
+        public Builder connectionName(String connectionName) {
+            return connectionName(Output.of(connectionName));
         }
+
         public Builder currentDiskSize(@Nullable Output<String> currentDiskSize) {
-            this.currentDiskSize = currentDiskSize;
+            $.currentDiskSize = currentDiskSize;
             return this;
         }
-        public Builder currentDiskSize(@Nullable String currentDiskSize) {
-            this.currentDiskSize = Codegen.ofNullable(currentDiskSize);
-            return this;
+
+        public Builder currentDiskSize(String currentDiskSize) {
+            return currentDiskSize(Output.of(currentDiskSize));
         }
+
         public Builder databaseVersion(@Nullable Output<InstanceDatabaseVersion> databaseVersion) {
-            this.databaseVersion = databaseVersion;
+            $.databaseVersion = databaseVersion;
             return this;
         }
-        public Builder databaseVersion(@Nullable InstanceDatabaseVersion databaseVersion) {
-            this.databaseVersion = Codegen.ofNullable(databaseVersion);
-            return this;
+
+        public Builder databaseVersion(InstanceDatabaseVersion databaseVersion) {
+            return databaseVersion(Output.of(databaseVersion));
         }
+
         public Builder diskEncryptionConfiguration(@Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = diskEncryptionConfiguration;
+            $.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
-        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
-            this.diskEncryptionConfiguration = Codegen.ofNullable(diskEncryptionConfiguration);
-            return this;
+
+        public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
+            return diskEncryptionConfiguration(Output.of(diskEncryptionConfiguration));
         }
+
         public Builder diskEncryptionStatus(@Nullable Output<DiskEncryptionStatusArgs> diskEncryptionStatus) {
-            this.diskEncryptionStatus = diskEncryptionStatus;
+            $.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
-        public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
-            this.diskEncryptionStatus = Codegen.ofNullable(diskEncryptionStatus);
-            return this;
+
+        public Builder diskEncryptionStatus(DiskEncryptionStatusArgs diskEncryptionStatus) {
+            return diskEncryptionStatus(Output.of(diskEncryptionStatus));
         }
+
         public Builder failoverReplica(@Nullable Output<InstanceFailoverReplicaArgs> failoverReplica) {
-            this.failoverReplica = failoverReplica;
+            $.failoverReplica = failoverReplica;
             return this;
         }
-        public Builder failoverReplica(@Nullable InstanceFailoverReplicaArgs failoverReplica) {
-            this.failoverReplica = Codegen.ofNullable(failoverReplica);
-            return this;
+
+        public Builder failoverReplica(InstanceFailoverReplicaArgs failoverReplica) {
+            return failoverReplica(Output.of(failoverReplica));
         }
+
         public Builder gceZone(@Nullable Output<String> gceZone) {
-            this.gceZone = gceZone;
+            $.gceZone = gceZone;
             return this;
         }
-        public Builder gceZone(@Nullable String gceZone) {
-            this.gceZone = Codegen.ofNullable(gceZone);
-            return this;
+
+        public Builder gceZone(String gceZone) {
+            return gceZone(Output.of(gceZone));
         }
+
         public Builder instanceType(@Nullable Output<InstanceInstanceType> instanceType) {
-            this.instanceType = instanceType;
+            $.instanceType = instanceType;
             return this;
         }
-        public Builder instanceType(@Nullable InstanceInstanceType instanceType) {
-            this.instanceType = Codegen.ofNullable(instanceType);
-            return this;
+
+        public Builder instanceType(InstanceInstanceType instanceType) {
+            return instanceType(Output.of(instanceType));
         }
+
         public Builder ipAddresses(@Nullable Output<List<IpMappingArgs>> ipAddresses) {
-            this.ipAddresses = ipAddresses;
+            $.ipAddresses = ipAddresses;
             return this;
         }
-        public Builder ipAddresses(@Nullable List<IpMappingArgs> ipAddresses) {
-            this.ipAddresses = Codegen.ofNullable(ipAddresses);
-            return this;
+
+        public Builder ipAddresses(List<IpMappingArgs> ipAddresses) {
+            return ipAddresses(Output.of(ipAddresses));
         }
+
         public Builder ipAddresses(IpMappingArgs... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder masterInstanceName(@Nullable Output<String> masterInstanceName) {
-            this.masterInstanceName = masterInstanceName;
+            $.masterInstanceName = masterInstanceName;
             return this;
         }
-        public Builder masterInstanceName(@Nullable String masterInstanceName) {
-            this.masterInstanceName = Codegen.ofNullable(masterInstanceName);
-            return this;
+
+        public Builder masterInstanceName(String masterInstanceName) {
+            return masterInstanceName(Output.of(masterInstanceName));
         }
+
         public Builder maxDiskSize(@Nullable Output<String> maxDiskSize) {
-            this.maxDiskSize = maxDiskSize;
+            $.maxDiskSize = maxDiskSize;
             return this;
         }
-        public Builder maxDiskSize(@Nullable String maxDiskSize) {
-            this.maxDiskSize = Codegen.ofNullable(maxDiskSize);
-            return this;
+
+        public Builder maxDiskSize(String maxDiskSize) {
+            return maxDiskSize(Output.of(maxDiskSize));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder onPremisesConfiguration(@Nullable Output<OnPremisesConfigurationArgs> onPremisesConfiguration) {
-            this.onPremisesConfiguration = onPremisesConfiguration;
+            $.onPremisesConfiguration = onPremisesConfiguration;
             return this;
         }
-        public Builder onPremisesConfiguration(@Nullable OnPremisesConfigurationArgs onPremisesConfiguration) {
-            this.onPremisesConfiguration = Codegen.ofNullable(onPremisesConfiguration);
-            return this;
+
+        public Builder onPremisesConfiguration(OnPremisesConfigurationArgs onPremisesConfiguration) {
+            return onPremisesConfiguration(Output.of(onPremisesConfiguration));
         }
+
         public Builder outOfDiskReport(@Nullable Output<SqlOutOfDiskReportArgs> outOfDiskReport) {
-            this.outOfDiskReport = outOfDiskReport;
+            $.outOfDiskReport = outOfDiskReport;
             return this;
         }
-        public Builder outOfDiskReport(@Nullable SqlOutOfDiskReportArgs outOfDiskReport) {
-            this.outOfDiskReport = Codegen.ofNullable(outOfDiskReport);
-            return this;
+
+        public Builder outOfDiskReport(SqlOutOfDiskReportArgs outOfDiskReport) {
+            return outOfDiskReport(Output.of(outOfDiskReport));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(@Nullable Output<String> region) {
-            this.region = region;
+            $.region = region;
             return this;
         }
-        public Builder region(@Nullable String region) {
-            this.region = Codegen.ofNullable(region);
-            return this;
+
+        public Builder region(String region) {
+            return region(Output.of(region));
         }
+
         public Builder replicaConfiguration(@Nullable Output<ReplicaConfigurationArgs> replicaConfiguration) {
-            this.replicaConfiguration = replicaConfiguration;
+            $.replicaConfiguration = replicaConfiguration;
             return this;
         }
-        public Builder replicaConfiguration(@Nullable ReplicaConfigurationArgs replicaConfiguration) {
-            this.replicaConfiguration = Codegen.ofNullable(replicaConfiguration);
-            return this;
+
+        public Builder replicaConfiguration(ReplicaConfigurationArgs replicaConfiguration) {
+            return replicaConfiguration(Output.of(replicaConfiguration));
         }
+
         public Builder replicaNames(@Nullable Output<List<String>> replicaNames) {
-            this.replicaNames = replicaNames;
+            $.replicaNames = replicaNames;
             return this;
         }
-        public Builder replicaNames(@Nullable List<String> replicaNames) {
-            this.replicaNames = Codegen.ofNullable(replicaNames);
-            return this;
+
+        public Builder replicaNames(List<String> replicaNames) {
+            return replicaNames(Output.of(replicaNames));
         }
+
         public Builder replicaNames(String... replicaNames) {
             return replicaNames(List.of(replicaNames));
         }
+
         public Builder rootPassword(@Nullable Output<String> rootPassword) {
-            this.rootPassword = rootPassword;
+            $.rootPassword = rootPassword;
             return this;
         }
-        public Builder rootPassword(@Nullable String rootPassword) {
-            this.rootPassword = Codegen.ofNullable(rootPassword);
-            return this;
+
+        public Builder rootPassword(String rootPassword) {
+            return rootPassword(Output.of(rootPassword));
         }
+
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
-            this.satisfiesPzs = satisfiesPzs;
+            $.satisfiesPzs = satisfiesPzs;
             return this;
         }
-        public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Codegen.ofNullable(satisfiesPzs);
-            return this;
+
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
+            return satisfiesPzs(Output.of(satisfiesPzs));
         }
+
         public Builder scheduledMaintenance(@Nullable Output<SqlScheduledMaintenanceArgs> scheduledMaintenance) {
-            this.scheduledMaintenance = scheduledMaintenance;
+            $.scheduledMaintenance = scheduledMaintenance;
             return this;
         }
-        public Builder scheduledMaintenance(@Nullable SqlScheduledMaintenanceArgs scheduledMaintenance) {
-            this.scheduledMaintenance = Codegen.ofNullable(scheduledMaintenance);
-            return this;
+
+        public Builder scheduledMaintenance(SqlScheduledMaintenanceArgs scheduledMaintenance) {
+            return scheduledMaintenance(Output.of(scheduledMaintenance));
         }
+
         public Builder secondaryGceZone(@Nullable Output<String> secondaryGceZone) {
-            this.secondaryGceZone = secondaryGceZone;
+            $.secondaryGceZone = secondaryGceZone;
             return this;
         }
-        public Builder secondaryGceZone(@Nullable String secondaryGceZone) {
-            this.secondaryGceZone = Codegen.ofNullable(secondaryGceZone);
-            return this;
+
+        public Builder secondaryGceZone(String secondaryGceZone) {
+            return secondaryGceZone(Output.of(secondaryGceZone));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
         }
+
         public Builder serverCaCert(@Nullable Output<SslCertArgs> serverCaCert) {
-            this.serverCaCert = serverCaCert;
+            $.serverCaCert = serverCaCert;
             return this;
         }
-        public Builder serverCaCert(@Nullable SslCertArgs serverCaCert) {
-            this.serverCaCert = Codegen.ofNullable(serverCaCert);
-            return this;
+
+        public Builder serverCaCert(SslCertArgs serverCaCert) {
+            return serverCaCert(Output.of(serverCaCert));
         }
+
         public Builder serviceAccountEmailAddress(@Nullable Output<String> serviceAccountEmailAddress) {
-            this.serviceAccountEmailAddress = serviceAccountEmailAddress;
+            $.serviceAccountEmailAddress = serviceAccountEmailAddress;
             return this;
         }
-        public Builder serviceAccountEmailAddress(@Nullable String serviceAccountEmailAddress) {
-            this.serviceAccountEmailAddress = Codegen.ofNullable(serviceAccountEmailAddress);
-            return this;
+
+        public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
+            return serviceAccountEmailAddress(Output.of(serviceAccountEmailAddress));
         }
+
         public Builder settings(@Nullable Output<SettingsArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable SettingsArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
+
+        public Builder settings(SettingsArgs settings) {
+            return settings(Output.of(settings));
         }
+
         public Builder state(@Nullable Output<InstanceState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable InstanceState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(InstanceState state) {
+            return state(Output.of(state));
         }
+
         public Builder suspensionReason(@Nullable Output<List<InstanceSuspensionReasonItem>> suspensionReason) {
-            this.suspensionReason = suspensionReason;
+            $.suspensionReason = suspensionReason;
             return this;
         }
-        public Builder suspensionReason(@Nullable List<InstanceSuspensionReasonItem> suspensionReason) {
-            this.suspensionReason = Codegen.ofNullable(suspensionReason);
-            return this;
+
+        public Builder suspensionReason(List<InstanceSuspensionReasonItem> suspensionReason) {
+            return suspensionReason(Output.of(suspensionReason));
         }
+
         public Builder suspensionReason(InstanceSuspensionReasonItem... suspensionReason) {
             return suspensionReason(List.of(suspensionReason));
-        }        public InstanceArgs build() {
-            return new InstanceArgs(backendType, connectionName, currentDiskSize, databaseVersion, diskEncryptionConfiguration, diskEncryptionStatus, failoverReplica, gceZone, instanceType, ipAddresses, kind, masterInstanceName, maxDiskSize, name, onPremisesConfiguration, outOfDiskReport, project, region, replicaConfiguration, replicaNames, rootPassword, satisfiesPzs, scheduledMaintenance, secondaryGceZone, selfLink, serverCaCert, serviceAccountEmailAddress, settings, state, suspensionReason);
+        }
+
+        public InstanceArgs build() {
+            return $;
         }
     }
+
 }

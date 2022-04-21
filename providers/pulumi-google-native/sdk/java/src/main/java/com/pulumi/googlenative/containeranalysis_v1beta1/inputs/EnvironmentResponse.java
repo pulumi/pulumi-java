@@ -18,45 +18,45 @@ public final class EnvironmentResponse extends com.pulumi.resources.InvokeArgs {
     public static final EnvironmentResponse Empty = new EnvironmentResponse();
 
     @Import(name="customValues", required=true)
-      private final Map<String,String> customValues;
+    private Map<String,String> customValues;
 
     public Map<String,String> customValues() {
         return this.customValues;
     }
 
-    public EnvironmentResponse(Map<String,String> customValues) {
-        this.customValues = Objects.requireNonNull(customValues, "expected parameter 'customValues' to be non-null");
-    }
+    private EnvironmentResponse() {}
 
-    private EnvironmentResponse() {
-        this.customValues = Map.of();
+    private EnvironmentResponse(EnvironmentResponse $) {
+        this.customValues = $.customValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvironmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> customValues;
+        private EnvironmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvironmentResponse();
         }
 
         public Builder(EnvironmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customValues = defaults.customValues;
+            $ = new EnvironmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customValues(Map<String,String> customValues) {
-            this.customValues = Objects.requireNonNull(customValues);
+            $.customValues = customValues;
             return this;
-        }        public EnvironmentResponse build() {
-            return new EnvironmentResponse(customValues);
+        }
+
+        public EnvironmentResponse build() {
+            $.customValues = Objects.requireNonNull($.customValues, "expected parameter 'customValues' to be non-null");
+            return $;
         }
     }
+
 }

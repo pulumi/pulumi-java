@@ -5,10 +5,10 @@ package com.pulumi.googlenative.domains_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.domains_v1.inputs.PostalAddressArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="email", required=true)
-      private final Output<String> email;
+    private Output<String> email;
 
     public Output<String> email() {
         return this.email;
@@ -36,10 +36,10 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="faxNumber")
-      private final @Nullable Output<String> faxNumber;
+    private @Nullable Output<String> faxNumber;
 
-    public Output<String> faxNumber() {
-        return this.faxNumber == null ? Codegen.empty() : this.faxNumber;
+    public Optional<Output<String>> faxNumber() {
+        return Optional.ofNullable(this.faxNumber);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final Output<String> phoneNumber;
+    private Output<String> phoneNumber;
 
     public Output<String> phoneNumber() {
         return this.phoneNumber;
@@ -58,89 +58,81 @@ public final class ContactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postalAddress", required=true)
-      private final Output<PostalAddressArgs> postalAddress;
+    private Output<PostalAddressArgs> postalAddress;
 
     public Output<PostalAddressArgs> postalAddress() {
         return this.postalAddress;
     }
 
-    public ContactArgs(
-        Output<String> email,
-        @Nullable Output<String> faxNumber,
-        Output<String> phoneNumber,
-        Output<PostalAddressArgs> postalAddress) {
-        this.email = Objects.requireNonNull(email, "expected parameter 'email' to be non-null");
-        this.faxNumber = faxNumber;
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-        this.postalAddress = Objects.requireNonNull(postalAddress, "expected parameter 'postalAddress' to be non-null");
-    }
+    private ContactArgs() {}
 
-    private ContactArgs() {
-        this.email = Codegen.empty();
-        this.faxNumber = Codegen.empty();
-        this.phoneNumber = Codegen.empty();
-        this.postalAddress = Codegen.empty();
+    private ContactArgs(ContactArgs $) {
+        this.email = $.email;
+        this.faxNumber = $.faxNumber;
+        this.phoneNumber = $.phoneNumber;
+        this.postalAddress = $.postalAddress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> email;
-        private @Nullable Output<String> faxNumber;
-        private Output<String> phoneNumber;
-        private Output<PostalAddressArgs> postalAddress;
+        private ContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContactArgs();
         }
 
         public Builder(ContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.email = defaults.email;
-    	      this.faxNumber = defaults.faxNumber;
-    	      this.phoneNumber = defaults.phoneNumber;
-    	      this.postalAddress = defaults.postalAddress;
+            $ = new ContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder email(Output<String> email) {
-            this.email = Objects.requireNonNull(email);
+            $.email = email;
             return this;
         }
+
         public Builder email(String email) {
-            this.email = Output.of(Objects.requireNonNull(email));
-            return this;
+            return email(Output.of(email));
         }
+
         public Builder faxNumber(@Nullable Output<String> faxNumber) {
-            this.faxNumber = faxNumber;
+            $.faxNumber = faxNumber;
             return this;
         }
-        public Builder faxNumber(@Nullable String faxNumber) {
-            this.faxNumber = Codegen.ofNullable(faxNumber);
-            return this;
+
+        public Builder faxNumber(String faxNumber) {
+            return faxNumber(Output.of(faxNumber));
         }
+
         public Builder phoneNumber(Output<String> phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
         }
+
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Output.of(Objects.requireNonNull(phoneNumber));
-            return this;
+            return phoneNumber(Output.of(phoneNumber));
         }
+
         public Builder postalAddress(Output<PostalAddressArgs> postalAddress) {
-            this.postalAddress = Objects.requireNonNull(postalAddress);
+            $.postalAddress = postalAddress;
             return this;
         }
+
         public Builder postalAddress(PostalAddressArgs postalAddress) {
-            this.postalAddress = Output.of(Objects.requireNonNull(postalAddress));
-            return this;
-        }        public ContactArgs build() {
-            return new ContactArgs(email, faxNumber, phoneNumber, postalAddress);
+            return postalAddress(Output.of(postalAddress));
+        }
+
+        public ContactArgs build() {
+            $.email = Objects.requireNonNull($.email, "expected parameter 'email' to be non-null");
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            $.postalAddress = Objects.requireNonNull($.postalAddress, "expected parameter 'postalAddress' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="devicePolicy", required=true)
-      private final DevicePolicyResponse devicePolicy;
+    private DevicePolicyResponse devicePolicy;
 
     public DevicePolicyResponse devicePolicy() {
         return this.devicePolicy;
@@ -35,7 +35,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipSubnetworks", required=true)
-      private final List<String> ipSubnetworks;
+    private List<String> ipSubnetworks;
 
     public List<String> ipSubnetworks() {
         return this.ipSubnetworks;
@@ -46,7 +46,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="members", required=true)
-      private final List<String> members;
+    private List<String> members;
 
     public List<String> members() {
         return this.members;
@@ -57,7 +57,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="negate", required=true)
-      private final Boolean negate;
+    private Boolean negate;
 
     public Boolean negate() {
         return this.negate;
@@ -68,7 +68,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regions", required=true)
-      private final List<String> regions;
+    private List<String> regions;
 
     public List<String> regions() {
         return this.regions;
@@ -79,103 +79,96 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requiredAccessLevels", required=true)
-      private final List<String> requiredAccessLevels;
+    private List<String> requiredAccessLevels;
 
     public List<String> requiredAccessLevels() {
         return this.requiredAccessLevels;
     }
 
-    public ConditionResponse(
-        DevicePolicyResponse devicePolicy,
-        List<String> ipSubnetworks,
-        List<String> members,
-        Boolean negate,
-        List<String> regions,
-        List<String> requiredAccessLevels) {
-        this.devicePolicy = Objects.requireNonNull(devicePolicy, "expected parameter 'devicePolicy' to be non-null");
-        this.ipSubnetworks = Objects.requireNonNull(ipSubnetworks, "expected parameter 'ipSubnetworks' to be non-null");
-        this.members = Objects.requireNonNull(members, "expected parameter 'members' to be non-null");
-        this.negate = Objects.requireNonNull(negate, "expected parameter 'negate' to be non-null");
-        this.regions = Objects.requireNonNull(regions, "expected parameter 'regions' to be non-null");
-        this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels, "expected parameter 'requiredAccessLevels' to be non-null");
-    }
+    private ConditionResponse() {}
 
-    private ConditionResponse() {
-        this.devicePolicy = null;
-        this.ipSubnetworks = List.of();
-        this.members = List.of();
-        this.negate = null;
-        this.regions = List.of();
-        this.requiredAccessLevels = List.of();
+    private ConditionResponse(ConditionResponse $) {
+        this.devicePolicy = $.devicePolicy;
+        this.ipSubnetworks = $.ipSubnetworks;
+        this.members = $.members;
+        this.negate = $.negate;
+        this.regions = $.regions;
+        this.requiredAccessLevels = $.requiredAccessLevels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DevicePolicyResponse devicePolicy;
-        private List<String> ipSubnetworks;
-        private List<String> members;
-        private Boolean negate;
-        private List<String> regions;
-        private List<String> requiredAccessLevels;
+        private ConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionResponse();
         }
 
         public Builder(ConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.devicePolicy = defaults.devicePolicy;
-    	      this.ipSubnetworks = defaults.ipSubnetworks;
-    	      this.members = defaults.members;
-    	      this.negate = defaults.negate;
-    	      this.regions = defaults.regions;
-    	      this.requiredAccessLevels = defaults.requiredAccessLevels;
+            $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder devicePolicy(DevicePolicyResponse devicePolicy) {
-            this.devicePolicy = Objects.requireNonNull(devicePolicy);
+            $.devicePolicy = devicePolicy;
             return this;
         }
+
         public Builder ipSubnetworks(List<String> ipSubnetworks) {
-            this.ipSubnetworks = Objects.requireNonNull(ipSubnetworks);
+            $.ipSubnetworks = ipSubnetworks;
             return this;
         }
+
         public Builder ipSubnetworks(String... ipSubnetworks) {
             return ipSubnetworks(List.of(ipSubnetworks));
         }
+
         public Builder members(List<String> members) {
-            this.members = Objects.requireNonNull(members);
+            $.members = members;
             return this;
         }
+
         public Builder members(String... members) {
             return members(List.of(members));
         }
+
         public Builder negate(Boolean negate) {
-            this.negate = Objects.requireNonNull(negate);
+            $.negate = negate;
             return this;
         }
+
         public Builder regions(List<String> regions) {
-            this.regions = Objects.requireNonNull(regions);
+            $.regions = regions;
             return this;
         }
+
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
+
         public Builder requiredAccessLevels(List<String> requiredAccessLevels) {
-            this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
+            $.requiredAccessLevels = requiredAccessLevels;
             return this;
         }
+
         public Builder requiredAccessLevels(String... requiredAccessLevels) {
             return requiredAccessLevels(List.of(requiredAccessLevels));
-        }        public ConditionResponse build() {
-            return new ConditionResponse(devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
+        }
+
+        public ConditionResponse build() {
+            $.devicePolicy = Objects.requireNonNull($.devicePolicy, "expected parameter 'devicePolicy' to be non-null");
+            $.ipSubnetworks = Objects.requireNonNull($.ipSubnetworks, "expected parameter 'ipSubnetworks' to be non-null");
+            $.members = Objects.requireNonNull($.members, "expected parameter 'members' to be non-null");
+            $.negate = Objects.requireNonNull($.negate, "expected parameter 'negate' to be non-null");
+            $.regions = Objects.requireNonNull($.regions, "expected parameter 'regions' to be non-null");
+            $.requiredAccessLevels = Objects.requireNonNull($.requiredAccessLevels, "expected parameter 'requiredAccessLevels' to be non-null");
+            return $;
         }
     }
+
 }

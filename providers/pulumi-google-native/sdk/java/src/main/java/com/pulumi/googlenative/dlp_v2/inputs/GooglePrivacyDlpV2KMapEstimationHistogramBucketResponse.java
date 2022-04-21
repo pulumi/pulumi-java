@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @Import(name="bucketSize", required=true)
-      private final String bucketSize;
+    private String bucketSize;
 
     public String bucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @Import(name="bucketValueCount", required=true)
-      private final String bucketValueCount;
+    private String bucketValueCount;
 
     public String bucketValueCount() {
         return this.bucketValueCount;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @Import(name="bucketValues", required=true)
-      private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
+    private List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues() {
         return this.bucketValues;
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @Import(name="maxAnonymity", required=true)
-      private final String maxAnonymity;
+    private String maxAnonymity;
 
     public String maxAnonymity() {
         return this.maxAnonymity;
@@ -67,85 +67,77 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * 
      */
     @Import(name="minAnonymity", required=true)
-      private final String minAnonymity;
+    private String minAnonymity;
 
     public String minAnonymity() {
         return this.minAnonymity;
     }
 
-    public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues,
-        String maxAnonymity,
-        String minAnonymity) {
-        this.bucketSize = Objects.requireNonNull(bucketSize, "expected parameter 'bucketSize' to be non-null");
-        this.bucketValueCount = Objects.requireNonNull(bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
-        this.bucketValues = Objects.requireNonNull(bucketValues, "expected parameter 'bucketValues' to be non-null");
-        this.maxAnonymity = Objects.requireNonNull(maxAnonymity, "expected parameter 'maxAnonymity' to be non-null");
-        this.minAnonymity = Objects.requireNonNull(minAnonymity, "expected parameter 'minAnonymity' to be non-null");
-    }
+    private GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse() {}
 
-    private GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse() {
-        this.bucketSize = null;
-        this.bucketValueCount = null;
-        this.bucketValues = List.of();
-        this.maxAnonymity = null;
-        this.minAnonymity = null;
+    private GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse $) {
+        this.bucketSize = $.bucketSize;
+        this.bucketValueCount = $.bucketValueCount;
+        this.bucketValues = $.bucketValues;
+        this.maxAnonymity = $.maxAnonymity;
+        this.minAnonymity = $.minAnonymity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucketSize;
-        private String bucketValueCount;
-        private List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
-        private String maxAnonymity;
-        private String minAnonymity;
+        private GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketSize = defaults.bucketSize;
-    	      this.bucketValueCount = defaults.bucketValueCount;
-    	      this.bucketValues = defaults.bucketValues;
-    	      this.maxAnonymity = defaults.maxAnonymity;
-    	      this.minAnonymity = defaults.minAnonymity;
+            $ = new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketSize(String bucketSize) {
-            this.bucketSize = Objects.requireNonNull(bucketSize);
+            $.bucketSize = bucketSize;
             return this;
         }
+
         public Builder bucketValueCount(String bucketValueCount) {
-            this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
+            $.bucketValueCount = bucketValueCount;
             return this;
         }
+
         public Builder bucketValues(List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues) {
-            this.bucketValues = Objects.requireNonNull(bucketValues);
+            $.bucketValues = bucketValues;
             return this;
         }
+
         public Builder bucketValues(GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse... bucketValues) {
             return bucketValues(List.of(bucketValues));
         }
+
         public Builder maxAnonymity(String maxAnonymity) {
-            this.maxAnonymity = Objects.requireNonNull(maxAnonymity);
+            $.maxAnonymity = maxAnonymity;
             return this;
         }
+
         public Builder minAnonymity(String minAnonymity) {
-            this.minAnonymity = Objects.requireNonNull(minAnonymity);
+            $.minAnonymity = minAnonymity;
             return this;
-        }        public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
-            return new GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxAnonymity, minAnonymity);
+        }
+
+        public GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse build() {
+            $.bucketSize = Objects.requireNonNull($.bucketSize, "expected parameter 'bucketSize' to be non-null");
+            $.bucketValueCount = Objects.requireNonNull($.bucketValueCount, "expected parameter 'bucketValueCount' to be non-null");
+            $.bucketValues = Objects.requireNonNull($.bucketValues, "expected parameter 'bucketValues' to be non-null");
+            $.maxAnonymity = Objects.requireNonNull($.maxAnonymity, "expected parameter 'maxAnonymity' to be non-null");
+            $.minAnonymity = Objects.requireNonNull($.minAnonymity, "expected parameter 'minAnonymity' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends com.pulumi.resource
      * 
      */
     @Import(name="namespaceId")
-      private final @Nullable Output<String> namespaceId;
+    private @Nullable Output<String> namespaceId;
 
-    public Output<String> namespaceId() {
-        return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
+    public Optional<Output<String>> namespaceId() {
+        return Optional.ofNullable(this.namespaceId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends com.pulumi.resource
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public GooglePrivacyDlpV2PartitionIdArgs(
-        @Nullable Output<String> namespaceId,
-        @Nullable Output<String> project) {
-        this.namespaceId = namespaceId;
-        this.project = project;
-    }
+    private GooglePrivacyDlpV2PartitionIdArgs() {}
 
-    private GooglePrivacyDlpV2PartitionIdArgs() {
-        this.namespaceId = Codegen.empty();
-        this.project = Codegen.empty();
+    private GooglePrivacyDlpV2PartitionIdArgs(GooglePrivacyDlpV2PartitionIdArgs $) {
+        this.namespaceId = $.namespaceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2PartitionIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> namespaceId;
-        private @Nullable Output<String> project;
+        private GooglePrivacyDlpV2PartitionIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2PartitionIdArgs();
         }
 
         public Builder(GooglePrivacyDlpV2PartitionIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.project = defaults.project;
+            $ = new GooglePrivacyDlpV2PartitionIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder namespaceId(@Nullable Output<String> namespaceId) {
-            this.namespaceId = namespaceId;
+            $.namespaceId = namespaceId;
             return this;
         }
-        public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Codegen.ofNullable(namespaceId);
-            return this;
+
+        public Builder namespaceId(String namespaceId) {
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public GooglePrivacyDlpV2PartitionIdArgs build() {
-            return new GooglePrivacyDlpV2PartitionIdArgs(namespaceId, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public GooglePrivacyDlpV2PartitionIdArgs build() {
+            return $;
         }
     }
+
 }

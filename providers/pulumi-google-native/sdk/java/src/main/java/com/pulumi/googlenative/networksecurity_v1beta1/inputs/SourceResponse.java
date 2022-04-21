@@ -22,7 +22,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipBlocks", required=true)
-      private final List<String> ipBlocks;
+    private List<String> ipBlocks;
 
     public List<String> ipBlocks() {
         return this.ipBlocks;
@@ -33,61 +33,60 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="principals", required=true)
-      private final List<String> principals;
+    private List<String> principals;
 
     public List<String> principals() {
         return this.principals;
     }
 
-    public SourceResponse(
-        List<String> ipBlocks,
-        List<String> principals) {
-        this.ipBlocks = Objects.requireNonNull(ipBlocks, "expected parameter 'ipBlocks' to be non-null");
-        this.principals = Objects.requireNonNull(principals, "expected parameter 'principals' to be non-null");
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.ipBlocks = List.of();
-        this.principals = List.of();
+    private SourceResponse(SourceResponse $) {
+        this.ipBlocks = $.ipBlocks;
+        this.principals = $.principals;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> ipBlocks;
-        private List<String> principals;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipBlocks = defaults.ipBlocks;
-    	      this.principals = defaults.principals;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipBlocks(List<String> ipBlocks) {
-            this.ipBlocks = Objects.requireNonNull(ipBlocks);
+            $.ipBlocks = ipBlocks;
             return this;
         }
+
         public Builder ipBlocks(String... ipBlocks) {
             return ipBlocks(List.of(ipBlocks));
         }
+
         public Builder principals(List<String> principals) {
-            this.principals = Objects.requireNonNull(principals);
+            $.principals = principals;
             return this;
         }
+
         public Builder principals(String... principals) {
             return principals(List.of(principals));
-        }        public SourceResponse build() {
-            return new SourceResponse(ipBlocks, principals);
+        }
+
+        public SourceResponse build() {
+            $.ipBlocks = Objects.requireNonNull($.ipBlocks, "expected parameter 'ipBlocks' to be non-null");
+            $.principals = Objects.requireNonNull($.principals, "expected parameter 'principals' to be non-null");
+            return $;
         }
     }
+
 }

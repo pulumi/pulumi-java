@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends com.p
      * 
      */
     @Import(name="metadataBasedReadinessSignal")
-      private final @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
+    private @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
-    public Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal() {
-        return this.metadataBasedReadinessSignal == null ? Codegen.empty() : this.metadataBasedReadinessSignal;
+    public Optional<Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs>> metadataBasedReadinessSignal() {
+        return Optional.ofNullable(this.metadataBasedReadinessSignal);
     }
 
-    public InstanceGroupManagerInstanceLifecyclePolicyArgs(@Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
-        this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
-    }
+    private InstanceGroupManagerInstanceLifecyclePolicyArgs() {}
 
-    private InstanceGroupManagerInstanceLifecyclePolicyArgs() {
-        this.metadataBasedReadinessSignal = Codegen.empty();
+    private InstanceGroupManagerInstanceLifecyclePolicyArgs(InstanceGroupManagerInstanceLifecyclePolicyArgs $) {
+        this.metadataBasedReadinessSignal = $.metadataBasedReadinessSignal;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerInstanceLifecyclePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
+        private InstanceGroupManagerInstanceLifecyclePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyArgs();
         }
 
         public Builder(InstanceGroupManagerInstanceLifecyclePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataBasedReadinessSignal = defaults.metadataBasedReadinessSignal;
+            $ = new InstanceGroupManagerInstanceLifecyclePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataBasedReadinessSignal(@Nullable Output<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal) {
-            this.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
+            $.metadataBasedReadinessSignal = metadataBasedReadinessSignal;
             return this;
         }
-        public Builder metadataBasedReadinessSignal(@Nullable InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs metadataBasedReadinessSignal) {
-            this.metadataBasedReadinessSignal = Codegen.ofNullable(metadataBasedReadinessSignal);
-            return this;
-        }        public InstanceGroupManagerInstanceLifecyclePolicyArgs build() {
-            return new InstanceGroupManagerInstanceLifecyclePolicyArgs(metadataBasedReadinessSignal);
+
+        public Builder metadataBasedReadinessSignal(InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs metadataBasedReadinessSignal) {
+            return metadataBasedReadinessSignal(Output.of(metadataBasedReadinessSignal));
+        }
+
+        public InstanceGroupManagerInstanceLifecyclePolicyArgs build() {
+            return $;
         }
     }
+
 }

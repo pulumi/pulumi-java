@@ -21,7 +21,7 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maximumBackoff", required=true)
-      private final String maximumBackoff;
+    private String maximumBackoff;
 
     public String maximumBackoff() {
         return this.maximumBackoff;
@@ -32,55 +32,52 @@ public final class RetryPolicyResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="minimumBackoff", required=true)
-      private final String minimumBackoff;
+    private String minimumBackoff;
 
     public String minimumBackoff() {
         return this.minimumBackoff;
     }
 
-    public RetryPolicyResponse(
-        String maximumBackoff,
-        String minimumBackoff) {
-        this.maximumBackoff = Objects.requireNonNull(maximumBackoff, "expected parameter 'maximumBackoff' to be non-null");
-        this.minimumBackoff = Objects.requireNonNull(minimumBackoff, "expected parameter 'minimumBackoff' to be non-null");
-    }
+    private RetryPolicyResponse() {}
 
-    private RetryPolicyResponse() {
-        this.maximumBackoff = null;
-        this.minimumBackoff = null;
+    private RetryPolicyResponse(RetryPolicyResponse $) {
+        this.maximumBackoff = $.maximumBackoff;
+        this.minimumBackoff = $.minimumBackoff;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RetryPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maximumBackoff;
-        private String minimumBackoff;
+        private RetryPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RetryPolicyResponse();
         }
 
         public Builder(RetryPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maximumBackoff = defaults.maximumBackoff;
-    	      this.minimumBackoff = defaults.minimumBackoff;
+            $ = new RetryPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maximumBackoff(String maximumBackoff) {
-            this.maximumBackoff = Objects.requireNonNull(maximumBackoff);
+            $.maximumBackoff = maximumBackoff;
             return this;
         }
+
         public Builder minimumBackoff(String minimumBackoff) {
-            this.minimumBackoff = Objects.requireNonNull(minimumBackoff);
+            $.minimumBackoff = minimumBackoff;
             return this;
-        }        public RetryPolicyResponse build() {
-            return new RetryPolicyResponse(maximumBackoff, minimumBackoff);
+        }
+
+        public RetryPolicyResponse build() {
+            $.maximumBackoff = Objects.requireNonNull($.maximumBackoff, "expected parameter 'maximumBackoff' to be non-null");
+            $.minimumBackoff = Objects.requireNonNull($.minimumBackoff, "expected parameter 'minimumBackoff' to be non-null");
+            return $;
         }
     }
+
 }

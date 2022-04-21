@@ -22,7 +22,7 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
      * 
      */
     @Import(name="projectKey", required=true)
-      private final String projectKey;
+    private String projectKey;
 
     public String projectKey() {
         return this.projectKey;
@@ -33,7 +33,7 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
      * 
      */
     @Import(name="repoSlug", required=true)
-      private final String repoSlug;
+    private String repoSlug;
 
     public String repoSlug() {
         return this.repoSlug;
@@ -44,64 +44,59 @@ public final class BitbucketServerRepositoryIdResponse extends com.pulumi.resour
      * 
      */
     @Import(name="webhookId", required=true)
-      private final Integer webhookId;
+    private Integer webhookId;
 
     public Integer webhookId() {
         return this.webhookId;
     }
 
-    public BitbucketServerRepositoryIdResponse(
-        String projectKey,
-        String repoSlug,
-        Integer webhookId) {
-        this.projectKey = Objects.requireNonNull(projectKey, "expected parameter 'projectKey' to be non-null");
-        this.repoSlug = Objects.requireNonNull(repoSlug, "expected parameter 'repoSlug' to be non-null");
-        this.webhookId = Objects.requireNonNull(webhookId, "expected parameter 'webhookId' to be non-null");
-    }
+    private BitbucketServerRepositoryIdResponse() {}
 
-    private BitbucketServerRepositoryIdResponse() {
-        this.projectKey = null;
-        this.repoSlug = null;
-        this.webhookId = null;
+    private BitbucketServerRepositoryIdResponse(BitbucketServerRepositoryIdResponse $) {
+        this.projectKey = $.projectKey;
+        this.repoSlug = $.repoSlug;
+        this.webhookId = $.webhookId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BitbucketServerRepositoryIdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String projectKey;
-        private String repoSlug;
-        private Integer webhookId;
+        private BitbucketServerRepositoryIdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BitbucketServerRepositoryIdResponse();
         }
 
         public Builder(BitbucketServerRepositoryIdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectKey = defaults.projectKey;
-    	      this.repoSlug = defaults.repoSlug;
-    	      this.webhookId = defaults.webhookId;
+            $ = new BitbucketServerRepositoryIdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder projectKey(String projectKey) {
-            this.projectKey = Objects.requireNonNull(projectKey);
+            $.projectKey = projectKey;
             return this;
         }
+
         public Builder repoSlug(String repoSlug) {
-            this.repoSlug = Objects.requireNonNull(repoSlug);
+            $.repoSlug = repoSlug;
             return this;
         }
+
         public Builder webhookId(Integer webhookId) {
-            this.webhookId = Objects.requireNonNull(webhookId);
+            $.webhookId = webhookId;
             return this;
-        }        public BitbucketServerRepositoryIdResponse build() {
-            return new BitbucketServerRepositoryIdResponse(projectKey, repoSlug, webhookId);
+        }
+
+        public BitbucketServerRepositoryIdResponse build() {
+            $.projectKey = Objects.requireNonNull($.projectKey, "expected parameter 'projectKey' to be non-null");
+            $.repoSlug = Objects.requireNonNull($.repoSlug, "expected parameter 'repoSlug' to be non-null");
+            $.webhookId = Objects.requireNonNull($.webhookId, "expected parameter 'webhookId' to be non-null");
+            return $;
         }
     }
+
 }

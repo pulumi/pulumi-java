@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse extend
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse() {}
 
-    private GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse() {
-        this.type = null;
+    private GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse build() {
-            return new GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse(type);
+        }
+
+        public GoogleCloudDialogflowV2beta1FulfillmentFeatureResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

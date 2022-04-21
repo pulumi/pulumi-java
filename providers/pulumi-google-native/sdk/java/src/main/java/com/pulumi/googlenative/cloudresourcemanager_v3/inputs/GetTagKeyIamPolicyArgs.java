@@ -13,45 +13,45 @@ public final class GetTagKeyIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetTagKeyIamPolicyArgs Empty = new GetTagKeyIamPolicyArgs();
 
     @Import(name="tagKeyId", required=true)
-      private final String tagKeyId;
+    private String tagKeyId;
 
     public String tagKeyId() {
         return this.tagKeyId;
     }
 
-    public GetTagKeyIamPolicyArgs(String tagKeyId) {
-        this.tagKeyId = Objects.requireNonNull(tagKeyId, "expected parameter 'tagKeyId' to be non-null");
-    }
+    private GetTagKeyIamPolicyArgs() {}
 
-    private GetTagKeyIamPolicyArgs() {
-        this.tagKeyId = null;
+    private GetTagKeyIamPolicyArgs(GetTagKeyIamPolicyArgs $) {
+        this.tagKeyId = $.tagKeyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTagKeyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String tagKeyId;
+        private GetTagKeyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTagKeyIamPolicyArgs();
         }
 
         public Builder(GetTagKeyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.tagKeyId = defaults.tagKeyId;
+            $ = new GetTagKeyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder tagKeyId(String tagKeyId) {
-            this.tagKeyId = Objects.requireNonNull(tagKeyId);
+            $.tagKeyId = tagKeyId;
             return this;
-        }        public GetTagKeyIamPolicyArgs build() {
-            return new GetTagKeyIamPolicyArgs(tagKeyId);
+        }
+
+        public GetTagKeyIamPolicyArgs build() {
+            $.tagKeyId = Objects.requireNonNull($.tagKeyId, "expected parameter 'tagKeyId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class VertexResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="x", required=true)
-      private final Integer x;
+    private Integer x;
 
     public Integer x() {
         return this.x;
@@ -32,55 +32,52 @@ public final class VertexResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="y", required=true)
-      private final Integer y;
+    private Integer y;
 
     public Integer y() {
         return this.y;
     }
 
-    public VertexResponse(
-        Integer x,
-        Integer y) {
-        this.x = Objects.requireNonNull(x, "expected parameter 'x' to be non-null");
-        this.y = Objects.requireNonNull(y, "expected parameter 'y' to be non-null");
-    }
+    private VertexResponse() {}
 
-    private VertexResponse() {
-        this.x = null;
-        this.y = null;
+    private VertexResponse(VertexResponse $) {
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VertexResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer x;
-        private Integer y;
+        private VertexResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VertexResponse();
         }
 
         public Builder(VertexResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new VertexResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder x(Integer x) {
-            this.x = Objects.requireNonNull(x);
+            $.x = x;
             return this;
         }
+
         public Builder y(Integer y) {
-            this.y = Objects.requireNonNull(y);
+            $.y = y;
             return this;
-        }        public VertexResponse build() {
-            return new VertexResponse(x, y);
+        }
+
+        public VertexResponse build() {
+            $.x = Objects.requireNonNull($.x, "expected parameter 'x' to be non-null");
+            $.y = Objects.requireNonNull($.y, "expected parameter 'y' to be non-null");
+            return $;
         }
     }
+
 }

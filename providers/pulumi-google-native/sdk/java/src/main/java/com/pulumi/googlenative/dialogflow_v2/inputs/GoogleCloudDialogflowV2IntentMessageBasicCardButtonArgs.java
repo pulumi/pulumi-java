@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
      * 
      */
     @Import(name="openUriAction", required=true)
-      private final Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
+    private Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
 
     public Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction() {
         return this.openUriAction;
@@ -35,63 +34,60 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs exten
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(
-        Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction,
-        Output<String> title) {
-        this.openUriAction = Objects.requireNonNull(openUriAction, "expected parameter 'openUriAction' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs() {
-        this.openUriAction = Codegen.empty();
-        this.title = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs $) {
+        this.openUriAction = $.openUriAction;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction;
-        private Output<String> title;
+        private GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.openUriAction = defaults.openUriAction;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder openUriAction(Output<GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs> openUriAction) {
-            this.openUriAction = Objects.requireNonNull(openUriAction);
+            $.openUriAction = openUriAction;
             return this;
         }
+
         public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionArgs openUriAction) {
-            this.openUriAction = Output.of(Objects.requireNonNull(openUriAction));
-            return this;
+            return openUriAction(Output.of(openUriAction));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs(openUriAction, title);
+            return title(Output.of(title));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs build() {
+            $.openUriAction = Objects.requireNonNull($.openUriAction, "expected parameter 'openUriAction' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

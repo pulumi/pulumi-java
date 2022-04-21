@@ -15,94 +15,85 @@ public final class GetMembershipIamPolicyArgs extends com.pulumi.resources.Invok
     public static final GetMembershipIamPolicyArgs Empty = new GetMembershipIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="membershipId", required=true)
-      private final String membershipId;
+    private String membershipId;
 
     public String membershipId() {
         return this.membershipId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMembershipIamPolicyArgs(
-        String location,
-        String membershipId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.membershipId = Objects.requireNonNull(membershipId, "expected parameter 'membershipId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetMembershipIamPolicyArgs() {}
 
-    private GetMembershipIamPolicyArgs() {
-        this.location = null;
-        this.membershipId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetMembershipIamPolicyArgs(GetMembershipIamPolicyArgs $) {
+        this.location = $.location;
+        this.membershipId = $.membershipId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMembershipIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String membershipId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetMembershipIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMembershipIamPolicyArgs();
         }
 
         public Builder(GetMembershipIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.membershipId = defaults.membershipId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetMembershipIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder membershipId(String membershipId) {
-            this.membershipId = Objects.requireNonNull(membershipId);
+            $.membershipId = membershipId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMembershipIamPolicyArgs build() {
-            return new GetMembershipIamPolicyArgs(location, membershipId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetMembershipIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.membershipId = Objects.requireNonNull($.membershipId, "expected parameter 'membershipId' to be non-null");
+            return $;
         }
     }
+
 }

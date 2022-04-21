@@ -21,45 +21,45 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse extends co
      * 
      */
     @Import(name="numPaths", required=true)
-      private final Integer numPaths;
+    private Integer numPaths;
 
     public Integer numPaths() {
         return this.numPaths;
     }
 
-    public GoogleCloudMlV1__SampledShapleyAttributionResponse(Integer numPaths) {
-        this.numPaths = Objects.requireNonNull(numPaths, "expected parameter 'numPaths' to be non-null");
-    }
+    private GoogleCloudMlV1__SampledShapleyAttributionResponse() {}
 
-    private GoogleCloudMlV1__SampledShapleyAttributionResponse() {
-        this.numPaths = null;
+    private GoogleCloudMlV1__SampledShapleyAttributionResponse(GoogleCloudMlV1__SampledShapleyAttributionResponse $) {
+        this.numPaths = $.numPaths;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__SampledShapleyAttributionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer numPaths;
+        private GoogleCloudMlV1__SampledShapleyAttributionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__SampledShapleyAttributionResponse();
         }
 
         public Builder(GoogleCloudMlV1__SampledShapleyAttributionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numPaths = defaults.numPaths;
+            $ = new GoogleCloudMlV1__SampledShapleyAttributionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder numPaths(Integer numPaths) {
-            this.numPaths = Objects.requireNonNull(numPaths);
+            $.numPaths = numPaths;
             return this;
-        }        public GoogleCloudMlV1__SampledShapleyAttributionResponse build() {
-            return new GoogleCloudMlV1__SampledShapleyAttributionResponse(numPaths);
+        }
+
+        public GoogleCloudMlV1__SampledShapleyAttributionResponse build() {
+            $.numPaths = Objects.requireNonNull($.numPaths, "expected parameter 'numPaths' to be non-null");
+            return $;
         }
     }
+
 }

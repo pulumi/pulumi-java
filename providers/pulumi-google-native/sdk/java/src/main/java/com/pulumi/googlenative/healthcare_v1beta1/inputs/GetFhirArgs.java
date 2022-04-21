@@ -15,126 +15,114 @@ public final class GetFhirArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFhirArgs Empty = new GetFhirArgs();
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="fhirId", required=true)
-      private final String fhirId;
+    private String fhirId;
 
     public String fhirId() {
         return this.fhirId;
     }
 
     @Import(name="fhirId1", required=true)
-      private final String fhirId1;
+    private String fhirId1;
 
     public String fhirId1() {
         return this.fhirId1;
     }
 
     @Import(name="fhirStoreId", required=true)
-      private final String fhirStoreId;
+    private String fhirStoreId;
 
     public String fhirStoreId() {
         return this.fhirStoreId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetFhirArgs(
-        String datasetId,
-        String fhirId,
-        String fhirId1,
-        String fhirStoreId,
-        String location,
-        @Nullable String project) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.fhirId = Objects.requireNonNull(fhirId, "expected parameter 'fhirId' to be non-null");
-        this.fhirId1 = Objects.requireNonNull(fhirId1, "expected parameter 'fhirId1' to be non-null");
-        this.fhirStoreId = Objects.requireNonNull(fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetFhirArgs() {}
 
-    private GetFhirArgs() {
-        this.datasetId = null;
-        this.fhirId = null;
-        this.fhirId1 = null;
-        this.fhirStoreId = null;
-        this.location = null;
-        this.project = null;
+    private GetFhirArgs(GetFhirArgs $) {
+        this.datasetId = $.datasetId;
+        this.fhirId = $.fhirId;
+        this.fhirId1 = $.fhirId1;
+        this.fhirStoreId = $.fhirStoreId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFhirArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String fhirId;
-        private String fhirId1;
-        private String fhirStoreId;
-        private String location;
-        private @Nullable String project;
+        private GetFhirArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFhirArgs();
         }
 
         public Builder(GetFhirArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.fhirId = defaults.fhirId;
-    	      this.fhirId1 = defaults.fhirId1;
-    	      this.fhirStoreId = defaults.fhirStoreId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetFhirArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder fhirId(String fhirId) {
-            this.fhirId = Objects.requireNonNull(fhirId);
+            $.fhirId = fhirId;
             return this;
         }
+
         public Builder fhirId1(String fhirId1) {
-            this.fhirId1 = Objects.requireNonNull(fhirId1);
+            $.fhirId1 = fhirId1;
             return this;
         }
+
         public Builder fhirStoreId(String fhirStoreId) {
-            this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
+            $.fhirStoreId = fhirStoreId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetFhirArgs build() {
-            return new GetFhirArgs(datasetId, fhirId, fhirId1, fhirStoreId, location, project);
+        }
+
+        public GetFhirArgs build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.fhirId = Objects.requireNonNull($.fhirId, "expected parameter 'fhirId' to be non-null");
+            $.fhirId1 = Objects.requireNonNull($.fhirId1, "expected parameter 'fhirId1' to be non-null");
+            $.fhirStoreId = Objects.requireNonNull($.fhirStoreId, "expected parameter 'fhirStoreId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

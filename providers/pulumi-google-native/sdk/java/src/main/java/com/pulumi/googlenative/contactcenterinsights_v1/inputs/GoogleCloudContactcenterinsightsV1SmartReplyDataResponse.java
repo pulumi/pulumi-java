@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
      * 
      */
     @Import(name="confidenceScore", required=true)
-      private final Double confidenceScore;
+    private Double confidenceScore;
 
     public Double confidenceScore() {
         return this.confidenceScore;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
      * 
      */
     @Import(name="queryRecord", required=true)
-      private final String queryRecord;
+    private String queryRecord;
 
     public String queryRecord() {
         return this.queryRecord;
@@ -56,73 +56,66 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse exte
      * 
      */
     @Import(name="reply", required=true)
-      private final String reply;
+    private String reply;
 
     public String reply() {
         return this.reply;
     }
 
-    public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String reply) {
-        this.confidenceScore = Objects.requireNonNull(confidenceScore, "expected parameter 'confidenceScore' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.queryRecord = Objects.requireNonNull(queryRecord, "expected parameter 'queryRecord' to be non-null");
-        this.reply = Objects.requireNonNull(reply, "expected parameter 'reply' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse() {
-        this.confidenceScore = null;
-        this.metadata = Map.of();
-        this.queryRecord = null;
-        this.reply = null;
+    private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse $) {
+        this.confidenceScore = $.confidenceScore;
+        this.metadata = $.metadata;
+        this.queryRecord = $.queryRecord;
+        this.reply = $.reply;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double confidenceScore;
-        private Map<String,String> metadata;
-        private String queryRecord;
-        private String reply;
+        private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidenceScore = defaults.confidenceScore;
-    	      this.metadata = defaults.metadata;
-    	      this.queryRecord = defaults.queryRecord;
-    	      this.reply = defaults.reply;
+            $ = new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidenceScore(Double confidenceScore) {
-            this.confidenceScore = Objects.requireNonNull(confidenceScore);
+            $.confidenceScore = confidenceScore;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder queryRecord(String queryRecord) {
-            this.queryRecord = Objects.requireNonNull(queryRecord);
+            $.queryRecord = queryRecord;
             return this;
         }
+
         public Builder reply(String reply) {
-            this.reply = Objects.requireNonNull(reply);
+            $.reply = reply;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse build() {
-            return new GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(confidenceScore, metadata, queryRecord, reply);
+        }
+
+        public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse build() {
+            $.confidenceScore = Objects.requireNonNull($.confidenceScore, "expected parameter 'confidenceScore' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.queryRecord = Objects.requireNonNull($.queryRecord, "expected parameter 'queryRecord' to be non-null");
+            $.reply = Objects.requireNonNull($.reply, "expected parameter 'reply' to be non-null");
+            return $;
         }
     }
+
 }

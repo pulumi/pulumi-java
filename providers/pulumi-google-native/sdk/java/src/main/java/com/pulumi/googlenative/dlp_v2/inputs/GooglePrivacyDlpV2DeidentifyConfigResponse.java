@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
      * 
      */
     @Import(name="infoTypeTransformations", required=true)
-      private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
+    private GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations() {
         return this.infoTypeTransformations;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
      * 
      */
     @Import(name="recordTransformations", required=true)
-      private final GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
+    private GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
 
     public GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations() {
         return this.recordTransformations;
@@ -45,64 +45,59 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends com.pulumi
      * 
      */
     @Import(name="transformationErrorHandling", required=true)
-      private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
+    private GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
     public GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling() {
         return this.transformationErrorHandling;
     }
 
-    public GooglePrivacyDlpV2DeidentifyConfigResponse(
-        GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
-        GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
-        this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
-        this.recordTransformations = Objects.requireNonNull(recordTransformations, "expected parameter 'recordTransformations' to be non-null");
-        this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling, "expected parameter 'transformationErrorHandling' to be non-null");
-    }
+    private GooglePrivacyDlpV2DeidentifyConfigResponse() {}
 
-    private GooglePrivacyDlpV2DeidentifyConfigResponse() {
-        this.infoTypeTransformations = null;
-        this.recordTransformations = null;
-        this.transformationErrorHandling = null;
+    private GooglePrivacyDlpV2DeidentifyConfigResponse(GooglePrivacyDlpV2DeidentifyConfigResponse $) {
+        this.infoTypeTransformations = $.infoTypeTransformations;
+        this.recordTransformations = $.recordTransformations;
+        this.transformationErrorHandling = $.transformationErrorHandling;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DeidentifyConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
-        private GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
-        private GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
+        private GooglePrivacyDlpV2DeidentifyConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DeidentifyConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DeidentifyConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.infoTypeTransformations = defaults.infoTypeTransformations;
-    	      this.recordTransformations = defaults.recordTransformations;
-    	      this.transformationErrorHandling = defaults.transformationErrorHandling;
+            $ = new GooglePrivacyDlpV2DeidentifyConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
-            this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
+            $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
+
         public Builder recordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
-            this.recordTransformations = Objects.requireNonNull(recordTransformations);
+            $.recordTransformations = recordTransformations;
             return this;
         }
+
         public Builder transformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
-            this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
+            $.transformationErrorHandling = transformationErrorHandling;
             return this;
-        }        public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
-            return new GooglePrivacyDlpV2DeidentifyConfigResponse(infoTypeTransformations, recordTransformations, transformationErrorHandling);
+        }
+
+        public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
+            $.infoTypeTransformations = Objects.requireNonNull($.infoTypeTransformations, "expected parameter 'infoTypeTransformations' to be non-null");
+            $.recordTransformations = Objects.requireNonNull($.recordTransformations, "expected parameter 'recordTransformations' to be non-null");
+            $.transformationErrorHandling = Objects.requireNonNull($.transformationErrorHandling, "expected parameter 'transformationErrorHandling' to be non-null");
+            return $;
         }
     }
+
 }

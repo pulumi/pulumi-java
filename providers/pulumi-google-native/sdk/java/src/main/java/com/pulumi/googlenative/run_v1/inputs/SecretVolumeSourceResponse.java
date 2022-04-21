@@ -25,7 +25,7 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="defaultMode", required=true)
-      private final Integer defaultMode;
+    private Integer defaultMode;
 
     public Integer defaultMode() {
         return this.defaultMode;
@@ -36,7 +36,7 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="items", required=true)
-      private final List<KeyToPathResponse> items;
+    private List<KeyToPathResponse> items;
 
     public List<KeyToPathResponse> items() {
         return this.items;
@@ -47,7 +47,7 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
@@ -58,76 +58,70 @@ public final class SecretVolumeSourceResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="secretName", required=true)
-      private final String secretName;
+    private String secretName;
 
     public String secretName() {
         return this.secretName;
     }
 
-    public SecretVolumeSourceResponse(
-        Integer defaultMode,
-        List<KeyToPathResponse> items,
-        Boolean optional,
-        String secretName) {
-        this.defaultMode = Objects.requireNonNull(defaultMode, "expected parameter 'defaultMode' to be non-null");
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-        this.secretName = Objects.requireNonNull(secretName, "expected parameter 'secretName' to be non-null");
-    }
+    private SecretVolumeSourceResponse() {}
 
-    private SecretVolumeSourceResponse() {
-        this.defaultMode = null;
-        this.items = List.of();
-        this.optional = null;
-        this.secretName = null;
+    private SecretVolumeSourceResponse(SecretVolumeSourceResponse $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
+        this.optional = $.optional;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVolumeSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer defaultMode;
-        private List<KeyToPathResponse> items;
-        private Boolean optional;
-        private String secretName;
+        private SecretVolumeSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVolumeSourceResponse();
         }
 
         public Builder(SecretVolumeSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
-    	      this.optional = defaults.optional;
-    	      this.secretName = defaults.secretName;
+            $ = new SecretVolumeSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(Integer defaultMode) {
-            this.defaultMode = Objects.requireNonNull(defaultMode);
+            $.defaultMode = defaultMode;
             return this;
         }
+
         public Builder items(List<KeyToPathResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(KeyToPathResponse... items) {
             return items(List.of(items));
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
         }
+
         public Builder secretName(String secretName) {
-            this.secretName = Objects.requireNonNull(secretName);
+            $.secretName = secretName;
             return this;
-        }        public SecretVolumeSourceResponse build() {
-            return new SecretVolumeSourceResponse(defaultMode, items, optional, secretName);
+        }
+
+        public SecretVolumeSourceResponse build() {
+            $.defaultMode = Objects.requireNonNull($.defaultMode, "expected parameter 'defaultMode' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            $.secretName = Objects.requireNonNull($.secretName, "expected parameter 'secretName' to be non-null");
+            return $;
         }
     }
+
 }

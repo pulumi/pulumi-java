@@ -22,7 +22,7 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vm", required=true)
-      private final String vm;
+    private String vm;
 
     public String vm() {
         return this.vm;
@@ -33,7 +33,7 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmIp", required=true)
-      private final String vmIp;
+    private String vmIp;
 
     public String vmIp() {
         return this.vmIp;
@@ -44,7 +44,7 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vmPort", required=true)
-      private final Integer vmPort;
+    private Integer vmPort;
 
     public Integer vmPort() {
         return this.vmPort;
@@ -55,73 +55,66 @@ public final class ReverseSshConnectivityResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="vpc", required=true)
-      private final String vpc;
+    private String vpc;
 
     public String vpc() {
         return this.vpc;
     }
 
-    public ReverseSshConnectivityResponse(
-        String vm,
-        String vmIp,
-        Integer vmPort,
-        String vpc) {
-        this.vm = Objects.requireNonNull(vm, "expected parameter 'vm' to be non-null");
-        this.vmIp = Objects.requireNonNull(vmIp, "expected parameter 'vmIp' to be non-null");
-        this.vmPort = Objects.requireNonNull(vmPort, "expected parameter 'vmPort' to be non-null");
-        this.vpc = Objects.requireNonNull(vpc, "expected parameter 'vpc' to be non-null");
-    }
+    private ReverseSshConnectivityResponse() {}
 
-    private ReverseSshConnectivityResponse() {
-        this.vm = null;
-        this.vmIp = null;
-        this.vmPort = null;
-        this.vpc = null;
+    private ReverseSshConnectivityResponse(ReverseSshConnectivityResponse $) {
+        this.vm = $.vm;
+        this.vmIp = $.vmIp;
+        this.vmPort = $.vmPort;
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReverseSshConnectivityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String vm;
-        private String vmIp;
-        private Integer vmPort;
-        private String vpc;
+        private ReverseSshConnectivityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReverseSshConnectivityResponse();
         }
 
         public Builder(ReverseSshConnectivityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vm = defaults.vm;
-    	      this.vmIp = defaults.vmIp;
-    	      this.vmPort = defaults.vmPort;
-    	      this.vpc = defaults.vpc;
+            $ = new ReverseSshConnectivityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder vm(String vm) {
-            this.vm = Objects.requireNonNull(vm);
+            $.vm = vm;
             return this;
         }
+
         public Builder vmIp(String vmIp) {
-            this.vmIp = Objects.requireNonNull(vmIp);
+            $.vmIp = vmIp;
             return this;
         }
+
         public Builder vmPort(Integer vmPort) {
-            this.vmPort = Objects.requireNonNull(vmPort);
+            $.vmPort = vmPort;
             return this;
         }
+
         public Builder vpc(String vpc) {
-            this.vpc = Objects.requireNonNull(vpc);
+            $.vpc = vpc;
             return this;
-        }        public ReverseSshConnectivityResponse build() {
-            return new ReverseSshConnectivityResponse(vm, vmIp, vmPort, vpc);
+        }
+
+        public ReverseSshConnectivityResponse build() {
+            $.vm = Objects.requireNonNull($.vm, "expected parameter 'vm' to be non-null");
+            $.vmIp = Objects.requireNonNull($.vmIp, "expected parameter 'vmIp' to be non-null");
+            $.vmPort = Objects.requireNonNull($.vmPort, "expected parameter 'vmPort' to be non-null");
+            $.vpc = Objects.requireNonNull($.vpc, "expected parameter 'vpc' to be non-null");
+            return $;
         }
     }
+
 }

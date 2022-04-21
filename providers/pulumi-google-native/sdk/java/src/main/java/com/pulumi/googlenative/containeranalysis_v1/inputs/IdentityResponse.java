@@ -22,7 +22,7 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="revision", required=true)
-      private final Integer revision;
+    private Integer revision;
 
     public Integer revision() {
         return this.revision;
@@ -33,55 +33,52 @@ public final class IdentityResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateId", required=true)
-      private final String updateId;
+    private String updateId;
 
     public String updateId() {
         return this.updateId;
     }
 
-    public IdentityResponse(
-        Integer revision,
-        String updateId) {
-        this.revision = Objects.requireNonNull(revision, "expected parameter 'revision' to be non-null");
-        this.updateId = Objects.requireNonNull(updateId, "expected parameter 'updateId' to be non-null");
-    }
+    private IdentityResponse() {}
 
-    private IdentityResponse() {
-        this.revision = null;
-        this.updateId = null;
+    private IdentityResponse(IdentityResponse $) {
+        this.revision = $.revision;
+        this.updateId = $.updateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IdentityResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer revision;
-        private String updateId;
+        private IdentityResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IdentityResponse();
         }
 
         public Builder(IdentityResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.revision = defaults.revision;
-    	      this.updateId = defaults.updateId;
+            $ = new IdentityResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder revision(Integer revision) {
-            this.revision = Objects.requireNonNull(revision);
+            $.revision = revision;
             return this;
         }
+
         public Builder updateId(String updateId) {
-            this.updateId = Objects.requireNonNull(updateId);
+            $.updateId = updateId;
             return this;
-        }        public IdentityResponse build() {
-            return new IdentityResponse(revision, updateId);
+        }
+
+        public IdentityResponse build() {
+            $.revision = Objects.requireNonNull($.revision, "expected parameter 'revision' to be non-null");
+            $.updateId = Objects.requireNonNull($.updateId, "expected parameter 'updateId' to be non-null");
+            return $;
         }
     }
+
 }

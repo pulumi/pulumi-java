@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1beta1.inputs.BoundingPolyArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ImageAnnotationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="boundingPolys")
-      private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
+    private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
-    public Output<List<BoundingPolyArgs>> boundingPolys() {
-        return this.boundingPolys == null ? Codegen.empty() : this.boundingPolys;
+    public Optional<Output<List<BoundingPolyArgs>>> boundingPolys() {
+        return Optional.ofNullable(this.boundingPolys);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class ImageAnnotationArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="frameIndex")
-      private final @Nullable Output<Integer> frameIndex;
+    private @Nullable Output<Integer> frameIndex;
 
-    public Output<Integer> frameIndex() {
-        return this.frameIndex == null ? Codegen.empty() : this.frameIndex;
+    public Optional<Output<Integer>> frameIndex() {
+        return Optional.ofNullable(this.frameIndex);
     }
 
-    public ImageAnnotationArgs(
-        @Nullable Output<List<BoundingPolyArgs>> boundingPolys,
-        @Nullable Output<Integer> frameIndex) {
-        this.boundingPolys = boundingPolys;
-        this.frameIndex = frameIndex;
-    }
+    private ImageAnnotationArgs() {}
 
-    private ImageAnnotationArgs() {
-        this.boundingPolys = Codegen.empty();
-        this.frameIndex = Codegen.empty();
+    private ImageAnnotationArgs(ImageAnnotationArgs $) {
+        this.boundingPolys = $.boundingPolys;
+        this.frameIndex = $.frameIndex;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageAnnotationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
-        private @Nullable Output<Integer> frameIndex;
+        private ImageAnnotationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageAnnotationArgs();
         }
 
         public Builder(ImageAnnotationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boundingPolys = defaults.boundingPolys;
-    	      this.frameIndex = defaults.frameIndex;
+            $ = new ImageAnnotationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boundingPolys(@Nullable Output<List<BoundingPolyArgs>> boundingPolys) {
-            this.boundingPolys = boundingPolys;
+            $.boundingPolys = boundingPolys;
             return this;
         }
-        public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
-            this.boundingPolys = Codegen.ofNullable(boundingPolys);
-            return this;
+
+        public Builder boundingPolys(List<BoundingPolyArgs> boundingPolys) {
+            return boundingPolys(Output.of(boundingPolys));
         }
+
         public Builder boundingPolys(BoundingPolyArgs... boundingPolys) {
             return boundingPolys(List.of(boundingPolys));
         }
+
         public Builder frameIndex(@Nullable Output<Integer> frameIndex) {
-            this.frameIndex = frameIndex;
+            $.frameIndex = frameIndex;
             return this;
         }
-        public Builder frameIndex(@Nullable Integer frameIndex) {
-            this.frameIndex = Codegen.ofNullable(frameIndex);
-            return this;
-        }        public ImageAnnotationArgs build() {
-            return new ImageAnnotationArgs(boundingPolys, frameIndex);
+
+        public Builder frameIndex(Integer frameIndex) {
+            return frameIndex(Output.of(frameIndex));
+        }
+
+        public ImageAnnotationArgs build() {
+            return $;
         }
     }
+
 }

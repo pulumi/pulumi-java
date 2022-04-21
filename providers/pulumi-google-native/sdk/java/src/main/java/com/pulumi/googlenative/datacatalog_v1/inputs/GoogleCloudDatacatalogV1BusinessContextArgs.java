@@ -5,10 +5,10 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ContactsArgs;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1EntryOverviewArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends com.pulum
      * 
      */
     @Import(name="contacts")
-      private final @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
+    private @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
 
-    public Output<GoogleCloudDatacatalogV1ContactsArgs> contacts() {
-        return this.contacts == null ? Codegen.empty() : this.contacts;
+    public Optional<Output<GoogleCloudDatacatalogV1ContactsArgs>> contacts() {
+        return Optional.ofNullable(this.contacts);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDatacatalogV1BusinessContextArgs extends com.pulum
      * 
      */
     @Import(name="entryOverview")
-      private final @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
+    private @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
 
-    public Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview() {
-        return this.entryOverview == null ? Codegen.empty() : this.entryOverview;
+    public Optional<Output<GoogleCloudDatacatalogV1EntryOverviewArgs>> entryOverview() {
+        return Optional.ofNullable(this.entryOverview);
     }
 
-    public GoogleCloudDatacatalogV1BusinessContextArgs(
-        @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts,
-        @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
-        this.contacts = contacts;
-        this.entryOverview = entryOverview;
-    }
+    private GoogleCloudDatacatalogV1BusinessContextArgs() {}
 
-    private GoogleCloudDatacatalogV1BusinessContextArgs() {
-        this.contacts = Codegen.empty();
-        this.entryOverview = Codegen.empty();
+    private GoogleCloudDatacatalogV1BusinessContextArgs(GoogleCloudDatacatalogV1BusinessContextArgs $) {
+        this.contacts = $.contacts;
+        this.entryOverview = $.entryOverview;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BusinessContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts;
-        private @Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview;
+        private GoogleCloudDatacatalogV1BusinessContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BusinessContextArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1BusinessContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contacts = defaults.contacts;
-    	      this.entryOverview = defaults.entryOverview;
+            $ = new GoogleCloudDatacatalogV1BusinessContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contacts(@Nullable Output<GoogleCloudDatacatalogV1ContactsArgs> contacts) {
-            this.contacts = contacts;
+            $.contacts = contacts;
             return this;
         }
-        public Builder contacts(@Nullable GoogleCloudDatacatalogV1ContactsArgs contacts) {
-            this.contacts = Codegen.ofNullable(contacts);
-            return this;
+
+        public Builder contacts(GoogleCloudDatacatalogV1ContactsArgs contacts) {
+            return contacts(Output.of(contacts));
         }
+
         public Builder entryOverview(@Nullable Output<GoogleCloudDatacatalogV1EntryOverviewArgs> entryOverview) {
-            this.entryOverview = entryOverview;
+            $.entryOverview = entryOverview;
             return this;
         }
-        public Builder entryOverview(@Nullable GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
-            this.entryOverview = Codegen.ofNullable(entryOverview);
-            return this;
-        }        public GoogleCloudDatacatalogV1BusinessContextArgs build() {
-            return new GoogleCloudDatacatalogV1BusinessContextArgs(contacts, entryOverview);
+
+        public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewArgs entryOverview) {
+            return entryOverview(Output.of(entryOverview));
+        }
+
+        public GoogleCloudDatacatalogV1BusinessContextArgs build() {
+            return $;
         }
     }
+
 }

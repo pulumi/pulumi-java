@@ -21,45 +21,45 @@ public final class TopicResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public TopicResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private TopicResponse() {}
 
-    private TopicResponse() {
-        this.name = null;
+    private TopicResponse(TopicResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private TopicResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicResponse();
         }
 
         public Builder(TopicResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new TopicResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public TopicResponse build() {
-            return new TopicResponse(name);
+        }
+
+        public TopicResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

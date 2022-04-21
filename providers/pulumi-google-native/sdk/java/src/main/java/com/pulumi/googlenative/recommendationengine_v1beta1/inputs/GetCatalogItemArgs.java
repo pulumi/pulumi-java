@@ -15,94 +15,86 @@ public final class GetCatalogItemArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetCatalogItemArgs Empty = new GetCatalogItemArgs();
 
     @Import(name="catalogId", required=true)
-      private final String catalogId;
+    private String catalogId;
 
     public String catalogId() {
         return this.catalogId;
     }
 
     @Import(name="catalogItemId", required=true)
-      private final String catalogItemId;
+    private String catalogItemId;
 
     public String catalogItemId() {
         return this.catalogItemId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetCatalogItemArgs(
-        String catalogId,
-        String catalogItemId,
-        String location,
-        @Nullable String project) {
-        this.catalogId = Objects.requireNonNull(catalogId, "expected parameter 'catalogId' to be non-null");
-        this.catalogItemId = Objects.requireNonNull(catalogItemId, "expected parameter 'catalogItemId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetCatalogItemArgs() {}
 
-    private GetCatalogItemArgs() {
-        this.catalogId = null;
-        this.catalogItemId = null;
-        this.location = null;
-        this.project = null;
+    private GetCatalogItemArgs(GetCatalogItemArgs $) {
+        this.catalogId = $.catalogId;
+        this.catalogItemId = $.catalogItemId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetCatalogItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String catalogId;
-        private String catalogItemId;
-        private String location;
-        private @Nullable String project;
+        private GetCatalogItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetCatalogItemArgs();
         }
 
         public Builder(GetCatalogItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.catalogId = defaults.catalogId;
-    	      this.catalogItemId = defaults.catalogItemId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetCatalogItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder catalogId(String catalogId) {
-            this.catalogId = Objects.requireNonNull(catalogId);
+            $.catalogId = catalogId;
             return this;
         }
+
         public Builder catalogItemId(String catalogItemId) {
-            this.catalogItemId = Objects.requireNonNull(catalogItemId);
+            $.catalogItemId = catalogItemId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetCatalogItemArgs build() {
-            return new GetCatalogItemArgs(catalogId, catalogItemId, location, project);
+        }
+
+        public GetCatalogItemArgs build() {
+            $.catalogId = Objects.requireNonNull($.catalogId, "expected parameter 'catalogId' to be non-null");
+            $.catalogItemId = Objects.requireNonNull($.catalogItemId, "expected parameter 'catalogItemId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

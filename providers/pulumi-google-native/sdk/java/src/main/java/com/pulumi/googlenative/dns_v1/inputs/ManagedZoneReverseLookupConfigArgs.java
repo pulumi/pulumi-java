@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class ManagedZoneReverseLookupConfigArgs extends com.pulumi.resourc
     public static final ManagedZoneReverseLookupConfigArgs Empty = new ManagedZoneReverseLookupConfigArgs();
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public ManagedZoneReverseLookupConfigArgs(@Nullable Output<String> kind) {
-        this.kind = kind;
-    }
+    private ManagedZoneReverseLookupConfigArgs() {}
 
-    private ManagedZoneReverseLookupConfigArgs() {
-        this.kind = Codegen.empty();
+    private ManagedZoneReverseLookupConfigArgs(ManagedZoneReverseLookupConfigArgs $) {
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneReverseLookupConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kind;
+        private ManagedZoneReverseLookupConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneReverseLookupConfigArgs();
         }
 
         public Builder(ManagedZoneReverseLookupConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
+            $ = new ManagedZoneReverseLookupConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public ManagedZoneReverseLookupConfigArgs build() {
-            return new ManagedZoneReverseLookupConfigArgs(kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public ManagedZoneReverseLookupConfigArgs build() {
+            return $;
         }
     }
+
 }

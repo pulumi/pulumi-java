@@ -22,7 +22,7 @@ public final class EnvVarSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="configMapKeyRef", required=true)
-      private final ConfigMapKeySelectorResponse configMapKeyRef;
+    private ConfigMapKeySelectorResponse configMapKeyRef;
 
     public ConfigMapKeySelectorResponse configMapKeyRef() {
         return this.configMapKeyRef;
@@ -33,55 +33,52 @@ public final class EnvVarSourceResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="secretKeyRef", required=true)
-      private final SecretKeySelectorResponse secretKeyRef;
+    private SecretKeySelectorResponse secretKeyRef;
 
     public SecretKeySelectorResponse secretKeyRef() {
         return this.secretKeyRef;
     }
 
-    public EnvVarSourceResponse(
-        ConfigMapKeySelectorResponse configMapKeyRef,
-        SecretKeySelectorResponse secretKeyRef) {
-        this.configMapKeyRef = Objects.requireNonNull(configMapKeyRef, "expected parameter 'configMapKeyRef' to be non-null");
-        this.secretKeyRef = Objects.requireNonNull(secretKeyRef, "expected parameter 'secretKeyRef' to be non-null");
-    }
+    private EnvVarSourceResponse() {}
 
-    private EnvVarSourceResponse() {
-        this.configMapKeyRef = null;
-        this.secretKeyRef = null;
+    private EnvVarSourceResponse(EnvVarSourceResponse $) {
+        this.configMapKeyRef = $.configMapKeyRef;
+        this.secretKeyRef = $.secretKeyRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvVarSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConfigMapKeySelectorResponse configMapKeyRef;
-        private SecretKeySelectorResponse secretKeyRef;
+        private EnvVarSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvVarSourceResponse();
         }
 
         public Builder(EnvVarSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMapKeyRef = defaults.configMapKeyRef;
-    	      this.secretKeyRef = defaults.secretKeyRef;
+            $ = new EnvVarSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configMapKeyRef(ConfigMapKeySelectorResponse configMapKeyRef) {
-            this.configMapKeyRef = Objects.requireNonNull(configMapKeyRef);
+            $.configMapKeyRef = configMapKeyRef;
             return this;
         }
+
         public Builder secretKeyRef(SecretKeySelectorResponse secretKeyRef) {
-            this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
+            $.secretKeyRef = secretKeyRef;
             return this;
-        }        public EnvVarSourceResponse build() {
-            return new EnvVarSourceResponse(configMapKeyRef, secretKeyRef);
+        }
+
+        public EnvVarSourceResponse build() {
+            $.configMapKeyRef = Objects.requireNonNull($.configMapKeyRef, "expected parameter 'configMapKeyRef' to be non-null");
+            $.secretKeyRef = Objects.requireNonNull($.secretKeyRef, "expected parameter 'secretKeyRef' to be non-null");
+            return $;
         }
     }
+
 }

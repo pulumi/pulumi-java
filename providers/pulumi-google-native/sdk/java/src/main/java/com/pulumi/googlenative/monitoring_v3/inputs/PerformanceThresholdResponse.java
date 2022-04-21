@@ -23,7 +23,7 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="basicSliPerformance", required=true)
-      private final BasicSliResponse basicSliPerformance;
+    private BasicSliResponse basicSliPerformance;
 
     public BasicSliResponse basicSliPerformance() {
         return this.basicSliPerformance;
@@ -34,7 +34,7 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="performance", required=true)
-      private final RequestBasedSliResponse performance;
+    private RequestBasedSliResponse performance;
 
     public RequestBasedSliResponse performance() {
         return this.performance;
@@ -45,64 +45,59 @@ public final class PerformanceThresholdResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="threshold", required=true)
-      private final Double threshold;
+    private Double threshold;
 
     public Double threshold() {
         return this.threshold;
     }
 
-    public PerformanceThresholdResponse(
-        BasicSliResponse basicSliPerformance,
-        RequestBasedSliResponse performance,
-        Double threshold) {
-        this.basicSliPerformance = Objects.requireNonNull(basicSliPerformance, "expected parameter 'basicSliPerformance' to be non-null");
-        this.performance = Objects.requireNonNull(performance, "expected parameter 'performance' to be non-null");
-        this.threshold = Objects.requireNonNull(threshold, "expected parameter 'threshold' to be non-null");
-    }
+    private PerformanceThresholdResponse() {}
 
-    private PerformanceThresholdResponse() {
-        this.basicSliPerformance = null;
-        this.performance = null;
-        this.threshold = null;
+    private PerformanceThresholdResponse(PerformanceThresholdResponse $) {
+        this.basicSliPerformance = $.basicSliPerformance;
+        this.performance = $.performance;
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PerformanceThresholdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BasicSliResponse basicSliPerformance;
-        private RequestBasedSliResponse performance;
-        private Double threshold;
+        private PerformanceThresholdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PerformanceThresholdResponse();
         }
 
         public Builder(PerformanceThresholdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicSliPerformance = defaults.basicSliPerformance;
-    	      this.performance = defaults.performance;
-    	      this.threshold = defaults.threshold;
+            $ = new PerformanceThresholdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicSliPerformance(BasicSliResponse basicSliPerformance) {
-            this.basicSliPerformance = Objects.requireNonNull(basicSliPerformance);
+            $.basicSliPerformance = basicSliPerformance;
             return this;
         }
+
         public Builder performance(RequestBasedSliResponse performance) {
-            this.performance = Objects.requireNonNull(performance);
+            $.performance = performance;
             return this;
         }
+
         public Builder threshold(Double threshold) {
-            this.threshold = Objects.requireNonNull(threshold);
+            $.threshold = threshold;
             return this;
-        }        public PerformanceThresholdResponse build() {
-            return new PerformanceThresholdResponse(basicSliPerformance, performance, threshold);
+        }
+
+        public PerformanceThresholdResponse build() {
+            $.basicSliPerformance = Objects.requireNonNull($.basicSliPerformance, "expected parameter 'basicSliPerformance' to be non-null");
+            $.performance = Objects.requireNonNull($.performance, "expected parameter 'performance' to be non-null");
+            $.threshold = Objects.requireNonNull($.threshold, "expected parameter 'threshold' to be non-null");
+            return $;
         }
     }
+
 }

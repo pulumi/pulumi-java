@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatacatalogV1EntryOverviewArgs extends com.pulumi.
      * 
      */
     @Import(name="overview")
-      private final @Nullable Output<String> overview;
+    private @Nullable Output<String> overview;
 
-    public Output<String> overview() {
-        return this.overview == null ? Codegen.empty() : this.overview;
+    public Optional<Output<String>> overview() {
+        return Optional.ofNullable(this.overview);
     }
 
-    public GoogleCloudDatacatalogV1EntryOverviewArgs(@Nullable Output<String> overview) {
-        this.overview = overview;
-    }
+    private GoogleCloudDatacatalogV1EntryOverviewArgs() {}
 
-    private GoogleCloudDatacatalogV1EntryOverviewArgs() {
-        this.overview = Codegen.empty();
+    private GoogleCloudDatacatalogV1EntryOverviewArgs(GoogleCloudDatacatalogV1EntryOverviewArgs $) {
+        this.overview = $.overview;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1EntryOverviewArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> overview;
+        private GoogleCloudDatacatalogV1EntryOverviewArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1EntryOverviewArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1EntryOverviewArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overview = defaults.overview;
+            $ = new GoogleCloudDatacatalogV1EntryOverviewArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder overview(@Nullable Output<String> overview) {
-            this.overview = overview;
+            $.overview = overview;
             return this;
         }
-        public Builder overview(@Nullable String overview) {
-            this.overview = Codegen.ofNullable(overview);
-            return this;
-        }        public GoogleCloudDatacatalogV1EntryOverviewArgs build() {
-            return new GoogleCloudDatacatalogV1EntryOverviewArgs(overview);
+
+        public Builder overview(String overview) {
+            return overview(Output.of(overview));
+        }
+
+        public GoogleCloudDatacatalogV1EntryOverviewArgs build() {
+            return $;
         }
     }
+
 }

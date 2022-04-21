@@ -22,7 +22,7 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
      * 
      */
     @Import(name="logSource", required=true)
-      private final String logSource;
+    private String logSource;
 
     public String logSource() {
         return this.logSource;
@@ -33,55 +33,52 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse extends
      * 
      */
     @Import(name="policyOverlay", required=true)
-      private final Map<String,String> policyOverlay;
+    private Map<String,String> policyOverlay;
 
     public Map<String,String> policyOverlay() {
         return this.policyOverlay;
     }
 
-    public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(
-        String logSource,
-        Map<String,String> policyOverlay) {
-        this.logSource = Objects.requireNonNull(logSource, "expected parameter 'logSource' to be non-null");
-        this.policyOverlay = Objects.requireNonNull(policyOverlay, "expected parameter 'policyOverlay' to be non-null");
-    }
+    private GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse() {}
 
-    private GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse() {
-        this.logSource = null;
-        this.policyOverlay = Map.of();
+    private GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse $) {
+        this.logSource = $.logSource;
+        this.policyOverlay = $.policyOverlay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String logSource;
-        private Map<String,String> policyOverlay;
+        private GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse();
         }
 
         public Builder(GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logSource = defaults.logSource;
-    	      this.policyOverlay = defaults.policyOverlay;
+            $ = new GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder logSource(String logSource) {
-            this.logSource = Objects.requireNonNull(logSource);
+            $.logSource = logSource;
             return this;
         }
+
         public Builder policyOverlay(Map<String,String> policyOverlay) {
-            this.policyOverlay = Objects.requireNonNull(policyOverlay);
+            $.policyOverlay = policyOverlay;
             return this;
-        }        public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse build() {
-            return new GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(logSource, policyOverlay);
+        }
+
+        public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse build() {
+            $.logSource = Objects.requireNonNull($.logSource, "expected parameter 'logSource' to be non-null");
+            $.policyOverlay = Objects.requireNonNull($.policyOverlay, "expected parameter 'policyOverlay' to be non-null");
+            return $;
         }
     }
+
 }

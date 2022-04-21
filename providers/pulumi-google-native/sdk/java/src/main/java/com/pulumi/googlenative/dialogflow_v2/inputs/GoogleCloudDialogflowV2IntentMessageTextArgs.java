@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudDialogflowV2IntentMessageTextArgs extends com.pulu
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<List<String>> text;
+    private @Nullable Output<List<String>> text;
 
-    public Output<List<String>> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<List<String>>> text() {
+        return Optional.ofNullable(this.text);
     }
 
-    public GoogleCloudDialogflowV2IntentMessageTextArgs(@Nullable Output<List<String>> text) {
-        this.text = text;
-    }
+    private GoogleCloudDialogflowV2IntentMessageTextArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageTextArgs() {
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageTextArgs(GoogleCloudDialogflowV2IntentMessageTextArgs $) {
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageTextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> text;
+        private GoogleCloudDialogflowV2IntentMessageTextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageTextArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageTextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2IntentMessageTextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder text(@Nullable Output<List<String>> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable List<String> text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
+
+        public Builder text(List<String> text) {
+            return text(Output.of(text));
         }
+
         public Builder text(String... text) {
             return text(List.of(text));
-        }        public GoogleCloudDialogflowV2IntentMessageTextArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageTextArgs(text);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageTextArgs build() {
+            return $;
         }
     }
+
 }

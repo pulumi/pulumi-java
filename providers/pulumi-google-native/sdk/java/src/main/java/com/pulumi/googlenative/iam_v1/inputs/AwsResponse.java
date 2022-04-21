@@ -21,45 +21,45 @@ public final class AwsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="accountId", required=true)
-      private final String accountId;
+    private String accountId;
 
     public String accountId() {
         return this.accountId;
     }
 
-    public AwsResponse(String accountId) {
-        this.accountId = Objects.requireNonNull(accountId, "expected parameter 'accountId' to be non-null");
-    }
+    private AwsResponse() {}
 
-    private AwsResponse() {
-        this.accountId = null;
+    private AwsResponse(AwsResponse $) {
+        this.accountId = $.accountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String accountId;
+        private AwsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsResponse();
         }
 
         public Builder(AwsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accountId = defaults.accountId;
+            $ = new AwsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accountId(String accountId) {
-            this.accountId = Objects.requireNonNull(accountId);
+            $.accountId = accountId;
             return this;
-        }        public AwsResponse build() {
-            return new AwsResponse(accountId);
+        }
+
+        public AwsResponse build() {
+            $.accountId = Objects.requireNonNull($.accountId, "expected parameter 'accountId' to be non-null");
+            return $;
         }
     }
+
 }

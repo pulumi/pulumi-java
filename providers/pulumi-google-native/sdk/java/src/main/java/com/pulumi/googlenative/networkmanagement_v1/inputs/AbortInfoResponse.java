@@ -21,7 +21,7 @@ public final class AbortInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cause", required=true)
-      private final String cause;
+    private String cause;
 
     public String cause() {
         return this.cause;
@@ -32,55 +32,52 @@ public final class AbortInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceUri", required=true)
-      private final String resourceUri;
+    private String resourceUri;
 
     public String resourceUri() {
         return this.resourceUri;
     }
 
-    public AbortInfoResponse(
-        String cause,
-        String resourceUri) {
-        this.cause = Objects.requireNonNull(cause, "expected parameter 'cause' to be non-null");
-        this.resourceUri = Objects.requireNonNull(resourceUri, "expected parameter 'resourceUri' to be non-null");
-    }
+    private AbortInfoResponse() {}
 
-    private AbortInfoResponse() {
-        this.cause = null;
-        this.resourceUri = null;
+    private AbortInfoResponse(AbortInfoResponse $) {
+        this.cause = $.cause;
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AbortInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cause;
-        private String resourceUri;
+        private AbortInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AbortInfoResponse();
         }
 
         public Builder(AbortInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cause = defaults.cause;
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new AbortInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cause(String cause) {
-            this.cause = Objects.requireNonNull(cause);
+            $.cause = cause;
             return this;
         }
+
         public Builder resourceUri(String resourceUri) {
-            this.resourceUri = Objects.requireNonNull(resourceUri);
+            $.resourceUri = resourceUri;
             return this;
-        }        public AbortInfoResponse build() {
-            return new AbortInfoResponse(cause, resourceUri);
+        }
+
+        public AbortInfoResponse build() {
+            $.cause = Objects.requireNonNull($.cause, "expected parameter 'cause' to be non-null");
+            $.resourceUri = Objects.requireNonNull($.resourceUri, "expected parameter 'resourceUri' to be non-null");
+            return $;
         }
     }
+
 }

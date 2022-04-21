@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedLocation", required=true)
-      private final Output<VulnerabilityLocationArgs> affectedLocation;
+    private Output<VulnerabilityLocationArgs> affectedLocation;
 
     public Output<VulnerabilityLocationArgs> affectedLocation() {
         return this.affectedLocation;
@@ -36,10 +36,10 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedLocation")
-      private final @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
+    private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
 
-    public Output<VulnerabilityLocationArgs> fixedLocation() {
-        return this.fixedLocation == null ? Codegen.empty() : this.fixedLocation;
+    public Optional<Output<VulnerabilityLocationArgs>> fixedLocation() {
+        return Optional.ofNullable(this.fixedLocation);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class PackageIssueArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageType")
-      private final @Nullable Output<String> packageType;
+    private @Nullable Output<String> packageType;
 
-    public Output<String> packageType() {
-        return this.packageType == null ? Codegen.empty() : this.packageType;
+    public Optional<Output<String>> packageType() {
+        return Optional.ofNullable(this.packageType);
     }
 
-    public PackageIssueArgs(
-        Output<VulnerabilityLocationArgs> affectedLocation,
-        @Nullable Output<VulnerabilityLocationArgs> fixedLocation,
-        @Nullable Output<String> packageType) {
-        this.affectedLocation = Objects.requireNonNull(affectedLocation, "expected parameter 'affectedLocation' to be non-null");
-        this.fixedLocation = fixedLocation;
-        this.packageType = packageType;
-    }
+    private PackageIssueArgs() {}
 
-    private PackageIssueArgs() {
-        this.affectedLocation = Codegen.empty();
-        this.fixedLocation = Codegen.empty();
-        this.packageType = Codegen.empty();
+    private PackageIssueArgs(PackageIssueArgs $) {
+        this.affectedLocation = $.affectedLocation;
+        this.fixedLocation = $.fixedLocation;
+        this.packageType = $.packageType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageIssueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<VulnerabilityLocationArgs> affectedLocation;
-        private @Nullable Output<VulnerabilityLocationArgs> fixedLocation;
-        private @Nullable Output<String> packageType;
+        private PackageIssueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageIssueArgs();
         }
 
         public Builder(PackageIssueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedLocation = defaults.affectedLocation;
-    	      this.fixedLocation = defaults.fixedLocation;
-    	      this.packageType = defaults.packageType;
+            $ = new PackageIssueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedLocation(Output<VulnerabilityLocationArgs> affectedLocation) {
-            this.affectedLocation = Objects.requireNonNull(affectedLocation);
+            $.affectedLocation = affectedLocation;
             return this;
         }
+
         public Builder affectedLocation(VulnerabilityLocationArgs affectedLocation) {
-            this.affectedLocation = Output.of(Objects.requireNonNull(affectedLocation));
-            return this;
+            return affectedLocation(Output.of(affectedLocation));
         }
+
         public Builder fixedLocation(@Nullable Output<VulnerabilityLocationArgs> fixedLocation) {
-            this.fixedLocation = fixedLocation;
+            $.fixedLocation = fixedLocation;
             return this;
         }
-        public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
-            this.fixedLocation = Codegen.ofNullable(fixedLocation);
-            return this;
+
+        public Builder fixedLocation(VulnerabilityLocationArgs fixedLocation) {
+            return fixedLocation(Output.of(fixedLocation));
         }
+
         public Builder packageType(@Nullable Output<String> packageType) {
-            this.packageType = packageType;
+            $.packageType = packageType;
             return this;
         }
-        public Builder packageType(@Nullable String packageType) {
-            this.packageType = Codegen.ofNullable(packageType);
-            return this;
-        }        public PackageIssueArgs build() {
-            return new PackageIssueArgs(affectedLocation, fixedLocation, packageType);
+
+        public Builder packageType(String packageType) {
+            return packageType(Output.of(packageType));
+        }
+
+        public PackageIssueArgs build() {
+            $.affectedLocation = Objects.requireNonNull($.affectedLocation, "expected parameter 'affectedLocation' to be non-null");
+            return $;
         }
     }
+
 }

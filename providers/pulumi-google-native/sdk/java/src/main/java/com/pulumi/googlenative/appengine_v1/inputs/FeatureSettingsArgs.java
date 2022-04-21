@@ -5,9 +5,9 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class FeatureSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="splitHealthChecks")
-      private final @Nullable Output<Boolean> splitHealthChecks;
+    private @Nullable Output<Boolean> splitHealthChecks;
 
-    public Output<Boolean> splitHealthChecks() {
-        return this.splitHealthChecks == null ? Codegen.empty() : this.splitHealthChecks;
+    public Optional<Output<Boolean>> splitHealthChecks() {
+        return Optional.ofNullable(this.splitHealthChecks);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class FeatureSettingsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="useContainerOptimizedOs")
-      private final @Nullable Output<Boolean> useContainerOptimizedOs;
+    private @Nullable Output<Boolean> useContainerOptimizedOs;
 
-    public Output<Boolean> useContainerOptimizedOs() {
-        return this.useContainerOptimizedOs == null ? Codegen.empty() : this.useContainerOptimizedOs;
+    public Optional<Output<Boolean>> useContainerOptimizedOs() {
+        return Optional.ofNullable(this.useContainerOptimizedOs);
     }
 
-    public FeatureSettingsArgs(
-        @Nullable Output<Boolean> splitHealthChecks,
-        @Nullable Output<Boolean> useContainerOptimizedOs) {
-        this.splitHealthChecks = splitHealthChecks;
-        this.useContainerOptimizedOs = useContainerOptimizedOs;
-    }
+    private FeatureSettingsArgs() {}
 
-    private FeatureSettingsArgs() {
-        this.splitHealthChecks = Codegen.empty();
-        this.useContainerOptimizedOs = Codegen.empty();
+    private FeatureSettingsArgs(FeatureSettingsArgs $) {
+        this.splitHealthChecks = $.splitHealthChecks;
+        this.useContainerOptimizedOs = $.useContainerOptimizedOs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> splitHealthChecks;
-        private @Nullable Output<Boolean> useContainerOptimizedOs;
+        private FeatureSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureSettingsArgs();
         }
 
         public Builder(FeatureSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.splitHealthChecks = defaults.splitHealthChecks;
-    	      this.useContainerOptimizedOs = defaults.useContainerOptimizedOs;
+            $ = new FeatureSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder splitHealthChecks(@Nullable Output<Boolean> splitHealthChecks) {
-            this.splitHealthChecks = splitHealthChecks;
+            $.splitHealthChecks = splitHealthChecks;
             return this;
         }
-        public Builder splitHealthChecks(@Nullable Boolean splitHealthChecks) {
-            this.splitHealthChecks = Codegen.ofNullable(splitHealthChecks);
-            return this;
+
+        public Builder splitHealthChecks(Boolean splitHealthChecks) {
+            return splitHealthChecks(Output.of(splitHealthChecks));
         }
+
         public Builder useContainerOptimizedOs(@Nullable Output<Boolean> useContainerOptimizedOs) {
-            this.useContainerOptimizedOs = useContainerOptimizedOs;
+            $.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;
         }
-        public Builder useContainerOptimizedOs(@Nullable Boolean useContainerOptimizedOs) {
-            this.useContainerOptimizedOs = Codegen.ofNullable(useContainerOptimizedOs);
-            return this;
-        }        public FeatureSettingsArgs build() {
-            return new FeatureSettingsArgs(splitHealthChecks, useContainerOptimizedOs);
+
+        public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
+            return useContainerOptimizedOs(Output.of(useContainerOptimizedOs));
+        }
+
+        public FeatureSettingsArgs build() {
+            return $;
         }
     }
+
 }

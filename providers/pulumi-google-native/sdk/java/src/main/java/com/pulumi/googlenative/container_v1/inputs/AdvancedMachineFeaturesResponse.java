@@ -21,45 +21,45 @@ public final class AdvancedMachineFeaturesResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="threadsPerCore", required=true)
-      private final String threadsPerCore;
+    private String threadsPerCore;
 
     public String threadsPerCore() {
         return this.threadsPerCore;
     }
 
-    public AdvancedMachineFeaturesResponse(String threadsPerCore) {
-        this.threadsPerCore = Objects.requireNonNull(threadsPerCore, "expected parameter 'threadsPerCore' to be non-null");
-    }
+    private AdvancedMachineFeaturesResponse() {}
 
-    private AdvancedMachineFeaturesResponse() {
-        this.threadsPerCore = null;
+    private AdvancedMachineFeaturesResponse(AdvancedMachineFeaturesResponse $) {
+        this.threadsPerCore = $.threadsPerCore;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AdvancedMachineFeaturesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String threadsPerCore;
+        private AdvancedMachineFeaturesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AdvancedMachineFeaturesResponse();
         }
 
         public Builder(AdvancedMachineFeaturesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.threadsPerCore = defaults.threadsPerCore;
+            $ = new AdvancedMachineFeaturesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder threadsPerCore(String threadsPerCore) {
-            this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
+            $.threadsPerCore = threadsPerCore;
             return this;
-        }        public AdvancedMachineFeaturesResponse build() {
-            return new AdvancedMachineFeaturesResponse(threadsPerCore);
+        }
+
+        public AdvancedMachineFeaturesResponse build() {
+            $.threadsPerCore = Objects.requireNonNull($.threadsPerCore, "expected parameter 'threadsPerCore' to be non-null");
+            return $;
         }
     }
+
 }

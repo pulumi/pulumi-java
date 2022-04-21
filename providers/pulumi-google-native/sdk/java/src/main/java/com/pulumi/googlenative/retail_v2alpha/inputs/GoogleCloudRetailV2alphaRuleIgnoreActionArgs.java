@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionArgs extends com.pulu
      * 
      */
     @Import(name="ignoreTerms")
-      private final @Nullable Output<List<String>> ignoreTerms;
+    private @Nullable Output<List<String>> ignoreTerms;
 
-    public Output<List<String>> ignoreTerms() {
-        return this.ignoreTerms == null ? Codegen.empty() : this.ignoreTerms;
+    public Optional<Output<List<String>>> ignoreTerms() {
+        return Optional.ofNullable(this.ignoreTerms);
     }
 
-    public GoogleCloudRetailV2alphaRuleIgnoreActionArgs(@Nullable Output<List<String>> ignoreTerms) {
-        this.ignoreTerms = ignoreTerms;
-    }
+    private GoogleCloudRetailV2alphaRuleIgnoreActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleIgnoreActionArgs() {
-        this.ignoreTerms = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleIgnoreActionArgs(GoogleCloudRetailV2alphaRuleIgnoreActionArgs $) {
+        this.ignoreTerms = $.ignoreTerms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleIgnoreActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> ignoreTerms;
+        private GoogleCloudRetailV2alphaRuleIgnoreActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleIgnoreActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleIgnoreActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ignoreTerms = defaults.ignoreTerms;
+            $ = new GoogleCloudRetailV2alphaRuleIgnoreActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ignoreTerms(@Nullable Output<List<String>> ignoreTerms) {
-            this.ignoreTerms = ignoreTerms;
+            $.ignoreTerms = ignoreTerms;
             return this;
         }
-        public Builder ignoreTerms(@Nullable List<String> ignoreTerms) {
-            this.ignoreTerms = Codegen.ofNullable(ignoreTerms);
-            return this;
+
+        public Builder ignoreTerms(List<String> ignoreTerms) {
+            return ignoreTerms(Output.of(ignoreTerms));
         }
+
         public Builder ignoreTerms(String... ignoreTerms) {
             return ignoreTerms(List.of(ignoreTerms));
-        }        public GoogleCloudRetailV2alphaRuleIgnoreActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleIgnoreActionArgs(ignoreTerms);
+        }
+
+        public GoogleCloudRetailV2alphaRuleIgnoreActionArgs build() {
+            return $;
         }
     }
+
 }

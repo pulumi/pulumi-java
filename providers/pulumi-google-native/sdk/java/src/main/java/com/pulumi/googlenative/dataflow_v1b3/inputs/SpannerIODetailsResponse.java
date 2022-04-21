@@ -21,7 +21,7 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseId", required=true)
-      private final String databaseId;
+    private String databaseId;
 
     public String databaseId() {
         return this.databaseId;
@@ -32,7 +32,7 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
@@ -43,64 +43,59 @@ public final class SpannerIODetailsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public SpannerIODetailsResponse(
-        String databaseId,
-        String instanceId,
-        String project) {
-        this.databaseId = Objects.requireNonNull(databaseId, "expected parameter 'databaseId' to be non-null");
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private SpannerIODetailsResponse() {}
 
-    private SpannerIODetailsResponse() {
-        this.databaseId = null;
-        this.instanceId = null;
-        this.project = null;
+    private SpannerIODetailsResponse(SpannerIODetailsResponse $) {
+        this.databaseId = $.databaseId;
+        this.instanceId = $.instanceId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpannerIODetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String databaseId;
-        private String instanceId;
-        private String project;
+        private SpannerIODetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpannerIODetailsResponse();
         }
 
         public Builder(SpannerIODetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.databaseId = defaults.databaseId;
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
+            $ = new SpannerIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder databaseId(String databaseId) {
-            this.databaseId = Objects.requireNonNull(databaseId);
+            $.databaseId = databaseId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public SpannerIODetailsResponse build() {
-            return new SpannerIODetailsResponse(databaseId, instanceId, project);
+        }
+
+        public SpannerIODetailsResponse build() {
+            $.databaseId = Objects.requireNonNull($.databaseId, "expected parameter 'databaseId' to be non-null");
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

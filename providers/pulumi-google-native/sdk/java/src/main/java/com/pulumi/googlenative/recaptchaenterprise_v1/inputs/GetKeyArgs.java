@@ -15,62 +15,58 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetKeyArgs(
-        String keyId,
-        @Nullable String project) {
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.project = project;
-    }
+    private GetKeyArgs() {}
 
-    private GetKeyArgs() {
-        this.keyId = null;
-        this.project = null;
+    private GetKeyArgs(GetKeyArgs $) {
+        this.keyId = $.keyId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String keyId;
-        private @Nullable String project;
+        private GetKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyArgs();
         }
 
         public Builder(GetKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyId = defaults.keyId;
-    	      this.project = defaults.project;
+            $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetKeyArgs build() {
-            return new GetKeyArgs(keyId, project);
+        }
+
+        public GetKeyArgs build() {
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            return $;
         }
     }
+
 }

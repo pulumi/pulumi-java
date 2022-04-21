@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EnvelopeSignatureArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="keyid")
-      private final @Nullable Output<String> keyid;
+    private @Nullable Output<String> keyid;
 
-    public Output<String> keyid() {
-        return this.keyid == null ? Codegen.empty() : this.keyid;
+    public Optional<Output<String>> keyid() {
+        return Optional.ofNullable(this.keyid);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class EnvelopeSignatureArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="sig")
-      private final @Nullable Output<String> sig;
+    private @Nullable Output<String> sig;
 
-    public Output<String> sig() {
-        return this.sig == null ? Codegen.empty() : this.sig;
+    public Optional<Output<String>> sig() {
+        return Optional.ofNullable(this.sig);
     }
 
-    public EnvelopeSignatureArgs(
-        @Nullable Output<String> keyid,
-        @Nullable Output<String> sig) {
-        this.keyid = keyid;
-        this.sig = sig;
-    }
+    private EnvelopeSignatureArgs() {}
 
-    private EnvelopeSignatureArgs() {
-        this.keyid = Codegen.empty();
-        this.sig = Codegen.empty();
+    private EnvelopeSignatureArgs(EnvelopeSignatureArgs $) {
+        this.keyid = $.keyid;
+        this.sig = $.sig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvelopeSignatureArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyid;
-        private @Nullable Output<String> sig;
+        private EnvelopeSignatureArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvelopeSignatureArgs();
         }
 
         public Builder(EnvelopeSignatureArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyid = defaults.keyid;
-    	      this.sig = defaults.sig;
+            $ = new EnvelopeSignatureArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyid(@Nullable Output<String> keyid) {
-            this.keyid = keyid;
+            $.keyid = keyid;
             return this;
         }
-        public Builder keyid(@Nullable String keyid) {
-            this.keyid = Codegen.ofNullable(keyid);
-            return this;
+
+        public Builder keyid(String keyid) {
+            return keyid(Output.of(keyid));
         }
+
         public Builder sig(@Nullable Output<String> sig) {
-            this.sig = sig;
+            $.sig = sig;
             return this;
         }
-        public Builder sig(@Nullable String sig) {
-            this.sig = Codegen.ofNullable(sig);
-            return this;
-        }        public EnvelopeSignatureArgs build() {
-            return new EnvelopeSignatureArgs(keyid, sig);
+
+        public Builder sig(String sig) {
+            return sig(Output.of(sig));
+        }
+
+        public EnvelopeSignatureArgs build() {
+            return $;
         }
     }
+
 }

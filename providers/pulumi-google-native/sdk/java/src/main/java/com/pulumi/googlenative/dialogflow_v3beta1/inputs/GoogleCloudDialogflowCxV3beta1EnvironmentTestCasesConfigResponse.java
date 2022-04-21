@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
      * 
      */
     @Import(name="enableContinuousRun", required=true)
-      private final Boolean enableContinuousRun;
+    private Boolean enableContinuousRun;
 
     public Boolean enableContinuousRun() {
         return this.enableContinuousRun;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
      * 
      */
     @Import(name="enablePredeploymentRun", required=true)
-      private final Boolean enablePredeploymentRun;
+    private Boolean enablePredeploymentRun;
 
     public Boolean enablePredeploymentRun() {
         return this.enablePredeploymentRun;
@@ -45,67 +45,63 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigRespo
      * 
      */
     @Import(name="testCases", required=true)
-      private final List<String> testCases;
+    private List<String> testCases;
 
     public List<String> testCases() {
         return this.testCases;
     }
 
-    public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse(
-        Boolean enableContinuousRun,
-        Boolean enablePredeploymentRun,
-        List<String> testCases) {
-        this.enableContinuousRun = Objects.requireNonNull(enableContinuousRun, "expected parameter 'enableContinuousRun' to be non-null");
-        this.enablePredeploymentRun = Objects.requireNonNull(enablePredeploymentRun, "expected parameter 'enablePredeploymentRun' to be non-null");
-        this.testCases = Objects.requireNonNull(testCases, "expected parameter 'testCases' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse() {
-        this.enableContinuousRun = null;
-        this.enablePredeploymentRun = null;
-        this.testCases = List.of();
+    private GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse(GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse $) {
+        this.enableContinuousRun = $.enableContinuousRun;
+        this.enablePredeploymentRun = $.enablePredeploymentRun;
+        this.testCases = $.testCases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableContinuousRun;
-        private Boolean enablePredeploymentRun;
-        private List<String> testCases;
+        private GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableContinuousRun = defaults.enableContinuousRun;
-    	      this.enablePredeploymentRun = defaults.enablePredeploymentRun;
-    	      this.testCases = defaults.testCases;
+            $ = new GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableContinuousRun(Boolean enableContinuousRun) {
-            this.enableContinuousRun = Objects.requireNonNull(enableContinuousRun);
+            $.enableContinuousRun = enableContinuousRun;
             return this;
         }
+
         public Builder enablePredeploymentRun(Boolean enablePredeploymentRun) {
-            this.enablePredeploymentRun = Objects.requireNonNull(enablePredeploymentRun);
+            $.enablePredeploymentRun = enablePredeploymentRun;
             return this;
         }
+
         public Builder testCases(List<String> testCases) {
-            this.testCases = Objects.requireNonNull(testCases);
+            $.testCases = testCases;
             return this;
         }
+
         public Builder testCases(String... testCases) {
             return testCases(List.of(testCases));
-        }        public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse(enableContinuousRun, enablePredeploymentRun, testCases);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse build() {
+            $.enableContinuousRun = Objects.requireNonNull($.enableContinuousRun, "expected parameter 'enableContinuousRun' to be non-null");
+            $.enablePredeploymentRun = Objects.requireNonNull($.enablePredeploymentRun, "expected parameter 'enablePredeploymentRun' to be non-null");
+            $.testCases = Objects.requireNonNull($.testCases, "expected parameter 'testCases' to be non-null");
+            return $;
         }
     }
+
 }

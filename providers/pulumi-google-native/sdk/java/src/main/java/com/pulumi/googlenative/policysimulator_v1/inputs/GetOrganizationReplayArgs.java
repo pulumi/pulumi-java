@@ -13,78 +13,73 @@ public final class GetOrganizationReplayArgs extends com.pulumi.resources.Invoke
     public static final GetOrganizationReplayArgs Empty = new GetOrganizationReplayArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="replayId", required=true)
-      private final String replayId;
+    private String replayId;
 
     public String replayId() {
         return this.replayId;
     }
 
-    public GetOrganizationReplayArgs(
-        String location,
-        String organizationId,
-        String replayId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.replayId = Objects.requireNonNull(replayId, "expected parameter 'replayId' to be non-null");
-    }
+    private GetOrganizationReplayArgs() {}
 
-    private GetOrganizationReplayArgs() {
-        this.location = null;
-        this.organizationId = null;
-        this.replayId = null;
+    private GetOrganizationReplayArgs(GetOrganizationReplayArgs $) {
+        this.location = $.location;
+        this.organizationId = $.organizationId;
+        this.replayId = $.replayId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationReplayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String organizationId;
-        private String replayId;
+        private GetOrganizationReplayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationReplayArgs();
         }
 
         public Builder(GetOrganizationReplayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.organizationId = defaults.organizationId;
-    	      this.replayId = defaults.replayId;
+            $ = new GetOrganizationReplayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder replayId(String replayId) {
-            this.replayId = Objects.requireNonNull(replayId);
+            $.replayId = replayId;
             return this;
-        }        public GetOrganizationReplayArgs build() {
-            return new GetOrganizationReplayArgs(location, organizationId, replayId);
+        }
+
+        public GetOrganizationReplayArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.replayId = Objects.requireNonNull($.replayId, "expected parameter 'replayId' to be non-null");
+            return $;
         }
     }
+
 }

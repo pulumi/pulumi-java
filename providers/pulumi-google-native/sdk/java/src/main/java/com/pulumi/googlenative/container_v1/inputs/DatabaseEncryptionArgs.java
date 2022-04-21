@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.enums.DatabaseEncryptionState;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class DatabaseEncryptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="keyName")
-      private final @Nullable Output<String> keyName;
+    private @Nullable Output<String> keyName;
 
-    public Output<String> keyName() {
-        return this.keyName == null ? Codegen.empty() : this.keyName;
+    public Optional<Output<String>> keyName() {
+        return Optional.ofNullable(this.keyName);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class DatabaseEncryptionArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<DatabaseEncryptionState> state;
+    private @Nullable Output<DatabaseEncryptionState> state;
 
-    public Output<DatabaseEncryptionState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<DatabaseEncryptionState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
-    public DatabaseEncryptionArgs(
-        @Nullable Output<String> keyName,
-        @Nullable Output<DatabaseEncryptionState> state) {
-        this.keyName = keyName;
-        this.state = state;
-    }
+    private DatabaseEncryptionArgs() {}
 
-    private DatabaseEncryptionArgs() {
-        this.keyName = Codegen.empty();
-        this.state = Codegen.empty();
+    private DatabaseEncryptionArgs(DatabaseEncryptionArgs $) {
+        this.keyName = $.keyName;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatabaseEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> keyName;
-        private @Nullable Output<DatabaseEncryptionState> state;
+        private DatabaseEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatabaseEncryptionArgs();
         }
 
         public Builder(DatabaseEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.keyName = defaults.keyName;
-    	      this.state = defaults.state;
+            $ = new DatabaseEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder keyName(@Nullable Output<String> keyName) {
-            this.keyName = keyName;
+            $.keyName = keyName;
             return this;
         }
-        public Builder keyName(@Nullable String keyName) {
-            this.keyName = Codegen.ofNullable(keyName);
-            return this;
+
+        public Builder keyName(String keyName) {
+            return keyName(Output.of(keyName));
         }
+
         public Builder state(@Nullable Output<DatabaseEncryptionState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable DatabaseEncryptionState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
-        }        public DatabaseEncryptionArgs build() {
-            return new DatabaseEncryptionArgs(keyName, state);
+
+        public Builder state(DatabaseEncryptionState state) {
+            return state(Output.of(state));
+        }
+
+        public DatabaseEncryptionArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
      * 
      */
     @Import(name="genericWebService", required=true)
-      private final GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService;
+    private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService;
 
     public GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService() {
         return this.genericWebService;
@@ -33,55 +33,52 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigRe
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse(
-        GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService,
-        String service) {
-        this.genericWebService = Objects.requireNonNull(genericWebService, "expected parameter 'genericWebService' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse() {
-        this.genericWebService = null;
-        this.service = null;
+    private GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse $) {
+        this.genericWebService = $.genericWebService;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService;
-        private String service;
+        private GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.genericWebService = defaults.genericWebService;
-    	      this.service = defaults.service;
+            $ = new GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder genericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse genericWebService) {
-            this.genericWebService = Objects.requireNonNull(genericWebService);
+            $.genericWebService = genericWebService;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse(genericWebService, service);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse build() {
+            $.genericWebService = Objects.requireNonNull($.genericWebService, "expected parameter 'genericWebService' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

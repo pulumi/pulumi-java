@@ -5,10 +5,10 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ContextRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedRequestExtensions")
-      private final @Nullable Output<List<String>> allowedRequestExtensions;
+    private @Nullable Output<List<String>> allowedRequestExtensions;
 
-    public Output<List<String>> allowedRequestExtensions() {
-        return this.allowedRequestExtensions == null ? Codegen.empty() : this.allowedRequestExtensions;
+    public Optional<Output<List<String>>> allowedRequestExtensions() {
+        return Optional.ofNullable(this.allowedRequestExtensions);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ContextRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedResponseExtensions")
-      private final @Nullable Output<List<String>> allowedResponseExtensions;
+    private @Nullable Output<List<String>> allowedResponseExtensions;
 
-    public Output<List<String>> allowedResponseExtensions() {
-        return this.allowedResponseExtensions == null ? Codegen.empty() : this.allowedResponseExtensions;
+    public Optional<Output<List<String>>> allowedResponseExtensions() {
+        return Optional.ofNullable(this.allowedResponseExtensions);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ContextRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provided")
-      private final @Nullable Output<List<String>> provided;
+    private @Nullable Output<List<String>> provided;
 
-    public Output<List<String>> provided() {
-        return this.provided == null ? Codegen.empty() : this.provided;
+    public Optional<Output<List<String>>> provided() {
+        return Optional.ofNullable(this.provided);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContextRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requested")
-      private final @Nullable Output<List<String>> requested;
+    private @Nullable Output<List<String>> requested;
 
-    public Output<List<String>> requested() {
-        return this.requested == null ? Codegen.empty() : this.requested;
+    public Optional<Output<List<String>>> requested() {
+        return Optional.ofNullable(this.requested);
     }
 
     /**
@@ -69,114 +69,104 @@ public final class ContextRuleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public ContextRuleArgs(
-        @Nullable Output<List<String>> allowedRequestExtensions,
-        @Nullable Output<List<String>> allowedResponseExtensions,
-        @Nullable Output<List<String>> provided,
-        @Nullable Output<List<String>> requested,
-        @Nullable Output<String> selector) {
-        this.allowedRequestExtensions = allowedRequestExtensions;
-        this.allowedResponseExtensions = allowedResponseExtensions;
-        this.provided = provided;
-        this.requested = requested;
-        this.selector = selector;
-    }
+    private ContextRuleArgs() {}
 
-    private ContextRuleArgs() {
-        this.allowedRequestExtensions = Codegen.empty();
-        this.allowedResponseExtensions = Codegen.empty();
-        this.provided = Codegen.empty();
-        this.requested = Codegen.empty();
-        this.selector = Codegen.empty();
+    private ContextRuleArgs(ContextRuleArgs $) {
+        this.allowedRequestExtensions = $.allowedRequestExtensions;
+        this.allowedResponseExtensions = $.allowedResponseExtensions;
+        this.provided = $.provided;
+        this.requested = $.requested;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContextRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedRequestExtensions;
-        private @Nullable Output<List<String>> allowedResponseExtensions;
-        private @Nullable Output<List<String>> provided;
-        private @Nullable Output<List<String>> requested;
-        private @Nullable Output<String> selector;
+        private ContextRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContextRuleArgs();
         }
 
         public Builder(ContextRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedRequestExtensions = defaults.allowedRequestExtensions;
-    	      this.allowedResponseExtensions = defaults.allowedResponseExtensions;
-    	      this.provided = defaults.provided;
-    	      this.requested = defaults.requested;
-    	      this.selector = defaults.selector;
+            $ = new ContextRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedRequestExtensions(@Nullable Output<List<String>> allowedRequestExtensions) {
-            this.allowedRequestExtensions = allowedRequestExtensions;
+            $.allowedRequestExtensions = allowedRequestExtensions;
             return this;
         }
-        public Builder allowedRequestExtensions(@Nullable List<String> allowedRequestExtensions) {
-            this.allowedRequestExtensions = Codegen.ofNullable(allowedRequestExtensions);
-            return this;
+
+        public Builder allowedRequestExtensions(List<String> allowedRequestExtensions) {
+            return allowedRequestExtensions(Output.of(allowedRequestExtensions));
         }
+
         public Builder allowedRequestExtensions(String... allowedRequestExtensions) {
             return allowedRequestExtensions(List.of(allowedRequestExtensions));
         }
+
         public Builder allowedResponseExtensions(@Nullable Output<List<String>> allowedResponseExtensions) {
-            this.allowedResponseExtensions = allowedResponseExtensions;
+            $.allowedResponseExtensions = allowedResponseExtensions;
             return this;
         }
-        public Builder allowedResponseExtensions(@Nullable List<String> allowedResponseExtensions) {
-            this.allowedResponseExtensions = Codegen.ofNullable(allowedResponseExtensions);
-            return this;
+
+        public Builder allowedResponseExtensions(List<String> allowedResponseExtensions) {
+            return allowedResponseExtensions(Output.of(allowedResponseExtensions));
         }
+
         public Builder allowedResponseExtensions(String... allowedResponseExtensions) {
             return allowedResponseExtensions(List.of(allowedResponseExtensions));
         }
+
         public Builder provided(@Nullable Output<List<String>> provided) {
-            this.provided = provided;
+            $.provided = provided;
             return this;
         }
-        public Builder provided(@Nullable List<String> provided) {
-            this.provided = Codegen.ofNullable(provided);
-            return this;
+
+        public Builder provided(List<String> provided) {
+            return provided(Output.of(provided));
         }
+
         public Builder provided(String... provided) {
             return provided(List.of(provided));
         }
+
         public Builder requested(@Nullable Output<List<String>> requested) {
-            this.requested = requested;
+            $.requested = requested;
             return this;
         }
-        public Builder requested(@Nullable List<String> requested) {
-            this.requested = Codegen.ofNullable(requested);
-            return this;
+
+        public Builder requested(List<String> requested) {
+            return requested(Output.of(requested));
         }
+
         public Builder requested(String... requested) {
             return requested(List.of(requested));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public ContextRuleArgs build() {
-            return new ContextRuleArgs(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public ContextRuleArgs build() {
+            return $;
         }
     }
+
 }

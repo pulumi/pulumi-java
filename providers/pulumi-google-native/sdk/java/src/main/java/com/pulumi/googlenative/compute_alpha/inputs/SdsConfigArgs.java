@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.GrpcServiceConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SdsConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="grpcServiceConfig")
-      private final @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
+    private @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
 
-    public Output<GrpcServiceConfigArgs> grpcServiceConfig() {
-        return this.grpcServiceConfig == null ? Codegen.empty() : this.grpcServiceConfig;
+    public Optional<Output<GrpcServiceConfigArgs>> grpcServiceConfig() {
+        return Optional.ofNullable(this.grpcServiceConfig);
     }
 
-    public SdsConfigArgs(@Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig) {
-        this.grpcServiceConfig = grpcServiceConfig;
-    }
+    private SdsConfigArgs() {}
 
-    private SdsConfigArgs() {
-        this.grpcServiceConfig = Codegen.empty();
+    private SdsConfigArgs(SdsConfigArgs $) {
+        this.grpcServiceConfig = $.grpcServiceConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SdsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig;
+        private SdsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SdsConfigArgs();
         }
 
         public Builder(SdsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpcServiceConfig = defaults.grpcServiceConfig;
+            $ = new SdsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder grpcServiceConfig(@Nullable Output<GrpcServiceConfigArgs> grpcServiceConfig) {
-            this.grpcServiceConfig = grpcServiceConfig;
+            $.grpcServiceConfig = grpcServiceConfig;
             return this;
         }
-        public Builder grpcServiceConfig(@Nullable GrpcServiceConfigArgs grpcServiceConfig) {
-            this.grpcServiceConfig = Codegen.ofNullable(grpcServiceConfig);
-            return this;
-        }        public SdsConfigArgs build() {
-            return new SdsConfigArgs(grpcServiceConfig);
+
+        public Builder grpcServiceConfig(GrpcServiceConfigArgs grpcServiceConfig) {
+            return grpcServiceConfig(Output.of(grpcServiceConfig));
+        }
+
+        public SdsConfigArgs build() {
+            return $;
         }
     }
+
 }

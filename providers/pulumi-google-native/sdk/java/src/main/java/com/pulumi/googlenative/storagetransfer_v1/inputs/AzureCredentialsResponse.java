@@ -21,45 +21,45 @@ public final class AzureCredentialsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sasToken", required=true)
-      private final String sasToken;
+    private String sasToken;
 
     public String sasToken() {
         return this.sasToken;
     }
 
-    public AzureCredentialsResponse(String sasToken) {
-        this.sasToken = Objects.requireNonNull(sasToken, "expected parameter 'sasToken' to be non-null");
-    }
+    private AzureCredentialsResponse() {}
 
-    private AzureCredentialsResponse() {
-        this.sasToken = null;
+    private AzureCredentialsResponse(AzureCredentialsResponse $) {
+        this.sasToken = $.sasToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AzureCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sasToken;
+        private AzureCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AzureCredentialsResponse();
         }
 
         public Builder(AzureCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sasToken = defaults.sasToken;
+            $ = new AzureCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sasToken(String sasToken) {
-            this.sasToken = Objects.requireNonNull(sasToken);
+            $.sasToken = sasToken;
             return this;
-        }        public AzureCredentialsResponse build() {
-            return new AzureCredentialsResponse(sasToken);
+        }
+
+        public AzureCredentialsResponse build() {
+            $.sasToken = Objects.requireNonNull($.sasToken, "expected parameter 'sasToken' to be non-null");
+            return $;
         }
     }
+
 }

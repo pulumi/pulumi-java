@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse extends com.pulu
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GooglePrivacyDlpV2TransientCryptoKeyResponse(String name) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GooglePrivacyDlpV2TransientCryptoKeyResponse() {}
 
-    private GooglePrivacyDlpV2TransientCryptoKeyResponse() {
-        this.name = null;
+    private GooglePrivacyDlpV2TransientCryptoKeyResponse(GooglePrivacyDlpV2TransientCryptoKeyResponse $) {
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TransientCryptoKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
+        private GooglePrivacyDlpV2TransientCryptoKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TransientCryptoKeyResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TransientCryptoKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
+            $ = new GooglePrivacyDlpV2TransientCryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GooglePrivacyDlpV2TransientCryptoKeyResponse build() {
-            return new GooglePrivacyDlpV2TransientCryptoKeyResponse(name);
+        }
+
+        public GooglePrivacyDlpV2TransientCryptoKeyResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

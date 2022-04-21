@@ -21,7 +21,7 @@ public final class MutationRecordResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mutateTime", required=true)
-      private final String mutateTime;
+    private String mutateTime;
 
     public String mutateTime() {
         return this.mutateTime;
@@ -32,55 +32,52 @@ public final class MutationRecordResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="mutatedBy", required=true)
-      private final String mutatedBy;
+    private String mutatedBy;
 
     public String mutatedBy() {
         return this.mutatedBy;
     }
 
-    public MutationRecordResponse(
-        String mutateTime,
-        String mutatedBy) {
-        this.mutateTime = Objects.requireNonNull(mutateTime, "expected parameter 'mutateTime' to be non-null");
-        this.mutatedBy = Objects.requireNonNull(mutatedBy, "expected parameter 'mutatedBy' to be non-null");
-    }
+    private MutationRecordResponse() {}
 
-    private MutationRecordResponse() {
-        this.mutateTime = null;
-        this.mutatedBy = null;
+    private MutationRecordResponse(MutationRecordResponse $) {
+        this.mutateTime = $.mutateTime;
+        this.mutatedBy = $.mutatedBy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MutationRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String mutateTime;
-        private String mutatedBy;
+        private MutationRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MutationRecordResponse();
         }
 
         public Builder(MutationRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mutateTime = defaults.mutateTime;
-    	      this.mutatedBy = defaults.mutatedBy;
+            $ = new MutationRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mutateTime(String mutateTime) {
-            this.mutateTime = Objects.requireNonNull(mutateTime);
+            $.mutateTime = mutateTime;
             return this;
         }
+
         public Builder mutatedBy(String mutatedBy) {
-            this.mutatedBy = Objects.requireNonNull(mutatedBy);
+            $.mutatedBy = mutatedBy;
             return this;
-        }        public MutationRecordResponse build() {
-            return new MutationRecordResponse(mutateTime, mutatedBy);
+        }
+
+        public MutationRecordResponse build() {
+            $.mutateTime = Objects.requireNonNull($.mutateTime, "expected parameter 'mutateTime' to be non-null");
+            $.mutatedBy = Objects.requireNonNull($.mutatedBy, "expected parameter 'mutatedBy' to be non-null");
+            return $;
         }
     }
+
 }

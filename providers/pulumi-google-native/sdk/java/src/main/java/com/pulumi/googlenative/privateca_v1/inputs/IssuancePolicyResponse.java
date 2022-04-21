@@ -27,7 +27,7 @@ public final class IssuancePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="allowedIssuanceModes", required=true)
-      private final IssuanceModesResponse allowedIssuanceModes;
+    private IssuanceModesResponse allowedIssuanceModes;
 
     public IssuanceModesResponse allowedIssuanceModes() {
         return this.allowedIssuanceModes;
@@ -38,7 +38,7 @@ public final class IssuancePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="allowedKeyTypes", required=true)
-      private final List<AllowedKeyTypeResponse> allowedKeyTypes;
+    private List<AllowedKeyTypeResponse> allowedKeyTypes;
 
     public List<AllowedKeyTypeResponse> allowedKeyTypes() {
         return this.allowedKeyTypes;
@@ -49,7 +49,7 @@ public final class IssuancePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="baselineValues", required=true)
-      private final X509ParametersResponse baselineValues;
+    private X509ParametersResponse baselineValues;
 
     public X509ParametersResponse baselineValues() {
         return this.baselineValues;
@@ -60,7 +60,7 @@ public final class IssuancePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="identityConstraints", required=true)
-      private final CertificateIdentityConstraintsResponse identityConstraints;
+    private CertificateIdentityConstraintsResponse identityConstraints;
 
     public CertificateIdentityConstraintsResponse identityConstraints() {
         return this.identityConstraints;
@@ -71,7 +71,7 @@ public final class IssuancePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="maximumLifetime", required=true)
-      private final String maximumLifetime;
+    private String maximumLifetime;
 
     public String maximumLifetime() {
         return this.maximumLifetime;
@@ -82,94 +82,84 @@ public final class IssuancePolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="passthroughExtensions", required=true)
-      private final CertificateExtensionConstraintsResponse passthroughExtensions;
+    private CertificateExtensionConstraintsResponse passthroughExtensions;
 
     public CertificateExtensionConstraintsResponse passthroughExtensions() {
         return this.passthroughExtensions;
     }
 
-    public IssuancePolicyResponse(
-        IssuanceModesResponse allowedIssuanceModes,
-        List<AllowedKeyTypeResponse> allowedKeyTypes,
-        X509ParametersResponse baselineValues,
-        CertificateIdentityConstraintsResponse identityConstraints,
-        String maximumLifetime,
-        CertificateExtensionConstraintsResponse passthroughExtensions) {
-        this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes, "expected parameter 'allowedIssuanceModes' to be non-null");
-        this.allowedKeyTypes = Objects.requireNonNull(allowedKeyTypes, "expected parameter 'allowedKeyTypes' to be non-null");
-        this.baselineValues = Objects.requireNonNull(baselineValues, "expected parameter 'baselineValues' to be non-null");
-        this.identityConstraints = Objects.requireNonNull(identityConstraints, "expected parameter 'identityConstraints' to be non-null");
-        this.maximumLifetime = Objects.requireNonNull(maximumLifetime, "expected parameter 'maximumLifetime' to be non-null");
-        this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions, "expected parameter 'passthroughExtensions' to be non-null");
-    }
+    private IssuancePolicyResponse() {}
 
-    private IssuancePolicyResponse() {
-        this.allowedIssuanceModes = null;
-        this.allowedKeyTypes = List.of();
-        this.baselineValues = null;
-        this.identityConstraints = null;
-        this.maximumLifetime = null;
-        this.passthroughExtensions = null;
+    private IssuancePolicyResponse(IssuancePolicyResponse $) {
+        this.allowedIssuanceModes = $.allowedIssuanceModes;
+        this.allowedKeyTypes = $.allowedKeyTypes;
+        this.baselineValues = $.baselineValues;
+        this.identityConstraints = $.identityConstraints;
+        this.maximumLifetime = $.maximumLifetime;
+        this.passthroughExtensions = $.passthroughExtensions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IssuancePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private IssuanceModesResponse allowedIssuanceModes;
-        private List<AllowedKeyTypeResponse> allowedKeyTypes;
-        private X509ParametersResponse baselineValues;
-        private CertificateIdentityConstraintsResponse identityConstraints;
-        private String maximumLifetime;
-        private CertificateExtensionConstraintsResponse passthroughExtensions;
+        private IssuancePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IssuancePolicyResponse();
         }
 
         public Builder(IssuancePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedIssuanceModes = defaults.allowedIssuanceModes;
-    	      this.allowedKeyTypes = defaults.allowedKeyTypes;
-    	      this.baselineValues = defaults.baselineValues;
-    	      this.identityConstraints = defaults.identityConstraints;
-    	      this.maximumLifetime = defaults.maximumLifetime;
-    	      this.passthroughExtensions = defaults.passthroughExtensions;
+            $ = new IssuancePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
-            this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
+            $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
+
         public Builder allowedKeyTypes(List<AllowedKeyTypeResponse> allowedKeyTypes) {
-            this.allowedKeyTypes = Objects.requireNonNull(allowedKeyTypes);
+            $.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
+
         public Builder allowedKeyTypes(AllowedKeyTypeResponse... allowedKeyTypes) {
             return allowedKeyTypes(List.of(allowedKeyTypes));
         }
+
         public Builder baselineValues(X509ParametersResponse baselineValues) {
-            this.baselineValues = Objects.requireNonNull(baselineValues);
+            $.baselineValues = baselineValues;
             return this;
         }
+
         public Builder identityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
-            this.identityConstraints = Objects.requireNonNull(identityConstraints);
+            $.identityConstraints = identityConstraints;
             return this;
         }
+
         public Builder maximumLifetime(String maximumLifetime) {
-            this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
+            $.maximumLifetime = maximumLifetime;
             return this;
         }
+
         public Builder passthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
-            this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
+            $.passthroughExtensions = passthroughExtensions;
             return this;
-        }        public IssuancePolicyResponse build() {
-            return new IssuancePolicyResponse(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
+        }
+
+        public IssuancePolicyResponse build() {
+            $.allowedIssuanceModes = Objects.requireNonNull($.allowedIssuanceModes, "expected parameter 'allowedIssuanceModes' to be non-null");
+            $.allowedKeyTypes = Objects.requireNonNull($.allowedKeyTypes, "expected parameter 'allowedKeyTypes' to be non-null");
+            $.baselineValues = Objects.requireNonNull($.baselineValues, "expected parameter 'baselineValues' to be non-null");
+            $.identityConstraints = Objects.requireNonNull($.identityConstraints, "expected parameter 'identityConstraints' to be non-null");
+            $.maximumLifetime = Objects.requireNonNull($.maximumLifetime, "expected parameter 'maximumLifetime' to be non-null");
+            $.passthroughExtensions = Objects.requireNonNull($.passthroughExtensions, "expected parameter 'passthroughExtensions' to be non-null");
+            return $;
         }
     }
+
 }

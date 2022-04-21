@@ -24,7 +24,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -35,7 +35,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="attestation", required=true)
-      private final KeyOperationAttestationResponse attestation;
+    private KeyOperationAttestationResponse attestation;
 
     public KeyOperationAttestationResponse attestation() {
         return this.attestation;
@@ -46,7 +46,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -57,7 +57,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="destroyEventTime", required=true)
-      private final String destroyEventTime;
+    private String destroyEventTime;
 
     public String destroyEventTime() {
         return this.destroyEventTime;
@@ -68,7 +68,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="destroyTime", required=true)
-      private final String destroyTime;
+    private String destroyTime;
 
     public String destroyTime() {
         return this.destroyTime;
@@ -79,7 +79,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="externalProtectionLevelOptions", required=true)
-      private final ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
+    private ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
 
     public ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions() {
         return this.externalProtectionLevelOptions;
@@ -90,7 +90,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="generateTime", required=true)
-      private final String generateTime;
+    private String generateTime;
 
     public String generateTime() {
         return this.generateTime;
@@ -101,7 +101,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="importFailureReason", required=true)
-      private final String importFailureReason;
+    private String importFailureReason;
 
     public String importFailureReason() {
         return this.importFailureReason;
@@ -112,7 +112,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="importJob", required=true)
-      private final String importJob;
+    private String importJob;
 
     public String importJob() {
         return this.importJob;
@@ -123,7 +123,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="importTime", required=true)
-      private final String importTime;
+    private String importTime;
 
     public String importTime() {
         return this.importTime;
@@ -134,7 +134,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -145,7 +145,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="protectionLevel", required=true)
-      private final String protectionLevel;
+    private String protectionLevel;
 
     public String protectionLevel() {
         return this.protectionLevel;
@@ -156,7 +156,7 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="reimportEligible", required=true)
-      private final Boolean reimportEligible;
+    private Boolean reimportEligible;
 
     public Boolean reimportEligible() {
         return this.reimportEligible;
@@ -167,163 +167,136 @@ public final class CryptoKeyVersionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public CryptoKeyVersionResponse(
-        String algorithm,
-        KeyOperationAttestationResponse attestation,
-        String createTime,
-        String destroyEventTime,
-        String destroyTime,
-        ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions,
-        String generateTime,
-        String importFailureReason,
-        String importJob,
-        String importTime,
-        String name,
-        String protectionLevel,
-        Boolean reimportEligible,
-        String state) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.attestation = Objects.requireNonNull(attestation, "expected parameter 'attestation' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.destroyEventTime = Objects.requireNonNull(destroyEventTime, "expected parameter 'destroyEventTime' to be non-null");
-        this.destroyTime = Objects.requireNonNull(destroyTime, "expected parameter 'destroyTime' to be non-null");
-        this.externalProtectionLevelOptions = Objects.requireNonNull(externalProtectionLevelOptions, "expected parameter 'externalProtectionLevelOptions' to be non-null");
-        this.generateTime = Objects.requireNonNull(generateTime, "expected parameter 'generateTime' to be non-null");
-        this.importFailureReason = Objects.requireNonNull(importFailureReason, "expected parameter 'importFailureReason' to be non-null");
-        this.importJob = Objects.requireNonNull(importJob, "expected parameter 'importJob' to be non-null");
-        this.importTime = Objects.requireNonNull(importTime, "expected parameter 'importTime' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.protectionLevel = Objects.requireNonNull(protectionLevel, "expected parameter 'protectionLevel' to be non-null");
-        this.reimportEligible = Objects.requireNonNull(reimportEligible, "expected parameter 'reimportEligible' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private CryptoKeyVersionResponse() {}
 
-    private CryptoKeyVersionResponse() {
-        this.algorithm = null;
-        this.attestation = null;
-        this.createTime = null;
-        this.destroyEventTime = null;
-        this.destroyTime = null;
-        this.externalProtectionLevelOptions = null;
-        this.generateTime = null;
-        this.importFailureReason = null;
-        this.importJob = null;
-        this.importTime = null;
-        this.name = null;
-        this.protectionLevel = null;
-        this.reimportEligible = null;
-        this.state = null;
+    private CryptoKeyVersionResponse(CryptoKeyVersionResponse $) {
+        this.algorithm = $.algorithm;
+        this.attestation = $.attestation;
+        this.createTime = $.createTime;
+        this.destroyEventTime = $.destroyEventTime;
+        this.destroyTime = $.destroyTime;
+        this.externalProtectionLevelOptions = $.externalProtectionLevelOptions;
+        this.generateTime = $.generateTime;
+        this.importFailureReason = $.importFailureReason;
+        this.importJob = $.importJob;
+        this.importTime = $.importTime;
+        this.name = $.name;
+        this.protectionLevel = $.protectionLevel;
+        this.reimportEligible = $.reimportEligible;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CryptoKeyVersionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private KeyOperationAttestationResponse attestation;
-        private String createTime;
-        private String destroyEventTime;
-        private String destroyTime;
-        private ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions;
-        private String generateTime;
-        private String importFailureReason;
-        private String importJob;
-        private String importTime;
-        private String name;
-        private String protectionLevel;
-        private Boolean reimportEligible;
-        private String state;
+        private CryptoKeyVersionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CryptoKeyVersionResponse();
         }
 
         public Builder(CryptoKeyVersionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.attestation = defaults.attestation;
-    	      this.createTime = defaults.createTime;
-    	      this.destroyEventTime = defaults.destroyEventTime;
-    	      this.destroyTime = defaults.destroyTime;
-    	      this.externalProtectionLevelOptions = defaults.externalProtectionLevelOptions;
-    	      this.generateTime = defaults.generateTime;
-    	      this.importFailureReason = defaults.importFailureReason;
-    	      this.importJob = defaults.importJob;
-    	      this.importTime = defaults.importTime;
-    	      this.name = defaults.name;
-    	      this.protectionLevel = defaults.protectionLevel;
-    	      this.reimportEligible = defaults.reimportEligible;
-    	      this.state = defaults.state;
+            $ = new CryptoKeyVersionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder attestation(KeyOperationAttestationResponse attestation) {
-            this.attestation = Objects.requireNonNull(attestation);
+            $.attestation = attestation;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder destroyEventTime(String destroyEventTime) {
-            this.destroyEventTime = Objects.requireNonNull(destroyEventTime);
+            $.destroyEventTime = destroyEventTime;
             return this;
         }
+
         public Builder destroyTime(String destroyTime) {
-            this.destroyTime = Objects.requireNonNull(destroyTime);
+            $.destroyTime = destroyTime;
             return this;
         }
+
         public Builder externalProtectionLevelOptions(ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions) {
-            this.externalProtectionLevelOptions = Objects.requireNonNull(externalProtectionLevelOptions);
+            $.externalProtectionLevelOptions = externalProtectionLevelOptions;
             return this;
         }
+
         public Builder generateTime(String generateTime) {
-            this.generateTime = Objects.requireNonNull(generateTime);
+            $.generateTime = generateTime;
             return this;
         }
+
         public Builder importFailureReason(String importFailureReason) {
-            this.importFailureReason = Objects.requireNonNull(importFailureReason);
+            $.importFailureReason = importFailureReason;
             return this;
         }
+
         public Builder importJob(String importJob) {
-            this.importJob = Objects.requireNonNull(importJob);
+            $.importJob = importJob;
             return this;
         }
+
         public Builder importTime(String importTime) {
-            this.importTime = Objects.requireNonNull(importTime);
+            $.importTime = importTime;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder protectionLevel(String protectionLevel) {
-            this.protectionLevel = Objects.requireNonNull(protectionLevel);
+            $.protectionLevel = protectionLevel;
             return this;
         }
+
         public Builder reimportEligible(Boolean reimportEligible) {
-            this.reimportEligible = Objects.requireNonNull(reimportEligible);
+            $.reimportEligible = reimportEligible;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public CryptoKeyVersionResponse build() {
-            return new CryptoKeyVersionResponse(algorithm, attestation, createTime, destroyEventTime, destroyTime, externalProtectionLevelOptions, generateTime, importFailureReason, importJob, importTime, name, protectionLevel, reimportEligible, state);
+        }
+
+        public CryptoKeyVersionResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.attestation = Objects.requireNonNull($.attestation, "expected parameter 'attestation' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.destroyEventTime = Objects.requireNonNull($.destroyEventTime, "expected parameter 'destroyEventTime' to be non-null");
+            $.destroyTime = Objects.requireNonNull($.destroyTime, "expected parameter 'destroyTime' to be non-null");
+            $.externalProtectionLevelOptions = Objects.requireNonNull($.externalProtectionLevelOptions, "expected parameter 'externalProtectionLevelOptions' to be non-null");
+            $.generateTime = Objects.requireNonNull($.generateTime, "expected parameter 'generateTime' to be non-null");
+            $.importFailureReason = Objects.requireNonNull($.importFailureReason, "expected parameter 'importFailureReason' to be non-null");
+            $.importJob = Objects.requireNonNull($.importJob, "expected parameter 'importJob' to be non-null");
+            $.importTime = Objects.requireNonNull($.importTime, "expected parameter 'importTime' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.protectionLevel = Objects.requireNonNull($.protectionLevel, "expected parameter 'protectionLevel' to be non-null");
+            $.reimportEligible = Objects.requireNonNull($.reimportEligible, "expected parameter 'reimportEligible' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

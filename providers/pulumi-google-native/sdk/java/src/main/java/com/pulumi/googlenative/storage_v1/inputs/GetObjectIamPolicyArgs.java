@@ -15,110 +15,98 @@ public final class GetObjectIamPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetObjectIamPolicyArgs Empty = new GetObjectIamPolicyArgs();
 
     @Import(name="bucket", required=true)
-      private final String bucket;
+    private String bucket;
 
     public String bucket() {
         return this.bucket;
     }
 
     @Import(name="generation")
-      private final @Nullable String generation;
+    private @Nullable String generation;
 
     public Optional<String> generation() {
-        return this.generation == null ? Optional.empty() : Optional.ofNullable(this.generation);
+        return Optional.ofNullable(this.generation);
     }
 
     @Import(name="object", required=true)
-      private final String object;
+    private String object;
 
     public String object() {
         return this.object;
     }
 
     @Import(name="provisionalUserProject")
-      private final @Nullable String provisionalUserProject;
+    private @Nullable String provisionalUserProject;
 
     public Optional<String> provisionalUserProject() {
-        return this.provisionalUserProject == null ? Optional.empty() : Optional.ofNullable(this.provisionalUserProject);
+        return Optional.ofNullable(this.provisionalUserProject);
     }
 
     @Import(name="userProject")
-      private final @Nullable String userProject;
+    private @Nullable String userProject;
 
     public Optional<String> userProject() {
-        return this.userProject == null ? Optional.empty() : Optional.ofNullable(this.userProject);
+        return Optional.ofNullable(this.userProject);
     }
 
-    public GetObjectIamPolicyArgs(
-        String bucket,
-        @Nullable String generation,
-        String object,
-        @Nullable String provisionalUserProject,
-        @Nullable String userProject) {
-        this.bucket = Objects.requireNonNull(bucket, "expected parameter 'bucket' to be non-null");
-        this.generation = generation;
-        this.object = Objects.requireNonNull(object, "expected parameter 'object' to be non-null");
-        this.provisionalUserProject = provisionalUserProject;
-        this.userProject = userProject;
-    }
+    private GetObjectIamPolicyArgs() {}
 
-    private GetObjectIamPolicyArgs() {
-        this.bucket = null;
-        this.generation = null;
-        this.object = null;
-        this.provisionalUserProject = null;
-        this.userProject = null;
+    private GetObjectIamPolicyArgs(GetObjectIamPolicyArgs $) {
+        this.bucket = $.bucket;
+        this.generation = $.generation;
+        this.object = $.object;
+        this.provisionalUserProject = $.provisionalUserProject;
+        this.userProject = $.userProject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetObjectIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bucket;
-        private @Nullable String generation;
-        private String object;
-        private @Nullable String provisionalUserProject;
-        private @Nullable String userProject;
+        private GetObjectIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetObjectIamPolicyArgs();
         }
 
         public Builder(GetObjectIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.generation = defaults.generation;
-    	      this.object = defaults.object;
-    	      this.provisionalUserProject = defaults.provisionalUserProject;
-    	      this.userProject = defaults.userProject;
+            $ = new GetObjectIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(String bucket) {
-            this.bucket = Objects.requireNonNull(bucket);
+            $.bucket = bucket;
             return this;
         }
+
         public Builder generation(@Nullable String generation) {
-            this.generation = generation;
+            $.generation = generation;
             return this;
         }
+
         public Builder object(String object) {
-            this.object = Objects.requireNonNull(object);
+            $.object = object;
             return this;
         }
+
         public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
-            this.provisionalUserProject = provisionalUserProject;
+            $.provisionalUserProject = provisionalUserProject;
             return this;
         }
+
         public Builder userProject(@Nullable String userProject) {
-            this.userProject = userProject;
+            $.userProject = userProject;
             return this;
-        }        public GetObjectIamPolicyArgs build() {
-            return new GetObjectIamPolicyArgs(bucket, generation, object, provisionalUserProject, userProject);
+        }
+
+        public GetObjectIamPolicyArgs build() {
+            $.bucket = Objects.requireNonNull($.bucket, "expected parameter 'bucket' to be non-null");
+            $.object = Objects.requireNonNull($.object, "expected parameter 'object' to be non-null");
+            return $;
         }
     }
+
 }

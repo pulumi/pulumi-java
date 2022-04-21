@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends com.pu
      * 
      */
     @Import(name="cpuIdle", required=true)
-      private final Boolean cpuIdle;
+    private Boolean cpuIdle;
 
     public Boolean cpuIdle() {
         return this.cpuIdle;
@@ -34,55 +34,52 @@ public final class GoogleCloudRunOpV2ResourceRequirementsResponse extends com.pu
      * 
      */
     @Import(name="limits", required=true)
-      private final Map<String,String> limits;
+    private Map<String,String> limits;
 
     public Map<String,String> limits() {
         return this.limits;
     }
 
-    public GoogleCloudRunOpV2ResourceRequirementsResponse(
-        Boolean cpuIdle,
-        Map<String,String> limits) {
-        this.cpuIdle = Objects.requireNonNull(cpuIdle, "expected parameter 'cpuIdle' to be non-null");
-        this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
-    }
+    private GoogleCloudRunOpV2ResourceRequirementsResponse() {}
 
-    private GoogleCloudRunOpV2ResourceRequirementsResponse() {
-        this.cpuIdle = null;
-        this.limits = Map.of();
+    private GoogleCloudRunOpV2ResourceRequirementsResponse(GoogleCloudRunOpV2ResourceRequirementsResponse $) {
+        this.cpuIdle = $.cpuIdle;
+        this.limits = $.limits;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2ResourceRequirementsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean cpuIdle;
-        private Map<String,String> limits;
+        private GoogleCloudRunOpV2ResourceRequirementsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2ResourceRequirementsResponse();
         }
 
         public Builder(GoogleCloudRunOpV2ResourceRequirementsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpuIdle = defaults.cpuIdle;
-    	      this.limits = defaults.limits;
+            $ = new GoogleCloudRunOpV2ResourceRequirementsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpuIdle(Boolean cpuIdle) {
-            this.cpuIdle = Objects.requireNonNull(cpuIdle);
+            $.cpuIdle = cpuIdle;
             return this;
         }
+
         public Builder limits(Map<String,String> limits) {
-            this.limits = Objects.requireNonNull(limits);
+            $.limits = limits;
             return this;
-        }        public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
-            return new GoogleCloudRunOpV2ResourceRequirementsResponse(cpuIdle, limits);
+        }
+
+        public GoogleCloudRunOpV2ResourceRequirementsResponse build() {
+            $.cpuIdle = Objects.requireNonNull($.cpuIdle, "expected parameter 'cpuIdle' to be non-null");
+            $.limits = Objects.requireNonNull($.limits, "expected parameter 'limits' to be non-null");
+            return $;
         }
     }
+
 }

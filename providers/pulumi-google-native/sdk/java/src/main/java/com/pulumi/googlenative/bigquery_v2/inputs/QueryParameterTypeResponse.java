@@ -19,7 +19,7 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="arrayType", required=true)
-      private final QueryParameterTypeResponse arrayType;
+    private QueryParameterTypeResponse arrayType;
 
     public QueryParameterTypeResponse arrayType() {
         return this.arrayType;
@@ -30,7 +30,7 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="structTypes", required=true)
-      private final List<QueryParameterTypeStructTypesItemResponse> structTypes;
+    private List<QueryParameterTypeStructTypesItemResponse> structTypes;
 
     public List<QueryParameterTypeStructTypesItemResponse> structTypes() {
         return this.structTypes;
@@ -41,67 +41,63 @@ public final class QueryParameterTypeResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public QueryParameterTypeResponse(
-        QueryParameterTypeResponse arrayType,
-        List<QueryParameterTypeStructTypesItemResponse> structTypes,
-        String type) {
-        this.arrayType = Objects.requireNonNull(arrayType, "expected parameter 'arrayType' to be non-null");
-        this.structTypes = Objects.requireNonNull(structTypes, "expected parameter 'structTypes' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private QueryParameterTypeResponse() {}
 
-    private QueryParameterTypeResponse() {
-        this.arrayType = null;
-        this.structTypes = List.of();
-        this.type = null;
+    private QueryParameterTypeResponse(QueryParameterTypeResponse $) {
+        this.arrayType = $.arrayType;
+        this.structTypes = $.structTypes;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryParameterTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private QueryParameterTypeResponse arrayType;
-        private List<QueryParameterTypeStructTypesItemResponse> structTypes;
-        private String type;
+        private QueryParameterTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryParameterTypeResponse();
         }
 
         public Builder(QueryParameterTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayType = defaults.arrayType;
-    	      this.structTypes = defaults.structTypes;
-    	      this.type = defaults.type;
+            $ = new QueryParameterTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayType(QueryParameterTypeResponse arrayType) {
-            this.arrayType = Objects.requireNonNull(arrayType);
+            $.arrayType = arrayType;
             return this;
         }
+
         public Builder structTypes(List<QueryParameterTypeStructTypesItemResponse> structTypes) {
-            this.structTypes = Objects.requireNonNull(structTypes);
+            $.structTypes = structTypes;
             return this;
         }
+
         public Builder structTypes(QueryParameterTypeStructTypesItemResponse... structTypes) {
             return structTypes(List.of(structTypes));
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public QueryParameterTypeResponse build() {
-            return new QueryParameterTypeResponse(arrayType, structTypes, type);
+        }
+
+        public QueryParameterTypeResponse build() {
+            $.arrayType = Objects.requireNonNull($.arrayType, "expected parameter 'arrayType' to be non-null");
+            $.structTypes = Objects.requireNonNull($.structTypes, "expected parameter 'structTypes' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

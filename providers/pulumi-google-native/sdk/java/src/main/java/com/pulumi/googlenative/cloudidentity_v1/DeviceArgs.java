@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudidentity_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,17 +21,17 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="assetTag")
-      private final @Nullable Output<String> assetTag;
+    private @Nullable Output<String> assetTag;
 
-    public Output<String> assetTag() {
-        return this.assetTag == null ? Codegen.empty() : this.assetTag;
+    public Optional<Output<String>> assetTag() {
+        return Optional.ofNullable(this.assetTag);
     }
 
     @Import(name="customer")
-      private final @Nullable Output<String> customer;
+    private @Nullable Output<String> customer;
 
-    public Output<String> customer() {
-        return this.customer == null ? Codegen.empty() : this.customer;
+    public Optional<Output<String>> customer() {
+        return Optional.ofNullable(this.customer);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastSyncTime")
-      private final @Nullable Output<String> lastSyncTime;
+    private @Nullable Output<String> lastSyncTime;
 
-    public Output<String> lastSyncTime() {
-        return this.lastSyncTime == null ? Codegen.empty() : this.lastSyncTime;
+    public Optional<Output<String>> lastSyncTime() {
+        return Optional.ofNullable(this.lastSyncTime);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serialNumber")
-      private final @Nullable Output<String> serialNumber;
+    private @Nullable Output<String> serialNumber;
 
-    public Output<String> serialNumber() {
-        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
+    public Optional<Output<String>> serialNumber() {
+        return Optional.ofNullable(this.serialNumber);
     }
 
     /**
@@ -61,105 +61,92 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="wifiMacAddresses")
-      private final @Nullable Output<List<String>> wifiMacAddresses;
+    private @Nullable Output<List<String>> wifiMacAddresses;
 
-    public Output<List<String>> wifiMacAddresses() {
-        return this.wifiMacAddresses == null ? Codegen.empty() : this.wifiMacAddresses;
+    public Optional<Output<List<String>>> wifiMacAddresses() {
+        return Optional.ofNullable(this.wifiMacAddresses);
     }
 
-    public DeviceArgs(
-        @Nullable Output<String> assetTag,
-        @Nullable Output<String> customer,
-        @Nullable Output<String> lastSyncTime,
-        @Nullable Output<String> serialNumber,
-        @Nullable Output<List<String>> wifiMacAddresses) {
-        this.assetTag = assetTag;
-        this.customer = customer;
-        this.lastSyncTime = lastSyncTime;
-        this.serialNumber = serialNumber;
-        this.wifiMacAddresses = wifiMacAddresses;
-    }
+    private DeviceArgs() {}
 
-    private DeviceArgs() {
-        this.assetTag = Codegen.empty();
-        this.customer = Codegen.empty();
-        this.lastSyncTime = Codegen.empty();
-        this.serialNumber = Codegen.empty();
-        this.wifiMacAddresses = Codegen.empty();
+    private DeviceArgs(DeviceArgs $) {
+        this.assetTag = $.assetTag;
+        this.customer = $.customer;
+        this.lastSyncTime = $.lastSyncTime;
+        this.serialNumber = $.serialNumber;
+        this.wifiMacAddresses = $.wifiMacAddresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> assetTag;
-        private @Nullable Output<String> customer;
-        private @Nullable Output<String> lastSyncTime;
-        private @Nullable Output<String> serialNumber;
-        private @Nullable Output<List<String>> wifiMacAddresses;
+        private DeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceArgs();
         }
 
         public Builder(DeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.assetTag = defaults.assetTag;
-    	      this.customer = defaults.customer;
-    	      this.lastSyncTime = defaults.lastSyncTime;
-    	      this.serialNumber = defaults.serialNumber;
-    	      this.wifiMacAddresses = defaults.wifiMacAddresses;
+            $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder assetTag(@Nullable Output<String> assetTag) {
-            this.assetTag = assetTag;
+            $.assetTag = assetTag;
             return this;
         }
-        public Builder assetTag(@Nullable String assetTag) {
-            this.assetTag = Codegen.ofNullable(assetTag);
-            return this;
+
+        public Builder assetTag(String assetTag) {
+            return assetTag(Output.of(assetTag));
         }
+
         public Builder customer(@Nullable Output<String> customer) {
-            this.customer = customer;
+            $.customer = customer;
             return this;
         }
-        public Builder customer(@Nullable String customer) {
-            this.customer = Codegen.ofNullable(customer);
-            return this;
+
+        public Builder customer(String customer) {
+            return customer(Output.of(customer));
         }
+
         public Builder lastSyncTime(@Nullable Output<String> lastSyncTime) {
-            this.lastSyncTime = lastSyncTime;
+            $.lastSyncTime = lastSyncTime;
             return this;
         }
-        public Builder lastSyncTime(@Nullable String lastSyncTime) {
-            this.lastSyncTime = Codegen.ofNullable(lastSyncTime);
-            return this;
+
+        public Builder lastSyncTime(String lastSyncTime) {
+            return lastSyncTime(Output.of(lastSyncTime));
         }
+
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
-            this.serialNumber = serialNumber;
+            $.serialNumber = serialNumber;
             return this;
         }
-        public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Codegen.ofNullable(serialNumber);
-            return this;
+
+        public Builder serialNumber(String serialNumber) {
+            return serialNumber(Output.of(serialNumber));
         }
+
         public Builder wifiMacAddresses(@Nullable Output<List<String>> wifiMacAddresses) {
-            this.wifiMacAddresses = wifiMacAddresses;
+            $.wifiMacAddresses = wifiMacAddresses;
             return this;
         }
-        public Builder wifiMacAddresses(@Nullable List<String> wifiMacAddresses) {
-            this.wifiMacAddresses = Codegen.ofNullable(wifiMacAddresses);
-            return this;
+
+        public Builder wifiMacAddresses(List<String> wifiMacAddresses) {
+            return wifiMacAddresses(Output.of(wifiMacAddresses));
         }
+
         public Builder wifiMacAddresses(String... wifiMacAddresses) {
             return wifiMacAddresses(List.of(wifiMacAddresses));
-        }        public DeviceArgs build() {
-            return new DeviceArgs(assetTag, customer, lastSyncTime, serialNumber, wifiMacAddresses);
+        }
+
+        public DeviceArgs build() {
+            return $;
         }
     }
+
 }

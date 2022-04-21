@@ -21,7 +21,7 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="audience", required=true)
-      private final String audience;
+    private String audience;
 
     public String audience() {
         return this.audience;
@@ -32,7 +32,7 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="issuer", required=true)
-      private final String issuer;
+    private String issuer;
 
     public String issuer() {
         return this.issuer;
@@ -43,64 +43,59 @@ public final class JwtClaimsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subject", required=true)
-      private final String subject;
+    private String subject;
 
     public String subject() {
         return this.subject;
     }
 
-    public JwtClaimsResponse(
-        String audience,
-        String issuer,
-        String subject) {
-        this.audience = Objects.requireNonNull(audience, "expected parameter 'audience' to be non-null");
-        this.issuer = Objects.requireNonNull(issuer, "expected parameter 'issuer' to be non-null");
-        this.subject = Objects.requireNonNull(subject, "expected parameter 'subject' to be non-null");
-    }
+    private JwtClaimsResponse() {}
 
-    private JwtClaimsResponse() {
-        this.audience = null;
-        this.issuer = null;
-        this.subject = null;
+    private JwtClaimsResponse(JwtClaimsResponse $) {
+        this.audience = $.audience;
+        this.issuer = $.issuer;
+        this.subject = $.subject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtClaimsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String audience;
-        private String issuer;
-        private String subject;
+        private JwtClaimsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtClaimsResponse();
         }
 
         public Builder(JwtClaimsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.issuer = defaults.issuer;
-    	      this.subject = defaults.subject;
+            $ = new JwtClaimsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(String audience) {
-            this.audience = Objects.requireNonNull(audience);
+            $.audience = audience;
             return this;
         }
+
         public Builder issuer(String issuer) {
-            this.issuer = Objects.requireNonNull(issuer);
+            $.issuer = issuer;
             return this;
         }
+
         public Builder subject(String subject) {
-            this.subject = Objects.requireNonNull(subject);
+            $.subject = subject;
             return this;
-        }        public JwtClaimsResponse build() {
-            return new JwtClaimsResponse(audience, issuer, subject);
+        }
+
+        public JwtClaimsResponse build() {
+            $.audience = Objects.requireNonNull($.audience, "expected parameter 'audience' to be non-null");
+            $.issuer = Objects.requireNonNull($.issuer, "expected parameter 'issuer' to be non-null");
+            $.subject = Objects.requireNonNull($.subject, "expected parameter 'subject' to be non-null");
+            return $;
         }
     }
+
 }

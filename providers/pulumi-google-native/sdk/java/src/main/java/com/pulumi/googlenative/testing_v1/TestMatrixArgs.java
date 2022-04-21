@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.ClientInfoArgs;
 import com.pulumi.googlenative.testing_v1.inputs.EnvironmentMatrixArgs;
 import com.pulumi.googlenative.testing_v1.inputs.ResultStorageArgs;
@@ -14,6 +13,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clientInfo")
-      private final @Nullable Output<ClientInfoArgs> clientInfo;
+    private @Nullable Output<ClientInfoArgs> clientInfo;
 
-    public Output<ClientInfoArgs> clientInfo() {
-        return this.clientInfo == null ? Codegen.empty() : this.clientInfo;
+    public Optional<Output<ClientInfoArgs>> clientInfo() {
+        return Optional.ofNullable(this.clientInfo);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="environmentMatrix", required=true)
-      private final Output<EnvironmentMatrixArgs> environmentMatrix;
+    private Output<EnvironmentMatrixArgs> environmentMatrix;
 
     public Output<EnvironmentMatrixArgs> environmentMatrix() {
         return this.environmentMatrix;
@@ -48,10 +48,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="failFast")
-      private final @Nullable Output<Boolean> failFast;
+    private @Nullable Output<Boolean> failFast;
 
-    public Output<Boolean> failFast() {
-        return this.failFast == null ? Codegen.empty() : this.failFast;
+    public Optional<Output<Boolean>> failFast() {
+        return Optional.ofNullable(this.failFast);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flakyTestAttempts")
-      private final @Nullable Output<Integer> flakyTestAttempts;
+    private @Nullable Output<Integer> flakyTestAttempts;
 
-    public Output<Integer> flakyTestAttempts() {
-        return this.flakyTestAttempts == null ? Codegen.empty() : this.flakyTestAttempts;
+    public Optional<Output<Integer>> flakyTestAttempts() {
+        return Optional.ofNullable(this.flakyTestAttempts);
     }
 
     /**
@@ -70,17 +70,17 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -88,7 +88,7 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resultStorage", required=true)
-      private final Output<ResultStorageArgs> resultStorage;
+    private Output<ResultStorageArgs> resultStorage;
 
     public Output<ResultStorageArgs> resultStorage() {
         return this.resultStorage;
@@ -99,141 +99,121 @@ public final class TestMatrixArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testSpecification", required=true)
-      private final Output<TestSpecificationArgs> testSpecification;
+    private Output<TestSpecificationArgs> testSpecification;
 
     public Output<TestSpecificationArgs> testSpecification() {
         return this.testSpecification;
     }
 
-    public TestMatrixArgs(
-        @Nullable Output<ClientInfoArgs> clientInfo,
-        Output<EnvironmentMatrixArgs> environmentMatrix,
-        @Nullable Output<Boolean> failFast,
-        @Nullable Output<Integer> flakyTestAttempts,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<ResultStorageArgs> resultStorage,
-        Output<TestSpecificationArgs> testSpecification) {
-        this.clientInfo = clientInfo;
-        this.environmentMatrix = Objects.requireNonNull(environmentMatrix, "expected parameter 'environmentMatrix' to be non-null");
-        this.failFast = failFast;
-        this.flakyTestAttempts = flakyTestAttempts;
-        this.project = project;
-        this.requestId = requestId;
-        this.resultStorage = Objects.requireNonNull(resultStorage, "expected parameter 'resultStorage' to be non-null");
-        this.testSpecification = Objects.requireNonNull(testSpecification, "expected parameter 'testSpecification' to be non-null");
-    }
+    private TestMatrixArgs() {}
 
-    private TestMatrixArgs() {
-        this.clientInfo = Codegen.empty();
-        this.environmentMatrix = Codegen.empty();
-        this.failFast = Codegen.empty();
-        this.flakyTestAttempts = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.resultStorage = Codegen.empty();
-        this.testSpecification = Codegen.empty();
+    private TestMatrixArgs(TestMatrixArgs $) {
+        this.clientInfo = $.clientInfo;
+        this.environmentMatrix = $.environmentMatrix;
+        this.failFast = $.failFast;
+        this.flakyTestAttempts = $.flakyTestAttempts;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.resultStorage = $.resultStorage;
+        this.testSpecification = $.testSpecification;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestMatrixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ClientInfoArgs> clientInfo;
-        private Output<EnvironmentMatrixArgs> environmentMatrix;
-        private @Nullable Output<Boolean> failFast;
-        private @Nullable Output<Integer> flakyTestAttempts;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<ResultStorageArgs> resultStorage;
-        private Output<TestSpecificationArgs> testSpecification;
+        private TestMatrixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestMatrixArgs();
         }
 
         public Builder(TestMatrixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientInfo = defaults.clientInfo;
-    	      this.environmentMatrix = defaults.environmentMatrix;
-    	      this.failFast = defaults.failFast;
-    	      this.flakyTestAttempts = defaults.flakyTestAttempts;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.resultStorage = defaults.resultStorage;
-    	      this.testSpecification = defaults.testSpecification;
+            $ = new TestMatrixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientInfo(@Nullable Output<ClientInfoArgs> clientInfo) {
-            this.clientInfo = clientInfo;
+            $.clientInfo = clientInfo;
             return this;
         }
-        public Builder clientInfo(@Nullable ClientInfoArgs clientInfo) {
-            this.clientInfo = Codegen.ofNullable(clientInfo);
-            return this;
+
+        public Builder clientInfo(ClientInfoArgs clientInfo) {
+            return clientInfo(Output.of(clientInfo));
         }
+
         public Builder environmentMatrix(Output<EnvironmentMatrixArgs> environmentMatrix) {
-            this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
+            $.environmentMatrix = environmentMatrix;
             return this;
         }
+
         public Builder environmentMatrix(EnvironmentMatrixArgs environmentMatrix) {
-            this.environmentMatrix = Output.of(Objects.requireNonNull(environmentMatrix));
-            return this;
+            return environmentMatrix(Output.of(environmentMatrix));
         }
+
         public Builder failFast(@Nullable Output<Boolean> failFast) {
-            this.failFast = failFast;
+            $.failFast = failFast;
             return this;
         }
-        public Builder failFast(@Nullable Boolean failFast) {
-            this.failFast = Codegen.ofNullable(failFast);
-            return this;
+
+        public Builder failFast(Boolean failFast) {
+            return failFast(Output.of(failFast));
         }
+
         public Builder flakyTestAttempts(@Nullable Output<Integer> flakyTestAttempts) {
-            this.flakyTestAttempts = flakyTestAttempts;
+            $.flakyTestAttempts = flakyTestAttempts;
             return this;
         }
-        public Builder flakyTestAttempts(@Nullable Integer flakyTestAttempts) {
-            this.flakyTestAttempts = Codegen.ofNullable(flakyTestAttempts);
-            return this;
+
+        public Builder flakyTestAttempts(Integer flakyTestAttempts) {
+            return flakyTestAttempts(Output.of(flakyTestAttempts));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder resultStorage(Output<ResultStorageArgs> resultStorage) {
-            this.resultStorage = Objects.requireNonNull(resultStorage);
+            $.resultStorage = resultStorage;
             return this;
         }
+
         public Builder resultStorage(ResultStorageArgs resultStorage) {
-            this.resultStorage = Output.of(Objects.requireNonNull(resultStorage));
-            return this;
+            return resultStorage(Output.of(resultStorage));
         }
+
         public Builder testSpecification(Output<TestSpecificationArgs> testSpecification) {
-            this.testSpecification = Objects.requireNonNull(testSpecification);
+            $.testSpecification = testSpecification;
             return this;
         }
+
         public Builder testSpecification(TestSpecificationArgs testSpecification) {
-            this.testSpecification = Output.of(Objects.requireNonNull(testSpecification));
-            return this;
-        }        public TestMatrixArgs build() {
-            return new TestMatrixArgs(clientInfo, environmentMatrix, failFast, flakyTestAttempts, project, requestId, resultStorage, testSpecification);
+            return testSpecification(Output.of(testSpecification));
+        }
+
+        public TestMatrixArgs build() {
+            $.environmentMatrix = Objects.requireNonNull($.environmentMatrix, "expected parameter 'environmentMatrix' to be non-null");
+            $.resultStorage = Objects.requireNonNull($.resultStorage, "expected parameter 'resultStorage' to be non-null");
+            $.testSpecification = Objects.requireNonNull($.testSpecification, "expected parameter 'testSpecification' to be non-null");
+            return $;
         }
     }
+
 }

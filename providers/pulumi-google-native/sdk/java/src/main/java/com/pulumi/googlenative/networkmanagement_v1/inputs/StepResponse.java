@@ -37,7 +37,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="abort", required=true)
-      private final AbortInfoResponse abort;
+    private AbortInfoResponse abort;
 
     public AbortInfoResponse abort() {
         return this.abort;
@@ -48,7 +48,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="causesDrop", required=true)
-      private final Boolean causesDrop;
+    private Boolean causesDrop;
 
     public Boolean causesDrop() {
         return this.causesDrop;
@@ -59,7 +59,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudSqlInstance", required=true)
-      private final CloudSQLInstanceInfoResponse cloudSqlInstance;
+    private CloudSQLInstanceInfoResponse cloudSqlInstance;
 
     public CloudSQLInstanceInfoResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
@@ -70,7 +70,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="deliver", required=true)
-      private final DeliverInfoResponse deliver;
+    private DeliverInfoResponse deliver;
 
     public DeliverInfoResponse deliver() {
         return this.deliver;
@@ -81,7 +81,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -92,7 +92,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="drop", required=true)
-      private final DropInfoResponse drop;
+    private DropInfoResponse drop;
 
     public DropInfoResponse drop() {
         return this.drop;
@@ -103,7 +103,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpoint", required=true)
-      private final EndpointInfoResponse endpoint;
+    private EndpointInfoResponse endpoint;
 
     public EndpointInfoResponse endpoint() {
         return this.endpoint;
@@ -114,7 +114,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="firewall", required=true)
-      private final FirewallInfoResponse firewall;
+    private FirewallInfoResponse firewall;
 
     public FirewallInfoResponse firewall() {
         return this.firewall;
@@ -125,7 +125,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="forward", required=true)
-      private final ForwardInfoResponse forward;
+    private ForwardInfoResponse forward;
 
     public ForwardInfoResponse forward() {
         return this.forward;
@@ -136,7 +136,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="forwardingRule", required=true)
-      private final ForwardingRuleInfoResponse forwardingRule;
+    private ForwardingRuleInfoResponse forwardingRule;
 
     public ForwardingRuleInfoResponse forwardingRule() {
         return this.forwardingRule;
@@ -147,7 +147,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gkeMaster", required=true)
-      private final GKEMasterInfoResponse gkeMaster;
+    private GKEMasterInfoResponse gkeMaster;
 
     public GKEMasterInfoResponse gkeMaster() {
         return this.gkeMaster;
@@ -158,7 +158,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final InstanceInfoResponse instance;
+    private InstanceInfoResponse instance;
 
     public InstanceInfoResponse instance() {
         return this.instance;
@@ -169,7 +169,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loadBalancer", required=true)
-      private final LoadBalancerInfoResponse loadBalancer;
+    private LoadBalancerInfoResponse loadBalancer;
 
     public LoadBalancerInfoResponse loadBalancer() {
         return this.loadBalancer;
@@ -180,7 +180,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final NetworkInfoResponse network;
+    private NetworkInfoResponse network;
 
     public NetworkInfoResponse network() {
         return this.network;
@@ -191,7 +191,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -202,7 +202,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="route", required=true)
-      private final RouteInfoResponse route;
+    private RouteInfoResponse route;
 
     public RouteInfoResponse route() {
         return this.route;
@@ -213,7 +213,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -224,7 +224,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpnGateway", required=true)
-      private final VpnGatewayInfoResponse vpnGateway;
+    private VpnGatewayInfoResponse vpnGateway;
 
     public VpnGatewayInfoResponse vpnGateway() {
         return this.vpnGateway;
@@ -235,208 +235,171 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="vpnTunnel", required=true)
-      private final VpnTunnelInfoResponse vpnTunnel;
+    private VpnTunnelInfoResponse vpnTunnel;
 
     public VpnTunnelInfoResponse vpnTunnel() {
         return this.vpnTunnel;
     }
 
-    public StepResponse(
-        AbortInfoResponse abort,
-        Boolean causesDrop,
-        CloudSQLInstanceInfoResponse cloudSqlInstance,
-        DeliverInfoResponse deliver,
-        String description,
-        DropInfoResponse drop,
-        EndpointInfoResponse endpoint,
-        FirewallInfoResponse firewall,
-        ForwardInfoResponse forward,
-        ForwardingRuleInfoResponse forwardingRule,
-        GKEMasterInfoResponse gkeMaster,
-        InstanceInfoResponse instance,
-        LoadBalancerInfoResponse loadBalancer,
-        NetworkInfoResponse network,
-        String project,
-        RouteInfoResponse route,
-        String state,
-        VpnGatewayInfoResponse vpnGateway,
-        VpnTunnelInfoResponse vpnTunnel) {
-        this.abort = Objects.requireNonNull(abort, "expected parameter 'abort' to be non-null");
-        this.causesDrop = Objects.requireNonNull(causesDrop, "expected parameter 'causesDrop' to be non-null");
-        this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance, "expected parameter 'cloudSqlInstance' to be non-null");
-        this.deliver = Objects.requireNonNull(deliver, "expected parameter 'deliver' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.drop = Objects.requireNonNull(drop, "expected parameter 'drop' to be non-null");
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.firewall = Objects.requireNonNull(firewall, "expected parameter 'firewall' to be non-null");
-        this.forward = Objects.requireNonNull(forward, "expected parameter 'forward' to be non-null");
-        this.forwardingRule = Objects.requireNonNull(forwardingRule, "expected parameter 'forwardingRule' to be non-null");
-        this.gkeMaster = Objects.requireNonNull(gkeMaster, "expected parameter 'gkeMaster' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.loadBalancer = Objects.requireNonNull(loadBalancer, "expected parameter 'loadBalancer' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.route = Objects.requireNonNull(route, "expected parameter 'route' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.vpnGateway = Objects.requireNonNull(vpnGateway, "expected parameter 'vpnGateway' to be non-null");
-        this.vpnTunnel = Objects.requireNonNull(vpnTunnel, "expected parameter 'vpnTunnel' to be non-null");
-    }
+    private StepResponse() {}
 
-    private StepResponse() {
-        this.abort = null;
-        this.causesDrop = null;
-        this.cloudSqlInstance = null;
-        this.deliver = null;
-        this.description = null;
-        this.drop = null;
-        this.endpoint = null;
-        this.firewall = null;
-        this.forward = null;
-        this.forwardingRule = null;
-        this.gkeMaster = null;
-        this.instance = null;
-        this.loadBalancer = null;
-        this.network = null;
-        this.project = null;
-        this.route = null;
-        this.state = null;
-        this.vpnGateway = null;
-        this.vpnTunnel = null;
+    private StepResponse(StepResponse $) {
+        this.abort = $.abort;
+        this.causesDrop = $.causesDrop;
+        this.cloudSqlInstance = $.cloudSqlInstance;
+        this.deliver = $.deliver;
+        this.description = $.description;
+        this.drop = $.drop;
+        this.endpoint = $.endpoint;
+        this.firewall = $.firewall;
+        this.forward = $.forward;
+        this.forwardingRule = $.forwardingRule;
+        this.gkeMaster = $.gkeMaster;
+        this.instance = $.instance;
+        this.loadBalancer = $.loadBalancer;
+        this.network = $.network;
+        this.project = $.project;
+        this.route = $.route;
+        this.state = $.state;
+        this.vpnGateway = $.vpnGateway;
+        this.vpnTunnel = $.vpnTunnel;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AbortInfoResponse abort;
-        private Boolean causesDrop;
-        private CloudSQLInstanceInfoResponse cloudSqlInstance;
-        private DeliverInfoResponse deliver;
-        private String description;
-        private DropInfoResponse drop;
-        private EndpointInfoResponse endpoint;
-        private FirewallInfoResponse firewall;
-        private ForwardInfoResponse forward;
-        private ForwardingRuleInfoResponse forwardingRule;
-        private GKEMasterInfoResponse gkeMaster;
-        private InstanceInfoResponse instance;
-        private LoadBalancerInfoResponse loadBalancer;
-        private NetworkInfoResponse network;
-        private String project;
-        private RouteInfoResponse route;
-        private String state;
-        private VpnGatewayInfoResponse vpnGateway;
-        private VpnTunnelInfoResponse vpnTunnel;
+        private StepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepResponse();
         }
 
         public Builder(StepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.abort = defaults.abort;
-    	      this.causesDrop = defaults.causesDrop;
-    	      this.cloudSqlInstance = defaults.cloudSqlInstance;
-    	      this.deliver = defaults.deliver;
-    	      this.description = defaults.description;
-    	      this.drop = defaults.drop;
-    	      this.endpoint = defaults.endpoint;
-    	      this.firewall = defaults.firewall;
-    	      this.forward = defaults.forward;
-    	      this.forwardingRule = defaults.forwardingRule;
-    	      this.gkeMaster = defaults.gkeMaster;
-    	      this.instance = defaults.instance;
-    	      this.loadBalancer = defaults.loadBalancer;
-    	      this.network = defaults.network;
-    	      this.project = defaults.project;
-    	      this.route = defaults.route;
-    	      this.state = defaults.state;
-    	      this.vpnGateway = defaults.vpnGateway;
-    	      this.vpnTunnel = defaults.vpnTunnel;
+            $ = new StepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder abort(AbortInfoResponse abort) {
-            this.abort = Objects.requireNonNull(abort);
+            $.abort = abort;
             return this;
         }
+
         public Builder causesDrop(Boolean causesDrop) {
-            this.causesDrop = Objects.requireNonNull(causesDrop);
+            $.causesDrop = causesDrop;
             return this;
         }
+
         public Builder cloudSqlInstance(CloudSQLInstanceInfoResponse cloudSqlInstance) {
-            this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
+            $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
+
         public Builder deliver(DeliverInfoResponse deliver) {
-            this.deliver = Objects.requireNonNull(deliver);
+            $.deliver = deliver;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder drop(DropInfoResponse drop) {
-            this.drop = Objects.requireNonNull(drop);
+            $.drop = drop;
             return this;
         }
+
         public Builder endpoint(EndpointInfoResponse endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder firewall(FirewallInfoResponse firewall) {
-            this.firewall = Objects.requireNonNull(firewall);
+            $.firewall = firewall;
             return this;
         }
+
         public Builder forward(ForwardInfoResponse forward) {
-            this.forward = Objects.requireNonNull(forward);
+            $.forward = forward;
             return this;
         }
+
         public Builder forwardingRule(ForwardingRuleInfoResponse forwardingRule) {
-            this.forwardingRule = Objects.requireNonNull(forwardingRule);
+            $.forwardingRule = forwardingRule;
             return this;
         }
+
         public Builder gkeMaster(GKEMasterInfoResponse gkeMaster) {
-            this.gkeMaster = Objects.requireNonNull(gkeMaster);
+            $.gkeMaster = gkeMaster;
             return this;
         }
+
         public Builder instance(InstanceInfoResponse instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder loadBalancer(LoadBalancerInfoResponse loadBalancer) {
-            this.loadBalancer = Objects.requireNonNull(loadBalancer);
+            $.loadBalancer = loadBalancer;
             return this;
         }
+
         public Builder network(NetworkInfoResponse network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder route(RouteInfoResponse route) {
-            this.route = Objects.requireNonNull(route);
+            $.route = route;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder vpnGateway(VpnGatewayInfoResponse vpnGateway) {
-            this.vpnGateway = Objects.requireNonNull(vpnGateway);
+            $.vpnGateway = vpnGateway;
             return this;
         }
+
         public Builder vpnTunnel(VpnTunnelInfoResponse vpnTunnel) {
-            this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
+            $.vpnTunnel = vpnTunnel;
             return this;
-        }        public StepResponse build() {
-            return new StepResponse(abort, causesDrop, cloudSqlInstance, deliver, description, drop, endpoint, firewall, forward, forwardingRule, gkeMaster, instance, loadBalancer, network, project, route, state, vpnGateway, vpnTunnel);
+        }
+
+        public StepResponse build() {
+            $.abort = Objects.requireNonNull($.abort, "expected parameter 'abort' to be non-null");
+            $.causesDrop = Objects.requireNonNull($.causesDrop, "expected parameter 'causesDrop' to be non-null");
+            $.cloudSqlInstance = Objects.requireNonNull($.cloudSqlInstance, "expected parameter 'cloudSqlInstance' to be non-null");
+            $.deliver = Objects.requireNonNull($.deliver, "expected parameter 'deliver' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.drop = Objects.requireNonNull($.drop, "expected parameter 'drop' to be non-null");
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.firewall = Objects.requireNonNull($.firewall, "expected parameter 'firewall' to be non-null");
+            $.forward = Objects.requireNonNull($.forward, "expected parameter 'forward' to be non-null");
+            $.forwardingRule = Objects.requireNonNull($.forwardingRule, "expected parameter 'forwardingRule' to be non-null");
+            $.gkeMaster = Objects.requireNonNull($.gkeMaster, "expected parameter 'gkeMaster' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.loadBalancer = Objects.requireNonNull($.loadBalancer, "expected parameter 'loadBalancer' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.route = Objects.requireNonNull($.route, "expected parameter 'route' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.vpnGateway = Objects.requireNonNull($.vpnGateway, "expected parameter 'vpnGateway' to be non-null");
+            $.vpnTunnel = Objects.requireNonNull($.vpnTunnel, "expected parameter 'vpnTunnel' to be non-null");
+            return $;
         }
     }
+
 }

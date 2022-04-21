@@ -5,13 +5,13 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.CloudRepoSourceContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.GerritSourceContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.GitSourceContextArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudRepo")
-      private final @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
+    private @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
 
-    public Output<CloudRepoSourceContextArgs> cloudRepo() {
-        return this.cloudRepo == null ? Codegen.empty() : this.cloudRepo;
+    public Optional<Output<CloudRepoSourceContextArgs>> cloudRepo() {
+        return Optional.ofNullable(this.cloudRepo);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gerrit")
-      private final @Nullable Output<GerritSourceContextArgs> gerrit;
+    private @Nullable Output<GerritSourceContextArgs> gerrit;
 
-    public Output<GerritSourceContextArgs> gerrit() {
-        return this.gerrit == null ? Codegen.empty() : this.gerrit;
+    public Optional<Output<GerritSourceContextArgs>> gerrit() {
+        return Optional.ofNullable(this.gerrit);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="git")
-      private final @Nullable Output<GitSourceContextArgs> git;
+    private @Nullable Output<GitSourceContextArgs> git;
 
-    public Output<GitSourceContextArgs> git() {
-        return this.git == null ? Codegen.empty() : this.git;
+    public Optional<Output<GitSourceContextArgs>> git() {
+        return Optional.ofNullable(this.git);
     }
 
     /**
@@ -61,89 +61,78 @@ public final class SourceContextArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
-    public SourceContextArgs(
-        @Nullable Output<CloudRepoSourceContextArgs> cloudRepo,
-        @Nullable Output<GerritSourceContextArgs> gerrit,
-        @Nullable Output<GitSourceContextArgs> git,
-        @Nullable Output<Map<String,String>> labels) {
-        this.cloudRepo = cloudRepo;
-        this.gerrit = gerrit;
-        this.git = git;
-        this.labels = labels;
-    }
+    private SourceContextArgs() {}
 
-    private SourceContextArgs() {
-        this.cloudRepo = Codegen.empty();
-        this.gerrit = Codegen.empty();
-        this.git = Codegen.empty();
-        this.labels = Codegen.empty();
+    private SourceContextArgs(SourceContextArgs $) {
+        this.cloudRepo = $.cloudRepo;
+        this.gerrit = $.gerrit;
+        this.git = $.git;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CloudRepoSourceContextArgs> cloudRepo;
-        private @Nullable Output<GerritSourceContextArgs> gerrit;
-        private @Nullable Output<GitSourceContextArgs> git;
-        private @Nullable Output<Map<String,String>> labels;
+        private SourceContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceContextArgs();
         }
 
         public Builder(SourceContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudRepo = defaults.cloudRepo;
-    	      this.gerrit = defaults.gerrit;
-    	      this.git = defaults.git;
-    	      this.labels = defaults.labels;
+            $ = new SourceContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudRepo(@Nullable Output<CloudRepoSourceContextArgs> cloudRepo) {
-            this.cloudRepo = cloudRepo;
+            $.cloudRepo = cloudRepo;
             return this;
         }
-        public Builder cloudRepo(@Nullable CloudRepoSourceContextArgs cloudRepo) {
-            this.cloudRepo = Codegen.ofNullable(cloudRepo);
-            return this;
+
+        public Builder cloudRepo(CloudRepoSourceContextArgs cloudRepo) {
+            return cloudRepo(Output.of(cloudRepo));
         }
+
         public Builder gerrit(@Nullable Output<GerritSourceContextArgs> gerrit) {
-            this.gerrit = gerrit;
+            $.gerrit = gerrit;
             return this;
         }
-        public Builder gerrit(@Nullable GerritSourceContextArgs gerrit) {
-            this.gerrit = Codegen.ofNullable(gerrit);
-            return this;
+
+        public Builder gerrit(GerritSourceContextArgs gerrit) {
+            return gerrit(Output.of(gerrit));
         }
+
         public Builder git(@Nullable Output<GitSourceContextArgs> git) {
-            this.git = git;
+            $.git = git;
             return this;
         }
-        public Builder git(@Nullable GitSourceContextArgs git) {
-            this.git = Codegen.ofNullable(git);
-            return this;
+
+        public Builder git(GitSourceContextArgs git) {
+            return git(Output.of(git));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
-        }        public SourceContextArgs build() {
-            return new SourceContextArgs(cloudRepo, gerrit, git, labels);
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
+        }
+
+        public SourceContextArgs build() {
+            return $;
         }
     }
+
 }

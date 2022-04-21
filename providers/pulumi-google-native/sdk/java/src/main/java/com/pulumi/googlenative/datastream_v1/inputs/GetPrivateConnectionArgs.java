@@ -15,78 +15,72 @@ public final class GetPrivateConnectionArgs extends com.pulumi.resources.InvokeA
     public static final GetPrivateConnectionArgs Empty = new GetPrivateConnectionArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="privateConnectionId", required=true)
-      private final String privateConnectionId;
+    private String privateConnectionId;
 
     public String privateConnectionId() {
         return this.privateConnectionId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPrivateConnectionArgs(
-        String location,
-        String privateConnectionId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.privateConnectionId = Objects.requireNonNull(privateConnectionId, "expected parameter 'privateConnectionId' to be non-null");
-        this.project = project;
-    }
+    private GetPrivateConnectionArgs() {}
 
-    private GetPrivateConnectionArgs() {
-        this.location = null;
-        this.privateConnectionId = null;
-        this.project = null;
+    private GetPrivateConnectionArgs(GetPrivateConnectionArgs $) {
+        this.location = $.location;
+        this.privateConnectionId = $.privateConnectionId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPrivateConnectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String privateConnectionId;
-        private @Nullable String project;
+        private GetPrivateConnectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPrivateConnectionArgs();
         }
 
         public Builder(GetPrivateConnectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.privateConnectionId = defaults.privateConnectionId;
-    	      this.project = defaults.project;
+            $ = new GetPrivateConnectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder privateConnectionId(String privateConnectionId) {
-            this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
+            $.privateConnectionId = privateConnectionId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPrivateConnectionArgs build() {
-            return new GetPrivateConnectionArgs(location, privateConnectionId, project);
+        }
+
+        public GetPrivateConnectionArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.privateConnectionId = Objects.requireNonNull($.privateConnectionId, "expected parameter 'privateConnectionId' to be non-null");
+            return $;
         }
     }
+
 }

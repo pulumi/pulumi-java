@@ -23,7 +23,7 @@ public final class TemplateParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -34,7 +34,7 @@ public final class TemplateParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fields", required=true)
-      private final List<String> fields;
+    private List<String> fields;
 
     public List<String> fields() {
         return this.fields;
@@ -45,7 +45,7 @@ public final class TemplateParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,76 +56,70 @@ public final class TemplateParameterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="validation", required=true)
-      private final ParameterValidationResponse validation;
+    private ParameterValidationResponse validation;
 
     public ParameterValidationResponse validation() {
         return this.validation;
     }
 
-    public TemplateParameterResponse(
-        String description,
-        List<String> fields,
-        String name,
-        ParameterValidationResponse validation) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.fields = Objects.requireNonNull(fields, "expected parameter 'fields' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.validation = Objects.requireNonNull(validation, "expected parameter 'validation' to be non-null");
-    }
+    private TemplateParameterResponse() {}
 
-    private TemplateParameterResponse() {
-        this.description = null;
-        this.fields = List.of();
-        this.name = null;
-        this.validation = null;
+    private TemplateParameterResponse(TemplateParameterResponse $) {
+        this.description = $.description;
+        this.fields = $.fields;
+        this.name = $.name;
+        this.validation = $.validation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TemplateParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private List<String> fields;
-        private String name;
-        private ParameterValidationResponse validation;
+        private TemplateParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TemplateParameterResponse();
         }
 
         public Builder(TemplateParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.fields = defaults.fields;
-    	      this.name = defaults.name;
-    	      this.validation = defaults.validation;
+            $ = new TemplateParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder fields(List<String> fields) {
-            this.fields = Objects.requireNonNull(fields);
+            $.fields = fields;
             return this;
         }
+
         public Builder fields(String... fields) {
             return fields(List.of(fields));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder validation(ParameterValidationResponse validation) {
-            this.validation = Objects.requireNonNull(validation);
+            $.validation = validation;
             return this;
-        }        public TemplateParameterResponse build() {
-            return new TemplateParameterResponse(description, fields, name, validation);
+        }
+
+        public TemplateParameterResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.fields = Objects.requireNonNull($.fields, "expected parameter 'fields' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.validation = Objects.requireNonNull($.validation, "expected parameter 'validation' to be non-null");
+            return $;
         }
     }
+
 }

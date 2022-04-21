@@ -15,110 +15,100 @@ public final class GetFeedbackMessageArgs extends com.pulumi.resources.InvokeArg
     public static final GetFeedbackMessageArgs Empty = new GetFeedbackMessageArgs();
 
     @Import(name="annotatedDatasetId", required=true)
-      private final String annotatedDatasetId;
+    private String annotatedDatasetId;
 
     public String annotatedDatasetId() {
         return this.annotatedDatasetId;
     }
 
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
     }
 
     @Import(name="feedbackMessageId", required=true)
-      private final String feedbackMessageId;
+    private String feedbackMessageId;
 
     public String feedbackMessageId() {
         return this.feedbackMessageId;
     }
 
     @Import(name="feedbackThreadId", required=true)
-      private final String feedbackThreadId;
+    private String feedbackThreadId;
 
     public String feedbackThreadId() {
         return this.feedbackThreadId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetFeedbackMessageArgs(
-        String annotatedDatasetId,
-        String datasetId,
-        String feedbackMessageId,
-        String feedbackThreadId,
-        @Nullable String project) {
-        this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId, "expected parameter 'annotatedDatasetId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.feedbackMessageId = Objects.requireNonNull(feedbackMessageId, "expected parameter 'feedbackMessageId' to be non-null");
-        this.feedbackThreadId = Objects.requireNonNull(feedbackThreadId, "expected parameter 'feedbackThreadId' to be non-null");
-        this.project = project;
-    }
+    private GetFeedbackMessageArgs() {}
 
-    private GetFeedbackMessageArgs() {
-        this.annotatedDatasetId = null;
-        this.datasetId = null;
-        this.feedbackMessageId = null;
-        this.feedbackThreadId = null;
-        this.project = null;
+    private GetFeedbackMessageArgs(GetFeedbackMessageArgs $) {
+        this.annotatedDatasetId = $.annotatedDatasetId;
+        this.datasetId = $.datasetId;
+        this.feedbackMessageId = $.feedbackMessageId;
+        this.feedbackThreadId = $.feedbackThreadId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFeedbackMessageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotatedDatasetId;
-        private String datasetId;
-        private String feedbackMessageId;
-        private String feedbackThreadId;
-        private @Nullable String project;
+        private GetFeedbackMessageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFeedbackMessageArgs();
         }
 
         public Builder(GetFeedbackMessageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotatedDatasetId = defaults.annotatedDatasetId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.feedbackMessageId = defaults.feedbackMessageId;
-    	      this.feedbackThreadId = defaults.feedbackThreadId;
-    	      this.project = defaults.project;
+            $ = new GetFeedbackMessageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotatedDatasetId(String annotatedDatasetId) {
-            this.annotatedDatasetId = Objects.requireNonNull(annotatedDatasetId);
+            $.annotatedDatasetId = annotatedDatasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder feedbackMessageId(String feedbackMessageId) {
-            this.feedbackMessageId = Objects.requireNonNull(feedbackMessageId);
+            $.feedbackMessageId = feedbackMessageId;
             return this;
         }
+
         public Builder feedbackThreadId(String feedbackThreadId) {
-            this.feedbackThreadId = Objects.requireNonNull(feedbackThreadId);
+            $.feedbackThreadId = feedbackThreadId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetFeedbackMessageArgs build() {
-            return new GetFeedbackMessageArgs(annotatedDatasetId, datasetId, feedbackMessageId, feedbackThreadId, project);
+        }
+
+        public GetFeedbackMessageArgs build() {
+            $.annotatedDatasetId = Objects.requireNonNull($.annotatedDatasetId, "expected parameter 'annotatedDatasetId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.feedbackMessageId = Objects.requireNonNull($.feedbackMessageId, "expected parameter 'feedbackMessageId' to be non-null");
+            $.feedbackThreadId = Objects.requireNonNull($.feedbackThreadId, "expected parameter 'feedbackThreadId' to be non-null");
+            return $;
         }
     }
+
 }

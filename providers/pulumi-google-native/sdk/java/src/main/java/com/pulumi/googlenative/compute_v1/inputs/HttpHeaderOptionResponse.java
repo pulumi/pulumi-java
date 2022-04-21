@@ -22,7 +22,7 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
@@ -33,7 +33,7 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="headerValue", required=true)
-      private final String headerValue;
+    private String headerValue;
 
     public String headerValue() {
         return this.headerValue;
@@ -44,64 +44,59 @@ public final class HttpHeaderOptionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="replace", required=true)
-      private final Boolean replace;
+    private Boolean replace;
 
     public Boolean replace() {
         return this.replace;
     }
 
-    public HttpHeaderOptionResponse(
-        String headerName,
-        String headerValue,
-        Boolean replace) {
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.headerValue = Objects.requireNonNull(headerValue, "expected parameter 'headerValue' to be non-null");
-        this.replace = Objects.requireNonNull(replace, "expected parameter 'replace' to be non-null");
-    }
+    private HttpHeaderOptionResponse() {}
 
-    private HttpHeaderOptionResponse() {
-        this.headerName = null;
-        this.headerValue = null;
-        this.replace = null;
+    private HttpHeaderOptionResponse(HttpHeaderOptionResponse $) {
+        this.headerName = $.headerName;
+        this.headerValue = $.headerValue;
+        this.replace = $.replace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpHeaderOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String headerName;
-        private String headerValue;
-        private Boolean replace;
+        private HttpHeaderOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpHeaderOptionResponse();
         }
 
         public Builder(HttpHeaderOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.headerName = defaults.headerName;
-    	      this.headerValue = defaults.headerValue;
-    	      this.replace = defaults.replace;
+            $ = new HttpHeaderOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder headerValue(String headerValue) {
-            this.headerValue = Objects.requireNonNull(headerValue);
+            $.headerValue = headerValue;
             return this;
         }
+
         public Builder replace(Boolean replace) {
-            this.replace = Objects.requireNonNull(replace);
+            $.replace = replace;
             return this;
-        }        public HttpHeaderOptionResponse build() {
-            return new HttpHeaderOptionResponse(headerName, headerValue, replace);
+        }
+
+        public HttpHeaderOptionResponse build() {
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.headerValue = Objects.requireNonNull($.headerValue, "expected parameter 'headerValue' to be non-null");
+            $.replace = Objects.requireNonNull($.replace, "expected parameter 'replace' to be non-null");
+            return $;
         }
     }
+
 }

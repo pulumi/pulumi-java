@@ -22,7 +22,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends com.pu
      * 
      */
     @Import(name="connectionPersistenceOnUnhealthyBackends", required=true)
-      private final String connectionPersistenceOnUnhealthyBackends;
+    private String connectionPersistenceOnUnhealthyBackends;
 
     public String connectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends;
@@ -33,7 +33,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends com.pu
      * 
      */
     @Import(name="idleTimeoutSec", required=true)
-      private final Integer idleTimeoutSec;
+    private Integer idleTimeoutSec;
 
     public Integer idleTimeoutSec() {
         return this.idleTimeoutSec;
@@ -44,64 +44,59 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends com.pu
      * 
      */
     @Import(name="trackingMode", required=true)
-      private final String trackingMode;
+    private String trackingMode;
 
     public String trackingMode() {
         return this.trackingMode;
     }
 
-    public BackendServiceConnectionTrackingPolicyResponse(
-        String connectionPersistenceOnUnhealthyBackends,
-        Integer idleTimeoutSec,
-        String trackingMode) {
-        this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends, "expected parameter 'connectionPersistenceOnUnhealthyBackends' to be non-null");
-        this.idleTimeoutSec = Objects.requireNonNull(idleTimeoutSec, "expected parameter 'idleTimeoutSec' to be non-null");
-        this.trackingMode = Objects.requireNonNull(trackingMode, "expected parameter 'trackingMode' to be non-null");
-    }
+    private BackendServiceConnectionTrackingPolicyResponse() {}
 
-    private BackendServiceConnectionTrackingPolicyResponse() {
-        this.connectionPersistenceOnUnhealthyBackends = null;
-        this.idleTimeoutSec = null;
-        this.trackingMode = null;
+    private BackendServiceConnectionTrackingPolicyResponse(BackendServiceConnectionTrackingPolicyResponse $) {
+        this.connectionPersistenceOnUnhealthyBackends = $.connectionPersistenceOnUnhealthyBackends;
+        this.idleTimeoutSec = $.idleTimeoutSec;
+        this.trackingMode = $.trackingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendServiceConnectionTrackingPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connectionPersistenceOnUnhealthyBackends;
-        private Integer idleTimeoutSec;
-        private String trackingMode;
+        private BackendServiceConnectionTrackingPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendServiceConnectionTrackingPolicyResponse();
         }
 
         public Builder(BackendServiceConnectionTrackingPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionPersistenceOnUnhealthyBackends = defaults.connectionPersistenceOnUnhealthyBackends;
-    	      this.idleTimeoutSec = defaults.idleTimeoutSec;
-    	      this.trackingMode = defaults.trackingMode;
+            $ = new BackendServiceConnectionTrackingPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionPersistenceOnUnhealthyBackends(String connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull(connectionPersistenceOnUnhealthyBackends);
+            $.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
+
         public Builder idleTimeoutSec(Integer idleTimeoutSec) {
-            this.idleTimeoutSec = Objects.requireNonNull(idleTimeoutSec);
+            $.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
+
         public Builder trackingMode(String trackingMode) {
-            this.trackingMode = Objects.requireNonNull(trackingMode);
+            $.trackingMode = trackingMode;
             return this;
-        }        public BackendServiceConnectionTrackingPolicyResponse build() {
-            return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
+        }
+
+        public BackendServiceConnectionTrackingPolicyResponse build() {
+            $.connectionPersistenceOnUnhealthyBackends = Objects.requireNonNull($.connectionPersistenceOnUnhealthyBackends, "expected parameter 'connectionPersistenceOnUnhealthyBackends' to be non-null");
+            $.idleTimeoutSec = Objects.requireNonNull($.idleTimeoutSec, "expected parameter 'idleTimeoutSec' to be non-null");
+            $.trackingMode = Objects.requireNonNull($.trackingMode, "expected parameter 'trackingMode' to be non-null");
+            return $;
         }
     }
+
 }

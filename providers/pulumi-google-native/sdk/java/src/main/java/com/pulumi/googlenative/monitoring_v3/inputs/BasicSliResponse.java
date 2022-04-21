@@ -24,7 +24,7 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="availability", required=true)
-      private final AvailabilityCriteriaResponse availability;
+    private AvailabilityCriteriaResponse availability;
 
     public AvailabilityCriteriaResponse availability() {
         return this.availability;
@@ -35,7 +35,7 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="latency", required=true)
-      private final LatencyCriteriaResponse latency;
+    private LatencyCriteriaResponse latency;
 
     public LatencyCriteriaResponse latency() {
         return this.latency;
@@ -46,7 +46,7 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final List<String> location;
+    private List<String> location;
 
     public List<String> location() {
         return this.location;
@@ -57,7 +57,7 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="method", required=true)
-      private final List<String> method;
+    private List<String> method;
 
     public List<String> method() {
         return this.method;
@@ -68,91 +68,85 @@ public final class BasicSliResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final List<String> version;
+    private List<String> version;
 
     public List<String> version() {
         return this.version;
     }
 
-    public BasicSliResponse(
-        AvailabilityCriteriaResponse availability,
-        LatencyCriteriaResponse latency,
-        List<String> location,
-        List<String> method,
-        List<String> version) {
-        this.availability = Objects.requireNonNull(availability, "expected parameter 'availability' to be non-null");
-        this.latency = Objects.requireNonNull(latency, "expected parameter 'latency' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.method = Objects.requireNonNull(method, "expected parameter 'method' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private BasicSliResponse() {}
 
-    private BasicSliResponse() {
-        this.availability = null;
-        this.latency = null;
-        this.location = List.of();
-        this.method = List.of();
-        this.version = List.of();
+    private BasicSliResponse(BasicSliResponse $) {
+        this.availability = $.availability;
+        this.latency = $.latency;
+        this.location = $.location;
+        this.method = $.method;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BasicSliResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AvailabilityCriteriaResponse availability;
-        private LatencyCriteriaResponse latency;
-        private List<String> location;
-        private List<String> method;
-        private List<String> version;
+        private BasicSliResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BasicSliResponse();
         }
 
         public Builder(BasicSliResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availability = defaults.availability;
-    	      this.latency = defaults.latency;
-    	      this.location = defaults.location;
-    	      this.method = defaults.method;
-    	      this.version = defaults.version;
+            $ = new BasicSliResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder availability(AvailabilityCriteriaResponse availability) {
-            this.availability = Objects.requireNonNull(availability);
+            $.availability = availability;
             return this;
         }
+
         public Builder latency(LatencyCriteriaResponse latency) {
-            this.latency = Objects.requireNonNull(latency);
+            $.latency = latency;
             return this;
         }
+
         public Builder location(List<String> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(String... location) {
             return location(List.of(location));
         }
+
         public Builder method(List<String> method) {
-            this.method = Objects.requireNonNull(method);
+            $.method = method;
             return this;
         }
+
         public Builder method(String... method) {
             return method(List.of(method));
         }
+
         public Builder version(List<String> version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
         }
+
         public Builder version(String... version) {
             return version(List.of(version));
-        }        public BasicSliResponse build() {
-            return new BasicSliResponse(availability, latency, location, method, version);
+        }
+
+        public BasicSliResponse build() {
+            $.availability = Objects.requireNonNull($.availability, "expected parameter 'availability' to be non-null");
+            $.latency = Objects.requireNonNull($.latency, "expected parameter 'latency' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.method = Objects.requireNonNull($.method, "expected parameter 'method' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

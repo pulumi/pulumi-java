@@ -5,9 +5,9 @@ package com.pulumi.googlenative.jobs_v4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.jobs_v4.inputs.MoneyArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CompensationRangeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="maxCompensation")
-      private final @Nullable Output<MoneyArgs> maxCompensation;
+    private @Nullable Output<MoneyArgs> maxCompensation;
 
-    public Output<MoneyArgs> maxCompensation() {
-        return this.maxCompensation == null ? Codegen.empty() : this.maxCompensation;
+    public Optional<Output<MoneyArgs>> maxCompensation() {
+        return Optional.ofNullable(this.maxCompensation);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CompensationRangeArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minCompensation")
-      private final @Nullable Output<MoneyArgs> minCompensation;
+    private @Nullable Output<MoneyArgs> minCompensation;
 
-    public Output<MoneyArgs> minCompensation() {
-        return this.minCompensation == null ? Codegen.empty() : this.minCompensation;
+    public Optional<Output<MoneyArgs>> minCompensation() {
+        return Optional.ofNullable(this.minCompensation);
     }
 
-    public CompensationRangeArgs(
-        @Nullable Output<MoneyArgs> maxCompensation,
-        @Nullable Output<MoneyArgs> minCompensation) {
-        this.maxCompensation = maxCompensation;
-        this.minCompensation = minCompensation;
-    }
+    private CompensationRangeArgs() {}
 
-    private CompensationRangeArgs() {
-        this.maxCompensation = Codegen.empty();
-        this.minCompensation = Codegen.empty();
+    private CompensationRangeArgs(CompensationRangeArgs $) {
+        this.maxCompensation = $.maxCompensation;
+        this.minCompensation = $.minCompensation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompensationRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MoneyArgs> maxCompensation;
-        private @Nullable Output<MoneyArgs> minCompensation;
+        private CompensationRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompensationRangeArgs();
         }
 
         public Builder(CompensationRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCompensation = defaults.maxCompensation;
-    	      this.minCompensation = defaults.minCompensation;
+            $ = new CompensationRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCompensation(@Nullable Output<MoneyArgs> maxCompensation) {
-            this.maxCompensation = maxCompensation;
+            $.maxCompensation = maxCompensation;
             return this;
         }
-        public Builder maxCompensation(@Nullable MoneyArgs maxCompensation) {
-            this.maxCompensation = Codegen.ofNullable(maxCompensation);
-            return this;
+
+        public Builder maxCompensation(MoneyArgs maxCompensation) {
+            return maxCompensation(Output.of(maxCompensation));
         }
+
         public Builder minCompensation(@Nullable Output<MoneyArgs> minCompensation) {
-            this.minCompensation = minCompensation;
+            $.minCompensation = minCompensation;
             return this;
         }
-        public Builder minCompensation(@Nullable MoneyArgs minCompensation) {
-            this.minCompensation = Codegen.ofNullable(minCompensation);
-            return this;
-        }        public CompensationRangeArgs build() {
-            return new CompensationRangeArgs(maxCompensation, minCompensation);
+
+        public Builder minCompensation(MoneyArgs minCompensation) {
+            return minCompensation(Output.of(minCompensation));
+        }
+
+        public CompensationRangeArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,110 +15,99 @@ public final class GetDeviceArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
     @Import(name="deviceId", required=true)
-      private final String deviceId;
+    private String deviceId;
 
     public String deviceId() {
         return this.deviceId;
     }
 
     @Import(name="fieldMask")
-      private final @Nullable String fieldMask;
+    private @Nullable String fieldMask;
 
     public Optional<String> fieldMask() {
-        return this.fieldMask == null ? Optional.empty() : Optional.ofNullable(this.fieldMask);
+        return Optional.ofNullable(this.fieldMask);
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="registryId", required=true)
-      private final String registryId;
+    private String registryId;
 
     public String registryId() {
         return this.registryId;
     }
 
-    public GetDeviceArgs(
-        String deviceId,
-        @Nullable String fieldMask,
-        String location,
-        @Nullable String project,
-        String registryId) {
-        this.deviceId = Objects.requireNonNull(deviceId, "expected parameter 'deviceId' to be non-null");
-        this.fieldMask = fieldMask;
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private GetDeviceArgs() {}
 
-    private GetDeviceArgs() {
-        this.deviceId = null;
-        this.fieldMask = null;
-        this.location = null;
-        this.project = null;
-        this.registryId = null;
+    private GetDeviceArgs(GetDeviceArgs $) {
+        this.deviceId = $.deviceId;
+        this.fieldMask = $.fieldMask;
+        this.location = $.location;
+        this.project = $.project;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDeviceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deviceId;
-        private @Nullable String fieldMask;
-        private String location;
-        private @Nullable String project;
-        private String registryId;
+        private GetDeviceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDeviceArgs();
         }
 
         public Builder(GetDeviceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deviceId = defaults.deviceId;
-    	      this.fieldMask = defaults.fieldMask;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.registryId = defaults.registryId;
+            $ = new GetDeviceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deviceId(String deviceId) {
-            this.deviceId = Objects.requireNonNull(deviceId);
+            $.deviceId = deviceId;
             return this;
         }
+
         public Builder fieldMask(@Nullable String fieldMask) {
-            this.fieldMask = fieldMask;
+            $.fieldMask = fieldMask;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder registryId(String registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
-        }        public GetDeviceArgs build() {
-            return new GetDeviceArgs(deviceId, fieldMask, location, project, registryId);
+        }
+
+        public GetDeviceArgs build() {
+            $.deviceId = Objects.requireNonNull($.deviceId, "expected parameter 'deviceId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

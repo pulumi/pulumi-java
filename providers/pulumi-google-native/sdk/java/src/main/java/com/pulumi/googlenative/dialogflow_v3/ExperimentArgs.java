@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.enums.ExperimentState;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentDefinitionArgs;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3Var
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
     @Import(name="agentId", required=true)
-      private final Output<String> agentId;
+    private Output<String> agentId;
 
     public Output<String> agentId() {
         return this.agentId;
@@ -34,10 +34,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="definition")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition;
+    private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition;
 
-    public Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition() {
-        return this.definition == null ? Codegen.empty() : this.definition;
+    public Optional<Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs>> definition() {
+        return Optional.ofNullable(this.definition);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -67,7 +67,7 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -78,14 +78,14 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -96,10 +96,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="experimentLength")
-      private final @Nullable Output<String> experimentLength;
+    private @Nullable Output<String> experimentLength;
 
-    public Output<String> experimentLength() {
-        return this.experimentLength == null ? Codegen.empty() : this.experimentLength;
+    public Optional<Output<String>> experimentLength() {
+        return Optional.ofNullable(this.experimentLength);
     }
 
     /**
@@ -107,17 +107,17 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastUpdateTime")
-      private final @Nullable Output<String> lastUpdateTime;
+    private @Nullable Output<String> lastUpdateTime;
 
-    public Output<String> lastUpdateTime() {
-        return this.lastUpdateTime == null ? Codegen.empty() : this.lastUpdateTime;
+    public Optional<Output<String>> lastUpdateTime() {
+        return Optional.ofNullable(this.lastUpdateTime);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -125,17 +125,17 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="result")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultArgs> result;
+    private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultArgs> result;
 
-    public Output<GoogleCloudDialogflowCxV3ExperimentResultArgs> result() {
-        return this.result == null ? Codegen.empty() : this.result;
+    public Optional<Output<GoogleCloudDialogflowCxV3ExperimentResultArgs>> result() {
+        return Optional.ofNullable(this.result);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rolloutConfig")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig;
+    private @Nullable Output<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig;
 
-    public Output<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig() {
-        return this.rolloutConfig == null ? Codegen.empty() : this.rolloutConfig;
+    public Optional<Output<GoogleCloudDialogflowCxV3RolloutConfigArgs>> rolloutConfig() {
+        return Optional.ofNullable(this.rolloutConfig);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rolloutFailureReason")
-      private final @Nullable Output<String> rolloutFailureReason;
+    private @Nullable Output<String> rolloutFailureReason;
 
-    public Output<String> rolloutFailureReason() {
-        return this.rolloutFailureReason == null ? Codegen.empty() : this.rolloutFailureReason;
+    public Optional<Output<String>> rolloutFailureReason() {
+        return Optional.ofNullable(this.rolloutFailureReason);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rolloutState")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState;
+    private @Nullable Output<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState;
 
-    public Output<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState() {
-        return this.rolloutState == null ? Codegen.empty() : this.rolloutState;
+    public Optional<Output<GoogleCloudDialogflowCxV3RolloutStateArgs>> rolloutState() {
+        return Optional.ofNullable(this.rolloutState);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<ExperimentState> state;
+    private @Nullable Output<ExperimentState> state;
 
-    public Output<ExperimentState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<ExperimentState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     /**
@@ -209,287 +209,235 @@ public final class ExperimentArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="variantsHistory")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory;
 
-    public Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory() {
-        return this.variantsHistory == null ? Codegen.empty() : this.variantsHistory;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>>> variantsHistory() {
+        return Optional.ofNullable(this.variantsHistory);
     }
 
-    public ExperimentArgs(
-        Output<String> agentId,
-        @Nullable Output<String> createTime,
-        @Nullable Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<String> endTime,
-        Output<String> environmentId,
-        @Nullable Output<String> experimentLength,
-        @Nullable Output<String> lastUpdateTime,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultArgs> result,
-        @Nullable Output<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig,
-        @Nullable Output<String> rolloutFailureReason,
-        @Nullable Output<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState,
-        @Nullable Output<String> startTime,
-        @Nullable Output<ExperimentState> state,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory) {
-        this.agentId = Objects.requireNonNull(agentId, "expected parameter 'agentId' to be non-null");
-        this.createTime = createTime;
-        this.definition = definition;
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.endTime = endTime;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.experimentLength = experimentLength;
-        this.lastUpdateTime = lastUpdateTime;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.result = result;
-        this.rolloutConfig = rolloutConfig;
-        this.rolloutFailureReason = rolloutFailureReason;
-        this.rolloutState = rolloutState;
-        this.startTime = startTime;
-        this.state = state;
-        this.variantsHistory = variantsHistory;
-    }
+    private ExperimentArgs() {}
 
-    private ExperimentArgs() {
-        this.agentId = Codegen.empty();
-        this.createTime = Codegen.empty();
-        this.definition = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.experimentLength = Codegen.empty();
-        this.lastUpdateTime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.result = Codegen.empty();
-        this.rolloutConfig = Codegen.empty();
-        this.rolloutFailureReason = Codegen.empty();
-        this.rolloutState = Codegen.empty();
-        this.startTime = Codegen.empty();
-        this.state = Codegen.empty();
-        this.variantsHistory = Codegen.empty();
+    private ExperimentArgs(ExperimentArgs $) {
+        this.agentId = $.agentId;
+        this.createTime = $.createTime;
+        this.definition = $.definition;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.endTime = $.endTime;
+        this.environmentId = $.environmentId;
+        this.experimentLength = $.experimentLength;
+        this.lastUpdateTime = $.lastUpdateTime;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.result = $.result;
+        this.rolloutConfig = $.rolloutConfig;
+        this.rolloutFailureReason = $.rolloutFailureReason;
+        this.rolloutState = $.rolloutState;
+        this.startTime = $.startTime;
+        this.state = $.state;
+        this.variantsHistory = $.variantsHistory;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExperimentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> agentId;
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<String> endTime;
-        private Output<String> environmentId;
-        private @Nullable Output<String> experimentLength;
-        private @Nullable Output<String> lastUpdateTime;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultArgs> result;
-        private @Nullable Output<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig;
-        private @Nullable Output<String> rolloutFailureReason;
-        private @Nullable Output<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState;
-        private @Nullable Output<String> startTime;
-        private @Nullable Output<ExperimentState> state;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory;
+        private ExperimentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExperimentArgs();
         }
 
         public Builder(ExperimentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.agentId = defaults.agentId;
-    	      this.createTime = defaults.createTime;
-    	      this.definition = defaults.definition;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.endTime = defaults.endTime;
-    	      this.environmentId = defaults.environmentId;
-    	      this.experimentLength = defaults.experimentLength;
-    	      this.lastUpdateTime = defaults.lastUpdateTime;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.result = defaults.result;
-    	      this.rolloutConfig = defaults.rolloutConfig;
-    	      this.rolloutFailureReason = defaults.rolloutFailureReason;
-    	      this.rolloutState = defaults.rolloutState;
-    	      this.startTime = defaults.startTime;
-    	      this.state = defaults.state;
-    	      this.variantsHistory = defaults.variantsHistory;
+            $ = new ExperimentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder agentId(Output<String> agentId) {
-            this.agentId = Objects.requireNonNull(agentId);
+            $.agentId = agentId;
             return this;
         }
+
         public Builder agentId(String agentId) {
-            this.agentId = Output.of(Objects.requireNonNull(agentId));
-            return this;
+            return agentId(Output.of(agentId));
         }
+
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder definition(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentDefinitionArgs> definition) {
-            this.definition = definition;
+            $.definition = definition;
             return this;
         }
-        public Builder definition(@Nullable GoogleCloudDialogflowCxV3ExperimentDefinitionArgs definition) {
-            this.definition = Codegen.ofNullable(definition);
-            return this;
+
+        public Builder definition(GoogleCloudDialogflowCxV3ExperimentDefinitionArgs definition) {
+            return definition(Output.of(definition));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder experimentLength(@Nullable Output<String> experimentLength) {
-            this.experimentLength = experimentLength;
+            $.experimentLength = experimentLength;
             return this;
         }
-        public Builder experimentLength(@Nullable String experimentLength) {
-            this.experimentLength = Codegen.ofNullable(experimentLength);
-            return this;
+
+        public Builder experimentLength(String experimentLength) {
+            return experimentLength(Output.of(experimentLength));
         }
+
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
-            this.lastUpdateTime = lastUpdateTime;
+            $.lastUpdateTime = lastUpdateTime;
             return this;
         }
-        public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
-            this.lastUpdateTime = Codegen.ofNullable(lastUpdateTime);
-            return this;
+
+        public Builder lastUpdateTime(String lastUpdateTime) {
+            return lastUpdateTime(Output.of(lastUpdateTime));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder result(@Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultArgs> result) {
-            this.result = result;
+            $.result = result;
             return this;
         }
-        public Builder result(@Nullable GoogleCloudDialogflowCxV3ExperimentResultArgs result) {
-            this.result = Codegen.ofNullable(result);
-            return this;
+
+        public Builder result(GoogleCloudDialogflowCxV3ExperimentResultArgs result) {
+            return result(Output.of(result));
         }
+
         public Builder rolloutConfig(@Nullable Output<GoogleCloudDialogflowCxV3RolloutConfigArgs> rolloutConfig) {
-            this.rolloutConfig = rolloutConfig;
+            $.rolloutConfig = rolloutConfig;
             return this;
         }
-        public Builder rolloutConfig(@Nullable GoogleCloudDialogflowCxV3RolloutConfigArgs rolloutConfig) {
-            this.rolloutConfig = Codegen.ofNullable(rolloutConfig);
-            return this;
+
+        public Builder rolloutConfig(GoogleCloudDialogflowCxV3RolloutConfigArgs rolloutConfig) {
+            return rolloutConfig(Output.of(rolloutConfig));
         }
+
         public Builder rolloutFailureReason(@Nullable Output<String> rolloutFailureReason) {
-            this.rolloutFailureReason = rolloutFailureReason;
+            $.rolloutFailureReason = rolloutFailureReason;
             return this;
         }
-        public Builder rolloutFailureReason(@Nullable String rolloutFailureReason) {
-            this.rolloutFailureReason = Codegen.ofNullable(rolloutFailureReason);
-            return this;
+
+        public Builder rolloutFailureReason(String rolloutFailureReason) {
+            return rolloutFailureReason(Output.of(rolloutFailureReason));
         }
+
         public Builder rolloutState(@Nullable Output<GoogleCloudDialogflowCxV3RolloutStateArgs> rolloutState) {
-            this.rolloutState = rolloutState;
+            $.rolloutState = rolloutState;
             return this;
         }
-        public Builder rolloutState(@Nullable GoogleCloudDialogflowCxV3RolloutStateArgs rolloutState) {
-            this.rolloutState = Codegen.ofNullable(rolloutState);
-            return this;
+
+        public Builder rolloutState(GoogleCloudDialogflowCxV3RolloutStateArgs rolloutState) {
+            return rolloutState(Output.of(rolloutState));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
         }
+
         public Builder state(@Nullable Output<ExperimentState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable ExperimentState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(ExperimentState state) {
+            return state(Output.of(state));
         }
+
         public Builder variantsHistory(@Nullable Output<List<GoogleCloudDialogflowCxV3VariantsHistoryArgs>> variantsHistory) {
-            this.variantsHistory = variantsHistory;
+            $.variantsHistory = variantsHistory;
             return this;
         }
-        public Builder variantsHistory(@Nullable List<GoogleCloudDialogflowCxV3VariantsHistoryArgs> variantsHistory) {
-            this.variantsHistory = Codegen.ofNullable(variantsHistory);
-            return this;
+
+        public Builder variantsHistory(List<GoogleCloudDialogflowCxV3VariantsHistoryArgs> variantsHistory) {
+            return variantsHistory(Output.of(variantsHistory));
         }
+
         public Builder variantsHistory(GoogleCloudDialogflowCxV3VariantsHistoryArgs... variantsHistory) {
             return variantsHistory(List.of(variantsHistory));
-        }        public ExperimentArgs build() {
-            return new ExperimentArgs(agentId, createTime, definition, description, displayName, endTime, environmentId, experimentLength, lastUpdateTime, location, name, project, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
+        }
+
+        public ExperimentArgs build() {
+            $.agentId = Objects.requireNonNull($.agentId, "expected parameter 'agentId' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            return $;
         }
     }
+
 }

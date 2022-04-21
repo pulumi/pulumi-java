@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends com.pulumi.
      * 
      */
     @Import(name="target", required=true)
-      private final String target;
+    private String target;
 
     public String target() {
         return this.target;
@@ -28,55 +28,52 @@ public final class SecurityPolicyRuleRedirectOptionsResponse extends com.pulumi.
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SecurityPolicyRuleRedirectOptionsResponse(
-        String target,
-        String type) {
-        this.target = Objects.requireNonNull(target, "expected parameter 'target' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SecurityPolicyRuleRedirectOptionsResponse() {}
 
-    private SecurityPolicyRuleRedirectOptionsResponse() {
-        this.target = null;
-        this.type = null;
+    private SecurityPolicyRuleRedirectOptionsResponse(SecurityPolicyRuleRedirectOptionsResponse $) {
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRedirectOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String target;
-        private String type;
+        private SecurityPolicyRuleRedirectOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRedirectOptionsResponse();
         }
 
         public Builder(SecurityPolicyRuleRedirectOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new SecurityPolicyRuleRedirectOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder target(String target) {
-            this.target = Objects.requireNonNull(target);
+            $.target = target;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SecurityPolicyRuleRedirectOptionsResponse build() {
-            return new SecurityPolicyRuleRedirectOptionsResponse(target, type);
+        }
+
+        public SecurityPolicyRuleRedirectOptionsResponse build() {
+            $.target = Objects.requireNonNull($.target, "expected parameter 'target' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

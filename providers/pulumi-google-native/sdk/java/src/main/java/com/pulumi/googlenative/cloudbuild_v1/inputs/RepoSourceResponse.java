@@ -23,7 +23,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="branchName", required=true)
-      private final String branchName;
+    private String branchName;
 
     public String branchName() {
         return this.branchName;
@@ -34,7 +34,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="commitSha", required=true)
-      private final String commitSha;
+    private String commitSha;
 
     public String commitSha() {
         return this.commitSha;
@@ -45,7 +45,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dir", required=true)
-      private final String dir;
+    private String dir;
 
     public String dir() {
         return this.dir;
@@ -56,7 +56,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="invertRegex", required=true)
-      private final Boolean invertRegex;
+    private Boolean invertRegex;
 
     public Boolean invertRegex() {
         return this.invertRegex;
@@ -67,7 +67,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -78,7 +78,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="repoName", required=true)
-      private final String repoName;
+    private String repoName;
 
     public String repoName() {
         return this.repoName;
@@ -89,7 +89,7 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="substitutions", required=true)
-      private final Map<String,String> substitutions;
+    private Map<String,String> substitutions;
 
     public Map<String,String> substitutions() {
         return this.substitutions;
@@ -100,109 +100,94 @@ public final class RepoSourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tagName", required=true)
-      private final String tagName;
+    private String tagName;
 
     public String tagName() {
         return this.tagName;
     }
 
-    public RepoSourceResponse(
-        String branchName,
-        String commitSha,
-        String dir,
-        Boolean invertRegex,
-        String project,
-        String repoName,
-        Map<String,String> substitutions,
-        String tagName) {
-        this.branchName = Objects.requireNonNull(branchName, "expected parameter 'branchName' to be non-null");
-        this.commitSha = Objects.requireNonNull(commitSha, "expected parameter 'commitSha' to be non-null");
-        this.dir = Objects.requireNonNull(dir, "expected parameter 'dir' to be non-null");
-        this.invertRegex = Objects.requireNonNull(invertRegex, "expected parameter 'invertRegex' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.repoName = Objects.requireNonNull(repoName, "expected parameter 'repoName' to be non-null");
-        this.substitutions = Objects.requireNonNull(substitutions, "expected parameter 'substitutions' to be non-null");
-        this.tagName = Objects.requireNonNull(tagName, "expected parameter 'tagName' to be non-null");
-    }
+    private RepoSourceResponse() {}
 
-    private RepoSourceResponse() {
-        this.branchName = null;
-        this.commitSha = null;
-        this.dir = null;
-        this.invertRegex = null;
-        this.project = null;
-        this.repoName = null;
-        this.substitutions = Map.of();
-        this.tagName = null;
+    private RepoSourceResponse(RepoSourceResponse $) {
+        this.branchName = $.branchName;
+        this.commitSha = $.commitSha;
+        this.dir = $.dir;
+        this.invertRegex = $.invertRegex;
+        this.project = $.project;
+        this.repoName = $.repoName;
+        this.substitutions = $.substitutions;
+        this.tagName = $.tagName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RepoSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String branchName;
-        private String commitSha;
-        private String dir;
-        private Boolean invertRegex;
-        private String project;
-        private String repoName;
-        private Map<String,String> substitutions;
-        private String tagName;
+        private RepoSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RepoSourceResponse();
         }
 
         public Builder(RepoSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.branchName = defaults.branchName;
-    	      this.commitSha = defaults.commitSha;
-    	      this.dir = defaults.dir;
-    	      this.invertRegex = defaults.invertRegex;
-    	      this.project = defaults.project;
-    	      this.repoName = defaults.repoName;
-    	      this.substitutions = defaults.substitutions;
-    	      this.tagName = defaults.tagName;
+            $ = new RepoSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder branchName(String branchName) {
-            this.branchName = Objects.requireNonNull(branchName);
+            $.branchName = branchName;
             return this;
         }
+
         public Builder commitSha(String commitSha) {
-            this.commitSha = Objects.requireNonNull(commitSha);
+            $.commitSha = commitSha;
             return this;
         }
+
         public Builder dir(String dir) {
-            this.dir = Objects.requireNonNull(dir);
+            $.dir = dir;
             return this;
         }
+
         public Builder invertRegex(Boolean invertRegex) {
-            this.invertRegex = Objects.requireNonNull(invertRegex);
+            $.invertRegex = invertRegex;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder repoName(String repoName) {
-            this.repoName = Objects.requireNonNull(repoName);
+            $.repoName = repoName;
             return this;
         }
+
         public Builder substitutions(Map<String,String> substitutions) {
-            this.substitutions = Objects.requireNonNull(substitutions);
+            $.substitutions = substitutions;
             return this;
         }
+
         public Builder tagName(String tagName) {
-            this.tagName = Objects.requireNonNull(tagName);
+            $.tagName = tagName;
             return this;
-        }        public RepoSourceResponse build() {
-            return new RepoSourceResponse(branchName, commitSha, dir, invertRegex, project, repoName, substitutions, tagName);
+        }
+
+        public RepoSourceResponse build() {
+            $.branchName = Objects.requireNonNull($.branchName, "expected parameter 'branchName' to be non-null");
+            $.commitSha = Objects.requireNonNull($.commitSha, "expected parameter 'commitSha' to be non-null");
+            $.dir = Objects.requireNonNull($.dir, "expected parameter 'dir' to be non-null");
+            $.invertRegex = Objects.requireNonNull($.invertRegex, "expected parameter 'invertRegex' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.repoName = Objects.requireNonNull($.repoName, "expected parameter 'repoName' to be non-null");
+            $.substitutions = Objects.requireNonNull($.substitutions, "expected parameter 'substitutions' to be non-null");
+            $.tagName = Objects.requireNonNull($.tagName, "expected parameter 'tagName' to be non-null");
+            return $;
         }
     }
+
 }

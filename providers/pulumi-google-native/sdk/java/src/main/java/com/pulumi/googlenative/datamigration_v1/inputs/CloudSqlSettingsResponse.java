@@ -24,7 +24,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="activationPolicy", required=true)
-      private final String activationPolicy;
+    private String activationPolicy;
 
     public String activationPolicy() {
         return this.activationPolicy;
@@ -35,7 +35,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="autoStorageIncrease", required=true)
-      private final Boolean autoStorageIncrease;
+    private Boolean autoStorageIncrease;
 
     public Boolean autoStorageIncrease() {
         return this.autoStorageIncrease;
@@ -46,7 +46,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="cmekKeyName", required=true)
-      private final String cmekKeyName;
+    private String cmekKeyName;
 
     public String cmekKeyName() {
         return this.cmekKeyName;
@@ -57,7 +57,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="collation", required=true)
-      private final String collation;
+    private String collation;
 
     public String collation() {
         return this.collation;
@@ -68,7 +68,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataDiskSizeGb", required=true)
-      private final String dataDiskSizeGb;
+    private String dataDiskSizeGb;
 
     public String dataDiskSizeGb() {
         return this.dataDiskSizeGb;
@@ -79,7 +79,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dataDiskType", required=true)
-      private final String dataDiskType;
+    private String dataDiskType;
 
     public String dataDiskType() {
         return this.dataDiskType;
@@ -90,7 +90,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseFlags", required=true)
-      private final Map<String,String> databaseFlags;
+    private Map<String,String> databaseFlags;
 
     public Map<String,String> databaseFlags() {
         return this.databaseFlags;
@@ -101,7 +101,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="databaseVersion", required=true)
-      private final String databaseVersion;
+    private String databaseVersion;
 
     public String databaseVersion() {
         return this.databaseVersion;
@@ -112,7 +112,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="ipConfig", required=true)
-      private final SqlIpConfigResponse ipConfig;
+    private SqlIpConfigResponse ipConfig;
 
     public SqlIpConfigResponse ipConfig() {
         return this.ipConfig;
@@ -123,7 +123,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rootPassword", required=true)
-      private final String rootPassword;
+    private String rootPassword;
 
     public String rootPassword() {
         return this.rootPassword;
@@ -134,7 +134,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="rootPasswordSet", required=true)
-      private final Boolean rootPasswordSet;
+    private Boolean rootPasswordSet;
 
     public Boolean rootPasswordSet() {
         return this.rootPasswordSet;
@@ -145,7 +145,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceId", required=true)
-      private final String sourceId;
+    private String sourceId;
 
     public String sourceId() {
         return this.sourceId;
@@ -156,7 +156,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="storageAutoResizeLimit", required=true)
-      private final String storageAutoResizeLimit;
+    private String storageAutoResizeLimit;
 
     public String storageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
@@ -167,7 +167,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tier", required=true)
-      private final String tier;
+    private String tier;
 
     public String tier() {
         return this.tier;
@@ -178,7 +178,7 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="userLabels", required=true)
-      private final Map<String,String> userLabels;
+    private Map<String,String> userLabels;
 
     public Map<String,String> userLabels() {
         return this.userLabels;
@@ -189,181 +189,150 @@ public final class CloudSqlSettingsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public CloudSqlSettingsResponse(
-        String activationPolicy,
-        Boolean autoStorageIncrease,
-        String cmekKeyName,
-        String collation,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        Map<String,String> databaseFlags,
-        String databaseVersion,
-        SqlIpConfigResponse ipConfig,
-        String rootPassword,
-        Boolean rootPasswordSet,
-        String sourceId,
-        String storageAutoResizeLimit,
-        String tier,
-        Map<String,String> userLabels,
-        String zone) {
-        this.activationPolicy = Objects.requireNonNull(activationPolicy, "expected parameter 'activationPolicy' to be non-null");
-        this.autoStorageIncrease = Objects.requireNonNull(autoStorageIncrease, "expected parameter 'autoStorageIncrease' to be non-null");
-        this.cmekKeyName = Objects.requireNonNull(cmekKeyName, "expected parameter 'cmekKeyName' to be non-null");
-        this.collation = Objects.requireNonNull(collation, "expected parameter 'collation' to be non-null");
-        this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb, "expected parameter 'dataDiskSizeGb' to be non-null");
-        this.dataDiskType = Objects.requireNonNull(dataDiskType, "expected parameter 'dataDiskType' to be non-null");
-        this.databaseFlags = Objects.requireNonNull(databaseFlags, "expected parameter 'databaseFlags' to be non-null");
-        this.databaseVersion = Objects.requireNonNull(databaseVersion, "expected parameter 'databaseVersion' to be non-null");
-        this.ipConfig = Objects.requireNonNull(ipConfig, "expected parameter 'ipConfig' to be non-null");
-        this.rootPassword = Objects.requireNonNull(rootPassword, "expected parameter 'rootPassword' to be non-null");
-        this.rootPasswordSet = Objects.requireNonNull(rootPasswordSet, "expected parameter 'rootPasswordSet' to be non-null");
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-        this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit, "expected parameter 'storageAutoResizeLimit' to be non-null");
-        this.tier = Objects.requireNonNull(tier, "expected parameter 'tier' to be non-null");
-        this.userLabels = Objects.requireNonNull(userLabels, "expected parameter 'userLabels' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private CloudSqlSettingsResponse() {}
 
-    private CloudSqlSettingsResponse() {
-        this.activationPolicy = null;
-        this.autoStorageIncrease = null;
-        this.cmekKeyName = null;
-        this.collation = null;
-        this.dataDiskSizeGb = null;
-        this.dataDiskType = null;
-        this.databaseFlags = Map.of();
-        this.databaseVersion = null;
-        this.ipConfig = null;
-        this.rootPassword = null;
-        this.rootPasswordSet = null;
-        this.sourceId = null;
-        this.storageAutoResizeLimit = null;
-        this.tier = null;
-        this.userLabels = Map.of();
-        this.zone = null;
+    private CloudSqlSettingsResponse(CloudSqlSettingsResponse $) {
+        this.activationPolicy = $.activationPolicy;
+        this.autoStorageIncrease = $.autoStorageIncrease;
+        this.cmekKeyName = $.cmekKeyName;
+        this.collation = $.collation;
+        this.dataDiskSizeGb = $.dataDiskSizeGb;
+        this.dataDiskType = $.dataDiskType;
+        this.databaseFlags = $.databaseFlags;
+        this.databaseVersion = $.databaseVersion;
+        this.ipConfig = $.ipConfig;
+        this.rootPassword = $.rootPassword;
+        this.rootPasswordSet = $.rootPasswordSet;
+        this.sourceId = $.sourceId;
+        this.storageAutoResizeLimit = $.storageAutoResizeLimit;
+        this.tier = $.tier;
+        this.userLabels = $.userLabels;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudSqlSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String activationPolicy;
-        private Boolean autoStorageIncrease;
-        private String cmekKeyName;
-        private String collation;
-        private String dataDiskSizeGb;
-        private String dataDiskType;
-        private Map<String,String> databaseFlags;
-        private String databaseVersion;
-        private SqlIpConfigResponse ipConfig;
-        private String rootPassword;
-        private Boolean rootPasswordSet;
-        private String sourceId;
-        private String storageAutoResizeLimit;
-        private String tier;
-        private Map<String,String> userLabels;
-        private String zone;
+        private CloudSqlSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudSqlSettingsResponse();
         }
 
         public Builder(CloudSqlSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.activationPolicy = defaults.activationPolicy;
-    	      this.autoStorageIncrease = defaults.autoStorageIncrease;
-    	      this.cmekKeyName = defaults.cmekKeyName;
-    	      this.collation = defaults.collation;
-    	      this.dataDiskSizeGb = defaults.dataDiskSizeGb;
-    	      this.dataDiskType = defaults.dataDiskType;
-    	      this.databaseFlags = defaults.databaseFlags;
-    	      this.databaseVersion = defaults.databaseVersion;
-    	      this.ipConfig = defaults.ipConfig;
-    	      this.rootPassword = defaults.rootPassword;
-    	      this.rootPasswordSet = defaults.rootPasswordSet;
-    	      this.sourceId = defaults.sourceId;
-    	      this.storageAutoResizeLimit = defaults.storageAutoResizeLimit;
-    	      this.tier = defaults.tier;
-    	      this.userLabels = defaults.userLabels;
-    	      this.zone = defaults.zone;
+            $ = new CloudSqlSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder activationPolicy(String activationPolicy) {
-            this.activationPolicy = Objects.requireNonNull(activationPolicy);
+            $.activationPolicy = activationPolicy;
             return this;
         }
+
         public Builder autoStorageIncrease(Boolean autoStorageIncrease) {
-            this.autoStorageIncrease = Objects.requireNonNull(autoStorageIncrease);
+            $.autoStorageIncrease = autoStorageIncrease;
             return this;
         }
+
         public Builder cmekKeyName(String cmekKeyName) {
-            this.cmekKeyName = Objects.requireNonNull(cmekKeyName);
+            $.cmekKeyName = cmekKeyName;
             return this;
         }
+
         public Builder collation(String collation) {
-            this.collation = Objects.requireNonNull(collation);
+            $.collation = collation;
             return this;
         }
+
         public Builder dataDiskSizeGb(String dataDiskSizeGb) {
-            this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
+            $.dataDiskSizeGb = dataDiskSizeGb;
             return this;
         }
+
         public Builder dataDiskType(String dataDiskType) {
-            this.dataDiskType = Objects.requireNonNull(dataDiskType);
+            $.dataDiskType = dataDiskType;
             return this;
         }
+
         public Builder databaseFlags(Map<String,String> databaseFlags) {
-            this.databaseFlags = Objects.requireNonNull(databaseFlags);
+            $.databaseFlags = databaseFlags;
             return this;
         }
+
         public Builder databaseVersion(String databaseVersion) {
-            this.databaseVersion = Objects.requireNonNull(databaseVersion);
+            $.databaseVersion = databaseVersion;
             return this;
         }
+
         public Builder ipConfig(SqlIpConfigResponse ipConfig) {
-            this.ipConfig = Objects.requireNonNull(ipConfig);
+            $.ipConfig = ipConfig;
             return this;
         }
+
         public Builder rootPassword(String rootPassword) {
-            this.rootPassword = Objects.requireNonNull(rootPassword);
+            $.rootPassword = rootPassword;
             return this;
         }
+
         public Builder rootPasswordSet(Boolean rootPasswordSet) {
-            this.rootPasswordSet = Objects.requireNonNull(rootPasswordSet);
+            $.rootPasswordSet = rootPasswordSet;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
-            this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
+            $.storageAutoResizeLimit = storageAutoResizeLimit;
             return this;
         }
+
         public Builder tier(String tier) {
-            this.tier = Objects.requireNonNull(tier);
+            $.tier = tier;
             return this;
         }
+
         public Builder userLabels(Map<String,String> userLabels) {
-            this.userLabels = Objects.requireNonNull(userLabels);
+            $.userLabels = userLabels;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public CloudSqlSettingsResponse build() {
-            return new CloudSqlSettingsResponse(activationPolicy, autoStorageIncrease, cmekKeyName, collation, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, rootPasswordSet, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
+        }
+
+        public CloudSqlSettingsResponse build() {
+            $.activationPolicy = Objects.requireNonNull($.activationPolicy, "expected parameter 'activationPolicy' to be non-null");
+            $.autoStorageIncrease = Objects.requireNonNull($.autoStorageIncrease, "expected parameter 'autoStorageIncrease' to be non-null");
+            $.cmekKeyName = Objects.requireNonNull($.cmekKeyName, "expected parameter 'cmekKeyName' to be non-null");
+            $.collation = Objects.requireNonNull($.collation, "expected parameter 'collation' to be non-null");
+            $.dataDiskSizeGb = Objects.requireNonNull($.dataDiskSizeGb, "expected parameter 'dataDiskSizeGb' to be non-null");
+            $.dataDiskType = Objects.requireNonNull($.dataDiskType, "expected parameter 'dataDiskType' to be non-null");
+            $.databaseFlags = Objects.requireNonNull($.databaseFlags, "expected parameter 'databaseFlags' to be non-null");
+            $.databaseVersion = Objects.requireNonNull($.databaseVersion, "expected parameter 'databaseVersion' to be non-null");
+            $.ipConfig = Objects.requireNonNull($.ipConfig, "expected parameter 'ipConfig' to be non-null");
+            $.rootPassword = Objects.requireNonNull($.rootPassword, "expected parameter 'rootPassword' to be non-null");
+            $.rootPasswordSet = Objects.requireNonNull($.rootPasswordSet, "expected parameter 'rootPasswordSet' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            $.storageAutoResizeLimit = Objects.requireNonNull($.storageAutoResizeLimit, "expected parameter 'storageAutoResizeLimit' to be non-null");
+            $.tier = Objects.requireNonNull($.tier, "expected parameter 'tier' to be non-null");
+            $.userLabels = Objects.requireNonNull($.userLabels, "expected parameter 'userLabels' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

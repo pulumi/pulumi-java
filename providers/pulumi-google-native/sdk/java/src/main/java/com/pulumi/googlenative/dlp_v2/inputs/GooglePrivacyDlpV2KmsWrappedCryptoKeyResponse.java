@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends com.pul
      * 
      */
     @Import(name="cryptoKeyName", required=true)
-      private final String cryptoKeyName;
+    private String cryptoKeyName;
 
     public String cryptoKeyName() {
         return this.cryptoKeyName;
@@ -32,55 +32,52 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends com.pul
      * 
      */
     @Import(name="wrappedKey", required=true)
-      private final String wrappedKey;
+    private String wrappedKey;
 
     public String wrappedKey() {
         return this.wrappedKey;
     }
 
-    public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(
-        String cryptoKeyName,
-        String wrappedKey) {
-        this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
-        this.wrappedKey = Objects.requireNonNull(wrappedKey, "expected parameter 'wrappedKey' to be non-null");
-    }
+    private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse() {}
 
-    private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse() {
-        this.cryptoKeyName = null;
-        this.wrappedKey = null;
+    private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse $) {
+        this.cryptoKeyName = $.cryptoKeyName;
+        this.wrappedKey = $.wrappedKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cryptoKeyName;
-        private String wrappedKey;
+        private GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse();
         }
 
         public Builder(GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cryptoKeyName = defaults.cryptoKeyName;
-    	      this.wrappedKey = defaults.wrappedKey;
+            $ = new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cryptoKeyName(String cryptoKeyName) {
-            this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
+            $.cryptoKeyName = cryptoKeyName;
             return this;
         }
+
         public Builder wrappedKey(String wrappedKey) {
-            this.wrappedKey = Objects.requireNonNull(wrappedKey);
+            $.wrappedKey = wrappedKey;
             return this;
-        }        public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse build() {
-            return new GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse(cryptoKeyName, wrappedKey);
+        }
+
+        public GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse build() {
+            $.cryptoKeyName = Objects.requireNonNull($.cryptoKeyName, "expected parameter 'cryptoKeyName' to be non-null");
+            $.wrappedKey = Objects.requireNonNull($.wrappedKey, "expected parameter 'wrappedKey' to be non-null");
+            return $;
         }
     }
+
 }

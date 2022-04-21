@@ -18,7 +18,7 @@ public final class ValueFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatorName", required=true)
-      private final String operatorName;
+    private String operatorName;
 
     public String operatorName() {
         return this.operatorName;
@@ -29,55 +29,52 @@ public final class ValueFilterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final ValueResponse value;
+    private ValueResponse value;
 
     public ValueResponse value() {
         return this.value;
     }
 
-    public ValueFilterResponse(
-        String operatorName,
-        ValueResponse value) {
-        this.operatorName = Objects.requireNonNull(operatorName, "expected parameter 'operatorName' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ValueFilterResponse() {}
 
-    private ValueFilterResponse() {
-        this.operatorName = null;
-        this.value = null;
+    private ValueFilterResponse(ValueFilterResponse $) {
+        this.operatorName = $.operatorName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValueFilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operatorName;
-        private ValueResponse value;
+        private ValueFilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValueFilterResponse();
         }
 
         public Builder(ValueFilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operatorName = defaults.operatorName;
-    	      this.value = defaults.value;
+            $ = new ValueFilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operatorName(String operatorName) {
-            this.operatorName = Objects.requireNonNull(operatorName);
+            $.operatorName = operatorName;
             return this;
         }
+
         public Builder value(ValueResponse value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ValueFilterResponse build() {
-            return new ValueFilterResponse(operatorName, value);
+        }
+
+        public ValueFilterResponse build() {
+            $.operatorName = Objects.requireNonNull($.operatorName, "expected parameter 'operatorName' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

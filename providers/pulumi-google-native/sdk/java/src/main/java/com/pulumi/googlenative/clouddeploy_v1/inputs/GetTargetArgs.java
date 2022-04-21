@@ -15,78 +15,72 @@ public final class GetTargetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTargetArgs Empty = new GetTargetArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="targetId", required=true)
-      private final String targetId;
+    private String targetId;
 
     public String targetId() {
         return this.targetId;
     }
 
-    public GetTargetArgs(
-        String location,
-        @Nullable String project,
-        String targetId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.targetId = Objects.requireNonNull(targetId, "expected parameter 'targetId' to be non-null");
-    }
+    private GetTargetArgs() {}
 
-    private GetTargetArgs() {
-        this.location = null;
-        this.project = null;
-        this.targetId = null;
+    private GetTargetArgs(GetTargetArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.targetId = $.targetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String targetId;
+        private GetTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetArgs();
         }
 
         public Builder(GetTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.targetId = defaults.targetId;
+            $ = new GetTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder targetId(String targetId) {
-            this.targetId = Objects.requireNonNull(targetId);
+            $.targetId = targetId;
             return this;
-        }        public GetTargetArgs build() {
-            return new GetTargetArgs(location, project, targetId);
+        }
+
+        public GetTargetArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.targetId = Objects.requireNonNull($.targetId, "expected parameter 'targetId' to be non-null");
+            return $;
         }
     }
+
 }

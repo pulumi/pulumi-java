@@ -5,10 +5,10 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__MetricSpecName;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<GoogleCloudMlV1__MetricSpecName> name;
+    private @Nullable Output<GoogleCloudMlV1__MetricSpecName> name;
 
-    public Output<GoogleCloudMlV1__MetricSpecName> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<GoogleCloudMlV1__MetricSpecName>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudMlV1__MetricSpecArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<Integer> target;
+    private @Nullable Output<Integer> target;
 
-    public Output<Integer> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<Integer>> target() {
+        return Optional.ofNullable(this.target);
     }
 
-    public GoogleCloudMlV1__MetricSpecArgs(
-        @Nullable Output<GoogleCloudMlV1__MetricSpecName> name,
-        @Nullable Output<Integer> target) {
-        this.name = name;
-        this.target = target;
-    }
+    private GoogleCloudMlV1__MetricSpecArgs() {}
 
-    private GoogleCloudMlV1__MetricSpecArgs() {
-        this.name = Codegen.empty();
-        this.target = Codegen.empty();
+    private GoogleCloudMlV1__MetricSpecArgs(GoogleCloudMlV1__MetricSpecArgs $) {
+        this.name = $.name;
+        this.target = $.target;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__MetricSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudMlV1__MetricSpecName> name;
-        private @Nullable Output<Integer> target;
+        private GoogleCloudMlV1__MetricSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__MetricSpecArgs();
         }
 
         public Builder(GoogleCloudMlV1__MetricSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.target = defaults.target;
+            $ = new GoogleCloudMlV1__MetricSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<GoogleCloudMlV1__MetricSpecName> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable GoogleCloudMlV1__MetricSpecName name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(GoogleCloudMlV1__MetricSpecName name) {
+            return name(Output.of(name));
         }
+
         public Builder target(@Nullable Output<Integer> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable Integer target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
-        }        public GoogleCloudMlV1__MetricSpecArgs build() {
-            return new GoogleCloudMlV1__MetricSpecArgs(name, target);
+
+        public Builder target(Integer target) {
+            return target(Output.of(target));
+        }
+
+        public GoogleCloudMlV1__MetricSpecArgs build() {
+            return $;
         }
     }
+
 }

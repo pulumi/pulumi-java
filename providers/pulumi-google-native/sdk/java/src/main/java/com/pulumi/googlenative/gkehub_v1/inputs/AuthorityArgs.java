@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gkehub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuer")
-      private final @Nullable Output<String> issuer;
+    private @Nullable Output<String> issuer;
 
-    public Output<String> issuer() {
-        return this.issuer == null ? Codegen.empty() : this.issuer;
+    public Optional<Output<String>> issuer() {
+        return Optional.ofNullable(this.issuer);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class AuthorityArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oidcJwks")
-      private final @Nullable Output<String> oidcJwks;
+    private @Nullable Output<String> oidcJwks;
 
-    public Output<String> oidcJwks() {
-        return this.oidcJwks == null ? Codegen.empty() : this.oidcJwks;
+    public Optional<Output<String>> oidcJwks() {
+        return Optional.ofNullable(this.oidcJwks);
     }
 
-    public AuthorityArgs(
-        @Nullable Output<String> issuer,
-        @Nullable Output<String> oidcJwks) {
-        this.issuer = issuer;
-        this.oidcJwks = oidcJwks;
-    }
+    private AuthorityArgs() {}
 
-    private AuthorityArgs() {
-        this.issuer = Codegen.empty();
-        this.oidcJwks = Codegen.empty();
+    private AuthorityArgs(AuthorityArgs $) {
+        this.issuer = $.issuer;
+        this.oidcJwks = $.oidcJwks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> issuer;
-        private @Nullable Output<String> oidcJwks;
+        private AuthorityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorityArgs();
         }
 
         public Builder(AuthorityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.issuer = defaults.issuer;
-    	      this.oidcJwks = defaults.oidcJwks;
+            $ = new AuthorityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder issuer(@Nullable Output<String> issuer) {
-            this.issuer = issuer;
+            $.issuer = issuer;
             return this;
         }
-        public Builder issuer(@Nullable String issuer) {
-            this.issuer = Codegen.ofNullable(issuer);
-            return this;
+
+        public Builder issuer(String issuer) {
+            return issuer(Output.of(issuer));
         }
+
         public Builder oidcJwks(@Nullable Output<String> oidcJwks) {
-            this.oidcJwks = oidcJwks;
+            $.oidcJwks = oidcJwks;
             return this;
         }
-        public Builder oidcJwks(@Nullable String oidcJwks) {
-            this.oidcJwks = Codegen.ofNullable(oidcJwks);
-            return this;
-        }        public AuthorityArgs build() {
-            return new AuthorityArgs(issuer, oidcJwks);
+
+        public Builder oidcJwks(String oidcJwks) {
+            return oidcJwks(Output.of(oidcJwks));
+        }
+
+        public AuthorityArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class HintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="humanReadableName", required=true)
-      private final String humanReadableName;
+    private String humanReadableName;
 
     public String humanReadableName() {
         return this.humanReadableName;
     }
 
-    public HintResponse(String humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
-    }
+    private HintResponse() {}
 
-    private HintResponse() {
-        this.humanReadableName = null;
+    private HintResponse(HintResponse $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String humanReadableName;
+        private HintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HintResponse();
         }
 
         public Builder(HintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new HintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Objects.requireNonNull(humanReadableName);
+            $.humanReadableName = humanReadableName;
             return this;
-        }        public HintResponse build() {
-            return new HintResponse(humanReadableName);
+        }
+
+        public HintResponse build() {
+            $.humanReadableName = Objects.requireNonNull($.humanReadableName, "expected parameter 'humanReadableName' to be non-null");
+            return $;
         }
     }
+
 }

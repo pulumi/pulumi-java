@@ -22,7 +22,7 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="checkInterval", required=true)
-      private final String checkInterval;
+    private String checkInterval;
 
     public String checkInterval() {
         return this.checkInterval;
@@ -33,7 +33,7 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="failureThreshold", required=true)
-      private final Integer failureThreshold;
+    private Integer failureThreshold;
 
     public Integer failureThreshold() {
         return this.failureThreshold;
@@ -44,7 +44,7 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="host", required=true)
-      private final String host;
+    private String host;
 
     public String host() {
         return this.host;
@@ -55,7 +55,7 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="initialDelay", required=true)
-      private final String initialDelay;
+    private String initialDelay;
 
     public String initialDelay() {
         return this.initialDelay;
@@ -66,7 +66,7 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -77,7 +77,7 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="successThreshold", required=true)
-      private final Integer successThreshold;
+    private Integer successThreshold;
 
     public Integer successThreshold() {
         return this.successThreshold;
@@ -88,100 +88,87 @@ public final class LivenessCheckResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timeout", required=true)
-      private final String timeout;
+    private String timeout;
 
     public String timeout() {
         return this.timeout;
     }
 
-    public LivenessCheckResponse(
-        String checkInterval,
-        Integer failureThreshold,
-        String host,
-        String initialDelay,
-        String path,
-        Integer successThreshold,
-        String timeout) {
-        this.checkInterval = Objects.requireNonNull(checkInterval, "expected parameter 'checkInterval' to be non-null");
-        this.failureThreshold = Objects.requireNonNull(failureThreshold, "expected parameter 'failureThreshold' to be non-null");
-        this.host = Objects.requireNonNull(host, "expected parameter 'host' to be non-null");
-        this.initialDelay = Objects.requireNonNull(initialDelay, "expected parameter 'initialDelay' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.successThreshold = Objects.requireNonNull(successThreshold, "expected parameter 'successThreshold' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-    }
+    private LivenessCheckResponse() {}
 
-    private LivenessCheckResponse() {
-        this.checkInterval = null;
-        this.failureThreshold = null;
-        this.host = null;
-        this.initialDelay = null;
-        this.path = null;
-        this.successThreshold = null;
-        this.timeout = null;
+    private LivenessCheckResponse(LivenessCheckResponse $) {
+        this.checkInterval = $.checkInterval;
+        this.failureThreshold = $.failureThreshold;
+        this.host = $.host;
+        this.initialDelay = $.initialDelay;
+        this.path = $.path;
+        this.successThreshold = $.successThreshold;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LivenessCheckResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String checkInterval;
-        private Integer failureThreshold;
-        private String host;
-        private String initialDelay;
-        private String path;
-        private Integer successThreshold;
-        private String timeout;
+        private LivenessCheckResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LivenessCheckResponse();
         }
 
         public Builder(LivenessCheckResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checkInterval = defaults.checkInterval;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.host = defaults.host;
-    	      this.initialDelay = defaults.initialDelay;
-    	      this.path = defaults.path;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.timeout = defaults.timeout;
+            $ = new LivenessCheckResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checkInterval(String checkInterval) {
-            this.checkInterval = Objects.requireNonNull(checkInterval);
+            $.checkInterval = checkInterval;
             return this;
         }
+
         public Builder failureThreshold(Integer failureThreshold) {
-            this.failureThreshold = Objects.requireNonNull(failureThreshold);
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder host(String host) {
-            this.host = Objects.requireNonNull(host);
+            $.host = host;
             return this;
         }
+
         public Builder initialDelay(String initialDelay) {
-            this.initialDelay = Objects.requireNonNull(initialDelay);
+            $.initialDelay = initialDelay;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder successThreshold(Integer successThreshold) {
-            this.successThreshold = Objects.requireNonNull(successThreshold);
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
-        }        public LivenessCheckResponse build() {
-            return new LivenessCheckResponse(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
+        }
+
+        public LivenessCheckResponse build() {
+            $.checkInterval = Objects.requireNonNull($.checkInterval, "expected parameter 'checkInterval' to be non-null");
+            $.failureThreshold = Objects.requireNonNull($.failureThreshold, "expected parameter 'failureThreshold' to be non-null");
+            $.host = Objects.requireNonNull($.host, "expected parameter 'host' to be non-null");
+            $.initialDelay = Objects.requireNonNull($.initialDelay, "expected parameter 'initialDelay' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.successThreshold = Objects.requireNonNull($.successThreshold, "expected parameter 'successThreshold' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            return $;
         }
     }
+
 }

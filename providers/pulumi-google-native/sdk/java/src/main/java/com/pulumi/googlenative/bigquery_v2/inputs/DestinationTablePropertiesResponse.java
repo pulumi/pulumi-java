@@ -18,7 +18,7 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -29,7 +29,7 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
@@ -40,7 +40,7 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="friendlyName", required=true)
-      private final String friendlyName;
+    private String friendlyName;
 
     public String friendlyName() {
         return this.friendlyName;
@@ -51,73 +51,66 @@ public final class DestinationTablePropertiesResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public DestinationTablePropertiesResponse(
-        String description,
-        String expirationTime,
-        String friendlyName,
-        Map<String,String> labels) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.friendlyName = Objects.requireNonNull(friendlyName, "expected parameter 'friendlyName' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private DestinationTablePropertiesResponse() {}
 
-    private DestinationTablePropertiesResponse() {
-        this.description = null;
-        this.expirationTime = null;
-        this.friendlyName = null;
-        this.labels = Map.of();
+    private DestinationTablePropertiesResponse(DestinationTablePropertiesResponse $) {
+        this.description = $.description;
+        this.expirationTime = $.expirationTime;
+        this.friendlyName = $.friendlyName;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationTablePropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String expirationTime;
-        private String friendlyName;
-        private Map<String,String> labels;
+        private DestinationTablePropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationTablePropertiesResponse();
         }
 
         public Builder(DestinationTablePropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.friendlyName = defaults.friendlyName;
-    	      this.labels = defaults.labels;
+            $ = new DestinationTablePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder friendlyName(String friendlyName) {
-            this.friendlyName = Objects.requireNonNull(friendlyName);
+            $.friendlyName = friendlyName;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public DestinationTablePropertiesResponse build() {
-            return new DestinationTablePropertiesResponse(description, expirationTime, friendlyName, labels);
+        }
+
+        public DestinationTablePropertiesResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.friendlyName = Objects.requireNonNull($.friendlyName, "expected parameter 'friendlyName' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

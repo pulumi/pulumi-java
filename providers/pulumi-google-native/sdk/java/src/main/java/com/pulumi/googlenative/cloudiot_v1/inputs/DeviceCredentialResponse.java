@@ -22,7 +22,7 @@ public final class DeviceCredentialResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="expirationTime", required=true)
-      private final String expirationTime;
+    private String expirationTime;
 
     public String expirationTime() {
         return this.expirationTime;
@@ -33,55 +33,52 @@ public final class DeviceCredentialResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="publicKey", required=true)
-      private final PublicKeyCredentialResponse publicKey;
+    private PublicKeyCredentialResponse publicKey;
 
     public PublicKeyCredentialResponse publicKey() {
         return this.publicKey;
     }
 
-    public DeviceCredentialResponse(
-        String expirationTime,
-        PublicKeyCredentialResponse publicKey) {
-        this.expirationTime = Objects.requireNonNull(expirationTime, "expected parameter 'expirationTime' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-    }
+    private DeviceCredentialResponse() {}
 
-    private DeviceCredentialResponse() {
-        this.expirationTime = null;
-        this.publicKey = null;
+    private DeviceCredentialResponse(DeviceCredentialResponse $) {
+        this.expirationTime = $.expirationTime;
+        this.publicKey = $.publicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expirationTime;
-        private PublicKeyCredentialResponse publicKey;
+        private DeviceCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceCredentialResponse();
         }
 
         public Builder(DeviceCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expirationTime = defaults.expirationTime;
-    	      this.publicKey = defaults.publicKey;
+            $ = new DeviceCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expirationTime(String expirationTime) {
-            this.expirationTime = Objects.requireNonNull(expirationTime);
+            $.expirationTime = expirationTime;
             return this;
         }
+
         public Builder publicKey(PublicKeyCredentialResponse publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
-        }        public DeviceCredentialResponse build() {
-            return new DeviceCredentialResponse(expirationTime, publicKey);
+        }
+
+        public DeviceCredentialResponse build() {
+            $.expirationTime = Objects.requireNonNull($.expirationTime, "expected parameter 'expirationTime' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            return $;
         }
     }
+
 }

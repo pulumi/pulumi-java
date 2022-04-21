@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="confidenceThreshold", required=true)
-      private final Double confidenceThreshold;
+    private Double confidenceThreshold;
 
     public Double confidenceThreshold() {
         return this.confidenceThreshold;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="contextFilterSettings", required=true)
-      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings() {
         return this.contextFilterSettings;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="dialogflowQuerySource", required=true)
-      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource() {
         return this.dialogflowQuerySource;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="documentQuerySource", required=true)
-      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource() {
         return this.documentQuerySource;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="knowledgeBaseQuerySource", required=true)
-      private final GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource;
 
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource() {
         return this.knowledgeBaseQuerySource;
@@ -81,91 +81,80 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="maxResults", required=true)
-      private final Integer maxResults;
+    private Integer maxResults;
 
     public Integer maxResults() {
         return this.maxResults;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse(
-        Double confidenceThreshold,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
-        Integer maxResults) {
-        this.confidenceThreshold = Objects.requireNonNull(confidenceThreshold, "expected parameter 'confidenceThreshold' to be non-null");
-        this.contextFilterSettings = Objects.requireNonNull(contextFilterSettings, "expected parameter 'contextFilterSettings' to be non-null");
-        this.dialogflowQuerySource = Objects.requireNonNull(dialogflowQuerySource, "expected parameter 'dialogflowQuerySource' to be non-null");
-        this.documentQuerySource = Objects.requireNonNull(documentQuerySource, "expected parameter 'documentQuerySource' to be non-null");
-        this.knowledgeBaseQuerySource = Objects.requireNonNull(knowledgeBaseQuerySource, "expected parameter 'knowledgeBaseQuerySource' to be non-null");
-        this.maxResults = Objects.requireNonNull(maxResults, "expected parameter 'maxResults' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse() {
-        this.confidenceThreshold = null;
-        this.contextFilterSettings = null;
-        this.dialogflowQuerySource = null;
-        this.documentQuerySource = null;
-        this.knowledgeBaseQuerySource = null;
-        this.maxResults = null;
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse $) {
+        this.confidenceThreshold = $.confidenceThreshold;
+        this.contextFilterSettings = $.contextFilterSettings;
+        this.dialogflowQuerySource = $.dialogflowQuerySource;
+        this.documentQuerySource = $.documentQuerySource;
+        this.knowledgeBaseQuerySource = $.knowledgeBaseQuerySource;
+        this.maxResults = $.maxResults;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double confidenceThreshold;
-        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings;
-        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource;
-        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource;
-        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource;
-        private Integer maxResults;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidenceThreshold = defaults.confidenceThreshold;
-    	      this.contextFilterSettings = defaults.contextFilterSettings;
-    	      this.dialogflowQuerySource = defaults.dialogflowQuerySource;
-    	      this.documentQuerySource = defaults.documentQuerySource;
-    	      this.knowledgeBaseQuerySource = defaults.knowledgeBaseQuerySource;
-    	      this.maxResults = defaults.maxResults;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidenceThreshold(Double confidenceThreshold) {
-            this.confidenceThreshold = Objects.requireNonNull(confidenceThreshold);
+            $.confidenceThreshold = confidenceThreshold;
             return this;
         }
+
         public Builder contextFilterSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings) {
-            this.contextFilterSettings = Objects.requireNonNull(contextFilterSettings);
+            $.contextFilterSettings = contextFilterSettings;
             return this;
         }
+
         public Builder dialogflowQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource) {
-            this.dialogflowQuerySource = Objects.requireNonNull(dialogflowQuerySource);
+            $.dialogflowQuerySource = dialogflowQuerySource;
             return this;
         }
+
         public Builder documentQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource) {
-            this.documentQuerySource = Objects.requireNonNull(documentQuerySource);
+            $.documentQuerySource = documentQuerySource;
             return this;
         }
+
         public Builder knowledgeBaseQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource) {
-            this.knowledgeBaseQuerySource = Objects.requireNonNull(knowledgeBaseQuerySource);
+            $.knowledgeBaseQuerySource = knowledgeBaseQuerySource;
             return this;
         }
+
         public Builder maxResults(Integer maxResults) {
-            this.maxResults = Objects.requireNonNull(maxResults);
+            $.maxResults = maxResults;
             return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse(confidenceThreshold, contextFilterSettings, dialogflowQuerySource, documentQuerySource, knowledgeBaseQuerySource, maxResults);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse build() {
+            $.confidenceThreshold = Objects.requireNonNull($.confidenceThreshold, "expected parameter 'confidenceThreshold' to be non-null");
+            $.contextFilterSettings = Objects.requireNonNull($.contextFilterSettings, "expected parameter 'contextFilterSettings' to be non-null");
+            $.dialogflowQuerySource = Objects.requireNonNull($.dialogflowQuerySource, "expected parameter 'dialogflowQuerySource' to be non-null");
+            $.documentQuerySource = Objects.requireNonNull($.documentQuerySource, "expected parameter 'documentQuerySource' to be non-null");
+            $.knowledgeBaseQuerySource = Objects.requireNonNull($.knowledgeBaseQuerySource, "expected parameter 'knowledgeBaseQuerySource' to be non-null");
+            $.maxResults = Objects.requireNonNull($.maxResults, "expected parameter 'maxResults' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetOrganizationContactArgs extends com.pulumi.resources.Invok
     public static final GetOrganizationContactArgs Empty = new GetOrganizationContactArgs();
 
     @Import(name="contactId", required=true)
-      private final String contactId;
+    private String contactId;
 
     public String contactId() {
         return this.contactId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetOrganizationContactArgs(
-        String contactId,
-        String organizationId) {
-        this.contactId = Objects.requireNonNull(contactId, "expected parameter 'contactId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetOrganizationContactArgs() {}
 
-    private GetOrganizationContactArgs() {
-        this.contactId = null;
-        this.organizationId = null;
+    private GetOrganizationContactArgs(GetOrganizationContactArgs $) {
+        this.contactId = $.contactId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationContactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String contactId;
-        private String organizationId;
+        private GetOrganizationContactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationContactArgs();
         }
 
         public Builder(GetOrganizationContactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contactId = defaults.contactId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetOrganizationContactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contactId(String contactId) {
-            this.contactId = Objects.requireNonNull(contactId);
+            $.contactId = contactId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetOrganizationContactArgs build() {
-            return new GetOrganizationContactArgs(contactId, organizationId);
+        }
+
+        public GetOrganizationContactArgs build() {
+            $.contactId = Objects.requireNonNull($.contactId, "expected parameter 'contactId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

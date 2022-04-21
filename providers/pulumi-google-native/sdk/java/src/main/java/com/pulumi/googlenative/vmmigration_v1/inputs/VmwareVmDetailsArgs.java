@@ -5,11 +5,11 @@ package com.pulumi.googlenative.vmmigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.vmmigration_v1.enums.VmwareVmDetailsPowerState;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="committedStorageMb")
-      private final @Nullable Output<String> committedStorageMb;
+    private @Nullable Output<String> committedStorageMb;
 
-    public Output<String> committedStorageMb() {
-        return this.committedStorageMb == null ? Codegen.empty() : this.committedStorageMb;
+    public Optional<Output<String>> committedStorageMb() {
+        return Optional.ofNullable(this.committedStorageMb);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="cpuCount")
-      private final @Nullable Output<Integer> cpuCount;
+    private @Nullable Output<Integer> cpuCount;
 
-    public Output<Integer> cpuCount() {
-        return this.cpuCount == null ? Codegen.empty() : this.cpuCount;
+    public Optional<Output<Integer>> cpuCount() {
+        return Optional.ofNullable(this.cpuCount);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="datacenterDescription")
-      private final @Nullable Output<String> datacenterDescription;
+    private @Nullable Output<String> datacenterDescription;
 
-    public Output<String> datacenterDescription() {
-        return this.datacenterDescription == null ? Codegen.empty() : this.datacenterDescription;
+    public Optional<Output<String>> datacenterDescription() {
+        return Optional.ofNullable(this.datacenterDescription);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="datacenterId")
-      private final @Nullable Output<String> datacenterId;
+    private @Nullable Output<String> datacenterId;
 
-    public Output<String> datacenterId() {
-        return this.datacenterId == null ? Codegen.empty() : this.datacenterId;
+    public Optional<Output<String>> datacenterId() {
+        return Optional.ofNullable(this.datacenterId);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="diskCount")
-      private final @Nullable Output<Integer> diskCount;
+    private @Nullable Output<Integer> diskCount;
 
-    public Output<Integer> diskCount() {
-        return this.diskCount == null ? Codegen.empty() : this.diskCount;
+    public Optional<Output<Integer>> diskCount() {
+        return Optional.ofNullable(this.diskCount);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="guestDescription")
-      private final @Nullable Output<String> guestDescription;
+    private @Nullable Output<String> guestDescription;
 
-    public Output<String> guestDescription() {
-        return this.guestDescription == null ? Codegen.empty() : this.guestDescription;
+    public Optional<Output<String>> guestDescription() {
+        return Optional.ofNullable(this.guestDescription);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="memoryMb")
-      private final @Nullable Output<Integer> memoryMb;
+    private @Nullable Output<Integer> memoryMb;
 
-    public Output<Integer> memoryMb() {
-        return this.memoryMb == null ? Codegen.empty() : this.memoryMb;
+    public Optional<Output<Integer>> memoryMb() {
+        return Optional.ofNullable(this.memoryMb);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="powerState")
-      private final @Nullable Output<VmwareVmDetailsPowerState> powerState;
+    private @Nullable Output<VmwareVmDetailsPowerState> powerState;
 
-    public Output<VmwareVmDetailsPowerState> powerState() {
-        return this.powerState == null ? Codegen.empty() : this.powerState;
+    public Optional<Output<VmwareVmDetailsPowerState>> powerState() {
+        return Optional.ofNullable(this.powerState);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="uuid")
-      private final @Nullable Output<String> uuid;
+    private @Nullable Output<String> uuid;
 
-    public Output<String> uuid() {
-        return this.uuid == null ? Codegen.empty() : this.uuid;
+    public Optional<Output<String>> uuid() {
+        return Optional.ofNullable(this.uuid);
     }
 
     /**
@@ -136,180 +136,148 @@ public final class VmwareVmDetailsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="vmId")
-      private final @Nullable Output<String> vmId;
+    private @Nullable Output<String> vmId;
 
-    public Output<String> vmId() {
-        return this.vmId == null ? Codegen.empty() : this.vmId;
+    public Optional<Output<String>> vmId() {
+        return Optional.ofNullable(this.vmId);
     }
 
-    public VmwareVmDetailsArgs(
-        @Nullable Output<String> committedStorageMb,
-        @Nullable Output<Integer> cpuCount,
-        @Nullable Output<String> datacenterDescription,
-        @Nullable Output<String> datacenterId,
-        @Nullable Output<Integer> diskCount,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> guestDescription,
-        @Nullable Output<Integer> memoryMb,
-        @Nullable Output<VmwareVmDetailsPowerState> powerState,
-        @Nullable Output<String> uuid,
-        @Nullable Output<String> vmId) {
-        this.committedStorageMb = committedStorageMb;
-        this.cpuCount = cpuCount;
-        this.datacenterDescription = datacenterDescription;
-        this.datacenterId = datacenterId;
-        this.diskCount = diskCount;
-        this.displayName = displayName;
-        this.guestDescription = guestDescription;
-        this.memoryMb = memoryMb;
-        this.powerState = powerState;
-        this.uuid = uuid;
-        this.vmId = vmId;
-    }
+    private VmwareVmDetailsArgs() {}
 
-    private VmwareVmDetailsArgs() {
-        this.committedStorageMb = Codegen.empty();
-        this.cpuCount = Codegen.empty();
-        this.datacenterDescription = Codegen.empty();
-        this.datacenterId = Codegen.empty();
-        this.diskCount = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.guestDescription = Codegen.empty();
-        this.memoryMb = Codegen.empty();
-        this.powerState = Codegen.empty();
-        this.uuid = Codegen.empty();
-        this.vmId = Codegen.empty();
+    private VmwareVmDetailsArgs(VmwareVmDetailsArgs $) {
+        this.committedStorageMb = $.committedStorageMb;
+        this.cpuCount = $.cpuCount;
+        this.datacenterDescription = $.datacenterDescription;
+        this.datacenterId = $.datacenterId;
+        this.diskCount = $.diskCount;
+        this.displayName = $.displayName;
+        this.guestDescription = $.guestDescription;
+        this.memoryMb = $.memoryMb;
+        this.powerState = $.powerState;
+        this.uuid = $.uuid;
+        this.vmId = $.vmId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VmwareVmDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> committedStorageMb;
-        private @Nullable Output<Integer> cpuCount;
-        private @Nullable Output<String> datacenterDescription;
-        private @Nullable Output<String> datacenterId;
-        private @Nullable Output<Integer> diskCount;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> guestDescription;
-        private @Nullable Output<Integer> memoryMb;
-        private @Nullable Output<VmwareVmDetailsPowerState> powerState;
-        private @Nullable Output<String> uuid;
-        private @Nullable Output<String> vmId;
+        private VmwareVmDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VmwareVmDetailsArgs();
         }
 
         public Builder(VmwareVmDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.committedStorageMb = defaults.committedStorageMb;
-    	      this.cpuCount = defaults.cpuCount;
-    	      this.datacenterDescription = defaults.datacenterDescription;
-    	      this.datacenterId = defaults.datacenterId;
-    	      this.diskCount = defaults.diskCount;
-    	      this.displayName = defaults.displayName;
-    	      this.guestDescription = defaults.guestDescription;
-    	      this.memoryMb = defaults.memoryMb;
-    	      this.powerState = defaults.powerState;
-    	      this.uuid = defaults.uuid;
-    	      this.vmId = defaults.vmId;
+            $ = new VmwareVmDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder committedStorageMb(@Nullable Output<String> committedStorageMb) {
-            this.committedStorageMb = committedStorageMb;
+            $.committedStorageMb = committedStorageMb;
             return this;
         }
-        public Builder committedStorageMb(@Nullable String committedStorageMb) {
-            this.committedStorageMb = Codegen.ofNullable(committedStorageMb);
-            return this;
+
+        public Builder committedStorageMb(String committedStorageMb) {
+            return committedStorageMb(Output.of(committedStorageMb));
         }
+
         public Builder cpuCount(@Nullable Output<Integer> cpuCount) {
-            this.cpuCount = cpuCount;
+            $.cpuCount = cpuCount;
             return this;
         }
-        public Builder cpuCount(@Nullable Integer cpuCount) {
-            this.cpuCount = Codegen.ofNullable(cpuCount);
-            return this;
+
+        public Builder cpuCount(Integer cpuCount) {
+            return cpuCount(Output.of(cpuCount));
         }
+
         public Builder datacenterDescription(@Nullable Output<String> datacenterDescription) {
-            this.datacenterDescription = datacenterDescription;
+            $.datacenterDescription = datacenterDescription;
             return this;
         }
-        public Builder datacenterDescription(@Nullable String datacenterDescription) {
-            this.datacenterDescription = Codegen.ofNullable(datacenterDescription);
-            return this;
+
+        public Builder datacenterDescription(String datacenterDescription) {
+            return datacenterDescription(Output.of(datacenterDescription));
         }
+
         public Builder datacenterId(@Nullable Output<String> datacenterId) {
-            this.datacenterId = datacenterId;
+            $.datacenterId = datacenterId;
             return this;
         }
-        public Builder datacenterId(@Nullable String datacenterId) {
-            this.datacenterId = Codegen.ofNullable(datacenterId);
-            return this;
+
+        public Builder datacenterId(String datacenterId) {
+            return datacenterId(Output.of(datacenterId));
         }
+
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
-            this.diskCount = diskCount;
+            $.diskCount = diskCount;
             return this;
         }
-        public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Codegen.ofNullable(diskCount);
-            return this;
+
+        public Builder diskCount(Integer diskCount) {
+            return diskCount(Output.of(diskCount));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder guestDescription(@Nullable Output<String> guestDescription) {
-            this.guestDescription = guestDescription;
+            $.guestDescription = guestDescription;
             return this;
         }
-        public Builder guestDescription(@Nullable String guestDescription) {
-            this.guestDescription = Codegen.ofNullable(guestDescription);
-            return this;
+
+        public Builder guestDescription(String guestDescription) {
+            return guestDescription(Output.of(guestDescription));
         }
+
         public Builder memoryMb(@Nullable Output<Integer> memoryMb) {
-            this.memoryMb = memoryMb;
+            $.memoryMb = memoryMb;
             return this;
         }
-        public Builder memoryMb(@Nullable Integer memoryMb) {
-            this.memoryMb = Codegen.ofNullable(memoryMb);
-            return this;
+
+        public Builder memoryMb(Integer memoryMb) {
+            return memoryMb(Output.of(memoryMb));
         }
+
         public Builder powerState(@Nullable Output<VmwareVmDetailsPowerState> powerState) {
-            this.powerState = powerState;
+            $.powerState = powerState;
             return this;
         }
-        public Builder powerState(@Nullable VmwareVmDetailsPowerState powerState) {
-            this.powerState = Codegen.ofNullable(powerState);
-            return this;
+
+        public Builder powerState(VmwareVmDetailsPowerState powerState) {
+            return powerState(Output.of(powerState));
         }
+
         public Builder uuid(@Nullable Output<String> uuid) {
-            this.uuid = uuid;
+            $.uuid = uuid;
             return this;
         }
-        public Builder uuid(@Nullable String uuid) {
-            this.uuid = Codegen.ofNullable(uuid);
-            return this;
+
+        public Builder uuid(String uuid) {
+            return uuid(Output.of(uuid));
         }
+
         public Builder vmId(@Nullable Output<String> vmId) {
-            this.vmId = vmId;
+            $.vmId = vmId;
             return this;
         }
-        public Builder vmId(@Nullable String vmId) {
-            this.vmId = Codegen.ofNullable(vmId);
-            return this;
-        }        public VmwareVmDetailsArgs build() {
-            return new VmwareVmDetailsArgs(committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
+
+        public Builder vmId(String vmId) {
+            return vmId(Output.of(vmId));
+        }
+
+        public VmwareVmDetailsArgs build() {
+            return $;
         }
     }
+
 }

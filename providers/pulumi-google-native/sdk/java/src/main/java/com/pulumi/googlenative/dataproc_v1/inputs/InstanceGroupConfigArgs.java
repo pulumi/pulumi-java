@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.enums.InstanceGroupConfigPreemptibility;
 import com.pulumi.googlenative.dataproc_v1.inputs.AcceleratorConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.DiskConfigArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="accelerators")
-      private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
+    private @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
-    public Output<List<AcceleratorConfigArgs>> accelerators() {
-        return this.accelerators == null ? Codegen.empty() : this.accelerators;
+    public Optional<Output<List<AcceleratorConfigArgs>>> accelerators() {
+        return Optional.ofNullable(this.accelerators);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="diskConfig")
-      private final @Nullable Output<DiskConfigArgs> diskConfig;
+    private @Nullable Output<DiskConfigArgs> diskConfig;
 
-    public Output<DiskConfigArgs> diskConfig() {
-        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
+    public Optional<Output<DiskConfigArgs>> diskConfig() {
+        return Optional.ofNullable(this.diskConfig);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="imageUri")
-      private final @Nullable Output<String> imageUri;
+    private @Nullable Output<String> imageUri;
 
-    public Output<String> imageUri() {
-        return this.imageUri == null ? Codegen.empty() : this.imageUri;
+    public Optional<Output<String>> imageUri() {
+        return Optional.ofNullable(this.imageUri);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="machineTypeUri")
-      private final @Nullable Output<String> machineTypeUri;
+    private @Nullable Output<String> machineTypeUri;
 
-    public Output<String> machineTypeUri() {
-        return this.machineTypeUri == null ? Codegen.empty() : this.machineTypeUri;
+    public Optional<Output<String>> machineTypeUri() {
+        return Optional.ofNullable(this.machineTypeUri);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="numInstances")
-      private final @Nullable Output<Integer> numInstances;
+    private @Nullable Output<Integer> numInstances;
 
-    public Output<Integer> numInstances() {
-        return this.numInstances == null ? Codegen.empty() : this.numInstances;
+    public Optional<Output<Integer>> numInstances() {
+        return Optional.ofNullable(this.numInstances);
     }
 
     /**
@@ -95,131 +95,112 @@ public final class InstanceGroupConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="preemptibility")
-      private final @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
+    private @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
 
-    public Output<InstanceGroupConfigPreemptibility> preemptibility() {
-        return this.preemptibility == null ? Codegen.empty() : this.preemptibility;
+    public Optional<Output<InstanceGroupConfigPreemptibility>> preemptibility() {
+        return Optional.ofNullable(this.preemptibility);
     }
 
-    public InstanceGroupConfigArgs(
-        @Nullable Output<List<AcceleratorConfigArgs>> accelerators,
-        @Nullable Output<DiskConfigArgs> diskConfig,
-        @Nullable Output<String> imageUri,
-        @Nullable Output<String> machineTypeUri,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<Integer> numInstances,
-        @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility) {
-        this.accelerators = accelerators;
-        this.diskConfig = diskConfig;
-        this.imageUri = imageUri;
-        this.machineTypeUri = machineTypeUri;
-        this.minCpuPlatform = minCpuPlatform;
-        this.numInstances = numInstances;
-        this.preemptibility = preemptibility;
-    }
+    private InstanceGroupConfigArgs() {}
 
-    private InstanceGroupConfigArgs() {
-        this.accelerators = Codegen.empty();
-        this.diskConfig = Codegen.empty();
-        this.imageUri = Codegen.empty();
-        this.machineTypeUri = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.numInstances = Codegen.empty();
-        this.preemptibility = Codegen.empty();
+    private InstanceGroupConfigArgs(InstanceGroupConfigArgs $) {
+        this.accelerators = $.accelerators;
+        this.diskConfig = $.diskConfig;
+        this.imageUri = $.imageUri;
+        this.machineTypeUri = $.machineTypeUri;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.numInstances = $.numInstances;
+        this.preemptibility = $.preemptibility;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
-        private @Nullable Output<DiskConfigArgs> diskConfig;
-        private @Nullable Output<String> imageUri;
-        private @Nullable Output<String> machineTypeUri;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<Integer> numInstances;
-        private @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
+        private InstanceGroupConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupConfigArgs();
         }
 
         public Builder(InstanceGroupConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accelerators = defaults.accelerators;
-    	      this.diskConfig = defaults.diskConfig;
-    	      this.imageUri = defaults.imageUri;
-    	      this.machineTypeUri = defaults.machineTypeUri;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.numInstances = defaults.numInstances;
-    	      this.preemptibility = defaults.preemptibility;
+            $ = new InstanceGroupConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accelerators(@Nullable Output<List<AcceleratorConfigArgs>> accelerators) {
-            this.accelerators = accelerators;
+            $.accelerators = accelerators;
             return this;
         }
-        public Builder accelerators(@Nullable List<AcceleratorConfigArgs> accelerators) {
-            this.accelerators = Codegen.ofNullable(accelerators);
-            return this;
+
+        public Builder accelerators(List<AcceleratorConfigArgs> accelerators) {
+            return accelerators(Output.of(accelerators));
         }
+
         public Builder accelerators(AcceleratorConfigArgs... accelerators) {
             return accelerators(List.of(accelerators));
         }
+
         public Builder diskConfig(@Nullable Output<DiskConfigArgs> diskConfig) {
-            this.diskConfig = diskConfig;
+            $.diskConfig = diskConfig;
             return this;
         }
-        public Builder diskConfig(@Nullable DiskConfigArgs diskConfig) {
-            this.diskConfig = Codegen.ofNullable(diskConfig);
-            return this;
+
+        public Builder diskConfig(DiskConfigArgs diskConfig) {
+            return diskConfig(Output.of(diskConfig));
         }
+
         public Builder imageUri(@Nullable Output<String> imageUri) {
-            this.imageUri = imageUri;
+            $.imageUri = imageUri;
             return this;
         }
-        public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Codegen.ofNullable(imageUri);
-            return this;
+
+        public Builder imageUri(String imageUri) {
+            return imageUri(Output.of(imageUri));
         }
+
         public Builder machineTypeUri(@Nullable Output<String> machineTypeUri) {
-            this.machineTypeUri = machineTypeUri;
+            $.machineTypeUri = machineTypeUri;
             return this;
         }
-        public Builder machineTypeUri(@Nullable String machineTypeUri) {
-            this.machineTypeUri = Codegen.ofNullable(machineTypeUri);
-            return this;
+
+        public Builder machineTypeUri(String machineTypeUri) {
+            return machineTypeUri(Output.of(machineTypeUri));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
-            this.numInstances = numInstances;
+            $.numInstances = numInstances;
             return this;
         }
-        public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Codegen.ofNullable(numInstances);
-            return this;
+
+        public Builder numInstances(Integer numInstances) {
+            return numInstances(Output.of(numInstances));
         }
+
         public Builder preemptibility(@Nullable Output<InstanceGroupConfigPreemptibility> preemptibility) {
-            this.preemptibility = preemptibility;
+            $.preemptibility = preemptibility;
             return this;
         }
-        public Builder preemptibility(@Nullable InstanceGroupConfigPreemptibility preemptibility) {
-            this.preemptibility = Codegen.ofNullable(preemptibility);
-            return this;
-        }        public InstanceGroupConfigArgs build() {
-            return new InstanceGroupConfigArgs(accelerators, diskConfig, imageUri, machineTypeUri, minCpuPlatform, numInstances, preemptibility);
+
+        public Builder preemptibility(InstanceGroupConfigPreemptibility preemptibility) {
+            return preemptibility(Output.of(preemptibility));
+        }
+
+        public InstanceGroupConfigArgs build() {
+            return $;
         }
     }
+
 }

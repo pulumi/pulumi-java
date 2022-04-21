@@ -22,48 +22,49 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse extends com.pulum
      * 
      */
     @Import(name="columns", required=true)
-      private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
+    private List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
 
     public List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns() {
         return this.columns;
     }
 
-    public GoogleCloudDatacatalogV1beta1SchemaResponse(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1beta1SchemaResponse() {}
 
-    private GoogleCloudDatacatalogV1beta1SchemaResponse() {
-        this.columns = List.of();
+    private GoogleCloudDatacatalogV1beta1SchemaResponse(GoogleCloudDatacatalogV1beta1SchemaResponse $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1beta1SchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
+        private GoogleCloudDatacatalogV1beta1SchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1beta1SchemaResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1beta1SchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new GoogleCloudDatacatalogV1beta1SchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(GoogleCloudDatacatalogV1beta1ColumnSchemaResponse... columns) {
             return columns(List.of(columns));
-        }        public GoogleCloudDatacatalogV1beta1SchemaResponse build() {
-            return new GoogleCloudDatacatalogV1beta1SchemaResponse(columns);
+        }
+
+        public GoogleCloudDatacatalogV1beta1SchemaResponse build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            return $;
         }
     }
+
 }

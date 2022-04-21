@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WorkloadIdentityConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="workloadPool")
-      private final @Nullable Output<String> workloadPool;
+    private @Nullable Output<String> workloadPool;
 
-    public Output<String> workloadPool() {
-        return this.workloadPool == null ? Codegen.empty() : this.workloadPool;
+    public Optional<Output<String>> workloadPool() {
+        return Optional.ofNullable(this.workloadPool);
     }
 
-    public WorkloadIdentityConfigArgs(@Nullable Output<String> workloadPool) {
-        this.workloadPool = workloadPool;
-    }
+    private WorkloadIdentityConfigArgs() {}
 
-    private WorkloadIdentityConfigArgs() {
-        this.workloadPool = Codegen.empty();
+    private WorkloadIdentityConfigArgs(WorkloadIdentityConfigArgs $) {
+        this.workloadPool = $.workloadPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> workloadPool;
+        private WorkloadIdentityConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityConfigArgs();
         }
 
         public Builder(WorkloadIdentityConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workloadPool = defaults.workloadPool;
+            $ = new WorkloadIdentityConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder workloadPool(@Nullable Output<String> workloadPool) {
-            this.workloadPool = workloadPool;
+            $.workloadPool = workloadPool;
             return this;
         }
-        public Builder workloadPool(@Nullable String workloadPool) {
-            this.workloadPool = Codegen.ofNullable(workloadPool);
-            return this;
-        }        public WorkloadIdentityConfigArgs build() {
-            return new WorkloadIdentityConfigArgs(workloadPool);
+
+        public Builder workloadPool(String workloadPool) {
+            return workloadPool(Output.of(workloadPool));
+        }
+
+        public WorkloadIdentityConfigArgs build() {
+            return $;
         }
     }
+
 }

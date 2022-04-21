@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class MeshCertificatesArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="enableCertificates")
-      private final @Nullable Output<Boolean> enableCertificates;
+    private @Nullable Output<Boolean> enableCertificates;
 
-    public Output<Boolean> enableCertificates() {
-        return this.enableCertificates == null ? Codegen.empty() : this.enableCertificates;
+    public Optional<Output<Boolean>> enableCertificates() {
+        return Optional.ofNullable(this.enableCertificates);
     }
 
-    public MeshCertificatesArgs(@Nullable Output<Boolean> enableCertificates) {
-        this.enableCertificates = enableCertificates;
-    }
+    private MeshCertificatesArgs() {}
 
-    private MeshCertificatesArgs() {
-        this.enableCertificates = Codegen.empty();
+    private MeshCertificatesArgs(MeshCertificatesArgs $) {
+        this.enableCertificates = $.enableCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MeshCertificatesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enableCertificates;
+        private MeshCertificatesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MeshCertificatesArgs();
         }
 
         public Builder(MeshCertificatesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableCertificates = defaults.enableCertificates;
+            $ = new MeshCertificatesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enableCertificates(@Nullable Output<Boolean> enableCertificates) {
-            this.enableCertificates = enableCertificates;
+            $.enableCertificates = enableCertificates;
             return this;
         }
-        public Builder enableCertificates(@Nullable Boolean enableCertificates) {
-            this.enableCertificates = Codegen.ofNullable(enableCertificates);
-            return this;
-        }        public MeshCertificatesArgs build() {
-            return new MeshCertificatesArgs(enableCertificates);
+
+        public Builder enableCertificates(Boolean enableCertificates) {
+            return enableCertificates(Output.of(enableCertificates));
+        }
+
+        public MeshCertificatesArgs build() {
+            return $;
         }
     }
+
 }

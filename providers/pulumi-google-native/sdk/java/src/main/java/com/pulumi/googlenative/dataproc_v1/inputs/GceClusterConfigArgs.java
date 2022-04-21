@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.enums.GceClusterConfigPrivateIpv6GoogleAccess;
 import com.pulumi.googlenative.dataproc_v1.inputs.ConfidentialInstanceConfigArgs;
 import com.pulumi.googlenative.dataproc_v1.inputs.NodeGroupAffinityArgs;
@@ -16,6 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="confidentialInstanceConfig")
-      private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
+    private @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
-    public Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Codegen.empty() : this.confidentialInstanceConfig;
+    public Optional<Output<ConfidentialInstanceConfigArgs>> confidentialInstanceConfig() {
+        return Optional.ofNullable(this.confidentialInstanceConfig);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="internalIpOnly")
-      private final @Nullable Output<Boolean> internalIpOnly;
+    private @Nullable Output<Boolean> internalIpOnly;
 
-    public Output<Boolean> internalIpOnly() {
-        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
+    public Optional<Output<Boolean>> internalIpOnly() {
+        return Optional.ofNullable(this.internalIpOnly);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="networkUri")
-      private final @Nullable Output<String> networkUri;
+    private @Nullable Output<String> networkUri;
 
-    public Output<String> networkUri() {
-        return this.networkUri == null ? Codegen.empty() : this.networkUri;
+    public Optional<Output<String>> networkUri() {
+        return Optional.ofNullable(this.networkUri);
     }
 
     /**
@@ -76,10 +76,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="nodeGroupAffinity")
-      private final @Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity;
+    private @Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity;
 
-    public Output<NodeGroupAffinityArgs> nodeGroupAffinity() {
-        return this.nodeGroupAffinity == null ? Codegen.empty() : this.nodeGroupAffinity;
+    public Optional<Output<NodeGroupAffinityArgs>> nodeGroupAffinity() {
+        return Optional.ofNullable(this.nodeGroupAffinity);
     }
 
     /**
@@ -87,10 +87,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="privateIpv6GoogleAccess")
-      private final @Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
+    private @Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
-    public Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
+    public Optional<Output<GceClusterConfigPrivateIpv6GoogleAccess>> privateIpv6GoogleAccess() {
+        return Optional.ofNullable(this.privateIpv6GoogleAccess);
     }
 
     /**
@@ -98,10 +98,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="reservationAffinity")
-      private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
+    private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
-    public Output<ReservationAffinityArgs> reservationAffinity() {
-        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
+    public Optional<Output<ReservationAffinityArgs>> reservationAffinity() {
+        return Optional.ofNullable(this.reservationAffinity);
     }
 
     /**
@@ -109,10 +109,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -120,10 +120,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="serviceAccountScopes")
-      private final @Nullable Output<List<String>> serviceAccountScopes;
+    private @Nullable Output<List<String>> serviceAccountScopes;
 
-    public Output<List<String>> serviceAccountScopes() {
-        return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
+    public Optional<Output<List<String>>> serviceAccountScopes() {
+        return Optional.ofNullable(this.serviceAccountScopes);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<ShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -142,10 +142,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subnetworkUri")
-      private final @Nullable Output<String> subnetworkUri;
+    private @Nullable Output<String> subnetworkUri;
 
-    public Output<String> subnetworkUri() {
-        return this.subnetworkUri == null ? Codegen.empty() : this.subnetworkUri;
+    public Optional<Output<String>> subnetworkUri() {
+        return Optional.ofNullable(this.subnetworkUri);
     }
 
     /**
@@ -153,10 +153,10 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -164,212 +164,176 @@ public final class GceClusterConfigArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="zoneUri")
-      private final @Nullable Output<String> zoneUri;
+    private @Nullable Output<String> zoneUri;
 
-    public Output<String> zoneUri() {
-        return this.zoneUri == null ? Codegen.empty() : this.zoneUri;
+    public Optional<Output<String>> zoneUri() {
+        return Optional.ofNullable(this.zoneUri);
     }
 
-    public GceClusterConfigArgs(
-        @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig,
-        @Nullable Output<Boolean> internalIpOnly,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> networkUri,
-        @Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity,
-        @Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess,
-        @Nullable Output<ReservationAffinityArgs> reservationAffinity,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<List<String>> serviceAccountScopes,
-        @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Output<String> subnetworkUri,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<String> zoneUri) {
-        this.confidentialInstanceConfig = confidentialInstanceConfig;
-        this.internalIpOnly = internalIpOnly;
-        this.metadata = metadata;
-        this.networkUri = networkUri;
-        this.nodeGroupAffinity = nodeGroupAffinity;
-        this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
-        this.reservationAffinity = reservationAffinity;
-        this.serviceAccount = serviceAccount;
-        this.serviceAccountScopes = serviceAccountScopes;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.subnetworkUri = subnetworkUri;
-        this.tags = tags;
-        this.zoneUri = zoneUri;
-    }
+    private GceClusterConfigArgs() {}
 
-    private GceClusterConfigArgs() {
-        this.confidentialInstanceConfig = Codegen.empty();
-        this.internalIpOnly = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.networkUri = Codegen.empty();
-        this.nodeGroupAffinity = Codegen.empty();
-        this.privateIpv6GoogleAccess = Codegen.empty();
-        this.reservationAffinity = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.serviceAccountScopes = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.subnetworkUri = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.zoneUri = Codegen.empty();
+    private GceClusterConfigArgs(GceClusterConfigArgs $) {
+        this.confidentialInstanceConfig = $.confidentialInstanceConfig;
+        this.internalIpOnly = $.internalIpOnly;
+        this.metadata = $.metadata;
+        this.networkUri = $.networkUri;
+        this.nodeGroupAffinity = $.nodeGroupAffinity;
+        this.privateIpv6GoogleAccess = $.privateIpv6GoogleAccess;
+        this.reservationAffinity = $.reservationAffinity;
+        this.serviceAccount = $.serviceAccount;
+        this.serviceAccountScopes = $.serviceAccountScopes;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.subnetworkUri = $.subnetworkUri;
+        this.tags = $.tags;
+        this.zoneUri = $.zoneUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GceClusterConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
-        private @Nullable Output<Boolean> internalIpOnly;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> networkUri;
-        private @Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity;
-        private @Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
-        private @Nullable Output<ReservationAffinityArgs> reservationAffinity;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<List<String>> serviceAccountScopes;
-        private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Output<String> subnetworkUri;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<String> zoneUri;
+        private GceClusterConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GceClusterConfigArgs();
         }
 
         public Builder(GceClusterConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidentialInstanceConfig = defaults.confidentialInstanceConfig;
-    	      this.internalIpOnly = defaults.internalIpOnly;
-    	      this.metadata = defaults.metadata;
-    	      this.networkUri = defaults.networkUri;
-    	      this.nodeGroupAffinity = defaults.nodeGroupAffinity;
-    	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
-    	      this.reservationAffinity = defaults.reservationAffinity;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.serviceAccountScopes = defaults.serviceAccountScopes;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.subnetworkUri = defaults.subnetworkUri;
-    	      this.tags = defaults.tags;
-    	      this.zoneUri = defaults.zoneUri;
+            $ = new GceClusterConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder confidentialInstanceConfig(@Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = confidentialInstanceConfig;
+            $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
-        public Builder confidentialInstanceConfig(@Nullable ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Codegen.ofNullable(confidentialInstanceConfig);
-            return this;
+
+        public Builder confidentialInstanceConfig(ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
+            return confidentialInstanceConfig(Output.of(confidentialInstanceConfig));
         }
+
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
-            this.internalIpOnly = internalIpOnly;
+            $.internalIpOnly = internalIpOnly;
             return this;
         }
-        public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
-            return this;
+
+        public Builder internalIpOnly(Boolean internalIpOnly) {
+            return internalIpOnly(Output.of(internalIpOnly));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder networkUri(@Nullable Output<String> networkUri) {
-            this.networkUri = networkUri;
+            $.networkUri = networkUri;
             return this;
         }
-        public Builder networkUri(@Nullable String networkUri) {
-            this.networkUri = Codegen.ofNullable(networkUri);
-            return this;
+
+        public Builder networkUri(String networkUri) {
+            return networkUri(Output.of(networkUri));
         }
+
         public Builder nodeGroupAffinity(@Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity) {
-            this.nodeGroupAffinity = nodeGroupAffinity;
+            $.nodeGroupAffinity = nodeGroupAffinity;
             return this;
         }
-        public Builder nodeGroupAffinity(@Nullable NodeGroupAffinityArgs nodeGroupAffinity) {
-            this.nodeGroupAffinity = Codegen.ofNullable(nodeGroupAffinity);
-            return this;
+
+        public Builder nodeGroupAffinity(NodeGroupAffinityArgs nodeGroupAffinity) {
+            return nodeGroupAffinity(Output.of(nodeGroupAffinity));
         }
+
         public Builder privateIpv6GoogleAccess(@Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
+            $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
-        public Builder privateIpv6GoogleAccess(@Nullable GceClusterConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
-            return this;
+
+        public Builder privateIpv6GoogleAccess(GceClusterConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
+            return privateIpv6GoogleAccess(Output.of(privateIpv6GoogleAccess));
         }
+
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
-            this.reservationAffinity = reservationAffinity;
+            $.reservationAffinity = reservationAffinity;
             return this;
         }
-        public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
-            return this;
+
+        public Builder reservationAffinity(ReservationAffinityArgs reservationAffinity) {
+            return reservationAffinity(Output.of(reservationAffinity));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
-            this.serviceAccountScopes = serviceAccountScopes;
+            $.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
-        public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Codegen.ofNullable(serviceAccountScopes);
-            return this;
+
+        public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
+            return serviceAccountScopes(Output.of(serviceAccountScopes));
         }
+
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
             return serviceAccountScopes(List.of(serviceAccountScopes));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder subnetworkUri(@Nullable Output<String> subnetworkUri) {
-            this.subnetworkUri = subnetworkUri;
+            $.subnetworkUri = subnetworkUri;
             return this;
         }
-        public Builder subnetworkUri(@Nullable String subnetworkUri) {
-            this.subnetworkUri = Codegen.ofNullable(subnetworkUri);
-            return this;
+
+        public Builder subnetworkUri(String subnetworkUri) {
+            return subnetworkUri(Output.of(subnetworkUri));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder zoneUri(@Nullable Output<String> zoneUri) {
-            this.zoneUri = zoneUri;
+            $.zoneUri = zoneUri;
             return this;
         }
-        public Builder zoneUri(@Nullable String zoneUri) {
-            this.zoneUri = Codegen.ofNullable(zoneUri);
-            return this;
-        }        public GceClusterConfigArgs build() {
-            return new GceClusterConfigArgs(confidentialInstanceConfig, internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
+
+        public Builder zoneUri(String zoneUri) {
+            return zoneUri(Output.of(zoneUri));
+        }
+
+        public GceClusterConfigArgs build() {
+            return $;
         }
     }
+
 }

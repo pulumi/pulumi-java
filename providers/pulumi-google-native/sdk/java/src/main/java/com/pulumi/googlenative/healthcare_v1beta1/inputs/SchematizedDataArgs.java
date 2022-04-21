@@ -5,9 +5,9 @@ package com.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SchematizedDataArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SchematizedDataArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="error")
-      private final @Nullable Output<String> error;
+    private @Nullable Output<String> error;
 
-    public Output<String> error() {
-        return this.error == null ? Codegen.empty() : this.error;
+    public Optional<Output<String>> error() {
+        return Optional.ofNullable(this.error);
     }
 
-    public SchematizedDataArgs(
-        @Nullable Output<String> data,
-        @Nullable Output<String> error) {
-        this.data = data;
-        this.error = error;
-    }
+    private SchematizedDataArgs() {}
 
-    private SchematizedDataArgs() {
-        this.data = Codegen.empty();
-        this.error = Codegen.empty();
+    private SchematizedDataArgs(SchematizedDataArgs $) {
+        this.data = $.data;
+        this.error = $.error;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchematizedDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> data;
-        private @Nullable Output<String> error;
+        private SchematizedDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchematizedDataArgs();
         }
 
         public Builder(SchematizedDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.data = defaults.data;
-    	      this.error = defaults.error;
+            $ = new SchematizedDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder error(@Nullable Output<String> error) {
-            this.error = error;
+            $.error = error;
             return this;
         }
-        public Builder error(@Nullable String error) {
-            this.error = Codegen.ofNullable(error);
-            return this;
-        }        public SchematizedDataArgs build() {
-            return new SchematizedDataArgs(data, error);
+
+        public Builder error(String error) {
+            return error(Output.of(error));
+        }
+
+        public SchematizedDataArgs build() {
+            return $;
         }
     }
+
 }

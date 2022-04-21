@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class PullTargetResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final PullTargetResponse Empty = new PullTargetResponse();
 
-    public PullTargetResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(PullTargetResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private PullTargetResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(PullTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new PullTargetResponse();
         }
         public PullTargetResponse build() {
-            return new PullTargetResponse();
+            return $;
         }
     }
+
 }

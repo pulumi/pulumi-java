@@ -13,45 +13,45 @@ public final class GetOrganizationIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetOrganizationIamPolicyArgs Empty = new GetOrganizationIamPolicyArgs();
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetOrganizationIamPolicyArgs(String organizationId) {
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetOrganizationIamPolicyArgs() {}
 
-    private GetOrganizationIamPolicyArgs() {
-        this.organizationId = null;
+    private GetOrganizationIamPolicyArgs(GetOrganizationIamPolicyArgs $) {
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOrganizationIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String organizationId;
+        private GetOrganizationIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOrganizationIamPolicyArgs();
         }
 
         public Builder(GetOrganizationIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetOrganizationIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetOrganizationIamPolicyArgs build() {
-            return new GetOrganizationIamPolicyArgs(organizationId);
+        }
+
+        public GetOrganizationIamPolicyArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

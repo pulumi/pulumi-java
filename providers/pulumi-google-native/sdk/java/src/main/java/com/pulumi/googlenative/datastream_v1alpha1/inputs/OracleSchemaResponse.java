@@ -23,7 +23,7 @@ public final class OracleSchemaResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="oracleTables", required=true)
-      private final List<OracleTableResponse> oracleTables;
+    private List<OracleTableResponse> oracleTables;
 
     public List<OracleTableResponse> oracleTables() {
         return this.oracleTables;
@@ -34,58 +34,56 @@ public final class OracleSchemaResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="schemaName", required=true)
-      private final String schemaName;
+    private String schemaName;
 
     public String schemaName() {
         return this.schemaName;
     }
 
-    public OracleSchemaResponse(
-        List<OracleTableResponse> oracleTables,
-        String schemaName) {
-        this.oracleTables = Objects.requireNonNull(oracleTables, "expected parameter 'oracleTables' to be non-null");
-        this.schemaName = Objects.requireNonNull(schemaName, "expected parameter 'schemaName' to be non-null");
-    }
+    private OracleSchemaResponse() {}
 
-    private OracleSchemaResponse() {
-        this.oracleTables = List.of();
-        this.schemaName = null;
+    private OracleSchemaResponse(OracleSchemaResponse $) {
+        this.oracleTables = $.oracleTables;
+        this.schemaName = $.schemaName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSchemaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<OracleTableResponse> oracleTables;
-        private String schemaName;
+        private OracleSchemaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSchemaResponse();
         }
 
         public Builder(OracleSchemaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.oracleTables = defaults.oracleTables;
-    	      this.schemaName = defaults.schemaName;
+            $ = new OracleSchemaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder oracleTables(List<OracleTableResponse> oracleTables) {
-            this.oracleTables = Objects.requireNonNull(oracleTables);
+            $.oracleTables = oracleTables;
             return this;
         }
+
         public Builder oracleTables(OracleTableResponse... oracleTables) {
             return oracleTables(List.of(oracleTables));
         }
+
         public Builder schemaName(String schemaName) {
-            this.schemaName = Objects.requireNonNull(schemaName);
+            $.schemaName = schemaName;
             return this;
-        }        public OracleSchemaResponse build() {
-            return new OracleSchemaResponse(oracleTables, schemaName);
+        }
+
+        public OracleSchemaResponse build() {
+            $.oracleTables = Objects.requireNonNull($.oracleTables, "expected parameter 'oracleTables' to be non-null");
+            $.schemaName = Objects.requireNonNull($.schemaName, "expected parameter 'schemaName' to be non-null");
+            return $;
         }
     }
+
 }

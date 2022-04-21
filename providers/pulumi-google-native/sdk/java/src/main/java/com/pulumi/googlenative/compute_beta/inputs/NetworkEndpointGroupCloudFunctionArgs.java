@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="function")
-      private final @Nullable Output<String> function;
+    private @Nullable Output<String> function;
 
-    public Output<String> function() {
-        return this.function == null ? Codegen.empty() : this.function;
+    public Optional<Output<String>> function() {
+        return Optional.ofNullable(this.function);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends com.pulumi.reso
      * 
      */
     @Import(name="urlMask")
-      private final @Nullable Output<String> urlMask;
+    private @Nullable Output<String> urlMask;
 
-    public Output<String> urlMask() {
-        return this.urlMask == null ? Codegen.empty() : this.urlMask;
+    public Optional<Output<String>> urlMask() {
+        return Optional.ofNullable(this.urlMask);
     }
 
-    public NetworkEndpointGroupCloudFunctionArgs(
-        @Nullable Output<String> function,
-        @Nullable Output<String> urlMask) {
-        this.function = function;
-        this.urlMask = urlMask;
-    }
+    private NetworkEndpointGroupCloudFunctionArgs() {}
 
-    private NetworkEndpointGroupCloudFunctionArgs() {
-        this.function = Codegen.empty();
-        this.urlMask = Codegen.empty();
+    private NetworkEndpointGroupCloudFunctionArgs(NetworkEndpointGroupCloudFunctionArgs $) {
+        this.function = $.function;
+        this.urlMask = $.urlMask;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointGroupCloudFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> function;
-        private @Nullable Output<String> urlMask;
+        private NetworkEndpointGroupCloudFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointGroupCloudFunctionArgs();
         }
 
         public Builder(NetworkEndpointGroupCloudFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.function = defaults.function;
-    	      this.urlMask = defaults.urlMask;
+            $ = new NetworkEndpointGroupCloudFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder function(@Nullable Output<String> function) {
-            this.function = function;
+            $.function = function;
             return this;
         }
-        public Builder function(@Nullable String function) {
-            this.function = Codegen.ofNullable(function);
-            return this;
+
+        public Builder function(String function) {
+            return function(Output.of(function));
         }
+
         public Builder urlMask(@Nullable Output<String> urlMask) {
-            this.urlMask = urlMask;
+            $.urlMask = urlMask;
             return this;
         }
-        public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Codegen.ofNullable(urlMask);
-            return this;
-        }        public NetworkEndpointGroupCloudFunctionArgs build() {
-            return new NetworkEndpointGroupCloudFunctionArgs(function, urlMask);
+
+        public Builder urlMask(String urlMask) {
+            return urlMask(Output.of(urlMask));
+        }
+
+        public NetworkEndpointGroupCloudFunctionArgs build() {
+            return $;
         }
     }
+
 }

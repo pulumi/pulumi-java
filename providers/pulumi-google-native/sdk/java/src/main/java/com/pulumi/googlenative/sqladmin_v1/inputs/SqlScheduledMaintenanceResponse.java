@@ -18,7 +18,7 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
     public static final SqlScheduledMaintenanceResponse Empty = new SqlScheduledMaintenanceResponse();
 
     @Import(name="canDefer", required=true)
-      private final Boolean canDefer;
+    private Boolean canDefer;
 
     public Boolean canDefer() {
         return this.canDefer;
@@ -29,7 +29,7 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="canReschedule", required=true)
-      private final Boolean canReschedule;
+    private Boolean canReschedule;
 
     public Boolean canReschedule() {
         return this.canReschedule;
@@ -40,7 +40,7 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="scheduleDeadlineTime", required=true)
-      private final String scheduleDeadlineTime;
+    private String scheduleDeadlineTime;
 
     public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
@@ -51,73 +51,66 @@ public final class SqlScheduledMaintenanceResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public SqlScheduledMaintenanceResponse(
-        Boolean canDefer,
-        Boolean canReschedule,
-        String scheduleDeadlineTime,
-        String startTime) {
-        this.canDefer = Objects.requireNonNull(canDefer, "expected parameter 'canDefer' to be non-null");
-        this.canReschedule = Objects.requireNonNull(canReschedule, "expected parameter 'canReschedule' to be non-null");
-        this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime, "expected parameter 'scheduleDeadlineTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private SqlScheduledMaintenanceResponse() {}
 
-    private SqlScheduledMaintenanceResponse() {
-        this.canDefer = null;
-        this.canReschedule = null;
-        this.scheduleDeadlineTime = null;
-        this.startTime = null;
+    private SqlScheduledMaintenanceResponse(SqlScheduledMaintenanceResponse $) {
+        this.canDefer = $.canDefer;
+        this.canReschedule = $.canReschedule;
+        this.scheduleDeadlineTime = $.scheduleDeadlineTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlScheduledMaintenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canDefer;
-        private Boolean canReschedule;
-        private String scheduleDeadlineTime;
-        private String startTime;
+        private SqlScheduledMaintenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlScheduledMaintenanceResponse();
         }
 
         public Builder(SqlScheduledMaintenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canDefer = defaults.canDefer;
-    	      this.canReschedule = defaults.canReschedule;
-    	      this.scheduleDeadlineTime = defaults.scheduleDeadlineTime;
-    	      this.startTime = defaults.startTime;
+            $ = new SqlScheduledMaintenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canDefer(Boolean canDefer) {
-            this.canDefer = Objects.requireNonNull(canDefer);
+            $.canDefer = canDefer;
             return this;
         }
+
         public Builder canReschedule(Boolean canReschedule) {
-            this.canReschedule = Objects.requireNonNull(canReschedule);
+            $.canReschedule = canReschedule;
             return this;
         }
+
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
+            $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public SqlScheduledMaintenanceResponse build() {
-            return new SqlScheduledMaintenanceResponse(canDefer, canReschedule, scheduleDeadlineTime, startTime);
+        }
+
+        public SqlScheduledMaintenanceResponse build() {
+            $.canDefer = Objects.requireNonNull($.canDefer, "expected parameter 'canDefer' to be non-null");
+            $.canReschedule = Objects.requireNonNull($.canReschedule, "expected parameter 'canReschedule' to be non-null");
+            $.scheduleDeadlineTime = Objects.requireNonNull($.scheduleDeadlineTime, "expected parameter 'scheduleDeadlineTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

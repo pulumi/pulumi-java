@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AvroFileFormatArgs extends com.pulumi.resources.ResourceArgs 
 
     public static final AvroFileFormatArgs Empty = new AvroFileFormatArgs();
 
-    public AvroFileFormatArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AvroFileFormatArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AvroFileFormatArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AvroFileFormatArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AvroFileFormatArgs();
         }
         public AvroFileFormatArgs build() {
-            return new AvroFileFormatArgs();
+            return $;
         }
     }
+
 }

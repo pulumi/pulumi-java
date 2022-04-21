@@ -15,62 +15,58 @@ public final class GetAnnotationSpecSetArgs extends com.pulumi.resources.InvokeA
     public static final GetAnnotationSpecSetArgs Empty = new GetAnnotationSpecSetArgs();
 
     @Import(name="annotationSpecSetId", required=true)
-      private final String annotationSpecSetId;
+    private String annotationSpecSetId;
 
     public String annotationSpecSetId() {
         return this.annotationSpecSetId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAnnotationSpecSetArgs(
-        String annotationSpecSetId,
-        @Nullable String project) {
-        this.annotationSpecSetId = Objects.requireNonNull(annotationSpecSetId, "expected parameter 'annotationSpecSetId' to be non-null");
-        this.project = project;
-    }
+    private GetAnnotationSpecSetArgs() {}
 
-    private GetAnnotationSpecSetArgs() {
-        this.annotationSpecSetId = null;
-        this.project = null;
+    private GetAnnotationSpecSetArgs(GetAnnotationSpecSetArgs $) {
+        this.annotationSpecSetId = $.annotationSpecSetId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAnnotationSpecSetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotationSpecSetId;
-        private @Nullable String project;
+        private GetAnnotationSpecSetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAnnotationSpecSetArgs();
         }
 
         public Builder(GetAnnotationSpecSetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationSpecSetId = defaults.annotationSpecSetId;
-    	      this.project = defaults.project;
+            $ = new GetAnnotationSpecSetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationSpecSetId(String annotationSpecSetId) {
-            this.annotationSpecSetId = Objects.requireNonNull(annotationSpecSetId);
+            $.annotationSpecSetId = annotationSpecSetId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAnnotationSpecSetArgs build() {
-            return new GetAnnotationSpecSetArgs(annotationSpecSetId, project);
+        }
+
+        public GetAnnotationSpecSetArgs build() {
+            $.annotationSpecSetId = Objects.requireNonNull($.annotationSpecSetId, "expected parameter 'annotationSpecSetId' to be non-null");
+            return $;
         }
     }
+
 }

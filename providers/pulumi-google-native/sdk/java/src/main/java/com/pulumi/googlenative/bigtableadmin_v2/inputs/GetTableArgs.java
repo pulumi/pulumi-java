@@ -15,94 +15,85 @@ public final class GetTableArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTableArgs Empty = new GetTableArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="tableId", required=true)
-      private final String tableId;
+    private String tableId;
 
     public String tableId() {
         return this.tableId;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetTableArgs(
-        String instanceId,
-        @Nullable String project,
-        String tableId,
-        @Nullable String view) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.project = project;
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-        this.view = view;
-    }
+    private GetTableArgs() {}
 
-    private GetTableArgs() {
-        this.instanceId = null;
-        this.project = null;
-        this.tableId = null;
-        this.view = null;
+    private GetTableArgs(GetTableArgs $) {
+        this.instanceId = $.instanceId;
+        this.project = $.project;
+        this.tableId = $.tableId;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private @Nullable String project;
-        private String tableId;
-        private @Nullable String view;
+        private GetTableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTableArgs();
         }
 
         public Builder(GetTableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
-    	      this.view = defaults.view;
+            $ = new GetTableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetTableArgs build() {
-            return new GetTableArgs(instanceId, project, tableId, view);
+        }
+
+        public GetTableArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

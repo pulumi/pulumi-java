@@ -23,7 +23,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fingerprint", required=true)
-      private final String fingerprint;
+    private String fingerprint;
 
     public String fingerprint() {
         return this.fingerprint;
@@ -34,7 +34,7 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="items", required=true)
-      private final List<MetadataItemsItemResponse> items;
+    private List<MetadataItemsItemResponse> items;
 
     public List<MetadataItemsItemResponse> items() {
         return this.items;
@@ -45,67 +45,63 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
     }
 
-    public MetadataResponse(
-        String fingerprint,
-        List<MetadataItemsItemResponse> items,
-        String kind) {
-        this.fingerprint = Objects.requireNonNull(fingerprint, "expected parameter 'fingerprint' to be non-null");
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-    }
+    private MetadataResponse() {}
 
-    private MetadataResponse() {
-        this.fingerprint = null;
-        this.items = List.of();
-        this.kind = null;
+    private MetadataResponse(MetadataResponse $) {
+        this.fingerprint = $.fingerprint;
+        this.items = $.items;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fingerprint;
-        private List<MetadataItemsItemResponse> items;
-        private String kind;
+        private MetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataResponse();
         }
 
         public Builder(MetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.items = defaults.items;
-    	      this.kind = defaults.kind;
+            $ = new MetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fingerprint(String fingerprint) {
-            this.fingerprint = Objects.requireNonNull(fingerprint);
+            $.fingerprint = fingerprint;
             return this;
         }
+
         public Builder items(List<MetadataItemsItemResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(MetadataItemsItemResponse... items) {
             return items(List.of(items));
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
-        }        public MetadataResponse build() {
-            return new MetadataResponse(fingerprint, items, kind);
+        }
+
+        public MetadataResponse build() {
+            $.fingerprint = Objects.requireNonNull($.fingerprint, "expected parameter 'fingerprint' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            return $;
         }
     }
+
 }

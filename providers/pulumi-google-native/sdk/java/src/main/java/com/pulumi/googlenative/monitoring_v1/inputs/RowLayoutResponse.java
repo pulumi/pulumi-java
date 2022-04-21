@@ -22,48 +22,49 @@ public final class RowLayoutResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rows", required=true)
-      private final List<RowResponse> rows;
+    private List<RowResponse> rows;
 
     public List<RowResponse> rows() {
         return this.rows;
     }
 
-    public RowLayoutResponse(List<RowResponse> rows) {
-        this.rows = Objects.requireNonNull(rows, "expected parameter 'rows' to be non-null");
-    }
+    private RowLayoutResponse() {}
 
-    private RowLayoutResponse() {
-        this.rows = List.of();
+    private RowLayoutResponse(RowLayoutResponse $) {
+        this.rows = $.rows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RowLayoutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<RowResponse> rows;
+        private RowLayoutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RowLayoutResponse();
         }
 
         public Builder(RowLayoutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rows = defaults.rows;
+            $ = new RowLayoutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder rows(List<RowResponse> rows) {
-            this.rows = Objects.requireNonNull(rows);
+            $.rows = rows;
             return this;
         }
+
         public Builder rows(RowResponse... rows) {
             return rows(List.of(rows));
-        }        public RowLayoutResponse build() {
-            return new RowLayoutResponse(rows);
+        }
+
+        public RowLayoutResponse build() {
+            $.rows = Objects.requireNonNull($.rows, "expected parameter 'rows' to be non-null");
+            return $;
         }
     }
+
 }

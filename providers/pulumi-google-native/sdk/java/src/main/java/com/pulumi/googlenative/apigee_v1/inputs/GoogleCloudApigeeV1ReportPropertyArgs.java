@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="property")
-      private final @Nullable Output<String> property;
+    private @Nullable Output<String> property;
 
-    public Output<String> property() {
-        return this.property == null ? Codegen.empty() : this.property;
+    public Optional<Output<String>> property() {
+        return Optional.ofNullable(this.property);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends com.pulumi.reso
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;
+    private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public GoogleCloudApigeeV1ReportPropertyArgs(
-        @Nullable Output<String> property,
-        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value) {
-        this.property = property;
-        this.value = value;
-    }
+    private GoogleCloudApigeeV1ReportPropertyArgs() {}
 
-    private GoogleCloudApigeeV1ReportPropertyArgs() {
-        this.property = Codegen.empty();
-        this.value = Codegen.empty();
+    private GoogleCloudApigeeV1ReportPropertyArgs(GoogleCloudApigeeV1ReportPropertyArgs $) {
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1ReportPropertyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> property;
-        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value;
+        private GoogleCloudApigeeV1ReportPropertyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1ReportPropertyArgs();
         }
 
         public Builder(GoogleCloudApigeeV1ReportPropertyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudApigeeV1ReportPropertyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder property(@Nullable Output<String> property) {
-            this.property = property;
+            $.property = property;
             return this;
         }
-        public Builder property(@Nullable String property) {
-            this.property = Codegen.ofNullable(property);
-            return this;
+
+        public Builder property(String property) {
+            return property(Output.of(property));
         }
+
         public Builder value(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable List<GoogleCloudApigeeV1AttributeArgs> value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(List<GoogleCloudApigeeV1AttributeArgs> value) {
+            return value(Output.of(value));
         }
+
         public Builder value(GoogleCloudApigeeV1AttributeArgs... value) {
             return value(List.of(value));
-        }        public GoogleCloudApigeeV1ReportPropertyArgs build() {
-            return new GoogleCloudApigeeV1ReportPropertyArgs(property, value);
+        }
+
+        public GoogleCloudApigeeV1ReportPropertyArgs build() {
+            return $;
         }
     }
+
 }

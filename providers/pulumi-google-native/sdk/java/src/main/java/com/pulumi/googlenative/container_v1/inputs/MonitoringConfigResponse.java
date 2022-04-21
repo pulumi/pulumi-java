@@ -21,45 +21,45 @@ public final class MonitoringConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="componentConfig", required=true)
-      private final MonitoringComponentConfigResponse componentConfig;
+    private MonitoringComponentConfigResponse componentConfig;
 
     public MonitoringComponentConfigResponse componentConfig() {
         return this.componentConfig;
     }
 
-    public MonitoringConfigResponse(MonitoringComponentConfigResponse componentConfig) {
-        this.componentConfig = Objects.requireNonNull(componentConfig, "expected parameter 'componentConfig' to be non-null");
-    }
+    private MonitoringConfigResponse() {}
 
-    private MonitoringConfigResponse() {
-        this.componentConfig = null;
+    private MonitoringConfigResponse(MonitoringConfigResponse $) {
+        this.componentConfig = $.componentConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoringConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MonitoringComponentConfigResponse componentConfig;
+        private MonitoringConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoringConfigResponse();
         }
 
         public Builder(MonitoringConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentConfig = defaults.componentConfig;
+            $ = new MonitoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
-            this.componentConfig = Objects.requireNonNull(componentConfig);
+            $.componentConfig = componentConfig;
             return this;
-        }        public MonitoringConfigResponse build() {
-            return new MonitoringConfigResponse(componentConfig);
+        }
+
+        public MonitoringConfigResponse build() {
+            $.componentConfig = Objects.requireNonNull($.componentConfig, "expected parameter 'componentConfig' to be non-null");
+            return $;
         }
     }
+
 }

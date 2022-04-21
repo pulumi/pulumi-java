@@ -22,7 +22,7 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="asciiArmoredPgpPublicKey", required=true)
-      private final String asciiArmoredPgpPublicKey;
+    private String asciiArmoredPgpPublicKey;
 
     public String asciiArmoredPgpPublicKey() {
         return this.asciiArmoredPgpPublicKey;
@@ -33,7 +33,7 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
@@ -44,64 +44,59 @@ public final class AttestorPublicKeyResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="pkixPublicKey", required=true)
-      private final PkixPublicKeyResponse pkixPublicKey;
+    private PkixPublicKeyResponse pkixPublicKey;
 
     public PkixPublicKeyResponse pkixPublicKey() {
         return this.pkixPublicKey;
     }
 
-    public AttestorPublicKeyResponse(
-        String asciiArmoredPgpPublicKey,
-        String comment,
-        PkixPublicKeyResponse pkixPublicKey) {
-        this.asciiArmoredPgpPublicKey = Objects.requireNonNull(asciiArmoredPgpPublicKey, "expected parameter 'asciiArmoredPgpPublicKey' to be non-null");
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey, "expected parameter 'pkixPublicKey' to be non-null");
-    }
+    private AttestorPublicKeyResponse() {}
 
-    private AttestorPublicKeyResponse() {
-        this.asciiArmoredPgpPublicKey = null;
-        this.comment = null;
-        this.pkixPublicKey = null;
+    private AttestorPublicKeyResponse(AttestorPublicKeyResponse $) {
+        this.asciiArmoredPgpPublicKey = $.asciiArmoredPgpPublicKey;
+        this.comment = $.comment;
+        this.pkixPublicKey = $.pkixPublicKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestorPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String asciiArmoredPgpPublicKey;
-        private String comment;
-        private PkixPublicKeyResponse pkixPublicKey;
+        private AttestorPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestorPublicKeyResponse();
         }
 
         public Builder(AttestorPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.asciiArmoredPgpPublicKey = defaults.asciiArmoredPgpPublicKey;
-    	      this.comment = defaults.comment;
-    	      this.pkixPublicKey = defaults.pkixPublicKey;
+            $ = new AttestorPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder asciiArmoredPgpPublicKey(String asciiArmoredPgpPublicKey) {
-            this.asciiArmoredPgpPublicKey = Objects.requireNonNull(asciiArmoredPgpPublicKey);
+            $.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
             return this;
         }
+
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder pkixPublicKey(PkixPublicKeyResponse pkixPublicKey) {
-            this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey);
+            $.pkixPublicKey = pkixPublicKey;
             return this;
-        }        public AttestorPublicKeyResponse build() {
-            return new AttestorPublicKeyResponse(asciiArmoredPgpPublicKey, comment, pkixPublicKey);
+        }
+
+        public AttestorPublicKeyResponse build() {
+            $.asciiArmoredPgpPublicKey = Objects.requireNonNull($.asciiArmoredPgpPublicKey, "expected parameter 'asciiArmoredPgpPublicKey' to be non-null");
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.pkixPublicKey = Objects.requireNonNull($.pkixPublicKey, "expected parameter 'pkixPublicKey' to be non-null");
+            return $;
         }
     }
+
 }

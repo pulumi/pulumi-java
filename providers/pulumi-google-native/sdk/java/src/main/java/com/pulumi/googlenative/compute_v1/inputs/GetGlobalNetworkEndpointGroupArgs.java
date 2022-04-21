@@ -15,62 +15,58 @@ public final class GetGlobalNetworkEndpointGroupArgs extends com.pulumi.resource
     public static final GetGlobalNetworkEndpointGroupArgs Empty = new GetGlobalNetworkEndpointGroupArgs();
 
     @Import(name="networkEndpointGroup", required=true)
-      private final String networkEndpointGroup;
+    private String networkEndpointGroup;
 
     public String networkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetGlobalNetworkEndpointGroupArgs(
-        String networkEndpointGroup,
-        @Nullable String project) {
-        this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
-        this.project = project;
-    }
+    private GetGlobalNetworkEndpointGroupArgs() {}
 
-    private GetGlobalNetworkEndpointGroupArgs() {
-        this.networkEndpointGroup = null;
-        this.project = null;
+    private GetGlobalNetworkEndpointGroupArgs(GetGlobalNetworkEndpointGroupArgs $) {
+        this.networkEndpointGroup = $.networkEndpointGroup;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGlobalNetworkEndpointGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String networkEndpointGroup;
-        private @Nullable String project;
+        private GetGlobalNetworkEndpointGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGlobalNetworkEndpointGroupArgs();
         }
 
         public Builder(GetGlobalNetworkEndpointGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkEndpointGroup = defaults.networkEndpointGroup;
-    	      this.project = defaults.project;
+            $ = new GetGlobalNetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkEndpointGroup(String networkEndpointGroup) {
-            this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup);
+            $.networkEndpointGroup = networkEndpointGroup;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetGlobalNetworkEndpointGroupArgs build() {
-            return new GetGlobalNetworkEndpointGroupArgs(networkEndpointGroup, project);
+        }
+
+        public GetGlobalNetworkEndpointGroupArgs build() {
+            $.networkEndpointGroup = Objects.requireNonNull($.networkEndpointGroup, "expected parameter 'networkEndpointGroup' to be non-null");
+            return $;
         }
     }
+
 }

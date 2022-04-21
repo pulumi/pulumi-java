@@ -5,9 +5,9 @@ package com.pulumi.googlenative.connectors_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="issuer")
-      private final @Nullable Output<String> issuer;
+    private @Nullable Output<String> issuer;
 
-    public Output<String> issuer() {
-        return this.issuer == null ? Codegen.empty() : this.issuer;
+    public Optional<Output<String>> issuer() {
+        return Optional.ofNullable(this.issuer);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class JwtClaimsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subject")
-      private final @Nullable Output<String> subject;
+    private @Nullable Output<String> subject;
 
-    public Output<String> subject() {
-        return this.subject == null ? Codegen.empty() : this.subject;
+    public Optional<Output<String>> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
-    public JwtClaimsArgs(
-        @Nullable Output<String> audience,
-        @Nullable Output<String> issuer,
-        @Nullable Output<String> subject) {
-        this.audience = audience;
-        this.issuer = issuer;
-        this.subject = subject;
-    }
+    private JwtClaimsArgs() {}
 
-    private JwtClaimsArgs() {
-        this.audience = Codegen.empty();
-        this.issuer = Codegen.empty();
-        this.subject = Codegen.empty();
+    private JwtClaimsArgs(JwtClaimsArgs $) {
+        this.audience = $.audience;
+        this.issuer = $.issuer;
+        this.subject = $.subject;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtClaimsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> issuer;
-        private @Nullable Output<String> subject;
+        private JwtClaimsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtClaimsArgs();
         }
 
         public Builder(JwtClaimsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.issuer = defaults.issuer;
-    	      this.subject = defaults.subject;
+            $ = new JwtClaimsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder issuer(@Nullable Output<String> issuer) {
-            this.issuer = issuer;
+            $.issuer = issuer;
             return this;
         }
-        public Builder issuer(@Nullable String issuer) {
-            this.issuer = Codegen.ofNullable(issuer);
-            return this;
+
+        public Builder issuer(String issuer) {
+            return issuer(Output.of(issuer));
         }
+
         public Builder subject(@Nullable Output<String> subject) {
-            this.subject = subject;
+            $.subject = subject;
             return this;
         }
-        public Builder subject(@Nullable String subject) {
-            this.subject = Codegen.ofNullable(subject);
-            return this;
-        }        public JwtClaimsArgs build() {
-            return new JwtClaimsArgs(audience, issuer, subject);
+
+        public Builder subject(String subject) {
+            return subject(Output.of(subject));
+        }
+
+        public JwtClaimsArgs build() {
+            return $;
         }
     }
+
 }

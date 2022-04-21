@@ -21,45 +21,45 @@ public final class MembershipStateResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
     }
 
-    public MembershipStateResponse(String code) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-    }
+    private MembershipStateResponse() {}
 
-    private MembershipStateResponse() {
-        this.code = null;
+    private MembershipStateResponse(MembershipStateResponse $) {
+        this.code = $.code;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
+        private MembershipStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipStateResponse();
         }
 
         public Builder(MembershipStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
+            $ = new MembershipStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
-        }        public MembershipStateResponse build() {
-            return new MembershipStateResponse(code);
+        }
+
+        public MembershipStateResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            return $;
         }
     }
+
 }

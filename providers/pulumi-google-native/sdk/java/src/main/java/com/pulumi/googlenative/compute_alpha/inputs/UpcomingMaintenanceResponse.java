@@ -23,7 +23,7 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="canReschedule", required=true)
-      private final Boolean canReschedule;
+    private Boolean canReschedule;
 
     public Boolean canReschedule() {
         return this.canReschedule;
@@ -34,7 +34,7 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="startTimeWindow", required=true)
-      private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
+    private UpcomingMaintenanceTimeWindowResponse startTimeWindow;
 
     public UpcomingMaintenanceTimeWindowResponse startTimeWindow() {
         return this.startTimeWindow;
@@ -45,64 +45,59 @@ public final class UpcomingMaintenanceResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public UpcomingMaintenanceResponse(
-        Boolean canReschedule,
-        UpcomingMaintenanceTimeWindowResponse startTimeWindow,
-        String type) {
-        this.canReschedule = Objects.requireNonNull(canReschedule, "expected parameter 'canReschedule' to be non-null");
-        this.startTimeWindow = Objects.requireNonNull(startTimeWindow, "expected parameter 'startTimeWindow' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private UpcomingMaintenanceResponse() {}
 
-    private UpcomingMaintenanceResponse() {
-        this.canReschedule = null;
-        this.startTimeWindow = null;
-        this.type = null;
+    private UpcomingMaintenanceResponse(UpcomingMaintenanceResponse $) {
+        this.canReschedule = $.canReschedule;
+        this.startTimeWindow = $.startTimeWindow;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UpcomingMaintenanceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canReschedule;
-        private UpcomingMaintenanceTimeWindowResponse startTimeWindow;
-        private String type;
+        private UpcomingMaintenanceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UpcomingMaintenanceResponse();
         }
 
         public Builder(UpcomingMaintenanceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canReschedule = defaults.canReschedule;
-    	      this.startTimeWindow = defaults.startTimeWindow;
-    	      this.type = defaults.type;
+            $ = new UpcomingMaintenanceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canReschedule(Boolean canReschedule) {
-            this.canReschedule = Objects.requireNonNull(canReschedule);
+            $.canReschedule = canReschedule;
             return this;
         }
+
         public Builder startTimeWindow(UpcomingMaintenanceTimeWindowResponse startTimeWindow) {
-            this.startTimeWindow = Objects.requireNonNull(startTimeWindow);
+            $.startTimeWindow = startTimeWindow;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public UpcomingMaintenanceResponse build() {
-            return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
+        }
+
+        public UpcomingMaintenanceResponse build() {
+            $.canReschedule = Objects.requireNonNull($.canReschedule, "expected parameter 'canReschedule' to be non-null");
+            $.startTimeWindow = Objects.requireNonNull($.startTimeWindow, "expected parameter 'startTimeWindow' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

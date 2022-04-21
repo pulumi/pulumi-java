@@ -22,7 +22,7 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="canReschedule", required=true)
-      private final Boolean canReschedule;
+    private Boolean canReschedule;
 
     public Boolean canReschedule() {
         return this.canReschedule;
@@ -33,7 +33,7 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -44,7 +44,7 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="scheduleDeadlineTime", required=true)
-      private final String scheduleDeadlineTime;
+    private String scheduleDeadlineTime;
 
     public String scheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
@@ -55,73 +55,66 @@ public final class MaintenanceScheduleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public MaintenanceScheduleResponse(
-        Boolean canReschedule,
-        String endTime,
-        String scheduleDeadlineTime,
-        String startTime) {
-        this.canReschedule = Objects.requireNonNull(canReschedule, "expected parameter 'canReschedule' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime, "expected parameter 'scheduleDeadlineTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private MaintenanceScheduleResponse() {}
 
-    private MaintenanceScheduleResponse() {
-        this.canReschedule = null;
-        this.endTime = null;
-        this.scheduleDeadlineTime = null;
-        this.startTime = null;
+    private MaintenanceScheduleResponse(MaintenanceScheduleResponse $) {
+        this.canReschedule = $.canReschedule;
+        this.endTime = $.endTime;
+        this.scheduleDeadlineTime = $.scheduleDeadlineTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaintenanceScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean canReschedule;
-        private String endTime;
-        private String scheduleDeadlineTime;
-        private String startTime;
+        private MaintenanceScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaintenanceScheduleResponse();
         }
 
         public Builder(MaintenanceScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canReschedule = defaults.canReschedule;
-    	      this.endTime = defaults.endTime;
-    	      this.scheduleDeadlineTime = defaults.scheduleDeadlineTime;
-    	      this.startTime = defaults.startTime;
+            $ = new MaintenanceScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder canReschedule(Boolean canReschedule) {
-            this.canReschedule = Objects.requireNonNull(canReschedule);
+            $.canReschedule = canReschedule;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
+            $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public MaintenanceScheduleResponse build() {
-            return new MaintenanceScheduleResponse(canReschedule, endTime, scheduleDeadlineTime, startTime);
+        }
+
+        public MaintenanceScheduleResponse build() {
+            $.canReschedule = Objects.requireNonNull($.canReschedule, "expected parameter 'canReschedule' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.scheduleDeadlineTime = Objects.requireNonNull($.scheduleDeadlineTime, "expected parameter 'scheduleDeadlineTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

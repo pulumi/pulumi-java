@@ -23,7 +23,7 @@ public final class QuotaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="limits", required=true)
-      private final List<QuotaLimitResponse> limits;
+    private List<QuotaLimitResponse> limits;
 
     public List<QuotaLimitResponse> limits() {
         return this.limits;
@@ -34,61 +34,60 @@ public final class QuotaResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metricRules", required=true)
-      private final List<MetricRuleResponse> metricRules;
+    private List<MetricRuleResponse> metricRules;
 
     public List<MetricRuleResponse> metricRules() {
         return this.metricRules;
     }
 
-    public QuotaResponse(
-        List<QuotaLimitResponse> limits,
-        List<MetricRuleResponse> metricRules) {
-        this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
-        this.metricRules = Objects.requireNonNull(metricRules, "expected parameter 'metricRules' to be non-null");
-    }
+    private QuotaResponse() {}
 
-    private QuotaResponse() {
-        this.limits = List.of();
-        this.metricRules = List.of();
+    private QuotaResponse(QuotaResponse $) {
+        this.limits = $.limits;
+        this.metricRules = $.metricRules;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuotaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<QuotaLimitResponse> limits;
-        private List<MetricRuleResponse> metricRules;
+        private QuotaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuotaResponse();
         }
 
         public Builder(QuotaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.metricRules = defaults.metricRules;
+            $ = new QuotaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(List<QuotaLimitResponse> limits) {
-            this.limits = Objects.requireNonNull(limits);
+            $.limits = limits;
             return this;
         }
+
         public Builder limits(QuotaLimitResponse... limits) {
             return limits(List.of(limits));
         }
+
         public Builder metricRules(List<MetricRuleResponse> metricRules) {
-            this.metricRules = Objects.requireNonNull(metricRules);
+            $.metricRules = metricRules;
             return this;
         }
+
         public Builder metricRules(MetricRuleResponse... metricRules) {
             return metricRules(List.of(metricRules));
-        }        public QuotaResponse build() {
-            return new QuotaResponse(limits, metricRules);
+        }
+
+        public QuotaResponse build() {
+            $.limits = Objects.requireNonNull($.limits, "expected parameter 'limits' to be non-null");
+            $.metricRules = Objects.requireNonNull($.metricRules, "expected parameter 'metricRules' to be non-null");
+            return $;
         }
     }
+
 }

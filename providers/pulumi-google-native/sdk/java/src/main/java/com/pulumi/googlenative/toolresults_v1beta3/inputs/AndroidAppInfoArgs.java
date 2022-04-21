@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="packageName")
-      private final @Nullable Output<String> packageName;
+    private @Nullable Output<String> packageName;
 
-    public Output<String> packageName() {
-        return this.packageName == null ? Codegen.empty() : this.packageName;
+    public Optional<Output<String>> packageName() {
+        return Optional.ofNullable(this.packageName);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionCode")
-      private final @Nullable Output<String> versionCode;
+    private @Nullable Output<String> versionCode;
 
-    public Output<String> versionCode() {
-        return this.versionCode == null ? Codegen.empty() : this.versionCode;
+    public Optional<Output<String>> versionCode() {
+        return Optional.ofNullable(this.versionCode);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class AndroidAppInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="versionName")
-      private final @Nullable Output<String> versionName;
+    private @Nullable Output<String> versionName;
 
-    public Output<String> versionName() {
-        return this.versionName == null ? Codegen.empty() : this.versionName;
+    public Optional<Output<String>> versionName() {
+        return Optional.ofNullable(this.versionName);
     }
 
-    public AndroidAppInfoArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<String> packageName,
-        @Nullable Output<String> versionCode,
-        @Nullable Output<String> versionName) {
-        this.name = name;
-        this.packageName = packageName;
-        this.versionCode = versionCode;
-        this.versionName = versionName;
-    }
+    private AndroidAppInfoArgs() {}
 
-    private AndroidAppInfoArgs() {
-        this.name = Codegen.empty();
-        this.packageName = Codegen.empty();
-        this.versionCode = Codegen.empty();
-        this.versionName = Codegen.empty();
+    private AndroidAppInfoArgs(AndroidAppInfoArgs $) {
+        this.name = $.name;
+        this.packageName = $.packageName;
+        this.versionCode = $.versionCode;
+        this.versionName = $.versionName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidAppInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> packageName;
-        private @Nullable Output<String> versionCode;
-        private @Nullable Output<String> versionName;
+        private AndroidAppInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidAppInfoArgs();
         }
 
         public Builder(AndroidAppInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.packageName = defaults.packageName;
-    	      this.versionCode = defaults.versionCode;
-    	      this.versionName = defaults.versionName;
+            $ = new AndroidAppInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder packageName(@Nullable Output<String> packageName) {
-            this.packageName = packageName;
+            $.packageName = packageName;
             return this;
         }
-        public Builder packageName(@Nullable String packageName) {
-            this.packageName = Codegen.ofNullable(packageName);
-            return this;
+
+        public Builder packageName(String packageName) {
+            return packageName(Output.of(packageName));
         }
+
         public Builder versionCode(@Nullable Output<String> versionCode) {
-            this.versionCode = versionCode;
+            $.versionCode = versionCode;
             return this;
         }
-        public Builder versionCode(@Nullable String versionCode) {
-            this.versionCode = Codegen.ofNullable(versionCode);
-            return this;
+
+        public Builder versionCode(String versionCode) {
+            return versionCode(Output.of(versionCode));
         }
+
         public Builder versionName(@Nullable Output<String> versionName) {
-            this.versionName = versionName;
+            $.versionName = versionName;
             return this;
         }
-        public Builder versionName(@Nullable String versionName) {
-            this.versionName = Codegen.ofNullable(versionName);
-            return this;
-        }        public AndroidAppInfoArgs build() {
-            return new AndroidAppInfoArgs(name, packageName, versionCode, versionName);
+
+        public Builder versionName(String versionName) {
+            return versionName(Output.of(versionName));
+        }
+
+        public AndroidAppInfoArgs build() {
+            return $;
         }
     }
+
 }

@@ -18,62 +18,59 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigResponse extends com.
     public static final GoogleCloudMlV1__AutomatedStoppingConfigResponse Empty = new GoogleCloudMlV1__AutomatedStoppingConfigResponse();
 
     @Import(name="decayCurveStoppingConfig", required=true)
-      private final GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
+    private GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
 
     public GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig() {
         return this.decayCurveStoppingConfig;
     }
 
     @Import(name="medianAutomatedStoppingConfig", required=true)
-      private final GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
+    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
 
     public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig() {
         return this.medianAutomatedStoppingConfig;
     }
 
-    public GoogleCloudMlV1__AutomatedStoppingConfigResponse(
-        GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig,
-        GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
-        this.decayCurveStoppingConfig = Objects.requireNonNull(decayCurveStoppingConfig, "expected parameter 'decayCurveStoppingConfig' to be non-null");
-        this.medianAutomatedStoppingConfig = Objects.requireNonNull(medianAutomatedStoppingConfig, "expected parameter 'medianAutomatedStoppingConfig' to be non-null");
-    }
+    private GoogleCloudMlV1__AutomatedStoppingConfigResponse() {}
 
-    private GoogleCloudMlV1__AutomatedStoppingConfigResponse() {
-        this.decayCurveStoppingConfig = null;
-        this.medianAutomatedStoppingConfig = null;
+    private GoogleCloudMlV1__AutomatedStoppingConfigResponse(GoogleCloudMlV1__AutomatedStoppingConfigResponse $) {
+        this.decayCurveStoppingConfig = $.decayCurveStoppingConfig;
+        this.medianAutomatedStoppingConfig = $.medianAutomatedStoppingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__AutomatedStoppingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig;
-        private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig;
+        private GoogleCloudMlV1__AutomatedStoppingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__AutomatedStoppingConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__AutomatedStoppingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.decayCurveStoppingConfig = defaults.decayCurveStoppingConfig;
-    	      this.medianAutomatedStoppingConfig = defaults.medianAutomatedStoppingConfig;
+            $ = new GoogleCloudMlV1__AutomatedStoppingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder decayCurveStoppingConfig(GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse decayCurveStoppingConfig) {
-            this.decayCurveStoppingConfig = Objects.requireNonNull(decayCurveStoppingConfig);
+            $.decayCurveStoppingConfig = decayCurveStoppingConfig;
             return this;
         }
+
         public Builder medianAutomatedStoppingConfig(GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse medianAutomatedStoppingConfig) {
-            this.medianAutomatedStoppingConfig = Objects.requireNonNull(medianAutomatedStoppingConfig);
+            $.medianAutomatedStoppingConfig = medianAutomatedStoppingConfig;
             return this;
-        }        public GoogleCloudMlV1__AutomatedStoppingConfigResponse build() {
-            return new GoogleCloudMlV1__AutomatedStoppingConfigResponse(decayCurveStoppingConfig, medianAutomatedStoppingConfig);
+        }
+
+        public GoogleCloudMlV1__AutomatedStoppingConfigResponse build() {
+            $.decayCurveStoppingConfig = Objects.requireNonNull($.decayCurveStoppingConfig, "expected parameter 'decayCurveStoppingConfig' to be non-null");
+            $.medianAutomatedStoppingConfig = Objects.requireNonNull($.medianAutomatedStoppingConfig, "expected parameter 'medianAutomatedStoppingConfig' to be non-null");
+            return $;
         }
     }
+
 }

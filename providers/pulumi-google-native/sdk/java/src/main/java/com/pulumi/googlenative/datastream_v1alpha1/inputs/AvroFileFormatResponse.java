@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AvroFileFormatResponse extends com.pulumi.resources.InvokeArg
 
     public static final AvroFileFormatResponse Empty = new AvroFileFormatResponse();
 
-    public AvroFileFormatResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AvroFileFormatResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AvroFileFormatResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AvroFileFormatResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AvroFileFormatResponse();
         }
         public AvroFileFormatResponse build() {
-            return new AvroFileFormatResponse();
+            return $;
         }
     }
+
 }

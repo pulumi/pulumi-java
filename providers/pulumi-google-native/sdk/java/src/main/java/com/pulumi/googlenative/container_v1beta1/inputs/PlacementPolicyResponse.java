@@ -21,45 +21,45 @@ public final class PlacementPolicyResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public PlacementPolicyResponse(String type) {
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private PlacementPolicyResponse() {}
 
-    private PlacementPolicyResponse() {
-        this.type = null;
+    private PlacementPolicyResponse(PlacementPolicyResponse $) {
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PlacementPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String type;
+        private PlacementPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PlacementPolicyResponse();
         }
 
         public Builder(PlacementPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.type = defaults.type;
+            $ = new PlacementPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public PlacementPolicyResponse build() {
-            return new PlacementPolicyResponse(type);
+        }
+
+        public PlacementPolicyResponse build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

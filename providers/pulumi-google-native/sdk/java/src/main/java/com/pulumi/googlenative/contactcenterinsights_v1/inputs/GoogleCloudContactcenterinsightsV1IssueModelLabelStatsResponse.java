@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * 
      */
     @Import(name="analyzedConversationsCount", required=true)
-      private final String analyzedConversationsCount;
+    private String analyzedConversationsCount;
 
     public String analyzedConversationsCount() {
         return this.analyzedConversationsCount;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * 
      */
     @Import(name="issueStats", required=true)
-      private final Map<String,String> issueStats;
+    private Map<String,String> issueStats;
 
     public Map<String,String> issueStats() {
         return this.issueStats;
@@ -44,64 +44,59 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * 
      */
     @Import(name="unclassifiedConversationsCount", required=true)
-      private final String unclassifiedConversationsCount;
+    private String unclassifiedConversationsCount;
 
     public String unclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;
     }
 
-    public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(
-        String analyzedConversationsCount,
-        Map<String,String> issueStats,
-        String unclassifiedConversationsCount) {
-        this.analyzedConversationsCount = Objects.requireNonNull(analyzedConversationsCount, "expected parameter 'analyzedConversationsCount' to be non-null");
-        this.issueStats = Objects.requireNonNull(issueStats, "expected parameter 'issueStats' to be non-null");
-        this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount, "expected parameter 'unclassifiedConversationsCount' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse() {
-        this.analyzedConversationsCount = null;
-        this.issueStats = Map.of();
-        this.unclassifiedConversationsCount = null;
+    private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse $) {
+        this.analyzedConversationsCount = $.analyzedConversationsCount;
+        this.issueStats = $.issueStats;
+        this.unclassifiedConversationsCount = $.unclassifiedConversationsCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String analyzedConversationsCount;
-        private Map<String,String> issueStats;
-        private String unclassifiedConversationsCount;
+        private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analyzedConversationsCount = defaults.analyzedConversationsCount;
-    	      this.issueStats = defaults.issueStats;
-    	      this.unclassifiedConversationsCount = defaults.unclassifiedConversationsCount;
+            $ = new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder analyzedConversationsCount(String analyzedConversationsCount) {
-            this.analyzedConversationsCount = Objects.requireNonNull(analyzedConversationsCount);
+            $.analyzedConversationsCount = analyzedConversationsCount;
             return this;
         }
+
         public Builder issueStats(Map<String,String> issueStats) {
-            this.issueStats = Objects.requireNonNull(issueStats);
+            $.issueStats = issueStats;
             return this;
         }
+
         public Builder unclassifiedConversationsCount(String unclassifiedConversationsCount) {
-            this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
+            $.unclassifiedConversationsCount = unclassifiedConversationsCount;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
-            return new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(analyzedConversationsCount, issueStats, unclassifiedConversationsCount);
+        }
+
+        public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
+            $.analyzedConversationsCount = Objects.requireNonNull($.analyzedConversationsCount, "expected parameter 'analyzedConversationsCount' to be non-null");
+            $.issueStats = Objects.requireNonNull($.issueStats, "expected parameter 'issueStats' to be non-null");
+            $.unclassifiedConversationsCount = Objects.requireNonNull($.unclassifiedConversationsCount, "expected parameter 'unclassifiedConversationsCount' to be non-null");
+            return $;
         }
     }
+
 }

@@ -20,7 +20,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataset", required=true)
-      private final DatasetAccessEntryResponse dataset;
+    private DatasetAccessEntryResponse dataset;
 
     public DatasetAccessEntryResponse dataset() {
         return this.dataset;
@@ -31,7 +31,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="domain", required=true)
-      private final String domain;
+    private String domain;
 
     public String domain() {
         return this.domain;
@@ -42,7 +42,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="groupByEmail", required=true)
-      private final String groupByEmail;
+    private String groupByEmail;
 
     public String groupByEmail() {
         return this.groupByEmail;
@@ -53,7 +53,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="iamMember", required=true)
-      private final String iamMember;
+    private String iamMember;
 
     public String iamMember() {
         return this.iamMember;
@@ -64,7 +64,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="role", required=true)
-      private final String role;
+    private String role;
 
     public String role() {
         return this.role;
@@ -75,7 +75,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="routine", required=true)
-      private final RoutineReferenceResponse routine;
+    private RoutineReferenceResponse routine;
 
     public RoutineReferenceResponse routine() {
         return this.routine;
@@ -86,7 +86,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="specialGroup", required=true)
-      private final String specialGroup;
+    private String specialGroup;
 
     public String specialGroup() {
         return this.specialGroup;
@@ -97,7 +97,7 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="userByEmail", required=true)
-      private final String userByEmail;
+    private String userByEmail;
 
     public String userByEmail() {
         return this.userByEmail;
@@ -108,118 +108,101 @@ public final class DatasetAccessItemResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="view", required=true)
-      private final TableReferenceResponse view;
+    private TableReferenceResponse view;
 
     public TableReferenceResponse view() {
         return this.view;
     }
 
-    public DatasetAccessItemResponse(
-        DatasetAccessEntryResponse dataset,
-        String domain,
-        String groupByEmail,
-        String iamMember,
-        String role,
-        RoutineReferenceResponse routine,
-        String specialGroup,
-        String userByEmail,
-        TableReferenceResponse view) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.domain = Objects.requireNonNull(domain, "expected parameter 'domain' to be non-null");
-        this.groupByEmail = Objects.requireNonNull(groupByEmail, "expected parameter 'groupByEmail' to be non-null");
-        this.iamMember = Objects.requireNonNull(iamMember, "expected parameter 'iamMember' to be non-null");
-        this.role = Objects.requireNonNull(role, "expected parameter 'role' to be non-null");
-        this.routine = Objects.requireNonNull(routine, "expected parameter 'routine' to be non-null");
-        this.specialGroup = Objects.requireNonNull(specialGroup, "expected parameter 'specialGroup' to be non-null");
-        this.userByEmail = Objects.requireNonNull(userByEmail, "expected parameter 'userByEmail' to be non-null");
-        this.view = Objects.requireNonNull(view, "expected parameter 'view' to be non-null");
-    }
+    private DatasetAccessItemResponse() {}
 
-    private DatasetAccessItemResponse() {
-        this.dataset = null;
-        this.domain = null;
-        this.groupByEmail = null;
-        this.iamMember = null;
-        this.role = null;
-        this.routine = null;
-        this.specialGroup = null;
-        this.userByEmail = null;
-        this.view = null;
+    private DatasetAccessItemResponse(DatasetAccessItemResponse $) {
+        this.dataset = $.dataset;
+        this.domain = $.domain;
+        this.groupByEmail = $.groupByEmail;
+        this.iamMember = $.iamMember;
+        this.role = $.role;
+        this.routine = $.routine;
+        this.specialGroup = $.specialGroup;
+        this.userByEmail = $.userByEmail;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetAccessItemResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DatasetAccessEntryResponse dataset;
-        private String domain;
-        private String groupByEmail;
-        private String iamMember;
-        private String role;
-        private RoutineReferenceResponse routine;
-        private String specialGroup;
-        private String userByEmail;
-        private TableReferenceResponse view;
+        private DatasetAccessItemResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetAccessItemResponse();
         }
 
         public Builder(DatasetAccessItemResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.domain = defaults.domain;
-    	      this.groupByEmail = defaults.groupByEmail;
-    	      this.iamMember = defaults.iamMember;
-    	      this.role = defaults.role;
-    	      this.routine = defaults.routine;
-    	      this.specialGroup = defaults.specialGroup;
-    	      this.userByEmail = defaults.userByEmail;
-    	      this.view = defaults.view;
+            $ = new DatasetAccessItemResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(DatasetAccessEntryResponse dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder domain(String domain) {
-            this.domain = Objects.requireNonNull(domain);
+            $.domain = domain;
             return this;
         }
+
         public Builder groupByEmail(String groupByEmail) {
-            this.groupByEmail = Objects.requireNonNull(groupByEmail);
+            $.groupByEmail = groupByEmail;
             return this;
         }
+
         public Builder iamMember(String iamMember) {
-            this.iamMember = Objects.requireNonNull(iamMember);
+            $.iamMember = iamMember;
             return this;
         }
+
         public Builder role(String role) {
-            this.role = Objects.requireNonNull(role);
+            $.role = role;
             return this;
         }
+
         public Builder routine(RoutineReferenceResponse routine) {
-            this.routine = Objects.requireNonNull(routine);
+            $.routine = routine;
             return this;
         }
+
         public Builder specialGroup(String specialGroup) {
-            this.specialGroup = Objects.requireNonNull(specialGroup);
+            $.specialGroup = specialGroup;
             return this;
         }
+
         public Builder userByEmail(String userByEmail) {
-            this.userByEmail = Objects.requireNonNull(userByEmail);
+            $.userByEmail = userByEmail;
             return this;
         }
+
         public Builder view(TableReferenceResponse view) {
-            this.view = Objects.requireNonNull(view);
+            $.view = view;
             return this;
-        }        public DatasetAccessItemResponse build() {
-            return new DatasetAccessItemResponse(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
+        }
+
+        public DatasetAccessItemResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.domain = Objects.requireNonNull($.domain, "expected parameter 'domain' to be non-null");
+            $.groupByEmail = Objects.requireNonNull($.groupByEmail, "expected parameter 'groupByEmail' to be non-null");
+            $.iamMember = Objects.requireNonNull($.iamMember, "expected parameter 'iamMember' to be non-null");
+            $.role = Objects.requireNonNull($.role, "expected parameter 'role' to be non-null");
+            $.routine = Objects.requireNonNull($.routine, "expected parameter 'routine' to be non-null");
+            $.specialGroup = Objects.requireNonNull($.specialGroup, "expected parameter 'specialGroup' to be non-null");
+            $.userByEmail = Objects.requireNonNull($.userByEmail, "expected parameter 'userByEmail' to be non-null");
+            $.view = Objects.requireNonNull($.view, "expected parameter 'view' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetForwardingRuleArgs extends com.pulumi.resources.InvokeArgs
     public static final GetForwardingRuleArgs Empty = new GetForwardingRuleArgs();
 
     @Import(name="forwardingRule", required=true)
-      private final String forwardingRule;
+    private String forwardingRule;
 
     public String forwardingRule() {
         return this.forwardingRule;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
-    public GetForwardingRuleArgs(
-        String forwardingRule,
-        @Nullable String project,
-        String region) {
-        this.forwardingRule = Objects.requireNonNull(forwardingRule, "expected parameter 'forwardingRule' to be non-null");
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-    }
+    private GetForwardingRuleArgs() {}
 
-    private GetForwardingRuleArgs() {
-        this.forwardingRule = null;
-        this.project = null;
-        this.region = null;
+    private GetForwardingRuleArgs(GetForwardingRuleArgs $) {
+        this.forwardingRule = $.forwardingRule;
+        this.project = $.project;
+        this.region = $.region;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetForwardingRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String forwardingRule;
-        private @Nullable String project;
-        private String region;
+        private GetForwardingRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetForwardingRuleArgs();
         }
 
         public Builder(GetForwardingRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardingRule = defaults.forwardingRule;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
+            $ = new GetForwardingRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardingRule(String forwardingRule) {
-            this.forwardingRule = Objects.requireNonNull(forwardingRule);
+            $.forwardingRule = forwardingRule;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
-        }        public GetForwardingRuleArgs build() {
-            return new GetForwardingRuleArgs(forwardingRule, project, region);
+        }
+
+        public GetForwardingRuleArgs build() {
+            $.forwardingRule = Objects.requireNonNull($.forwardingRule, "expected parameter 'forwardingRule' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

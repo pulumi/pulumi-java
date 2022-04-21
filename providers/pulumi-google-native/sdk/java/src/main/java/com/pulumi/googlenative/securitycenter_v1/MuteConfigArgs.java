@@ -5,9 +5,9 @@ package com.pulumi.googlenative.securitycenter_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class MuteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class MuteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -42,14 +42,14 @@ public final class MuteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
     }
 
     @Import(name="muteConfigId", required=true)
-      private final Output<String> muteConfigId;
+    private Output<String> muteConfigId;
 
     public Output<String> muteConfigId() {
         return this.muteConfigId;
@@ -60,122 +60,107 @@ public final class MuteConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public MuteConfigArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        Output<String> filter,
-        Output<String> muteConfigId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.description = description;
-        this.displayName = displayName;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.muteConfigId = Objects.requireNonNull(muteConfigId, "expected parameter 'muteConfigId' to be non-null");
-        this.name = name;
-        this.project = project;
-    }
+    private MuteConfigArgs() {}
 
-    private MuteConfigArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.muteConfigId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private MuteConfigArgs(MuteConfigArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.filter = $.filter;
+        this.muteConfigId = $.muteConfigId;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MuteConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private Output<String> filter;
-        private Output<String> muteConfigId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private MuteConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MuteConfigArgs();
         }
 
         public Builder(MuteConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.filter = defaults.filter;
-    	      this.muteConfigId = defaults.muteConfigId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new MuteConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder muteConfigId(Output<String> muteConfigId) {
-            this.muteConfigId = Objects.requireNonNull(muteConfigId);
+            $.muteConfigId = muteConfigId;
             return this;
         }
+
         public Builder muteConfigId(String muteConfigId) {
-            this.muteConfigId = Output.of(Objects.requireNonNull(muteConfigId));
-            return this;
+            return muteConfigId(Output.of(muteConfigId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public MuteConfigArgs build() {
-            return new MuteConfigArgs(description, displayName, filter, muteConfigId, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public MuteConfigArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.muteConfigId = Objects.requireNonNull($.muteConfigId, "expected parameter 'muteConfigId' to be non-null");
+            return $;
         }
     }
+
 }

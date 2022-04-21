@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudbilling_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class BillingAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class BillingAccountArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="masterBillingAccount")
-      private final @Nullable Output<String> masterBillingAccount;
+    private @Nullable Output<String> masterBillingAccount;
 
-    public Output<String> masterBillingAccount() {
-        return this.masterBillingAccount == null ? Codegen.empty() : this.masterBillingAccount;
+    public Optional<Output<String>> masterBillingAccount() {
+        return Optional.ofNullable(this.masterBillingAccount);
     }
 
-    public BillingAccountArgs(
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> masterBillingAccount) {
-        this.displayName = displayName;
-        this.masterBillingAccount = masterBillingAccount;
-    }
+    private BillingAccountArgs() {}
 
-    private BillingAccountArgs() {
-        this.displayName = Codegen.empty();
-        this.masterBillingAccount = Codegen.empty();
+    private BillingAccountArgs(BillingAccountArgs $) {
+        this.displayName = $.displayName;
+        this.masterBillingAccount = $.masterBillingAccount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BillingAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> masterBillingAccount;
+        private BillingAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BillingAccountArgs();
         }
 
         public Builder(BillingAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.masterBillingAccount = defaults.masterBillingAccount;
+            $ = new BillingAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
-            this.masterBillingAccount = masterBillingAccount;
+            $.masterBillingAccount = masterBillingAccount;
             return this;
         }
-        public Builder masterBillingAccount(@Nullable String masterBillingAccount) {
-            this.masterBillingAccount = Codegen.ofNullable(masterBillingAccount);
-            return this;
-        }        public BillingAccountArgs build() {
-            return new BillingAccountArgs(displayName, masterBillingAccount);
+
+        public Builder masterBillingAccount(String masterBillingAccount) {
+            return masterBillingAccount(Output.of(masterBillingAccount));
+        }
+
+        public BillingAccountArgs build() {
+            return $;
         }
     }
+
 }

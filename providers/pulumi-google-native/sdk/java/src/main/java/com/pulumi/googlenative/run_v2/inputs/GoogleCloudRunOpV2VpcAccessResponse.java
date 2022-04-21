@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends com.pulumi.resour
      * 
      */
     @Import(name="connector", required=true)
-      private final String connector;
+    private String connector;
 
     public String connector() {
         return this.connector;
@@ -32,55 +32,52 @@ public final class GoogleCloudRunOpV2VpcAccessResponse extends com.pulumi.resour
      * 
      */
     @Import(name="egress", required=true)
-      private final String egress;
+    private String egress;
 
     public String egress() {
         return this.egress;
     }
 
-    public GoogleCloudRunOpV2VpcAccessResponse(
-        String connector,
-        String egress) {
-        this.connector = Objects.requireNonNull(connector, "expected parameter 'connector' to be non-null");
-        this.egress = Objects.requireNonNull(egress, "expected parameter 'egress' to be non-null");
-    }
+    private GoogleCloudRunOpV2VpcAccessResponse() {}
 
-    private GoogleCloudRunOpV2VpcAccessResponse() {
-        this.connector = null;
-        this.egress = null;
+    private GoogleCloudRunOpV2VpcAccessResponse(GoogleCloudRunOpV2VpcAccessResponse $) {
+        this.connector = $.connector;
+        this.egress = $.egress;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VpcAccessResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String connector;
-        private String egress;
+        private GoogleCloudRunOpV2VpcAccessResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VpcAccessResponse();
         }
 
         public Builder(GoogleCloudRunOpV2VpcAccessResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connector = defaults.connector;
-    	      this.egress = defaults.egress;
+            $ = new GoogleCloudRunOpV2VpcAccessResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder connector(String connector) {
-            this.connector = Objects.requireNonNull(connector);
+            $.connector = connector;
             return this;
         }
+
         public Builder egress(String egress) {
-            this.egress = Objects.requireNonNull(egress);
+            $.egress = egress;
             return this;
-        }        public GoogleCloudRunOpV2VpcAccessResponse build() {
-            return new GoogleCloudRunOpV2VpcAccessResponse(connector, egress);
+        }
+
+        public GoogleCloudRunOpV2VpcAccessResponse build() {
+            $.connector = Objects.requireNonNull($.connector, "expected parameter 'connector' to be non-null");
+            $.egress = Objects.requireNonNull($.egress, "expected parameter 'egress' to be non-null");
+            return $;
         }
     }
+
 }

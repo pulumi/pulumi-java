@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryNoteAnalysisKind;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DiscoveryNoteArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="analysisKind", required=true)
-      private final Output<DiscoveryNoteAnalysisKind> analysisKind;
+    private Output<DiscoveryNoteAnalysisKind> analysisKind;
 
     public Output<DiscoveryNoteAnalysisKind> analysisKind() {
         return this.analysisKind;
     }
 
-    public DiscoveryNoteArgs(Output<DiscoveryNoteAnalysisKind> analysisKind) {
-        this.analysisKind = Objects.requireNonNull(analysisKind, "expected parameter 'analysisKind' to be non-null");
-    }
+    private DiscoveryNoteArgs() {}
 
-    private DiscoveryNoteArgs() {
-        this.analysisKind = Codegen.empty();
+    private DiscoveryNoteArgs(DiscoveryNoteArgs $) {
+        this.analysisKind = $.analysisKind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveryNoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DiscoveryNoteAnalysisKind> analysisKind;
+        private DiscoveryNoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveryNoteArgs();
         }
 
         public Builder(DiscoveryNoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisKind = defaults.analysisKind;
+            $ = new DiscoveryNoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisKind(Output<DiscoveryNoteAnalysisKind> analysisKind) {
-            this.analysisKind = Objects.requireNonNull(analysisKind);
+            $.analysisKind = analysisKind;
             return this;
         }
+
         public Builder analysisKind(DiscoveryNoteAnalysisKind analysisKind) {
-            this.analysisKind = Output.of(Objects.requireNonNull(analysisKind));
-            return this;
-        }        public DiscoveryNoteArgs build() {
-            return new DiscoveryNoteArgs(analysisKind);
+            return analysisKind(Output.of(analysisKind));
+        }
+
+        public DiscoveryNoteArgs build() {
+            $.analysisKind = Objects.requireNonNull($.analysisKind, "expected parameter 'analysisKind' to be non-null");
+            return $;
         }
     }
+
 }

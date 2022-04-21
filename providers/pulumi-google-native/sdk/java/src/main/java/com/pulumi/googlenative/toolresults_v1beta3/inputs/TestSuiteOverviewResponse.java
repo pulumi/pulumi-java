@@ -24,7 +24,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="elapsedTime", required=true)
-      private final DurationResponse elapsedTime;
+    private DurationResponse elapsedTime;
 
     public DurationResponse elapsedTime() {
         return this.elapsedTime;
@@ -35,7 +35,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="errorCount", required=true)
-      private final Integer errorCount;
+    private Integer errorCount;
 
     public Integer errorCount() {
         return this.errorCount;
@@ -46,7 +46,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="failureCount", required=true)
-      private final Integer failureCount;
+    private Integer failureCount;
 
     public Integer failureCount() {
         return this.failureCount;
@@ -57,7 +57,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="flakyCount", required=true)
-      private final Integer flakyCount;
+    private Integer flakyCount;
 
     public Integer flakyCount() {
         return this.flakyCount;
@@ -68,7 +68,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -79,7 +79,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="skippedCount", required=true)
-      private final Integer skippedCount;
+    private Integer skippedCount;
 
     public Integer skippedCount() {
         return this.skippedCount;
@@ -90,7 +90,7 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="totalCount", required=true)
-      private final Integer totalCount;
+    private Integer totalCount;
 
     public Integer totalCount() {
         return this.totalCount;
@@ -101,109 +101,94 @@ public final class TestSuiteOverviewResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="xmlSource", required=true)
-      private final FileReferenceResponse xmlSource;
+    private FileReferenceResponse xmlSource;
 
     public FileReferenceResponse xmlSource() {
         return this.xmlSource;
     }
 
-    public TestSuiteOverviewResponse(
-        DurationResponse elapsedTime,
-        Integer errorCount,
-        Integer failureCount,
-        Integer flakyCount,
-        String name,
-        Integer skippedCount,
-        Integer totalCount,
-        FileReferenceResponse xmlSource) {
-        this.elapsedTime = Objects.requireNonNull(elapsedTime, "expected parameter 'elapsedTime' to be non-null");
-        this.errorCount = Objects.requireNonNull(errorCount, "expected parameter 'errorCount' to be non-null");
-        this.failureCount = Objects.requireNonNull(failureCount, "expected parameter 'failureCount' to be non-null");
-        this.flakyCount = Objects.requireNonNull(flakyCount, "expected parameter 'flakyCount' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.skippedCount = Objects.requireNonNull(skippedCount, "expected parameter 'skippedCount' to be non-null");
-        this.totalCount = Objects.requireNonNull(totalCount, "expected parameter 'totalCount' to be non-null");
-        this.xmlSource = Objects.requireNonNull(xmlSource, "expected parameter 'xmlSource' to be non-null");
-    }
+    private TestSuiteOverviewResponse() {}
 
-    private TestSuiteOverviewResponse() {
-        this.elapsedTime = null;
-        this.errorCount = null;
-        this.failureCount = null;
-        this.flakyCount = null;
-        this.name = null;
-        this.skippedCount = null;
-        this.totalCount = null;
-        this.xmlSource = null;
+    private TestSuiteOverviewResponse(TestSuiteOverviewResponse $) {
+        this.elapsedTime = $.elapsedTime;
+        this.errorCount = $.errorCount;
+        this.failureCount = $.failureCount;
+        this.flakyCount = $.flakyCount;
+        this.name = $.name;
+        this.skippedCount = $.skippedCount;
+        this.totalCount = $.totalCount;
+        this.xmlSource = $.xmlSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestSuiteOverviewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DurationResponse elapsedTime;
-        private Integer errorCount;
-        private Integer failureCount;
-        private Integer flakyCount;
-        private String name;
-        private Integer skippedCount;
-        private Integer totalCount;
-        private FileReferenceResponse xmlSource;
+        private TestSuiteOverviewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestSuiteOverviewResponse();
         }
 
         public Builder(TestSuiteOverviewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.elapsedTime = defaults.elapsedTime;
-    	      this.errorCount = defaults.errorCount;
-    	      this.failureCount = defaults.failureCount;
-    	      this.flakyCount = defaults.flakyCount;
-    	      this.name = defaults.name;
-    	      this.skippedCount = defaults.skippedCount;
-    	      this.totalCount = defaults.totalCount;
-    	      this.xmlSource = defaults.xmlSource;
+            $ = new TestSuiteOverviewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder elapsedTime(DurationResponse elapsedTime) {
-            this.elapsedTime = Objects.requireNonNull(elapsedTime);
+            $.elapsedTime = elapsedTime;
             return this;
         }
+
         public Builder errorCount(Integer errorCount) {
-            this.errorCount = Objects.requireNonNull(errorCount);
+            $.errorCount = errorCount;
             return this;
         }
+
         public Builder failureCount(Integer failureCount) {
-            this.failureCount = Objects.requireNonNull(failureCount);
+            $.failureCount = failureCount;
             return this;
         }
+
         public Builder flakyCount(Integer flakyCount) {
-            this.flakyCount = Objects.requireNonNull(flakyCount);
+            $.flakyCount = flakyCount;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder skippedCount(Integer skippedCount) {
-            this.skippedCount = Objects.requireNonNull(skippedCount);
+            $.skippedCount = skippedCount;
             return this;
         }
+
         public Builder totalCount(Integer totalCount) {
-            this.totalCount = Objects.requireNonNull(totalCount);
+            $.totalCount = totalCount;
             return this;
         }
+
         public Builder xmlSource(FileReferenceResponse xmlSource) {
-            this.xmlSource = Objects.requireNonNull(xmlSource);
+            $.xmlSource = xmlSource;
             return this;
-        }        public TestSuiteOverviewResponse build() {
-            return new TestSuiteOverviewResponse(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
+        }
+
+        public TestSuiteOverviewResponse build() {
+            $.elapsedTime = Objects.requireNonNull($.elapsedTime, "expected parameter 'elapsedTime' to be non-null");
+            $.errorCount = Objects.requireNonNull($.errorCount, "expected parameter 'errorCount' to be non-null");
+            $.failureCount = Objects.requireNonNull($.failureCount, "expected parameter 'failureCount' to be non-null");
+            $.flakyCount = Objects.requireNonNull($.flakyCount, "expected parameter 'flakyCount' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.skippedCount = Objects.requireNonNull($.skippedCount, "expected parameter 'skippedCount' to be non-null");
+            $.totalCount = Objects.requireNonNull($.totalCount, "expected parameter 'totalCount' to be non-null");
+            $.xmlSource = Objects.requireNonNull($.xmlSource, "expected parameter 'xmlSource' to be non-null");
+            return $;
         }
     }
+
 }

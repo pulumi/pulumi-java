@@ -22,7 +22,7 @@ public final class BuildTypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="builderVersion", required=true)
-      private final String builderVersion;
+    private String builderVersion;
 
     public String builderVersion() {
         return this.builderVersion;
@@ -33,55 +33,52 @@ public final class BuildTypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signature", required=true)
-      private final BuildSignatureResponse signature;
+    private BuildSignatureResponse signature;
 
     public BuildSignatureResponse signature() {
         return this.signature;
     }
 
-    public BuildTypeResponse(
-        String builderVersion,
-        BuildSignatureResponse signature) {
-        this.builderVersion = Objects.requireNonNull(builderVersion, "expected parameter 'builderVersion' to be non-null");
-        this.signature = Objects.requireNonNull(signature, "expected parameter 'signature' to be non-null");
-    }
+    private BuildTypeResponse() {}
 
-    private BuildTypeResponse() {
-        this.builderVersion = null;
-        this.signature = null;
+    private BuildTypeResponse(BuildTypeResponse $) {
+        this.builderVersion = $.builderVersion;
+        this.signature = $.signature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String builderVersion;
-        private BuildSignatureResponse signature;
+        private BuildTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildTypeResponse();
         }
 
         public Builder(BuildTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.builderVersion = defaults.builderVersion;
-    	      this.signature = defaults.signature;
+            $ = new BuildTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder builderVersion(String builderVersion) {
-            this.builderVersion = Objects.requireNonNull(builderVersion);
+            $.builderVersion = builderVersion;
             return this;
         }
+
         public Builder signature(BuildSignatureResponse signature) {
-            this.signature = Objects.requireNonNull(signature);
+            $.signature = signature;
             return this;
-        }        public BuildTypeResponse build() {
-            return new BuildTypeResponse(builderVersion, signature);
+        }
+
+        public BuildTypeResponse build() {
+            $.builderVersion = Objects.requireNonNull($.builderVersion, "expected parameter 'builderVersion' to be non-null");
+            $.signature = Objects.requireNonNull($.signature, "expected parameter 'signature' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2TableOptionsResponse extends com.pulumi.res
      * 
      */
     @Import(name="identifyingFields", required=true)
-      private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
+    private List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields() {
         return this.identifyingFields;
     }
 
-    public GooglePrivacyDlpV2TableOptionsResponse(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
-        this.identifyingFields = Objects.requireNonNull(identifyingFields, "expected parameter 'identifyingFields' to be non-null");
-    }
+    private GooglePrivacyDlpV2TableOptionsResponse() {}
 
-    private GooglePrivacyDlpV2TableOptionsResponse() {
-        this.identifyingFields = List.of();
+    private GooglePrivacyDlpV2TableOptionsResponse(GooglePrivacyDlpV2TableOptionsResponse $) {
+        this.identifyingFields = $.identifyingFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TableOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
+        private GooglePrivacyDlpV2TableOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TableOptionsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2TableOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.identifyingFields = defaults.identifyingFields;
+            $ = new GooglePrivacyDlpV2TableOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
-            this.identifyingFields = Objects.requireNonNull(identifyingFields);
+            $.identifyingFields = identifyingFields;
             return this;
         }
+
         public Builder identifyingFields(GooglePrivacyDlpV2FieldIdResponse... identifyingFields) {
             return identifyingFields(List.of(identifyingFields));
-        }        public GooglePrivacyDlpV2TableOptionsResponse build() {
-            return new GooglePrivacyDlpV2TableOptionsResponse(identifyingFields);
+        }
+
+        public GooglePrivacyDlpV2TableOptionsResponse build() {
+            $.identifyingFields = Objects.requireNonNull($.identifyingFields, "expected parameter 'identifyingFields' to be non-null");
+            return $;
         }
     }
+
 }

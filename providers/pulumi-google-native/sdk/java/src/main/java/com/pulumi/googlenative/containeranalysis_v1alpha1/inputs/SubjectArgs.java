@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="digest")
-      private final @Nullable Output<Map<String,String>> digest;
+    private @Nullable Output<Map<String,String>> digest;
 
-    public Output<Map<String,String>> digest() {
-        return this.digest == null ? Codegen.empty() : this.digest;
+    public Optional<Output<Map<String,String>>> digest() {
+        return Optional.ofNullable(this.digest);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SubjectArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public SubjectArgs(
-        @Nullable Output<Map<String,String>> digest,
-        @Nullable Output<String> name) {
-        this.digest = digest;
-        this.name = name;
-    }
+    private SubjectArgs() {}
 
-    private SubjectArgs() {
-        this.digest = Codegen.empty();
-        this.name = Codegen.empty();
+    private SubjectArgs(SubjectArgs $) {
+        this.digest = $.digest;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> digest;
-        private @Nullable Output<String> name;
+        private SubjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectArgs();
         }
 
         public Builder(SubjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.digest = defaults.digest;
-    	      this.name = defaults.name;
+            $ = new SubjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder digest(@Nullable Output<Map<String,String>> digest) {
-            this.digest = digest;
+            $.digest = digest;
             return this;
         }
-        public Builder digest(@Nullable Map<String,String> digest) {
-            this.digest = Codegen.ofNullable(digest);
-            return this;
+
+        public Builder digest(Map<String,String> digest) {
+            return digest(Output.of(digest));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public SubjectArgs build() {
-            return new SubjectArgs(digest, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public SubjectArgs build() {
+            return $;
         }
     }
+
 }

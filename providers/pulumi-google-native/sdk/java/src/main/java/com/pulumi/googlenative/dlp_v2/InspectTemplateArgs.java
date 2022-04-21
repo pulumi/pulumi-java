@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -43,24 +43,24 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="inspectConfig")
-      private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
+    private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
-    public Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig() {
-        return this.inspectConfig == null ? Codegen.empty() : this.inspectConfig;
+    public Optional<Output<GooglePrivacyDlpV2InspectConfigArgs>> inspectConfig() {
+        return Optional.ofNullable(this.inspectConfig);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -68,115 +68,98 @@ public final class InspectTemplateArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="templateId")
-      private final @Nullable Output<String> templateId;
+    private @Nullable Output<String> templateId;
 
-    public Output<String> templateId() {
-        return this.templateId == null ? Codegen.empty() : this.templateId;
+    public Optional<Output<String>> templateId() {
+        return Optional.ofNullable(this.templateId);
     }
 
-    public InspectTemplateArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> templateId) {
-        this.description = description;
-        this.displayName = displayName;
-        this.inspectConfig = inspectConfig;
-        this.location = location;
-        this.project = project;
-        this.templateId = templateId;
-    }
+    private InspectTemplateArgs() {}
 
-    private InspectTemplateArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.inspectConfig = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.templateId = Codegen.empty();
+    private InspectTemplateArgs(InspectTemplateArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.inspectConfig = $.inspectConfig;
+        this.location = $.location;
+        this.project = $.project;
+        this.templateId = $.templateId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InspectTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> templateId;
+        private InspectTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InspectTemplateArgs();
         }
 
         public Builder(InspectTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.inspectConfig = defaults.inspectConfig;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.templateId = defaults.templateId;
+            $ = new InspectTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder inspectConfig(@Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig) {
-            this.inspectConfig = inspectConfig;
+            $.inspectConfig = inspectConfig;
             return this;
         }
-        public Builder inspectConfig(@Nullable GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
-            this.inspectConfig = Codegen.ofNullable(inspectConfig);
-            return this;
+
+        public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigArgs inspectConfig) {
+            return inspectConfig(Output.of(inspectConfig));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder templateId(@Nullable Output<String> templateId) {
-            this.templateId = templateId;
+            $.templateId = templateId;
             return this;
         }
-        public Builder templateId(@Nullable String templateId) {
-            this.templateId = Codegen.ofNullable(templateId);
-            return this;
-        }        public InspectTemplateArgs build() {
-            return new InspectTemplateArgs(description, displayName, inspectConfig, location, project, templateId);
+
+        public Builder templateId(String templateId) {
+            return templateId(Output.of(templateId));
+        }
+
+        public InspectTemplateArgs build() {
+            return $;
         }
     }
+
 }

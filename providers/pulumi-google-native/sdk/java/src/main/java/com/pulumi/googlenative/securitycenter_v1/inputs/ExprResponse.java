@@ -21,7 +21,7 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -32,7 +32,7 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expression", required=true)
-      private final String expression;
+    private String expression;
 
     public String expression() {
         return this.expression;
@@ -43,7 +43,7 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
@@ -54,73 +54,66 @@ public final class ExprResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public ExprResponse(
-        String description,
-        String expression,
-        String location,
-        String title) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.expression = Objects.requireNonNull(expression, "expected parameter 'expression' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private ExprResponse() {}
 
-    private ExprResponse() {
-        this.description = null;
-        this.expression = null;
-        this.location = null;
-        this.title = null;
+    private ExprResponse(ExprResponse $) {
+        this.description = $.description;
+        this.expression = $.expression;
+        this.location = $.location;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExprResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String expression;
-        private String location;
-        private String title;
+        private ExprResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExprResponse();
         }
 
         public Builder(ExprResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.location = defaults.location;
-    	      this.title = defaults.title;
+            $ = new ExprResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder expression(String expression) {
-            this.expression = Objects.requireNonNull(expression);
+            $.expression = expression;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public ExprResponse build() {
-            return new ExprResponse(description, expression, location, title);
+        }
+
+        public ExprResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.expression = Objects.requireNonNull($.expression, "expected parameter 'expression' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

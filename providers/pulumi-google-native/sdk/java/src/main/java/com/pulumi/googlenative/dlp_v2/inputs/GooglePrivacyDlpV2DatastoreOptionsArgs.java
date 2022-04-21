@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KindExpressionArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PartitionIdArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
+    private @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
 
-    public Output<GooglePrivacyDlpV2KindExpressionArgs> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<GooglePrivacyDlpV2KindExpressionArgs>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2DatastoreOptionsArgs extends com.pulumi.res
      * 
      */
     @Import(name="partitionId")
-      private final @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
+    private @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
 
-    public Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId() {
-        return this.partitionId == null ? Codegen.empty() : this.partitionId;
+    public Optional<Output<GooglePrivacyDlpV2PartitionIdArgs>> partitionId() {
+        return Optional.ofNullable(this.partitionId);
     }
 
-    public GooglePrivacyDlpV2DatastoreOptionsArgs(
-        @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind,
-        @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
-        this.kind = kind;
-        this.partitionId = partitionId;
-    }
+    private GooglePrivacyDlpV2DatastoreOptionsArgs() {}
 
-    private GooglePrivacyDlpV2DatastoreOptionsArgs() {
-        this.kind = Codegen.empty();
-        this.partitionId = Codegen.empty();
+    private GooglePrivacyDlpV2DatastoreOptionsArgs(GooglePrivacyDlpV2DatastoreOptionsArgs $) {
+        this.kind = $.kind;
+        this.partitionId = $.partitionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DatastoreOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind;
-        private @Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId;
+        private GooglePrivacyDlpV2DatastoreOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DatastoreOptionsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2DatastoreOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.partitionId = defaults.partitionId;
+            $ = new GooglePrivacyDlpV2DatastoreOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(@Nullable Output<GooglePrivacyDlpV2KindExpressionArgs> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable GooglePrivacyDlpV2KindExpressionArgs kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(GooglePrivacyDlpV2KindExpressionArgs kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder partitionId(@Nullable Output<GooglePrivacyDlpV2PartitionIdArgs> partitionId) {
-            this.partitionId = partitionId;
+            $.partitionId = partitionId;
             return this;
         }
-        public Builder partitionId(@Nullable GooglePrivacyDlpV2PartitionIdArgs partitionId) {
-            this.partitionId = Codegen.ofNullable(partitionId);
-            return this;
-        }        public GooglePrivacyDlpV2DatastoreOptionsArgs build() {
-            return new GooglePrivacyDlpV2DatastoreOptionsArgs(kind, partitionId);
+
+        public Builder partitionId(GooglePrivacyDlpV2PartitionIdArgs partitionId) {
+            return partitionId(Output.of(partitionId));
+        }
+
+        public GooglePrivacyDlpV2DatastoreOptionsArgs build() {
+            return $;
         }
     }
+
 }

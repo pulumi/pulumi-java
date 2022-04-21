@@ -21,7 +21,7 @@ public final class ScoringConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="disableFreshness", required=true)
-      private final Boolean disableFreshness;
+    private Boolean disableFreshness;
 
     public Boolean disableFreshness() {
         return this.disableFreshness;
@@ -32,55 +32,52 @@ public final class ScoringConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="disablePersonalization", required=true)
-      private final Boolean disablePersonalization;
+    private Boolean disablePersonalization;
 
     public Boolean disablePersonalization() {
         return this.disablePersonalization;
     }
 
-    public ScoringConfigResponse(
-        Boolean disableFreshness,
-        Boolean disablePersonalization) {
-        this.disableFreshness = Objects.requireNonNull(disableFreshness, "expected parameter 'disableFreshness' to be non-null");
-        this.disablePersonalization = Objects.requireNonNull(disablePersonalization, "expected parameter 'disablePersonalization' to be non-null");
-    }
+    private ScoringConfigResponse() {}
 
-    private ScoringConfigResponse() {
-        this.disableFreshness = null;
-        this.disablePersonalization = null;
+    private ScoringConfigResponse(ScoringConfigResponse $) {
+        this.disableFreshness = $.disableFreshness;
+        this.disablePersonalization = $.disablePersonalization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScoringConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disableFreshness;
-        private Boolean disablePersonalization;
+        private ScoringConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScoringConfigResponse();
         }
 
         public Builder(ScoringConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableFreshness = defaults.disableFreshness;
-    	      this.disablePersonalization = defaults.disablePersonalization;
+            $ = new ScoringConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disableFreshness(Boolean disableFreshness) {
-            this.disableFreshness = Objects.requireNonNull(disableFreshness);
+            $.disableFreshness = disableFreshness;
             return this;
         }
+
         public Builder disablePersonalization(Boolean disablePersonalization) {
-            this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
+            $.disablePersonalization = disablePersonalization;
             return this;
-        }        public ScoringConfigResponse build() {
-            return new ScoringConfigResponse(disableFreshness, disablePersonalization);
+        }
+
+        public ScoringConfigResponse build() {
+            $.disableFreshness = Objects.requireNonNull($.disableFreshness, "expected parameter 'disableFreshness' to be non-null");
+            $.disablePersonalization = Objects.requireNonNull($.disablePersonalization, "expected parameter 'disablePersonalization' to be non-null");
+            return $;
         }
     }
+
 }

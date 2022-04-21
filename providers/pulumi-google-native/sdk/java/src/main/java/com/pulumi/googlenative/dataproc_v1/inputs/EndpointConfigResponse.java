@@ -23,7 +23,7 @@ public final class EndpointConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enableHttpPortAccess", required=true)
-      private final Boolean enableHttpPortAccess;
+    private Boolean enableHttpPortAccess;
 
     public Boolean enableHttpPortAccess() {
         return this.enableHttpPortAccess;
@@ -34,55 +34,52 @@ public final class EndpointConfigResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="httpPorts", required=true)
-      private final Map<String,String> httpPorts;
+    private Map<String,String> httpPorts;
 
     public Map<String,String> httpPorts() {
         return this.httpPorts;
     }
 
-    public EndpointConfigResponse(
-        Boolean enableHttpPortAccess,
-        Map<String,String> httpPorts) {
-        this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess, "expected parameter 'enableHttpPortAccess' to be non-null");
-        this.httpPorts = Objects.requireNonNull(httpPorts, "expected parameter 'httpPorts' to be non-null");
-    }
+    private EndpointConfigResponse() {}
 
-    private EndpointConfigResponse() {
-        this.enableHttpPortAccess = null;
-        this.httpPorts = Map.of();
+    private EndpointConfigResponse(EndpointConfigResponse $) {
+        this.enableHttpPortAccess = $.enableHttpPortAccess;
+        this.httpPorts = $.httpPorts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableHttpPortAccess;
-        private Map<String,String> httpPorts;
+        private EndpointConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointConfigResponse();
         }
 
         public Builder(EndpointConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableHttpPortAccess = defaults.enableHttpPortAccess;
-    	      this.httpPorts = defaults.httpPorts;
+            $ = new EndpointConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableHttpPortAccess(Boolean enableHttpPortAccess) {
-            this.enableHttpPortAccess = Objects.requireNonNull(enableHttpPortAccess);
+            $.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
+
         public Builder httpPorts(Map<String,String> httpPorts) {
-            this.httpPorts = Objects.requireNonNull(httpPorts);
+            $.httpPorts = httpPorts;
             return this;
-        }        public EndpointConfigResponse build() {
-            return new EndpointConfigResponse(enableHttpPortAccess, httpPorts);
+        }
+
+        public EndpointConfigResponse build() {
+            $.enableHttpPortAccess = Objects.requireNonNull($.enableHttpPortAccess, "expected parameter 'enableHttpPortAccess' to be non-null");
+            $.httpPorts = Objects.requireNonNull($.httpPorts, "expected parameter 'httpPorts' to be non-null");
+            return $;
         }
     }
+
 }

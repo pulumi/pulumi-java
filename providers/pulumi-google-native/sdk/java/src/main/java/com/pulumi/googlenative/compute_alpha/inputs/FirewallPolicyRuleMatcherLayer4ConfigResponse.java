@@ -18,7 +18,7 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends com.pul
      * 
      */
     @Import(name="ipProtocol", required=true)
-      private final String ipProtocol;
+    private String ipProtocol;
 
     public String ipProtocol() {
         return this.ipProtocol;
@@ -29,58 +29,56 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigResponse extends com.pul
      * 
      */
     @Import(name="ports", required=true)
-      private final List<String> ports;
+    private List<String> ports;
 
     public List<String> ports() {
         return this.ports;
     }
 
-    public FirewallPolicyRuleMatcherLayer4ConfigResponse(
-        String ipProtocol,
-        List<String> ports) {
-        this.ipProtocol = Objects.requireNonNull(ipProtocol, "expected parameter 'ipProtocol' to be non-null");
-        this.ports = Objects.requireNonNull(ports, "expected parameter 'ports' to be non-null");
-    }
+    private FirewallPolicyRuleMatcherLayer4ConfigResponse() {}
 
-    private FirewallPolicyRuleMatcherLayer4ConfigResponse() {
-        this.ipProtocol = null;
-        this.ports = List.of();
+    private FirewallPolicyRuleMatcherLayer4ConfigResponse(FirewallPolicyRuleMatcherLayer4ConfigResponse $) {
+        this.ipProtocol = $.ipProtocol;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleMatcherLayer4ConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipProtocol;
-        private List<String> ports;
+        private FirewallPolicyRuleMatcherLayer4ConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleMatcherLayer4ConfigResponse();
         }
 
         public Builder(FirewallPolicyRuleMatcherLayer4ConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipProtocol = defaults.ipProtocol;
-    	      this.ports = defaults.ports;
+            $ = new FirewallPolicyRuleMatcherLayer4ConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipProtocol(String ipProtocol) {
-            this.ipProtocol = Objects.requireNonNull(ipProtocol);
+            $.ipProtocol = ipProtocol;
             return this;
         }
+
         public Builder ports(List<String> ports) {
-            this.ports = Objects.requireNonNull(ports);
+            $.ports = ports;
             return this;
         }
+
         public Builder ports(String... ports) {
             return ports(List.of(ports));
-        }        public FirewallPolicyRuleMatcherLayer4ConfigResponse build() {
-            return new FirewallPolicyRuleMatcherLayer4ConfigResponse(ipProtocol, ports);
+        }
+
+        public FirewallPolicyRuleMatcherLayer4ConfigResponse build() {
+            $.ipProtocol = Objects.requireNonNull($.ipProtocol, "expected parameter 'ipProtocol' to be non-null");
+            $.ports = Objects.requireNonNull($.ports, "expected parameter 'ports' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class InterconnectMacsecPreSharedKeyResponse extends com.pulumi.res
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class InterconnectMacsecPreSharedKeyResponse extends com.pulumi.res
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public InterconnectMacsecPreSharedKeyResponse(
-        String name,
-        String startTime) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private InterconnectMacsecPreSharedKeyResponse() {}
 
-    private InterconnectMacsecPreSharedKeyResponse() {
-        this.name = null;
-        this.startTime = null;
+    private InterconnectMacsecPreSharedKeyResponse(InterconnectMacsecPreSharedKeyResponse $) {
+        this.name = $.name;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InterconnectMacsecPreSharedKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String startTime;
+        private InterconnectMacsecPreSharedKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InterconnectMacsecPreSharedKeyResponse();
         }
 
         public Builder(InterconnectMacsecPreSharedKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.startTime = defaults.startTime;
+            $ = new InterconnectMacsecPreSharedKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public InterconnectMacsecPreSharedKeyResponse build() {
-            return new InterconnectMacsecPreSharedKeyResponse(name, startTime);
+        }
+
+        public InterconnectMacsecPreSharedKeyResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

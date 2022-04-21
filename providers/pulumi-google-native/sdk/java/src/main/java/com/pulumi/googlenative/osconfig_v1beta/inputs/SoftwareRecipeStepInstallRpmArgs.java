@@ -5,7 +5,6 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class SoftwareRecipeStepInstallRpmArgs extends com.pulumi.resources
      * 
      */
     @Import(name="artifactId", required=true)
-      private final Output<String> artifactId;
+    private Output<String> artifactId;
 
     public Output<String> artifactId() {
         return this.artifactId;
     }
 
-    public SoftwareRecipeStepInstallRpmArgs(Output<String> artifactId) {
-        this.artifactId = Objects.requireNonNull(artifactId, "expected parameter 'artifactId' to be non-null");
-    }
+    private SoftwareRecipeStepInstallRpmArgs() {}
 
-    private SoftwareRecipeStepInstallRpmArgs() {
-        this.artifactId = Codegen.empty();
+    private SoftwareRecipeStepInstallRpmArgs(SoftwareRecipeStepInstallRpmArgs $) {
+        this.artifactId = $.artifactId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeStepInstallRpmArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> artifactId;
+        private SoftwareRecipeStepInstallRpmArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeStepInstallRpmArgs();
         }
 
         public Builder(SoftwareRecipeStepInstallRpmArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.artifactId = defaults.artifactId;
+            $ = new SoftwareRecipeStepInstallRpmArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder artifactId(Output<String> artifactId) {
-            this.artifactId = Objects.requireNonNull(artifactId);
+            $.artifactId = artifactId;
             return this;
         }
+
         public Builder artifactId(String artifactId) {
-            this.artifactId = Output.of(Objects.requireNonNull(artifactId));
-            return this;
-        }        public SoftwareRecipeStepInstallRpmArgs build() {
-            return new SoftwareRecipeStepInstallRpmArgs(artifactId);
+            return artifactId(Output.of(artifactId));
+        }
+
+        public SoftwareRecipeStepInstallRpmArgs build() {
+            $.artifactId = Objects.requireNonNull($.artifactId, "expected parameter 'artifactId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datapipelines_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datapipelines_v1.enums.PipelineState;
 import com.pulumi.googlenative.datapipelines_v1.enums.PipelineType;
 import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1ScheduleSpecArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,17 +25,17 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -54,17 +54,17 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pipelineSources")
-      private final @Nullable Output<Map<String,String>> pipelineSources;
+    private @Nullable Output<Map<String,String>> pipelineSources;
 
-    public Output<Map<String,String>> pipelineSources() {
-        return this.pipelineSources == null ? Codegen.empty() : this.pipelineSources;
+    public Optional<Output<Map<String,String>>> pipelineSources() {
+        return Optional.ofNullable(this.pipelineSources);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleInfo")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
+    private @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
 
-    public Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo() {
-        return this.scheduleInfo == null ? Codegen.empty() : this.scheduleInfo;
+    public Optional<Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs>> scheduleInfo() {
+        return Optional.ofNullable(this.scheduleInfo);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schedulerServiceAccountEmail")
-      private final @Nullable Output<String> schedulerServiceAccountEmail;
+    private @Nullable Output<String> schedulerServiceAccountEmail;
 
-    public Output<String> schedulerServiceAccountEmail() {
-        return this.schedulerServiceAccountEmail == null ? Codegen.empty() : this.schedulerServiceAccountEmail;
+    public Optional<Output<String>> schedulerServiceAccountEmail() {
+        return Optional.ofNullable(this.schedulerServiceAccountEmail);
     }
 
     /**
@@ -94,7 +94,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final Output<PipelineState> state;
+    private Output<PipelineState> state;
 
     public Output<PipelineState> state() {
         return this.state;
@@ -105,7 +105,7 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<PipelineType> type;
+    private Output<PipelineType> type;
 
     public Output<PipelineType> type() {
         return this.type;
@@ -116,167 +116,141 @@ public final class PipelineArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workload")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
+    private @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
-    public Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload() {
-        return this.workload == null ? Codegen.empty() : this.workload;
+    public Optional<Output<GoogleCloudDatapipelinesV1WorkloadArgs>> workload() {
+        return Optional.ofNullable(this.workload);
     }
 
-    public PipelineArgs(
-        Output<String> displayName,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<Map<String,String>> pipelineSources,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo,
-        @Nullable Output<String> schedulerServiceAccountEmail,
-        Output<PipelineState> state,
-        Output<PipelineType> type,
-        @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.location = location;
-        this.name = name;
-        this.pipelineSources = pipelineSources;
-        this.project = project;
-        this.scheduleInfo = scheduleInfo;
-        this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.workload = workload;
-    }
+    private PipelineArgs() {}
 
-    private PipelineArgs() {
-        this.displayName = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.pipelineSources = Codegen.empty();
-        this.project = Codegen.empty();
-        this.scheduleInfo = Codegen.empty();
-        this.schedulerServiceAccountEmail = Codegen.empty();
-        this.state = Codegen.empty();
-        this.type = Codegen.empty();
-        this.workload = Codegen.empty();
+    private PipelineArgs(PipelineArgs $) {
+        this.displayName = $.displayName;
+        this.location = $.location;
+        this.name = $.name;
+        this.pipelineSources = $.pipelineSources;
+        this.project = $.project;
+        this.scheduleInfo = $.scheduleInfo;
+        this.schedulerServiceAccountEmail = $.schedulerServiceAccountEmail;
+        this.state = $.state;
+        this.type = $.type;
+        this.workload = $.workload;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> displayName;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<Map<String,String>> pipelineSources;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
-        private @Nullable Output<String> schedulerServiceAccountEmail;
-        private Output<PipelineState> state;
-        private Output<PipelineType> type;
-        private @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
+        private PipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineArgs();
         }
 
         public Builder(PipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.pipelineSources = defaults.pipelineSources;
-    	      this.project = defaults.project;
-    	      this.scheduleInfo = defaults.scheduleInfo;
-    	      this.schedulerServiceAccountEmail = defaults.schedulerServiceAccountEmail;
-    	      this.state = defaults.state;
-    	      this.type = defaults.type;
-    	      this.workload = defaults.workload;
+            $ = new PipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder pipelineSources(@Nullable Output<Map<String,String>> pipelineSources) {
-            this.pipelineSources = pipelineSources;
+            $.pipelineSources = pipelineSources;
             return this;
         }
-        public Builder pipelineSources(@Nullable Map<String,String> pipelineSources) {
-            this.pipelineSources = Codegen.ofNullable(pipelineSources);
-            return this;
+
+        public Builder pipelineSources(Map<String,String> pipelineSources) {
+            return pipelineSources(Output.of(pipelineSources));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder scheduleInfo(@Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo) {
-            this.scheduleInfo = scheduleInfo;
+            $.scheduleInfo = scheduleInfo;
             return this;
         }
-        public Builder scheduleInfo(@Nullable GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
-            this.scheduleInfo = Codegen.ofNullable(scheduleInfo);
-            return this;
+
+        public Builder scheduleInfo(GoogleCloudDatapipelinesV1ScheduleSpecArgs scheduleInfo) {
+            return scheduleInfo(Output.of(scheduleInfo));
         }
+
         public Builder schedulerServiceAccountEmail(@Nullable Output<String> schedulerServiceAccountEmail) {
-            this.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
+            $.schedulerServiceAccountEmail = schedulerServiceAccountEmail;
             return this;
         }
-        public Builder schedulerServiceAccountEmail(@Nullable String schedulerServiceAccountEmail) {
-            this.schedulerServiceAccountEmail = Codegen.ofNullable(schedulerServiceAccountEmail);
-            return this;
+
+        public Builder schedulerServiceAccountEmail(String schedulerServiceAccountEmail) {
+            return schedulerServiceAccountEmail(Output.of(schedulerServiceAccountEmail));
         }
+
         public Builder state(Output<PipelineState> state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder state(PipelineState state) {
-            this.state = Output.of(Objects.requireNonNull(state));
-            return this;
+            return state(Output.of(state));
         }
+
         public Builder type(Output<PipelineType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(PipelineType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder workload(@Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload) {
-            this.workload = workload;
+            $.workload = workload;
             return this;
         }
-        public Builder workload(@Nullable GoogleCloudDatapipelinesV1WorkloadArgs workload) {
-            this.workload = Codegen.ofNullable(workload);
-            return this;
-        }        public PipelineArgs build() {
-            return new PipelineArgs(displayName, location, name, pipelineSources, project, scheduleInfo, schedulerServiceAccountEmail, state, type, workload);
+
+        public Builder workload(GoogleCloudDatapipelinesV1WorkloadArgs workload) {
+            return workload(Output.of(workload));
+        }
+
+        public PipelineArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

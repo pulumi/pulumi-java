@@ -21,7 +21,7 @@ public final class BigQueryOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="usePartitionedTables", required=true)
-      private final Boolean usePartitionedTables;
+    private Boolean usePartitionedTables;
 
     public Boolean usePartitionedTables() {
         return this.usePartitionedTables;
@@ -32,55 +32,52 @@ public final class BigQueryOptionsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="usesTimestampColumnPartitioning", required=true)
-      private final Boolean usesTimestampColumnPartitioning;
+    private Boolean usesTimestampColumnPartitioning;
 
     public Boolean usesTimestampColumnPartitioning() {
         return this.usesTimestampColumnPartitioning;
     }
 
-    public BigQueryOptionsResponse(
-        Boolean usePartitionedTables,
-        Boolean usesTimestampColumnPartitioning) {
-        this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables, "expected parameter 'usePartitionedTables' to be non-null");
-        this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning, "expected parameter 'usesTimestampColumnPartitioning' to be non-null");
-    }
+    private BigQueryOptionsResponse() {}
 
-    private BigQueryOptionsResponse() {
-        this.usePartitionedTables = null;
-        this.usesTimestampColumnPartitioning = null;
+    private BigQueryOptionsResponse(BigQueryOptionsResponse $) {
+        this.usePartitionedTables = $.usePartitionedTables;
+        this.usesTimestampColumnPartitioning = $.usesTimestampColumnPartitioning;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean usePartitionedTables;
-        private Boolean usesTimestampColumnPartitioning;
+        private BigQueryOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryOptionsResponse();
         }
 
         public Builder(BigQueryOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.usePartitionedTables = defaults.usePartitionedTables;
-    	      this.usesTimestampColumnPartitioning = defaults.usesTimestampColumnPartitioning;
+            $ = new BigQueryOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder usePartitionedTables(Boolean usePartitionedTables) {
-            this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
+            $.usePartitionedTables = usePartitionedTables;
             return this;
         }
+
         public Builder usesTimestampColumnPartitioning(Boolean usesTimestampColumnPartitioning) {
-            this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
+            $.usesTimestampColumnPartitioning = usesTimestampColumnPartitioning;
             return this;
-        }        public BigQueryOptionsResponse build() {
-            return new BigQueryOptionsResponse(usePartitionedTables, usesTimestampColumnPartitioning);
+        }
+
+        public BigQueryOptionsResponse build() {
+            $.usePartitionedTables = Objects.requireNonNull($.usePartitionedTables, "expected parameter 'usePartitionedTables' to be non-null");
+            $.usesTimestampColumnPartitioning = Objects.requireNonNull($.usesTimestampColumnPartitioning, "expected parameter 'usesTimestampColumnPartitioning' to be non-null");
+            return $;
         }
     }
+
 }

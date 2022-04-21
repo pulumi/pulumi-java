@@ -22,7 +22,7 @@ public final class MultiCloudClusterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="clusterMissing", required=true)
-      private final Boolean clusterMissing;
+    private Boolean clusterMissing;
 
     public Boolean clusterMissing() {
         return this.clusterMissing;
@@ -33,55 +33,52 @@ public final class MultiCloudClusterResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="resourceLink", required=true)
-      private final String resourceLink;
+    private String resourceLink;
 
     public String resourceLink() {
         return this.resourceLink;
     }
 
-    public MultiCloudClusterResponse(
-        Boolean clusterMissing,
-        String resourceLink) {
-        this.clusterMissing = Objects.requireNonNull(clusterMissing, "expected parameter 'clusterMissing' to be non-null");
-        this.resourceLink = Objects.requireNonNull(resourceLink, "expected parameter 'resourceLink' to be non-null");
-    }
+    private MultiCloudClusterResponse() {}
 
-    private MultiCloudClusterResponse() {
-        this.clusterMissing = null;
-        this.resourceLink = null;
+    private MultiCloudClusterResponse(MultiCloudClusterResponse $) {
+        this.clusterMissing = $.clusterMissing;
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiCloudClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean clusterMissing;
-        private String resourceLink;
+        private MultiCloudClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiCloudClusterResponse();
         }
 
         public Builder(MultiCloudClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterMissing = defaults.clusterMissing;
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new MultiCloudClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterMissing(Boolean clusterMissing) {
-            this.clusterMissing = Objects.requireNonNull(clusterMissing);
+            $.clusterMissing = clusterMissing;
             return this;
         }
+
         public Builder resourceLink(String resourceLink) {
-            this.resourceLink = Objects.requireNonNull(resourceLink);
+            $.resourceLink = resourceLink;
             return this;
-        }        public MultiCloudClusterResponse build() {
-            return new MultiCloudClusterResponse(clusterMissing, resourceLink);
+        }
+
+        public MultiCloudClusterResponse build() {
+            $.clusterMissing = Objects.requireNonNull($.clusterMissing, "expected parameter 'clusterMissing' to be non-null");
+            $.resourceLink = Objects.requireNonNull($.resourceLink, "expected parameter 'resourceLink' to be non-null");
+            return $;
         }
     }
+
 }

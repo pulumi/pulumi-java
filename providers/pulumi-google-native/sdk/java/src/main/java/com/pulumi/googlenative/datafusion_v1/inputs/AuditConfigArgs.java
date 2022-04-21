@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datafusion_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datafusion_v1.inputs.AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="auditLogConfigs")
-      private final @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
+    private @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
 
-    public Output<List<AuditLogConfigArgs>> auditLogConfigs() {
-        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
+    public Optional<Output<List<AuditLogConfigArgs>>> auditLogConfigs() {
+        return Optional.ofNullable(this.auditLogConfigs);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class AuditConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public AuditConfigArgs(
-        @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs,
-        @Nullable Output<String> service) {
-        this.auditLogConfigs = auditLogConfigs;
-        this.service = service;
-    }
+    private AuditConfigArgs() {}
 
-    private AuditConfigArgs() {
-        this.auditLogConfigs = Codegen.empty();
-        this.service = Codegen.empty();
+    private AuditConfigArgs(AuditConfigArgs $) {
+        this.auditLogConfigs = $.auditLogConfigs;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuditConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs;
-        private @Nullable Output<String> service;
+        private AuditConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuditConfigArgs();
         }
 
         public Builder(AuditConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditLogConfigs = defaults.auditLogConfigs;
-    	      this.service = defaults.service;
+            $ = new AuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditLogConfigs(@Nullable Output<List<AuditLogConfigArgs>> auditLogConfigs) {
-            this.auditLogConfigs = auditLogConfigs;
+            $.auditLogConfigs = auditLogConfigs;
             return this;
         }
-        public Builder auditLogConfigs(@Nullable List<AuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
-            return this;
+
+        public Builder auditLogConfigs(List<AuditLogConfigArgs> auditLogConfigs) {
+            return auditLogConfigs(Output.of(auditLogConfigs));
         }
+
         public Builder auditLogConfigs(AuditLogConfigArgs... auditLogConfigs) {
             return auditLogConfigs(List.of(auditLogConfigs));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public AuditConfigArgs build() {
-            return new AuditConfigArgs(auditLogConfigs, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public AuditConfigArgs build() {
+            return $;
         }
     }
+
 }

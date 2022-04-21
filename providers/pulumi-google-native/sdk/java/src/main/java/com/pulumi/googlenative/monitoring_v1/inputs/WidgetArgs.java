@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.LogsPanelArgs;
@@ -15,6 +14,7 @@ import com.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesTableArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.XyChartArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -31,10 +31,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="alertChart")
-      private final @Nullable Output<AlertChartArgs> alertChart;
+    private @Nullable Output<AlertChartArgs> alertChart;
 
-    public Output<AlertChartArgs> alertChart() {
-        return this.alertChart == null ? Codegen.empty() : this.alertChart;
+    public Optional<Output<AlertChartArgs>> alertChart() {
+        return Optional.ofNullable(this.alertChart);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="blank")
-      private final @Nullable Output<EmptyArgs> blank;
+    private @Nullable Output<EmptyArgs> blank;
 
-    public Output<EmptyArgs> blank() {
-        return this.blank == null ? Codegen.empty() : this.blank;
+    public Optional<Output<EmptyArgs>> blank() {
+        return Optional.ofNullable(this.blank);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="logsPanel")
-      private final @Nullable Output<LogsPanelArgs> logsPanel;
+    private @Nullable Output<LogsPanelArgs> logsPanel;
 
-    public Output<LogsPanelArgs> logsPanel() {
-        return this.logsPanel == null ? Codegen.empty() : this.logsPanel;
+    public Optional<Output<LogsPanelArgs>> logsPanel() {
+        return Optional.ofNullable(this.logsPanel);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scorecard")
-      private final @Nullable Output<ScorecardArgs> scorecard;
+    private @Nullable Output<ScorecardArgs> scorecard;
 
-    public Output<ScorecardArgs> scorecard() {
-        return this.scorecard == null ? Codegen.empty() : this.scorecard;
+    public Optional<Output<ScorecardArgs>> scorecard() {
+        return Optional.ofNullable(this.scorecard);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="text")
-      private final @Nullable Output<TextArgs> text;
+    private @Nullable Output<TextArgs> text;
 
-    public Output<TextArgs> text() {
-        return this.text == null ? Codegen.empty() : this.text;
+    public Optional<Output<TextArgs>> text() {
+        return Optional.ofNullable(this.text);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeSeriesTable")
-      private final @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
+    private @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
 
-    public Output<TimeSeriesTableArgs> timeSeriesTable() {
-        return this.timeSeriesTable == null ? Codegen.empty() : this.timeSeriesTable;
+    public Optional<Output<TimeSeriesTableArgs>> timeSeriesTable() {
+        return Optional.ofNullable(this.timeSeriesTable);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
     /**
@@ -108,141 +108,118 @@ public final class WidgetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="xyChart")
-      private final @Nullable Output<XyChartArgs> xyChart;
+    private @Nullable Output<XyChartArgs> xyChart;
 
-    public Output<XyChartArgs> xyChart() {
-        return this.xyChart == null ? Codegen.empty() : this.xyChart;
+    public Optional<Output<XyChartArgs>> xyChart() {
+        return Optional.ofNullable(this.xyChart);
     }
 
-    public WidgetArgs(
-        @Nullable Output<AlertChartArgs> alertChart,
-        @Nullable Output<EmptyArgs> blank,
-        @Nullable Output<LogsPanelArgs> logsPanel,
-        @Nullable Output<ScorecardArgs> scorecard,
-        @Nullable Output<TextArgs> text,
-        @Nullable Output<TimeSeriesTableArgs> timeSeriesTable,
-        @Nullable Output<String> title,
-        @Nullable Output<XyChartArgs> xyChart) {
-        this.alertChart = alertChart;
-        this.blank = blank;
-        this.logsPanel = logsPanel;
-        this.scorecard = scorecard;
-        this.text = text;
-        this.timeSeriesTable = timeSeriesTable;
-        this.title = title;
-        this.xyChart = xyChart;
-    }
+    private WidgetArgs() {}
 
-    private WidgetArgs() {
-        this.alertChart = Codegen.empty();
-        this.blank = Codegen.empty();
-        this.logsPanel = Codegen.empty();
-        this.scorecard = Codegen.empty();
-        this.text = Codegen.empty();
-        this.timeSeriesTable = Codegen.empty();
-        this.title = Codegen.empty();
-        this.xyChart = Codegen.empty();
+    private WidgetArgs(WidgetArgs $) {
+        this.alertChart = $.alertChart;
+        this.blank = $.blank;
+        this.logsPanel = $.logsPanel;
+        this.scorecard = $.scorecard;
+        this.text = $.text;
+        this.timeSeriesTable = $.timeSeriesTable;
+        this.title = $.title;
+        this.xyChart = $.xyChart;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WidgetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AlertChartArgs> alertChart;
-        private @Nullable Output<EmptyArgs> blank;
-        private @Nullable Output<LogsPanelArgs> logsPanel;
-        private @Nullable Output<ScorecardArgs> scorecard;
-        private @Nullable Output<TextArgs> text;
-        private @Nullable Output<TimeSeriesTableArgs> timeSeriesTable;
-        private @Nullable Output<String> title;
-        private @Nullable Output<XyChartArgs> xyChart;
+        private WidgetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WidgetArgs();
         }
 
         public Builder(WidgetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.alertChart = defaults.alertChart;
-    	      this.blank = defaults.blank;
-    	      this.logsPanel = defaults.logsPanel;
-    	      this.scorecard = defaults.scorecard;
-    	      this.text = defaults.text;
-    	      this.timeSeriesTable = defaults.timeSeriesTable;
-    	      this.title = defaults.title;
-    	      this.xyChart = defaults.xyChart;
+            $ = new WidgetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder alertChart(@Nullable Output<AlertChartArgs> alertChart) {
-            this.alertChart = alertChart;
+            $.alertChart = alertChart;
             return this;
         }
-        public Builder alertChart(@Nullable AlertChartArgs alertChart) {
-            this.alertChart = Codegen.ofNullable(alertChart);
-            return this;
+
+        public Builder alertChart(AlertChartArgs alertChart) {
+            return alertChart(Output.of(alertChart));
         }
+
         public Builder blank(@Nullable Output<EmptyArgs> blank) {
-            this.blank = blank;
+            $.blank = blank;
             return this;
         }
-        public Builder blank(@Nullable EmptyArgs blank) {
-            this.blank = Codegen.ofNullable(blank);
-            return this;
+
+        public Builder blank(EmptyArgs blank) {
+            return blank(Output.of(blank));
         }
+
         public Builder logsPanel(@Nullable Output<LogsPanelArgs> logsPanel) {
-            this.logsPanel = logsPanel;
+            $.logsPanel = logsPanel;
             return this;
         }
-        public Builder logsPanel(@Nullable LogsPanelArgs logsPanel) {
-            this.logsPanel = Codegen.ofNullable(logsPanel);
-            return this;
+
+        public Builder logsPanel(LogsPanelArgs logsPanel) {
+            return logsPanel(Output.of(logsPanel));
         }
+
         public Builder scorecard(@Nullable Output<ScorecardArgs> scorecard) {
-            this.scorecard = scorecard;
+            $.scorecard = scorecard;
             return this;
         }
-        public Builder scorecard(@Nullable ScorecardArgs scorecard) {
-            this.scorecard = Codegen.ofNullable(scorecard);
-            return this;
+
+        public Builder scorecard(ScorecardArgs scorecard) {
+            return scorecard(Output.of(scorecard));
         }
+
         public Builder text(@Nullable Output<TextArgs> text) {
-            this.text = text;
+            $.text = text;
             return this;
         }
-        public Builder text(@Nullable TextArgs text) {
-            this.text = Codegen.ofNullable(text);
-            return this;
+
+        public Builder text(TextArgs text) {
+            return text(Output.of(text));
         }
+
         public Builder timeSeriesTable(@Nullable Output<TimeSeriesTableArgs> timeSeriesTable) {
-            this.timeSeriesTable = timeSeriesTable;
+            $.timeSeriesTable = timeSeriesTable;
             return this;
         }
-        public Builder timeSeriesTable(@Nullable TimeSeriesTableArgs timeSeriesTable) {
-            this.timeSeriesTable = Codegen.ofNullable(timeSeriesTable);
-            return this;
+
+        public Builder timeSeriesTable(TimeSeriesTableArgs timeSeriesTable) {
+            return timeSeriesTable(Output.of(timeSeriesTable));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
+
+        public Builder title(String title) {
+            return title(Output.of(title));
         }
+
         public Builder xyChart(@Nullable Output<XyChartArgs> xyChart) {
-            this.xyChart = xyChart;
+            $.xyChart = xyChart;
             return this;
         }
-        public Builder xyChart(@Nullable XyChartArgs xyChart) {
-            this.xyChart = Codegen.ofNullable(xyChart);
-            return this;
-        }        public WidgetArgs build() {
-            return new WidgetArgs(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
+
+        public Builder xyChart(XyChartArgs xyChart) {
+            return xyChart(Output.of(xyChart));
+        }
+
+        public WidgetArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class BucketEncryptionResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="defaultKmsKeyName", required=true)
-      private final String defaultKmsKeyName;
+    private String defaultKmsKeyName;
 
     public String defaultKmsKeyName() {
         return this.defaultKmsKeyName;
     }
 
-    public BucketEncryptionResponse(String defaultKmsKeyName) {
-        this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName, "expected parameter 'defaultKmsKeyName' to be non-null");
-    }
+    private BucketEncryptionResponse() {}
 
-    private BucketEncryptionResponse() {
-        this.defaultKmsKeyName = null;
+    private BucketEncryptionResponse(BucketEncryptionResponse $) {
+        this.defaultKmsKeyName = $.defaultKmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketEncryptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultKmsKeyName;
+        private BucketEncryptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketEncryptionResponse();
         }
 
         public Builder(BucketEncryptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
+            $ = new BucketEncryptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultKmsKeyName(String defaultKmsKeyName) {
-            this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
+            $.defaultKmsKeyName = defaultKmsKeyName;
             return this;
-        }        public BucketEncryptionResponse build() {
-            return new BucketEncryptionResponse(defaultKmsKeyName);
+        }
+
+        public BucketEncryptionResponse build() {
+            $.defaultKmsKeyName = Objects.requireNonNull($.defaultKmsKeyName, "expected parameter 'defaultKmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
      * 
      */
     @Import(name="allowAllBundleIds", required=true)
-      private final Boolean allowAllBundleIds;
+    private Boolean allowAllBundleIds;
 
     public Boolean allowAllBundleIds() {
         return this.allowAllBundleIds;
@@ -34,58 +34,56 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
      * 
      */
     @Import(name="allowedBundleIds", required=true)
-      private final List<String> allowedBundleIds;
+    private List<String> allowedBundleIds;
 
     public List<String> allowedBundleIds() {
         return this.allowedBundleIds;
     }
 
-    public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(
-        Boolean allowAllBundleIds,
-        List<String> allowedBundleIds) {
-        this.allowAllBundleIds = Objects.requireNonNull(allowAllBundleIds, "expected parameter 'allowAllBundleIds' to be non-null");
-        this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds, "expected parameter 'allowedBundleIds' to be non-null");
-    }
+    private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse() {}
 
-    private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse() {
-        this.allowAllBundleIds = null;
-        this.allowedBundleIds = List.of();
+    private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse $) {
+        this.allowAllBundleIds = $.allowAllBundleIds;
+        this.allowedBundleIds = $.allowedBundleIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowAllBundleIds;
-        private List<String> allowedBundleIds;
+        private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAllBundleIds = defaults.allowAllBundleIds;
-    	      this.allowedBundleIds = defaults.allowedBundleIds;
+            $ = new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
-            this.allowAllBundleIds = Objects.requireNonNull(allowAllBundleIds);
+            $.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
+
         public Builder allowedBundleIds(List<String> allowedBundleIds) {
-            this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
+            $.allowedBundleIds = allowedBundleIds;
             return this;
         }
+
         public Builder allowedBundleIds(String... allowedBundleIds) {
             return allowedBundleIds(List.of(allowedBundleIds));
-        }        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
-            return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(allowAllBundleIds, allowedBundleIds);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
+            $.allowAllBundleIds = Objects.requireNonNull($.allowAllBundleIds, "expected parameter 'allowAllBundleIds' to be non-null");
+            $.allowedBundleIds = Objects.requireNonNull($.allowedBundleIds, "expected parameter 'allowedBundleIds' to be non-null");
+            return $;
         }
     }
+
 }

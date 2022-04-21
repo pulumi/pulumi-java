@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class LatencyCriteriaArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="threshold")
-      private final @Nullable Output<String> threshold;
+    private @Nullable Output<String> threshold;
 
-    public Output<String> threshold() {
-        return this.threshold == null ? Codegen.empty() : this.threshold;
+    public Optional<Output<String>> threshold() {
+        return Optional.ofNullable(this.threshold);
     }
 
-    public LatencyCriteriaArgs(@Nullable Output<String> threshold) {
-        this.threshold = threshold;
-    }
+    private LatencyCriteriaArgs() {}
 
-    private LatencyCriteriaArgs() {
-        this.threshold = Codegen.empty();
+    private LatencyCriteriaArgs(LatencyCriteriaArgs $) {
+        this.threshold = $.threshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LatencyCriteriaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> threshold;
+        private LatencyCriteriaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LatencyCriteriaArgs();
         }
 
         public Builder(LatencyCriteriaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.threshold = defaults.threshold;
+            $ = new LatencyCriteriaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder threshold(@Nullable Output<String> threshold) {
-            this.threshold = threshold;
+            $.threshold = threshold;
             return this;
         }
-        public Builder threshold(@Nullable String threshold) {
-            this.threshold = Codegen.ofNullable(threshold);
-            return this;
-        }        public LatencyCriteriaArgs build() {
-            return new LatencyCriteriaArgs(threshold);
+
+        public Builder threshold(String threshold) {
+            return threshold(Output.of(threshold));
+        }
+
+        public LatencyCriteriaArgs build() {
+            return $;
         }
     }
+
 }

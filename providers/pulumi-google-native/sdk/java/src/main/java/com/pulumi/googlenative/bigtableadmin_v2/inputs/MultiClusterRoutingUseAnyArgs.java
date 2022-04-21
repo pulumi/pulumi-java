@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class MultiClusterRoutingUseAnyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="clusterIds")
-      private final @Nullable Output<List<String>> clusterIds;
+    private @Nullable Output<List<String>> clusterIds;
 
-    public Output<List<String>> clusterIds() {
-        return this.clusterIds == null ? Codegen.empty() : this.clusterIds;
+    public Optional<Output<List<String>>> clusterIds() {
+        return Optional.ofNullable(this.clusterIds);
     }
 
-    public MultiClusterRoutingUseAnyArgs(@Nullable Output<List<String>> clusterIds) {
-        this.clusterIds = clusterIds;
-    }
+    private MultiClusterRoutingUseAnyArgs() {}
 
-    private MultiClusterRoutingUseAnyArgs() {
-        this.clusterIds = Codegen.empty();
+    private MultiClusterRoutingUseAnyArgs(MultiClusterRoutingUseAnyArgs $) {
+        this.clusterIds = $.clusterIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MultiClusterRoutingUseAnyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> clusterIds;
+        private MultiClusterRoutingUseAnyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MultiClusterRoutingUseAnyArgs();
         }
 
         public Builder(MultiClusterRoutingUseAnyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterIds = defaults.clusterIds;
+            $ = new MultiClusterRoutingUseAnyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterIds(@Nullable Output<List<String>> clusterIds) {
-            this.clusterIds = clusterIds;
+            $.clusterIds = clusterIds;
             return this;
         }
-        public Builder clusterIds(@Nullable List<String> clusterIds) {
-            this.clusterIds = Codegen.ofNullable(clusterIds);
-            return this;
+
+        public Builder clusterIds(List<String> clusterIds) {
+            return clusterIds(Output.of(clusterIds));
         }
+
         public Builder clusterIds(String... clusterIds) {
             return clusterIds(List.of(clusterIds));
-        }        public MultiClusterRoutingUseAnyArgs build() {
-            return new MultiClusterRoutingUseAnyArgs(clusterIds);
+        }
+
+        public MultiClusterRoutingUseAnyArgs build() {
+            return $;
         }
     }
+
 }

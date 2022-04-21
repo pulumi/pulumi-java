@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.BackendBucketCompressionMode;
 import com.pulumi.googlenative.compute_beta.inputs.BackendBucketCdnPolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketName")
-      private final @Nullable Output<String> bucketName;
+    private @Nullable Output<String> bucketName;
 
-    public Output<String> bucketName() {
-        return this.bucketName == null ? Codegen.empty() : this.bucketName;
+    public Optional<Output<String>> bucketName() {
+        return Optional.ofNullable(this.bucketName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cdnPolicy")
-      private final @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
+    private @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
 
-    public Output<BackendBucketCdnPolicyArgs> cdnPolicy() {
-        return this.cdnPolicy == null ? Codegen.empty() : this.cdnPolicy;
+    public Optional<Output<BackendBucketCdnPolicyArgs>> cdnPolicy() {
+        return Optional.ofNullable(this.cdnPolicy);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="compressionMode")
-      private final @Nullable Output<BackendBucketCompressionMode> compressionMode;
+    private @Nullable Output<BackendBucketCompressionMode> compressionMode;
 
-    public Output<BackendBucketCompressionMode> compressionMode() {
-        return this.compressionMode == null ? Codegen.empty() : this.compressionMode;
+    public Optional<Output<BackendBucketCompressionMode>> compressionMode() {
+        return Optional.ofNullable(this.compressionMode);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customResponseHeaders")
-      private final @Nullable Output<List<String>> customResponseHeaders;
+    private @Nullable Output<List<String>> customResponseHeaders;
 
-    public Output<List<String>> customResponseHeaders() {
-        return this.customResponseHeaders == null ? Codegen.empty() : this.customResponseHeaders;
+    public Optional<Output<List<String>>> customResponseHeaders() {
+        return Optional.ofNullable(this.customResponseHeaders);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enableCdn")
-      private final @Nullable Output<Boolean> enableCdn;
+    private @Nullable Output<Boolean> enableCdn;
 
-    public Output<Boolean> enableCdn() {
-        return this.enableCdn == null ? Codegen.empty() : this.enableCdn;
+    public Optional<Output<Boolean>> enableCdn() {
+        return Optional.ofNullable(this.enableCdn);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -101,184 +101,156 @@ public final class BackendBucketArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
-    public BackendBucketArgs(
-        @Nullable Output<String> bucketName,
-        @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy,
-        @Nullable Output<BackendBucketCompressionMode> compressionMode,
-        @Nullable Output<List<String>> customResponseHeaders,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> enableCdn,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId) {
-        this.bucketName = bucketName;
-        this.cdnPolicy = cdnPolicy;
-        this.compressionMode = compressionMode;
-        this.customResponseHeaders = customResponseHeaders;
-        this.description = description;
-        this.enableCdn = enableCdn;
-        this.kind = kind;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-    }
+    private BackendBucketArgs() {}
 
-    private BackendBucketArgs() {
-        this.bucketName = Codegen.empty();
-        this.cdnPolicy = Codegen.empty();
-        this.compressionMode = Codegen.empty();
-        this.customResponseHeaders = Codegen.empty();
-        this.description = Codegen.empty();
-        this.enableCdn = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
+    private BackendBucketArgs(BackendBucketArgs $) {
+        this.bucketName = $.bucketName;
+        this.cdnPolicy = $.cdnPolicy;
+        this.compressionMode = $.compressionMode;
+        this.customResponseHeaders = $.customResponseHeaders;
+        this.description = $.description;
+        this.enableCdn = $.enableCdn;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackendBucketArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucketName;
-        private @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
-        private @Nullable Output<BackendBucketCompressionMode> compressionMode;
-        private @Nullable Output<List<String>> customResponseHeaders;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> enableCdn;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
+        private BackendBucketArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackendBucketArgs();
         }
 
         public Builder(BackendBucketArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketName = defaults.bucketName;
-    	      this.cdnPolicy = defaults.cdnPolicy;
-    	      this.compressionMode = defaults.compressionMode;
-    	      this.customResponseHeaders = defaults.customResponseHeaders;
-    	      this.description = defaults.description;
-    	      this.enableCdn = defaults.enableCdn;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
+            $ = new BackendBucketArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketName(@Nullable Output<String> bucketName) {
-            this.bucketName = bucketName;
+            $.bucketName = bucketName;
             return this;
         }
-        public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Codegen.ofNullable(bucketName);
-            return this;
+
+        public Builder bucketName(String bucketName) {
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder cdnPolicy(@Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy) {
-            this.cdnPolicy = cdnPolicy;
+            $.cdnPolicy = cdnPolicy;
             return this;
         }
-        public Builder cdnPolicy(@Nullable BackendBucketCdnPolicyArgs cdnPolicy) {
-            this.cdnPolicy = Codegen.ofNullable(cdnPolicy);
-            return this;
+
+        public Builder cdnPolicy(BackendBucketCdnPolicyArgs cdnPolicy) {
+            return cdnPolicy(Output.of(cdnPolicy));
         }
+
         public Builder compressionMode(@Nullable Output<BackendBucketCompressionMode> compressionMode) {
-            this.compressionMode = compressionMode;
+            $.compressionMode = compressionMode;
             return this;
         }
-        public Builder compressionMode(@Nullable BackendBucketCompressionMode compressionMode) {
-            this.compressionMode = Codegen.ofNullable(compressionMode);
-            return this;
+
+        public Builder compressionMode(BackendBucketCompressionMode compressionMode) {
+            return compressionMode(Output.of(compressionMode));
         }
+
         public Builder customResponseHeaders(@Nullable Output<List<String>> customResponseHeaders) {
-            this.customResponseHeaders = customResponseHeaders;
+            $.customResponseHeaders = customResponseHeaders;
             return this;
         }
-        public Builder customResponseHeaders(@Nullable List<String> customResponseHeaders) {
-            this.customResponseHeaders = Codegen.ofNullable(customResponseHeaders);
-            return this;
+
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
+            return customResponseHeaders(Output.of(customResponseHeaders));
         }
+
         public Builder customResponseHeaders(String... customResponseHeaders) {
             return customResponseHeaders(List.of(customResponseHeaders));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder enableCdn(@Nullable Output<Boolean> enableCdn) {
-            this.enableCdn = enableCdn;
+            $.enableCdn = enableCdn;
             return this;
         }
-        public Builder enableCdn(@Nullable Boolean enableCdn) {
-            this.enableCdn = Codegen.ofNullable(enableCdn);
-            return this;
+
+        public Builder enableCdn(Boolean enableCdn) {
+            return enableCdn(Output.of(enableCdn));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
-        }        public BackendBucketArgs build() {
-            return new BackendBucketArgs(bucketName, cdnPolicy, compressionMode, customResponseHeaders, description, enableCdn, kind, name, project, requestId);
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        public BackendBucketArgs build() {
+            return $;
         }
     }
+
 }

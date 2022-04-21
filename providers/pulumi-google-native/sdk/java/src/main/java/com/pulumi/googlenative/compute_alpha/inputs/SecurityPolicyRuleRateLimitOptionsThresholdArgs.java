@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends com.p
      * 
      */
     @Import(name="count")
-      private final @Nullable Output<Integer> count;
+    private @Nullable Output<Integer> count;
 
-    public Output<Integer> count() {
-        return this.count == null ? Codegen.empty() : this.count;
+    public Optional<Output<Integer>> count() {
+        return Optional.ofNullable(this.count);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdArgs extends com.p
      * 
      */
     @Import(name="intervalSec")
-      private final @Nullable Output<Integer> intervalSec;
+    private @Nullable Output<Integer> intervalSec;
 
-    public Output<Integer> intervalSec() {
-        return this.intervalSec == null ? Codegen.empty() : this.intervalSec;
+    public Optional<Output<Integer>> intervalSec() {
+        return Optional.ofNullable(this.intervalSec);
     }
 
-    public SecurityPolicyRuleRateLimitOptionsThresholdArgs(
-        @Nullable Output<Integer> count,
-        @Nullable Output<Integer> intervalSec) {
-        this.count = count;
-        this.intervalSec = intervalSec;
-    }
+    private SecurityPolicyRuleRateLimitOptionsThresholdArgs() {}
 
-    private SecurityPolicyRuleRateLimitOptionsThresholdArgs() {
-        this.count = Codegen.empty();
-        this.intervalSec = Codegen.empty();
+    private SecurityPolicyRuleRateLimitOptionsThresholdArgs(SecurityPolicyRuleRateLimitOptionsThresholdArgs $) {
+        this.count = $.count;
+        this.intervalSec = $.intervalSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRateLimitOptionsThresholdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> count;
-        private @Nullable Output<Integer> intervalSec;
+        private SecurityPolicyRuleRateLimitOptionsThresholdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRateLimitOptionsThresholdArgs();
         }
 
         public Builder(SecurityPolicyRuleRateLimitOptionsThresholdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.count = defaults.count;
-    	      this.intervalSec = defaults.intervalSec;
+            $ = new SecurityPolicyRuleRateLimitOptionsThresholdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder count(@Nullable Output<Integer> count) {
-            this.count = count;
+            $.count = count;
             return this;
         }
-        public Builder count(@Nullable Integer count) {
-            this.count = Codegen.ofNullable(count);
-            return this;
+
+        public Builder count(Integer count) {
+            return count(Output.of(count));
         }
+
         public Builder intervalSec(@Nullable Output<Integer> intervalSec) {
-            this.intervalSec = intervalSec;
+            $.intervalSec = intervalSec;
             return this;
         }
-        public Builder intervalSec(@Nullable Integer intervalSec) {
-            this.intervalSec = Codegen.ofNullable(intervalSec);
-            return this;
-        }        public SecurityPolicyRuleRateLimitOptionsThresholdArgs build() {
-            return new SecurityPolicyRuleRateLimitOptionsThresholdArgs(count, intervalSec);
+
+        public Builder intervalSec(Integer intervalSec) {
+            return intervalSec(Output.of(intervalSec));
+        }
+
+        public SecurityPolicyRuleRateLimitOptionsThresholdArgs build() {
+            return $;
         }
     }
+
 }

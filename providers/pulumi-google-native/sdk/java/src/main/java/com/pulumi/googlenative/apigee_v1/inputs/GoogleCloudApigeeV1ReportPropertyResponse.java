@@ -19,7 +19,7 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends com.pulumi.
      * 
      */
     @Import(name="property", required=true)
-      private final String property;
+    private String property;
 
     public String property() {
         return this.property;
@@ -30,58 +30,56 @@ public final class GoogleCloudApigeeV1ReportPropertyResponse extends com.pulumi.
      * 
      */
     @Import(name="value", required=true)
-      private final List<GoogleCloudApigeeV1AttributeResponse> value;
+    private List<GoogleCloudApigeeV1AttributeResponse> value;
 
     public List<GoogleCloudApigeeV1AttributeResponse> value() {
         return this.value;
     }
 
-    public GoogleCloudApigeeV1ReportPropertyResponse(
-        String property,
-        List<GoogleCloudApigeeV1AttributeResponse> value) {
-        this.property = Objects.requireNonNull(property, "expected parameter 'property' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudApigeeV1ReportPropertyResponse() {}
 
-    private GoogleCloudApigeeV1ReportPropertyResponse() {
-        this.property = null;
-        this.value = List.of();
+    private GoogleCloudApigeeV1ReportPropertyResponse(GoogleCloudApigeeV1ReportPropertyResponse $) {
+        this.property = $.property;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1ReportPropertyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String property;
-        private List<GoogleCloudApigeeV1AttributeResponse> value;
+        private GoogleCloudApigeeV1ReportPropertyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1ReportPropertyResponse();
         }
 
         public Builder(GoogleCloudApigeeV1ReportPropertyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.property = defaults.property;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudApigeeV1ReportPropertyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder property(String property) {
-            this.property = Objects.requireNonNull(property);
+            $.property = property;
             return this;
         }
+
         public Builder value(List<GoogleCloudApigeeV1AttributeResponse> value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder value(GoogleCloudApigeeV1AttributeResponse... value) {
             return value(List.of(value));
-        }        public GoogleCloudApigeeV1ReportPropertyResponse build() {
-            return new GoogleCloudApigeeV1ReportPropertyResponse(property, value);
+        }
+
+        public GoogleCloudApigeeV1ReportPropertyResponse build() {
+            $.property = Objects.requireNonNull($.property, "expected parameter 'property' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

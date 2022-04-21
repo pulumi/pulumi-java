@@ -5,9 +5,9 @@ package com.pulumi.googlenative.firebaserules_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="content", required=true)
-      private final Output<String> content;
+    private Output<String> content;
 
     public Output<String> content() {
         return this.content;
@@ -35,10 +35,10 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fingerprint")
-      private final @Nullable Output<String> fingerprint;
+    private @Nullable Output<String> fingerprint;
 
-    public Output<String> fingerprint() {
-        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
+    public Optional<Output<String>> fingerprint() {
+        return Optional.ofNullable(this.fingerprint);
     }
 
     /**
@@ -46,76 +46,70 @@ public final class FileArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public FileArgs(
-        Output<String> content,
-        @Nullable Output<String> fingerprint,
-        Output<String> name) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.fingerprint = fingerprint;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private FileArgs() {}
 
-    private FileArgs() {
-        this.content = Codegen.empty();
-        this.fingerprint = Codegen.empty();
-        this.name = Codegen.empty();
+    private FileArgs(FileArgs $) {
+        this.content = $.content;
+        this.fingerprint = $.fingerprint;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> content;
-        private @Nullable Output<String> fingerprint;
-        private Output<String> name;
+        private FileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileArgs();
         }
 
         public Builder(FileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.fingerprint = defaults.fingerprint;
-    	      this.name = defaults.name;
+            $ = new FileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder content(Output<String> content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder content(String content) {
-            this.content = Output.of(Objects.requireNonNull(content));
-            return this;
+            return content(Output.of(content));
         }
+
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
-            this.fingerprint = fingerprint;
+            $.fingerprint = fingerprint;
             return this;
         }
-        public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Codegen.ofNullable(fingerprint);
-            return this;
+
+        public Builder fingerprint(String fingerprint) {
+            return fingerprint(Output.of(fingerprint));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public FileArgs build() {
-            return new FileArgs(content, fingerprint, name);
+            return name(Output.of(name));
+        }
+
+        public FileArgs build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

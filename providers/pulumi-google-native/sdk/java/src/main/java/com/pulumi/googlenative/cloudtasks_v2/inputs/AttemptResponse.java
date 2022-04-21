@@ -22,7 +22,7 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dispatchTime", required=true)
-      private final String dispatchTime;
+    private String dispatchTime;
 
     public String dispatchTime() {
         return this.dispatchTime;
@@ -33,7 +33,7 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseStatus", required=true)
-      private final StatusResponse responseStatus;
+    private StatusResponse responseStatus;
 
     public StatusResponse responseStatus() {
         return this.responseStatus;
@@ -44,7 +44,7 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="responseTime", required=true)
-      private final String responseTime;
+    private String responseTime;
 
     public String responseTime() {
         return this.responseTime;
@@ -55,73 +55,66 @@ public final class AttemptResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scheduleTime", required=true)
-      private final String scheduleTime;
+    private String scheduleTime;
 
     public String scheduleTime() {
         return this.scheduleTime;
     }
 
-    public AttemptResponse(
-        String dispatchTime,
-        StatusResponse responseStatus,
-        String responseTime,
-        String scheduleTime) {
-        this.dispatchTime = Objects.requireNonNull(dispatchTime, "expected parameter 'dispatchTime' to be non-null");
-        this.responseStatus = Objects.requireNonNull(responseStatus, "expected parameter 'responseStatus' to be non-null");
-        this.responseTime = Objects.requireNonNull(responseTime, "expected parameter 'responseTime' to be non-null");
-        this.scheduleTime = Objects.requireNonNull(scheduleTime, "expected parameter 'scheduleTime' to be non-null");
-    }
+    private AttemptResponse() {}
 
-    private AttemptResponse() {
-        this.dispatchTime = null;
-        this.responseStatus = null;
-        this.responseTime = null;
-        this.scheduleTime = null;
+    private AttemptResponse(AttemptResponse $) {
+        this.dispatchTime = $.dispatchTime;
+        this.responseStatus = $.responseStatus;
+        this.responseTime = $.responseTime;
+        this.scheduleTime = $.scheduleTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttemptResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dispatchTime;
-        private StatusResponse responseStatus;
-        private String responseTime;
-        private String scheduleTime;
+        private AttemptResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttemptResponse();
         }
 
         public Builder(AttemptResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dispatchTime = defaults.dispatchTime;
-    	      this.responseStatus = defaults.responseStatus;
-    	      this.responseTime = defaults.responseTime;
-    	      this.scheduleTime = defaults.scheduleTime;
+            $ = new AttemptResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dispatchTime(String dispatchTime) {
-            this.dispatchTime = Objects.requireNonNull(dispatchTime);
+            $.dispatchTime = dispatchTime;
             return this;
         }
+
         public Builder responseStatus(StatusResponse responseStatus) {
-            this.responseStatus = Objects.requireNonNull(responseStatus);
+            $.responseStatus = responseStatus;
             return this;
         }
+
         public Builder responseTime(String responseTime) {
-            this.responseTime = Objects.requireNonNull(responseTime);
+            $.responseTime = responseTime;
             return this;
         }
+
         public Builder scheduleTime(String scheduleTime) {
-            this.scheduleTime = Objects.requireNonNull(scheduleTime);
+            $.scheduleTime = scheduleTime;
             return this;
-        }        public AttemptResponse build() {
-            return new AttemptResponse(dispatchTime, responseStatus, responseTime, scheduleTime);
+        }
+
+        public AttemptResponse build() {
+            $.dispatchTime = Objects.requireNonNull($.dispatchTime, "expected parameter 'dispatchTime' to be non-null");
+            $.responseStatus = Objects.requireNonNull($.responseStatus, "expected parameter 'responseStatus' to be non-null");
+            $.responseTime = Objects.requireNonNull($.responseTime, "expected parameter 'responseTime' to be non-null");
+            $.scheduleTime = Objects.requireNonNull($.scheduleTime, "expected parameter 'scheduleTime' to be non-null");
+            return $;
         }
     }
+
 }

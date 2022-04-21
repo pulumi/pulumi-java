@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.SubsettingPolicy;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SubsettingArgs extends com.pulumi.resources.ResourceArgs {
     public static final SubsettingArgs Empty = new SubsettingArgs();
 
     @Import(name="policy")
-      private final @Nullable Output<SubsettingPolicy> policy;
+    private @Nullable Output<SubsettingPolicy> policy;
 
-    public Output<SubsettingPolicy> policy() {
-        return this.policy == null ? Codegen.empty() : this.policy;
+    public Optional<Output<SubsettingPolicy>> policy() {
+        return Optional.ofNullable(this.policy);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SubsettingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subsetSize")
-      private final @Nullable Output<Integer> subsetSize;
+    private @Nullable Output<Integer> subsetSize;
 
-    public Output<Integer> subsetSize() {
-        return this.subsetSize == null ? Codegen.empty() : this.subsetSize;
+    public Optional<Output<Integer>> subsetSize() {
+        return Optional.ofNullable(this.subsetSize);
     }
 
-    public SubsettingArgs(
-        @Nullable Output<SubsettingPolicy> policy,
-        @Nullable Output<Integer> subsetSize) {
-        this.policy = policy;
-        this.subsetSize = subsetSize;
-    }
+    private SubsettingArgs() {}
 
-    private SubsettingArgs() {
-        this.policy = Codegen.empty();
-        this.subsetSize = Codegen.empty();
+    private SubsettingArgs(SubsettingArgs $) {
+        this.policy = $.policy;
+        this.subsetSize = $.subsetSize;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubsettingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<SubsettingPolicy> policy;
-        private @Nullable Output<Integer> subsetSize;
+        private SubsettingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubsettingArgs();
         }
 
         public Builder(SubsettingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policy = defaults.policy;
-    	      this.subsetSize = defaults.subsetSize;
+            $ = new SubsettingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policy(@Nullable Output<SubsettingPolicy> policy) {
-            this.policy = policy;
+            $.policy = policy;
             return this;
         }
-        public Builder policy(@Nullable SubsettingPolicy policy) {
-            this.policy = Codegen.ofNullable(policy);
-            return this;
+
+        public Builder policy(SubsettingPolicy policy) {
+            return policy(Output.of(policy));
         }
+
         public Builder subsetSize(@Nullable Output<Integer> subsetSize) {
-            this.subsetSize = subsetSize;
+            $.subsetSize = subsetSize;
             return this;
         }
-        public Builder subsetSize(@Nullable Integer subsetSize) {
-            this.subsetSize = Codegen.ofNullable(subsetSize);
-            return this;
-        }        public SubsettingArgs build() {
-            return new SubsettingArgs(policy, subsetSize);
+
+        public Builder subsetSize(Integer subsetSize) {
+            return subsetSize(Output.of(subsetSize));
+        }
+
+        public SubsettingArgs build() {
+            return $;
         }
     }
+
 }

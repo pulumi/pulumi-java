@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import com.pulumi.googlenative.monitoring_v1.inputs.PickTimeSeriesFilterArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="aggregation")
-      private final @Nullable Output<AggregationArgs> aggregation;
+    private @Nullable Output<AggregationArgs> aggregation;
 
-    public Output<AggregationArgs> aggregation() {
-        return this.aggregation == null ? Codegen.empty() : this.aggregation;
+    public Optional<Output<AggregationArgs>> aggregation() {
+        return Optional.ofNullable(this.aggregation);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="filter", required=true)
-      private final Output<String> filter;
+    private Output<String> filter;
 
     public Output<String> filter() {
         return this.filter;
@@ -48,10 +48,10 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="pickTimeSeriesFilter")
-      private final @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
+    private @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
 
-    public Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter() {
-        return this.pickTimeSeriesFilter == null ? Codegen.empty() : this.pickTimeSeriesFilter;
+    public Optional<Output<PickTimeSeriesFilterArgs>> pickTimeSeriesFilter() {
+        return Optional.ofNullable(this.pickTimeSeriesFilter);
     }
 
     /**
@@ -59,89 +59,79 @@ public final class TimeSeriesFilterArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="secondaryAggregation")
-      private final @Nullable Output<AggregationArgs> secondaryAggregation;
+    private @Nullable Output<AggregationArgs> secondaryAggregation;
 
-    public Output<AggregationArgs> secondaryAggregation() {
-        return this.secondaryAggregation == null ? Codegen.empty() : this.secondaryAggregation;
+    public Optional<Output<AggregationArgs>> secondaryAggregation() {
+        return Optional.ofNullable(this.secondaryAggregation);
     }
 
-    public TimeSeriesFilterArgs(
-        @Nullable Output<AggregationArgs> aggregation,
-        Output<String> filter,
-        @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter,
-        @Nullable Output<AggregationArgs> secondaryAggregation) {
-        this.aggregation = aggregation;
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.pickTimeSeriesFilter = pickTimeSeriesFilter;
-        this.secondaryAggregation = secondaryAggregation;
-    }
+    private TimeSeriesFilterArgs() {}
 
-    private TimeSeriesFilterArgs() {
-        this.aggregation = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.pickTimeSeriesFilter = Codegen.empty();
-        this.secondaryAggregation = Codegen.empty();
+    private TimeSeriesFilterArgs(TimeSeriesFilterArgs $) {
+        this.aggregation = $.aggregation;
+        this.filter = $.filter;
+        this.pickTimeSeriesFilter = $.pickTimeSeriesFilter;
+        this.secondaryAggregation = $.secondaryAggregation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TimeSeriesFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AggregationArgs> aggregation;
-        private Output<String> filter;
-        private @Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter;
-        private @Nullable Output<AggregationArgs> secondaryAggregation;
+        private TimeSeriesFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TimeSeriesFilterArgs();
         }
 
         public Builder(TimeSeriesFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.filter = defaults.filter;
-    	      this.pickTimeSeriesFilter = defaults.pickTimeSeriesFilter;
-    	      this.secondaryAggregation = defaults.secondaryAggregation;
+            $ = new TimeSeriesFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(@Nullable Output<AggregationArgs> aggregation) {
-            this.aggregation = aggregation;
+            $.aggregation = aggregation;
             return this;
         }
-        public Builder aggregation(@Nullable AggregationArgs aggregation) {
-            this.aggregation = Codegen.ofNullable(aggregation);
-            return this;
+
+        public Builder aggregation(AggregationArgs aggregation) {
+            return aggregation(Output.of(aggregation));
         }
+
         public Builder filter(Output<String> filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Output.of(Objects.requireNonNull(filter));
-            return this;
+            return filter(Output.of(filter));
         }
+
         public Builder pickTimeSeriesFilter(@Nullable Output<PickTimeSeriesFilterArgs> pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = pickTimeSeriesFilter;
+            $.pickTimeSeriesFilter = pickTimeSeriesFilter;
             return this;
         }
-        public Builder pickTimeSeriesFilter(@Nullable PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
-            this.pickTimeSeriesFilter = Codegen.ofNullable(pickTimeSeriesFilter);
-            return this;
+
+        public Builder pickTimeSeriesFilter(PickTimeSeriesFilterArgs pickTimeSeriesFilter) {
+            return pickTimeSeriesFilter(Output.of(pickTimeSeriesFilter));
         }
+
         public Builder secondaryAggregation(@Nullable Output<AggregationArgs> secondaryAggregation) {
-            this.secondaryAggregation = secondaryAggregation;
+            $.secondaryAggregation = secondaryAggregation;
             return this;
         }
-        public Builder secondaryAggregation(@Nullable AggregationArgs secondaryAggregation) {
-            this.secondaryAggregation = Codegen.ofNullable(secondaryAggregation);
-            return this;
-        }        public TimeSeriesFilterArgs build() {
-            return new TimeSeriesFilterArgs(aggregation, filter, pickTimeSeriesFilter, secondaryAggregation);
+
+        public Builder secondaryAggregation(AggregationArgs secondaryAggregation) {
+            return secondaryAggregation(Output.of(secondaryAggregation));
+        }
+
+        public TimeSeriesFilterArgs build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

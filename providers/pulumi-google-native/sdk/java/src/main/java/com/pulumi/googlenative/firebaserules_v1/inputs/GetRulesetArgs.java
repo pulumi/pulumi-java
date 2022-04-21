@@ -15,62 +15,58 @@ public final class GetRulesetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRulesetArgs Empty = new GetRulesetArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="rulesetId", required=true)
-      private final String rulesetId;
+    private String rulesetId;
 
     public String rulesetId() {
         return this.rulesetId;
     }
 
-    public GetRulesetArgs(
-        @Nullable String project,
-        String rulesetId) {
-        this.project = project;
-        this.rulesetId = Objects.requireNonNull(rulesetId, "expected parameter 'rulesetId' to be non-null");
-    }
+    private GetRulesetArgs() {}
 
-    private GetRulesetArgs() {
-        this.project = null;
-        this.rulesetId = null;
+    private GetRulesetArgs(GetRulesetArgs $) {
+        this.project = $.project;
+        this.rulesetId = $.rulesetId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRulesetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String rulesetId;
+        private GetRulesetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRulesetArgs();
         }
 
         public Builder(GetRulesetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.rulesetId = defaults.rulesetId;
+            $ = new GetRulesetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder rulesetId(String rulesetId) {
-            this.rulesetId = Objects.requireNonNull(rulesetId);
+            $.rulesetId = rulesetId;
             return this;
-        }        public GetRulesetArgs build() {
-            return new GetRulesetArgs(project, rulesetId);
+        }
+
+        public GetRulesetArgs build() {
+            $.rulesetId = Objects.requireNonNull($.rulesetId, "expected parameter 'rulesetId' to be non-null");
+            return $;
         }
     }
+
 }

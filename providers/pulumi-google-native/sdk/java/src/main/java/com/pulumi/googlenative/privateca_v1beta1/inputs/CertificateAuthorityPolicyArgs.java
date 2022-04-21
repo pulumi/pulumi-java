@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.AllowedConfigListArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesArgs;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.privateca_v1beta1.inputs.SubjectArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowedCommonNames")
-      private final @Nullable Output<List<String>> allowedCommonNames;
+    private @Nullable Output<List<String>> allowedCommonNames;
 
-    public Output<List<String>> allowedCommonNames() {
-        return this.allowedCommonNames == null ? Codegen.empty() : this.allowedCommonNames;
+    public Optional<Output<List<String>>> allowedCommonNames() {
+        return Optional.ofNullable(this.allowedCommonNames);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowedConfigList")
-      private final @Nullable Output<AllowedConfigListArgs> allowedConfigList;
+    private @Nullable Output<AllowedConfigListArgs> allowedConfigList;
 
-    public Output<AllowedConfigListArgs> allowedConfigList() {
-        return this.allowedConfigList == null ? Codegen.empty() : this.allowedConfigList;
+    public Optional<Output<AllowedConfigListArgs>> allowedConfigList() {
+        return Optional.ofNullable(this.allowedConfigList);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowedIssuanceModes")
-      private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
+    private @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
-    public Output<IssuanceModesArgs> allowedIssuanceModes() {
-        return this.allowedIssuanceModes == null ? Codegen.empty() : this.allowedIssuanceModes;
+    public Optional<Output<IssuanceModesArgs>> allowedIssuanceModes() {
+        return Optional.ofNullable(this.allowedIssuanceModes);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowedLocationsAndOrganizations")
-      private final @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
+    private @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
-    public Output<List<SubjectArgs>> allowedLocationsAndOrganizations() {
-        return this.allowedLocationsAndOrganizations == null ? Codegen.empty() : this.allowedLocationsAndOrganizations;
+    public Optional<Output<List<SubjectArgs>>> allowedLocationsAndOrganizations() {
+        return Optional.ofNullable(this.allowedLocationsAndOrganizations);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="allowedSans")
-      private final @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
+    private @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
 
-    public Output<AllowedSubjectAltNamesArgs> allowedSans() {
-        return this.allowedSans == null ? Codegen.empty() : this.allowedSans;
+    public Optional<Output<AllowedSubjectAltNamesArgs>> allowedSans() {
+        return Optional.ofNullable(this.allowedSans);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="maximumLifetime")
-      private final @Nullable Output<String> maximumLifetime;
+    private @Nullable Output<String> maximumLifetime;
 
-    public Output<String> maximumLifetime() {
-        return this.maximumLifetime == null ? Codegen.empty() : this.maximumLifetime;
+    public Optional<Output<String>> maximumLifetime() {
+        return Optional.ofNullable(this.maximumLifetime);
     }
 
     /**
@@ -96,134 +96,116 @@ public final class CertificateAuthorityPolicyArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="overwriteConfigValues")
-      private final @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
+    private @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
 
-    public Output<ReusableConfigWrapperArgs> overwriteConfigValues() {
-        return this.overwriteConfigValues == null ? Codegen.empty() : this.overwriteConfigValues;
+    public Optional<Output<ReusableConfigWrapperArgs>> overwriteConfigValues() {
+        return Optional.ofNullable(this.overwriteConfigValues);
     }
 
-    public CertificateAuthorityPolicyArgs(
-        @Nullable Output<List<String>> allowedCommonNames,
-        @Nullable Output<AllowedConfigListArgs> allowedConfigList,
-        @Nullable Output<IssuanceModesArgs> allowedIssuanceModes,
-        @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations,
-        @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans,
-        @Nullable Output<String> maximumLifetime,
-        @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues) {
-        this.allowedCommonNames = allowedCommonNames;
-        this.allowedConfigList = allowedConfigList;
-        this.allowedIssuanceModes = allowedIssuanceModes;
-        this.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
-        this.allowedSans = allowedSans;
-        this.maximumLifetime = maximumLifetime;
-        this.overwriteConfigValues = overwriteConfigValues;
-    }
+    private CertificateAuthorityPolicyArgs() {}
 
-    private CertificateAuthorityPolicyArgs() {
-        this.allowedCommonNames = Codegen.empty();
-        this.allowedConfigList = Codegen.empty();
-        this.allowedIssuanceModes = Codegen.empty();
-        this.allowedLocationsAndOrganizations = Codegen.empty();
-        this.allowedSans = Codegen.empty();
-        this.maximumLifetime = Codegen.empty();
-        this.overwriteConfigValues = Codegen.empty();
+    private CertificateAuthorityPolicyArgs(CertificateAuthorityPolicyArgs $) {
+        this.allowedCommonNames = $.allowedCommonNames;
+        this.allowedConfigList = $.allowedConfigList;
+        this.allowedIssuanceModes = $.allowedIssuanceModes;
+        this.allowedLocationsAndOrganizations = $.allowedLocationsAndOrganizations;
+        this.allowedSans = $.allowedSans;
+        this.maximumLifetime = $.maximumLifetime;
+        this.overwriteConfigValues = $.overwriteConfigValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateAuthorityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedCommonNames;
-        private @Nullable Output<AllowedConfigListArgs> allowedConfigList;
-        private @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
-        private @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
-        private @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
-        private @Nullable Output<String> maximumLifetime;
-        private @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
+        private CertificateAuthorityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateAuthorityPolicyArgs();
         }
 
         public Builder(CertificateAuthorityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedCommonNames = defaults.allowedCommonNames;
-    	      this.allowedConfigList = defaults.allowedConfigList;
-    	      this.allowedIssuanceModes = defaults.allowedIssuanceModes;
-    	      this.allowedLocationsAndOrganizations = defaults.allowedLocationsAndOrganizations;
-    	      this.allowedSans = defaults.allowedSans;
-    	      this.maximumLifetime = defaults.maximumLifetime;
-    	      this.overwriteConfigValues = defaults.overwriteConfigValues;
+            $ = new CertificateAuthorityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedCommonNames(@Nullable Output<List<String>> allowedCommonNames) {
-            this.allowedCommonNames = allowedCommonNames;
+            $.allowedCommonNames = allowedCommonNames;
             return this;
         }
-        public Builder allowedCommonNames(@Nullable List<String> allowedCommonNames) {
-            this.allowedCommonNames = Codegen.ofNullable(allowedCommonNames);
-            return this;
+
+        public Builder allowedCommonNames(List<String> allowedCommonNames) {
+            return allowedCommonNames(Output.of(allowedCommonNames));
         }
+
         public Builder allowedCommonNames(String... allowedCommonNames) {
             return allowedCommonNames(List.of(allowedCommonNames));
         }
+
         public Builder allowedConfigList(@Nullable Output<AllowedConfigListArgs> allowedConfigList) {
-            this.allowedConfigList = allowedConfigList;
+            $.allowedConfigList = allowedConfigList;
             return this;
         }
-        public Builder allowedConfigList(@Nullable AllowedConfigListArgs allowedConfigList) {
-            this.allowedConfigList = Codegen.ofNullable(allowedConfigList);
-            return this;
+
+        public Builder allowedConfigList(AllowedConfigListArgs allowedConfigList) {
+            return allowedConfigList(Output.of(allowedConfigList));
         }
+
         public Builder allowedIssuanceModes(@Nullable Output<IssuanceModesArgs> allowedIssuanceModes) {
-            this.allowedIssuanceModes = allowedIssuanceModes;
+            $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
-        public Builder allowedIssuanceModes(@Nullable IssuanceModesArgs allowedIssuanceModes) {
-            this.allowedIssuanceModes = Codegen.ofNullable(allowedIssuanceModes);
-            return this;
+
+        public Builder allowedIssuanceModes(IssuanceModesArgs allowedIssuanceModes) {
+            return allowedIssuanceModes(Output.of(allowedIssuanceModes));
         }
+
         public Builder allowedLocationsAndOrganizations(@Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations) {
-            this.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
+            $.allowedLocationsAndOrganizations = allowedLocationsAndOrganizations;
             return this;
         }
-        public Builder allowedLocationsAndOrganizations(@Nullable List<SubjectArgs> allowedLocationsAndOrganizations) {
-            this.allowedLocationsAndOrganizations = Codegen.ofNullable(allowedLocationsAndOrganizations);
-            return this;
+
+        public Builder allowedLocationsAndOrganizations(List<SubjectArgs> allowedLocationsAndOrganizations) {
+            return allowedLocationsAndOrganizations(Output.of(allowedLocationsAndOrganizations));
         }
+
         public Builder allowedLocationsAndOrganizations(SubjectArgs... allowedLocationsAndOrganizations) {
             return allowedLocationsAndOrganizations(List.of(allowedLocationsAndOrganizations));
         }
+
         public Builder allowedSans(@Nullable Output<AllowedSubjectAltNamesArgs> allowedSans) {
-            this.allowedSans = allowedSans;
+            $.allowedSans = allowedSans;
             return this;
         }
-        public Builder allowedSans(@Nullable AllowedSubjectAltNamesArgs allowedSans) {
-            this.allowedSans = Codegen.ofNullable(allowedSans);
-            return this;
+
+        public Builder allowedSans(AllowedSubjectAltNamesArgs allowedSans) {
+            return allowedSans(Output.of(allowedSans));
         }
+
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
-            this.maximumLifetime = maximumLifetime;
+            $.maximumLifetime = maximumLifetime;
             return this;
         }
-        public Builder maximumLifetime(@Nullable String maximumLifetime) {
-            this.maximumLifetime = Codegen.ofNullable(maximumLifetime);
-            return this;
+
+        public Builder maximumLifetime(String maximumLifetime) {
+            return maximumLifetime(Output.of(maximumLifetime));
         }
+
         public Builder overwriteConfigValues(@Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues) {
-            this.overwriteConfigValues = overwriteConfigValues;
+            $.overwriteConfigValues = overwriteConfigValues;
             return this;
         }
-        public Builder overwriteConfigValues(@Nullable ReusableConfigWrapperArgs overwriteConfigValues) {
-            this.overwriteConfigValues = Codegen.ofNullable(overwriteConfigValues);
-            return this;
-        }        public CertificateAuthorityPolicyArgs build() {
-            return new CertificateAuthorityPolicyArgs(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
+
+        public Builder overwriteConfigValues(ReusableConfigWrapperArgs overwriteConfigValues) {
+            return overwriteConfigValues(Output.of(overwriteConfigValues));
+        }
+
+        public CertificateAuthorityPolicyArgs build() {
+            return $;
         }
     }
+
 }

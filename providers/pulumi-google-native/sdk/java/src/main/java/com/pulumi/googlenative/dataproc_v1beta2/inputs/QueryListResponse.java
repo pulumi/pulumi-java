@@ -22,48 +22,49 @@ public final class QueryListResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="queries", required=true)
-      private final List<String> queries;
+    private List<String> queries;
 
     public List<String> queries() {
         return this.queries;
     }
 
-    public QueryListResponse(List<String> queries) {
-        this.queries = Objects.requireNonNull(queries, "expected parameter 'queries' to be non-null");
-    }
+    private QueryListResponse() {}
 
-    private QueryListResponse() {
-        this.queries = List.of();
+    private QueryListResponse(QueryListResponse $) {
+        this.queries = $.queries;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueryListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> queries;
+        private QueryListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueryListResponse();
         }
 
         public Builder(QueryListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queries = defaults.queries;
+            $ = new QueryListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder queries(List<String> queries) {
-            this.queries = Objects.requireNonNull(queries);
+            $.queries = queries;
             return this;
         }
+
         public Builder queries(String... queries) {
             return queries(List.of(queries));
-        }        public QueryListResponse build() {
-            return new QueryListResponse(queries);
+        }
+
+        public QueryListResponse build() {
+            $.queries = Objects.requireNonNull($.queries, "expected parameter 'queries' to be non-null");
+            return $;
         }
     }
+
 }

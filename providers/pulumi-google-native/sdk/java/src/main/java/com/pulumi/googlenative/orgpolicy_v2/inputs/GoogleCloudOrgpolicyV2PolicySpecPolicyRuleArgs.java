@@ -5,11 +5,11 @@ package com.pulumi.googlenative.orgpolicy_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleTypeExprArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
      * 
      */
     @Import(name="allowAll")
-      private final @Nullable Output<Boolean> allowAll;
+    private @Nullable Output<Boolean> allowAll;
 
-    public Output<Boolean> allowAll() {
-        return this.allowAll == null ? Codegen.empty() : this.allowAll;
+    public Optional<Output<Boolean>> allowAll() {
+        return Optional.ofNullable(this.allowAll);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
      * 
      */
     @Import(name="condition")
-      private final @Nullable Output<GoogleTypeExprArgs> condition;
+    private @Nullable Output<GoogleTypeExprArgs> condition;
 
-    public Output<GoogleTypeExprArgs> condition() {
-        return this.condition == null ? Codegen.empty() : this.condition;
+    public Optional<Output<GoogleTypeExprArgs>> condition() {
+        return Optional.ofNullable(this.condition);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
      * 
      */
     @Import(name="denyAll")
-      private final @Nullable Output<Boolean> denyAll;
+    private @Nullable Output<Boolean> denyAll;
 
-    public Output<Boolean> denyAll() {
-        return this.denyAll == null ? Codegen.empty() : this.denyAll;
+    public Optional<Output<Boolean>> denyAll() {
+        return Optional.ofNullable(this.denyAll);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
      * 
      */
     @Import(name="enforce")
-      private final @Nullable Output<Boolean> enforce;
+    private @Nullable Output<Boolean> enforce;
 
-    public Output<Boolean> enforce() {
-        return this.enforce == null ? Codegen.empty() : this.enforce;
+    public Optional<Output<Boolean>> enforce() {
+        return Optional.ofNullable(this.enforce);
     }
 
     /**
@@ -70,102 +70,88 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs extends com.pu
      * 
      */
     @Import(name="values")
-      private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
+    private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values() {
-        return this.values == null ? Codegen.empty() : this.values;
+    public Optional<Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs>> values() {
+        return Optional.ofNullable(this.values);
     }
 
-    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(
-        @Nullable Output<Boolean> allowAll,
-        @Nullable Output<GoogleTypeExprArgs> condition,
-        @Nullable Output<Boolean> denyAll,
-        @Nullable Output<Boolean> enforce,
-        @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
-        this.allowAll = allowAll;
-        this.condition = condition;
-        this.denyAll = denyAll;
-        this.enforce = enforce;
-        this.values = values;
-    }
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs() {}
 
-    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs() {
-        this.allowAll = Codegen.empty();
-        this.condition = Codegen.empty();
-        this.denyAll = Codegen.empty();
-        this.enforce = Codegen.empty();
-        this.values = Codegen.empty();
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs $) {
+        this.allowAll = $.allowAll;
+        this.condition = $.condition;
+        this.denyAll = $.denyAll;
+        this.enforce = $.enforce;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowAll;
-        private @Nullable Output<GoogleTypeExprArgs> condition;
-        private @Nullable Output<Boolean> denyAll;
-        private @Nullable Output<Boolean> enforce;
-        private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values;
+        private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs();
         }
 
         public Builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAll = defaults.allowAll;
-    	      this.condition = defaults.condition;
-    	      this.denyAll = defaults.denyAll;
-    	      this.enforce = defaults.enforce;
-    	      this.values = defaults.values;
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAll(@Nullable Output<Boolean> allowAll) {
-            this.allowAll = allowAll;
+            $.allowAll = allowAll;
             return this;
         }
-        public Builder allowAll(@Nullable Boolean allowAll) {
-            this.allowAll = Codegen.ofNullable(allowAll);
-            return this;
+
+        public Builder allowAll(Boolean allowAll) {
+            return allowAll(Output.of(allowAll));
         }
+
         public Builder condition(@Nullable Output<GoogleTypeExprArgs> condition) {
-            this.condition = condition;
+            $.condition = condition;
             return this;
         }
-        public Builder condition(@Nullable GoogleTypeExprArgs condition) {
-            this.condition = Codegen.ofNullable(condition);
-            return this;
+
+        public Builder condition(GoogleTypeExprArgs condition) {
+            return condition(Output.of(condition));
         }
+
         public Builder denyAll(@Nullable Output<Boolean> denyAll) {
-            this.denyAll = denyAll;
+            $.denyAll = denyAll;
             return this;
         }
-        public Builder denyAll(@Nullable Boolean denyAll) {
-            this.denyAll = Codegen.ofNullable(denyAll);
-            return this;
+
+        public Builder denyAll(Boolean denyAll) {
+            return denyAll(Output.of(denyAll));
         }
+
         public Builder enforce(@Nullable Output<Boolean> enforce) {
-            this.enforce = enforce;
+            $.enforce = enforce;
             return this;
         }
-        public Builder enforce(@Nullable Boolean enforce) {
-            this.enforce = Codegen.ofNullable(enforce);
-            return this;
+
+        public Builder enforce(Boolean enforce) {
+            return enforce(Output.of(enforce));
         }
+
         public Builder values(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs> values) {
-            this.values = values;
+            $.values = values;
             return this;
         }
-        public Builder values(@Nullable GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
-            this.values = Codegen.ofNullable(values);
-            return this;
-        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {
-            return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs(allowAll, condition, denyAll, enforce, values);
+
+        public Builder values(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs values) {
+            return values(Output.of(values));
+        }
+
+        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleArgs build() {
+            return $;
         }
     }
+
 }

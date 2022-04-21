@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="defaultValue", required=true)
-      private final String defaultValue;
+    private String defaultValue;
 
     public String defaultValue() {
         return this.defaultValue;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="entityTypeDisplayName", required=true)
-      private final String entityTypeDisplayName;
+    private String entityTypeDisplayName;
 
     public String entityTypeDisplayName() {
         return this.entityTypeDisplayName;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="isList", required=true)
-      private final Boolean isList;
+    private Boolean isList;
 
     public Boolean isList() {
         return this.isList;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="mandatory", required=true)
-      private final Boolean mandatory;
+    private Boolean mandatory;
 
     public Boolean mandatory() {
         return this.mandatory;
@@ -78,7 +78,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -89,7 +89,7 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="prompts", required=true)
-      private final List<String> prompts;
+    private List<String> prompts;
 
     public List<String> prompts() {
         return this.prompts;
@@ -100,112 +100,98 @@ public final class GoogleCloudDialogflowV2beta1IntentParameterResponse extends c
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentParameterResponse(
-        String defaultValue,
-        String displayName,
-        String entityTypeDisplayName,
-        Boolean isList,
-        Boolean mandatory,
-        String name,
-        List<String> prompts,
-        String value) {
-        this.defaultValue = Objects.requireNonNull(defaultValue, "expected parameter 'defaultValue' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.entityTypeDisplayName = Objects.requireNonNull(entityTypeDisplayName, "expected parameter 'entityTypeDisplayName' to be non-null");
-        this.isList = Objects.requireNonNull(isList, "expected parameter 'isList' to be non-null");
-        this.mandatory = Objects.requireNonNull(mandatory, "expected parameter 'mandatory' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.prompts = Objects.requireNonNull(prompts, "expected parameter 'prompts' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentParameterResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentParameterResponse() {
-        this.defaultValue = null;
-        this.displayName = null;
-        this.entityTypeDisplayName = null;
-        this.isList = null;
-        this.mandatory = null;
-        this.name = null;
-        this.prompts = List.of();
-        this.value = null;
+    private GoogleCloudDialogflowV2beta1IntentParameterResponse(GoogleCloudDialogflowV2beta1IntentParameterResponse $) {
+        this.defaultValue = $.defaultValue;
+        this.displayName = $.displayName;
+        this.entityTypeDisplayName = $.entityTypeDisplayName;
+        this.isList = $.isList;
+        this.mandatory = $.mandatory;
+        this.name = $.name;
+        this.prompts = $.prompts;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultValue;
-        private String displayName;
-        private String entityTypeDisplayName;
-        private Boolean isList;
-        private Boolean mandatory;
-        private String name;
-        private List<String> prompts;
-        private String value;
+        private GoogleCloudDialogflowV2beta1IntentParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentParameterResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultValue = defaults.defaultValue;
-    	      this.displayName = defaults.displayName;
-    	      this.entityTypeDisplayName = defaults.entityTypeDisplayName;
-    	      this.isList = defaults.isList;
-    	      this.mandatory = defaults.mandatory;
-    	      this.name = defaults.name;
-    	      this.prompts = defaults.prompts;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudDialogflowV2beta1IntentParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultValue(String defaultValue) {
-            this.defaultValue = Objects.requireNonNull(defaultValue);
+            $.defaultValue = defaultValue;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder entityTypeDisplayName(String entityTypeDisplayName) {
-            this.entityTypeDisplayName = Objects.requireNonNull(entityTypeDisplayName);
+            $.entityTypeDisplayName = entityTypeDisplayName;
             return this;
         }
+
         public Builder isList(Boolean isList) {
-            this.isList = Objects.requireNonNull(isList);
+            $.isList = isList;
             return this;
         }
+
         public Builder mandatory(Boolean mandatory) {
-            this.mandatory = Objects.requireNonNull(mandatory);
+            $.mandatory = mandatory;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder prompts(List<String> prompts) {
-            this.prompts = Objects.requireNonNull(prompts);
+            $.prompts = prompts;
             return this;
         }
+
         public Builder prompts(String... prompts) {
             return prompts(List.of(prompts));
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentParameterResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentParameterResponse(defaultValue, displayName, entityTypeDisplayName, isList, mandatory, name, prompts, value);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentParameterResponse build() {
+            $.defaultValue = Objects.requireNonNull($.defaultValue, "expected parameter 'defaultValue' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.entityTypeDisplayName = Objects.requireNonNull($.entityTypeDisplayName, "expected parameter 'entityTypeDisplayName' to be non-null");
+            $.isList = Objects.requireNonNull($.isList, "expected parameter 'isList' to be non-null");
+            $.mandatory = Objects.requireNonNull($.mandatory, "expected parameter 'mandatory' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.prompts = Objects.requireNonNull($.prompts, "expected parameter 'prompts' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

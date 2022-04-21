@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.enums.ManifestType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileName")
-      private final @Nullable Output<String> fileName;
+    private @Nullable Output<String> fileName;
 
-    public Output<String> fileName() {
-        return this.fileName == null ? Codegen.empty() : this.fileName;
+    public Optional<Output<String>> fileName() {
+        return Optional.ofNullable(this.fileName);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="muxStreams", required=true)
-      private final Output<List<String>> muxStreams;
+    private Output<List<String>> muxStreams;
 
     public Output<List<String>> muxStreams() {
         return this.muxStreams;
@@ -48,79 +48,74 @@ public final class ManifestArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<ManifestType> type;
+    private Output<ManifestType> type;
 
     public Output<ManifestType> type() {
         return this.type;
     }
 
-    public ManifestArgs(
-        @Nullable Output<String> fileName,
-        Output<List<String>> muxStreams,
-        Output<ManifestType> type) {
-        this.fileName = fileName;
-        this.muxStreams = Objects.requireNonNull(muxStreams, "expected parameter 'muxStreams' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private ManifestArgs() {}
 
-    private ManifestArgs() {
-        this.fileName = Codegen.empty();
-        this.muxStreams = Codegen.empty();
-        this.type = Codegen.empty();
+    private ManifestArgs(ManifestArgs $) {
+        this.fileName = $.fileName;
+        this.muxStreams = $.muxStreams;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManifestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fileName;
-        private Output<List<String>> muxStreams;
-        private Output<ManifestType> type;
+        private ManifestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManifestArgs();
         }
 
         public Builder(ManifestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileName = defaults.fileName;
-    	      this.muxStreams = defaults.muxStreams;
-    	      this.type = defaults.type;
+            $ = new ManifestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileName(@Nullable Output<String> fileName) {
-            this.fileName = fileName;
+            $.fileName = fileName;
             return this;
         }
-        public Builder fileName(@Nullable String fileName) {
-            this.fileName = Codegen.ofNullable(fileName);
-            return this;
+
+        public Builder fileName(String fileName) {
+            return fileName(Output.of(fileName));
         }
+
         public Builder muxStreams(Output<List<String>> muxStreams) {
-            this.muxStreams = Objects.requireNonNull(muxStreams);
+            $.muxStreams = muxStreams;
             return this;
         }
+
         public Builder muxStreams(List<String> muxStreams) {
-            this.muxStreams = Output.of(Objects.requireNonNull(muxStreams));
-            return this;
+            return muxStreams(Output.of(muxStreams));
         }
+
         public Builder muxStreams(String... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
+
         public Builder type(Output<ManifestType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(ManifestType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public ManifestArgs build() {
-            return new ManifestArgs(fileName, muxStreams, type);
+            return type(Output.of(type));
+        }
+
+        public ManifestArgs build() {
+            $.muxStreams = Objects.requireNonNull($.muxStreams, "expected parameter 'muxStreams' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

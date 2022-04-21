@@ -23,7 +23,7 @@ public final class SystemParameterRuleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="parameters", required=true)
-      private final List<SystemParameterResponse> parameters;
+    private List<SystemParameterResponse> parameters;
 
     public List<SystemParameterResponse> parameters() {
         return this.parameters;
@@ -34,58 +34,56 @@ public final class SystemParameterRuleResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public SystemParameterRuleResponse(
-        List<SystemParameterResponse> parameters,
-        String selector) {
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private SystemParameterRuleResponse() {}
 
-    private SystemParameterRuleResponse() {
-        this.parameters = List.of();
-        this.selector = null;
+    private SystemParameterRuleResponse(SystemParameterRuleResponse $) {
+        this.parameters = $.parameters;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemParameterRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<SystemParameterResponse> parameters;
-        private String selector;
+        private SystemParameterRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemParameterRuleResponse();
         }
 
         public Builder(SystemParameterRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.selector = defaults.selector;
+            $ = new SystemParameterRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(List<SystemParameterResponse> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder parameters(SystemParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public SystemParameterRuleResponse build() {
-            return new SystemParameterRuleResponse(parameters, selector);
+        }
+
+        public SystemParameterRuleResponse build() {
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

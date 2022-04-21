@@ -24,7 +24,7 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cpu", required=true)
-      private final Double cpu;
+    private Double cpu;
 
     public Double cpu() {
         return this.cpu;
@@ -35,7 +35,7 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskGb", required=true)
-      private final Double diskGb;
+    private Double diskGb;
 
     public Double diskGb() {
         return this.diskGb;
@@ -46,7 +46,7 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kmsKeyReference", required=true)
-      private final String kmsKeyReference;
+    private String kmsKeyReference;
 
     public String kmsKeyReference() {
         return this.kmsKeyReference;
@@ -57,7 +57,7 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="memoryGb", required=true)
-      private final Double memoryGb;
+    private Double memoryGb;
 
     public Double memoryGb() {
         return this.memoryGb;
@@ -68,85 +68,77 @@ public final class ResourcesResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumes", required=true)
-      private final List<VolumeResponse> volumes;
+    private List<VolumeResponse> volumes;
 
     public List<VolumeResponse> volumes() {
         return this.volumes;
     }
 
-    public ResourcesResponse(
-        Double cpu,
-        Double diskGb,
-        String kmsKeyReference,
-        Double memoryGb,
-        List<VolumeResponse> volumes) {
-        this.cpu = Objects.requireNonNull(cpu, "expected parameter 'cpu' to be non-null");
-        this.diskGb = Objects.requireNonNull(diskGb, "expected parameter 'diskGb' to be non-null");
-        this.kmsKeyReference = Objects.requireNonNull(kmsKeyReference, "expected parameter 'kmsKeyReference' to be non-null");
-        this.memoryGb = Objects.requireNonNull(memoryGb, "expected parameter 'memoryGb' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-    }
+    private ResourcesResponse() {}
 
-    private ResourcesResponse() {
-        this.cpu = null;
-        this.diskGb = null;
-        this.kmsKeyReference = null;
-        this.memoryGb = null;
-        this.volumes = List.of();
+    private ResourcesResponse(ResourcesResponse $) {
+        this.cpu = $.cpu;
+        this.diskGb = $.diskGb;
+        this.kmsKeyReference = $.kmsKeyReference;
+        this.memoryGb = $.memoryGb;
+        this.volumes = $.volumes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double cpu;
-        private Double diskGb;
-        private String kmsKeyReference;
-        private Double memoryGb;
-        private List<VolumeResponse> volumes;
+        private ResourcesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcesResponse();
         }
 
         public Builder(ResourcesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cpu = defaults.cpu;
-    	      this.diskGb = defaults.diskGb;
-    	      this.kmsKeyReference = defaults.kmsKeyReference;
-    	      this.memoryGb = defaults.memoryGb;
-    	      this.volumes = defaults.volumes;
+            $ = new ResourcesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cpu(Double cpu) {
-            this.cpu = Objects.requireNonNull(cpu);
+            $.cpu = cpu;
             return this;
         }
+
         public Builder diskGb(Double diskGb) {
-            this.diskGb = Objects.requireNonNull(diskGb);
+            $.diskGb = diskGb;
             return this;
         }
+
         public Builder kmsKeyReference(String kmsKeyReference) {
-            this.kmsKeyReference = Objects.requireNonNull(kmsKeyReference);
+            $.kmsKeyReference = kmsKeyReference;
             return this;
         }
+
         public Builder memoryGb(Double memoryGb) {
-            this.memoryGb = Objects.requireNonNull(memoryGb);
+            $.memoryGb = memoryGb;
             return this;
         }
+
         public Builder volumes(List<VolumeResponse> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
-        }        public ResourcesResponse build() {
-            return new ResourcesResponse(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
+        }
+
+        public ResourcesResponse build() {
+            $.cpu = Objects.requireNonNull($.cpu, "expected parameter 'cpu' to be non-null");
+            $.diskGb = Objects.requireNonNull($.diskGb, "expected parameter 'diskGb' to be non-null");
+            $.kmsKeyReference = Objects.requireNonNull($.kmsKeyReference, "expected parameter 'kmsKeyReference' to be non-null");
+            $.memoryGb = Objects.requireNonNull($.memoryGb, "expected parameter 'memoryGb' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            return $;
         }
     }
+
 }

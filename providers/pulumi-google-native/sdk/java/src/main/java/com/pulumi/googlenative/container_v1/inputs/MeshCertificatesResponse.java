@@ -21,45 +21,45 @@ public final class MeshCertificatesResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="enableCertificates", required=true)
-      private final Boolean enableCertificates;
+    private Boolean enableCertificates;
 
     public Boolean enableCertificates() {
         return this.enableCertificates;
     }
 
-    public MeshCertificatesResponse(Boolean enableCertificates) {
-        this.enableCertificates = Objects.requireNonNull(enableCertificates, "expected parameter 'enableCertificates' to be non-null");
-    }
+    private MeshCertificatesResponse() {}
 
-    private MeshCertificatesResponse() {
-        this.enableCertificates = null;
+    private MeshCertificatesResponse(MeshCertificatesResponse $) {
+        this.enableCertificates = $.enableCertificates;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MeshCertificatesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableCertificates;
+        private MeshCertificatesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MeshCertificatesResponse();
         }
 
         public Builder(MeshCertificatesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableCertificates = defaults.enableCertificates;
+            $ = new MeshCertificatesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableCertificates(Boolean enableCertificates) {
-            this.enableCertificates = Objects.requireNonNull(enableCertificates);
+            $.enableCertificates = enableCertificates;
             return this;
-        }        public MeshCertificatesResponse build() {
-            return new MeshCertificatesResponse(enableCertificates);
+        }
+
+        public MeshCertificatesResponse build() {
+            $.enableCertificates = Objects.requireNonNull($.enableCertificates, "expected parameter 'enableCertificates' to be non-null");
+            return $;
         }
     }
+
 }

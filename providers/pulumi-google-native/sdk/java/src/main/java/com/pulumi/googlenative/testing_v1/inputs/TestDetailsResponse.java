@@ -22,7 +22,7 @@ public final class TestDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -33,58 +33,56 @@ public final class TestDetailsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="progressMessages", required=true)
-      private final List<String> progressMessages;
+    private List<String> progressMessages;
 
     public List<String> progressMessages() {
         return this.progressMessages;
     }
 
-    public TestDetailsResponse(
-        String errorMessage,
-        List<String> progressMessages) {
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.progressMessages = Objects.requireNonNull(progressMessages, "expected parameter 'progressMessages' to be non-null");
-    }
+    private TestDetailsResponse() {}
 
-    private TestDetailsResponse() {
-        this.errorMessage = null;
-        this.progressMessages = List.of();
+    private TestDetailsResponse(TestDetailsResponse $) {
+        this.errorMessage = $.errorMessage;
+        this.progressMessages = $.progressMessages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String errorMessage;
-        private List<String> progressMessages;
+        private TestDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestDetailsResponse();
         }
 
         public Builder(TestDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.progressMessages = defaults.progressMessages;
+            $ = new TestDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder progressMessages(List<String> progressMessages) {
-            this.progressMessages = Objects.requireNonNull(progressMessages);
+            $.progressMessages = progressMessages;
             return this;
         }
+
         public Builder progressMessages(String... progressMessages) {
             return progressMessages(List.of(progressMessages));
-        }        public TestDetailsResponse build() {
-            return new TestDetailsResponse(errorMessage, progressMessages);
+        }
+
+        public TestDetailsResponse build() {
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.progressMessages = Objects.requireNonNull($.progressMessages, "expected parameter 'progressMessages' to be non-null");
+            return $;
         }
     }
+
 }

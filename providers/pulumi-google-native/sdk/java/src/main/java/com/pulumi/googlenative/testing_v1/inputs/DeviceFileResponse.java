@@ -22,7 +22,7 @@ public final class DeviceFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="obbFile", required=true)
-      private final ObbFileResponse obbFile;
+    private ObbFileResponse obbFile;
 
     public ObbFileResponse obbFile() {
         return this.obbFile;
@@ -33,55 +33,52 @@ public final class DeviceFileResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regularFile", required=true)
-      private final RegularFileResponse regularFile;
+    private RegularFileResponse regularFile;
 
     public RegularFileResponse regularFile() {
         return this.regularFile;
     }
 
-    public DeviceFileResponse(
-        ObbFileResponse obbFile,
-        RegularFileResponse regularFile) {
-        this.obbFile = Objects.requireNonNull(obbFile, "expected parameter 'obbFile' to be non-null");
-        this.regularFile = Objects.requireNonNull(regularFile, "expected parameter 'regularFile' to be non-null");
-    }
+    private DeviceFileResponse() {}
 
-    private DeviceFileResponse() {
-        this.obbFile = null;
-        this.regularFile = null;
+    private DeviceFileResponse(DeviceFileResponse $) {
+        this.obbFile = $.obbFile;
+        this.regularFile = $.regularFile;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeviceFileResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ObbFileResponse obbFile;
-        private RegularFileResponse regularFile;
+        private DeviceFileResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeviceFileResponse();
         }
 
         public Builder(DeviceFileResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.obbFile = defaults.obbFile;
-    	      this.regularFile = defaults.regularFile;
+            $ = new DeviceFileResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder obbFile(ObbFileResponse obbFile) {
-            this.obbFile = Objects.requireNonNull(obbFile);
+            $.obbFile = obbFile;
             return this;
         }
+
         public Builder regularFile(RegularFileResponse regularFile) {
-            this.regularFile = Objects.requireNonNull(regularFile);
+            $.regularFile = regularFile;
             return this;
-        }        public DeviceFileResponse build() {
-            return new DeviceFileResponse(obbFile, regularFile);
+        }
+
+        public DeviceFileResponse build() {
+            $.obbFile = Objects.requireNonNull($.obbFile, "expected parameter 'obbFile' to be non-null");
+            $.regularFile = Objects.requireNonNull($.regularFile, "expected parameter 'regularFile' to be non-null");
+            return $;
         }
     }
+
 }

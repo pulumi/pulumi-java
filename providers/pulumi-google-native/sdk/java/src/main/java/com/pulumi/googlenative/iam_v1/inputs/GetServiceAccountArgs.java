@@ -15,62 +15,58 @@ public final class GetServiceAccountArgs extends com.pulumi.resources.InvokeArgs
     public static final GetServiceAccountArgs Empty = new GetServiceAccountArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceAccountId", required=true)
-      private final String serviceAccountId;
+    private String serviceAccountId;
 
     public String serviceAccountId() {
         return this.serviceAccountId;
     }
 
-    public GetServiceAccountArgs(
-        @Nullable String project,
-        String serviceAccountId) {
-        this.project = project;
-        this.serviceAccountId = Objects.requireNonNull(serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
-    }
+    private GetServiceAccountArgs() {}
 
-    private GetServiceAccountArgs() {
-        this.project = null;
-        this.serviceAccountId = null;
+    private GetServiceAccountArgs(GetServiceAccountArgs $) {
+        this.project = $.project;
+        this.serviceAccountId = $.serviceAccountId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceAccountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String serviceAccountId;
+        private GetServiceAccountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceAccountArgs();
         }
 
         public Builder(GetServiceAccountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.serviceAccountId = defaults.serviceAccountId;
+            $ = new GetServiceAccountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder serviceAccountId(String serviceAccountId) {
-            this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
+            $.serviceAccountId = serviceAccountId;
             return this;
-        }        public GetServiceAccountArgs build() {
-            return new GetServiceAccountArgs(project, serviceAccountId);
+        }
+
+        public GetServiceAccountArgs build() {
+            $.serviceAccountId = Objects.requireNonNull($.serviceAccountId, "expected parameter 'serviceAccountId' to be non-null");
+            return $;
         }
     }
+
 }

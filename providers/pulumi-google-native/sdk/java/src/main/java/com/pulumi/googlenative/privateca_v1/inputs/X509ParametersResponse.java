@@ -26,7 +26,7 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="additionalExtensions", required=true)
-      private final List<X509ExtensionResponse> additionalExtensions;
+    private List<X509ExtensionResponse> additionalExtensions;
 
     public List<X509ExtensionResponse> additionalExtensions() {
         return this.additionalExtensions;
@@ -37,7 +37,7 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="aiaOcspServers", required=true)
-      private final List<String> aiaOcspServers;
+    private List<String> aiaOcspServers;
 
     public List<String> aiaOcspServers() {
         return this.aiaOcspServers;
@@ -48,7 +48,7 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="caOptions", required=true)
-      private final CaOptionsResponse caOptions;
+    private CaOptionsResponse caOptions;
 
     public CaOptionsResponse caOptions() {
         return this.caOptions;
@@ -59,7 +59,7 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="keyUsage", required=true)
-      private final KeyUsageResponse keyUsage;
+    private KeyUsageResponse keyUsage;
 
     public KeyUsageResponse keyUsage() {
         return this.keyUsage;
@@ -70,91 +70,85 @@ public final class X509ParametersResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="policyIds", required=true)
-      private final List<ObjectIdResponse> policyIds;
+    private List<ObjectIdResponse> policyIds;
 
     public List<ObjectIdResponse> policyIds() {
         return this.policyIds;
     }
 
-    public X509ParametersResponse(
-        List<X509ExtensionResponse> additionalExtensions,
-        List<String> aiaOcspServers,
-        CaOptionsResponse caOptions,
-        KeyUsageResponse keyUsage,
-        List<ObjectIdResponse> policyIds) {
-        this.additionalExtensions = Objects.requireNonNull(additionalExtensions, "expected parameter 'additionalExtensions' to be non-null");
-        this.aiaOcspServers = Objects.requireNonNull(aiaOcspServers, "expected parameter 'aiaOcspServers' to be non-null");
-        this.caOptions = Objects.requireNonNull(caOptions, "expected parameter 'caOptions' to be non-null");
-        this.keyUsage = Objects.requireNonNull(keyUsage, "expected parameter 'keyUsage' to be non-null");
-        this.policyIds = Objects.requireNonNull(policyIds, "expected parameter 'policyIds' to be non-null");
-    }
+    private X509ParametersResponse() {}
 
-    private X509ParametersResponse() {
-        this.additionalExtensions = List.of();
-        this.aiaOcspServers = List.of();
-        this.caOptions = null;
-        this.keyUsage = null;
-        this.policyIds = List.of();
+    private X509ParametersResponse(X509ParametersResponse $) {
+        this.additionalExtensions = $.additionalExtensions;
+        this.aiaOcspServers = $.aiaOcspServers;
+        this.caOptions = $.caOptions;
+        this.keyUsage = $.keyUsage;
+        this.policyIds = $.policyIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509ParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<X509ExtensionResponse> additionalExtensions;
-        private List<String> aiaOcspServers;
-        private CaOptionsResponse caOptions;
-        private KeyUsageResponse keyUsage;
-        private List<ObjectIdResponse> policyIds;
+        private X509ParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509ParametersResponse();
         }
 
         public Builder(X509ParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExtensions = defaults.additionalExtensions;
-    	      this.aiaOcspServers = defaults.aiaOcspServers;
-    	      this.caOptions = defaults.caOptions;
-    	      this.keyUsage = defaults.keyUsage;
-    	      this.policyIds = defaults.policyIds;
+            $ = new X509ParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExtensions(List<X509ExtensionResponse> additionalExtensions) {
-            this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
+            $.additionalExtensions = additionalExtensions;
             return this;
         }
+
         public Builder additionalExtensions(X509ExtensionResponse... additionalExtensions) {
             return additionalExtensions(List.of(additionalExtensions));
         }
+
         public Builder aiaOcspServers(List<String> aiaOcspServers) {
-            this.aiaOcspServers = Objects.requireNonNull(aiaOcspServers);
+            $.aiaOcspServers = aiaOcspServers;
             return this;
         }
+
         public Builder aiaOcspServers(String... aiaOcspServers) {
             return aiaOcspServers(List.of(aiaOcspServers));
         }
+
         public Builder caOptions(CaOptionsResponse caOptions) {
-            this.caOptions = Objects.requireNonNull(caOptions);
+            $.caOptions = caOptions;
             return this;
         }
+
         public Builder keyUsage(KeyUsageResponse keyUsage) {
-            this.keyUsage = Objects.requireNonNull(keyUsage);
+            $.keyUsage = keyUsage;
             return this;
         }
+
         public Builder policyIds(List<ObjectIdResponse> policyIds) {
-            this.policyIds = Objects.requireNonNull(policyIds);
+            $.policyIds = policyIds;
             return this;
         }
+
         public Builder policyIds(ObjectIdResponse... policyIds) {
             return policyIds(List.of(policyIds));
-        }        public X509ParametersResponse build() {
-            return new X509ParametersResponse(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
+        }
+
+        public X509ParametersResponse build() {
+            $.additionalExtensions = Objects.requireNonNull($.additionalExtensions, "expected parameter 'additionalExtensions' to be non-null");
+            $.aiaOcspServers = Objects.requireNonNull($.aiaOcspServers, "expected parameter 'aiaOcspServers' to be non-null");
+            $.caOptions = Objects.requireNonNull($.caOptions, "expected parameter 'caOptions' to be non-null");
+            $.keyUsage = Objects.requireNonNull($.keyUsage, "expected parameter 'keyUsage' to be non-null");
+            $.policyIds = Objects.requireNonNull($.policyIds, "expected parameter 'policyIds' to be non-null");
+            return $;
         }
     }
+
 }

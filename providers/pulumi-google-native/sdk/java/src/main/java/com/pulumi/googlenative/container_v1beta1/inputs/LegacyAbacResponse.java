@@ -21,45 +21,45 @@ public final class LegacyAbacResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public LegacyAbacResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private LegacyAbacResponse() {}
 
-    private LegacyAbacResponse() {
-        this.enabled = null;
+    private LegacyAbacResponse(LegacyAbacResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LegacyAbacResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private LegacyAbacResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LegacyAbacResponse();
         }
 
         public Builder(LegacyAbacResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new LegacyAbacResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public LegacyAbacResponse build() {
-            return new LegacyAbacResponse(enabled);
+        }
+
+        public LegacyAbacResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

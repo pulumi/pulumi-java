@@ -5,7 +5,6 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class MonitoredResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="labels", required=true)
-      private final Output<Map<String,String>> labels;
+    private Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> labels() {
         return this.labels;
@@ -35,63 +34,60 @@ public final class MonitoredResourceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public MonitoredResourceArgs(
-        Output<Map<String,String>> labels,
-        Output<String> type) {
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private MonitoredResourceArgs() {}
 
-    private MonitoredResourceArgs() {
-        this.labels = Codegen.empty();
-        this.type = Codegen.empty();
+    private MonitoredResourceArgs(MonitoredResourceArgs $) {
+        this.labels = $.labels;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonitoredResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Map<String,String>> labels;
-        private Output<String> type;
+        private MonitoredResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonitoredResourceArgs();
         }
 
         public Builder(MonitoredResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.type = defaults.type;
+            $ = new MonitoredResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(Output<Map<String,String>> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Output.of(Objects.requireNonNull(labels));
-            return this;
+            return labels(Output.of(labels));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public MonitoredResourceArgs build() {
-            return new MonitoredResourceArgs(labels, type);
+            return type(Output.of(type));
+        }
+
+        public MonitoredResourceArgs build() {
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

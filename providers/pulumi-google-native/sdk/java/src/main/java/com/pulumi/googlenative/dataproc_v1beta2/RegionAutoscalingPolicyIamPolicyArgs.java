@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dataproc_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,7 +19,7 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.resou
     public static final RegionAutoscalingPolicyIamPolicyArgs Empty = new RegionAutoscalingPolicyIamPolicyArgs();
 
     @Import(name="autoscalingPolicyId", required=true)
-      private final Output<String> autoscalingPolicyId;
+    private Output<String> autoscalingPolicyId;
 
     public Output<String> autoscalingPolicyId() {
         return this.autoscalingPolicyId;
@@ -30,10 +30,10 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -41,21 +41,21 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="regionId", required=true)
-      private final Output<String> regionId;
+    private Output<String> regionId;
 
     public Output<String> regionId() {
         return this.regionId;
@@ -66,118 +66,104 @@ public final class RegionAutoscalingPolicyIamPolicyArgs extends com.pulumi.resou
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public RegionAutoscalingPolicyIamPolicyArgs(
-        Output<String> autoscalingPolicyId,
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> project,
-        Output<String> regionId,
-        @Nullable Output<Integer> version) {
-        this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId, "expected parameter 'autoscalingPolicyId' to be non-null");
-        this.bindings = bindings;
-        this.etag = etag;
-        this.project = project;
-        this.regionId = Objects.requireNonNull(regionId, "expected parameter 'regionId' to be non-null");
-        this.version = version;
-    }
+    private RegionAutoscalingPolicyIamPolicyArgs() {}
 
-    private RegionAutoscalingPolicyIamPolicyArgs() {
-        this.autoscalingPolicyId = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.project = Codegen.empty();
-        this.regionId = Codegen.empty();
-        this.version = Codegen.empty();
+    private RegionAutoscalingPolicyIamPolicyArgs(RegionAutoscalingPolicyIamPolicyArgs $) {
+        this.autoscalingPolicyId = $.autoscalingPolicyId;
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.project = $.project;
+        this.regionId = $.regionId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegionAutoscalingPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> autoscalingPolicyId;
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> project;
-        private Output<String> regionId;
-        private @Nullable Output<Integer> version;
+        private RegionAutoscalingPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegionAutoscalingPolicyIamPolicyArgs();
         }
 
         public Builder(RegionAutoscalingPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicyId = defaults.autoscalingPolicyId;
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.project = defaults.project;
-    	      this.regionId = defaults.regionId;
-    	      this.version = defaults.version;
+            $ = new RegionAutoscalingPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicyId(Output<String> autoscalingPolicyId) {
-            this.autoscalingPolicyId = Objects.requireNonNull(autoscalingPolicyId);
+            $.autoscalingPolicyId = autoscalingPolicyId;
             return this;
         }
+
         public Builder autoscalingPolicyId(String autoscalingPolicyId) {
-            this.autoscalingPolicyId = Output.of(Objects.requireNonNull(autoscalingPolicyId));
-            return this;
+            return autoscalingPolicyId(Output.of(autoscalingPolicyId));
         }
+
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder regionId(Output<String> regionId) {
-            this.regionId = Objects.requireNonNull(regionId);
+            $.regionId = regionId;
             return this;
         }
+
         public Builder regionId(String regionId) {
-            this.regionId = Output.of(Objects.requireNonNull(regionId));
-            return this;
+            return regionId(Output.of(regionId));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public RegionAutoscalingPolicyIamPolicyArgs build() {
-            return new RegionAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, bindings, etag, project, regionId, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public RegionAutoscalingPolicyIamPolicyArgs build() {
+            $.autoscalingPolicyId = Objects.requireNonNull($.autoscalingPolicyId, "expected parameter 'autoscalingPolicyId' to be non-null");
+            $.regionId = Objects.requireNonNull($.regionId, "expected parameter 'regionId' to be non-null");
+            return $;
         }
     }
+
 }

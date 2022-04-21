@@ -21,45 +21,45 @@ public final class GrafeasV1beta1DeploymentDetailsResponse extends com.pulumi.re
      * 
      */
     @Import(name="deployment", required=true)
-      private final DeploymentResponse deployment;
+    private DeploymentResponse deployment;
 
     public DeploymentResponse deployment() {
         return this.deployment;
     }
 
-    public GrafeasV1beta1DeploymentDetailsResponse(DeploymentResponse deployment) {
-        this.deployment = Objects.requireNonNull(deployment, "expected parameter 'deployment' to be non-null");
-    }
+    private GrafeasV1beta1DeploymentDetailsResponse() {}
 
-    private GrafeasV1beta1DeploymentDetailsResponse() {
-        this.deployment = null;
+    private GrafeasV1beta1DeploymentDetailsResponse(GrafeasV1beta1DeploymentDetailsResponse $) {
+        this.deployment = $.deployment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1DeploymentDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private DeploymentResponse deployment;
+        private GrafeasV1beta1DeploymentDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1DeploymentDetailsResponse();
         }
 
         public Builder(GrafeasV1beta1DeploymentDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployment = defaults.deployment;
+            $ = new GrafeasV1beta1DeploymentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deployment(DeploymentResponse deployment) {
-            this.deployment = Objects.requireNonNull(deployment);
+            $.deployment = deployment;
             return this;
-        }        public GrafeasV1beta1DeploymentDetailsResponse build() {
-            return new GrafeasV1beta1DeploymentDetailsResponse(deployment);
+        }
+
+        public GrafeasV1beta1DeploymentDetailsResponse build() {
+            $.deployment = Objects.requireNonNull($.deployment, "expected parameter 'deployment' to be non-null");
+            return $;
         }
     }
+
 }

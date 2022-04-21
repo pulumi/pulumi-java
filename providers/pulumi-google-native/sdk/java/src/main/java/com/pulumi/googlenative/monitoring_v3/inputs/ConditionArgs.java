@@ -5,13 +5,13 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v3.inputs.LogMatchArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MetricAbsenceArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MetricThresholdArgs;
 import com.pulumi.googlenative.monitoring_v3.inputs.MonitoringQueryLanguageConditionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditionAbsent")
-      private final @Nullable Output<MetricAbsenceArgs> conditionAbsent;
+    private @Nullable Output<MetricAbsenceArgs> conditionAbsent;
 
-    public Output<MetricAbsenceArgs> conditionAbsent() {
-        return this.conditionAbsent == null ? Codegen.empty() : this.conditionAbsent;
+    public Optional<Output<MetricAbsenceArgs>> conditionAbsent() {
+        return Optional.ofNullable(this.conditionAbsent);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditionMatchedLog")
-      private final @Nullable Output<LogMatchArgs> conditionMatchedLog;
+    private @Nullable Output<LogMatchArgs> conditionMatchedLog;
 
-    public Output<LogMatchArgs> conditionMatchedLog() {
-        return this.conditionMatchedLog == null ? Codegen.empty() : this.conditionMatchedLog;
+    public Optional<Output<LogMatchArgs>> conditionMatchedLog() {
+        return Optional.ofNullable(this.conditionMatchedLog);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditionMonitoringQueryLanguage")
-      private final @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
+    private @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
 
-    public Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage() {
-        return this.conditionMonitoringQueryLanguage == null ? Codegen.empty() : this.conditionMonitoringQueryLanguage;
+    public Optional<Output<MonitoringQueryLanguageConditionArgs>> conditionMonitoringQueryLanguage() {
+        return Optional.ofNullable(this.conditionMonitoringQueryLanguage);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditionThreshold")
-      private final @Nullable Output<MetricThresholdArgs> conditionThreshold;
+    private @Nullable Output<MetricThresholdArgs> conditionThreshold;
 
-    public Output<MetricThresholdArgs> conditionThreshold() {
-        return this.conditionThreshold == null ? Codegen.empty() : this.conditionThreshold;
+    public Optional<Output<MetricThresholdArgs>> conditionThreshold() {
+        return Optional.ofNullable(this.conditionThreshold);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -83,115 +83,98 @@ public final class ConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public ConditionArgs(
-        @Nullable Output<MetricAbsenceArgs> conditionAbsent,
-        @Nullable Output<LogMatchArgs> conditionMatchedLog,
-        @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage,
-        @Nullable Output<MetricThresholdArgs> conditionThreshold,
-        @Nullable Output<String> displayName,
-        @Nullable Output<String> name) {
-        this.conditionAbsent = conditionAbsent;
-        this.conditionMatchedLog = conditionMatchedLog;
-        this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
-        this.conditionThreshold = conditionThreshold;
-        this.displayName = displayName;
-        this.name = name;
-    }
+    private ConditionArgs() {}
 
-    private ConditionArgs() {
-        this.conditionAbsent = Codegen.empty();
-        this.conditionMatchedLog = Codegen.empty();
-        this.conditionMonitoringQueryLanguage = Codegen.empty();
-        this.conditionThreshold = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.name = Codegen.empty();
+    private ConditionArgs(ConditionArgs $) {
+        this.conditionAbsent = $.conditionAbsent;
+        this.conditionMatchedLog = $.conditionMatchedLog;
+        this.conditionMonitoringQueryLanguage = $.conditionMonitoringQueryLanguage;
+        this.conditionThreshold = $.conditionThreshold;
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<MetricAbsenceArgs> conditionAbsent;
-        private @Nullable Output<LogMatchArgs> conditionMatchedLog;
-        private @Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage;
-        private @Nullable Output<MetricThresholdArgs> conditionThreshold;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<String> name;
+        private ConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionArgs();
         }
 
         public Builder(ConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionAbsent = defaults.conditionAbsent;
-    	      this.conditionMatchedLog = defaults.conditionMatchedLog;
-    	      this.conditionMonitoringQueryLanguage = defaults.conditionMonitoringQueryLanguage;
-    	      this.conditionThreshold = defaults.conditionThreshold;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new ConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionAbsent(@Nullable Output<MetricAbsenceArgs> conditionAbsent) {
-            this.conditionAbsent = conditionAbsent;
+            $.conditionAbsent = conditionAbsent;
             return this;
         }
-        public Builder conditionAbsent(@Nullable MetricAbsenceArgs conditionAbsent) {
-            this.conditionAbsent = Codegen.ofNullable(conditionAbsent);
-            return this;
+
+        public Builder conditionAbsent(MetricAbsenceArgs conditionAbsent) {
+            return conditionAbsent(Output.of(conditionAbsent));
         }
+
         public Builder conditionMatchedLog(@Nullable Output<LogMatchArgs> conditionMatchedLog) {
-            this.conditionMatchedLog = conditionMatchedLog;
+            $.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
-        public Builder conditionMatchedLog(@Nullable LogMatchArgs conditionMatchedLog) {
-            this.conditionMatchedLog = Codegen.ofNullable(conditionMatchedLog);
-            return this;
+
+        public Builder conditionMatchedLog(LogMatchArgs conditionMatchedLog) {
+            return conditionMatchedLog(Output.of(conditionMatchedLog));
         }
+
         public Builder conditionMonitoringQueryLanguage(@Nullable Output<MonitoringQueryLanguageConditionArgs> conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
+            $.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
-        public Builder conditionMonitoringQueryLanguage(@Nullable MonitoringQueryLanguageConditionArgs conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = Codegen.ofNullable(conditionMonitoringQueryLanguage);
-            return this;
+
+        public Builder conditionMonitoringQueryLanguage(MonitoringQueryLanguageConditionArgs conditionMonitoringQueryLanguage) {
+            return conditionMonitoringQueryLanguage(Output.of(conditionMonitoringQueryLanguage));
         }
+
         public Builder conditionThreshold(@Nullable Output<MetricThresholdArgs> conditionThreshold) {
-            this.conditionThreshold = conditionThreshold;
+            $.conditionThreshold = conditionThreshold;
             return this;
         }
-        public Builder conditionThreshold(@Nullable MetricThresholdArgs conditionThreshold) {
-            this.conditionThreshold = Codegen.ofNullable(conditionThreshold);
-            return this;
+
+        public Builder conditionThreshold(MetricThresholdArgs conditionThreshold) {
+            return conditionThreshold(Output.of(conditionThreshold));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public ConditionArgs build() {
-            return new ConditionArgs(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public ConditionArgs build() {
+            return $;
         }
     }
+
 }

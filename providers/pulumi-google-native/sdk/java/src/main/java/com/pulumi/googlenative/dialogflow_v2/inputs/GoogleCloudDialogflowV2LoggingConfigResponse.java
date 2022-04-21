@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2LoggingConfigResponse extends com.pulu
      * 
      */
     @Import(name="enableStackdriverLogging", required=true)
-      private final Boolean enableStackdriverLogging;
+    private Boolean enableStackdriverLogging;
 
     public Boolean enableStackdriverLogging() {
         return this.enableStackdriverLogging;
     }
 
-    public GoogleCloudDialogflowV2LoggingConfigResponse(Boolean enableStackdriverLogging) {
-        this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging, "expected parameter 'enableStackdriverLogging' to be non-null");
-    }
+    private GoogleCloudDialogflowV2LoggingConfigResponse() {}
 
-    private GoogleCloudDialogflowV2LoggingConfigResponse() {
-        this.enableStackdriverLogging = null;
+    private GoogleCloudDialogflowV2LoggingConfigResponse(GoogleCloudDialogflowV2LoggingConfigResponse $) {
+        this.enableStackdriverLogging = $.enableStackdriverLogging;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2LoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableStackdriverLogging;
+        private GoogleCloudDialogflowV2LoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2LoggingConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2LoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
+            $ = new GoogleCloudDialogflowV2LoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
+            $.enableStackdriverLogging = enableStackdriverLogging;
             return this;
-        }        public GoogleCloudDialogflowV2LoggingConfigResponse build() {
-            return new GoogleCloudDialogflowV2LoggingConfigResponse(enableStackdriverLogging);
+        }
+
+        public GoogleCloudDialogflowV2LoggingConfigResponse build() {
+            $.enableStackdriverLogging = Objects.requireNonNull($.enableStackdriverLogging, "expected parameter 'enableStackdriverLogging' to be non-null");
+            return $;
         }
     }
+
 }

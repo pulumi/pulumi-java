@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
      * 
      */
     @Import(name="inspectConfig", required=true)
-      private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
+    private GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
     public GooglePrivacyDlpV2InspectConfigResponse inspectConfig() {
         return this.inspectConfig;
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -77,91 +77,80 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends com.pulumi.
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public GooglePrivacyDlpV2InspectTemplateResponse(
-        String createTime,
-        String description,
-        String displayName,
-        GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
-        String name,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.inspectConfig = Objects.requireNonNull(inspectConfig, "expected parameter 'inspectConfig' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private GooglePrivacyDlpV2InspectTemplateResponse() {}
 
-    private GooglePrivacyDlpV2InspectTemplateResponse() {
-        this.createTime = null;
-        this.description = null;
-        this.displayName = null;
-        this.inspectConfig = null;
-        this.name = null;
-        this.updateTime = null;
+    private GooglePrivacyDlpV2InspectTemplateResponse(GooglePrivacyDlpV2InspectTemplateResponse $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.inspectConfig = $.inspectConfig;
+        this.name = $.name;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectTemplateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String description;
-        private String displayName;
-        private GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
-        private String name;
-        private String updateTime;
+        private GooglePrivacyDlpV2InspectTemplateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectTemplateResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InspectTemplateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.inspectConfig = defaults.inspectConfig;
-    	      this.name = defaults.name;
-    	      this.updateTime = defaults.updateTime;
+            $ = new GooglePrivacyDlpV2InspectTemplateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
-            this.inspectConfig = Objects.requireNonNull(inspectConfig);
+            $.inspectConfig = inspectConfig;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public GooglePrivacyDlpV2InspectTemplateResponse build() {
-            return new GooglePrivacyDlpV2InspectTemplateResponse(createTime, description, displayName, inspectConfig, name, updateTime);
+        }
+
+        public GooglePrivacyDlpV2InspectTemplateResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.inspectConfig = Objects.requireNonNull($.inspectConfig, "expected parameter 'inspectConfig' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

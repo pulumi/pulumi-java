@@ -22,7 +22,7 @@ public final class RatioPartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="aggregation", required=true)
-      private final AggregationResponse aggregation;
+    private AggregationResponse aggregation;
 
     public AggregationResponse aggregation() {
         return this.aggregation;
@@ -33,55 +33,52 @@ public final class RatioPartResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
     }
 
-    public RatioPartResponse(
-        AggregationResponse aggregation,
-        String filter) {
-        this.aggregation = Objects.requireNonNull(aggregation, "expected parameter 'aggregation' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-    }
+    private RatioPartResponse() {}
 
-    private RatioPartResponse() {
-        this.aggregation = null;
-        this.filter = null;
+    private RatioPartResponse(RatioPartResponse $) {
+        this.aggregation = $.aggregation;
+        this.filter = $.filter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RatioPartResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AggregationResponse aggregation;
-        private String filter;
+        private RatioPartResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RatioPartResponse();
         }
 
         public Builder(RatioPartResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregation = defaults.aggregation;
-    	      this.filter = defaults.filter;
+            $ = new RatioPartResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregation(AggregationResponse aggregation) {
-            this.aggregation = Objects.requireNonNull(aggregation);
+            $.aggregation = aggregation;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
-        }        public RatioPartResponse build() {
-            return new RatioPartResponse(aggregation, filter);
+        }
+
+        public RatioPartResponse build() {
+            $.aggregation = Objects.requireNonNull($.aggregation, "expected parameter 'aggregation' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.DiscoveredArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="discovered", required=true)
-      private final Output<DiscoveredArgs> discovered;
+    private Output<DiscoveredArgs> discovered;
 
     public Output<DiscoveredArgs> discovered() {
         return this.discovered;
     }
 
-    public GrafeasV1beta1DiscoveryDetailsArgs(Output<DiscoveredArgs> discovered) {
-        this.discovered = Objects.requireNonNull(discovered, "expected parameter 'discovered' to be non-null");
-    }
+    private GrafeasV1beta1DiscoveryDetailsArgs() {}
 
-    private GrafeasV1beta1DiscoveryDetailsArgs() {
-        this.discovered = Codegen.empty();
+    private GrafeasV1beta1DiscoveryDetailsArgs(GrafeasV1beta1DiscoveryDetailsArgs $) {
+        this.discovered = $.discovered;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GrafeasV1beta1DiscoveryDetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<DiscoveredArgs> discovered;
+        private GrafeasV1beta1DiscoveryDetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GrafeasV1beta1DiscoveryDetailsArgs();
         }
 
         public Builder(GrafeasV1beta1DiscoveryDetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.discovered = defaults.discovered;
+            $ = new GrafeasV1beta1DiscoveryDetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder discovered(Output<DiscoveredArgs> discovered) {
-            this.discovered = Objects.requireNonNull(discovered);
+            $.discovered = discovered;
             return this;
         }
+
         public Builder discovered(DiscoveredArgs discovered) {
-            this.discovered = Output.of(Objects.requireNonNull(discovered));
-            return this;
-        }        public GrafeasV1beta1DiscoveryDetailsArgs build() {
-            return new GrafeasV1beta1DiscoveryDetailsArgs(discovered);
+            return discovered(Output.of(discovered));
+        }
+
+        public GrafeasV1beta1DiscoveryDetailsArgs build() {
+            $.discovered = Objects.requireNonNull($.discovered, "expected parameter 'discovered' to be non-null");
+            return $;
         }
     }
+
 }

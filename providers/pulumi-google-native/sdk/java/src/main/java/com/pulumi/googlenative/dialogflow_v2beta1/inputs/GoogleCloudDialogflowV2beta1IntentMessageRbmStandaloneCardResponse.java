@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * 
      */
     @Import(name="cardContent", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent() {
         return this.cardContent;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * 
      */
     @Import(name="cardOrientation", required=true)
-      private final String cardOrientation;
+    private String cardOrientation;
 
     public String cardOrientation() {
         return this.cardOrientation;
@@ -44,64 +44,59 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * 
      */
     @Import(name="thumbnailImageAlignment", required=true)
-      private final String thumbnailImageAlignment;
+    private String thumbnailImageAlignment;
 
     public String thumbnailImageAlignment() {
         return this.thumbnailImageAlignment;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
-        String cardOrientation,
-        String thumbnailImageAlignment) {
-        this.cardContent = Objects.requireNonNull(cardContent, "expected parameter 'cardContent' to be non-null");
-        this.cardOrientation = Objects.requireNonNull(cardOrientation, "expected parameter 'cardOrientation' to be non-null");
-        this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment, "expected parameter 'thumbnailImageAlignment' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse() {
-        this.cardContent = null;
-        this.cardOrientation = null;
-        this.thumbnailImageAlignment = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse $) {
+        this.cardContent = $.cardContent;
+        this.cardOrientation = $.cardOrientation;
+        this.thumbnailImageAlignment = $.thumbnailImageAlignment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
-        private String cardOrientation;
-        private String thumbnailImageAlignment;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cardContent = defaults.cardContent;
-    	      this.cardOrientation = defaults.cardOrientation;
-    	      this.thumbnailImageAlignment = defaults.thumbnailImageAlignment;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent) {
-            this.cardContent = Objects.requireNonNull(cardContent);
+            $.cardContent = cardContent;
             return this;
         }
+
         public Builder cardOrientation(String cardOrientation) {
-            this.cardOrientation = Objects.requireNonNull(cardOrientation);
+            $.cardOrientation = cardOrientation;
             return this;
         }
+
         public Builder thumbnailImageAlignment(String thumbnailImageAlignment) {
-            this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
+            $.thumbnailImageAlignment = thumbnailImageAlignment;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(cardContent, cardOrientation, thumbnailImageAlignment);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse build() {
+            $.cardContent = Objects.requireNonNull($.cardContent, "expected parameter 'cardContent' to be non-null");
+            $.cardOrientation = Objects.requireNonNull($.cardOrientation, "expected parameter 'cardOrientation' to be non-null");
+            $.thumbnailImageAlignment = Objects.requireNonNull($.thumbnailImageAlignment, "expected parameter 'thumbnailImageAlignment' to be non-null");
+            return $;
         }
     }
+
 }

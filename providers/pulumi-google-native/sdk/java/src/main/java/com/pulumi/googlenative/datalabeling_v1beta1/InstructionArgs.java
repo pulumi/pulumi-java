@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datalabeling_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datalabeling_v1beta1.enums.InstructionDataType;
 import com.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1PdfInstructionArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,7 +22,7 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dataType", required=true)
-      private final Output<InstructionDataType> dataType;
+    private Output<InstructionDataType> dataType;
 
     public Output<InstructionDataType> dataType() {
         return this.dataType;
@@ -33,10 +33,10 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -44,7 +44,7 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -55,109 +55,97 @@ public final class InstructionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pdfInstruction")
-      private final @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
+    private @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
-    public Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction() {
-        return this.pdfInstruction == null ? Codegen.empty() : this.pdfInstruction;
+    public Optional<Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs>> pdfInstruction() {
+        return Optional.ofNullable(this.pdfInstruction);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public InstructionArgs(
-        Output<InstructionDataType> dataType,
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction,
-        @Nullable Output<String> project) {
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.pdfInstruction = pdfInstruction;
-        this.project = project;
-    }
+    private InstructionArgs() {}
 
-    private InstructionArgs() {
-        this.dataType = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.pdfInstruction = Codegen.empty();
-        this.project = Codegen.empty();
+    private InstructionArgs(InstructionArgs $) {
+        this.dataType = $.dataType;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.pdfInstruction = $.pdfInstruction;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstructionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<InstructionDataType> dataType;
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
-        private @Nullable Output<String> project;
+        private InstructionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstructionArgs();
         }
 
         public Builder(InstructionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataType = defaults.dataType;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.pdfInstruction = defaults.pdfInstruction;
-    	      this.project = defaults.project;
+            $ = new InstructionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataType(Output<InstructionDataType> dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder dataType(InstructionDataType dataType) {
-            this.dataType = Output.of(Objects.requireNonNull(dataType));
-            return this;
+            return dataType(Output.of(dataType));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder pdfInstruction(@Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction) {
-            this.pdfInstruction = pdfInstruction;
+            $.pdfInstruction = pdfInstruction;
             return this;
         }
-        public Builder pdfInstruction(@Nullable GoogleCloudDatalabelingV1beta1PdfInstructionArgs pdfInstruction) {
-            this.pdfInstruction = Codegen.ofNullable(pdfInstruction);
-            return this;
+
+        public Builder pdfInstruction(GoogleCloudDatalabelingV1beta1PdfInstructionArgs pdfInstruction) {
+            return pdfInstruction(Output.of(pdfInstruction));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public InstructionArgs build() {
-            return new InstructionArgs(dataType, description, displayName, pdfInstruction, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public InstructionArgs build() {
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

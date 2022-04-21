@@ -21,7 +21,7 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="predefinedSource", required=true)
-      private final String predefinedSource;
+    private String predefinedSource;
 
     public String predefinedSource() {
         return this.predefinedSource;
     }
 
-    public SourceResponse(
-        String name,
-        String predefinedSource) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.predefinedSource = Objects.requireNonNull(predefinedSource, "expected parameter 'predefinedSource' to be non-null");
-    }
+    private SourceResponse() {}
 
-    private SourceResponse() {
-        this.name = null;
-        this.predefinedSource = null;
+    private SourceResponse(SourceResponse $) {
+        this.name = $.name;
+        this.predefinedSource = $.predefinedSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String predefinedSource;
+        private SourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceResponse();
         }
 
         public Builder(SourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.predefinedSource = defaults.predefinedSource;
+            $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder predefinedSource(String predefinedSource) {
-            this.predefinedSource = Objects.requireNonNull(predefinedSource);
+            $.predefinedSource = predefinedSource;
             return this;
-        }        public SourceResponse build() {
-            return new SourceResponse(name, predefinedSource);
+        }
+
+        public SourceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.predefinedSource = Objects.requireNonNull($.predefinedSource, "expected parameter 'predefinedSource' to be non-null");
+            return $;
         }
     }
+
 }

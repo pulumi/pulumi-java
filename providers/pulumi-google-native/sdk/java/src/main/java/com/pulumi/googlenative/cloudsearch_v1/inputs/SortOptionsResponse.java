@@ -17,7 +17,7 @@ public final class SortOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="operatorName", required=true)
-      private final String operatorName;
+    private String operatorName;
 
     public String operatorName() {
         return this.operatorName;
@@ -28,55 +28,52 @@ public final class SortOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sortOrder", required=true)
-      private final String sortOrder;
+    private String sortOrder;
 
     public String sortOrder() {
         return this.sortOrder;
     }
 
-    public SortOptionsResponse(
-        String operatorName,
-        String sortOrder) {
-        this.operatorName = Objects.requireNonNull(operatorName, "expected parameter 'operatorName' to be non-null");
-        this.sortOrder = Objects.requireNonNull(sortOrder, "expected parameter 'sortOrder' to be non-null");
-    }
+    private SortOptionsResponse() {}
 
-    private SortOptionsResponse() {
-        this.operatorName = null;
-        this.sortOrder = null;
+    private SortOptionsResponse(SortOptionsResponse $) {
+        this.operatorName = $.operatorName;
+        this.sortOrder = $.sortOrder;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SortOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String operatorName;
-        private String sortOrder;
+        private SortOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SortOptionsResponse();
         }
 
         public Builder(SortOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operatorName = defaults.operatorName;
-    	      this.sortOrder = defaults.sortOrder;
+            $ = new SortOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder operatorName(String operatorName) {
-            this.operatorName = Objects.requireNonNull(operatorName);
+            $.operatorName = operatorName;
             return this;
         }
+
         public Builder sortOrder(String sortOrder) {
-            this.sortOrder = Objects.requireNonNull(sortOrder);
+            $.sortOrder = sortOrder;
             return this;
-        }        public SortOptionsResponse build() {
-            return new SortOptionsResponse(operatorName, sortOrder);
+        }
+
+        public SortOptionsResponse build() {
+            $.operatorName = Objects.requireNonNull($.operatorName, "expected parameter 'operatorName' to be non-null");
+            $.sortOrder = Objects.requireNonNull($.sortOrder, "expected parameter 'sortOrder' to be non-null");
+            return $;
         }
     }
+
 }

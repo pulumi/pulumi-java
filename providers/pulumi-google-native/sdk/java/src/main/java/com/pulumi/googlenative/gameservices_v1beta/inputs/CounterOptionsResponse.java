@@ -23,7 +23,7 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="customFields", required=true)
-      private final List<CustomFieldResponse> customFields;
+    private List<CustomFieldResponse> customFields;
 
     public List<CustomFieldResponse> customFields() {
         return this.customFields;
@@ -34,7 +34,7 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="field", required=true)
-      private final String field;
+    private String field;
 
     public String field() {
         return this.field;
@@ -45,67 +45,63 @@ public final class CounterOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
     }
 
-    public CounterOptionsResponse(
-        List<CustomFieldResponse> customFields,
-        String field,
-        String metric) {
-        this.customFields = Objects.requireNonNull(customFields, "expected parameter 'customFields' to be non-null");
-        this.field = Objects.requireNonNull(field, "expected parameter 'field' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-    }
+    private CounterOptionsResponse() {}
 
-    private CounterOptionsResponse() {
-        this.customFields = List.of();
-        this.field = null;
-        this.metric = null;
+    private CounterOptionsResponse(CounterOptionsResponse $) {
+        this.customFields = $.customFields;
+        this.field = $.field;
+        this.metric = $.metric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CounterOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<CustomFieldResponse> customFields;
-        private String field;
-        private String metric;
+        private CounterOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CounterOptionsResponse();
         }
 
         public Builder(CounterOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customFields = defaults.customFields;
-    	      this.field = defaults.field;
-    	      this.metric = defaults.metric;
+            $ = new CounterOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customFields(List<CustomFieldResponse> customFields) {
-            this.customFields = Objects.requireNonNull(customFields);
+            $.customFields = customFields;
             return this;
         }
+
         public Builder customFields(CustomFieldResponse... customFields) {
             return customFields(List.of(customFields));
         }
+
         public Builder field(String field) {
-            this.field = Objects.requireNonNull(field);
+            $.field = field;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
-        }        public CounterOptionsResponse build() {
-            return new CounterOptionsResponse(customFields, field, metric);
+        }
+
+        public CounterOptionsResponse build() {
+            $.customFields = Objects.requireNonNull($.customFields, "expected parameter 'customFields' to be non-null");
+            $.field = Objects.requireNonNull($.field, "expected parameter 'field' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

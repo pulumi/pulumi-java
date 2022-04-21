@@ -5,12 +5,12 @@ package com.pulumi.googlenative.servicedirectory_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicedirectory_v1beta1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class NamespaceServiceIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -34,35 +34,35 @@ public final class NamespaceServiceIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="namespaceId", required=true)
-      private final Output<String> namespaceId;
+    private Output<String> namespaceId;
 
     public Output<String> namespaceId() {
         return this.namespaceId;
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="serviceId", required=true)
-      private final Output<String> serviceId;
+    private Output<String> serviceId;
 
     public Output<String> serviceId() {
         return this.serviceId;
@@ -73,131 +73,114 @@ public final class NamespaceServiceIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public NamespaceServiceIamPolicyArgs(
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> location,
-        Output<String> namespaceId,
-        @Nullable Output<String> project,
-        Output<String> serviceId,
-        @Nullable Output<Integer> version) {
-        this.bindings = bindings;
-        this.etag = etag;
-        this.location = location;
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-        this.project = project;
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-        this.version = version;
-    }
+    private NamespaceServiceIamPolicyArgs() {}
 
-    private NamespaceServiceIamPolicyArgs() {
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.location = Codegen.empty();
-        this.namespaceId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.serviceId = Codegen.empty();
-        this.version = Codegen.empty();
+    private NamespaceServiceIamPolicyArgs(NamespaceServiceIamPolicyArgs $) {
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.location = $.location;
+        this.namespaceId = $.namespaceId;
+        this.project = $.project;
+        this.serviceId = $.serviceId;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceServiceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> location;
-        private Output<String> namespaceId;
-        private @Nullable Output<String> project;
-        private Output<String> serviceId;
-        private @Nullable Output<Integer> version;
+        private NamespaceServiceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceServiceIamPolicyArgs();
         }
 
         public Builder(NamespaceServiceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.location = defaults.location;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.project = defaults.project;
-    	      this.serviceId = defaults.serviceId;
-    	      this.version = defaults.version;
+            $ = new NamespaceServiceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder namespaceId(Output<String> namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
         }
+
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Output.of(Objects.requireNonNull(namespaceId));
-            return this;
+            return namespaceId(Output.of(namespaceId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder serviceId(Output<String> serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Output.of(Objects.requireNonNull(serviceId));
-            return this;
+            return serviceId(Output.of(serviceId));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public NamespaceServiceIamPolicyArgs build() {
-            return new NamespaceServiceIamPolicyArgs(bindings, etag, location, namespaceId, project, serviceId, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public NamespaceServiceIamPolicyArgs build() {
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

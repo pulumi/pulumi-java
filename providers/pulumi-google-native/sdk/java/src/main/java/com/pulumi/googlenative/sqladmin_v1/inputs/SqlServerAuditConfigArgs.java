@@ -5,9 +5,9 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SqlServerAuditConfigArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
-    public SqlServerAuditConfigArgs(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> kind) {
-        this.bucket = bucket;
-        this.kind = kind;
-    }
+    private SqlServerAuditConfigArgs() {}
 
-    private SqlServerAuditConfigArgs() {
-        this.bucket = Codegen.empty();
-        this.kind = Codegen.empty();
+    private SqlServerAuditConfigArgs(SqlServerAuditConfigArgs $) {
+        this.bucket = $.bucket;
+        this.kind = $.kind;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlServerAuditConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> kind;
+        private SqlServerAuditConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlServerAuditConfigArgs();
         }
 
         public Builder(SqlServerAuditConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.kind = defaults.kind;
+            $ = new SqlServerAuditConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
-        }        public SqlServerAuditConfigArgs build() {
-            return new SqlServerAuditConfigArgs(bucket, kind);
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
+        }
+
+        public SqlServerAuditConfigArgs build() {
+            return $;
         }
     }
+
 }

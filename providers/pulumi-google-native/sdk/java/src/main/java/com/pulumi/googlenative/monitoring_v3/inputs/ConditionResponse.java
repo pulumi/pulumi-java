@@ -25,7 +25,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditionAbsent", required=true)
-      private final MetricAbsenceResponse conditionAbsent;
+    private MetricAbsenceResponse conditionAbsent;
 
     public MetricAbsenceResponse conditionAbsent() {
         return this.conditionAbsent;
@@ -36,7 +36,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditionMatchedLog", required=true)
-      private final LogMatchResponse conditionMatchedLog;
+    private LogMatchResponse conditionMatchedLog;
 
     public LogMatchResponse conditionMatchedLog() {
         return this.conditionMatchedLog;
@@ -47,7 +47,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditionMonitoringQueryLanguage", required=true)
-      private final MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
+    private MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
 
     public MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage() {
         return this.conditionMonitoringQueryLanguage;
@@ -58,7 +58,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditionThreshold", required=true)
-      private final MetricThresholdResponse conditionThreshold;
+    private MetricThresholdResponse conditionThreshold;
 
     public MetricThresholdResponse conditionThreshold() {
         return this.conditionThreshold;
@@ -69,7 +69,7 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -80,91 +80,80 @@ public final class ConditionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public ConditionResponse(
-        MetricAbsenceResponse conditionAbsent,
-        LogMatchResponse conditionMatchedLog,
-        MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
-        MetricThresholdResponse conditionThreshold,
-        String displayName,
-        String name) {
-        this.conditionAbsent = Objects.requireNonNull(conditionAbsent, "expected parameter 'conditionAbsent' to be non-null");
-        this.conditionMatchedLog = Objects.requireNonNull(conditionMatchedLog, "expected parameter 'conditionMatchedLog' to be non-null");
-        this.conditionMonitoringQueryLanguage = Objects.requireNonNull(conditionMonitoringQueryLanguage, "expected parameter 'conditionMonitoringQueryLanguage' to be non-null");
-        this.conditionThreshold = Objects.requireNonNull(conditionThreshold, "expected parameter 'conditionThreshold' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private ConditionResponse() {}
 
-    private ConditionResponse() {
-        this.conditionAbsent = null;
-        this.conditionMatchedLog = null;
-        this.conditionMonitoringQueryLanguage = null;
-        this.conditionThreshold = null;
-        this.displayName = null;
-        this.name = null;
+    private ConditionResponse(ConditionResponse $) {
+        this.conditionAbsent = $.conditionAbsent;
+        this.conditionMatchedLog = $.conditionMatchedLog;
+        this.conditionMonitoringQueryLanguage = $.conditionMonitoringQueryLanguage;
+        this.conditionThreshold = $.conditionThreshold;
+        this.displayName = $.displayName;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConditionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MetricAbsenceResponse conditionAbsent;
-        private LogMatchResponse conditionMatchedLog;
-        private MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
-        private MetricThresholdResponse conditionThreshold;
-        private String displayName;
-        private String name;
+        private ConditionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConditionResponse();
         }
 
         public Builder(ConditionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditionAbsent = defaults.conditionAbsent;
-    	      this.conditionMatchedLog = defaults.conditionMatchedLog;
-    	      this.conditionMonitoringQueryLanguage = defaults.conditionMonitoringQueryLanguage;
-    	      this.conditionThreshold = defaults.conditionThreshold;
-    	      this.displayName = defaults.displayName;
-    	      this.name = defaults.name;
+            $ = new ConditionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conditionAbsent(MetricAbsenceResponse conditionAbsent) {
-            this.conditionAbsent = Objects.requireNonNull(conditionAbsent);
+            $.conditionAbsent = conditionAbsent;
             return this;
         }
+
         public Builder conditionMatchedLog(LogMatchResponse conditionMatchedLog) {
-            this.conditionMatchedLog = Objects.requireNonNull(conditionMatchedLog);
+            $.conditionMatchedLog = conditionMatchedLog;
             return this;
         }
+
         public Builder conditionMonitoringQueryLanguage(MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage) {
-            this.conditionMonitoringQueryLanguage = Objects.requireNonNull(conditionMonitoringQueryLanguage);
+            $.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
             return this;
         }
+
         public Builder conditionThreshold(MetricThresholdResponse conditionThreshold) {
-            this.conditionThreshold = Objects.requireNonNull(conditionThreshold);
+            $.conditionThreshold = conditionThreshold;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public ConditionResponse build() {
-            return new ConditionResponse(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
+        }
+
+        public ConditionResponse build() {
+            $.conditionAbsent = Objects.requireNonNull($.conditionAbsent, "expected parameter 'conditionAbsent' to be non-null");
+            $.conditionMatchedLog = Objects.requireNonNull($.conditionMatchedLog, "expected parameter 'conditionMatchedLog' to be non-null");
+            $.conditionMonitoringQueryLanguage = Objects.requireNonNull($.conditionMonitoringQueryLanguage, "expected parameter 'conditionMonitoringQueryLanguage' to be non-null");
+            $.conditionThreshold = Objects.requireNonNull($.conditionThreshold, "expected parameter 'conditionThreshold' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetRegistryGroupIamPolicyArgs extends com.pulumi.resources.In
     public static final GetRegistryGroupIamPolicyArgs Empty = new GetRegistryGroupIamPolicyArgs();
 
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="registryId", required=true)
-      private final String registryId;
+    private String registryId;
 
     public String registryId() {
         return this.registryId;
     }
 
-    public GetRegistryGroupIamPolicyArgs(
-        String groupId,
-        String location,
-        @Nullable String project,
-        String registryId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.registryId = Objects.requireNonNull(registryId, "expected parameter 'registryId' to be non-null");
-    }
+    private GetRegistryGroupIamPolicyArgs() {}
 
-    private GetRegistryGroupIamPolicyArgs() {
-        this.groupId = null;
-        this.location = null;
-        this.project = null;
-        this.registryId = null;
+    private GetRegistryGroupIamPolicyArgs(GetRegistryGroupIamPolicyArgs $) {
+        this.groupId = $.groupId;
+        this.location = $.location;
+        this.project = $.project;
+        this.registryId = $.registryId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegistryGroupIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
-        private String location;
-        private @Nullable String project;
-        private String registryId;
+        private GetRegistryGroupIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegistryGroupIamPolicyArgs();
         }
 
         public Builder(GetRegistryGroupIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.registryId = defaults.registryId;
+            $ = new GetRegistryGroupIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder registryId(String registryId) {
-            this.registryId = Objects.requireNonNull(registryId);
+            $.registryId = registryId;
             return this;
-        }        public GetRegistryGroupIamPolicyArgs build() {
-            return new GetRegistryGroupIamPolicyArgs(groupId, location, project, registryId);
+        }
+
+        public GetRegistryGroupIamPolicyArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.registryId = Objects.requireNonNull($.registryId, "expected parameter 'registryId' to be non-null");
+            return $;
         }
     }
+
 }

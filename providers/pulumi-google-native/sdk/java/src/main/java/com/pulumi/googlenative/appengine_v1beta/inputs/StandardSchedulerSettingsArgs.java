@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="maxInstances")
-      private final @Nullable Output<Integer> maxInstances;
+    private @Nullable Output<Integer> maxInstances;
 
-    public Output<Integer> maxInstances() {
-        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
+    public Optional<Output<Integer>> maxInstances() {
+        return Optional.ofNullable(this.maxInstances);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minInstances")
-      private final @Nullable Output<Integer> minInstances;
+    private @Nullable Output<Integer> minInstances;
 
-    public Output<Integer> minInstances() {
-        return this.minInstances == null ? Codegen.empty() : this.minInstances;
+    public Optional<Output<Integer>> minInstances() {
+        return Optional.ofNullable(this.minInstances);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="targetCpuUtilization")
-      private final @Nullable Output<Double> targetCpuUtilization;
+    private @Nullable Output<Double> targetCpuUtilization;
 
-    public Output<Double> targetCpuUtilization() {
-        return this.targetCpuUtilization == null ? Codegen.empty() : this.targetCpuUtilization;
+    public Optional<Output<Double>> targetCpuUtilization() {
+        return Optional.ofNullable(this.targetCpuUtilization);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class StandardSchedulerSettingsArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="targetThroughputUtilization")
-      private final @Nullable Output<Double> targetThroughputUtilization;
+    private @Nullable Output<Double> targetThroughputUtilization;
 
-    public Output<Double> targetThroughputUtilization() {
-        return this.targetThroughputUtilization == null ? Codegen.empty() : this.targetThroughputUtilization;
+    public Optional<Output<Double>> targetThroughputUtilization() {
+        return Optional.ofNullable(this.targetThroughputUtilization);
     }
 
-    public StandardSchedulerSettingsArgs(
-        @Nullable Output<Integer> maxInstances,
-        @Nullable Output<Integer> minInstances,
-        @Nullable Output<Double> targetCpuUtilization,
-        @Nullable Output<Double> targetThroughputUtilization) {
-        this.maxInstances = maxInstances;
-        this.minInstances = minInstances;
-        this.targetCpuUtilization = targetCpuUtilization;
-        this.targetThroughputUtilization = targetThroughputUtilization;
-    }
+    private StandardSchedulerSettingsArgs() {}
 
-    private StandardSchedulerSettingsArgs() {
-        this.maxInstances = Codegen.empty();
-        this.minInstances = Codegen.empty();
-        this.targetCpuUtilization = Codegen.empty();
-        this.targetThroughputUtilization = Codegen.empty();
+    private StandardSchedulerSettingsArgs(StandardSchedulerSettingsArgs $) {
+        this.maxInstances = $.maxInstances;
+        this.minInstances = $.minInstances;
+        this.targetCpuUtilization = $.targetCpuUtilization;
+        this.targetThroughputUtilization = $.targetThroughputUtilization;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StandardSchedulerSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxInstances;
-        private @Nullable Output<Integer> minInstances;
-        private @Nullable Output<Double> targetCpuUtilization;
-        private @Nullable Output<Double> targetThroughputUtilization;
+        private StandardSchedulerSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StandardSchedulerSettingsArgs();
         }
 
         public Builder(StandardSchedulerSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxInstances = defaults.maxInstances;
-    	      this.minInstances = defaults.minInstances;
-    	      this.targetCpuUtilization = defaults.targetCpuUtilization;
-    	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
+            $ = new StandardSchedulerSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
-            this.maxInstances = maxInstances;
+            $.maxInstances = maxInstances;
             return this;
         }
-        public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Codegen.ofNullable(maxInstances);
-            return this;
+
+        public Builder maxInstances(Integer maxInstances) {
+            return maxInstances(Output.of(maxInstances));
         }
+
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
-            this.minInstances = minInstances;
+            $.minInstances = minInstances;
             return this;
         }
-        public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Codegen.ofNullable(minInstances);
-            return this;
+
+        public Builder minInstances(Integer minInstances) {
+            return minInstances(Output.of(minInstances));
         }
+
         public Builder targetCpuUtilization(@Nullable Output<Double> targetCpuUtilization) {
-            this.targetCpuUtilization = targetCpuUtilization;
+            $.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
-        public Builder targetCpuUtilization(@Nullable Double targetCpuUtilization) {
-            this.targetCpuUtilization = Codegen.ofNullable(targetCpuUtilization);
-            return this;
+
+        public Builder targetCpuUtilization(Double targetCpuUtilization) {
+            return targetCpuUtilization(Output.of(targetCpuUtilization));
         }
+
         public Builder targetThroughputUtilization(@Nullable Output<Double> targetThroughputUtilization) {
-            this.targetThroughputUtilization = targetThroughputUtilization;
+            $.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
-        public Builder targetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
-            this.targetThroughputUtilization = Codegen.ofNullable(targetThroughputUtilization);
-            return this;
-        }        public StandardSchedulerSettingsArgs build() {
-            return new StandardSchedulerSettingsArgs(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
+
+        public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
+            return targetThroughputUtilization(Output.of(targetThroughputUtilization));
+        }
+
+        public StandardSchedulerSettingsArgs build() {
+            return $;
         }
     }
+
 }

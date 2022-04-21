@@ -18,7 +18,7 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="encoding", required=true)
-      private final String encoding;
+    private String encoding;
 
     public String encoding() {
         return this.encoding;
@@ -29,7 +29,7 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="fieldName", required=true)
-      private final String fieldName;
+    private String fieldName;
 
     public String fieldName() {
         return this.fieldName;
@@ -40,7 +40,7 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="onlyReadLatest", required=true)
-      private final Boolean onlyReadLatest;
+    private Boolean onlyReadLatest;
 
     public Boolean onlyReadLatest() {
         return this.onlyReadLatest;
@@ -51,14 +51,14 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="qualifierEncoded", required=true)
-      private final String qualifierEncoded;
+    private String qualifierEncoded;
 
     public String qualifierEncoded() {
         return this.qualifierEncoded;
     }
 
     @Import(name="qualifierString", required=true)
-      private final String qualifierString;
+    private String qualifierString;
 
     public String qualifierString() {
         return this.qualifierString;
@@ -69,91 +69,80 @@ public final class BigtableColumnResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public BigtableColumnResponse(
-        String encoding,
-        String fieldName,
-        Boolean onlyReadLatest,
-        String qualifierEncoded,
-        String qualifierString,
-        String type) {
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.fieldName = Objects.requireNonNull(fieldName, "expected parameter 'fieldName' to be non-null");
-        this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest, "expected parameter 'onlyReadLatest' to be non-null");
-        this.qualifierEncoded = Objects.requireNonNull(qualifierEncoded, "expected parameter 'qualifierEncoded' to be non-null");
-        this.qualifierString = Objects.requireNonNull(qualifierString, "expected parameter 'qualifierString' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private BigtableColumnResponse() {}
 
-    private BigtableColumnResponse() {
-        this.encoding = null;
-        this.fieldName = null;
-        this.onlyReadLatest = null;
-        this.qualifierEncoded = null;
-        this.qualifierString = null;
-        this.type = null;
+    private BigtableColumnResponse(BigtableColumnResponse $) {
+        this.encoding = $.encoding;
+        this.fieldName = $.fieldName;
+        this.onlyReadLatest = $.onlyReadLatest;
+        this.qualifierEncoded = $.qualifierEncoded;
+        this.qualifierString = $.qualifierString;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigtableColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String encoding;
-        private String fieldName;
-        private Boolean onlyReadLatest;
-        private String qualifierEncoded;
-        private String qualifierString;
-        private String type;
+        private BigtableColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigtableColumnResponse();
         }
 
         public Builder(BigtableColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.encoding = defaults.encoding;
-    	      this.fieldName = defaults.fieldName;
-    	      this.onlyReadLatest = defaults.onlyReadLatest;
-    	      this.qualifierEncoded = defaults.qualifierEncoded;
-    	      this.qualifierString = defaults.qualifierString;
-    	      this.type = defaults.type;
+            $ = new BigtableColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder encoding(String encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder fieldName(String fieldName) {
-            this.fieldName = Objects.requireNonNull(fieldName);
+            $.fieldName = fieldName;
             return this;
         }
+
         public Builder onlyReadLatest(Boolean onlyReadLatest) {
-            this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
+            $.onlyReadLatest = onlyReadLatest;
             return this;
         }
+
         public Builder qualifierEncoded(String qualifierEncoded) {
-            this.qualifierEncoded = Objects.requireNonNull(qualifierEncoded);
+            $.qualifierEncoded = qualifierEncoded;
             return this;
         }
+
         public Builder qualifierString(String qualifierString) {
-            this.qualifierString = Objects.requireNonNull(qualifierString);
+            $.qualifierString = qualifierString;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public BigtableColumnResponse build() {
-            return new BigtableColumnResponse(encoding, fieldName, onlyReadLatest, qualifierEncoded, qualifierString, type);
+        }
+
+        public BigtableColumnResponse build() {
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.fieldName = Objects.requireNonNull($.fieldName, "expected parameter 'fieldName' to be non-null");
+            $.onlyReadLatest = Objects.requireNonNull($.onlyReadLatest, "expected parameter 'onlyReadLatest' to be non-null");
+            $.qualifierEncoded = Objects.requireNonNull($.qualifierEncoded, "expected parameter 'qualifierEncoded' to be non-null");
+            $.qualifierString = Objects.requireNonNull($.qualifierString, "expected parameter 'qualifierString' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

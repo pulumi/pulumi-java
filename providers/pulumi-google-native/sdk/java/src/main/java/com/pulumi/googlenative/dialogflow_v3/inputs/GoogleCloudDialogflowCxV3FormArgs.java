@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormParameterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class GoogleCloudDialogflowCxV3FormArgs extends com.pulumi.resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters;
 
-    public Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
-    public GoogleCloudDialogflowCxV3FormArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters) {
-        this.parameters = parameters;
-    }
+    private GoogleCloudDialogflowCxV3FormArgs() {}
 
-    private GoogleCloudDialogflowCxV3FormArgs() {
-        this.parameters = Codegen.empty();
+    private GoogleCloudDialogflowCxV3FormArgs(GoogleCloudDialogflowCxV3FormArgs $) {
+        this.parameters = $.parameters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3FormArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters;
+        private GoogleCloudDialogflowCxV3FormArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3FormArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3FormArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
+            $ = new GoogleCloudDialogflowCxV3FormArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<List<GoogleCloudDialogflowCxV3FormParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<GoogleCloudDialogflowCxV3FormParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<GoogleCloudDialogflowCxV3FormParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(GoogleCloudDialogflowCxV3FormParameterArgs... parameters) {
             return parameters(List.of(parameters));
-        }        public GoogleCloudDialogflowCxV3FormArgs build() {
-            return new GoogleCloudDialogflowCxV3FormArgs(parameters);
+        }
+
+        public GoogleCloudDialogflowCxV3FormArgs build() {
+            return $;
         }
     }
+
 }

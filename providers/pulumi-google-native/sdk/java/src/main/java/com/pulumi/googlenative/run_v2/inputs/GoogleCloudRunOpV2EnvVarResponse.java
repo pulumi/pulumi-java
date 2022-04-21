@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
@@ -44,64 +44,59 @@ public final class GoogleCloudRunOpV2EnvVarResponse extends com.pulumi.resources
      * 
      */
     @Import(name="valueSource", required=true)
-      private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
+    private GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
     public GoogleCloudRunOpV2EnvVarSourceResponse valueSource() {
         return this.valueSource;
     }
 
-    public GoogleCloudRunOpV2EnvVarResponse(
-        String name,
-        String value,
-        GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-        this.valueSource = Objects.requireNonNull(valueSource, "expected parameter 'valueSource' to be non-null");
-    }
+    private GoogleCloudRunOpV2EnvVarResponse() {}
 
-    private GoogleCloudRunOpV2EnvVarResponse() {
-        this.name = null;
-        this.value = null;
-        this.valueSource = null;
+    private GoogleCloudRunOpV2EnvVarResponse(GoogleCloudRunOpV2EnvVarResponse $) {
+        this.name = $.name;
+        this.value = $.value;
+        this.valueSource = $.valueSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2EnvVarResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
-        private GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
+        private GoogleCloudRunOpV2EnvVarResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2EnvVarResponse();
         }
 
         public Builder(GoogleCloudRunOpV2EnvVarResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
-    	      this.valueSource = defaults.valueSource;
+            $ = new GoogleCloudRunOpV2EnvVarResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
         }
+
         public Builder valueSource(GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
-            this.valueSource = Objects.requireNonNull(valueSource);
+            $.valueSource = valueSource;
             return this;
-        }        public GoogleCloudRunOpV2EnvVarResponse build() {
-            return new GoogleCloudRunOpV2EnvVarResponse(name, value, valueSource);
+        }
+
+        public GoogleCloudRunOpV2EnvVarResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            $.valueSource = Objects.requireNonNull($.valueSource, "expected parameter 'valueSource' to be non-null");
+            return $;
         }
     }
+
 }

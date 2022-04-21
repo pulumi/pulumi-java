@@ -17,45 +17,45 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
      * 
      */
     @Import(name="onHealthCheck", required=true)
-      private final String onHealthCheck;
+    private String onHealthCheck;
 
     public String onHealthCheck() {
         return this.onHealthCheck;
     }
 
-    public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(String onHealthCheck) {
-        this.onHealthCheck = Objects.requireNonNull(onHealthCheck, "expected parameter 'onHealthCheck' to be non-null");
-    }
+    private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse() {}
 
-    private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse() {
-        this.onHealthCheck = null;
+    private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse $) {
+        this.onHealthCheck = $.onHealthCheck;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String onHealthCheck;
+        private InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse();
         }
 
         public Builder(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.onHealthCheck = defaults.onHealthCheck;
+            $ = new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder onHealthCheck(String onHealthCheck) {
-            this.onHealthCheck = Objects.requireNonNull(onHealthCheck);
+            $.onHealthCheck = onHealthCheck;
             return this;
-        }        public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse build() {
-            return new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(onHealthCheck);
+        }
+
+        public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse build() {
+            $.onHealthCheck = Objects.requireNonNull($.onHealthCheck, "expected parameter 'onHealthCheck' to be non-null");
+            return $;
         }
     }
+
 }

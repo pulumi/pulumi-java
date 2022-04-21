@@ -21,7 +21,7 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="crashed", required=true)
-      private final Boolean crashed;
+    private Boolean crashed;
 
     public Boolean crashed() {
         return this.crashed;
@@ -32,7 +32,7 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="deviceOutOfMemory", required=true)
-      private final Boolean deviceOutOfMemory;
+    private Boolean deviceOutOfMemory;
 
     public Boolean deviceOutOfMemory() {
         return this.deviceOutOfMemory;
@@ -43,7 +43,7 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="failedRoboscript", required=true)
-      private final Boolean failedRoboscript;
+    private Boolean failedRoboscript;
 
     public Boolean failedRoboscript() {
         return this.failedRoboscript;
@@ -54,7 +54,7 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="notInstalled", required=true)
-      private final Boolean notInstalled;
+    private Boolean notInstalled;
 
     public Boolean notInstalled() {
         return this.notInstalled;
@@ -65,7 +65,7 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="otherNativeCrash", required=true)
-      private final Boolean otherNativeCrash;
+    private Boolean otherNativeCrash;
 
     public Boolean otherNativeCrash() {
         return this.otherNativeCrash;
@@ -76,7 +76,7 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="timedOut", required=true)
-      private final Boolean timedOut;
+    private Boolean timedOut;
 
     public Boolean timedOut() {
         return this.timedOut;
@@ -87,100 +87,87 @@ public final class FailureDetailResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="unableToCrawl", required=true)
-      private final Boolean unableToCrawl;
+    private Boolean unableToCrawl;
 
     public Boolean unableToCrawl() {
         return this.unableToCrawl;
     }
 
-    public FailureDetailResponse(
-        Boolean crashed,
-        Boolean deviceOutOfMemory,
-        Boolean failedRoboscript,
-        Boolean notInstalled,
-        Boolean otherNativeCrash,
-        Boolean timedOut,
-        Boolean unableToCrawl) {
-        this.crashed = Objects.requireNonNull(crashed, "expected parameter 'crashed' to be non-null");
-        this.deviceOutOfMemory = Objects.requireNonNull(deviceOutOfMemory, "expected parameter 'deviceOutOfMemory' to be non-null");
-        this.failedRoboscript = Objects.requireNonNull(failedRoboscript, "expected parameter 'failedRoboscript' to be non-null");
-        this.notInstalled = Objects.requireNonNull(notInstalled, "expected parameter 'notInstalled' to be non-null");
-        this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash, "expected parameter 'otherNativeCrash' to be non-null");
-        this.timedOut = Objects.requireNonNull(timedOut, "expected parameter 'timedOut' to be non-null");
-        this.unableToCrawl = Objects.requireNonNull(unableToCrawl, "expected parameter 'unableToCrawl' to be non-null");
-    }
+    private FailureDetailResponse() {}
 
-    private FailureDetailResponse() {
-        this.crashed = null;
-        this.deviceOutOfMemory = null;
-        this.failedRoboscript = null;
-        this.notInstalled = null;
-        this.otherNativeCrash = null;
-        this.timedOut = null;
-        this.unableToCrawl = null;
+    private FailureDetailResponse(FailureDetailResponse $) {
+        this.crashed = $.crashed;
+        this.deviceOutOfMemory = $.deviceOutOfMemory;
+        this.failedRoboscript = $.failedRoboscript;
+        this.notInstalled = $.notInstalled;
+        this.otherNativeCrash = $.otherNativeCrash;
+        this.timedOut = $.timedOut;
+        this.unableToCrawl = $.unableToCrawl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FailureDetailResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean crashed;
-        private Boolean deviceOutOfMemory;
-        private Boolean failedRoboscript;
-        private Boolean notInstalled;
-        private Boolean otherNativeCrash;
-        private Boolean timedOut;
-        private Boolean unableToCrawl;
+        private FailureDetailResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FailureDetailResponse();
         }
 
         public Builder(FailureDetailResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crashed = defaults.crashed;
-    	      this.deviceOutOfMemory = defaults.deviceOutOfMemory;
-    	      this.failedRoboscript = defaults.failedRoboscript;
-    	      this.notInstalled = defaults.notInstalled;
-    	      this.otherNativeCrash = defaults.otherNativeCrash;
-    	      this.timedOut = defaults.timedOut;
-    	      this.unableToCrawl = defaults.unableToCrawl;
+            $ = new FailureDetailResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder crashed(Boolean crashed) {
-            this.crashed = Objects.requireNonNull(crashed);
+            $.crashed = crashed;
             return this;
         }
+
         public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
-            this.deviceOutOfMemory = Objects.requireNonNull(deviceOutOfMemory);
+            $.deviceOutOfMemory = deviceOutOfMemory;
             return this;
         }
+
         public Builder failedRoboscript(Boolean failedRoboscript) {
-            this.failedRoboscript = Objects.requireNonNull(failedRoboscript);
+            $.failedRoboscript = failedRoboscript;
             return this;
         }
+
         public Builder notInstalled(Boolean notInstalled) {
-            this.notInstalled = Objects.requireNonNull(notInstalled);
+            $.notInstalled = notInstalled;
             return this;
         }
+
         public Builder otherNativeCrash(Boolean otherNativeCrash) {
-            this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
+            $.otherNativeCrash = otherNativeCrash;
             return this;
         }
+
         public Builder timedOut(Boolean timedOut) {
-            this.timedOut = Objects.requireNonNull(timedOut);
+            $.timedOut = timedOut;
             return this;
         }
+
         public Builder unableToCrawl(Boolean unableToCrawl) {
-            this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
+            $.unableToCrawl = unableToCrawl;
             return this;
-        }        public FailureDetailResponse build() {
-            return new FailureDetailResponse(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
+        }
+
+        public FailureDetailResponse build() {
+            $.crashed = Objects.requireNonNull($.crashed, "expected parameter 'crashed' to be non-null");
+            $.deviceOutOfMemory = Objects.requireNonNull($.deviceOutOfMemory, "expected parameter 'deviceOutOfMemory' to be non-null");
+            $.failedRoboscript = Objects.requireNonNull($.failedRoboscript, "expected parameter 'failedRoboscript' to be non-null");
+            $.notInstalled = Objects.requireNonNull($.notInstalled, "expected parameter 'notInstalled' to be non-null");
+            $.otherNativeCrash = Objects.requireNonNull($.otherNativeCrash, "expected parameter 'otherNativeCrash' to be non-null");
+            $.timedOut = Objects.requireNonNull($.timedOut, "expected parameter 'timedOut' to be non-null");
+            $.unableToCrawl = Objects.requireNonNull($.unableToCrawl, "expected parameter 'unableToCrawl' to be non-null");
+            return $;
         }
     }
+
 }

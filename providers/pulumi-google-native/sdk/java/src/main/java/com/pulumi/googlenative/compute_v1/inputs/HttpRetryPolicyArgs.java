@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_v1.inputs.DurationArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="numRetries")
-      private final @Nullable Output<Integer> numRetries;
+    private @Nullable Output<Integer> numRetries;
 
-    public Output<Integer> numRetries() {
-        return this.numRetries == null ? Codegen.empty() : this.numRetries;
+    public Optional<Output<Integer>> numRetries() {
+        return Optional.ofNullable(this.numRetries);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="perTryTimeout")
-      private final @Nullable Output<DurationArgs> perTryTimeout;
+    private @Nullable Output<DurationArgs> perTryTimeout;
 
-    public Output<DurationArgs> perTryTimeout() {
-        return this.perTryTimeout == null ? Codegen.empty() : this.perTryTimeout;
+    public Optional<Output<DurationArgs>> perTryTimeout() {
+        return Optional.ofNullable(this.perTryTimeout);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class HttpRetryPolicyArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="retryConditions")
-      private final @Nullable Output<List<String>> retryConditions;
+    private @Nullable Output<List<String>> retryConditions;
 
-    public Output<List<String>> retryConditions() {
-        return this.retryConditions == null ? Codegen.empty() : this.retryConditions;
+    public Optional<Output<List<String>>> retryConditions() {
+        return Optional.ofNullable(this.retryConditions);
     }
 
-    public HttpRetryPolicyArgs(
-        @Nullable Output<Integer> numRetries,
-        @Nullable Output<DurationArgs> perTryTimeout,
-        @Nullable Output<List<String>> retryConditions) {
-        this.numRetries = numRetries;
-        this.perTryTimeout = perTryTimeout;
-        this.retryConditions = retryConditions;
-    }
+    private HttpRetryPolicyArgs() {}
 
-    private HttpRetryPolicyArgs() {
-        this.numRetries = Codegen.empty();
-        this.perTryTimeout = Codegen.empty();
-        this.retryConditions = Codegen.empty();
+    private HttpRetryPolicyArgs(HttpRetryPolicyArgs $) {
+        this.numRetries = $.numRetries;
+        this.perTryTimeout = $.perTryTimeout;
+        this.retryConditions = $.retryConditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpRetryPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> numRetries;
-        private @Nullable Output<DurationArgs> perTryTimeout;
-        private @Nullable Output<List<String>> retryConditions;
+        private HttpRetryPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpRetryPolicyArgs();
         }
 
         public Builder(HttpRetryPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.numRetries = defaults.numRetries;
-    	      this.perTryTimeout = defaults.perTryTimeout;
-    	      this.retryConditions = defaults.retryConditions;
+            $ = new HttpRetryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder numRetries(@Nullable Output<Integer> numRetries) {
-            this.numRetries = numRetries;
+            $.numRetries = numRetries;
             return this;
         }
-        public Builder numRetries(@Nullable Integer numRetries) {
-            this.numRetries = Codegen.ofNullable(numRetries);
-            return this;
+
+        public Builder numRetries(Integer numRetries) {
+            return numRetries(Output.of(numRetries));
         }
+
         public Builder perTryTimeout(@Nullable Output<DurationArgs> perTryTimeout) {
-            this.perTryTimeout = perTryTimeout;
+            $.perTryTimeout = perTryTimeout;
             return this;
         }
-        public Builder perTryTimeout(@Nullable DurationArgs perTryTimeout) {
-            this.perTryTimeout = Codegen.ofNullable(perTryTimeout);
-            return this;
+
+        public Builder perTryTimeout(DurationArgs perTryTimeout) {
+            return perTryTimeout(Output.of(perTryTimeout));
         }
+
         public Builder retryConditions(@Nullable Output<List<String>> retryConditions) {
-            this.retryConditions = retryConditions;
+            $.retryConditions = retryConditions;
             return this;
         }
-        public Builder retryConditions(@Nullable List<String> retryConditions) {
-            this.retryConditions = Codegen.ofNullable(retryConditions);
-            return this;
+
+        public Builder retryConditions(List<String> retryConditions) {
+            return retryConditions(Output.of(retryConditions));
         }
+
         public Builder retryConditions(String... retryConditions) {
             return retryConditions(List.of(retryConditions));
-        }        public HttpRetryPolicyArgs build() {
-            return new HttpRetryPolicyArgs(numRetries, perTryTimeout, retryConditions);
+        }
+
+        public HttpRetryPolicyArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class WorkloadIdentityConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="workloadPool", required=true)
-      private final String workloadPool;
+    private String workloadPool;
 
     public String workloadPool() {
         return this.workloadPool;
     }
 
-    public WorkloadIdentityConfigResponse(String workloadPool) {
-        this.workloadPool = Objects.requireNonNull(workloadPool, "expected parameter 'workloadPool' to be non-null");
-    }
+    private WorkloadIdentityConfigResponse() {}
 
-    private WorkloadIdentityConfigResponse() {
-        this.workloadPool = null;
+    private WorkloadIdentityConfigResponse(WorkloadIdentityConfigResponse $) {
+        this.workloadPool = $.workloadPool;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadIdentityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String workloadPool;
+        private WorkloadIdentityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadIdentityConfigResponse();
         }
 
         public Builder(WorkloadIdentityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.workloadPool = defaults.workloadPool;
+            $ = new WorkloadIdentityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder workloadPool(String workloadPool) {
-            this.workloadPool = Objects.requireNonNull(workloadPool);
+            $.workloadPool = workloadPool;
             return this;
-        }        public WorkloadIdentityConfigResponse build() {
-            return new WorkloadIdentityConfigResponse(workloadPool);
+        }
+
+        public WorkloadIdentityConfigResponse build() {
+            $.workloadPool = Objects.requireNonNull($.workloadPool, "expected parameter 'workloadPool' to be non-null");
+            return $;
         }
     }
+
 }

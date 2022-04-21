@@ -25,7 +25,7 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testIssues", required=true)
-      private final List<TestIssueResponse> testIssues;
+    private List<TestIssueResponse> testIssues;
 
     public List<TestIssueResponse> testIssues() {
         return this.testIssues;
@@ -36,7 +36,7 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testSuiteOverviews", required=true)
-      private final List<TestSuiteOverviewResponse> testSuiteOverviews;
+    private List<TestSuiteOverviewResponse> testSuiteOverviews;
 
     public List<TestSuiteOverviewResponse> testSuiteOverviews() {
         return this.testSuiteOverviews;
@@ -47,7 +47,7 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="testTiming", required=true)
-      private final TestTimingResponse testTiming;
+    private TestTimingResponse testTiming;
 
     public TestTimingResponse testTiming() {
         return this.testTiming;
@@ -58,79 +58,74 @@ public final class TestExecutionStepResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="toolExecution", required=true)
-      private final ToolExecutionResponse toolExecution;
+    private ToolExecutionResponse toolExecution;
 
     public ToolExecutionResponse toolExecution() {
         return this.toolExecution;
     }
 
-    public TestExecutionStepResponse(
-        List<TestIssueResponse> testIssues,
-        List<TestSuiteOverviewResponse> testSuiteOverviews,
-        TestTimingResponse testTiming,
-        ToolExecutionResponse toolExecution) {
-        this.testIssues = Objects.requireNonNull(testIssues, "expected parameter 'testIssues' to be non-null");
-        this.testSuiteOverviews = Objects.requireNonNull(testSuiteOverviews, "expected parameter 'testSuiteOverviews' to be non-null");
-        this.testTiming = Objects.requireNonNull(testTiming, "expected parameter 'testTiming' to be non-null");
-        this.toolExecution = Objects.requireNonNull(toolExecution, "expected parameter 'toolExecution' to be non-null");
-    }
+    private TestExecutionStepResponse() {}
 
-    private TestExecutionStepResponse() {
-        this.testIssues = List.of();
-        this.testSuiteOverviews = List.of();
-        this.testTiming = null;
-        this.toolExecution = null;
+    private TestExecutionStepResponse(TestExecutionStepResponse $) {
+        this.testIssues = $.testIssues;
+        this.testSuiteOverviews = $.testSuiteOverviews;
+        this.testTiming = $.testTiming;
+        this.toolExecution = $.toolExecution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestExecutionStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<TestIssueResponse> testIssues;
-        private List<TestSuiteOverviewResponse> testSuiteOverviews;
-        private TestTimingResponse testTiming;
-        private ToolExecutionResponse toolExecution;
+        private TestExecutionStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestExecutionStepResponse();
         }
 
         public Builder(TestExecutionStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.testIssues = defaults.testIssues;
-    	      this.testSuiteOverviews = defaults.testSuiteOverviews;
-    	      this.testTiming = defaults.testTiming;
-    	      this.toolExecution = defaults.toolExecution;
+            $ = new TestExecutionStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder testIssues(List<TestIssueResponse> testIssues) {
-            this.testIssues = Objects.requireNonNull(testIssues);
+            $.testIssues = testIssues;
             return this;
         }
+
         public Builder testIssues(TestIssueResponse... testIssues) {
             return testIssues(List.of(testIssues));
         }
+
         public Builder testSuiteOverviews(List<TestSuiteOverviewResponse> testSuiteOverviews) {
-            this.testSuiteOverviews = Objects.requireNonNull(testSuiteOverviews);
+            $.testSuiteOverviews = testSuiteOverviews;
             return this;
         }
+
         public Builder testSuiteOverviews(TestSuiteOverviewResponse... testSuiteOverviews) {
             return testSuiteOverviews(List.of(testSuiteOverviews));
         }
+
         public Builder testTiming(TestTimingResponse testTiming) {
-            this.testTiming = Objects.requireNonNull(testTiming);
+            $.testTiming = testTiming;
             return this;
         }
+
         public Builder toolExecution(ToolExecutionResponse toolExecution) {
-            this.toolExecution = Objects.requireNonNull(toolExecution);
+            $.toolExecution = toolExecution;
             return this;
-        }        public TestExecutionStepResponse build() {
-            return new TestExecutionStepResponse(testIssues, testSuiteOverviews, testTiming, toolExecution);
+        }
+
+        public TestExecutionStepResponse build() {
+            $.testIssues = Objects.requireNonNull($.testIssues, "expected parameter 'testIssues' to be non-null");
+            $.testSuiteOverviews = Objects.requireNonNull($.testSuiteOverviews, "expected parameter 'testSuiteOverviews' to be non-null");
+            $.testTiming = Objects.requireNonNull($.testTiming, "expected parameter 'testTiming' to be non-null");
+            $.toolExecution = Objects.requireNonNull($.toolExecution, "expected parameter 'toolExecution' to be non-null");
+            return $;
         }
     }
+
 }

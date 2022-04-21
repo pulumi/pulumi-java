@@ -15,78 +15,72 @@ public final class GetStreamArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStreamArgs Empty = new GetStreamArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="streamId", required=true)
-      private final String streamId;
+    private String streamId;
 
     public String streamId() {
         return this.streamId;
     }
 
-    public GetStreamArgs(
-        String location,
-        @Nullable String project,
-        String streamId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.streamId = Objects.requireNonNull(streamId, "expected parameter 'streamId' to be non-null");
-    }
+    private GetStreamArgs() {}
 
-    private GetStreamArgs() {
-        this.location = null;
-        this.project = null;
-        this.streamId = null;
+    private GetStreamArgs(GetStreamArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.streamId = $.streamId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String streamId;
+        private GetStreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStreamArgs();
         }
 
         public Builder(GetStreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.streamId = defaults.streamId;
+            $ = new GetStreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder streamId(String streamId) {
-            this.streamId = Objects.requireNonNull(streamId);
+            $.streamId = streamId;
             return this;
-        }        public GetStreamArgs build() {
-            return new GetStreamArgs(location, project, streamId);
+        }
+
+        public GetStreamArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.streamId = Objects.requireNonNull($.streamId, "expected parameter 'streamId' to be non-null");
+            return $;
         }
     }
+
 }

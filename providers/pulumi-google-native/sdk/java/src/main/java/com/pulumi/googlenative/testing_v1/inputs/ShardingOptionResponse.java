@@ -22,7 +22,7 @@ public final class ShardingOptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="manualSharding", required=true)
-      private final ManualShardingResponse manualSharding;
+    private ManualShardingResponse manualSharding;
 
     public ManualShardingResponse manualSharding() {
         return this.manualSharding;
@@ -33,55 +33,52 @@ public final class ShardingOptionResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="uniformSharding", required=true)
-      private final UniformShardingResponse uniformSharding;
+    private UniformShardingResponse uniformSharding;
 
     public UniformShardingResponse uniformSharding() {
         return this.uniformSharding;
     }
 
-    public ShardingOptionResponse(
-        ManualShardingResponse manualSharding,
-        UniformShardingResponse uniformSharding) {
-        this.manualSharding = Objects.requireNonNull(manualSharding, "expected parameter 'manualSharding' to be non-null");
-        this.uniformSharding = Objects.requireNonNull(uniformSharding, "expected parameter 'uniformSharding' to be non-null");
-    }
+    private ShardingOptionResponse() {}
 
-    private ShardingOptionResponse() {
-        this.manualSharding = null;
-        this.uniformSharding = null;
+    private ShardingOptionResponse(ShardingOptionResponse $) {
+        this.manualSharding = $.manualSharding;
+        this.uniformSharding = $.uniformSharding;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ShardingOptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ManualShardingResponse manualSharding;
-        private UniformShardingResponse uniformSharding;
+        private ShardingOptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ShardingOptionResponse();
         }
 
         public Builder(ShardingOptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manualSharding = defaults.manualSharding;
-    	      this.uniformSharding = defaults.uniformSharding;
+            $ = new ShardingOptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder manualSharding(ManualShardingResponse manualSharding) {
-            this.manualSharding = Objects.requireNonNull(manualSharding);
+            $.manualSharding = manualSharding;
             return this;
         }
+
         public Builder uniformSharding(UniformShardingResponse uniformSharding) {
-            this.uniformSharding = Objects.requireNonNull(uniformSharding);
+            $.uniformSharding = uniformSharding;
             return this;
-        }        public ShardingOptionResponse build() {
-            return new ShardingOptionResponse(manualSharding, uniformSharding);
+        }
+
+        public ShardingOptionResponse build() {
+            $.manualSharding = Objects.requireNonNull($.manualSharding, "expected parameter 'manualSharding' to be non-null");
+            $.uniformSharding = Objects.requireNonNull($.uniformSharding, "expected parameter 'uniformSharding' to be non-null");
+            return $;
         }
     }
+
 }

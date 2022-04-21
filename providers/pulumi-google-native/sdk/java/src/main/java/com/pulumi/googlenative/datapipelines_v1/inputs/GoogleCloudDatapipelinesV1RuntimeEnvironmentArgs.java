@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datapipelines_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datapipelines_v1.enums.GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,6 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="additionalExperiments")
-      private final @Nullable Output<List<String>> additionalExperiments;
+    private @Nullable Output<List<String>> additionalExperiments;
 
-    public Output<List<String>> additionalExperiments() {
-        return this.additionalExperiments == null ? Codegen.empty() : this.additionalExperiments;
+    public Optional<Output<List<String>>> additionalExperiments() {
+        return Optional.ofNullable(this.additionalExperiments);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="additionalUserLabels")
-      private final @Nullable Output<Map<String,String>> additionalUserLabels;
+    private @Nullable Output<Map<String,String>> additionalUserLabels;
 
-    public Output<Map<String,String>> additionalUserLabels() {
-        return this.additionalUserLabels == null ? Codegen.empty() : this.additionalUserLabels;
+    public Optional<Output<Map<String,String>>> additionalUserLabels() {
+        return Optional.ofNullable(this.additionalUserLabels);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="bypassTempDirValidation")
-      private final @Nullable Output<Boolean> bypassTempDirValidation;
+    private @Nullable Output<Boolean> bypassTempDirValidation;
 
-    public Output<Boolean> bypassTempDirValidation() {
-        return this.bypassTempDirValidation == null ? Codegen.empty() : this.bypassTempDirValidation;
+    public Optional<Output<Boolean>> bypassTempDirValidation() {
+        return Optional.ofNullable(this.bypassTempDirValidation);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="enableStreamingEngine")
-      private final @Nullable Output<Boolean> enableStreamingEngine;
+    private @Nullable Output<Boolean> enableStreamingEngine;
 
-    public Output<Boolean> enableStreamingEngine() {
-        return this.enableStreamingEngine == null ? Codegen.empty() : this.enableStreamingEngine;
+    public Optional<Output<Boolean>> enableStreamingEngine() {
+        return Optional.ofNullable(this.enableStreamingEngine);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="ipConfiguration")
-      private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration;
+    private @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration;
 
-    public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration() {
-        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
+    public Optional<Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration>> ipConfiguration() {
+        return Optional.ofNullable(this.ipConfiguration);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="maxWorkers")
-      private final @Nullable Output<Integer> maxWorkers;
+    private @Nullable Output<Integer> maxWorkers;
 
-    public Output<Integer> maxWorkers() {
-        return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
+    public Optional<Output<Integer>> maxWorkers() {
+        return Optional.ofNullable(this.maxWorkers);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="network")
-      private final @Nullable Output<String> network;
+    private @Nullable Output<String> network;
 
-    public Output<String> network() {
-        return this.network == null ? Codegen.empty() : this.network;
+    public Optional<Output<String>> network() {
+        return Optional.ofNullable(this.network);
     }
 
     /**
@@ -128,10 +128,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="numWorkers")
-      private final @Nullable Output<Integer> numWorkers;
+    private @Nullable Output<Integer> numWorkers;
 
-    public Output<Integer> numWorkers() {
-        return this.numWorkers == null ? Codegen.empty() : this.numWorkers;
+    public Optional<Output<Integer>> numWorkers() {
+        return Optional.ofNullable(this.numWorkers);
     }
 
     /**
@@ -139,10 +139,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
     /**
@@ -150,10 +150,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="subnetwork")
-      private final @Nullable Output<String> subnetwork;
+    private @Nullable Output<String> subnetwork;
 
-    public Output<String> subnetwork() {
-        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
+    public Optional<Output<String>> subnetwork() {
+        return Optional.ofNullable(this.subnetwork);
     }
 
     /**
@@ -161,10 +161,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="tempLocation")
-      private final @Nullable Output<String> tempLocation;
+    private @Nullable Output<String> tempLocation;
 
-    public Output<String> tempLocation() {
-        return this.tempLocation == null ? Codegen.empty() : this.tempLocation;
+    public Optional<Output<String>> tempLocation() {
+        return Optional.ofNullable(this.tempLocation);
     }
 
     /**
@@ -172,10 +172,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="workerRegion")
-      private final @Nullable Output<String> workerRegion;
+    private @Nullable Output<String> workerRegion;
 
-    public Output<String> workerRegion() {
-        return this.workerRegion == null ? Codegen.empty() : this.workerRegion;
+    public Optional<Output<String>> workerRegion() {
+        return Optional.ofNullable(this.workerRegion);
     }
 
     /**
@@ -183,10 +183,10 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="workerZone")
-      private final @Nullable Output<String> workerZone;
+    private @Nullable Output<String> workerZone;
 
-    public Output<String> workerZone() {
-        return this.workerZone == null ? Codegen.empty() : this.workerZone;
+    public Optional<Output<String>> workerZone() {
+        return Optional.ofNullable(this.workerZone);
     }
 
     /**
@@ -194,248 +194,202 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs extends com.
      * 
      */
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs(
-        @Nullable Output<List<String>> additionalExperiments,
-        @Nullable Output<Map<String,String>> additionalUserLabels,
-        @Nullable Output<Boolean> bypassTempDirValidation,
-        @Nullable Output<Boolean> enableStreamingEngine,
-        @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration,
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<String> machineType,
-        @Nullable Output<Integer> maxWorkers,
-        @Nullable Output<String> network,
-        @Nullable Output<Integer> numWorkers,
-        @Nullable Output<String> serviceAccountEmail,
-        @Nullable Output<String> subnetwork,
-        @Nullable Output<String> tempLocation,
-        @Nullable Output<String> workerRegion,
-        @Nullable Output<String> workerZone,
-        @Nullable Output<String> zone) {
-        this.additionalExperiments = additionalExperiments;
-        this.additionalUserLabels = additionalUserLabels;
-        this.bypassTempDirValidation = bypassTempDirValidation;
-        this.enableStreamingEngine = enableStreamingEngine;
-        this.ipConfiguration = ipConfiguration;
-        this.kmsKeyName = kmsKeyName;
-        this.machineType = machineType;
-        this.maxWorkers = maxWorkers;
-        this.network = network;
-        this.numWorkers = numWorkers;
-        this.serviceAccountEmail = serviceAccountEmail;
-        this.subnetwork = subnetwork;
-        this.tempLocation = tempLocation;
-        this.workerRegion = workerRegion;
-        this.workerZone = workerZone;
-        this.zone = zone;
-    }
+    private GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs() {}
 
-    private GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs() {
-        this.additionalExperiments = Codegen.empty();
-        this.additionalUserLabels = Codegen.empty();
-        this.bypassTempDirValidation = Codegen.empty();
-        this.enableStreamingEngine = Codegen.empty();
-        this.ipConfiguration = Codegen.empty();
-        this.kmsKeyName = Codegen.empty();
-        this.machineType = Codegen.empty();
-        this.maxWorkers = Codegen.empty();
-        this.network = Codegen.empty();
-        this.numWorkers = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
-        this.subnetwork = Codegen.empty();
-        this.tempLocation = Codegen.empty();
-        this.workerRegion = Codegen.empty();
-        this.workerZone = Codegen.empty();
-        this.zone = Codegen.empty();
+    private GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs(GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs $) {
+        this.additionalExperiments = $.additionalExperiments;
+        this.additionalUserLabels = $.additionalUserLabels;
+        this.bypassTempDirValidation = $.bypassTempDirValidation;
+        this.enableStreamingEngine = $.enableStreamingEngine;
+        this.ipConfiguration = $.ipConfiguration;
+        this.kmsKeyName = $.kmsKeyName;
+        this.machineType = $.machineType;
+        this.maxWorkers = $.maxWorkers;
+        this.network = $.network;
+        this.numWorkers = $.numWorkers;
+        this.serviceAccountEmail = $.serviceAccountEmail;
+        this.subnetwork = $.subnetwork;
+        this.tempLocation = $.tempLocation;
+        this.workerRegion = $.workerRegion;
+        this.workerZone = $.workerZone;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> additionalExperiments;
-        private @Nullable Output<Map<String,String>> additionalUserLabels;
-        private @Nullable Output<Boolean> bypassTempDirValidation;
-        private @Nullable Output<Boolean> enableStreamingEngine;
-        private @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration;
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<String> machineType;
-        private @Nullable Output<Integer> maxWorkers;
-        private @Nullable Output<String> network;
-        private @Nullable Output<Integer> numWorkers;
-        private @Nullable Output<String> serviceAccountEmail;
-        private @Nullable Output<String> subnetwork;
-        private @Nullable Output<String> tempLocation;
-        private @Nullable Output<String> workerRegion;
-        private @Nullable Output<String> workerZone;
-        private @Nullable Output<String> zone;
+        private GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs();
         }
 
         public Builder(GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalExperiments = defaults.additionalExperiments;
-    	      this.additionalUserLabels = defaults.additionalUserLabels;
-    	      this.bypassTempDirValidation = defaults.bypassTempDirValidation;
-    	      this.enableStreamingEngine = defaults.enableStreamingEngine;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.machineType = defaults.machineType;
-    	      this.maxWorkers = defaults.maxWorkers;
-    	      this.network = defaults.network;
-    	      this.numWorkers = defaults.numWorkers;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.tempLocation = defaults.tempLocation;
-    	      this.workerRegion = defaults.workerRegion;
-    	      this.workerZone = defaults.workerZone;
-    	      this.zone = defaults.zone;
+            $ = new GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalExperiments(@Nullable Output<List<String>> additionalExperiments) {
-            this.additionalExperiments = additionalExperiments;
+            $.additionalExperiments = additionalExperiments;
             return this;
         }
-        public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
-            this.additionalExperiments = Codegen.ofNullable(additionalExperiments);
-            return this;
+
+        public Builder additionalExperiments(List<String> additionalExperiments) {
+            return additionalExperiments(Output.of(additionalExperiments));
         }
+
         public Builder additionalExperiments(String... additionalExperiments) {
             return additionalExperiments(List.of(additionalExperiments));
         }
+
         public Builder additionalUserLabels(@Nullable Output<Map<String,String>> additionalUserLabels) {
-            this.additionalUserLabels = additionalUserLabels;
+            $.additionalUserLabels = additionalUserLabels;
             return this;
         }
-        public Builder additionalUserLabels(@Nullable Map<String,String> additionalUserLabels) {
-            this.additionalUserLabels = Codegen.ofNullable(additionalUserLabels);
-            return this;
+
+        public Builder additionalUserLabels(Map<String,String> additionalUserLabels) {
+            return additionalUserLabels(Output.of(additionalUserLabels));
         }
+
         public Builder bypassTempDirValidation(@Nullable Output<Boolean> bypassTempDirValidation) {
-            this.bypassTempDirValidation = bypassTempDirValidation;
+            $.bypassTempDirValidation = bypassTempDirValidation;
             return this;
         }
-        public Builder bypassTempDirValidation(@Nullable Boolean bypassTempDirValidation) {
-            this.bypassTempDirValidation = Codegen.ofNullable(bypassTempDirValidation);
-            return this;
+
+        public Builder bypassTempDirValidation(Boolean bypassTempDirValidation) {
+            return bypassTempDirValidation(Output.of(bypassTempDirValidation));
         }
+
         public Builder enableStreamingEngine(@Nullable Output<Boolean> enableStreamingEngine) {
-            this.enableStreamingEngine = enableStreamingEngine;
+            $.enableStreamingEngine = enableStreamingEngine;
             return this;
         }
-        public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
-            this.enableStreamingEngine = Codegen.ofNullable(enableStreamingEngine);
-            return this;
+
+        public Builder enableStreamingEngine(Boolean enableStreamingEngine) {
+            return enableStreamingEngine(Output.of(enableStreamingEngine));
         }
+
         public Builder ipConfiguration(@Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration> ipConfiguration) {
-            this.ipConfiguration = ipConfiguration;
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
-        public Builder ipConfiguration(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration ipConfiguration) {
-            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
-            return this;
+
+        public Builder ipConfiguration(GoogleCloudDatapipelinesV1RuntimeEnvironmentIpConfiguration ipConfiguration) {
+            return ipConfiguration(Output.of(ipConfiguration));
         }
+
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
         }
+
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
-            this.maxWorkers = maxWorkers;
+            $.maxWorkers = maxWorkers;
             return this;
         }
-        public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Codegen.ofNullable(maxWorkers);
-            return this;
+
+        public Builder maxWorkers(Integer maxWorkers) {
+            return maxWorkers(Output.of(maxWorkers));
         }
+
         public Builder network(@Nullable Output<String> network) {
-            this.network = network;
+            $.network = network;
             return this;
         }
-        public Builder network(@Nullable String network) {
-            this.network = Codegen.ofNullable(network);
-            return this;
+
+        public Builder network(String network) {
+            return network(Output.of(network));
         }
+
         public Builder numWorkers(@Nullable Output<Integer> numWorkers) {
-            this.numWorkers = numWorkers;
+            $.numWorkers = numWorkers;
             return this;
         }
-        public Builder numWorkers(@Nullable Integer numWorkers) {
-            this.numWorkers = Codegen.ofNullable(numWorkers);
-            return this;
+
+        public Builder numWorkers(Integer numWorkers) {
+            return numWorkers(Output.of(numWorkers));
         }
+
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
         }
+
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
-            this.subnetwork = subnetwork;
+            $.subnetwork = subnetwork;
             return this;
         }
-        public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Codegen.ofNullable(subnetwork);
-            return this;
+
+        public Builder subnetwork(String subnetwork) {
+            return subnetwork(Output.of(subnetwork));
         }
+
         public Builder tempLocation(@Nullable Output<String> tempLocation) {
-            this.tempLocation = tempLocation;
+            $.tempLocation = tempLocation;
             return this;
         }
-        public Builder tempLocation(@Nullable String tempLocation) {
-            this.tempLocation = Codegen.ofNullable(tempLocation);
-            return this;
+
+        public Builder tempLocation(String tempLocation) {
+            return tempLocation(Output.of(tempLocation));
         }
+
         public Builder workerRegion(@Nullable Output<String> workerRegion) {
-            this.workerRegion = workerRegion;
+            $.workerRegion = workerRegion;
             return this;
         }
-        public Builder workerRegion(@Nullable String workerRegion) {
-            this.workerRegion = Codegen.ofNullable(workerRegion);
-            return this;
+
+        public Builder workerRegion(String workerRegion) {
+            return workerRegion(Output.of(workerRegion));
         }
+
         public Builder workerZone(@Nullable Output<String> workerZone) {
-            this.workerZone = workerZone;
+            $.workerZone = workerZone;
             return this;
         }
-        public Builder workerZone(@Nullable String workerZone) {
-            this.workerZone = Codegen.ofNullable(workerZone);
-            return this;
+
+        public Builder workerZone(String workerZone) {
+            return workerZone(Output.of(workerZone));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs build() {
-            return new GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs(additionalExperiments, additionalUserLabels, bypassTempDirValidation, enableStreamingEngine, ipConfiguration, kmsKeyName, machineType, maxWorkers, network, numWorkers, serviceAccountEmail, subnetwork, tempLocation, workerRegion, workerZone, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs build() {
+            return $;
         }
     }
+
 }

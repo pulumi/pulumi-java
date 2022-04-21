@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SuccessDetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="otherNativeCrash")
-      private final @Nullable Output<Boolean> otherNativeCrash;
+    private @Nullable Output<Boolean> otherNativeCrash;
 
-    public Output<Boolean> otherNativeCrash() {
-        return this.otherNativeCrash == null ? Codegen.empty() : this.otherNativeCrash;
+    public Optional<Output<Boolean>> otherNativeCrash() {
+        return Optional.ofNullable(this.otherNativeCrash);
     }
 
-    public SuccessDetailArgs(@Nullable Output<Boolean> otherNativeCrash) {
-        this.otherNativeCrash = otherNativeCrash;
-    }
+    private SuccessDetailArgs() {}
 
-    private SuccessDetailArgs() {
-        this.otherNativeCrash = Codegen.empty();
+    private SuccessDetailArgs(SuccessDetailArgs $) {
+        this.otherNativeCrash = $.otherNativeCrash;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SuccessDetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> otherNativeCrash;
+        private SuccessDetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SuccessDetailArgs();
         }
 
         public Builder(SuccessDetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.otherNativeCrash = defaults.otherNativeCrash;
+            $ = new SuccessDetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder otherNativeCrash(@Nullable Output<Boolean> otherNativeCrash) {
-            this.otherNativeCrash = otherNativeCrash;
+            $.otherNativeCrash = otherNativeCrash;
             return this;
         }
-        public Builder otherNativeCrash(@Nullable Boolean otherNativeCrash) {
-            this.otherNativeCrash = Codegen.ofNullable(otherNativeCrash);
-            return this;
-        }        public SuccessDetailArgs build() {
-            return new SuccessDetailArgs(otherNativeCrash);
+
+        public Builder otherNativeCrash(Boolean otherNativeCrash) {
+            return otherNativeCrash(Output.of(otherNativeCrash));
+        }
+
+        public SuccessDetailArgs build() {
+            return $;
         }
     }
+
 }

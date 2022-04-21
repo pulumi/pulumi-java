@@ -15,78 +15,72 @@ public final class GetProductArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetProductArgs Empty = new GetProductArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="productId", required=true)
-      private final String productId;
+    private String productId;
 
     public String productId() {
         return this.productId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetProductArgs(
-        String location,
-        String productId,
-        @Nullable String project) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.productId = Objects.requireNonNull(productId, "expected parameter 'productId' to be non-null");
-        this.project = project;
-    }
+    private GetProductArgs() {}
 
-    private GetProductArgs() {
-        this.location = null;
-        this.productId = null;
-        this.project = null;
+    private GetProductArgs(GetProductArgs $) {
+        this.location = $.location;
+        this.productId = $.productId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProductArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private String productId;
-        private @Nullable String project;
+        private GetProductArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProductArgs();
         }
 
         public Builder(GetProductArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.productId = defaults.productId;
-    	      this.project = defaults.project;
+            $ = new GetProductArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder productId(String productId) {
-            this.productId = Objects.requireNonNull(productId);
+            $.productId = productId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetProductArgs build() {
-            return new GetProductArgs(location, productId, project);
+        }
+
+        public GetProductArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.productId = Objects.requireNonNull($.productId, "expected parameter 'productId' to be non-null");
+            return $;
         }
     }
+
 }

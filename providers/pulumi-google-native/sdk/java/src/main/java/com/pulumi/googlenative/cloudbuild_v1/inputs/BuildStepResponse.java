@@ -24,7 +24,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -35,7 +35,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dir", required=true)
-      private final String dir;
+    private String dir;
 
     public String dir() {
         return this.dir;
@@ -46,7 +46,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entrypoint", required=true)
-      private final String entrypoint;
+    private String entrypoint;
 
     public String entrypoint() {
         return this.entrypoint;
@@ -57,7 +57,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="env", required=true)
-      private final List<String> env;
+    private List<String> env;
 
     public List<String> env() {
         return this.env;
@@ -68,7 +68,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -79,7 +79,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pullTiming", required=true)
-      private final TimeSpanResponse pullTiming;
+    private TimeSpanResponse pullTiming;
 
     public TimeSpanResponse pullTiming() {
         return this.pullTiming;
@@ -90,7 +90,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="script", required=true)
-      private final String script;
+    private String script;
 
     public String script() {
         return this.script;
@@ -101,7 +101,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="secretEnv", required=true)
-      private final List<String> secretEnv;
+    private List<String> secretEnv;
 
     public List<String> secretEnv() {
         return this.secretEnv;
@@ -112,7 +112,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -123,7 +123,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeout", required=true)
-      private final String timeout;
+    private String timeout;
 
     public String timeout() {
         return this.timeout;
@@ -134,7 +134,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timing", required=true)
-      private final TimeSpanResponse timing;
+    private TimeSpanResponse timing;
 
     public TimeSpanResponse timing() {
         return this.timing;
@@ -145,7 +145,7 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="volumes", required=true)
-      private final List<VolumeResponse> volumes;
+    private List<VolumeResponse> volumes;
 
     public List<VolumeResponse> volumes() {
         return this.volumes;
@@ -156,169 +156,149 @@ public final class BuildStepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="waitFor", required=true)
-      private final List<String> waitFor;
+    private List<String> waitFor;
 
     public List<String> waitFor() {
         return this.waitFor;
     }
 
-    public BuildStepResponse(
-        List<String> args,
-        String dir,
-        String entrypoint,
-        List<String> env,
-        String name,
-        TimeSpanResponse pullTiming,
-        String script,
-        List<String> secretEnv,
-        String status,
-        String timeout,
-        TimeSpanResponse timing,
-        List<VolumeResponse> volumes,
-        List<String> waitFor) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.dir = Objects.requireNonNull(dir, "expected parameter 'dir' to be non-null");
-        this.entrypoint = Objects.requireNonNull(entrypoint, "expected parameter 'entrypoint' to be non-null");
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.pullTiming = Objects.requireNonNull(pullTiming, "expected parameter 'pullTiming' to be non-null");
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-        this.secretEnv = Objects.requireNonNull(secretEnv, "expected parameter 'secretEnv' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-        this.timing = Objects.requireNonNull(timing, "expected parameter 'timing' to be non-null");
-        this.volumes = Objects.requireNonNull(volumes, "expected parameter 'volumes' to be non-null");
-        this.waitFor = Objects.requireNonNull(waitFor, "expected parameter 'waitFor' to be non-null");
-    }
+    private BuildStepResponse() {}
 
-    private BuildStepResponse() {
-        this.args = List.of();
-        this.dir = null;
-        this.entrypoint = null;
-        this.env = List.of();
-        this.name = null;
-        this.pullTiming = null;
-        this.script = null;
-        this.secretEnv = List.of();
-        this.status = null;
-        this.timeout = null;
-        this.timing = null;
-        this.volumes = List.of();
-        this.waitFor = List.of();
+    private BuildStepResponse(BuildStepResponse $) {
+        this.args = $.args;
+        this.dir = $.dir;
+        this.entrypoint = $.entrypoint;
+        this.env = $.env;
+        this.name = $.name;
+        this.pullTiming = $.pullTiming;
+        this.script = $.script;
+        this.secretEnv = $.secretEnv;
+        this.status = $.status;
+        this.timeout = $.timeout;
+        this.timing = $.timing;
+        this.volumes = $.volumes;
+        this.waitFor = $.waitFor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> args;
-        private String dir;
-        private String entrypoint;
-        private List<String> env;
-        private String name;
-        private TimeSpanResponse pullTiming;
-        private String script;
-        private List<String> secretEnv;
-        private String status;
-        private String timeout;
-        private TimeSpanResponse timing;
-        private List<VolumeResponse> volumes;
-        private List<String> waitFor;
+        private BuildStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildStepResponse();
         }
 
         public Builder(BuildStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.dir = defaults.dir;
-    	      this.entrypoint = defaults.entrypoint;
-    	      this.env = defaults.env;
-    	      this.name = defaults.name;
-    	      this.pullTiming = defaults.pullTiming;
-    	      this.script = defaults.script;
-    	      this.secretEnv = defaults.secretEnv;
-    	      this.status = defaults.status;
-    	      this.timeout = defaults.timeout;
-    	      this.timing = defaults.timing;
-    	      this.volumes = defaults.volumes;
-    	      this.waitFor = defaults.waitFor;
+            $ = new BuildStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder dir(String dir) {
-            this.dir = Objects.requireNonNull(dir);
+            $.dir = dir;
             return this;
         }
+
         public Builder entrypoint(String entrypoint) {
-            this.entrypoint = Objects.requireNonNull(entrypoint);
+            $.entrypoint = entrypoint;
             return this;
         }
+
         public Builder env(List<String> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder env(String... env) {
             return env(List.of(env));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder pullTiming(TimeSpanResponse pullTiming) {
-            this.pullTiming = Objects.requireNonNull(pullTiming);
+            $.pullTiming = pullTiming;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
         }
+
         public Builder secretEnv(List<String> secretEnv) {
-            this.secretEnv = Objects.requireNonNull(secretEnv);
+            $.secretEnv = secretEnv;
             return this;
         }
+
         public Builder secretEnv(String... secretEnv) {
             return secretEnv(List.of(secretEnv));
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
         }
+
         public Builder timing(TimeSpanResponse timing) {
-            this.timing = Objects.requireNonNull(timing);
+            $.timing = timing;
             return this;
         }
+
         public Builder volumes(List<VolumeResponse> volumes) {
-            this.volumes = Objects.requireNonNull(volumes);
+            $.volumes = volumes;
             return this;
         }
+
         public Builder volumes(VolumeResponse... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder waitFor(List<String> waitFor) {
-            this.waitFor = Objects.requireNonNull(waitFor);
+            $.waitFor = waitFor;
             return this;
         }
+
         public Builder waitFor(String... waitFor) {
             return waitFor(List.of(waitFor));
-        }        public BuildStepResponse build() {
-            return new BuildStepResponse(args, dir, entrypoint, env, name, pullTiming, script, secretEnv, status, timeout, timing, volumes, waitFor);
+        }
+
+        public BuildStepResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.dir = Objects.requireNonNull($.dir, "expected parameter 'dir' to be non-null");
+            $.entrypoint = Objects.requireNonNull($.entrypoint, "expected parameter 'entrypoint' to be non-null");
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.pullTiming = Objects.requireNonNull($.pullTiming, "expected parameter 'pullTiming' to be non-null");
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            $.secretEnv = Objects.requireNonNull($.secretEnv, "expected parameter 'secretEnv' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            $.timing = Objects.requireNonNull($.timing, "expected parameter 'timing' to be non-null");
+            $.volumes = Objects.requireNonNull($.volumes, "expected parameter 'volumes' to be non-null");
+            $.waitFor = Objects.requireNonNull($.waitFor, "expected parameter 'waitFor' to be non-null");
+            return $;
         }
     }
+
 }

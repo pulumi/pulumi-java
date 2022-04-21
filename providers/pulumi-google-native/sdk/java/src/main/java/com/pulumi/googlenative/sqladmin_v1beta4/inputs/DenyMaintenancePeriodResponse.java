@@ -21,7 +21,7 @@ public final class DenyMaintenancePeriodResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="endDate", required=true)
-      private final String endDate;
+    private String endDate;
 
     public String endDate() {
         return this.endDate;
@@ -32,7 +32,7 @@ public final class DenyMaintenancePeriodResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="startDate", required=true)
-      private final String startDate;
+    private String startDate;
 
     public String startDate() {
         return this.startDate;
@@ -43,64 +43,59 @@ public final class DenyMaintenancePeriodResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="time", required=true)
-      private final String time;
+    private String time;
 
     public String time() {
         return this.time;
     }
 
-    public DenyMaintenancePeriodResponse(
-        String endDate,
-        String startDate,
-        String time) {
-        this.endDate = Objects.requireNonNull(endDate, "expected parameter 'endDate' to be non-null");
-        this.startDate = Objects.requireNonNull(startDate, "expected parameter 'startDate' to be non-null");
-        this.time = Objects.requireNonNull(time, "expected parameter 'time' to be non-null");
-    }
+    private DenyMaintenancePeriodResponse() {}
 
-    private DenyMaintenancePeriodResponse() {
-        this.endDate = null;
-        this.startDate = null;
-        this.time = null;
+    private DenyMaintenancePeriodResponse(DenyMaintenancePeriodResponse $) {
+        this.endDate = $.endDate;
+        this.startDate = $.startDate;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DenyMaintenancePeriodResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endDate;
-        private String startDate;
-        private String time;
+        private DenyMaintenancePeriodResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DenyMaintenancePeriodResponse();
         }
 
         public Builder(DenyMaintenancePeriodResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endDate = defaults.endDate;
-    	      this.startDate = defaults.startDate;
-    	      this.time = defaults.time;
+            $ = new DenyMaintenancePeriodResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endDate(String endDate) {
-            this.endDate = Objects.requireNonNull(endDate);
+            $.endDate = endDate;
             return this;
         }
+
         public Builder startDate(String startDate) {
-            this.startDate = Objects.requireNonNull(startDate);
+            $.startDate = startDate;
             return this;
         }
+
         public Builder time(String time) {
-            this.time = Objects.requireNonNull(time);
+            $.time = time;
             return this;
-        }        public DenyMaintenancePeriodResponse build() {
-            return new DenyMaintenancePeriodResponse(endDate, startDate, time);
+        }
+
+        public DenyMaintenancePeriodResponse build() {
+            $.endDate = Objects.requireNonNull($.endDate, "expected parameter 'endDate' to be non-null");
+            $.startDate = Objects.requireNonNull($.startDate, "expected parameter 'startDate' to be non-null");
+            $.time = Objects.requireNonNull($.time, "expected parameter 'time' to be non-null");
+            return $;
         }
     }
+
 }

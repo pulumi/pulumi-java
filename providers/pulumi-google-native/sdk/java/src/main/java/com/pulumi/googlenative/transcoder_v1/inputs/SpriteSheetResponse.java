@@ -22,7 +22,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="columnCount", required=true)
-      private final Integer columnCount;
+    private Integer columnCount;
 
     public Integer columnCount() {
         return this.columnCount;
@@ -33,7 +33,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTimeOffset", required=true)
-      private final String endTimeOffset;
+    private String endTimeOffset;
 
     public String endTimeOffset() {
         return this.endTimeOffset;
@@ -44,7 +44,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filePrefix", required=true)
-      private final String filePrefix;
+    private String filePrefix;
 
     public String filePrefix() {
         return this.filePrefix;
@@ -55,7 +55,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
@@ -66,7 +66,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="interval", required=true)
-      private final String interval;
+    private String interval;
 
     public String interval() {
         return this.interval;
@@ -77,7 +77,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quality", required=true)
-      private final Integer quality;
+    private Integer quality;
 
     public Integer quality() {
         return this.quality;
@@ -88,7 +88,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="rowCount", required=true)
-      private final Integer rowCount;
+    private Integer rowCount;
 
     public Integer rowCount() {
         return this.rowCount;
@@ -99,7 +99,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spriteHeightPixels", required=true)
-      private final Integer spriteHeightPixels;
+    private Integer spriteHeightPixels;
 
     public Integer spriteHeightPixels() {
         return this.spriteHeightPixels;
@@ -110,7 +110,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="spriteWidthPixels", required=true)
-      private final Integer spriteWidthPixels;
+    private Integer spriteWidthPixels;
 
     public Integer spriteWidthPixels() {
         return this.spriteWidthPixels;
@@ -121,7 +121,7 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTimeOffset", required=true)
-      private final String startTimeOffset;
+    private String startTimeOffset;
 
     public String startTimeOffset() {
         return this.startTimeOffset;
@@ -132,136 +132,115 @@ public final class SpriteSheetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="totalCount", required=true)
-      private final Integer totalCount;
+    private Integer totalCount;
 
     public Integer totalCount() {
         return this.totalCount;
     }
 
-    public SpriteSheetResponse(
-        Integer columnCount,
-        String endTimeOffset,
-        String filePrefix,
-        String format,
-        String interval,
-        Integer quality,
-        Integer rowCount,
-        Integer spriteHeightPixels,
-        Integer spriteWidthPixels,
-        String startTimeOffset,
-        Integer totalCount) {
-        this.columnCount = Objects.requireNonNull(columnCount, "expected parameter 'columnCount' to be non-null");
-        this.endTimeOffset = Objects.requireNonNull(endTimeOffset, "expected parameter 'endTimeOffset' to be non-null");
-        this.filePrefix = Objects.requireNonNull(filePrefix, "expected parameter 'filePrefix' to be non-null");
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.interval = Objects.requireNonNull(interval, "expected parameter 'interval' to be non-null");
-        this.quality = Objects.requireNonNull(quality, "expected parameter 'quality' to be non-null");
-        this.rowCount = Objects.requireNonNull(rowCount, "expected parameter 'rowCount' to be non-null");
-        this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels, "expected parameter 'spriteHeightPixels' to be non-null");
-        this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels, "expected parameter 'spriteWidthPixels' to be non-null");
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
-        this.totalCount = Objects.requireNonNull(totalCount, "expected parameter 'totalCount' to be non-null");
-    }
+    private SpriteSheetResponse() {}
 
-    private SpriteSheetResponse() {
-        this.columnCount = null;
-        this.endTimeOffset = null;
-        this.filePrefix = null;
-        this.format = null;
-        this.interval = null;
-        this.quality = null;
-        this.rowCount = null;
-        this.spriteHeightPixels = null;
-        this.spriteWidthPixels = null;
-        this.startTimeOffset = null;
-        this.totalCount = null;
+    private SpriteSheetResponse(SpriteSheetResponse $) {
+        this.columnCount = $.columnCount;
+        this.endTimeOffset = $.endTimeOffset;
+        this.filePrefix = $.filePrefix;
+        this.format = $.format;
+        this.interval = $.interval;
+        this.quality = $.quality;
+        this.rowCount = $.rowCount;
+        this.spriteHeightPixels = $.spriteHeightPixels;
+        this.spriteWidthPixels = $.spriteWidthPixels;
+        this.startTimeOffset = $.startTimeOffset;
+        this.totalCount = $.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SpriteSheetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer columnCount;
-        private String endTimeOffset;
-        private String filePrefix;
-        private String format;
-        private String interval;
-        private Integer quality;
-        private Integer rowCount;
-        private Integer spriteHeightPixels;
-        private Integer spriteWidthPixels;
-        private String startTimeOffset;
-        private Integer totalCount;
+        private SpriteSheetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SpriteSheetResponse();
         }
 
         public Builder(SpriteSheetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnCount = defaults.columnCount;
-    	      this.endTimeOffset = defaults.endTimeOffset;
-    	      this.filePrefix = defaults.filePrefix;
-    	      this.format = defaults.format;
-    	      this.interval = defaults.interval;
-    	      this.quality = defaults.quality;
-    	      this.rowCount = defaults.rowCount;
-    	      this.spriteHeightPixels = defaults.spriteHeightPixels;
-    	      this.spriteWidthPixels = defaults.spriteWidthPixels;
-    	      this.startTimeOffset = defaults.startTimeOffset;
-    	      this.totalCount = defaults.totalCount;
+            $ = new SpriteSheetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columnCount(Integer columnCount) {
-            this.columnCount = Objects.requireNonNull(columnCount);
+            $.columnCount = columnCount;
             return this;
         }
+
         public Builder endTimeOffset(String endTimeOffset) {
-            this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
+            $.endTimeOffset = endTimeOffset;
             return this;
         }
+
         public Builder filePrefix(String filePrefix) {
-            this.filePrefix = Objects.requireNonNull(filePrefix);
+            $.filePrefix = filePrefix;
             return this;
         }
+
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder interval(String interval) {
-            this.interval = Objects.requireNonNull(interval);
+            $.interval = interval;
             return this;
         }
+
         public Builder quality(Integer quality) {
-            this.quality = Objects.requireNonNull(quality);
+            $.quality = quality;
             return this;
         }
+
         public Builder rowCount(Integer rowCount) {
-            this.rowCount = Objects.requireNonNull(rowCount);
+            $.rowCount = rowCount;
             return this;
         }
+
         public Builder spriteHeightPixels(Integer spriteHeightPixels) {
-            this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
+            $.spriteHeightPixels = spriteHeightPixels;
             return this;
         }
+
         public Builder spriteWidthPixels(Integer spriteWidthPixels) {
-            this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
+            $.spriteWidthPixels = spriteWidthPixels;
             return this;
         }
+
         public Builder startTimeOffset(String startTimeOffset) {
-            this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+            $.startTimeOffset = startTimeOffset;
             return this;
         }
+
         public Builder totalCount(Integer totalCount) {
-            this.totalCount = Objects.requireNonNull(totalCount);
+            $.totalCount = totalCount;
             return this;
-        }        public SpriteSheetResponse build() {
-            return new SpriteSheetResponse(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
+        }
+
+        public SpriteSheetResponse build() {
+            $.columnCount = Objects.requireNonNull($.columnCount, "expected parameter 'columnCount' to be non-null");
+            $.endTimeOffset = Objects.requireNonNull($.endTimeOffset, "expected parameter 'endTimeOffset' to be non-null");
+            $.filePrefix = Objects.requireNonNull($.filePrefix, "expected parameter 'filePrefix' to be non-null");
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.interval = Objects.requireNonNull($.interval, "expected parameter 'interval' to be non-null");
+            $.quality = Objects.requireNonNull($.quality, "expected parameter 'quality' to be non-null");
+            $.rowCount = Objects.requireNonNull($.rowCount, "expected parameter 'rowCount' to be non-null");
+            $.spriteHeightPixels = Objects.requireNonNull($.spriteHeightPixels, "expected parameter 'spriteHeightPixels' to be non-null");
+            $.spriteWidthPixels = Objects.requireNonNull($.spriteWidthPixels, "expected parameter 'spriteWidthPixels' to be non-null");
+            $.startTimeOffset = Objects.requireNonNull($.startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
+            $.totalCount = Objects.requireNonNull($.totalCount, "expected parameter 'totalCount' to be non-null");
+            return $;
         }
     }
+
 }

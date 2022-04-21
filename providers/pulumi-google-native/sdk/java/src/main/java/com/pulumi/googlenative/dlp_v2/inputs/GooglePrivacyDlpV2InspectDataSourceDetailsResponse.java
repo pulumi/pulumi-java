@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends co
      * 
      */
     @Import(name="requestedOptions", required=true)
-      private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
+    private GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
 
     public GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions() {
         return this.requestedOptions;
@@ -33,55 +33,52 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends co
      * 
      */
     @Import(name="result", required=true)
-      private final GooglePrivacyDlpV2ResultResponse result;
+    private GooglePrivacyDlpV2ResultResponse result;
 
     public GooglePrivacyDlpV2ResultResponse result() {
         return this.result;
     }
 
-    public GooglePrivacyDlpV2InspectDataSourceDetailsResponse(
-        GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
-        GooglePrivacyDlpV2ResultResponse result) {
-        this.requestedOptions = Objects.requireNonNull(requestedOptions, "expected parameter 'requestedOptions' to be non-null");
-        this.result = Objects.requireNonNull(result, "expected parameter 'result' to be non-null");
-    }
+    private GooglePrivacyDlpV2InspectDataSourceDetailsResponse() {}
 
-    private GooglePrivacyDlpV2InspectDataSourceDetailsResponse() {
-        this.requestedOptions = null;
-        this.result = null;
+    private GooglePrivacyDlpV2InspectDataSourceDetailsResponse(GooglePrivacyDlpV2InspectDataSourceDetailsResponse $) {
+        this.requestedOptions = $.requestedOptions;
+        this.result = $.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectDataSourceDetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
-        private GooglePrivacyDlpV2ResultResponse result;
+        private GooglePrivacyDlpV2InspectDataSourceDetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectDataSourceDetailsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InspectDataSourceDetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.requestedOptions = defaults.requestedOptions;
-    	      this.result = defaults.result;
+            $ = new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder requestedOptions(GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions) {
-            this.requestedOptions = Objects.requireNonNull(requestedOptions);
+            $.requestedOptions = requestedOptions;
             return this;
         }
+
         public Builder result(GooglePrivacyDlpV2ResultResponse result) {
-            this.result = Objects.requireNonNull(result);
+            $.result = result;
             return this;
-        }        public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
-            return new GooglePrivacyDlpV2InspectDataSourceDetailsResponse(requestedOptions, result);
+        }
+
+        public GooglePrivacyDlpV2InspectDataSourceDetailsResponse build() {
+            $.requestedOptions = Objects.requireNonNull($.requestedOptions, "expected parameter 'requestedOptions' to be non-null");
+            $.result = Objects.requireNonNull($.result, "expected parameter 'result' to be non-null");
+            return $;
         }
     }
+
 }

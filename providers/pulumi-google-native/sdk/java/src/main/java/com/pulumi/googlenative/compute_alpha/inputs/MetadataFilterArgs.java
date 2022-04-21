@@ -5,11 +5,11 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.MetadataFilterFilterMatchCriteria;
 import com.pulumi.googlenative.compute_alpha.inputs.MetadataFilterLabelMatchArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MetadataFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="filterLabels")
-      private final @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
+    private @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
-    public Output<List<MetadataFilterLabelMatchArgs>> filterLabels() {
-        return this.filterLabels == null ? Codegen.empty() : this.filterLabels;
+    public Optional<Output<List<MetadataFilterLabelMatchArgs>>> filterLabels() {
+        return Optional.ofNullable(this.filterLabels);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MetadataFilterArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="filterMatchCriteria")
-      private final @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
+    private @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
-    public Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria() {
-        return this.filterMatchCriteria == null ? Codegen.empty() : this.filterMatchCriteria;
+    public Optional<Output<MetadataFilterFilterMatchCriteria>> filterMatchCriteria() {
+        return Optional.ofNullable(this.filterMatchCriteria);
     }
 
-    public MetadataFilterArgs(
-        @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels,
-        @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
-        this.filterLabels = filterLabels;
-        this.filterMatchCriteria = filterMatchCriteria;
-    }
+    private MetadataFilterArgs() {}
 
-    private MetadataFilterArgs() {
-        this.filterLabels = Codegen.empty();
-        this.filterMatchCriteria = Codegen.empty();
+    private MetadataFilterArgs(MetadataFilterArgs $) {
+        this.filterLabels = $.filterLabels;
+        this.filterMatchCriteria = $.filterMatchCriteria;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels;
-        private @Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
+        private MetadataFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataFilterArgs();
         }
 
         public Builder(MetadataFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filterLabels = defaults.filterLabels;
-    	      this.filterMatchCriteria = defaults.filterMatchCriteria;
+            $ = new MetadataFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder filterLabels(@Nullable Output<List<MetadataFilterLabelMatchArgs>> filterLabels) {
-            this.filterLabels = filterLabels;
+            $.filterLabels = filterLabels;
             return this;
         }
-        public Builder filterLabels(@Nullable List<MetadataFilterLabelMatchArgs> filterLabels) {
-            this.filterLabels = Codegen.ofNullable(filterLabels);
-            return this;
+
+        public Builder filterLabels(List<MetadataFilterLabelMatchArgs> filterLabels) {
+            return filterLabels(Output.of(filterLabels));
         }
+
         public Builder filterLabels(MetadataFilterLabelMatchArgs... filterLabels) {
             return filterLabels(List.of(filterLabels));
         }
+
         public Builder filterMatchCriteria(@Nullable Output<MetadataFilterFilterMatchCriteria> filterMatchCriteria) {
-            this.filterMatchCriteria = filterMatchCriteria;
+            $.filterMatchCriteria = filterMatchCriteria;
             return this;
         }
-        public Builder filterMatchCriteria(@Nullable MetadataFilterFilterMatchCriteria filterMatchCriteria) {
-            this.filterMatchCriteria = Codegen.ofNullable(filterMatchCriteria);
-            return this;
-        }        public MetadataFilterArgs build() {
-            return new MetadataFilterArgs(filterLabels, filterMatchCriteria);
+
+        public Builder filterMatchCriteria(MetadataFilterFilterMatchCriteria filterMatchCriteria) {
+            return filterMatchCriteria(Output.of(filterMatchCriteria));
+        }
+
+        public MetadataFilterArgs build() {
+            return $;
         }
     }
+
 }

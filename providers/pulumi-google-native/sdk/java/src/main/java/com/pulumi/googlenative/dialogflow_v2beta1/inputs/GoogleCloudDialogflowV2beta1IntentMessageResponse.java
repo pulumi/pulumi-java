@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="basicCard", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
+    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="browseCarouselCard", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="card", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
+    private GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
 
     public GoogleCloudDialogflowV2beta1IntentMessageCardResponse card() {
         return this.card;
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="carouselSelect", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
 
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="image", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
+    private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse image() {
         return this.image;
@@ -96,7 +96,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="linkOutSuggestion", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
+    private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
@@ -107,7 +107,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="listSelect", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
+    private GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
 
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
@@ -118,7 +118,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="mediaContent", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
+    private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
 
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
@@ -129,7 +129,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="payload", required=true)
-      private final Map<String,String> payload;
+    private Map<String,String> payload;
 
     public Map<String,String> payload() {
         return this.payload;
@@ -140,7 +140,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="platform", required=true)
-      private final String platform;
+    private String platform;
 
     public String platform() {
         return this.platform;
@@ -151,7 +151,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="quickReplies", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
+    private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
 
     public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
@@ -162,7 +162,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="rbmCarouselRichCard", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard() {
         return this.rbmCarouselRichCard;
@@ -173,7 +173,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="rbmStandaloneRichCard", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard;
@@ -184,7 +184,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="rbmText", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText() {
         return this.rbmText;
@@ -195,7 +195,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="simpleResponses", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
+    private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
 
     public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
@@ -206,7 +206,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="suggestions", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
+    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
 
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
@@ -217,7 +217,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="tableCard", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
@@ -228,7 +228,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="telephonyPlayAudio", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio() {
         return this.telephonyPlayAudio;
@@ -239,7 +239,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="telephonySynthesizeSpeech", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech;
@@ -250,7 +250,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="telephonyTransferCall", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall() {
         return this.telephonyTransferCall;
@@ -261,226 +261,185 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends com
      * 
      */
     @Import(name="text", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
+    private GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTextResponse text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard,
-        GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard,
-        GoogleCloudDialogflowV2beta1IntentMessageCardResponse card,
-        GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
-        GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect,
-        GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent,
-        Map<String,String> payload,
-        String platform,
-        GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText,
-        GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses,
-        GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions,
-        GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard,
-        GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio,
-        GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech,
-        GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall,
-        GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
-        this.basicCard = Objects.requireNonNull(basicCard, "expected parameter 'basicCard' to be non-null");
-        this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard, "expected parameter 'browseCarouselCard' to be non-null");
-        this.card = Objects.requireNonNull(card, "expected parameter 'card' to be non-null");
-        this.carouselSelect = Objects.requireNonNull(carouselSelect, "expected parameter 'carouselSelect' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion, "expected parameter 'linkOutSuggestion' to be non-null");
-        this.listSelect = Objects.requireNonNull(listSelect, "expected parameter 'listSelect' to be non-null");
-        this.mediaContent = Objects.requireNonNull(mediaContent, "expected parameter 'mediaContent' to be non-null");
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.quickReplies = Objects.requireNonNull(quickReplies, "expected parameter 'quickReplies' to be non-null");
-        this.rbmCarouselRichCard = Objects.requireNonNull(rbmCarouselRichCard, "expected parameter 'rbmCarouselRichCard' to be non-null");
-        this.rbmStandaloneRichCard = Objects.requireNonNull(rbmStandaloneRichCard, "expected parameter 'rbmStandaloneRichCard' to be non-null");
-        this.rbmText = Objects.requireNonNull(rbmText, "expected parameter 'rbmText' to be non-null");
-        this.simpleResponses = Objects.requireNonNull(simpleResponses, "expected parameter 'simpleResponses' to be non-null");
-        this.suggestions = Objects.requireNonNull(suggestions, "expected parameter 'suggestions' to be non-null");
-        this.tableCard = Objects.requireNonNull(tableCard, "expected parameter 'tableCard' to be non-null");
-        this.telephonyPlayAudio = Objects.requireNonNull(telephonyPlayAudio, "expected parameter 'telephonyPlayAudio' to be non-null");
-        this.telephonySynthesizeSpeech = Objects.requireNonNull(telephonySynthesizeSpeech, "expected parameter 'telephonySynthesizeSpeech' to be non-null");
-        this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall, "expected parameter 'telephonyTransferCall' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageResponse() {
-        this.basicCard = null;
-        this.browseCarouselCard = null;
-        this.card = null;
-        this.carouselSelect = null;
-        this.image = null;
-        this.linkOutSuggestion = null;
-        this.listSelect = null;
-        this.mediaContent = null;
-        this.payload = Map.of();
-        this.platform = null;
-        this.quickReplies = null;
-        this.rbmCarouselRichCard = null;
-        this.rbmStandaloneRichCard = null;
-        this.rbmText = null;
-        this.simpleResponses = null;
-        this.suggestions = null;
-        this.tableCard = null;
-        this.telephonyPlayAudio = null;
-        this.telephonySynthesizeSpeech = null;
-        this.telephonyTransferCall = null;
-        this.text = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageResponse(GoogleCloudDialogflowV2beta1IntentMessageResponse $) {
+        this.basicCard = $.basicCard;
+        this.browseCarouselCard = $.browseCarouselCard;
+        this.card = $.card;
+        this.carouselSelect = $.carouselSelect;
+        this.image = $.image;
+        this.linkOutSuggestion = $.linkOutSuggestion;
+        this.listSelect = $.listSelect;
+        this.mediaContent = $.mediaContent;
+        this.payload = $.payload;
+        this.platform = $.platform;
+        this.quickReplies = $.quickReplies;
+        this.rbmCarouselRichCard = $.rbmCarouselRichCard;
+        this.rbmStandaloneRichCard = $.rbmStandaloneRichCard;
+        this.rbmText = $.rbmText;
+        this.simpleResponses = $.simpleResponses;
+        this.suggestions = $.suggestions;
+        this.tableCard = $.tableCard;
+        this.telephonyPlayAudio = $.telephonyPlayAudio;
+        this.telephonySynthesizeSpeech = $.telephonySynthesizeSpeech;
+        this.telephonyTransferCall = $.telephonyTransferCall;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
-        private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
-        private GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
-        private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
-        private GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
-        private GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
-        private GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
-        private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
-        private Map<String,String> payload;
-        private String platform;
-        private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
-        private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
-        private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
-        private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
-        private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
-        private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
-        private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
-        private GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
+        private GoogleCloudDialogflowV2beta1IntentMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicCard = defaults.basicCard;
-    	      this.browseCarouselCard = defaults.browseCarouselCard;
-    	      this.card = defaults.card;
-    	      this.carouselSelect = defaults.carouselSelect;
-    	      this.image = defaults.image;
-    	      this.linkOutSuggestion = defaults.linkOutSuggestion;
-    	      this.listSelect = defaults.listSelect;
-    	      this.mediaContent = defaults.mediaContent;
-    	      this.payload = defaults.payload;
-    	      this.platform = defaults.platform;
-    	      this.quickReplies = defaults.quickReplies;
-    	      this.rbmCarouselRichCard = defaults.rbmCarouselRichCard;
-    	      this.rbmStandaloneRichCard = defaults.rbmStandaloneRichCard;
-    	      this.rbmText = defaults.rbmText;
-    	      this.simpleResponses = defaults.simpleResponses;
-    	      this.suggestions = defaults.suggestions;
-    	      this.tableCard = defaults.tableCard;
-    	      this.telephonyPlayAudio = defaults.telephonyPlayAudio;
-    	      this.telephonySynthesizeSpeech = defaults.telephonySynthesizeSpeech;
-    	      this.telephonyTransferCall = defaults.telephonyTransferCall;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicCard(GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard) {
-            this.basicCard = Objects.requireNonNull(basicCard);
+            $.basicCard = basicCard;
             return this;
         }
+
         public Builder browseCarouselCard(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
-            this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
+            $.browseCarouselCard = browseCarouselCard;
             return this;
         }
+
         public Builder card(GoogleCloudDialogflowV2beta1IntentMessageCardResponse card) {
-            this.card = Objects.requireNonNull(card);
+            $.card = card;
             return this;
         }
+
         public Builder carouselSelect(GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect) {
-            this.carouselSelect = Objects.requireNonNull(carouselSelect);
+            $.carouselSelect = carouselSelect;
             return this;
         }
+
         public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder linkOutSuggestion(GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
-            this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
+            $.linkOutSuggestion = linkOutSuggestion;
             return this;
         }
+
         public Builder listSelect(GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect) {
-            this.listSelect = Objects.requireNonNull(listSelect);
+            $.listSelect = listSelect;
             return this;
         }
+
         public Builder mediaContent(GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent) {
-            this.mediaContent = Objects.requireNonNull(mediaContent);
+            $.mediaContent = mediaContent;
             return this;
         }
+
         public Builder payload(Map<String,String> payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
         }
+
         public Builder platform(String platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder quickReplies(GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies) {
-            this.quickReplies = Objects.requireNonNull(quickReplies);
+            $.quickReplies = quickReplies;
             return this;
         }
+
         public Builder rbmCarouselRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard) {
-            this.rbmCarouselRichCard = Objects.requireNonNull(rbmCarouselRichCard);
+            $.rbmCarouselRichCard = rbmCarouselRichCard;
             return this;
         }
+
         public Builder rbmStandaloneRichCard(GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard) {
-            this.rbmStandaloneRichCard = Objects.requireNonNull(rbmStandaloneRichCard);
+            $.rbmStandaloneRichCard = rbmStandaloneRichCard;
             return this;
         }
+
         public Builder rbmText(GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText) {
-            this.rbmText = Objects.requireNonNull(rbmText);
+            $.rbmText = rbmText;
             return this;
         }
+
         public Builder simpleResponses(GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses) {
-            this.simpleResponses = Objects.requireNonNull(simpleResponses);
+            $.simpleResponses = simpleResponses;
             return this;
         }
+
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions) {
-            this.suggestions = Objects.requireNonNull(suggestions);
+            $.suggestions = suggestions;
             return this;
         }
+
         public Builder tableCard(GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard) {
-            this.tableCard = Objects.requireNonNull(tableCard);
+            $.tableCard = tableCard;
             return this;
         }
+
         public Builder telephonyPlayAudio(GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio) {
-            this.telephonyPlayAudio = Objects.requireNonNull(telephonyPlayAudio);
+            $.telephonyPlayAudio = telephonyPlayAudio;
             return this;
         }
+
         public Builder telephonySynthesizeSpeech(GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech) {
-            this.telephonySynthesizeSpeech = Objects.requireNonNull(telephonySynthesizeSpeech);
+            $.telephonySynthesizeSpeech = telephonySynthesizeSpeech;
             return this;
         }
+
         public Builder telephonyTransferCall(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall) {
-            this.telephonyTransferCall = Objects.requireNonNull(telephonyTransferCall);
+            $.telephonyTransferCall = telephonyTransferCall;
             return this;
         }
+
         public Builder text(GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, rbmCarouselRichCard, rbmStandaloneRichCard, rbmText, simpleResponses, suggestions, tableCard, telephonyPlayAudio, telephonySynthesizeSpeech, telephonyTransferCall, text);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageResponse build() {
+            $.basicCard = Objects.requireNonNull($.basicCard, "expected parameter 'basicCard' to be non-null");
+            $.browseCarouselCard = Objects.requireNonNull($.browseCarouselCard, "expected parameter 'browseCarouselCard' to be non-null");
+            $.card = Objects.requireNonNull($.card, "expected parameter 'card' to be non-null");
+            $.carouselSelect = Objects.requireNonNull($.carouselSelect, "expected parameter 'carouselSelect' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.linkOutSuggestion = Objects.requireNonNull($.linkOutSuggestion, "expected parameter 'linkOutSuggestion' to be non-null");
+            $.listSelect = Objects.requireNonNull($.listSelect, "expected parameter 'listSelect' to be non-null");
+            $.mediaContent = Objects.requireNonNull($.mediaContent, "expected parameter 'mediaContent' to be non-null");
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.quickReplies = Objects.requireNonNull($.quickReplies, "expected parameter 'quickReplies' to be non-null");
+            $.rbmCarouselRichCard = Objects.requireNonNull($.rbmCarouselRichCard, "expected parameter 'rbmCarouselRichCard' to be non-null");
+            $.rbmStandaloneRichCard = Objects.requireNonNull($.rbmStandaloneRichCard, "expected parameter 'rbmStandaloneRichCard' to be non-null");
+            $.rbmText = Objects.requireNonNull($.rbmText, "expected parameter 'rbmText' to be non-null");
+            $.simpleResponses = Objects.requireNonNull($.simpleResponses, "expected parameter 'simpleResponses' to be non-null");
+            $.suggestions = Objects.requireNonNull($.suggestions, "expected parameter 'suggestions' to be non-null");
+            $.tableCard = Objects.requireNonNull($.tableCard, "expected parameter 'tableCard' to be non-null");
+            $.telephonyPlayAudio = Objects.requireNonNull($.telephonyPlayAudio, "expected parameter 'telephonyPlayAudio' to be non-null");
+            $.telephonySynthesizeSpeech = Objects.requireNonNull($.telephonySynthesizeSpeech, "expected parameter 'telephonySynthesizeSpeech' to be non-null");
+            $.telephonyTransferCall = Objects.requireNonNull($.telephonyTransferCall, "expected parameter 'telephonyTransferCall' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1beta.enums.OsConstraintOsType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimumVersion")
-      private final @Nullable Output<String> minimumVersion;
+    private @Nullable Output<String> minimumVersion;
 
-    public Output<String> minimumVersion() {
-        return this.minimumVersion == null ? Codegen.empty() : this.minimumVersion;
+    public Optional<Output<String>> minimumVersion() {
+        return Optional.ofNullable(this.minimumVersion);
     }
 
     /**
@@ -37,7 +37,7 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="osType", required=true)
-      private final Output<OsConstraintOsType> osType;
+    private Output<OsConstraintOsType> osType;
 
     public Output<OsConstraintOsType> osType() {
         return this.osType;
@@ -48,76 +48,69 @@ public final class OsConstraintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requireVerifiedChromeOs")
-      private final @Nullable Output<Boolean> requireVerifiedChromeOs;
+    private @Nullable Output<Boolean> requireVerifiedChromeOs;
 
-    public Output<Boolean> requireVerifiedChromeOs() {
-        return this.requireVerifiedChromeOs == null ? Codegen.empty() : this.requireVerifiedChromeOs;
+    public Optional<Output<Boolean>> requireVerifiedChromeOs() {
+        return Optional.ofNullable(this.requireVerifiedChromeOs);
     }
 
-    public OsConstraintArgs(
-        @Nullable Output<String> minimumVersion,
-        Output<OsConstraintOsType> osType,
-        @Nullable Output<Boolean> requireVerifiedChromeOs) {
-        this.minimumVersion = minimumVersion;
-        this.osType = Objects.requireNonNull(osType, "expected parameter 'osType' to be non-null");
-        this.requireVerifiedChromeOs = requireVerifiedChromeOs;
-    }
+    private OsConstraintArgs() {}
 
-    private OsConstraintArgs() {
-        this.minimumVersion = Codegen.empty();
-        this.osType = Codegen.empty();
-        this.requireVerifiedChromeOs = Codegen.empty();
+    private OsConstraintArgs(OsConstraintArgs $) {
+        this.minimumVersion = $.minimumVersion;
+        this.osType = $.osType;
+        this.requireVerifiedChromeOs = $.requireVerifiedChromeOs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OsConstraintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> minimumVersion;
-        private Output<OsConstraintOsType> osType;
-        private @Nullable Output<Boolean> requireVerifiedChromeOs;
+        private OsConstraintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OsConstraintArgs();
         }
 
         public Builder(OsConstraintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minimumVersion = defaults.minimumVersion;
-    	      this.osType = defaults.osType;
-    	      this.requireVerifiedChromeOs = defaults.requireVerifiedChromeOs;
+            $ = new OsConstraintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minimumVersion(@Nullable Output<String> minimumVersion) {
-            this.minimumVersion = minimumVersion;
+            $.minimumVersion = minimumVersion;
             return this;
         }
-        public Builder minimumVersion(@Nullable String minimumVersion) {
-            this.minimumVersion = Codegen.ofNullable(minimumVersion);
-            return this;
+
+        public Builder minimumVersion(String minimumVersion) {
+            return minimumVersion(Output.of(minimumVersion));
         }
+
         public Builder osType(Output<OsConstraintOsType> osType) {
-            this.osType = Objects.requireNonNull(osType);
+            $.osType = osType;
             return this;
         }
+
         public Builder osType(OsConstraintOsType osType) {
-            this.osType = Output.of(Objects.requireNonNull(osType));
-            return this;
+            return osType(Output.of(osType));
         }
+
         public Builder requireVerifiedChromeOs(@Nullable Output<Boolean> requireVerifiedChromeOs) {
-            this.requireVerifiedChromeOs = requireVerifiedChromeOs;
+            $.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }
-        public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
-            this.requireVerifiedChromeOs = Codegen.ofNullable(requireVerifiedChromeOs);
-            return this;
-        }        public OsConstraintArgs build() {
-            return new OsConstraintArgs(minimumVersion, osType, requireVerifiedChromeOs);
+
+        public Builder requireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
+            return requireVerifiedChromeOs(Output.of(requireVerifiedChromeOs));
+        }
+
+        public OsConstraintArgs build() {
+            $.osType = Objects.requireNonNull($.osType, "expected parameter 'osType' to be non-null");
+            return $;
         }
     }
+
 }

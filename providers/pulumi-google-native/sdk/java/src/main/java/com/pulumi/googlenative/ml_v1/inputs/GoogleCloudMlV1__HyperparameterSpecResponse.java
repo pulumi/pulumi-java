@@ -25,7 +25,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="algorithm", required=true)
-      private final String algorithm;
+    private String algorithm;
 
     public String algorithm() {
         return this.algorithm;
@@ -36,7 +36,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="enableTrialEarlyStopping", required=true)
-      private final Boolean enableTrialEarlyStopping;
+    private Boolean enableTrialEarlyStopping;
 
     public Boolean enableTrialEarlyStopping() {
         return this.enableTrialEarlyStopping;
@@ -47,7 +47,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="goal", required=true)
-      private final String goal;
+    private String goal;
 
     public String goal() {
         return this.goal;
@@ -58,7 +58,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="hyperparameterMetricTag", required=true)
-      private final String hyperparameterMetricTag;
+    private String hyperparameterMetricTag;
 
     public String hyperparameterMetricTag() {
         return this.hyperparameterMetricTag;
@@ -69,7 +69,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="maxFailedTrials", required=true)
-      private final Integer maxFailedTrials;
+    private Integer maxFailedTrials;
 
     public Integer maxFailedTrials() {
         return this.maxFailedTrials;
@@ -80,7 +80,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="maxParallelTrials", required=true)
-      private final Integer maxParallelTrials;
+    private Integer maxParallelTrials;
 
     public Integer maxParallelTrials() {
         return this.maxParallelTrials;
@@ -91,7 +91,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="maxTrials", required=true)
-      private final Integer maxTrials;
+    private Integer maxTrials;
 
     public Integer maxTrials() {
         return this.maxTrials;
@@ -102,7 +102,7 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="params", required=true)
-      private final List<GoogleCloudMlV1__ParameterSpecResponse> params;
+    private List<GoogleCloudMlV1__ParameterSpecResponse> params;
 
     public List<GoogleCloudMlV1__ParameterSpecResponse> params() {
         return this.params;
@@ -113,121 +113,105 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse extends com.pulum
      * 
      */
     @Import(name="resumePreviousJobId", required=true)
-      private final String resumePreviousJobId;
+    private String resumePreviousJobId;
 
     public String resumePreviousJobId() {
         return this.resumePreviousJobId;
     }
 
-    public GoogleCloudMlV1__HyperparameterSpecResponse(
-        String algorithm,
-        Boolean enableTrialEarlyStopping,
-        String goal,
-        String hyperparameterMetricTag,
-        Integer maxFailedTrials,
-        Integer maxParallelTrials,
-        Integer maxTrials,
-        List<GoogleCloudMlV1__ParameterSpecResponse> params,
-        String resumePreviousJobId) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.enableTrialEarlyStopping = Objects.requireNonNull(enableTrialEarlyStopping, "expected parameter 'enableTrialEarlyStopping' to be non-null");
-        this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
-        this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag, "expected parameter 'hyperparameterMetricTag' to be non-null");
-        this.maxFailedTrials = Objects.requireNonNull(maxFailedTrials, "expected parameter 'maxFailedTrials' to be non-null");
-        this.maxParallelTrials = Objects.requireNonNull(maxParallelTrials, "expected parameter 'maxParallelTrials' to be non-null");
-        this.maxTrials = Objects.requireNonNull(maxTrials, "expected parameter 'maxTrials' to be non-null");
-        this.params = Objects.requireNonNull(params, "expected parameter 'params' to be non-null");
-        this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId, "expected parameter 'resumePreviousJobId' to be non-null");
-    }
+    private GoogleCloudMlV1__HyperparameterSpecResponse() {}
 
-    private GoogleCloudMlV1__HyperparameterSpecResponse() {
-        this.algorithm = null;
-        this.enableTrialEarlyStopping = null;
-        this.goal = null;
-        this.hyperparameterMetricTag = null;
-        this.maxFailedTrials = null;
-        this.maxParallelTrials = null;
-        this.maxTrials = null;
-        this.params = List.of();
-        this.resumePreviousJobId = null;
+    private GoogleCloudMlV1__HyperparameterSpecResponse(GoogleCloudMlV1__HyperparameterSpecResponse $) {
+        this.algorithm = $.algorithm;
+        this.enableTrialEarlyStopping = $.enableTrialEarlyStopping;
+        this.goal = $.goal;
+        this.hyperparameterMetricTag = $.hyperparameterMetricTag;
+        this.maxFailedTrials = $.maxFailedTrials;
+        this.maxParallelTrials = $.maxParallelTrials;
+        this.maxTrials = $.maxTrials;
+        this.params = $.params;
+        this.resumePreviousJobId = $.resumePreviousJobId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__HyperparameterSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String algorithm;
-        private Boolean enableTrialEarlyStopping;
-        private String goal;
-        private String hyperparameterMetricTag;
-        private Integer maxFailedTrials;
-        private Integer maxParallelTrials;
-        private Integer maxTrials;
-        private List<GoogleCloudMlV1__ParameterSpecResponse> params;
-        private String resumePreviousJobId;
+        private GoogleCloudMlV1__HyperparameterSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__HyperparameterSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1__HyperparameterSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.enableTrialEarlyStopping = defaults.enableTrialEarlyStopping;
-    	      this.goal = defaults.goal;
-    	      this.hyperparameterMetricTag = defaults.hyperparameterMetricTag;
-    	      this.maxFailedTrials = defaults.maxFailedTrials;
-    	      this.maxParallelTrials = defaults.maxParallelTrials;
-    	      this.maxTrials = defaults.maxTrials;
-    	      this.params = defaults.params;
-    	      this.resumePreviousJobId = defaults.resumePreviousJobId;
+            $ = new GoogleCloudMlV1__HyperparameterSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(String algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder enableTrialEarlyStopping(Boolean enableTrialEarlyStopping) {
-            this.enableTrialEarlyStopping = Objects.requireNonNull(enableTrialEarlyStopping);
+            $.enableTrialEarlyStopping = enableTrialEarlyStopping;
             return this;
         }
+
         public Builder goal(String goal) {
-            this.goal = Objects.requireNonNull(goal);
+            $.goal = goal;
             return this;
         }
+
         public Builder hyperparameterMetricTag(String hyperparameterMetricTag) {
-            this.hyperparameterMetricTag = Objects.requireNonNull(hyperparameterMetricTag);
+            $.hyperparameterMetricTag = hyperparameterMetricTag;
             return this;
         }
+
         public Builder maxFailedTrials(Integer maxFailedTrials) {
-            this.maxFailedTrials = Objects.requireNonNull(maxFailedTrials);
+            $.maxFailedTrials = maxFailedTrials;
             return this;
         }
+
         public Builder maxParallelTrials(Integer maxParallelTrials) {
-            this.maxParallelTrials = Objects.requireNonNull(maxParallelTrials);
+            $.maxParallelTrials = maxParallelTrials;
             return this;
         }
+
         public Builder maxTrials(Integer maxTrials) {
-            this.maxTrials = Objects.requireNonNull(maxTrials);
+            $.maxTrials = maxTrials;
             return this;
         }
+
         public Builder params(List<GoogleCloudMlV1__ParameterSpecResponse> params) {
-            this.params = Objects.requireNonNull(params);
+            $.params = params;
             return this;
         }
+
         public Builder params(GoogleCloudMlV1__ParameterSpecResponse... params) {
             return params(List.of(params));
         }
+
         public Builder resumePreviousJobId(String resumePreviousJobId) {
-            this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
+            $.resumePreviousJobId = resumePreviousJobId;
             return this;
-        }        public GoogleCloudMlV1__HyperparameterSpecResponse build() {
-            return new GoogleCloudMlV1__HyperparameterSpecResponse(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
+        }
+
+        public GoogleCloudMlV1__HyperparameterSpecResponse build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.enableTrialEarlyStopping = Objects.requireNonNull($.enableTrialEarlyStopping, "expected parameter 'enableTrialEarlyStopping' to be non-null");
+            $.goal = Objects.requireNonNull($.goal, "expected parameter 'goal' to be non-null");
+            $.hyperparameterMetricTag = Objects.requireNonNull($.hyperparameterMetricTag, "expected parameter 'hyperparameterMetricTag' to be non-null");
+            $.maxFailedTrials = Objects.requireNonNull($.maxFailedTrials, "expected parameter 'maxFailedTrials' to be non-null");
+            $.maxParallelTrials = Objects.requireNonNull($.maxParallelTrials, "expected parameter 'maxParallelTrials' to be non-null");
+            $.maxTrials = Objects.requireNonNull($.maxTrials, "expected parameter 'maxTrials' to be non-null");
+            $.params = Objects.requireNonNull($.params, "expected parameter 'params' to be non-null");
+            $.resumePreviousJobId = Objects.requireNonNull($.resumePreviousJobId, "expected parameter 'resumePreviousJobId' to be non-null");
+            return $;
         }
     }
+
 }

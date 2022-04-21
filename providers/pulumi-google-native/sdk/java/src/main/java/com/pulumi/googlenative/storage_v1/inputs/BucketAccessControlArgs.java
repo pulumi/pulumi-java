@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storage_v1.inputs.BucketAccessControlProjectTeamArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="bucket")
-      private final @Nullable Output<String> bucket;
+    private @Nullable Output<String> bucket;
 
-    public Output<String> bucket() {
-        return this.bucket == null ? Codegen.empty() : this.bucket;
+    public Optional<Output<String>> bucket() {
+        return Optional.ofNullable(this.bucket);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="domain")
-      private final @Nullable Output<String> domain;
+    private @Nullable Output<String> domain;
 
-    public Output<String> domain() {
-        return this.domain == null ? Codegen.empty() : this.domain;
+    public Optional<Output<String>> domain() {
+        return Optional.ofNullable(this.domain);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entity")
-      private final @Nullable Output<String> entity;
+    private @Nullable Output<String> entity;
 
-    public Output<String> entity() {
-        return this.entity == null ? Codegen.empty() : this.entity;
+    public Optional<Output<String>> entity() {
+        return Optional.ofNullable(this.entity);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="entityId")
-      private final @Nullable Output<String> entityId;
+    private @Nullable Output<String> entityId;
 
-    public Output<String> entityId() {
-        return this.entityId == null ? Codegen.empty() : this.entityId;
+    public Optional<Output<String>> entityId() {
+        return Optional.ofNullable(this.entityId);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="projectTeam")
-      private final @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam;
+    private @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam;
 
-    public Output<BucketAccessControlProjectTeamArgs> projectTeam() {
-        return this.projectTeam == null ? Codegen.empty() : this.projectTeam;
+    public Optional<Output<BucketAccessControlProjectTeamArgs>> projectTeam() {
+        return Optional.ofNullable(this.projectTeam);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="role")
-      private final @Nullable Output<String> role;
+    private @Nullable Output<String> role;
 
-    public Output<String> role() {
-        return this.role == null ? Codegen.empty() : this.role;
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
     }
 
     /**
@@ -146,180 +146,148 @@ public final class BucketAccessControlArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="selfLink")
-      private final @Nullable Output<String> selfLink;
+    private @Nullable Output<String> selfLink;
 
-    public Output<String> selfLink() {
-        return this.selfLink == null ? Codegen.empty() : this.selfLink;
+    public Optional<Output<String>> selfLink() {
+        return Optional.ofNullable(this.selfLink);
     }
 
-    public BucketAccessControlArgs(
-        @Nullable Output<String> bucket,
-        @Nullable Output<String> domain,
-        @Nullable Output<String> email,
-        @Nullable Output<String> entity,
-        @Nullable Output<String> entityId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> id,
-        @Nullable Output<String> kind,
-        @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam,
-        @Nullable Output<String> role,
-        @Nullable Output<String> selfLink) {
-        this.bucket = bucket;
-        this.domain = domain;
-        this.email = email;
-        this.entity = entity;
-        this.entityId = entityId;
-        this.etag = etag;
-        this.id = id;
-        this.kind = kind;
-        this.projectTeam = projectTeam;
-        this.role = role;
-        this.selfLink = selfLink;
-    }
+    private BucketAccessControlArgs() {}
 
-    private BucketAccessControlArgs() {
-        this.bucket = Codegen.empty();
-        this.domain = Codegen.empty();
-        this.email = Codegen.empty();
-        this.entity = Codegen.empty();
-        this.entityId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.id = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.projectTeam = Codegen.empty();
-        this.role = Codegen.empty();
-        this.selfLink = Codegen.empty();
+    private BucketAccessControlArgs(BucketAccessControlArgs $) {
+        this.bucket = $.bucket;
+        this.domain = $.domain;
+        this.email = $.email;
+        this.entity = $.entity;
+        this.entityId = $.entityId;
+        this.etag = $.etag;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.projectTeam = $.projectTeam;
+        this.role = $.role;
+        this.selfLink = $.selfLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketAccessControlArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bucket;
-        private @Nullable Output<String> domain;
-        private @Nullable Output<String> email;
-        private @Nullable Output<String> entity;
-        private @Nullable Output<String> entityId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam;
-        private @Nullable Output<String> role;
-        private @Nullable Output<String> selfLink;
+        private BucketAccessControlArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketAccessControlArgs();
         }
 
         public Builder(BucketAccessControlArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucket = defaults.bucket;
-    	      this.domain = defaults.domain;
-    	      this.email = defaults.email;
-    	      this.entity = defaults.entity;
-    	      this.entityId = defaults.entityId;
-    	      this.etag = defaults.etag;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.projectTeam = defaults.projectTeam;
-    	      this.role = defaults.role;
-    	      this.selfLink = defaults.selfLink;
+            $ = new BucketAccessControlArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bucket(@Nullable Output<String> bucket) {
-            this.bucket = bucket;
+            $.bucket = bucket;
             return this;
         }
-        public Builder bucket(@Nullable String bucket) {
-            this.bucket = Codegen.ofNullable(bucket);
-            return this;
+
+        public Builder bucket(String bucket) {
+            return bucket(Output.of(bucket));
         }
+
         public Builder domain(@Nullable Output<String> domain) {
-            this.domain = domain;
+            $.domain = domain;
             return this;
         }
-        public Builder domain(@Nullable String domain) {
-            this.domain = Codegen.ofNullable(domain);
-            return this;
+
+        public Builder domain(String domain) {
+            return domain(Output.of(domain));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
+
+        public Builder email(String email) {
+            return email(Output.of(email));
         }
+
         public Builder entity(@Nullable Output<String> entity) {
-            this.entity = entity;
+            $.entity = entity;
             return this;
         }
-        public Builder entity(@Nullable String entity) {
-            this.entity = Codegen.ofNullable(entity);
-            return this;
+
+        public Builder entity(String entity) {
+            return entity(Output.of(entity));
         }
+
         public Builder entityId(@Nullable Output<String> entityId) {
-            this.entityId = entityId;
+            $.entityId = entityId;
             return this;
         }
-        public Builder entityId(@Nullable String entityId) {
-            this.entityId = Codegen.ofNullable(entityId);
-            return this;
+
+        public Builder entityId(String entityId) {
+            return entityId(Output.of(entityId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder projectTeam(@Nullable Output<BucketAccessControlProjectTeamArgs> projectTeam) {
-            this.projectTeam = projectTeam;
+            $.projectTeam = projectTeam;
             return this;
         }
-        public Builder projectTeam(@Nullable BucketAccessControlProjectTeamArgs projectTeam) {
-            this.projectTeam = Codegen.ofNullable(projectTeam);
-            return this;
+
+        public Builder projectTeam(BucketAccessControlProjectTeamArgs projectTeam) {
+            return projectTeam(Output.of(projectTeam));
         }
+
         public Builder role(@Nullable Output<String> role) {
-            this.role = role;
+            $.role = role;
             return this;
         }
-        public Builder role(@Nullable String role) {
-            this.role = Codegen.ofNullable(role);
-            return this;
+
+        public Builder role(String role) {
+            return role(Output.of(role));
         }
+
         public Builder selfLink(@Nullable Output<String> selfLink) {
-            this.selfLink = selfLink;
+            $.selfLink = selfLink;
             return this;
         }
-        public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Codegen.ofNullable(selfLink);
-            return this;
-        }        public BucketAccessControlArgs build() {
-            return new BucketAccessControlArgs(bucket, domain, email, entity, entityId, etag, id, kind, projectTeam, role, selfLink);
+
+        public Builder selfLink(String selfLink) {
+            return selfLink(Output.of(selfLink));
+        }
+
+        public BucketAccessControlArgs build() {
+            return $;
         }
     }
+
 }

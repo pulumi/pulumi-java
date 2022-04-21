@@ -22,7 +22,7 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="v1Name", required=true)
-      private final String v1Name;
+    private String v1Name;
 
     public String v1Name() {
         return this.v1Name;
@@ -33,7 +33,7 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="v2Blob", required=true)
-      private final List<String> v2Blob;
+    private List<String> v2Blob;
 
     public List<String> v2Blob() {
         return this.v2Blob;
@@ -44,67 +44,63 @@ public final class FingerprintResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="v2Name", required=true)
-      private final String v2Name;
+    private String v2Name;
 
     public String v2Name() {
         return this.v2Name;
     }
 
-    public FingerprintResponse(
-        String v1Name,
-        List<String> v2Blob,
-        String v2Name) {
-        this.v1Name = Objects.requireNonNull(v1Name, "expected parameter 'v1Name' to be non-null");
-        this.v2Blob = Objects.requireNonNull(v2Blob, "expected parameter 'v2Blob' to be non-null");
-        this.v2Name = Objects.requireNonNull(v2Name, "expected parameter 'v2Name' to be non-null");
-    }
+    private FingerprintResponse() {}
 
-    private FingerprintResponse() {
-        this.v1Name = null;
-        this.v2Blob = List.of();
-        this.v2Name = null;
+    private FingerprintResponse(FingerprintResponse $) {
+        this.v1Name = $.v1Name;
+        this.v2Blob = $.v2Blob;
+        this.v2Name = $.v2Name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FingerprintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String v1Name;
-        private List<String> v2Blob;
-        private String v2Name;
+        private FingerprintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FingerprintResponse();
         }
 
         public Builder(FingerprintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.v1Name = defaults.v1Name;
-    	      this.v2Blob = defaults.v2Blob;
-    	      this.v2Name = defaults.v2Name;
+            $ = new FingerprintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder v1Name(String v1Name) {
-            this.v1Name = Objects.requireNonNull(v1Name);
+            $.v1Name = v1Name;
             return this;
         }
+
         public Builder v2Blob(List<String> v2Blob) {
-            this.v2Blob = Objects.requireNonNull(v2Blob);
+            $.v2Blob = v2Blob;
             return this;
         }
+
         public Builder v2Blob(String... v2Blob) {
             return v2Blob(List.of(v2Blob));
         }
+
         public Builder v2Name(String v2Name) {
-            this.v2Name = Objects.requireNonNull(v2Name);
+            $.v2Name = v2Name;
             return this;
-        }        public FingerprintResponse build() {
-            return new FingerprintResponse(v1Name, v2Blob, v2Name);
+        }
+
+        public FingerprintResponse build() {
+            $.v1Name = Objects.requireNonNull($.v1Name, "expected parameter 'v1Name' to be non-null");
+            $.v2Blob = Objects.requireNonNull($.v2Blob, "expected parameter 'v2Blob' to be non-null");
+            $.v2Name = Objects.requireNonNull($.v2Name, "expected parameter 'v2Name' to be non-null");
+            return $;
         }
     }
+
 }

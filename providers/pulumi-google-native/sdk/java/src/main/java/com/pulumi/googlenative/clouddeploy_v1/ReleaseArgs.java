@@ -5,12 +5,12 @@ package com.pulumi.googlenative.clouddeploy_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.BuildArtifactArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="annotations")
-      private final @Nullable Output<Map<String,String>> annotations;
+    private @Nullable Output<Map<String,String>> annotations;
 
-    public Output<Map<String,String>> annotations() {
-        return this.annotations == null ? Codegen.empty() : this.annotations;
+    public Optional<Output<Map<String,String>>> annotations() {
+        return Optional.ofNullable(this.annotations);
     }
 
     /**
@@ -34,14 +34,14 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="buildArtifacts")
-      private final @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
+    private @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
 
-    public Output<List<BuildArtifactArgs>> buildArtifacts() {
-        return this.buildArtifacts == null ? Codegen.empty() : this.buildArtifacts;
+    public Optional<Output<List<BuildArtifactArgs>>> buildArtifacts() {
+        return Optional.ofNullable(this.buildArtifacts);
     }
 
     @Import(name="deliveryPipelineId", required=true)
-      private final Output<String> deliveryPipelineId;
+    private Output<String> deliveryPipelineId;
 
     public Output<String> deliveryPipelineId() {
         return this.deliveryPipelineId;
@@ -52,10 +52,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -74,17 +74,17 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -92,31 +92,31 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="releaseId", required=true)
-      private final Output<String> releaseId;
+    private Output<String> releaseId;
 
     public Output<String> releaseId() {
         return this.releaseId;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -124,10 +124,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skaffoldConfigPath")
-      private final @Nullable Output<String> skaffoldConfigPath;
+    private @Nullable Output<String> skaffoldConfigPath;
 
-    public Output<String> skaffoldConfigPath() {
-        return this.skaffoldConfigPath == null ? Codegen.empty() : this.skaffoldConfigPath;
+    public Optional<Output<String>> skaffoldConfigPath() {
+        return Optional.ofNullable(this.skaffoldConfigPath);
     }
 
     /**
@@ -135,10 +135,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skaffoldConfigUri")
-      private final @Nullable Output<String> skaffoldConfigUri;
+    private @Nullable Output<String> skaffoldConfigUri;
 
-    public Output<String> skaffoldConfigUri() {
-        return this.skaffoldConfigUri == null ? Codegen.empty() : this.skaffoldConfigUri;
+    public Optional<Output<String>> skaffoldConfigUri() {
+        return Optional.ofNullable(this.skaffoldConfigUri);
     }
 
     /**
@@ -146,242 +146,201 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="skaffoldVersion")
-      private final @Nullable Output<String> skaffoldVersion;
+    private @Nullable Output<String> skaffoldVersion;
 
-    public Output<String> skaffoldVersion() {
-        return this.skaffoldVersion == null ? Codegen.empty() : this.skaffoldVersion;
+    public Optional<Output<String>> skaffoldVersion() {
+        return Optional.ofNullable(this.skaffoldVersion);
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public ReleaseArgs(
-        @Nullable Output<Map<String,String>> annotations,
-        @Nullable Output<List<BuildArtifactArgs>> buildArtifacts,
-        Output<String> deliveryPipelineId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> releaseId,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> skaffoldConfigPath,
-        @Nullable Output<String> skaffoldConfigUri,
-        @Nullable Output<String> skaffoldVersion,
-        @Nullable Output<String> validateOnly) {
-        this.annotations = annotations;
-        this.buildArtifacts = buildArtifacts;
-        this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
-        this.description = description;
-        this.etag = etag;
-        this.labels = labels;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.releaseId = Objects.requireNonNull(releaseId, "expected parameter 'releaseId' to be non-null");
-        this.requestId = requestId;
-        this.skaffoldConfigPath = skaffoldConfigPath;
-        this.skaffoldConfigUri = skaffoldConfigUri;
-        this.skaffoldVersion = skaffoldVersion;
-        this.validateOnly = validateOnly;
-    }
+    private ReleaseArgs() {}
 
-    private ReleaseArgs() {
-        this.annotations = Codegen.empty();
-        this.buildArtifacts = Codegen.empty();
-        this.deliveryPipelineId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.releaseId = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.skaffoldConfigPath = Codegen.empty();
-        this.skaffoldConfigUri = Codegen.empty();
-        this.skaffoldVersion = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private ReleaseArgs(ReleaseArgs $) {
+        this.annotations = $.annotations;
+        this.buildArtifacts = $.buildArtifacts;
+        this.deliveryPipelineId = $.deliveryPipelineId;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.releaseId = $.releaseId;
+        this.requestId = $.requestId;
+        this.skaffoldConfigPath = $.skaffoldConfigPath;
+        this.skaffoldConfigUri = $.skaffoldConfigUri;
+        this.skaffoldVersion = $.skaffoldVersion;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReleaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> annotations;
-        private @Nullable Output<List<BuildArtifactArgs>> buildArtifacts;
-        private Output<String> deliveryPipelineId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> releaseId;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> skaffoldConfigPath;
-        private @Nullable Output<String> skaffoldConfigUri;
-        private @Nullable Output<String> skaffoldVersion;
-        private @Nullable Output<String> validateOnly;
+        private ReleaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReleaseArgs();
         }
 
         public Builder(ReleaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotations = defaults.annotations;
-    	      this.buildArtifacts = defaults.buildArtifacts;
-    	      this.deliveryPipelineId = defaults.deliveryPipelineId;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.releaseId = defaults.releaseId;
-    	      this.requestId = defaults.requestId;
-    	      this.skaffoldConfigPath = defaults.skaffoldConfigPath;
-    	      this.skaffoldConfigUri = defaults.skaffoldConfigUri;
-    	      this.skaffoldVersion = defaults.skaffoldVersion;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new ReleaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder annotations(@Nullable Output<Map<String,String>> annotations) {
-            this.annotations = annotations;
+            $.annotations = annotations;
             return this;
         }
-        public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Codegen.ofNullable(annotations);
-            return this;
+
+        public Builder annotations(Map<String,String> annotations) {
+            return annotations(Output.of(annotations));
         }
+
         public Builder buildArtifacts(@Nullable Output<List<BuildArtifactArgs>> buildArtifacts) {
-            this.buildArtifacts = buildArtifacts;
+            $.buildArtifacts = buildArtifacts;
             return this;
         }
-        public Builder buildArtifacts(@Nullable List<BuildArtifactArgs> buildArtifacts) {
-            this.buildArtifacts = Codegen.ofNullable(buildArtifacts);
-            return this;
+
+        public Builder buildArtifacts(List<BuildArtifactArgs> buildArtifacts) {
+            return buildArtifacts(Output.of(buildArtifacts));
         }
+
         public Builder buildArtifacts(BuildArtifactArgs... buildArtifacts) {
             return buildArtifacts(List.of(buildArtifacts));
         }
+
         public Builder deliveryPipelineId(Output<String> deliveryPipelineId) {
-            this.deliveryPipelineId = Objects.requireNonNull(deliveryPipelineId);
+            $.deliveryPipelineId = deliveryPipelineId;
             return this;
         }
+
         public Builder deliveryPipelineId(String deliveryPipelineId) {
-            this.deliveryPipelineId = Output.of(Objects.requireNonNull(deliveryPipelineId));
-            return this;
+            return deliveryPipelineId(Output.of(deliveryPipelineId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder releaseId(Output<String> releaseId) {
-            this.releaseId = Objects.requireNonNull(releaseId);
+            $.releaseId = releaseId;
             return this;
         }
+
         public Builder releaseId(String releaseId) {
-            this.releaseId = Output.of(Objects.requireNonNull(releaseId));
-            return this;
+            return releaseId(Output.of(releaseId));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder skaffoldConfigPath(@Nullable Output<String> skaffoldConfigPath) {
-            this.skaffoldConfigPath = skaffoldConfigPath;
+            $.skaffoldConfigPath = skaffoldConfigPath;
             return this;
         }
-        public Builder skaffoldConfigPath(@Nullable String skaffoldConfigPath) {
-            this.skaffoldConfigPath = Codegen.ofNullable(skaffoldConfigPath);
-            return this;
+
+        public Builder skaffoldConfigPath(String skaffoldConfigPath) {
+            return skaffoldConfigPath(Output.of(skaffoldConfigPath));
         }
+
         public Builder skaffoldConfigUri(@Nullable Output<String> skaffoldConfigUri) {
-            this.skaffoldConfigUri = skaffoldConfigUri;
+            $.skaffoldConfigUri = skaffoldConfigUri;
             return this;
         }
-        public Builder skaffoldConfigUri(@Nullable String skaffoldConfigUri) {
-            this.skaffoldConfigUri = Codegen.ofNullable(skaffoldConfigUri);
-            return this;
+
+        public Builder skaffoldConfigUri(String skaffoldConfigUri) {
+            return skaffoldConfigUri(Output.of(skaffoldConfigUri));
         }
+
         public Builder skaffoldVersion(@Nullable Output<String> skaffoldVersion) {
-            this.skaffoldVersion = skaffoldVersion;
+            $.skaffoldVersion = skaffoldVersion;
             return this;
         }
-        public Builder skaffoldVersion(@Nullable String skaffoldVersion) {
-            this.skaffoldVersion = Codegen.ofNullable(skaffoldVersion);
-            return this;
+
+        public Builder skaffoldVersion(String skaffoldVersion) {
+            return skaffoldVersion(Output.of(skaffoldVersion));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public ReleaseArgs build() {
-            return new ReleaseArgs(annotations, buildArtifacts, deliveryPipelineId, description, etag, labels, location, name, project, releaseId, requestId, skaffoldConfigPath, skaffoldConfigUri, skaffoldVersion, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public ReleaseArgs build() {
+            $.deliveryPipelineId = Objects.requireNonNull($.deliveryPipelineId, "expected parameter 'deliveryPipelineId' to be non-null");
+            $.releaseId = Objects.requireNonNull($.releaseId, "expected parameter 'releaseId' to be non-null");
+            return $;
         }
     }
+
 }

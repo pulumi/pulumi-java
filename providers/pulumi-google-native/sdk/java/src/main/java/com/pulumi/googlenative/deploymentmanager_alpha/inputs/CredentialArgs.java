@@ -5,11 +5,11 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.BasicAuthArgs;
 import com.pulumi.googlenative.deploymentmanager_alpha.inputs.ServiceAccountArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="basicAuth")
-      private final @Nullable Output<BasicAuthArgs> basicAuth;
+    private @Nullable Output<BasicAuthArgs> basicAuth;
 
-    public Output<BasicAuthArgs> basicAuth() {
-        return this.basicAuth == null ? Codegen.empty() : this.basicAuth;
+    public Optional<Output<BasicAuthArgs>> basicAuth() {
+        return Optional.ofNullable(this.basicAuth);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<ServiceAccountArgs> serviceAccount;
+    private @Nullable Output<ServiceAccountArgs> serviceAccount;
 
-    public Output<ServiceAccountArgs> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<ServiceAccountArgs>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="useProjectDefault")
-      private final @Nullable Output<Boolean> useProjectDefault;
+    private @Nullable Output<Boolean> useProjectDefault;
 
-    public Output<Boolean> useProjectDefault() {
-        return this.useProjectDefault == null ? Codegen.empty() : this.useProjectDefault;
+    public Optional<Output<Boolean>> useProjectDefault() {
+        return Optional.ofNullable(this.useProjectDefault);
     }
 
-    public CredentialArgs(
-        @Nullable Output<BasicAuthArgs> basicAuth,
-        @Nullable Output<ServiceAccountArgs> serviceAccount,
-        @Nullable Output<Boolean> useProjectDefault) {
-        this.basicAuth = basicAuth;
-        this.serviceAccount = serviceAccount;
-        this.useProjectDefault = useProjectDefault;
-    }
+    private CredentialArgs() {}
 
-    private CredentialArgs() {
-        this.basicAuth = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.useProjectDefault = Codegen.empty();
+    private CredentialArgs(CredentialArgs $) {
+        this.basicAuth = $.basicAuth;
+        this.serviceAccount = $.serviceAccount;
+        this.useProjectDefault = $.useProjectDefault;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BasicAuthArgs> basicAuth;
-        private @Nullable Output<ServiceAccountArgs> serviceAccount;
-        private @Nullable Output<Boolean> useProjectDefault;
+        private CredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CredentialArgs();
         }
 
         public Builder(CredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicAuth = defaults.basicAuth;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.useProjectDefault = defaults.useProjectDefault;
+            $ = new CredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder basicAuth(@Nullable Output<BasicAuthArgs> basicAuth) {
-            this.basicAuth = basicAuth;
+            $.basicAuth = basicAuth;
             return this;
         }
-        public Builder basicAuth(@Nullable BasicAuthArgs basicAuth) {
-            this.basicAuth = Codegen.ofNullable(basicAuth);
-            return this;
+
+        public Builder basicAuth(BasicAuthArgs basicAuth) {
+            return basicAuth(Output.of(basicAuth));
         }
+
         public Builder serviceAccount(@Nullable Output<ServiceAccountArgs> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable ServiceAccountArgs serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(ServiceAccountArgs serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder useProjectDefault(@Nullable Output<Boolean> useProjectDefault) {
-            this.useProjectDefault = useProjectDefault;
+            $.useProjectDefault = useProjectDefault;
             return this;
         }
-        public Builder useProjectDefault(@Nullable Boolean useProjectDefault) {
-            this.useProjectDefault = Codegen.ofNullable(useProjectDefault);
-            return this;
-        }        public CredentialArgs build() {
-            return new CredentialArgs(basicAuth, serviceAccount, useProjectDefault);
+
+        public Builder useProjectDefault(Boolean useProjectDefault) {
+            return useProjectDefault(Output.of(useProjectDefault));
+        }
+
+        public CredentialArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datamigration_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="expireTime")
-      private final @Nullable Output<String> expireTime;
+    private @Nullable Output<String> expireTime;
 
-    public Output<String> expireTime() {
-        return this.expireTime == null ? Codegen.empty() : this.expireTime;
+    public Optional<Output<String>> expireTime() {
+        return Optional.ofNullable(this.expireTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ttl")
-      private final @Nullable Output<String> ttl;
+    private @Nullable Output<String> ttl;
 
-    public Output<String> ttl() {
-        return this.ttl == null ? Codegen.empty() : this.ttl;
+    public Optional<Output<String>> ttl() {
+        return Optional.ofNullable(this.ttl);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class SqlAclEntryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public SqlAclEntryArgs(
-        @Nullable Output<String> expireTime,
-        @Nullable Output<String> label,
-        @Nullable Output<String> ttl,
-        @Nullable Output<String> value) {
-        this.expireTime = expireTime;
-        this.label = label;
-        this.ttl = ttl;
-        this.value = value;
-    }
+    private SqlAclEntryArgs() {}
 
-    private SqlAclEntryArgs() {
-        this.expireTime = Codegen.empty();
-        this.label = Codegen.empty();
-        this.ttl = Codegen.empty();
-        this.value = Codegen.empty();
+    private SqlAclEntryArgs(SqlAclEntryArgs $) {
+        this.expireTime = $.expireTime;
+        this.label = $.label;
+        this.ttl = $.ttl;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlAclEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> expireTime;
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> ttl;
-        private @Nullable Output<String> value;
+        private SqlAclEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlAclEntryArgs();
         }
 
         public Builder(SqlAclEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expireTime = defaults.expireTime;
-    	      this.label = defaults.label;
-    	      this.ttl = defaults.ttl;
-    	      this.value = defaults.value;
+            $ = new SqlAclEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder expireTime(@Nullable Output<String> expireTime) {
-            this.expireTime = expireTime;
+            $.expireTime = expireTime;
             return this;
         }
-        public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Codegen.ofNullable(expireTime);
-            return this;
+
+        public Builder expireTime(String expireTime) {
+            return expireTime(Output.of(expireTime));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder ttl(@Nullable Output<String> ttl) {
-            this.ttl = ttl;
+            $.ttl = ttl;
             return this;
         }
-        public Builder ttl(@Nullable String ttl) {
-            this.ttl = Codegen.ofNullable(ttl);
-            return this;
+
+        public Builder ttl(String ttl) {
+            return ttl(Output.of(ttl));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public SqlAclEntryArgs build() {
-            return new SqlAclEntryArgs(expireTime, label, ttl, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public SqlAclEntryArgs build() {
+            return $;
         }
     }
+
 }

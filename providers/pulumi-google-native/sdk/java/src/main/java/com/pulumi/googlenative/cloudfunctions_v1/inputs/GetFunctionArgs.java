@@ -15,78 +15,72 @@ public final class GetFunctionArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFunctionArgs Empty = new GetFunctionArgs();
 
     @Import(name="functionId", required=true)
-      private final String functionId;
+    private String functionId;
 
     public String functionId() {
         return this.functionId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetFunctionArgs(
-        String functionId,
-        String location,
-        @Nullable String project) {
-        this.functionId = Objects.requireNonNull(functionId, "expected parameter 'functionId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetFunctionArgs() {}
 
-    private GetFunctionArgs() {
-        this.functionId = null;
-        this.location = null;
-        this.project = null;
+    private GetFunctionArgs(GetFunctionArgs $) {
+        this.functionId = $.functionId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFunctionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String functionId;
-        private String location;
-        private @Nullable String project;
+        private GetFunctionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFunctionArgs();
         }
 
         public Builder(GetFunctionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.functionId = defaults.functionId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetFunctionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder functionId(String functionId) {
-            this.functionId = Objects.requireNonNull(functionId);
+            $.functionId = functionId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetFunctionArgs build() {
-            return new GetFunctionArgs(functionId, location, project);
+        }
+
+        public GetFunctionArgs build() {
+            $.functionId = Objects.requireNonNull($.functionId, "expected parameter 'functionId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

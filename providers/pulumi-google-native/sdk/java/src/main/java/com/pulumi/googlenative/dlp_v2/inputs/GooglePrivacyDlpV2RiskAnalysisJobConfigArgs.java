@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrivacyMetricArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends com.pulum
      * 
      */
     @Import(name="actions")
-      private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
+    private @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
-    public Output<List<GooglePrivacyDlpV2ActionArgs>> actions() {
-        return this.actions == null ? Codegen.empty() : this.actions;
+    public Optional<Output<List<GooglePrivacyDlpV2ActionArgs>>> actions() {
+        return Optional.ofNullable(this.actions);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends com.pulum
      * 
      */
     @Import(name="privacyMetric")
-      private final @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
+    private @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
 
-    public Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric() {
-        return this.privacyMetric == null ? Codegen.empty() : this.privacyMetric;
+    public Optional<Output<GooglePrivacyDlpV2PrivacyMetricArgs>> privacyMetric() {
+        return Optional.ofNullable(this.privacyMetric);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends com.pulum
      * 
      */
     @Import(name="sourceTable")
-      private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
+    private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
 
-    public Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable() {
-        return this.sourceTable == null ? Codegen.empty() : this.sourceTable;
+    public Optional<Output<GooglePrivacyDlpV2BigQueryTableArgs>> sourceTable() {
+        return Optional.ofNullable(this.sourceTable);
     }
 
-    public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions,
-        @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric,
-        @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable) {
-        this.actions = actions;
-        this.privacyMetric = privacyMetric;
-        this.sourceTable = sourceTable;
-    }
+    private GooglePrivacyDlpV2RiskAnalysisJobConfigArgs() {}
 
-    private GooglePrivacyDlpV2RiskAnalysisJobConfigArgs() {
-        this.actions = Codegen.empty();
-        this.privacyMetric = Codegen.empty();
-        this.sourceTable = Codegen.empty();
+    private GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(GooglePrivacyDlpV2RiskAnalysisJobConfigArgs $) {
+        this.actions = $.actions;
+        this.privacyMetric = $.privacyMetric;
+        this.sourceTable = $.sourceTable;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RiskAnalysisJobConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
-        private @Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
-        private @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
+        private GooglePrivacyDlpV2RiskAnalysisJobConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2RiskAnalysisJobConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actions = defaults.actions;
-    	      this.privacyMetric = defaults.privacyMetric;
-    	      this.sourceTable = defaults.sourceTable;
+            $ = new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actions(@Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions) {
-            this.actions = actions;
+            $.actions = actions;
             return this;
         }
-        public Builder actions(@Nullable List<GooglePrivacyDlpV2ActionArgs> actions) {
-            this.actions = Codegen.ofNullable(actions);
-            return this;
+
+        public Builder actions(List<GooglePrivacyDlpV2ActionArgs> actions) {
+            return actions(Output.of(actions));
         }
+
         public Builder actions(GooglePrivacyDlpV2ActionArgs... actions) {
             return actions(List.of(actions));
         }
+
         public Builder privacyMetric(@Nullable Output<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric) {
-            this.privacyMetric = privacyMetric;
+            $.privacyMetric = privacyMetric;
             return this;
         }
-        public Builder privacyMetric(@Nullable GooglePrivacyDlpV2PrivacyMetricArgs privacyMetric) {
-            this.privacyMetric = Codegen.ofNullable(privacyMetric);
-            return this;
+
+        public Builder privacyMetric(GooglePrivacyDlpV2PrivacyMetricArgs privacyMetric) {
+            return privacyMetric(Output.of(privacyMetric));
         }
+
         public Builder sourceTable(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable) {
-            this.sourceTable = sourceTable;
+            $.sourceTable = sourceTable;
             return this;
         }
-        public Builder sourceTable(@Nullable GooglePrivacyDlpV2BigQueryTableArgs sourceTable) {
-            this.sourceTable = Codegen.ofNullable(sourceTable);
-            return this;
-        }        public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs build() {
-            return new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(actions, privacyMetric, sourceTable);
+
+        public Builder sourceTable(GooglePrivacyDlpV2BigQueryTableArgs sourceTable) {
+            return sourceTable(Output.of(sourceTable));
+        }
+
+        public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetReceivedBytesPerSecond", required=true)
-      private final Integer targetReceivedBytesPerSecond;
+    private Integer targetReceivedBytesPerSecond;
 
     public Integer targetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond;
@@ -32,7 +32,7 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetReceivedPacketsPerSecond", required=true)
-      private final Integer targetReceivedPacketsPerSecond;
+    private Integer targetReceivedPacketsPerSecond;
 
     public Integer targetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond;
@@ -43,7 +43,7 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetSentBytesPerSecond", required=true)
-      private final Integer targetSentBytesPerSecond;
+    private Integer targetSentBytesPerSecond;
 
     public Integer targetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond;
@@ -54,73 +54,66 @@ public final class NetworkUtilizationResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetSentPacketsPerSecond", required=true)
-      private final Integer targetSentPacketsPerSecond;
+    private Integer targetSentPacketsPerSecond;
 
     public Integer targetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond;
     }
 
-    public NetworkUtilizationResponse(
-        Integer targetReceivedBytesPerSecond,
-        Integer targetReceivedPacketsPerSecond,
-        Integer targetSentBytesPerSecond,
-        Integer targetSentPacketsPerSecond) {
-        this.targetReceivedBytesPerSecond = Objects.requireNonNull(targetReceivedBytesPerSecond, "expected parameter 'targetReceivedBytesPerSecond' to be non-null");
-        this.targetReceivedPacketsPerSecond = Objects.requireNonNull(targetReceivedPacketsPerSecond, "expected parameter 'targetReceivedPacketsPerSecond' to be non-null");
-        this.targetSentBytesPerSecond = Objects.requireNonNull(targetSentBytesPerSecond, "expected parameter 'targetSentBytesPerSecond' to be non-null");
-        this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond, "expected parameter 'targetSentPacketsPerSecond' to be non-null");
-    }
+    private NetworkUtilizationResponse() {}
 
-    private NetworkUtilizationResponse() {
-        this.targetReceivedBytesPerSecond = null;
-        this.targetReceivedPacketsPerSecond = null;
-        this.targetSentBytesPerSecond = null;
-        this.targetSentPacketsPerSecond = null;
+    private NetworkUtilizationResponse(NetworkUtilizationResponse $) {
+        this.targetReceivedBytesPerSecond = $.targetReceivedBytesPerSecond;
+        this.targetReceivedPacketsPerSecond = $.targetReceivedPacketsPerSecond;
+        this.targetSentBytesPerSecond = $.targetSentBytesPerSecond;
+        this.targetSentPacketsPerSecond = $.targetSentPacketsPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkUtilizationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer targetReceivedBytesPerSecond;
-        private Integer targetReceivedPacketsPerSecond;
-        private Integer targetSentBytesPerSecond;
-        private Integer targetSentPacketsPerSecond;
+        private NetworkUtilizationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkUtilizationResponse();
         }
 
         public Builder(NetworkUtilizationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.targetReceivedBytesPerSecond = defaults.targetReceivedBytesPerSecond;
-    	      this.targetReceivedPacketsPerSecond = defaults.targetReceivedPacketsPerSecond;
-    	      this.targetSentBytesPerSecond = defaults.targetSentBytesPerSecond;
-    	      this.targetSentPacketsPerSecond = defaults.targetSentPacketsPerSecond;
+            $ = new NetworkUtilizationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder targetReceivedBytesPerSecond(Integer targetReceivedBytesPerSecond) {
-            this.targetReceivedBytesPerSecond = Objects.requireNonNull(targetReceivedBytesPerSecond);
+            $.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
+
         public Builder targetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
-            this.targetReceivedPacketsPerSecond = Objects.requireNonNull(targetReceivedPacketsPerSecond);
+            $.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
+
         public Builder targetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
-            this.targetSentBytesPerSecond = Objects.requireNonNull(targetSentBytesPerSecond);
+            $.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
+
         public Builder targetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
-            this.targetSentPacketsPerSecond = Objects.requireNonNull(targetSentPacketsPerSecond);
+            $.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
-        }        public NetworkUtilizationResponse build() {
-            return new NetworkUtilizationResponse(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
+        }
+
+        public NetworkUtilizationResponse build() {
+            $.targetReceivedBytesPerSecond = Objects.requireNonNull($.targetReceivedBytesPerSecond, "expected parameter 'targetReceivedBytesPerSecond' to be non-null");
+            $.targetReceivedPacketsPerSecond = Objects.requireNonNull($.targetReceivedPacketsPerSecond, "expected parameter 'targetReceivedPacketsPerSecond' to be non-null");
+            $.targetSentBytesPerSecond = Objects.requireNonNull($.targetSentBytesPerSecond, "expected parameter 'targetSentBytesPerSecond' to be non-null");
+            $.targetSentPacketsPerSecond = Objects.requireNonNull($.targetSentPacketsPerSecond, "expected parameter 'targetSentPacketsPerSecond' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.healthcare_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1FhirBigQueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StreamConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bigqueryDestination")
-      private final @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination;
+    private @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination;
 
-    public Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination() {
-        return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
+    public Optional<Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs>> bigqueryDestination() {
+        return Optional.ofNullable(this.bigqueryDestination);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class StreamConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceTypes")
-      private final @Nullable Output<List<String>> resourceTypes;
+    private @Nullable Output<List<String>> resourceTypes;
 
-    public Output<List<String>> resourceTypes() {
-        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
+    public Optional<Output<List<String>>> resourceTypes() {
+        return Optional.ofNullable(this.resourceTypes);
     }
 
-    public StreamConfigArgs(
-        @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination,
-        @Nullable Output<List<String>> resourceTypes) {
-        this.bigqueryDestination = bigqueryDestination;
-        this.resourceTypes = resourceTypes;
-    }
+    private StreamConfigArgs() {}
 
-    private StreamConfigArgs() {
-        this.bigqueryDestination = Codegen.empty();
-        this.resourceTypes = Codegen.empty();
+    private StreamConfigArgs(StreamConfigArgs $) {
+        this.bigqueryDestination = $.bigqueryDestination;
+        this.resourceTypes = $.resourceTypes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination;
-        private @Nullable Output<List<String>> resourceTypes;
+        private StreamConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamConfigArgs();
         }
 
         public Builder(StreamConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryDestination = defaults.bigqueryDestination;
-    	      this.resourceTypes = defaults.resourceTypes;
+            $ = new StreamConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryDestination(@Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination) {
-            this.bigqueryDestination = bigqueryDestination;
+            $.bigqueryDestination = bigqueryDestination;
             return this;
         }
-        public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1FhirBigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Codegen.ofNullable(bigqueryDestination);
-            return this;
+
+        public Builder bigqueryDestination(GoogleCloudHealthcareV1FhirBigQueryDestinationArgs bigqueryDestination) {
+            return bigqueryDestination(Output.of(bigqueryDestination));
         }
+
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
-            this.resourceTypes = resourceTypes;
+            $.resourceTypes = resourceTypes;
             return this;
         }
-        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Codegen.ofNullable(resourceTypes);
-            return this;
+
+        public Builder resourceTypes(List<String> resourceTypes) {
+            return resourceTypes(Output.of(resourceTypes));
         }
+
         public Builder resourceTypes(String... resourceTypes) {
             return resourceTypes(List.of(resourceTypes));
-        }        public StreamConfigArgs build() {
-            return new StreamConfigArgs(bigqueryDestination, resourceTypes);
+        }
+
+        public StreamConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.LocationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class PackageOccurrenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="location", required=true)
-      private final Output<List<LocationArgs>> location;
+    private Output<List<LocationArgs>> location;
 
     public Output<List<LocationArgs>> location() {
         return this.location;
     }
 
-    public PackageOccurrenceArgs(Output<List<LocationArgs>> location) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-    }
+    private PackageOccurrenceArgs() {}
 
-    private PackageOccurrenceArgs() {
-        this.location = Codegen.empty();
+    private PackageOccurrenceArgs(PackageOccurrenceArgs $) {
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PackageOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<LocationArgs>> location;
+        private PackageOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PackageOccurrenceArgs();
         }
 
         public Builder(PackageOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
+            $ = new PackageOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(Output<List<LocationArgs>> location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder location(List<LocationArgs> location) {
-            this.location = Output.of(Objects.requireNonNull(location));
-            return this;
+            return location(Output.of(location));
         }
+
         public Builder location(LocationArgs... location) {
             return location(List.of(location));
-        }        public PackageOccurrenceArgs build() {
-            return new PackageOccurrenceArgs(location);
+        }
+
+        public PackageOccurrenceArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

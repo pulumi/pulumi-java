@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dns_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyGKEClusterArgs;
 import com.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyNetworkArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -19,10 +19,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final ResponsePolicyArgs Empty = new ResponsePolicyArgs();
 
     @Import(name="clientOperationId")
-      private final @Nullable Output<String> clientOperationId;
+    private @Nullable Output<String> clientOperationId;
 
-    public Output<String> clientOperationId() {
-        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
+    public Optional<Output<String>> clientOperationId() {
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     /**
@@ -30,10 +30,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="gkeClusters")
-      private final @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
+    private @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
-    public Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters() {
-        return this.gkeClusters == null ? Codegen.empty() : this.gkeClusters;
+    public Optional<Output<List<ResponsePolicyGKEClusterArgs>>> gkeClusters() {
+        return Optional.ofNullable(this.gkeClusters);
     }
 
     /**
@@ -52,17 +52,17 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -70,17 +70,17 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="networks")
-      private final @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
+    private @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
 
-    public Output<List<ResponsePolicyNetworkArgs>> networks() {
-        return this.networks == null ? Codegen.empty() : this.networks;
+    public Optional<Output<List<ResponsePolicyNetworkArgs>>> networks() {
+        return Optional.ofNullable(this.networks);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -88,147 +88,126 @@ public final class ResponsePolicyArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="responsePolicyName")
-      private final @Nullable Output<String> responsePolicyName;
+    private @Nullable Output<String> responsePolicyName;
 
-    public Output<String> responsePolicyName() {
-        return this.responsePolicyName == null ? Codegen.empty() : this.responsePolicyName;
+    public Optional<Output<String>> responsePolicyName() {
+        return Optional.ofNullable(this.responsePolicyName);
     }
 
-    public ResponsePolicyArgs(
-        @Nullable Output<String> clientOperationId,
-        @Nullable Output<String> description,
-        @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters,
-        @Nullable Output<String> id,
-        @Nullable Output<String> kind,
-        @Nullable Output<List<ResponsePolicyNetworkArgs>> networks,
-        @Nullable Output<String> project,
-        @Nullable Output<String> responsePolicyName) {
-        this.clientOperationId = clientOperationId;
-        this.description = description;
-        this.gkeClusters = gkeClusters;
-        this.id = id;
-        this.kind = kind;
-        this.networks = networks;
-        this.project = project;
-        this.responsePolicyName = responsePolicyName;
-    }
+    private ResponsePolicyArgs() {}
 
-    private ResponsePolicyArgs() {
-        this.clientOperationId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.gkeClusters = Codegen.empty();
-        this.id = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.networks = Codegen.empty();
-        this.project = Codegen.empty();
-        this.responsePolicyName = Codegen.empty();
+    private ResponsePolicyArgs(ResponsePolicyArgs $) {
+        this.clientOperationId = $.clientOperationId;
+        this.description = $.description;
+        this.gkeClusters = $.gkeClusters;
+        this.id = $.id;
+        this.kind = $.kind;
+        this.networks = $.networks;
+        this.project = $.project;
+        this.responsePolicyName = $.responsePolicyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResponsePolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientOperationId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> responsePolicyName;
+        private ResponsePolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResponsePolicyArgs();
         }
 
         public Builder(ResponsePolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.description = defaults.description;
-    	      this.gkeClusters = defaults.gkeClusters;
-    	      this.id = defaults.id;
-    	      this.kind = defaults.kind;
-    	      this.networks = defaults.networks;
-    	      this.project = defaults.project;
-    	      this.responsePolicyName = defaults.responsePolicyName;
+            $ = new ResponsePolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(@Nullable Output<String> clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
-        public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Codegen.ofNullable(clientOperationId);
-            return this;
+
+        public Builder clientOperationId(String clientOperationId) {
+            return clientOperationId(Output.of(clientOperationId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder gkeClusters(@Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
-            this.gkeClusters = gkeClusters;
+            $.gkeClusters = gkeClusters;
             return this;
         }
-        public Builder gkeClusters(@Nullable List<ResponsePolicyGKEClusterArgs> gkeClusters) {
-            this.gkeClusters = Codegen.ofNullable(gkeClusters);
-            return this;
+
+        public Builder gkeClusters(List<ResponsePolicyGKEClusterArgs> gkeClusters) {
+            return gkeClusters(Output.of(gkeClusters));
         }
+
         public Builder gkeClusters(ResponsePolicyGKEClusterArgs... gkeClusters) {
             return gkeClusters(List.of(gkeClusters));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder networks(@Nullable Output<List<ResponsePolicyNetworkArgs>> networks) {
-            this.networks = networks;
+            $.networks = networks;
             return this;
         }
-        public Builder networks(@Nullable List<ResponsePolicyNetworkArgs> networks) {
-            this.networks = Codegen.ofNullable(networks);
-            return this;
+
+        public Builder networks(List<ResponsePolicyNetworkArgs> networks) {
+            return networks(Output.of(networks));
         }
+
         public Builder networks(ResponsePolicyNetworkArgs... networks) {
             return networks(List.of(networks));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder responsePolicyName(@Nullable Output<String> responsePolicyName) {
-            this.responsePolicyName = responsePolicyName;
+            $.responsePolicyName = responsePolicyName;
             return this;
         }
-        public Builder responsePolicyName(@Nullable String responsePolicyName) {
-            this.responsePolicyName = Codegen.ofNullable(responsePolicyName);
-            return this;
-        }        public ResponsePolicyArgs build() {
-            return new ResponsePolicyArgs(clientOperationId, description, gkeClusters, id, kind, networks, project, responsePolicyName);
+
+        public Builder responsePolicyName(String responsePolicyName) {
+            return responsePolicyName(Output.of(responsePolicyName));
+        }
+
+        public ResponsePolicyArgs build() {
+            return $;
         }
     }
+
 }

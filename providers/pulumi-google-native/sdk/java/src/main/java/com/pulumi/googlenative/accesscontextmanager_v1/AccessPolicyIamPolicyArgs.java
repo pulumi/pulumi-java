@@ -5,13 +5,13 @@ package com.pulumi.googlenative.accesscontextmanager_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.AuditConfigArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class AccessPolicyIamPolicyArgs extends com.pulumi.resources.Resour
     public static final AccessPolicyIamPolicyArgs Empty = new AccessPolicyIamPolicyArgs();
 
     @Import(name="accessPolicyId", required=true)
-      private final Output<String> accessPolicyId;
+    private Output<String> accessPolicyId;
 
     public Output<String> accessPolicyId() {
         return this.accessPolicyId;
@@ -31,10 +31,10 @@ public final class AccessPolicyIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="auditConfigs")
-      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+    private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> auditConfigs() {
-        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
+    public Optional<Output<List<AuditConfigArgs>>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class AccessPolicyIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class AccessPolicyIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class AccessPolicyIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="updateMask")
-      private final @Nullable Output<String> updateMask;
+    private @Nullable Output<String> updateMask;
 
-    public Output<String> updateMask() {
-        return this.updateMask == null ? Codegen.empty() : this.updateMask;
+    public Optional<Output<String>> updateMask() {
+        return Optional.ofNullable(this.updateMask);
     }
 
     /**
@@ -75,121 +75,107 @@ public final class AccessPolicyIamPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public AccessPolicyIamPolicyArgs(
-        Output<String> accessPolicyId,
-        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Output<List<BindingArgs>> bindings,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> updateMask,
-        @Nullable Output<Integer> version) {
-        this.accessPolicyId = Objects.requireNonNull(accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
-        this.auditConfigs = auditConfigs;
-        this.bindings = bindings;
-        this.etag = etag;
-        this.updateMask = updateMask;
-        this.version = version;
-    }
+    private AccessPolicyIamPolicyArgs() {}
 
-    private AccessPolicyIamPolicyArgs() {
-        this.accessPolicyId = Codegen.empty();
-        this.auditConfigs = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.updateMask = Codegen.empty();
-        this.version = Codegen.empty();
+    private AccessPolicyIamPolicyArgs(AccessPolicyIamPolicyArgs $) {
+        this.accessPolicyId = $.accessPolicyId;
+        this.auditConfigs = $.auditConfigs;
+        this.bindings = $.bindings;
+        this.etag = $.etag;
+        this.updateMask = $.updateMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AccessPolicyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> accessPolicyId;
-        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> updateMask;
-        private @Nullable Output<Integer> version;
+        private AccessPolicyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AccessPolicyIamPolicyArgs();
         }
 
         public Builder(AccessPolicyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessPolicyId = defaults.accessPolicyId;
-    	      this.auditConfigs = defaults.auditConfigs;
-    	      this.bindings = defaults.bindings;
-    	      this.etag = defaults.etag;
-    	      this.updateMask = defaults.updateMask;
-    	      this.version = defaults.version;
+            $ = new AccessPolicyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessPolicyId(Output<String> accessPolicyId) {
-            this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
+            $.accessPolicyId = accessPolicyId;
             return this;
         }
+
         public Builder accessPolicyId(String accessPolicyId) {
-            this.accessPolicyId = Output.of(Objects.requireNonNull(accessPolicyId));
-            return this;
+            return accessPolicyId(Output.of(accessPolicyId));
         }
+
         public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
-            this.auditConfigs = auditConfigs;
+            $.auditConfigs = auditConfigs;
             return this;
         }
-        public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Codegen.ofNullable(auditConfigs);
-            return this;
+
+        public Builder auditConfigs(List<AuditConfigArgs> auditConfigs) {
+            return auditConfigs(Output.of(auditConfigs));
         }
+
         public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
+
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder updateMask(@Nullable Output<String> updateMask) {
-            this.updateMask = updateMask;
+            $.updateMask = updateMask;
             return this;
         }
-        public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Codegen.ofNullable(updateMask);
-            return this;
+
+        public Builder updateMask(String updateMask) {
+            return updateMask(Output.of(updateMask));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public AccessPolicyIamPolicyArgs build() {
-            return new AccessPolicyIamPolicyArgs(accessPolicyId, auditConfigs, bindings, etag, updateMask, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public AccessPolicyIamPolicyArgs build() {
+            $.accessPolicyId = Objects.requireNonNull($.accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

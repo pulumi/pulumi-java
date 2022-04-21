@@ -22,7 +22,7 @@ public final class ChannelCredentialsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="certificates", required=true)
-      private final TlsCertificatePathsResponse certificates;
+    private TlsCertificatePathsResponse certificates;
 
     public TlsCertificatePathsResponse certificates() {
         return this.certificates;
@@ -33,55 +33,52 @@ public final class ChannelCredentialsResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="channelCredentialType", required=true)
-      private final String channelCredentialType;
+    private String channelCredentialType;
 
     public String channelCredentialType() {
         return this.channelCredentialType;
     }
 
-    public ChannelCredentialsResponse(
-        TlsCertificatePathsResponse certificates,
-        String channelCredentialType) {
-        this.certificates = Objects.requireNonNull(certificates, "expected parameter 'certificates' to be non-null");
-        this.channelCredentialType = Objects.requireNonNull(channelCredentialType, "expected parameter 'channelCredentialType' to be non-null");
-    }
+    private ChannelCredentialsResponse() {}
 
-    private ChannelCredentialsResponse() {
-        this.certificates = null;
-        this.channelCredentialType = null;
+    private ChannelCredentialsResponse(ChannelCredentialsResponse $) {
+        this.certificates = $.certificates;
+        this.channelCredentialType = $.channelCredentialType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ChannelCredentialsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TlsCertificatePathsResponse certificates;
-        private String channelCredentialType;
+        private ChannelCredentialsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ChannelCredentialsResponse();
         }
 
         public Builder(ChannelCredentialsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificates = defaults.certificates;
-    	      this.channelCredentialType = defaults.channelCredentialType;
+            $ = new ChannelCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificates(TlsCertificatePathsResponse certificates) {
-            this.certificates = Objects.requireNonNull(certificates);
+            $.certificates = certificates;
             return this;
         }
+
         public Builder channelCredentialType(String channelCredentialType) {
-            this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
+            $.channelCredentialType = channelCredentialType;
             return this;
-        }        public ChannelCredentialsResponse build() {
-            return new ChannelCredentialsResponse(certificates, channelCredentialType);
+        }
+
+        public ChannelCredentialsResponse build() {
+            $.certificates = Objects.requireNonNull($.certificates, "expected parameter 'certificates' to be non-null");
+            $.channelCredentialType = Objects.requireNonNull($.channelCredentialType, "expected parameter 'channelCredentialType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -34,7 +34,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
      * 
      */
     @Import(name="file", required=true)
-      private final OSPolicyResourceFileResponse file;
+    private OSPolicyResourceFileResponse file;
 
     public OSPolicyResourceFileResponse file() {
         return this.file;
@@ -45,7 +45,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
      * 
      */
     @Import(name="interpreter", required=true)
-      private final String interpreter;
+    private String interpreter;
 
     public String interpreter() {
         return this.interpreter;
@@ -56,7 +56,7 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
      * 
      */
     @Import(name="outputFilePath", required=true)
-      private final String outputFilePath;
+    private String outputFilePath;
 
     public String outputFilePath() {
         return this.outputFilePath;
@@ -67,85 +67,77 @@ public final class OSPolicyResourceExecResourceExecResponse extends com.pulumi.r
      * 
      */
     @Import(name="script", required=true)
-      private final String script;
+    private String script;
 
     public String script() {
         return this.script;
     }
 
-    public OSPolicyResourceExecResourceExecResponse(
-        List<String> args,
-        OSPolicyResourceFileResponse file,
-        String interpreter,
-        String outputFilePath,
-        String script) {
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.interpreter = Objects.requireNonNull(interpreter, "expected parameter 'interpreter' to be non-null");
-        this.outputFilePath = Objects.requireNonNull(outputFilePath, "expected parameter 'outputFilePath' to be non-null");
-        this.script = Objects.requireNonNull(script, "expected parameter 'script' to be non-null");
-    }
+    private OSPolicyResourceExecResourceExecResponse() {}
 
-    private OSPolicyResourceExecResourceExecResponse() {
-        this.args = List.of();
-        this.file = null;
-        this.interpreter = null;
-        this.outputFilePath = null;
-        this.script = null;
+    private OSPolicyResourceExecResourceExecResponse(OSPolicyResourceExecResourceExecResponse $) {
+        this.args = $.args;
+        this.file = $.file;
+        this.interpreter = $.interpreter;
+        this.outputFilePath = $.outputFilePath;
+        this.script = $.script;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceExecResourceExecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> args;
-        private OSPolicyResourceFileResponse file;
-        private String interpreter;
-        private String outputFilePath;
-        private String script;
+        private OSPolicyResourceExecResourceExecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceExecResourceExecResponse();
         }
 
         public Builder(OSPolicyResourceExecResourceExecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.file = defaults.file;
-    	      this.interpreter = defaults.interpreter;
-    	      this.outputFilePath = defaults.outputFilePath;
-    	      this.script = defaults.script;
+            $ = new OSPolicyResourceExecResourceExecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder file(OSPolicyResourceFileResponse file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder interpreter(String interpreter) {
-            this.interpreter = Objects.requireNonNull(interpreter);
+            $.interpreter = interpreter;
             return this;
         }
+
         public Builder outputFilePath(String outputFilePath) {
-            this.outputFilePath = Objects.requireNonNull(outputFilePath);
+            $.outputFilePath = outputFilePath;
             return this;
         }
+
         public Builder script(String script) {
-            this.script = Objects.requireNonNull(script);
+            $.script = script;
             return this;
-        }        public OSPolicyResourceExecResourceExecResponse build() {
-            return new OSPolicyResourceExecResourceExecResponse(args, file, interpreter, outputFilePath, script);
+        }
+
+        public OSPolicyResourceExecResourceExecResponse build() {
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            $.interpreter = Objects.requireNonNull($.interpreter, "expected parameter 'interpreter' to be non-null");
+            $.outputFilePath = Objects.requireNonNull($.outputFilePath, "expected parameter 'outputFilePath' to be non-null");
+            $.script = Objects.requireNonNull($.script, "expected parameter 'script' to be non-null");
+            return $;
         }
     }
+
 }

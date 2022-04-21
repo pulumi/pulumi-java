@@ -22,7 +22,7 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
      * 
      */
     @Import(name="allowedValues", required=true)
-      private final List<String> allowedValues;
+    private List<String> allowedValues;
 
     public List<String> allowedValues() {
         return this.allowedValues;
@@ -33,61 +33,60 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
      * 
      */
     @Import(name="deniedValues", required=true)
-      private final List<String> deniedValues;
+    private List<String> deniedValues;
 
     public List<String> deniedValues() {
         return this.deniedValues;
     }
 
-    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(
-        List<String> allowedValues,
-        List<String> deniedValues) {
-        this.allowedValues = Objects.requireNonNull(allowedValues, "expected parameter 'allowedValues' to be non-null");
-        this.deniedValues = Objects.requireNonNull(deniedValues, "expected parameter 'deniedValues' to be non-null");
-    }
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse() {}
 
-    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse() {
-        this.allowedValues = List.of();
-        this.deniedValues = List.of();
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse $) {
+        this.allowedValues = $.allowedValues;
+        this.deniedValues = $.deniedValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedValues;
-        private List<String> deniedValues;
+        private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse();
         }
 
         public Builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.deniedValues = defaults.deniedValues;
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(List<String> allowedValues) {
-            this.allowedValues = Objects.requireNonNull(allowedValues);
+            $.allowedValues = allowedValues;
             return this;
         }
+
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder deniedValues(List<String> deniedValues) {
-            this.deniedValues = Objects.requireNonNull(deniedValues);
+            $.deniedValues = deniedValues;
             return this;
         }
+
         public Builder deniedValues(String... deniedValues) {
             return deniedValues(List.of(deniedValues));
-        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse build() {
-            return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(allowedValues, deniedValues);
+        }
+
+        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse build() {
+            $.allowedValues = Objects.requireNonNull($.allowedValues, "expected parameter 'allowedValues' to be non-null");
+            $.deniedValues = Objects.requireNonNull($.deniedValues, "expected parameter 'deniedValues' to be non-null");
+            return $;
         }
     }
+
 }

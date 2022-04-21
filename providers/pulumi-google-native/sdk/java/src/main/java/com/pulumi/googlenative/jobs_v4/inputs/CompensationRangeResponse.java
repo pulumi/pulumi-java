@@ -21,7 +21,7 @@ public final class CompensationRangeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxCompensation", required=true)
-      private final MoneyResponse maxCompensation;
+    private MoneyResponse maxCompensation;
 
     public MoneyResponse maxCompensation() {
         return this.maxCompensation;
@@ -32,55 +32,52 @@ public final class CompensationRangeResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minCompensation", required=true)
-      private final MoneyResponse minCompensation;
+    private MoneyResponse minCompensation;
 
     public MoneyResponse minCompensation() {
         return this.minCompensation;
     }
 
-    public CompensationRangeResponse(
-        MoneyResponse maxCompensation,
-        MoneyResponse minCompensation) {
-        this.maxCompensation = Objects.requireNonNull(maxCompensation, "expected parameter 'maxCompensation' to be non-null");
-        this.minCompensation = Objects.requireNonNull(minCompensation, "expected parameter 'minCompensation' to be non-null");
-    }
+    private CompensationRangeResponse() {}
 
-    private CompensationRangeResponse() {
-        this.maxCompensation = null;
-        this.minCompensation = null;
+    private CompensationRangeResponse(CompensationRangeResponse $) {
+        this.maxCompensation = $.maxCompensation;
+        this.minCompensation = $.minCompensation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompensationRangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MoneyResponse maxCompensation;
-        private MoneyResponse minCompensation;
+        private CompensationRangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompensationRangeResponse();
         }
 
         public Builder(CompensationRangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxCompensation = defaults.maxCompensation;
-    	      this.minCompensation = defaults.minCompensation;
+            $ = new CompensationRangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxCompensation(MoneyResponse maxCompensation) {
-            this.maxCompensation = Objects.requireNonNull(maxCompensation);
+            $.maxCompensation = maxCompensation;
             return this;
         }
+
         public Builder minCompensation(MoneyResponse minCompensation) {
-            this.minCompensation = Objects.requireNonNull(minCompensation);
+            $.minCompensation = minCompensation;
             return this;
-        }        public CompensationRangeResponse build() {
-            return new CompensationRangeResponse(maxCompensation, minCompensation);
+        }
+
+        public CompensationRangeResponse build() {
+            $.maxCompensation = Objects.requireNonNull($.maxCompensation, "expected parameter 'maxCompensation' to be non-null");
+            $.minCompensation = Objects.requireNonNull($.minCompensation, "expected parameter 'minCompensation' to be non-null");
+            return $;
         }
     }
+
 }

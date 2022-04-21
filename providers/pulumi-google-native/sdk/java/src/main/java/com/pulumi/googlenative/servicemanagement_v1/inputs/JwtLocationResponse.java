@@ -21,7 +21,7 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="header", required=true)
-      private final String header;
+    private String header;
 
     public String header() {
         return this.header;
@@ -32,7 +32,7 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -43,64 +43,59 @@ public final class JwtLocationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="valuePrefix", required=true)
-      private final String valuePrefix;
+    private String valuePrefix;
 
     public String valuePrefix() {
         return this.valuePrefix;
     }
 
-    public JwtLocationResponse(
-        String header,
-        String query,
-        String valuePrefix) {
-        this.header = Objects.requireNonNull(header, "expected parameter 'header' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.valuePrefix = Objects.requireNonNull(valuePrefix, "expected parameter 'valuePrefix' to be non-null");
-    }
+    private JwtLocationResponse() {}
 
-    private JwtLocationResponse() {
-        this.header = null;
-        this.query = null;
-        this.valuePrefix = null;
+    private JwtLocationResponse(JwtLocationResponse $) {
+        this.header = $.header;
+        this.query = $.query;
+        this.valuePrefix = $.valuePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtLocationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String header;
-        private String query;
-        private String valuePrefix;
+        private JwtLocationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtLocationResponse();
         }
 
         public Builder(JwtLocationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.query = defaults.query;
-    	      this.valuePrefix = defaults.valuePrefix;
+            $ = new JwtLocationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder header(String header) {
-            this.header = Objects.requireNonNull(header);
+            $.header = header;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder valuePrefix(String valuePrefix) {
-            this.valuePrefix = Objects.requireNonNull(valuePrefix);
+            $.valuePrefix = valuePrefix;
             return this;
-        }        public JwtLocationResponse build() {
-            return new JwtLocationResponse(header, query, valuePrefix);
+        }
+
+        public JwtLocationResponse build() {
+            $.header = Objects.requireNonNull($.header, "expected parameter 'header' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.valuePrefix = Objects.requireNonNull($.valuePrefix, "expected parameter 'valuePrefix' to be non-null");
+            return $;
         }
     }
+
 }

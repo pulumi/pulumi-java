@@ -26,7 +26,7 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="accessSelector", required=true)
-      private final AccessSelectorResponse accessSelector;
+    private AccessSelectorResponse accessSelector;
 
     public AccessSelectorResponse accessSelector() {
         return this.accessSelector;
@@ -37,7 +37,7 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="conditionContext", required=true)
-      private final ConditionContextResponse conditionContext;
+    private ConditionContextResponse conditionContext;
 
     public ConditionContextResponse conditionContext() {
         return this.conditionContext;
@@ -48,7 +48,7 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="identitySelector", required=true)
-      private final IdentitySelectorResponse identitySelector;
+    private IdentitySelectorResponse identitySelector;
 
     public IdentitySelectorResponse identitySelector() {
         return this.identitySelector;
@@ -59,7 +59,7 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="options", required=true)
-      private final OptionsResponse options;
+    private OptionsResponse options;
 
     public OptionsResponse options() {
         return this.options;
@@ -70,7 +70,7 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="resourceSelector", required=true)
-      private final ResourceSelectorResponse resourceSelector;
+    private ResourceSelectorResponse resourceSelector;
 
     public ResourceSelectorResponse resourceSelector() {
         return this.resourceSelector;
@@ -81,91 +81,80 @@ public final class IamPolicyAnalysisQueryResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="scope", required=true)
-      private final String scope;
+    private String scope;
 
     public String scope() {
         return this.scope;
     }
 
-    public IamPolicyAnalysisQueryResponse(
-        AccessSelectorResponse accessSelector,
-        ConditionContextResponse conditionContext,
-        IdentitySelectorResponse identitySelector,
-        OptionsResponse options,
-        ResourceSelectorResponse resourceSelector,
-        String scope) {
-        this.accessSelector = Objects.requireNonNull(accessSelector, "expected parameter 'accessSelector' to be non-null");
-        this.conditionContext = Objects.requireNonNull(conditionContext, "expected parameter 'conditionContext' to be non-null");
-        this.identitySelector = Objects.requireNonNull(identitySelector, "expected parameter 'identitySelector' to be non-null");
-        this.options = Objects.requireNonNull(options, "expected parameter 'options' to be non-null");
-        this.resourceSelector = Objects.requireNonNull(resourceSelector, "expected parameter 'resourceSelector' to be non-null");
-        this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
-    }
+    private IamPolicyAnalysisQueryResponse() {}
 
-    private IamPolicyAnalysisQueryResponse() {
-        this.accessSelector = null;
-        this.conditionContext = null;
-        this.identitySelector = null;
-        this.options = null;
-        this.resourceSelector = null;
-        this.scope = null;
+    private IamPolicyAnalysisQueryResponse(IamPolicyAnalysisQueryResponse $) {
+        this.accessSelector = $.accessSelector;
+        this.conditionContext = $.conditionContext;
+        this.identitySelector = $.identitySelector;
+        this.options = $.options;
+        this.resourceSelector = $.resourceSelector;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IamPolicyAnalysisQueryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AccessSelectorResponse accessSelector;
-        private ConditionContextResponse conditionContext;
-        private IdentitySelectorResponse identitySelector;
-        private OptionsResponse options;
-        private ResourceSelectorResponse resourceSelector;
-        private String scope;
+        private IamPolicyAnalysisQueryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IamPolicyAnalysisQueryResponse();
         }
 
         public Builder(IamPolicyAnalysisQueryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessSelector = defaults.accessSelector;
-    	      this.conditionContext = defaults.conditionContext;
-    	      this.identitySelector = defaults.identitySelector;
-    	      this.options = defaults.options;
-    	      this.resourceSelector = defaults.resourceSelector;
-    	      this.scope = defaults.scope;
+            $ = new IamPolicyAnalysisQueryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessSelector(AccessSelectorResponse accessSelector) {
-            this.accessSelector = Objects.requireNonNull(accessSelector);
+            $.accessSelector = accessSelector;
             return this;
         }
+
         public Builder conditionContext(ConditionContextResponse conditionContext) {
-            this.conditionContext = Objects.requireNonNull(conditionContext);
+            $.conditionContext = conditionContext;
             return this;
         }
+
         public Builder identitySelector(IdentitySelectorResponse identitySelector) {
-            this.identitySelector = Objects.requireNonNull(identitySelector);
+            $.identitySelector = identitySelector;
             return this;
         }
+
         public Builder options(OptionsResponse options) {
-            this.options = Objects.requireNonNull(options);
+            $.options = options;
             return this;
         }
+
         public Builder resourceSelector(ResourceSelectorResponse resourceSelector) {
-            this.resourceSelector = Objects.requireNonNull(resourceSelector);
+            $.resourceSelector = resourceSelector;
             return this;
         }
+
         public Builder scope(String scope) {
-            this.scope = Objects.requireNonNull(scope);
+            $.scope = scope;
             return this;
-        }        public IamPolicyAnalysisQueryResponse build() {
-            return new IamPolicyAnalysisQueryResponse(accessSelector, conditionContext, identitySelector, options, resourceSelector, scope);
+        }
+
+        public IamPolicyAnalysisQueryResponse build() {
+            $.accessSelector = Objects.requireNonNull($.accessSelector, "expected parameter 'accessSelector' to be non-null");
+            $.conditionContext = Objects.requireNonNull($.conditionContext, "expected parameter 'conditionContext' to be non-null");
+            $.identitySelector = Objects.requireNonNull($.identitySelector, "expected parameter 'identitySelector' to be non-null");
+            $.options = Objects.requireNonNull($.options, "expected parameter 'options' to be non-null");
+            $.resourceSelector = Objects.requireNonNull($.resourceSelector, "expected parameter 'resourceSelector' to be non-null");
+            $.scope = Objects.requireNonNull($.scope, "expected parameter 'scope' to be non-null");
+            return $;
         }
     }
+
 }

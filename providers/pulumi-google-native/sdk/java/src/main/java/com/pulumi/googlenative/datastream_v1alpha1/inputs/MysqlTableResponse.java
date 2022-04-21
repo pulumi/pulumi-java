@@ -23,7 +23,7 @@ public final class MysqlTableResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mysqlColumns", required=true)
-      private final List<MysqlColumnResponse> mysqlColumns;
+    private List<MysqlColumnResponse> mysqlColumns;
 
     public List<MysqlColumnResponse> mysqlColumns() {
         return this.mysqlColumns;
@@ -34,58 +34,56 @@ public final class MysqlTableResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tableName", required=true)
-      private final String tableName;
+    private String tableName;
 
     public String tableName() {
         return this.tableName;
     }
 
-    public MysqlTableResponse(
-        List<MysqlColumnResponse> mysqlColumns,
-        String tableName) {
-        this.mysqlColumns = Objects.requireNonNull(mysqlColumns, "expected parameter 'mysqlColumns' to be non-null");
-        this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
-    }
+    private MysqlTableResponse() {}
 
-    private MysqlTableResponse() {
-        this.mysqlColumns = List.of();
-        this.tableName = null;
+    private MysqlTableResponse(MysqlTableResponse $) {
+        this.mysqlColumns = $.mysqlColumns;
+        this.tableName = $.tableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<MysqlColumnResponse> mysqlColumns;
-        private String tableName;
+        private MysqlTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlTableResponse();
         }
 
         public Builder(MysqlTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mysqlColumns = defaults.mysqlColumns;
-    	      this.tableName = defaults.tableName;
+            $ = new MysqlTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder mysqlColumns(List<MysqlColumnResponse> mysqlColumns) {
-            this.mysqlColumns = Objects.requireNonNull(mysqlColumns);
+            $.mysqlColumns = mysqlColumns;
             return this;
         }
+
         public Builder mysqlColumns(MysqlColumnResponse... mysqlColumns) {
             return mysqlColumns(List.of(mysqlColumns));
         }
+
         public Builder tableName(String tableName) {
-            this.tableName = Objects.requireNonNull(tableName);
+            $.tableName = tableName;
             return this;
-        }        public MysqlTableResponse build() {
-            return new MysqlTableResponse(mysqlColumns, tableName);
+        }
+
+        public MysqlTableResponse build() {
+            $.mysqlColumns = Objects.requireNonNull($.mysqlColumns, "expected parameter 'mysqlColumns' to be non-null");
+            $.tableName = Objects.requireNonNull($.tableName, "expected parameter 'tableName' to be non-null");
+            return $;
         }
     }
+
 }

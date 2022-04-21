@@ -23,7 +23,7 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="accessConfig", required=true)
-      private final AccessConfigResponse accessConfig;
+    private AccessConfigResponse accessConfig;
 
     public AccessConfigResponse accessConfig() {
         return this.accessConfig;
@@ -34,7 +34,7 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -45,64 +45,59 @@ public final class NetworkEndpointResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
     }
 
-    public NetworkEndpointResponse(
-        AccessConfigResponse accessConfig,
-        String ipAddress,
-        Integer port) {
-        this.accessConfig = Objects.requireNonNull(accessConfig, "expected parameter 'accessConfig' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-    }
+    private NetworkEndpointResponse() {}
 
-    private NetworkEndpointResponse() {
-        this.accessConfig = null;
-        this.ipAddress = null;
-        this.port = null;
+    private NetworkEndpointResponse(NetworkEndpointResponse $) {
+        this.accessConfig = $.accessConfig;
+        this.ipAddress = $.ipAddress;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AccessConfigResponse accessConfig;
-        private String ipAddress;
-        private Integer port;
+        private NetworkEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkEndpointResponse();
         }
 
         public Builder(NetworkEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessConfig = defaults.accessConfig;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.port = defaults.port;
+            $ = new NetworkEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder accessConfig(AccessConfigResponse accessConfig) {
-            this.accessConfig = Objects.requireNonNull(accessConfig);
+            $.accessConfig = accessConfig;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
-        }        public NetworkEndpointResponse build() {
-            return new NetworkEndpointResponse(accessConfig, ipAddress, port);
+        }
+
+        public NetworkEndpointResponse build() {
+            $.accessConfig = Objects.requireNonNull($.accessConfig, "expected parameter 'accessConfig' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

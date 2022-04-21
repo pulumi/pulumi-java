@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.AttestationArgs;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DetailsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attestation", required=true)
-      private final Output<AttestationArgs> attestation;
+    private Output<AttestationArgs> attestation;
 
     public Output<AttestationArgs> attestation() {
         return this.attestation;
     }
 
-    public DetailsArgs(Output<AttestationArgs> attestation) {
-        this.attestation = Objects.requireNonNull(attestation, "expected parameter 'attestation' to be non-null");
-    }
+    private DetailsArgs() {}
 
-    private DetailsArgs() {
-        this.attestation = Codegen.empty();
+    private DetailsArgs(DetailsArgs $) {
+        this.attestation = $.attestation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetailsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<AttestationArgs> attestation;
+        private DetailsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetailsArgs();
         }
 
         public Builder(DetailsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attestation = defaults.attestation;
+            $ = new DetailsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attestation(Output<AttestationArgs> attestation) {
-            this.attestation = Objects.requireNonNull(attestation);
+            $.attestation = attestation;
             return this;
         }
+
         public Builder attestation(AttestationArgs attestation) {
-            this.attestation = Output.of(Objects.requireNonNull(attestation));
-            return this;
-        }        public DetailsArgs build() {
-            return new DetailsArgs(attestation);
+            return attestation(Output.of(attestation));
+        }
+
+        public DetailsArgs build() {
+            $.attestation = Objects.requireNonNull($.attestation, "expected parameter 'attestation' to be non-null");
+            return $;
         }
     }
+
 }

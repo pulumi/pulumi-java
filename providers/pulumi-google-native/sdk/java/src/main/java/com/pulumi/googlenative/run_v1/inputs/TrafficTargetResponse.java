@@ -23,7 +23,7 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="configurationName", required=true)
-      private final String configurationName;
+    private String configurationName;
 
     public String configurationName() {
         return this.configurationName;
@@ -34,7 +34,7 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="latestRevision", required=true)
-      private final Boolean latestRevision;
+    private Boolean latestRevision;
 
     public Boolean latestRevision() {
         return this.latestRevision;
@@ -45,7 +45,7 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="percent", required=true)
-      private final Integer percent;
+    private Integer percent;
 
     public Integer percent() {
         return this.percent;
@@ -56,7 +56,7 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="revisionName", required=true)
-      private final String revisionName;
+    private String revisionName;
 
     public String revisionName() {
         return this.revisionName;
@@ -67,7 +67,7 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
@@ -78,91 +78,80 @@ public final class TrafficTargetResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public TrafficTargetResponse(
-        String configurationName,
-        Boolean latestRevision,
-        Integer percent,
-        String revisionName,
-        String tag,
-        String url) {
-        this.configurationName = Objects.requireNonNull(configurationName, "expected parameter 'configurationName' to be non-null");
-        this.latestRevision = Objects.requireNonNull(latestRevision, "expected parameter 'latestRevision' to be non-null");
-        this.percent = Objects.requireNonNull(percent, "expected parameter 'percent' to be non-null");
-        this.revisionName = Objects.requireNonNull(revisionName, "expected parameter 'revisionName' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private TrafficTargetResponse() {}
 
-    private TrafficTargetResponse() {
-        this.configurationName = null;
-        this.latestRevision = null;
-        this.percent = null;
-        this.revisionName = null;
-        this.tag = null;
-        this.url = null;
+    private TrafficTargetResponse(TrafficTargetResponse $) {
+        this.configurationName = $.configurationName;
+        this.latestRevision = $.latestRevision;
+        this.percent = $.percent;
+        this.revisionName = $.revisionName;
+        this.tag = $.tag;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TrafficTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String configurationName;
-        private Boolean latestRevision;
-        private Integer percent;
-        private String revisionName;
-        private String tag;
-        private String url;
+        private TrafficTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TrafficTargetResponse();
         }
 
         public Builder(TrafficTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configurationName = defaults.configurationName;
-    	      this.latestRevision = defaults.latestRevision;
-    	      this.percent = defaults.percent;
-    	      this.revisionName = defaults.revisionName;
-    	      this.tag = defaults.tag;
-    	      this.url = defaults.url;
+            $ = new TrafficTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder configurationName(String configurationName) {
-            this.configurationName = Objects.requireNonNull(configurationName);
+            $.configurationName = configurationName;
             return this;
         }
+
         public Builder latestRevision(Boolean latestRevision) {
-            this.latestRevision = Objects.requireNonNull(latestRevision);
+            $.latestRevision = latestRevision;
             return this;
         }
+
         public Builder percent(Integer percent) {
-            this.percent = Objects.requireNonNull(percent);
+            $.percent = percent;
             return this;
         }
+
         public Builder revisionName(String revisionName) {
-            this.revisionName = Objects.requireNonNull(revisionName);
+            $.revisionName = revisionName;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public TrafficTargetResponse build() {
-            return new TrafficTargetResponse(configurationName, latestRevision, percent, revisionName, tag, url);
+        }
+
+        public TrafficTargetResponse build() {
+            $.configurationName = Objects.requireNonNull($.configurationName, "expected parameter 'configurationName' to be non-null");
+            $.latestRevision = Objects.requireNonNull($.latestRevision, "expected parameter 'latestRevision' to be non-null");
+            $.percent = Objects.requireNonNull($.percent, "expected parameter 'percent' to be non-null");
+            $.revisionName = Objects.requireNonNull($.revisionName, "expected parameter 'revisionName' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

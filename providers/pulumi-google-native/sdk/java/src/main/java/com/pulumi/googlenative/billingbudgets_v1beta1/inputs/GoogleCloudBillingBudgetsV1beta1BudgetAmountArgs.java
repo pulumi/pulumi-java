@@ -5,10 +5,10 @@ package com.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs;
 import com.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleTypeMoneyArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends com.
      * 
      */
     @Import(name="lastPeriodAmount")
-      private final @Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
+    private @Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
 
-    public Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount() {
-        return this.lastPeriodAmount == null ? Codegen.empty() : this.lastPeriodAmount;
+    public Optional<Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs>> lastPeriodAmount() {
+        return Optional.ofNullable(this.lastPeriodAmount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends com.
      * 
      */
     @Import(name="specifiedAmount")
-      private final @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
+    private @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
 
-    public Output<GoogleTypeMoneyArgs> specifiedAmount() {
-        return this.specifiedAmount == null ? Codegen.empty() : this.specifiedAmount;
+    public Optional<Output<GoogleTypeMoneyArgs>> specifiedAmount() {
+        return Optional.ofNullable(this.specifiedAmount);
     }
 
-    public GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs(
-        @Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount,
-        @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount) {
-        this.lastPeriodAmount = lastPeriodAmount;
-        this.specifiedAmount = specifiedAmount;
-    }
+    private GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs() {}
 
-    private GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs() {
-        this.lastPeriodAmount = Codegen.empty();
-        this.specifiedAmount = Codegen.empty();
+    private GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs $) {
+        this.lastPeriodAmount = $.lastPeriodAmount;
+        this.specifiedAmount = $.specifiedAmount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
-        private @Nullable Output<GoogleTypeMoneyArgs> specifiedAmount;
+        private GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs();
         }
 
         public Builder(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastPeriodAmount = defaults.lastPeriodAmount;
-    	      this.specifiedAmount = defaults.specifiedAmount;
+            $ = new GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastPeriodAmount(@Nullable Output<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount) {
-            this.lastPeriodAmount = lastPeriodAmount;
+            $.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
-        public Builder lastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs lastPeriodAmount) {
-            this.lastPeriodAmount = Codegen.ofNullable(lastPeriodAmount);
-            return this;
+
+        public Builder lastPeriodAmount(GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs lastPeriodAmount) {
+            return lastPeriodAmount(Output.of(lastPeriodAmount));
         }
+
         public Builder specifiedAmount(@Nullable Output<GoogleTypeMoneyArgs> specifiedAmount) {
-            this.specifiedAmount = specifiedAmount;
+            $.specifiedAmount = specifiedAmount;
             return this;
         }
-        public Builder specifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
-            this.specifiedAmount = Codegen.ofNullable(specifiedAmount);
-            return this;
-        }        public GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs build() {
-            return new GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs(lastPeriodAmount, specifiedAmount);
+
+        public Builder specifiedAmount(GoogleTypeMoneyArgs specifiedAmount) {
+            return specifiedAmount(Output.of(specifiedAmount));
+        }
+
+        public GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs build() {
+            return $;
         }
     }
+
 }

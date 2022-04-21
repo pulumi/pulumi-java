@@ -5,12 +5,12 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AcceleratorConfigArgs;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__DiskConfigArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="acceleratorConfig")
-      private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
+    private @Nullable Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
 
-    public Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig() {
-        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
+    public Optional<Output<GoogleCloudMlV1__AcceleratorConfigArgs>> acceleratorConfig() {
+        return Optional.ofNullable(this.acceleratorConfig);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="containerArgs")
-      private final @Nullable Output<List<String>> containerArgs;
+    private @Nullable Output<List<String>> containerArgs;
 
-    public Output<List<String>> containerArgs() {
-        return this.containerArgs == null ? Codegen.empty() : this.containerArgs;
+    public Optional<Output<List<String>>> containerArgs() {
+        return Optional.ofNullable(this.containerArgs);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="containerCommand")
-      private final @Nullable Output<List<String>> containerCommand;
+    private @Nullable Output<List<String>> containerCommand;
 
-    public Output<List<String>> containerCommand() {
-        return this.containerCommand == null ? Codegen.empty() : this.containerCommand;
+    public Optional<Output<List<String>>> containerCommand() {
+        return Optional.ofNullable(this.containerCommand);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="diskConfig")
-      private final @Nullable Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig;
+    private @Nullable Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig;
 
-    public Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig() {
-        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
+    public Optional<Output<GoogleCloudMlV1__DiskConfigArgs>> diskConfig() {
+        return Optional.ofNullable(this.diskConfig);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="imageUri")
-      private final @Nullable Output<String> imageUri;
+    private @Nullable Output<String> imageUri;
 
-    public Output<String> imageUri() {
-        return this.imageUri == null ? Codegen.empty() : this.imageUri;
+    public Optional<Output<String>> imageUri() {
+        return Optional.ofNullable(this.imageUri);
     }
 
     /**
@@ -82,121 +82,106 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="tpuTfVersion")
-      private final @Nullable Output<String> tpuTfVersion;
+    private @Nullable Output<String> tpuTfVersion;
 
-    public Output<String> tpuTfVersion() {
-        return this.tpuTfVersion == null ? Codegen.empty() : this.tpuTfVersion;
+    public Optional<Output<String>> tpuTfVersion() {
+        return Optional.ofNullable(this.tpuTfVersion);
     }
 
-    public GoogleCloudMlV1__ReplicaConfigArgs(
-        @Nullable Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig,
-        @Nullable Output<List<String>> containerArgs,
-        @Nullable Output<List<String>> containerCommand,
-        @Nullable Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig,
-        @Nullable Output<String> imageUri,
-        @Nullable Output<String> tpuTfVersion) {
-        this.acceleratorConfig = acceleratorConfig;
-        this.containerArgs = containerArgs;
-        this.containerCommand = containerCommand;
-        this.diskConfig = diskConfig;
-        this.imageUri = imageUri;
-        this.tpuTfVersion = tpuTfVersion;
-    }
+    private GoogleCloudMlV1__ReplicaConfigArgs() {}
 
-    private GoogleCloudMlV1__ReplicaConfigArgs() {
-        this.acceleratorConfig = Codegen.empty();
-        this.containerArgs = Codegen.empty();
-        this.containerCommand = Codegen.empty();
-        this.diskConfig = Codegen.empty();
-        this.imageUri = Codegen.empty();
-        this.tpuTfVersion = Codegen.empty();
+    private GoogleCloudMlV1__ReplicaConfigArgs(GoogleCloudMlV1__ReplicaConfigArgs $) {
+        this.acceleratorConfig = $.acceleratorConfig;
+        this.containerArgs = $.containerArgs;
+        this.containerCommand = $.containerCommand;
+        this.diskConfig = $.diskConfig;
+        this.imageUri = $.imageUri;
+        this.tpuTfVersion = $.tpuTfVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ReplicaConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
-        private @Nullable Output<List<String>> containerArgs;
-        private @Nullable Output<List<String>> containerCommand;
-        private @Nullable Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig;
-        private @Nullable Output<String> imageUri;
-        private @Nullable Output<String> tpuTfVersion;
+        private GoogleCloudMlV1__ReplicaConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ReplicaConfigArgs();
         }
 
         public Builder(GoogleCloudMlV1__ReplicaConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorConfig = defaults.acceleratorConfig;
-    	      this.containerArgs = defaults.containerArgs;
-    	      this.containerCommand = defaults.containerCommand;
-    	      this.diskConfig = defaults.diskConfig;
-    	      this.imageUri = defaults.imageUri;
-    	      this.tpuTfVersion = defaults.tpuTfVersion;
+            $ = new GoogleCloudMlV1__ReplicaConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorConfig(@Nullable Output<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig) {
-            this.acceleratorConfig = acceleratorConfig;
+            $.acceleratorConfig = acceleratorConfig;
             return this;
         }
-        public Builder acceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
-            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
-            return this;
+
+        public Builder acceleratorConfig(GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
+            return acceleratorConfig(Output.of(acceleratorConfig));
         }
+
         public Builder containerArgs(@Nullable Output<List<String>> containerArgs) {
-            this.containerArgs = containerArgs;
+            $.containerArgs = containerArgs;
             return this;
         }
-        public Builder containerArgs(@Nullable List<String> containerArgs) {
-            this.containerArgs = Codegen.ofNullable(containerArgs);
-            return this;
+
+        public Builder containerArgs(List<String> containerArgs) {
+            return containerArgs(Output.of(containerArgs));
         }
+
         public Builder containerArgs(String... containerArgs) {
             return containerArgs(List.of(containerArgs));
         }
+
         public Builder containerCommand(@Nullable Output<List<String>> containerCommand) {
-            this.containerCommand = containerCommand;
+            $.containerCommand = containerCommand;
             return this;
         }
-        public Builder containerCommand(@Nullable List<String> containerCommand) {
-            this.containerCommand = Codegen.ofNullable(containerCommand);
-            return this;
+
+        public Builder containerCommand(List<String> containerCommand) {
+            return containerCommand(Output.of(containerCommand));
         }
+
         public Builder containerCommand(String... containerCommand) {
             return containerCommand(List.of(containerCommand));
         }
+
         public Builder diskConfig(@Nullable Output<GoogleCloudMlV1__DiskConfigArgs> diskConfig) {
-            this.diskConfig = diskConfig;
+            $.diskConfig = diskConfig;
             return this;
         }
-        public Builder diskConfig(@Nullable GoogleCloudMlV1__DiskConfigArgs diskConfig) {
-            this.diskConfig = Codegen.ofNullable(diskConfig);
-            return this;
+
+        public Builder diskConfig(GoogleCloudMlV1__DiskConfigArgs diskConfig) {
+            return diskConfig(Output.of(diskConfig));
         }
+
         public Builder imageUri(@Nullable Output<String> imageUri) {
-            this.imageUri = imageUri;
+            $.imageUri = imageUri;
             return this;
         }
-        public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Codegen.ofNullable(imageUri);
-            return this;
+
+        public Builder imageUri(String imageUri) {
+            return imageUri(Output.of(imageUri));
         }
+
         public Builder tpuTfVersion(@Nullable Output<String> tpuTfVersion) {
-            this.tpuTfVersion = tpuTfVersion;
+            $.tpuTfVersion = tpuTfVersion;
             return this;
         }
-        public Builder tpuTfVersion(@Nullable String tpuTfVersion) {
-            this.tpuTfVersion = Codegen.ofNullable(tpuTfVersion);
-            return this;
-        }        public GoogleCloudMlV1__ReplicaConfigArgs build() {
-            return new GoogleCloudMlV1__ReplicaConfigArgs(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
+
+        public Builder tpuTfVersion(String tpuTfVersion) {
+            return tpuTfVersion(Output.of(tpuTfVersion));
+        }
+
+        public GoogleCloudMlV1__ReplicaConfigArgs build() {
+            return $;
         }
     }
+
 }

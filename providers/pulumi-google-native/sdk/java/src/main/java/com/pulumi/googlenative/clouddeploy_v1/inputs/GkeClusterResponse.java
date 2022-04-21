@@ -21,45 +21,45 @@ public final class GkeClusterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cluster", required=true)
-      private final String cluster;
+    private String cluster;
 
     public String cluster() {
         return this.cluster;
     }
 
-    public GkeClusterResponse(String cluster) {
-        this.cluster = Objects.requireNonNull(cluster, "expected parameter 'cluster' to be non-null");
-    }
+    private GkeClusterResponse() {}
 
-    private GkeClusterResponse() {
-        this.cluster = null;
+    private GkeClusterResponse(GkeClusterResponse $) {
+        this.cluster = $.cluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GkeClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cluster;
+        private GkeClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GkeClusterResponse();
         }
 
         public Builder(GkeClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cluster = defaults.cluster;
+            $ = new GkeClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cluster(String cluster) {
-            this.cluster = Objects.requireNonNull(cluster);
+            $.cluster = cluster;
             return this;
-        }        public GkeClusterResponse build() {
-            return new GkeClusterResponse(cluster);
+        }
+
+        public GkeClusterResponse build() {
+            $.cluster = Objects.requireNonNull($.cluster, "expected parameter 'cluster' to be non-null");
+            return $;
         }
     }
+
 }

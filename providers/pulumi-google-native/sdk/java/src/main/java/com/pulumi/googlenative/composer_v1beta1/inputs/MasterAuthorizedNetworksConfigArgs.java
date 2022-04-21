@@ -5,11 +5,11 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.composer_v1beta1.inputs.CidrBlockArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class MasterAuthorizedNetworksConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="cidrBlocks")
-      private final @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
+    private @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
 
-    public Output<List<CidrBlockArgs>> cidrBlocks() {
-        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
+    public Optional<Output<List<CidrBlockArgs>>> cidrBlocks() {
+        return Optional.ofNullable(this.cidrBlocks);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class MasterAuthorizedNetworksConfigArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
-    public MasterAuthorizedNetworksConfigArgs(
-        @Nullable Output<List<CidrBlockArgs>> cidrBlocks,
-        @Nullable Output<Boolean> enabled) {
-        this.cidrBlocks = cidrBlocks;
-        this.enabled = enabled;
-    }
+    private MasterAuthorizedNetworksConfigArgs() {}
 
-    private MasterAuthorizedNetworksConfigArgs() {
-        this.cidrBlocks = Codegen.empty();
-        this.enabled = Codegen.empty();
+    private MasterAuthorizedNetworksConfigArgs(MasterAuthorizedNetworksConfigArgs $) {
+        this.cidrBlocks = $.cidrBlocks;
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MasterAuthorizedNetworksConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<CidrBlockArgs>> cidrBlocks;
-        private @Nullable Output<Boolean> enabled;
+        private MasterAuthorizedNetworksConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MasterAuthorizedNetworksConfigArgs();
         }
 
         public Builder(MasterAuthorizedNetworksConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlocks = defaults.cidrBlocks;
-    	      this.enabled = defaults.enabled;
+            $ = new MasterAuthorizedNetworksConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlocks(@Nullable Output<List<CidrBlockArgs>> cidrBlocks) {
-            this.cidrBlocks = cidrBlocks;
+            $.cidrBlocks = cidrBlocks;
             return this;
         }
-        public Builder cidrBlocks(@Nullable List<CidrBlockArgs> cidrBlocks) {
-            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
-            return this;
+
+        public Builder cidrBlocks(List<CidrBlockArgs> cidrBlocks) {
+            return cidrBlocks(Output.of(cidrBlocks));
         }
+
         public Builder cidrBlocks(CidrBlockArgs... cidrBlocks) {
             return cidrBlocks(List.of(cidrBlocks));
         }
+
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
-        }        public MasterAuthorizedNetworksConfigArgs build() {
-            return new MasterAuthorizedNetworksConfigArgs(cidrBlocks, enabled);
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
+        }
+
+        public MasterAuthorizedNetworksConfigArgs build() {
+            return $;
         }
     }
+
 }

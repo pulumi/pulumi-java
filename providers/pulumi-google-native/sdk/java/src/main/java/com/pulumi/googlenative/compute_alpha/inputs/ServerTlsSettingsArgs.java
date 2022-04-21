@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.ServerTlsSettingsTlsMode;
 import com.pulumi.googlenative.compute_alpha.inputs.TlsContextArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="proxyTlsContext")
-      private final @Nullable Output<TlsContextArgs> proxyTlsContext;
+    private @Nullable Output<TlsContextArgs> proxyTlsContext;
 
-    public Output<TlsContextArgs> proxyTlsContext() {
-        return this.proxyTlsContext == null ? Codegen.empty() : this.proxyTlsContext;
+    public Optional<Output<TlsContextArgs>> proxyTlsContext() {
+        return Optional.ofNullable(this.proxyTlsContext);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="subjectAltNames")
-      private final @Nullable Output<List<String>> subjectAltNames;
+    private @Nullable Output<List<String>> subjectAltNames;
 
-    public Output<List<String>> subjectAltNames() {
-        return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
+    public Optional<Output<List<String>>> subjectAltNames() {
+        return Optional.ofNullable(this.subjectAltNames);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class ServerTlsSettingsArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="tlsMode")
-      private final @Nullable Output<ServerTlsSettingsTlsMode> tlsMode;
+    private @Nullable Output<ServerTlsSettingsTlsMode> tlsMode;
 
-    public Output<ServerTlsSettingsTlsMode> tlsMode() {
-        return this.tlsMode == null ? Codegen.empty() : this.tlsMode;
+    public Optional<Output<ServerTlsSettingsTlsMode>> tlsMode() {
+        return Optional.ofNullable(this.tlsMode);
     }
 
-    public ServerTlsSettingsArgs(
-        @Nullable Output<TlsContextArgs> proxyTlsContext,
-        @Nullable Output<List<String>> subjectAltNames,
-        @Nullable Output<ServerTlsSettingsTlsMode> tlsMode) {
-        this.proxyTlsContext = proxyTlsContext;
-        this.subjectAltNames = subjectAltNames;
-        this.tlsMode = tlsMode;
-    }
+    private ServerTlsSettingsArgs() {}
 
-    private ServerTlsSettingsArgs() {
-        this.proxyTlsContext = Codegen.empty();
-        this.subjectAltNames = Codegen.empty();
-        this.tlsMode = Codegen.empty();
+    private ServerTlsSettingsArgs(ServerTlsSettingsArgs $) {
+        this.proxyTlsContext = $.proxyTlsContext;
+        this.subjectAltNames = $.subjectAltNames;
+        this.tlsMode = $.tlsMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServerTlsSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TlsContextArgs> proxyTlsContext;
-        private @Nullable Output<List<String>> subjectAltNames;
-        private @Nullable Output<ServerTlsSettingsTlsMode> tlsMode;
+        private ServerTlsSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServerTlsSettingsArgs();
         }
 
         public Builder(ServerTlsSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.proxyTlsContext = defaults.proxyTlsContext;
-    	      this.subjectAltNames = defaults.subjectAltNames;
-    	      this.tlsMode = defaults.tlsMode;
+            $ = new ServerTlsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder proxyTlsContext(@Nullable Output<TlsContextArgs> proxyTlsContext) {
-            this.proxyTlsContext = proxyTlsContext;
+            $.proxyTlsContext = proxyTlsContext;
             return this;
         }
-        public Builder proxyTlsContext(@Nullable TlsContextArgs proxyTlsContext) {
-            this.proxyTlsContext = Codegen.ofNullable(proxyTlsContext);
-            return this;
+
+        public Builder proxyTlsContext(TlsContextArgs proxyTlsContext) {
+            return proxyTlsContext(Output.of(proxyTlsContext));
         }
+
         public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
-            this.subjectAltNames = subjectAltNames;
+            $.subjectAltNames = subjectAltNames;
             return this;
         }
-        public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
-            this.subjectAltNames = Codegen.ofNullable(subjectAltNames);
-            return this;
+
+        public Builder subjectAltNames(List<String> subjectAltNames) {
+            return subjectAltNames(Output.of(subjectAltNames));
         }
+
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
         }
+
         public Builder tlsMode(@Nullable Output<ServerTlsSettingsTlsMode> tlsMode) {
-            this.tlsMode = tlsMode;
+            $.tlsMode = tlsMode;
             return this;
         }
-        public Builder tlsMode(@Nullable ServerTlsSettingsTlsMode tlsMode) {
-            this.tlsMode = Codegen.ofNullable(tlsMode);
-            return this;
-        }        public ServerTlsSettingsArgs build() {
-            return new ServerTlsSettingsArgs(proxyTlsContext, subjectAltNames, tlsMode);
+
+        public Builder tlsMode(ServerTlsSettingsTlsMode tlsMode) {
+            return tlsMode(Output.of(tlsMode));
+        }
+
+        public ServerTlsSettingsArgs build() {
+            return $;
         }
     }
+
 }

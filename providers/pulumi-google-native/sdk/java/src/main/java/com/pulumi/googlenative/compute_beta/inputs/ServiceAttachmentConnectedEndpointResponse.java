@@ -21,7 +21,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
      * 
      */
     @Import(name="endpoint", required=true)
-      private final String endpoint;
+    private String endpoint;
 
     public String endpoint() {
         return this.endpoint;
@@ -32,7 +32,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
      * 
      */
     @Import(name="pscConnectionId", required=true)
-      private final String pscConnectionId;
+    private String pscConnectionId;
 
     public String pscConnectionId() {
         return this.pscConnectionId;
@@ -43,64 +43,59 @@ public final class ServiceAttachmentConnectedEndpointResponse extends com.pulumi
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
     }
 
-    public ServiceAttachmentConnectedEndpointResponse(
-        String endpoint,
-        String pscConnectionId,
-        String status) {
-        this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
-        this.pscConnectionId = Objects.requireNonNull(pscConnectionId, "expected parameter 'pscConnectionId' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-    }
+    private ServiceAttachmentConnectedEndpointResponse() {}
 
-    private ServiceAttachmentConnectedEndpointResponse() {
-        this.endpoint = null;
-        this.pscConnectionId = null;
-        this.status = null;
+    private ServiceAttachmentConnectedEndpointResponse(ServiceAttachmentConnectedEndpointResponse $) {
+        this.endpoint = $.endpoint;
+        this.pscConnectionId = $.pscConnectionId;
+        this.status = $.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAttachmentConnectedEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String endpoint;
-        private String pscConnectionId;
-        private String status;
+        private ServiceAttachmentConnectedEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAttachmentConnectedEndpointResponse();
         }
 
         public Builder(ServiceAttachmentConnectedEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpoint = defaults.endpoint;
-    	      this.pscConnectionId = defaults.pscConnectionId;
-    	      this.status = defaults.status;
+            $ = new ServiceAttachmentConnectedEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpoint(String endpoint) {
-            this.endpoint = Objects.requireNonNull(endpoint);
+            $.endpoint = endpoint;
             return this;
         }
+
         public Builder pscConnectionId(String pscConnectionId) {
-            this.pscConnectionId = Objects.requireNonNull(pscConnectionId);
+            $.pscConnectionId = pscConnectionId;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
-        }        public ServiceAttachmentConnectedEndpointResponse build() {
-            return new ServiceAttachmentConnectedEndpointResponse(endpoint, pscConnectionId, status);
+        }
+
+        public ServiceAttachmentConnectedEndpointResponse build() {
+            $.endpoint = Objects.requireNonNull($.endpoint, "expected parameter 'endpoint' to be non-null");
+            $.pscConnectionId = Objects.requireNonNull($.pscConnectionId, "expected parameter 'pscConnectionId' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            return $;
         }
     }
+
 }

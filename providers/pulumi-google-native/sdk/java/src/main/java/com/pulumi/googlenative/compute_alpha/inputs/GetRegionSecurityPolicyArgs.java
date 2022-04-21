@@ -15,78 +15,72 @@ public final class GetRegionSecurityPolicyArgs extends com.pulumi.resources.Invo
     public static final GetRegionSecurityPolicyArgs Empty = new GetRegionSecurityPolicyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="securityPolicy", required=true)
-      private final String securityPolicy;
+    private String securityPolicy;
 
     public String securityPolicy() {
         return this.securityPolicy;
     }
 
-    public GetRegionSecurityPolicyArgs(
-        @Nullable String project,
-        String region,
-        String securityPolicy) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.securityPolicy = Objects.requireNonNull(securityPolicy, "expected parameter 'securityPolicy' to be non-null");
-    }
+    private GetRegionSecurityPolicyArgs() {}
 
-    private GetRegionSecurityPolicyArgs() {
-        this.project = null;
-        this.region = null;
-        this.securityPolicy = null;
+    private GetRegionSecurityPolicyArgs(GetRegionSecurityPolicyArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.securityPolicy = $.securityPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionSecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String securityPolicy;
+        private GetRegionSecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionSecurityPolicyArgs();
         }
 
         public Builder(GetRegionSecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.securityPolicy = defaults.securityPolicy;
+            $ = new GetRegionSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder securityPolicy(String securityPolicy) {
-            this.securityPolicy = Objects.requireNonNull(securityPolicy);
+            $.securityPolicy = securityPolicy;
             return this;
-        }        public GetRegionSecurityPolicyArgs build() {
-            return new GetRegionSecurityPolicyArgs(project, region, securityPolicy);
+        }
+
+        public GetRegionSecurityPolicyArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.securityPolicy = Objects.requireNonNull($.securityPolicy, "expected parameter 'securityPolicy' to be non-null");
+            return $;
         }
     }
+
 }

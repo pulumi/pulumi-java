@@ -22,7 +22,7 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -33,7 +33,7 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="preprocessingConfig", required=true)
-      private final PreprocessingConfigResponse preprocessingConfig;
+    private PreprocessingConfigResponse preprocessingConfig;
 
     public PreprocessingConfigResponse preprocessingConfig() {
         return this.preprocessingConfig;
@@ -44,64 +44,59 @@ public final class InputResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public InputResponse(
-        String key,
-        PreprocessingConfigResponse preprocessingConfig,
-        String uri) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.preprocessingConfig = Objects.requireNonNull(preprocessingConfig, "expected parameter 'preprocessingConfig' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private InputResponse() {}
 
-    private InputResponse() {
-        this.key = null;
-        this.preprocessingConfig = null;
-        this.uri = null;
+    private InputResponse(InputResponse $) {
+        this.key = $.key;
+        this.preprocessingConfig = $.preprocessingConfig;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InputResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private PreprocessingConfigResponse preprocessingConfig;
-        private String uri;
+        private InputResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InputResponse();
         }
 
         public Builder(InputResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.preprocessingConfig = defaults.preprocessingConfig;
-    	      this.uri = defaults.uri;
+            $ = new InputResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder preprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
-            this.preprocessingConfig = Objects.requireNonNull(preprocessingConfig);
+            $.preprocessingConfig = preprocessingConfig;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public InputResponse build() {
-            return new InputResponse(key, preprocessingConfig, uri);
+        }
+
+        public InputResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.preprocessingConfig = Objects.requireNonNull($.preprocessingConfig, "expected parameter 'preprocessingConfig' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

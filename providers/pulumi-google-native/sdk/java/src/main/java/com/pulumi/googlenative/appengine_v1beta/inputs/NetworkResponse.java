@@ -23,7 +23,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="forwardedPorts", required=true)
-      private final List<String> forwardedPorts;
+    private List<String> forwardedPorts;
 
     public List<String> forwardedPorts() {
         return this.forwardedPorts;
@@ -34,7 +34,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceIpMode", required=true)
-      private final String instanceIpMode;
+    private String instanceIpMode;
 
     public String instanceIpMode() {
         return this.instanceIpMode;
@@ -45,7 +45,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceTag", required=true)
-      private final String instanceTag;
+    private String instanceTag;
 
     public String instanceTag() {
         return this.instanceTag;
@@ -56,7 +56,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sessionAffinity", required=true)
-      private final Boolean sessionAffinity;
+    private Boolean sessionAffinity;
 
     public Boolean sessionAffinity() {
         return this.sessionAffinity;
@@ -78,94 +78,84 @@ public final class NetworkResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetworkName", required=true)
-      private final String subnetworkName;
+    private String subnetworkName;
 
     public String subnetworkName() {
         return this.subnetworkName;
     }
 
-    public NetworkResponse(
-        List<String> forwardedPorts,
-        String instanceIpMode,
-        String instanceTag,
-        String name,
-        Boolean sessionAffinity,
-        String subnetworkName) {
-        this.forwardedPorts = Objects.requireNonNull(forwardedPorts, "expected parameter 'forwardedPorts' to be non-null");
-        this.instanceIpMode = Objects.requireNonNull(instanceIpMode, "expected parameter 'instanceIpMode' to be non-null");
-        this.instanceTag = Objects.requireNonNull(instanceTag, "expected parameter 'instanceTag' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.sessionAffinity = Objects.requireNonNull(sessionAffinity, "expected parameter 'sessionAffinity' to be non-null");
-        this.subnetworkName = Objects.requireNonNull(subnetworkName, "expected parameter 'subnetworkName' to be non-null");
-    }
+    private NetworkResponse() {}
 
-    private NetworkResponse() {
-        this.forwardedPorts = List.of();
-        this.instanceIpMode = null;
-        this.instanceTag = null;
-        this.name = null;
-        this.sessionAffinity = null;
-        this.subnetworkName = null;
+    private NetworkResponse(NetworkResponse $) {
+        this.forwardedPorts = $.forwardedPorts;
+        this.instanceIpMode = $.instanceIpMode;
+        this.instanceTag = $.instanceTag;
+        this.name = $.name;
+        this.sessionAffinity = $.sessionAffinity;
+        this.subnetworkName = $.subnetworkName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> forwardedPorts;
-        private String instanceIpMode;
-        private String instanceTag;
-        private String name;
-        private Boolean sessionAffinity;
-        private String subnetworkName;
+        private NetworkResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkResponse();
         }
 
         public Builder(NetworkResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.forwardedPorts = defaults.forwardedPorts;
-    	      this.instanceIpMode = defaults.instanceIpMode;
-    	      this.instanceTag = defaults.instanceTag;
-    	      this.name = defaults.name;
-    	      this.sessionAffinity = defaults.sessionAffinity;
-    	      this.subnetworkName = defaults.subnetworkName;
+            $ = new NetworkResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder forwardedPorts(List<String> forwardedPorts) {
-            this.forwardedPorts = Objects.requireNonNull(forwardedPorts);
+            $.forwardedPorts = forwardedPorts;
             return this;
         }
+
         public Builder forwardedPorts(String... forwardedPorts) {
             return forwardedPorts(List.of(forwardedPorts));
         }
+
         public Builder instanceIpMode(String instanceIpMode) {
-            this.instanceIpMode = Objects.requireNonNull(instanceIpMode);
+            $.instanceIpMode = instanceIpMode;
             return this;
         }
+
         public Builder instanceTag(String instanceTag) {
-            this.instanceTag = Objects.requireNonNull(instanceTag);
+            $.instanceTag = instanceTag;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder sessionAffinity(Boolean sessionAffinity) {
-            this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
+            $.sessionAffinity = sessionAffinity;
             return this;
         }
+
         public Builder subnetworkName(String subnetworkName) {
-            this.subnetworkName = Objects.requireNonNull(subnetworkName);
+            $.subnetworkName = subnetworkName;
             return this;
-        }        public NetworkResponse build() {
-            return new NetworkResponse(forwardedPorts, instanceIpMode, instanceTag, name, sessionAffinity, subnetworkName);
+        }
+
+        public NetworkResponse build() {
+            $.forwardedPorts = Objects.requireNonNull($.forwardedPorts, "expected parameter 'forwardedPorts' to be non-null");
+            $.instanceIpMode = Objects.requireNonNull($.instanceIpMode, "expected parameter 'instanceIpMode' to be non-null");
+            $.instanceTag = Objects.requireNonNull($.instanceTag, "expected parameter 'instanceTag' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sessionAffinity = Objects.requireNonNull($.sessionAffinity, "expected parameter 'sessionAffinity' to be non-null");
+            $.subnetworkName = Objects.requireNonNull($.subnetworkName, "expected parameter 'subnetworkName' to be non-null");
+            return $;
         }
     }
+
 }

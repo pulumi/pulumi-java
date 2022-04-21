@@ -21,7 +21,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
      * 
      */
     @Import(name="nextRotationTime", required=true)
-      private final String nextRotationTime;
+    private String nextRotationTime;
 
     public String nextRotationTime() {
         return this.nextRotationTime;
@@ -32,55 +32,52 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse exte
      * 
      */
     @Import(name="rotationPeriod", required=true)
-      private final String rotationPeriod;
+    private String rotationPeriod;
 
     public String rotationPeriod() {
         return this.rotationPeriod;
     }
 
-    public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(
-        String nextRotationTime,
-        String rotationPeriod) {
-        this.nextRotationTime = Objects.requireNonNull(nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
-        this.rotationPeriod = Objects.requireNonNull(rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
-    }
+    private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse() {}
 
-    private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse() {
-        this.nextRotationTime = null;
-        this.rotationPeriod = null;
+    private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse $) {
+        this.nextRotationTime = $.nextRotationTime;
+        this.rotationPeriod = $.rotationPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String nextRotationTime;
-        private String rotationPeriod;
+        private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse();
         }
 
         public Builder(GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nextRotationTime = defaults.nextRotationTime;
-    	      this.rotationPeriod = defaults.rotationPeriod;
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder nextRotationTime(String nextRotationTime) {
-            this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
+            $.nextRotationTime = nextRotationTime;
             return this;
         }
+
         public Builder rotationPeriod(String rotationPeriod) {
-            this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
+            $.rotationPeriod = rotationPeriod;
             return this;
-        }        public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse build() {
-            return new GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(nextRotationTime, rotationPeriod);
+        }
+
+        public GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse build() {
+            $.nextRotationTime = Objects.requireNonNull($.nextRotationTime, "expected parameter 'nextRotationTime' to be non-null");
+            $.rotationPeriod = Objects.requireNonNull($.rotationPeriod, "expected parameter 'rotationPeriod' to be non-null");
+            return $;
         }
     }
+
 }

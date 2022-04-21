@@ -24,7 +24,7 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bitrateBps", required=true)
-      private final Integer bitrateBps;
+    private Integer bitrateBps;
 
     public Integer bitrateBps() {
         return this.bitrateBps;
@@ -35,7 +35,7 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelCount", required=true)
-      private final Integer channelCount;
+    private Integer channelCount;
 
     public Integer channelCount() {
         return this.channelCount;
@@ -46,7 +46,7 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="channelLayout", required=true)
-      private final List<String> channelLayout;
+    private List<String> channelLayout;
 
     public List<String> channelLayout() {
         return this.channelLayout;
@@ -57,7 +57,7 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="codec", required=true)
-      private final String codec;
+    private String codec;
 
     public String codec() {
         return this.codec;
@@ -68,7 +68,7 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mapping", required=true)
-      private final List<AudioMappingResponse> mapping;
+    private List<AudioMappingResponse> mapping;
 
     public List<AudioMappingResponse> mapping() {
         return this.mapping;
@@ -79,97 +79,88 @@ public final class AudioStreamResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sampleRateHertz", required=true)
-      private final Integer sampleRateHertz;
+    private Integer sampleRateHertz;
 
     public Integer sampleRateHertz() {
         return this.sampleRateHertz;
     }
 
-    public AudioStreamResponse(
-        Integer bitrateBps,
-        Integer channelCount,
-        List<String> channelLayout,
-        String codec,
-        List<AudioMappingResponse> mapping,
-        Integer sampleRateHertz) {
-        this.bitrateBps = Objects.requireNonNull(bitrateBps, "expected parameter 'bitrateBps' to be non-null");
-        this.channelCount = Objects.requireNonNull(channelCount, "expected parameter 'channelCount' to be non-null");
-        this.channelLayout = Objects.requireNonNull(channelLayout, "expected parameter 'channelLayout' to be non-null");
-        this.codec = Objects.requireNonNull(codec, "expected parameter 'codec' to be non-null");
-        this.mapping = Objects.requireNonNull(mapping, "expected parameter 'mapping' to be non-null");
-        this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz, "expected parameter 'sampleRateHertz' to be non-null");
-    }
+    private AudioStreamResponse() {}
 
-    private AudioStreamResponse() {
-        this.bitrateBps = null;
-        this.channelCount = null;
-        this.channelLayout = List.of();
-        this.codec = null;
-        this.mapping = List.of();
-        this.sampleRateHertz = null;
+    private AudioStreamResponse(AudioStreamResponse $) {
+        this.bitrateBps = $.bitrateBps;
+        this.channelCount = $.channelCount;
+        this.channelLayout = $.channelLayout;
+        this.codec = $.codec;
+        this.mapping = $.mapping;
+        this.sampleRateHertz = $.sampleRateHertz;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioStreamResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer bitrateBps;
-        private Integer channelCount;
-        private List<String> channelLayout;
-        private String codec;
-        private List<AudioMappingResponse> mapping;
-        private Integer sampleRateHertz;
+        private AudioStreamResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioStreamResponse();
         }
 
         public Builder(AudioStreamResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bitrateBps = defaults.bitrateBps;
-    	      this.channelCount = defaults.channelCount;
-    	      this.channelLayout = defaults.channelLayout;
-    	      this.codec = defaults.codec;
-    	      this.mapping = defaults.mapping;
-    	      this.sampleRateHertz = defaults.sampleRateHertz;
+            $ = new AudioStreamResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bitrateBps(Integer bitrateBps) {
-            this.bitrateBps = Objects.requireNonNull(bitrateBps);
+            $.bitrateBps = bitrateBps;
             return this;
         }
+
         public Builder channelCount(Integer channelCount) {
-            this.channelCount = Objects.requireNonNull(channelCount);
+            $.channelCount = channelCount;
             return this;
         }
+
         public Builder channelLayout(List<String> channelLayout) {
-            this.channelLayout = Objects.requireNonNull(channelLayout);
+            $.channelLayout = channelLayout;
             return this;
         }
+
         public Builder channelLayout(String... channelLayout) {
             return channelLayout(List.of(channelLayout));
         }
+
         public Builder codec(String codec) {
-            this.codec = Objects.requireNonNull(codec);
+            $.codec = codec;
             return this;
         }
+
         public Builder mapping(List<AudioMappingResponse> mapping) {
-            this.mapping = Objects.requireNonNull(mapping);
+            $.mapping = mapping;
             return this;
         }
+
         public Builder mapping(AudioMappingResponse... mapping) {
             return mapping(List.of(mapping));
         }
+
         public Builder sampleRateHertz(Integer sampleRateHertz) {
-            this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
+            $.sampleRateHertz = sampleRateHertz;
             return this;
-        }        public AudioStreamResponse build() {
-            return new AudioStreamResponse(bitrateBps, channelCount, channelLayout, codec, mapping, sampleRateHertz);
+        }
+
+        public AudioStreamResponse build() {
+            $.bitrateBps = Objects.requireNonNull($.bitrateBps, "expected parameter 'bitrateBps' to be non-null");
+            $.channelCount = Objects.requireNonNull($.channelCount, "expected parameter 'channelCount' to be non-null");
+            $.channelLayout = Objects.requireNonNull($.channelLayout, "expected parameter 'channelLayout' to be non-null");
+            $.codec = Objects.requireNonNull($.codec, "expected parameter 'codec' to be non-null");
+            $.mapping = Objects.requireNonNull($.mapping, "expected parameter 'mapping' to be non-null");
+            $.sampleRateHertz = Objects.requireNonNull($.sampleRateHertz, "expected parameter 'sampleRateHertz' to be non-null");
+            return $;
         }
     }
+
 }

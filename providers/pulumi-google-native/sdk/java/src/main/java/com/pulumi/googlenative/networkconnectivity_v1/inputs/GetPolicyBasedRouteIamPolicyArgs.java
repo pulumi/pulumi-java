@@ -15,78 +15,71 @@ public final class GetPolicyBasedRouteIamPolicyArgs extends com.pulumi.resources
     public static final GetPolicyBasedRouteIamPolicyArgs Empty = new GetPolicyBasedRouteIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="policyBasedRouteId", required=true)
-      private final String policyBasedRouteId;
+    private String policyBasedRouteId;
 
     public String policyBasedRouteId() {
         return this.policyBasedRouteId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetPolicyBasedRouteIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        String policyBasedRouteId,
-        @Nullable String project) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.policyBasedRouteId = Objects.requireNonNull(policyBasedRouteId, "expected parameter 'policyBasedRouteId' to be non-null");
-        this.project = project;
-    }
+    private GetPolicyBasedRouteIamPolicyArgs() {}
 
-    private GetPolicyBasedRouteIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.policyBasedRouteId = null;
-        this.project = null;
+    private GetPolicyBasedRouteIamPolicyArgs(GetPolicyBasedRouteIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.policyBasedRouteId = $.policyBasedRouteId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetPolicyBasedRouteIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private String policyBasedRouteId;
-        private @Nullable String project;
+        private GetPolicyBasedRouteIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetPolicyBasedRouteIamPolicyArgs();
         }
 
         public Builder(GetPolicyBasedRouteIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.policyBasedRouteId = defaults.policyBasedRouteId;
-    	      this.project = defaults.project;
+            $ = new GetPolicyBasedRouteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder policyBasedRouteId(String policyBasedRouteId) {
-            this.policyBasedRouteId = Objects.requireNonNull(policyBasedRouteId);
+            $.policyBasedRouteId = policyBasedRouteId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetPolicyBasedRouteIamPolicyArgs build() {
-            return new GetPolicyBasedRouteIamPolicyArgs(optionsRequestedPolicyVersion, policyBasedRouteId, project);
+        }
+
+        public GetPolicyBasedRouteIamPolicyArgs build() {
+            $.policyBasedRouteId = Objects.requireNonNull($.policyBasedRouteId, "expected parameter 'policyBasedRouteId' to be non-null");
+            return $;
         }
     }
+
 }

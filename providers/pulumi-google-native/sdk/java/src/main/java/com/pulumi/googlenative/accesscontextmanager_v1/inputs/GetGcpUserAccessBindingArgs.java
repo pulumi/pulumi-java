@@ -13,62 +13,59 @@ public final class GetGcpUserAccessBindingArgs extends com.pulumi.resources.Invo
     public static final GetGcpUserAccessBindingArgs Empty = new GetGcpUserAccessBindingArgs();
 
     @Import(name="gcpUserAccessBindingId", required=true)
-      private final String gcpUserAccessBindingId;
+    private String gcpUserAccessBindingId;
 
     public String gcpUserAccessBindingId() {
         return this.gcpUserAccessBindingId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetGcpUserAccessBindingArgs(
-        String gcpUserAccessBindingId,
-        String organizationId) {
-        this.gcpUserAccessBindingId = Objects.requireNonNull(gcpUserAccessBindingId, "expected parameter 'gcpUserAccessBindingId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetGcpUserAccessBindingArgs() {}
 
-    private GetGcpUserAccessBindingArgs() {
-        this.gcpUserAccessBindingId = null;
-        this.organizationId = null;
+    private GetGcpUserAccessBindingArgs(GetGcpUserAccessBindingArgs $) {
+        this.gcpUserAccessBindingId = $.gcpUserAccessBindingId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGcpUserAccessBindingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String gcpUserAccessBindingId;
-        private String organizationId;
+        private GetGcpUserAccessBindingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGcpUserAccessBindingArgs();
         }
 
         public Builder(GetGcpUserAccessBindingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcpUserAccessBindingId = defaults.gcpUserAccessBindingId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetGcpUserAccessBindingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcpUserAccessBindingId(String gcpUserAccessBindingId) {
-            this.gcpUserAccessBindingId = Objects.requireNonNull(gcpUserAccessBindingId);
+            $.gcpUserAccessBindingId = gcpUserAccessBindingId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetGcpUserAccessBindingArgs build() {
-            return new GetGcpUserAccessBindingArgs(gcpUserAccessBindingId, organizationId);
+        }
+
+        public GetGcpUserAccessBindingArgs build() {
+            $.gcpUserAccessBindingId = Objects.requireNonNull($.gcpUserAccessBindingId, "expected parameter 'gcpUserAccessBindingId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

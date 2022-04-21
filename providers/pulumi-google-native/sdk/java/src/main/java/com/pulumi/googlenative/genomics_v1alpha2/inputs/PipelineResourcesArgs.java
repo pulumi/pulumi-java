@@ -5,7 +5,6 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.genomics_v1alpha2.inputs.DiskArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorCount")
-      private final @Nullable Output<String> acceleratorCount;
+    private @Nullable Output<String> acceleratorCount;
 
-    public Output<String> acceleratorCount() {
-        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
+    public Optional<Output<String>> acceleratorCount() {
+        return Optional.ofNullable(this.acceleratorCount);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="bootDiskSizeGb")
-      private final @Nullable Output<Integer> bootDiskSizeGb;
+    private @Nullable Output<Integer> bootDiskSizeGb;
 
-    public Output<Integer> bootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
+    public Optional<Output<Integer>> bootDiskSizeGb() {
+        return Optional.ofNullable(this.bootDiskSizeGb);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<List<DiskArgs>> disks;
+    private @Nullable Output<List<DiskArgs>> disks;
 
-    public Output<List<DiskArgs>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<List<DiskArgs>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minimumCpuCores")
-      private final @Nullable Output<Integer> minimumCpuCores;
+    private @Nullable Output<Integer> minimumCpuCores;
 
-    public Output<Integer> minimumCpuCores() {
-        return this.minimumCpuCores == null ? Codegen.empty() : this.minimumCpuCores;
+    public Optional<Output<Integer>> minimumCpuCores() {
+        return Optional.ofNullable(this.minimumCpuCores);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="minimumRamGb")
-      private final @Nullable Output<Double> minimumRamGb;
+    private @Nullable Output<Double> minimumRamGb;
 
-    public Output<Double> minimumRamGb() {
-        return this.minimumRamGb == null ? Codegen.empty() : this.minimumRamGb;
+    public Optional<Output<Double>> minimumRamGb() {
+        return Optional.ofNullable(this.minimumRamGb);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="noAddress")
-      private final @Nullable Output<Boolean> noAddress;
+    private @Nullable Output<Boolean> noAddress;
 
-    public Output<Boolean> noAddress() {
-        return this.noAddress == null ? Codegen.empty() : this.noAddress;
+    public Optional<Output<Boolean>> noAddress() {
+        return Optional.ofNullable(this.noAddress);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="preemptible")
-      private final @Nullable Output<Boolean> preemptible;
+    private @Nullable Output<Boolean> preemptible;
 
-    public Output<Boolean> preemptible() {
-        return this.preemptible == null ? Codegen.empty() : this.preemptible;
+    public Optional<Output<Boolean>> preemptible() {
+        return Optional.ofNullable(this.preemptible);
     }
 
     /**
@@ -117,160 +117,136 @@ public final class PipelineResourcesArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="zones")
-      private final @Nullable Output<List<String>> zones;
+    private @Nullable Output<List<String>> zones;
 
-    public Output<List<String>> zones() {
-        return this.zones == null ? Codegen.empty() : this.zones;
+    public Optional<Output<List<String>>> zones() {
+        return Optional.ofNullable(this.zones);
     }
 
-    public PipelineResourcesArgs(
-        @Nullable Output<String> acceleratorCount,
-        @Nullable Output<String> acceleratorType,
-        @Nullable Output<Integer> bootDiskSizeGb,
-        @Nullable Output<List<DiskArgs>> disks,
-        @Nullable Output<Integer> minimumCpuCores,
-        @Nullable Output<Double> minimumRamGb,
-        @Nullable Output<Boolean> noAddress,
-        @Nullable Output<Boolean> preemptible,
-        @Nullable Output<List<String>> zones) {
-        this.acceleratorCount = acceleratorCount;
-        this.acceleratorType = acceleratorType;
-        this.bootDiskSizeGb = bootDiskSizeGb;
-        this.disks = disks;
-        this.minimumCpuCores = minimumCpuCores;
-        this.minimumRamGb = minimumRamGb;
-        this.noAddress = noAddress;
-        this.preemptible = preemptible;
-        this.zones = zones;
-    }
+    private PipelineResourcesArgs() {}
 
-    private PipelineResourcesArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
-        this.bootDiskSizeGb = Codegen.empty();
-        this.disks = Codegen.empty();
-        this.minimumCpuCores = Codegen.empty();
-        this.minimumRamGb = Codegen.empty();
-        this.noAddress = Codegen.empty();
-        this.preemptible = Codegen.empty();
-        this.zones = Codegen.empty();
+    private PipelineResourcesArgs(PipelineResourcesArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.disks = $.disks;
+        this.minimumCpuCores = $.minimumCpuCores;
+        this.minimumRamGb = $.minimumRamGb;
+        this.noAddress = $.noAddress;
+        this.preemptible = $.preemptible;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineResourcesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> acceleratorCount;
-        private @Nullable Output<String> acceleratorType;
-        private @Nullable Output<Integer> bootDiskSizeGb;
-        private @Nullable Output<List<DiskArgs>> disks;
-        private @Nullable Output<Integer> minimumCpuCores;
-        private @Nullable Output<Double> minimumRamGb;
-        private @Nullable Output<Boolean> noAddress;
-        private @Nullable Output<Boolean> preemptible;
-        private @Nullable Output<List<String>> zones;
+        private PipelineResourcesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineResourcesArgs();
         }
 
         public Builder(PipelineResourcesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.disks = defaults.disks;
-    	      this.minimumCpuCores = defaults.minimumCpuCores;
-    	      this.minimumRamGb = defaults.minimumRamGb;
-    	      this.noAddress = defaults.noAddress;
-    	      this.preemptible = defaults.preemptible;
-    	      this.zones = defaults.zones;
+            $ = new PipelineResourcesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(@Nullable Output<String> acceleratorCount) {
-            this.acceleratorCount = acceleratorCount;
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
-        public Builder acceleratorCount(@Nullable String acceleratorCount) {
-            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
-            return this;
+
+        public Builder acceleratorCount(String acceleratorCount) {
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
         }
+
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
-            this.bootDiskSizeGb = bootDiskSizeGb;
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
-        public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
-            return this;
+
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
+            return bootDiskSizeGb(Output.of(bootDiskSizeGb));
         }
+
         public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable List<DiskArgs> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
+
+        public Builder disks(List<DiskArgs> disks) {
+            return disks(Output.of(disks));
         }
+
         public Builder disks(DiskArgs... disks) {
             return disks(List.of(disks));
         }
+
         public Builder minimumCpuCores(@Nullable Output<Integer> minimumCpuCores) {
-            this.minimumCpuCores = minimumCpuCores;
+            $.minimumCpuCores = minimumCpuCores;
             return this;
         }
-        public Builder minimumCpuCores(@Nullable Integer minimumCpuCores) {
-            this.minimumCpuCores = Codegen.ofNullable(minimumCpuCores);
-            return this;
+
+        public Builder minimumCpuCores(Integer minimumCpuCores) {
+            return minimumCpuCores(Output.of(minimumCpuCores));
         }
+
         public Builder minimumRamGb(@Nullable Output<Double> minimumRamGb) {
-            this.minimumRamGb = minimumRamGb;
+            $.minimumRamGb = minimumRamGb;
             return this;
         }
-        public Builder minimumRamGb(@Nullable Double minimumRamGb) {
-            this.minimumRamGb = Codegen.ofNullable(minimumRamGb);
-            return this;
+
+        public Builder minimumRamGb(Double minimumRamGb) {
+            return minimumRamGb(Output.of(minimumRamGb));
         }
+
         public Builder noAddress(@Nullable Output<Boolean> noAddress) {
-            this.noAddress = noAddress;
+            $.noAddress = noAddress;
             return this;
         }
-        public Builder noAddress(@Nullable Boolean noAddress) {
-            this.noAddress = Codegen.ofNullable(noAddress);
-            return this;
+
+        public Builder noAddress(Boolean noAddress) {
+            return noAddress(Output.of(noAddress));
         }
+
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
-            this.preemptible = preemptible;
+            $.preemptible = preemptible;
             return this;
         }
-        public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Codegen.ofNullable(preemptible);
-            return this;
+
+        public Builder preemptible(Boolean preemptible) {
+            return preemptible(Output.of(preemptible));
         }
+
         public Builder zones(@Nullable Output<List<String>> zones) {
-            this.zones = zones;
+            $.zones = zones;
             return this;
         }
-        public Builder zones(@Nullable List<String> zones) {
-            this.zones = Codegen.ofNullable(zones);
-            return this;
+
+        public Builder zones(List<String> zones) {
+            return zones(Output.of(zones));
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public PipelineResourcesArgs build() {
-            return new PipelineResourcesArgs(acceleratorCount, acceleratorType, bootDiskSizeGb, disks, minimumCpuCores, minimumRamGb, noAddress, preemptible, zones);
+        }
+
+        public PipelineResourcesArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends com.pu
      * 
      */
     @Import(name="event", required=true)
-      private final Output<String> event;
+    private Output<String> event;
 
     public Output<String> event() {
         return this.event;
@@ -36,10 +36,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends com.pu
      * 
      */
     @Import(name="targetFlow")
-      private final @Nullable Output<String> targetFlow;
+    private @Nullable Output<String> targetFlow;
 
-    public Output<String> targetFlow() {
-        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
+    public Optional<Output<String>> targetFlow() {
+        return Optional.ofNullable(this.targetFlow);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends com.pu
      * 
      */
     @Import(name="targetPage")
-      private final @Nullable Output<String> targetPage;
+    private @Nullable Output<String> targetPage;
 
-    public Output<String> targetPage() {
-        return this.targetPage == null ? Codegen.empty() : this.targetPage;
+    public Optional<Output<String>> targetPage() {
+        return Optional.ofNullable(this.targetPage);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerArgs extends com.pu
      * 
      */
     @Import(name="triggerFulfillment")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
 
-    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment() {
-        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs>> triggerFulfillment() {
+        return Optional.ofNullable(this.triggerFulfillment);
     }
 
-    public GoogleCloudDialogflowCxV3beta1EventHandlerArgs(
-        Output<String> event,
-        @Nullable Output<String> targetFlow,
-        @Nullable Output<String> targetPage,
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
-        this.event = Objects.requireNonNull(event, "expected parameter 'event' to be non-null");
-        this.targetFlow = targetFlow;
-        this.targetPage = targetPage;
-        this.triggerFulfillment = triggerFulfillment;
-    }
+    private GoogleCloudDialogflowCxV3beta1EventHandlerArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1EventHandlerArgs() {
-        this.event = Codegen.empty();
-        this.targetFlow = Codegen.empty();
-        this.targetPage = Codegen.empty();
-        this.triggerFulfillment = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1EventHandlerArgs(GoogleCloudDialogflowCxV3beta1EventHandlerArgs $) {
+        this.event = $.event;
+        this.targetFlow = $.targetFlow;
+        this.targetPage = $.targetPage;
+        this.triggerFulfillment = $.triggerFulfillment;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1EventHandlerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> event;
-        private @Nullable Output<String> targetFlow;
-        private @Nullable Output<String> targetPage;
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment;
+        private GoogleCloudDialogflowCxV3beta1EventHandlerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1EventHandlerArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1EventHandlerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.event = defaults.event;
-    	      this.targetFlow = defaults.targetFlow;
-    	      this.targetPage = defaults.targetPage;
-    	      this.triggerFulfillment = defaults.triggerFulfillment;
+            $ = new GoogleCloudDialogflowCxV3beta1EventHandlerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder event(Output<String> event) {
-            this.event = Objects.requireNonNull(event);
+            $.event = event;
             return this;
         }
+
         public Builder event(String event) {
-            this.event = Output.of(Objects.requireNonNull(event));
-            return this;
+            return event(Output.of(event));
         }
+
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
-            this.targetFlow = targetFlow;
+            $.targetFlow = targetFlow;
             return this;
         }
-        public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Codegen.ofNullable(targetFlow);
-            return this;
+
+        public Builder targetFlow(String targetFlow) {
+            return targetFlow(Output.of(targetFlow));
         }
+
         public Builder targetPage(@Nullable Output<String> targetPage) {
-            this.targetPage = targetPage;
+            $.targetPage = targetPage;
             return this;
         }
-        public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Codegen.ofNullable(targetPage);
-            return this;
+
+        public Builder targetPage(String targetPage) {
+            return targetPage(Output.of(targetPage));
         }
+
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentArgs> triggerFulfillment) {
-            this.triggerFulfillment = triggerFulfillment;
+            $.triggerFulfillment = triggerFulfillment;
             return this;
         }
-        public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1EventHandlerArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1EventHandlerArgs(event, targetFlow, targetPage, triggerFulfillment);
+
+        public Builder triggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentArgs triggerFulfillment) {
+            return triggerFulfillment(Output.of(triggerFulfillment));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1EventHandlerArgs build() {
+            $.event = Objects.requireNonNull($.event, "expected parameter 'event' to be non-null");
+            return $;
         }
     }
+
 }

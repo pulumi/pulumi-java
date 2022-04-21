@@ -15,62 +15,58 @@ public final class GetTraceSinkArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTraceSinkArgs Empty = new GetTraceSinkArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="traceSinkId", required=true)
-      private final String traceSinkId;
+    private String traceSinkId;
 
     public String traceSinkId() {
         return this.traceSinkId;
     }
 
-    public GetTraceSinkArgs(
-        @Nullable String project,
-        String traceSinkId) {
-        this.project = project;
-        this.traceSinkId = Objects.requireNonNull(traceSinkId, "expected parameter 'traceSinkId' to be non-null");
-    }
+    private GetTraceSinkArgs() {}
 
-    private GetTraceSinkArgs() {
-        this.project = null;
-        this.traceSinkId = null;
+    private GetTraceSinkArgs(GetTraceSinkArgs $) {
+        this.project = $.project;
+        this.traceSinkId = $.traceSinkId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTraceSinkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String traceSinkId;
+        private GetTraceSinkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTraceSinkArgs();
         }
 
         public Builder(GetTraceSinkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.traceSinkId = defaults.traceSinkId;
+            $ = new GetTraceSinkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder traceSinkId(String traceSinkId) {
-            this.traceSinkId = Objects.requireNonNull(traceSinkId);
+            $.traceSinkId = traceSinkId;
             return this;
-        }        public GetTraceSinkArgs build() {
-            return new GetTraceSinkArgs(project, traceSinkId);
+        }
+
+        public GetTraceSinkArgs build() {
+            $.traceSinkId = Objects.requireNonNull($.traceSinkId, "expected parameter 'traceSinkId' to be non-null");
+            return $;
         }
     }
+
 }

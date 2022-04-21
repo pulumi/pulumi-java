@@ -21,45 +21,45 @@ public final class EdgeClusterResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceLink", required=true)
-      private final String resourceLink;
+    private String resourceLink;
 
     public String resourceLink() {
         return this.resourceLink;
     }
 
-    public EdgeClusterResponse(String resourceLink) {
-        this.resourceLink = Objects.requireNonNull(resourceLink, "expected parameter 'resourceLink' to be non-null");
-    }
+    private EdgeClusterResponse() {}
 
-    private EdgeClusterResponse() {
-        this.resourceLink = null;
+    private EdgeClusterResponse(EdgeClusterResponse $) {
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeClusterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceLink;
+        private EdgeClusterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeClusterResponse();
         }
 
         public Builder(EdgeClusterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new EdgeClusterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceLink(String resourceLink) {
-            this.resourceLink = Objects.requireNonNull(resourceLink);
+            $.resourceLink = resourceLink;
             return this;
-        }        public EdgeClusterResponse build() {
-            return new EdgeClusterResponse(resourceLink);
+        }
+
+        public EdgeClusterResponse build() {
+            $.resourceLink = Objects.requireNonNull($.resourceLink, "expected parameter 'resourceLink' to be non-null");
+            return $;
         }
     }
+
 }

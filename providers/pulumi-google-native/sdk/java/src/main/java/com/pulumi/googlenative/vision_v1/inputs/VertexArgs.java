@@ -5,9 +5,9 @@ package com.pulumi.googlenative.vision_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="x")
-      private final @Nullable Output<Integer> x;
+    private @Nullable Output<Integer> x;
 
-    public Output<Integer> x() {
-        return this.x == null ? Codegen.empty() : this.x;
+    public Optional<Output<Integer>> x() {
+        return Optional.ofNullable(this.x);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class VertexArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="y")
-      private final @Nullable Output<Integer> y;
+    private @Nullable Output<Integer> y;
 
-    public Output<Integer> y() {
-        return this.y == null ? Codegen.empty() : this.y;
+    public Optional<Output<Integer>> y() {
+        return Optional.ofNullable(this.y);
     }
 
-    public VertexArgs(
-        @Nullable Output<Integer> x,
-        @Nullable Output<Integer> y) {
-        this.x = x;
-        this.y = y;
-    }
+    private VertexArgs() {}
 
-    private VertexArgs() {
-        this.x = Codegen.empty();
-        this.y = Codegen.empty();
+    private VertexArgs(VertexArgs $) {
+        this.x = $.x;
+        this.y = $.y;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VertexArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> x;
-        private @Nullable Output<Integer> y;
+        private VertexArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VertexArgs();
         }
 
         public Builder(VertexArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.x = defaults.x;
-    	      this.y = defaults.y;
+            $ = new VertexArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder x(@Nullable Output<Integer> x) {
-            this.x = x;
+            $.x = x;
             return this;
         }
-        public Builder x(@Nullable Integer x) {
-            this.x = Codegen.ofNullable(x);
-            return this;
+
+        public Builder x(Integer x) {
+            return x(Output.of(x));
         }
+
         public Builder y(@Nullable Output<Integer> y) {
-            this.y = y;
+            $.y = y;
             return this;
         }
-        public Builder y(@Nullable Integer y) {
-            this.y = Codegen.ofNullable(y);
-            return this;
-        }        public VertexArgs build() {
-            return new VertexArgs(x, y);
+
+        public Builder y(Integer y) {
+            return y(Output.of(y));
+        }
+
+        public VertexArgs build() {
+            return $;
         }
     }
+
 }

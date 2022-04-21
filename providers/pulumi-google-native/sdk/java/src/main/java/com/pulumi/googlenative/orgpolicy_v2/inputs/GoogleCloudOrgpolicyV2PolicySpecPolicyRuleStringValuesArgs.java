@@ -5,10 +5,10 @@ package com.pulumi.googlenative.orgpolicy_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
      * 
      */
     @Import(name="allowedValues")
-      private final @Nullable Output<List<String>> allowedValues;
+    private @Nullable Output<List<String>> allowedValues;
 
-    public Output<List<String>> allowedValues() {
-        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
+    public Optional<Output<List<String>>> allowedValues() {
+        return Optional.ofNullable(this.allowedValues);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
      * 
      */
     @Import(name="deniedValues")
-      private final @Nullable Output<List<String>> deniedValues;
+    private @Nullable Output<List<String>> deniedValues;
 
-    public Output<List<String>> deniedValues() {
-        return this.deniedValues == null ? Codegen.empty() : this.deniedValues;
+    public Optional<Output<List<String>>> deniedValues() {
+        return Optional.ofNullable(this.deniedValues);
     }
 
-    public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(
-        @Nullable Output<List<String>> allowedValues,
-        @Nullable Output<List<String>> deniedValues) {
-        this.allowedValues = allowedValues;
-        this.deniedValues = deniedValues;
-    }
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs() {}
 
-    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs() {
-        this.allowedValues = Codegen.empty();
-        this.deniedValues = Codegen.empty();
+    private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs $) {
+        this.allowedValues = $.allowedValues;
+        this.deniedValues = $.deniedValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> allowedValues;
-        private @Nullable Output<List<String>> deniedValues;
+        private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs();
         }
 
         public Builder(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedValues = defaults.allowedValues;
-    	      this.deniedValues = defaults.deniedValues;
+            $ = new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedValues(@Nullable Output<List<String>> allowedValues) {
-            this.allowedValues = allowedValues;
+            $.allowedValues = allowedValues;
             return this;
         }
-        public Builder allowedValues(@Nullable List<String> allowedValues) {
-            this.allowedValues = Codegen.ofNullable(allowedValues);
-            return this;
+
+        public Builder allowedValues(List<String> allowedValues) {
+            return allowedValues(Output.of(allowedValues));
         }
+
         public Builder allowedValues(String... allowedValues) {
             return allowedValues(List.of(allowedValues));
         }
+
         public Builder deniedValues(@Nullable Output<List<String>> deniedValues) {
-            this.deniedValues = deniedValues;
+            $.deniedValues = deniedValues;
             return this;
         }
-        public Builder deniedValues(@Nullable List<String> deniedValues) {
-            this.deniedValues = Codegen.ofNullable(deniedValues);
-            return this;
+
+        public Builder deniedValues(List<String> deniedValues) {
+            return deniedValues(Output.of(deniedValues));
         }
+
         public Builder deniedValues(String... deniedValues) {
             return deniedValues(List.of(deniedValues));
-        }        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs build() {
-            return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs(allowedValues, deniedValues);
+        }
+
+        public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs build() {
+            return $;
         }
     }
+
 }

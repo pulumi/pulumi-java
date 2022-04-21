@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="categoryId")
-      private final @Nullable Output<String> categoryId;
+    private @Nullable Output<String> categoryId;
 
-    public Output<String> categoryId() {
-        return this.categoryId == null ? Codegen.empty() : this.categoryId;
+    public Optional<Output<String>> categoryId() {
+        return Optional.ofNullable(this.categoryId);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CategoryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public CategoryArgs(
-        @Nullable Output<String> categoryId,
-        @Nullable Output<String> name) {
-        this.categoryId = categoryId;
-        this.name = name;
-    }
+    private CategoryArgs() {}
 
-    private CategoryArgs() {
-        this.categoryId = Codegen.empty();
-        this.name = Codegen.empty();
+    private CategoryArgs(CategoryArgs $) {
+        this.categoryId = $.categoryId;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CategoryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> categoryId;
-        private @Nullable Output<String> name;
+        private CategoryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CategoryArgs();
         }
 
         public Builder(CategoryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categoryId = defaults.categoryId;
-    	      this.name = defaults.name;
+            $ = new CategoryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder categoryId(@Nullable Output<String> categoryId) {
-            this.categoryId = categoryId;
+            $.categoryId = categoryId;
             return this;
         }
-        public Builder categoryId(@Nullable String categoryId) {
-            this.categoryId = Codegen.ofNullable(categoryId);
-            return this;
+
+        public Builder categoryId(String categoryId) {
+            return categoryId(Output.of(categoryId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public CategoryArgs build() {
-            return new CategoryArgs(categoryId, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public CategoryArgs build() {
+            return $;
         }
     }
+
 }

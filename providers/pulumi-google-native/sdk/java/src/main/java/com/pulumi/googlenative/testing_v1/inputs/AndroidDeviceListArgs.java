@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.AndroidDeviceArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,52 +23,53 @@ public final class AndroidDeviceListArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="androidDevices", required=true)
-      private final Output<List<AndroidDeviceArgs>> androidDevices;
+    private Output<List<AndroidDeviceArgs>> androidDevices;
 
     public Output<List<AndroidDeviceArgs>> androidDevices() {
         return this.androidDevices;
     }
 
-    public AndroidDeviceListArgs(Output<List<AndroidDeviceArgs>> androidDevices) {
-        this.androidDevices = Objects.requireNonNull(androidDevices, "expected parameter 'androidDevices' to be non-null");
-    }
+    private AndroidDeviceListArgs() {}
 
-    private AndroidDeviceListArgs() {
-        this.androidDevices = Codegen.empty();
+    private AndroidDeviceListArgs(AndroidDeviceListArgs $) {
+        this.androidDevices = $.androidDevices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidDeviceListArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<AndroidDeviceArgs>> androidDevices;
+        private AndroidDeviceListArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidDeviceListArgs();
         }
 
         public Builder(AndroidDeviceListArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.androidDevices = defaults.androidDevices;
+            $ = new AndroidDeviceListArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder androidDevices(Output<List<AndroidDeviceArgs>> androidDevices) {
-            this.androidDevices = Objects.requireNonNull(androidDevices);
+            $.androidDevices = androidDevices;
             return this;
         }
+
         public Builder androidDevices(List<AndroidDeviceArgs> androidDevices) {
-            this.androidDevices = Output.of(Objects.requireNonNull(androidDevices));
-            return this;
+            return androidDevices(Output.of(androidDevices));
         }
+
         public Builder androidDevices(AndroidDeviceArgs... androidDevices) {
             return androidDevices(List.of(androidDevices));
-        }        public AndroidDeviceListArgs build() {
-            return new AndroidDeviceListArgs(androidDevices);
+        }
+
+        public AndroidDeviceListArgs build() {
+            $.androidDevices = Objects.requireNonNull($.androidDevices, "expected parameter 'androidDevices' to be non-null");
+            return $;
         }
     }
+
 }

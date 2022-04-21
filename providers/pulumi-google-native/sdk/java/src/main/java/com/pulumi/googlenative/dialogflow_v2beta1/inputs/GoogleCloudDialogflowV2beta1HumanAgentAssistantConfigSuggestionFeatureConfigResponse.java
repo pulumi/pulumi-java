@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="conversationModelConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig() {
         return this.conversationModelConfig;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="conversationProcessConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig() {
         return this.conversationProcessConfig;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="enableEventBasedSuggestion", required=true)
-      private final Boolean enableEventBasedSuggestion;
+    private Boolean enableEventBasedSuggestion;
 
     public Boolean enableEventBasedSuggestion() {
         return this.enableEventBasedSuggestion;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="queryConfig", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig() {
         return this.queryConfig;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="suggestionFeature", required=true)
-      private final GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature;
+    private GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature;
 
     public GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature() {
         return this.suggestionFeature;
@@ -81,91 +81,80 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * 
      */
     @Import(name="suggestionTriggerSettings", required=true)
-      private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings() {
         return this.suggestionTriggerSettings;
     }
 
-    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig,
-        Boolean enableEventBasedSuggestion,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig,
-        GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature,
-        GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
-        this.conversationModelConfig = Objects.requireNonNull(conversationModelConfig, "expected parameter 'conversationModelConfig' to be non-null");
-        this.conversationProcessConfig = Objects.requireNonNull(conversationProcessConfig, "expected parameter 'conversationProcessConfig' to be non-null");
-        this.enableEventBasedSuggestion = Objects.requireNonNull(enableEventBasedSuggestion, "expected parameter 'enableEventBasedSuggestion' to be non-null");
-        this.queryConfig = Objects.requireNonNull(queryConfig, "expected parameter 'queryConfig' to be non-null");
-        this.suggestionFeature = Objects.requireNonNull(suggestionFeature, "expected parameter 'suggestionFeature' to be non-null");
-        this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings, "expected parameter 'suggestionTriggerSettings' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse() {}
 
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse() {
-        this.conversationModelConfig = null;
-        this.conversationProcessConfig = null;
-        this.enableEventBasedSuggestion = null;
-        this.queryConfig = null;
-        this.suggestionFeature = null;
-        this.suggestionTriggerSettings = null;
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse $) {
+        this.conversationModelConfig = $.conversationModelConfig;
+        this.conversationProcessConfig = $.conversationProcessConfig;
+        this.enableEventBasedSuggestion = $.enableEventBasedSuggestion;
+        this.queryConfig = $.queryConfig;
+        this.suggestionFeature = $.suggestionFeature;
+        this.suggestionTriggerSettings = $.suggestionTriggerSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
-        private Boolean enableEventBasedSuggestion;
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
-        private GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature;
-        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
+        private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conversationModelConfig = defaults.conversationModelConfig;
-    	      this.conversationProcessConfig = defaults.conversationProcessConfig;
-    	      this.enableEventBasedSuggestion = defaults.enableEventBasedSuggestion;
-    	      this.queryConfig = defaults.queryConfig;
-    	      this.suggestionFeature = defaults.suggestionFeature;
-    	      this.suggestionTriggerSettings = defaults.suggestionTriggerSettings;
+            $ = new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder conversationModelConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig) {
-            this.conversationModelConfig = Objects.requireNonNull(conversationModelConfig);
+            $.conversationModelConfig = conversationModelConfig;
             return this;
         }
+
         public Builder conversationProcessConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig) {
-            this.conversationProcessConfig = Objects.requireNonNull(conversationProcessConfig);
+            $.conversationProcessConfig = conversationProcessConfig;
             return this;
         }
+
         public Builder enableEventBasedSuggestion(Boolean enableEventBasedSuggestion) {
-            this.enableEventBasedSuggestion = Objects.requireNonNull(enableEventBasedSuggestion);
+            $.enableEventBasedSuggestion = enableEventBasedSuggestion;
             return this;
         }
+
         public Builder queryConfig(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig) {
-            this.queryConfig = Objects.requireNonNull(queryConfig);
+            $.queryConfig = queryConfig;
             return this;
         }
+
         public Builder suggestionFeature(GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature) {
-            this.suggestionFeature = Objects.requireNonNull(suggestionFeature);
+            $.suggestionFeature = suggestionFeature;
             return this;
         }
+
         public Builder suggestionTriggerSettings(GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings) {
-            this.suggestionTriggerSettings = Objects.requireNonNull(suggestionTriggerSettings);
+            $.suggestionTriggerSettings = suggestionTriggerSettings;
             return this;
-        }        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse build() {
-            return new GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse(conversationModelConfig, conversationProcessConfig, enableEventBasedSuggestion, queryConfig, suggestionFeature, suggestionTriggerSettings);
+        }
+
+        public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse build() {
+            $.conversationModelConfig = Objects.requireNonNull($.conversationModelConfig, "expected parameter 'conversationModelConfig' to be non-null");
+            $.conversationProcessConfig = Objects.requireNonNull($.conversationProcessConfig, "expected parameter 'conversationProcessConfig' to be non-null");
+            $.enableEventBasedSuggestion = Objects.requireNonNull($.enableEventBasedSuggestion, "expected parameter 'enableEventBasedSuggestion' to be non-null");
+            $.queryConfig = Objects.requireNonNull($.queryConfig, "expected parameter 'queryConfig' to be non-null");
+            $.suggestionFeature = Objects.requireNonNull($.suggestionFeature, "expected parameter 'suggestionFeature' to be non-null");
+            $.suggestionTriggerSettings = Objects.requireNonNull($.suggestionTriggerSettings, "expected parameter 'suggestionTriggerSettings' to be non-null");
+            return $;
         }
     }
+
 }

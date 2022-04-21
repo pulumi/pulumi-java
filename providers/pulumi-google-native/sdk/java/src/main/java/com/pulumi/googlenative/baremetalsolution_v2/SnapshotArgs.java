@@ -5,9 +5,9 @@ package com.pulumi.googlenative.baremetalsolution_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,24 +31,24 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeBytes")
-      private final @Nullable Output<String> sizeBytes;
+    private @Nullable Output<String> sizeBytes;
 
-    public Output<String> sizeBytes() {
-        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
+    public Optional<Output<String>> sizeBytes() {
+        return Optional.ofNullable(this.sizeBytes);
     }
 
     /**
@@ -67,135 +67,116 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageVolume")
-      private final @Nullable Output<String> storageVolume;
+    private @Nullable Output<String> storageVolume;
 
-    public Output<String> storageVolume() {
-        return this.storageVolume == null ? Codegen.empty() : this.storageVolume;
+    public Optional<Output<String>> storageVolume() {
+        return Optional.ofNullable(this.storageVolume);
     }
 
     @Import(name="volumeId", required=true)
-      private final Output<String> volumeId;
+    private Output<String> volumeId;
 
     public Output<String> volumeId() {
         return this.volumeId;
     }
 
-    public SnapshotArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> id,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> sizeBytes,
-        @Nullable Output<String> storageVolume,
-        Output<String> volumeId) {
-        this.description = description;
-        this.id = id;
-        this.location = location;
-        this.project = project;
-        this.sizeBytes = sizeBytes;
-        this.storageVolume = storageVolume;
-        this.volumeId = Objects.requireNonNull(volumeId, "expected parameter 'volumeId' to be non-null");
-    }
+    private SnapshotArgs() {}
 
-    private SnapshotArgs() {
-        this.description = Codegen.empty();
-        this.id = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.sizeBytes = Codegen.empty();
-        this.storageVolume = Codegen.empty();
-        this.volumeId = Codegen.empty();
+    private SnapshotArgs(SnapshotArgs $) {
+        this.description = $.description;
+        this.id = $.id;
+        this.location = $.location;
+        this.project = $.project;
+        this.sizeBytes = $.sizeBytes;
+        this.storageVolume = $.storageVolume;
+        this.volumeId = $.volumeId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> sizeBytes;
-        private @Nullable Output<String> storageVolume;
-        private Output<String> volumeId;
+        private SnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotArgs();
         }
 
         public Builder(SnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.id = defaults.id;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.sizeBytes = defaults.sizeBytes;
-    	      this.storageVolume = defaults.storageVolume;
-    	      this.volumeId = defaults.volumeId;
+            $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder sizeBytes(@Nullable Output<String> sizeBytes) {
-            this.sizeBytes = sizeBytes;
+            $.sizeBytes = sizeBytes;
             return this;
         }
-        public Builder sizeBytes(@Nullable String sizeBytes) {
-            this.sizeBytes = Codegen.ofNullable(sizeBytes);
-            return this;
+
+        public Builder sizeBytes(String sizeBytes) {
+            return sizeBytes(Output.of(sizeBytes));
         }
+
         public Builder storageVolume(@Nullable Output<String> storageVolume) {
-            this.storageVolume = storageVolume;
+            $.storageVolume = storageVolume;
             return this;
         }
-        public Builder storageVolume(@Nullable String storageVolume) {
-            this.storageVolume = Codegen.ofNullable(storageVolume);
-            return this;
+
+        public Builder storageVolume(String storageVolume) {
+            return storageVolume(Output.of(storageVolume));
         }
+
         public Builder volumeId(Output<String> volumeId) {
-            this.volumeId = Objects.requireNonNull(volumeId);
+            $.volumeId = volumeId;
             return this;
         }
+
         public Builder volumeId(String volumeId) {
-            this.volumeId = Output.of(Objects.requireNonNull(volumeId));
-            return this;
-        }        public SnapshotArgs build() {
-            return new SnapshotArgs(description, id, location, project, sizeBytes, storageVolume, volumeId);
+            return volumeId(Output.of(volumeId));
+        }
+
+        public SnapshotArgs build() {
+            $.volumeId = Objects.requireNonNull($.volumeId, "expected parameter 'volumeId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudMlV1__ManualScalingArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="nodes")
-      private final @Nullable Output<Integer> nodes;
+    private @Nullable Output<Integer> nodes;
 
-    public Output<Integer> nodes() {
-        return this.nodes == null ? Codegen.empty() : this.nodes;
+    public Optional<Output<Integer>> nodes() {
+        return Optional.ofNullable(this.nodes);
     }
 
-    public GoogleCloudMlV1__ManualScalingArgs(@Nullable Output<Integer> nodes) {
-        this.nodes = nodes;
-    }
+    private GoogleCloudMlV1__ManualScalingArgs() {}
 
-    private GoogleCloudMlV1__ManualScalingArgs() {
-        this.nodes = Codegen.empty();
+    private GoogleCloudMlV1__ManualScalingArgs(GoogleCloudMlV1__ManualScalingArgs $) {
+        this.nodes = $.nodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__ManualScalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> nodes;
+        private GoogleCloudMlV1__ManualScalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__ManualScalingArgs();
         }
 
         public Builder(GoogleCloudMlV1__ManualScalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodes = defaults.nodes;
+            $ = new GoogleCloudMlV1__ManualScalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodes(@Nullable Output<Integer> nodes) {
-            this.nodes = nodes;
+            $.nodes = nodes;
             return this;
         }
-        public Builder nodes(@Nullable Integer nodes) {
-            this.nodes = Codegen.ofNullable(nodes);
-            return this;
-        }        public GoogleCloudMlV1__ManualScalingArgs build() {
-            return new GoogleCloudMlV1__ManualScalingArgs(nodes);
+
+        public Builder nodes(Integer nodes) {
+            return nodes(Output.of(nodes));
+        }
+
+        public GoogleCloudMlV1__ManualScalingArgs build() {
+            return $;
         }
     }
+
 }

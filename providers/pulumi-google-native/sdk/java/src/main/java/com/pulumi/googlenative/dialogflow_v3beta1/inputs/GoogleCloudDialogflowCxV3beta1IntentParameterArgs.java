@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends com
      * 
      */
     @Import(name="entityType", required=true)
-      private final Output<String> entityType;
+    private Output<String> entityType;
 
     public Output<String> entityType() {
         return this.entityType;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends com
      * 
      */
     @Import(name="id", required=true)
-      private final Output<String> id;
+    private Output<String> id;
 
     public Output<String> id() {
         return this.id;
@@ -47,10 +47,10 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends com
      * 
      */
     @Import(name="isList")
-      private final @Nullable Output<Boolean> isList;
+    private @Nullable Output<Boolean> isList;
 
-    public Output<Boolean> isList() {
-        return this.isList == null ? Codegen.empty() : this.isList;
+    public Optional<Output<Boolean>> isList() {
+        return Optional.ofNullable(this.isList);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class GoogleCloudDialogflowCxV3beta1IntentParameterArgs extends com
      * 
      */
     @Import(name="redact")
-      private final @Nullable Output<Boolean> redact;
+    private @Nullable Output<Boolean> redact;
 
-    public Output<Boolean> redact() {
-        return this.redact == null ? Codegen.empty() : this.redact;
+    public Optional<Output<Boolean>> redact() {
+        return Optional.ofNullable(this.redact);
     }
 
-    public GoogleCloudDialogflowCxV3beta1IntentParameterArgs(
-        Output<String> entityType,
-        Output<String> id,
-        @Nullable Output<Boolean> isList,
-        @Nullable Output<Boolean> redact) {
-        this.entityType = Objects.requireNonNull(entityType, "expected parameter 'entityType' to be non-null");
-        this.id = Objects.requireNonNull(id, "expected parameter 'id' to be non-null");
-        this.isList = isList;
-        this.redact = redact;
-    }
+    private GoogleCloudDialogflowCxV3beta1IntentParameterArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1IntentParameterArgs() {
-        this.entityType = Codegen.empty();
-        this.id = Codegen.empty();
-        this.isList = Codegen.empty();
-        this.redact = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1IntentParameterArgs(GoogleCloudDialogflowCxV3beta1IntentParameterArgs $) {
+        this.entityType = $.entityType;
+        this.id = $.id;
+        this.isList = $.isList;
+        this.redact = $.redact;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1IntentParameterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> entityType;
-        private Output<String> id;
-        private @Nullable Output<Boolean> isList;
-        private @Nullable Output<Boolean> redact;
+        private GoogleCloudDialogflowCxV3beta1IntentParameterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1IntentParameterArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1IntentParameterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.entityType = defaults.entityType;
-    	      this.id = defaults.id;
-    	      this.isList = defaults.isList;
-    	      this.redact = defaults.redact;
+            $ = new GoogleCloudDialogflowCxV3beta1IntentParameterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder entityType(Output<String> entityType) {
-            this.entityType = Objects.requireNonNull(entityType);
+            $.entityType = entityType;
             return this;
         }
+
         public Builder entityType(String entityType) {
-            this.entityType = Output.of(Objects.requireNonNull(entityType));
-            return this;
+            return entityType(Output.of(entityType));
         }
+
         public Builder id(Output<String> id) {
-            this.id = Objects.requireNonNull(id);
+            $.id = id;
             return this;
         }
+
         public Builder id(String id) {
-            this.id = Output.of(Objects.requireNonNull(id));
-            return this;
+            return id(Output.of(id));
         }
+
         public Builder isList(@Nullable Output<Boolean> isList) {
-            this.isList = isList;
+            $.isList = isList;
             return this;
         }
-        public Builder isList(@Nullable Boolean isList) {
-            this.isList = Codegen.ofNullable(isList);
-            return this;
+
+        public Builder isList(Boolean isList) {
+            return isList(Output.of(isList));
         }
+
         public Builder redact(@Nullable Output<Boolean> redact) {
-            this.redact = redact;
+            $.redact = redact;
             return this;
         }
-        public Builder redact(@Nullable Boolean redact) {
-            this.redact = Codegen.ofNullable(redact);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1IntentParameterArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1IntentParameterArgs(entityType, id, isList, redact);
+
+        public Builder redact(Boolean redact) {
+            return redact(Output.of(redact));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1IntentParameterArgs build() {
+            $.entityType = Objects.requireNonNull($.entityType, "expected parameter 'entityType' to be non-null");
+            $.id = Objects.requireNonNull($.id, "expected parameter 'id' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.VolumeArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="args")
-      private final @Nullable Output<List<String>> args;
+    private @Nullable Output<List<String>> args;
 
-    public Output<List<String>> args() {
-        return this.args == null ? Codegen.empty() : this.args;
+    public Optional<Output<List<String>>> args() {
+        return Optional.ofNullable(this.args);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="dir")
-      private final @Nullable Output<String> dir;
+    private @Nullable Output<String> dir;
 
-    public Output<String> dir() {
-        return this.dir == null ? Codegen.empty() : this.dir;
+    public Optional<Output<String>> dir() {
+        return Optional.ofNullable(this.dir);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="entrypoint")
-      private final @Nullable Output<String> entrypoint;
+    private @Nullable Output<String> entrypoint;
 
-    public Output<String> entrypoint() {
-        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
+    public Optional<Output<String>> entrypoint() {
+        return Optional.ofNullable(this.entrypoint);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="env")
-      private final @Nullable Output<List<String>> env;
+    private @Nullable Output<List<String>> env;
 
-    public Output<List<String>> env() {
-        return this.env == null ? Codegen.empty() : this.env;
+    public Optional<Output<List<String>>> env() {
+        return Optional.ofNullable(this.env);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -81,7 +81,7 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -92,10 +92,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="script")
-      private final @Nullable Output<String> script;
+    private @Nullable Output<String> script;
 
-    public Output<String> script() {
-        return this.script == null ? Codegen.empty() : this.script;
+    public Optional<Output<String>> script() {
+        return Optional.ofNullable(this.script);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretEnv")
-      private final @Nullable Output<List<String>> secretEnv;
+    private @Nullable Output<List<String>> secretEnv;
 
-    public Output<List<String>> secretEnv() {
-        return this.secretEnv == null ? Codegen.empty() : this.secretEnv;
+    public Optional<Output<List<String>>> secretEnv() {
+        return Optional.ofNullable(this.secretEnv);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeout")
-      private final @Nullable Output<String> timeout;
+    private @Nullable Output<String> timeout;
 
-    public Output<String> timeout() {
-        return this.timeout == null ? Codegen.empty() : this.timeout;
+    public Optional<Output<String>> timeout() {
+        return Optional.ofNullable(this.timeout);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumes")
-      private final @Nullable Output<List<VolumeArgs>> volumes;
+    private @Nullable Output<List<VolumeArgs>> volumes;
 
-    public Output<List<VolumeArgs>> volumes() {
-        return this.volumes == null ? Codegen.empty() : this.volumes;
+    public Optional<Output<List<VolumeArgs>>> volumes() {
+        return Optional.ofNullable(this.volumes);
     }
 
     /**
@@ -136,195 +136,169 @@ public final class BuildStepArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="waitFor")
-      private final @Nullable Output<List<String>> waitFor;
+    private @Nullable Output<List<String>> waitFor;
 
-    public Output<List<String>> waitFor() {
-        return this.waitFor == null ? Codegen.empty() : this.waitFor;
+    public Optional<Output<List<String>>> waitFor() {
+        return Optional.ofNullable(this.waitFor);
     }
 
-    public BuildStepArgs(
-        @Nullable Output<List<String>> args,
-        @Nullable Output<String> dir,
-        @Nullable Output<String> entrypoint,
-        @Nullable Output<List<String>> env,
-        @Nullable Output<String> id,
-        Output<String> name,
-        @Nullable Output<String> script,
-        @Nullable Output<List<String>> secretEnv,
-        @Nullable Output<String> timeout,
-        @Nullable Output<List<VolumeArgs>> volumes,
-        @Nullable Output<List<String>> waitFor) {
-        this.args = args;
-        this.dir = dir;
-        this.entrypoint = entrypoint;
-        this.env = env;
-        this.id = id;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.script = script;
-        this.secretEnv = secretEnv;
-        this.timeout = timeout;
-        this.volumes = volumes;
-        this.waitFor = waitFor;
-    }
+    private BuildStepArgs() {}
 
-    private BuildStepArgs() {
-        this.args = Codegen.empty();
-        this.dir = Codegen.empty();
-        this.entrypoint = Codegen.empty();
-        this.env = Codegen.empty();
-        this.id = Codegen.empty();
-        this.name = Codegen.empty();
-        this.script = Codegen.empty();
-        this.secretEnv = Codegen.empty();
-        this.timeout = Codegen.empty();
-        this.volumes = Codegen.empty();
-        this.waitFor = Codegen.empty();
+    private BuildStepArgs(BuildStepArgs $) {
+        this.args = $.args;
+        this.dir = $.dir;
+        this.entrypoint = $.entrypoint;
+        this.env = $.env;
+        this.id = $.id;
+        this.name = $.name;
+        this.script = $.script;
+        this.secretEnv = $.secretEnv;
+        this.timeout = $.timeout;
+        this.volumes = $.volumes;
+        this.waitFor = $.waitFor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> args;
-        private @Nullable Output<String> dir;
-        private @Nullable Output<String> entrypoint;
-        private @Nullable Output<List<String>> env;
-        private @Nullable Output<String> id;
-        private Output<String> name;
-        private @Nullable Output<String> script;
-        private @Nullable Output<List<String>> secretEnv;
-        private @Nullable Output<String> timeout;
-        private @Nullable Output<List<VolumeArgs>> volumes;
-        private @Nullable Output<List<String>> waitFor;
+        private BuildStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildStepArgs();
         }
 
         public Builder(BuildStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.args = defaults.args;
-    	      this.dir = defaults.dir;
-    	      this.entrypoint = defaults.entrypoint;
-    	      this.env = defaults.env;
-    	      this.id = defaults.id;
-    	      this.name = defaults.name;
-    	      this.script = defaults.script;
-    	      this.secretEnv = defaults.secretEnv;
-    	      this.timeout = defaults.timeout;
-    	      this.volumes = defaults.volumes;
-    	      this.waitFor = defaults.waitFor;
+            $ = new BuildStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder args(@Nullable Output<List<String>> args) {
-            this.args = args;
+            $.args = args;
             return this;
         }
-        public Builder args(@Nullable List<String> args) {
-            this.args = Codegen.ofNullable(args);
-            return this;
+
+        public Builder args(List<String> args) {
+            return args(Output.of(args));
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder dir(@Nullable Output<String> dir) {
-            this.dir = dir;
+            $.dir = dir;
             return this;
         }
-        public Builder dir(@Nullable String dir) {
-            this.dir = Codegen.ofNullable(dir);
-            return this;
+
+        public Builder dir(String dir) {
+            return dir(Output.of(dir));
         }
+
         public Builder entrypoint(@Nullable Output<String> entrypoint) {
-            this.entrypoint = entrypoint;
+            $.entrypoint = entrypoint;
             return this;
         }
-        public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Codegen.ofNullable(entrypoint);
-            return this;
+
+        public Builder entrypoint(String entrypoint) {
+            return entrypoint(Output.of(entrypoint));
         }
+
         public Builder env(@Nullable Output<List<String>> env) {
-            this.env = env;
+            $.env = env;
             return this;
         }
-        public Builder env(@Nullable List<String> env) {
-            this.env = Codegen.ofNullable(env);
-            return this;
+
+        public Builder env(List<String> env) {
+            return env(Output.of(env));
         }
+
         public Builder env(String... env) {
             return env(List.of(env));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder script(@Nullable Output<String> script) {
-            this.script = script;
+            $.script = script;
             return this;
         }
-        public Builder script(@Nullable String script) {
-            this.script = Codegen.ofNullable(script);
-            return this;
+
+        public Builder script(String script) {
+            return script(Output.of(script));
         }
+
         public Builder secretEnv(@Nullable Output<List<String>> secretEnv) {
-            this.secretEnv = secretEnv;
+            $.secretEnv = secretEnv;
             return this;
         }
-        public Builder secretEnv(@Nullable List<String> secretEnv) {
-            this.secretEnv = Codegen.ofNullable(secretEnv);
-            return this;
+
+        public Builder secretEnv(List<String> secretEnv) {
+            return secretEnv(Output.of(secretEnv));
         }
+
         public Builder secretEnv(String... secretEnv) {
             return secretEnv(List.of(secretEnv));
         }
+
         public Builder timeout(@Nullable Output<String> timeout) {
-            this.timeout = timeout;
+            $.timeout = timeout;
             return this;
         }
-        public Builder timeout(@Nullable String timeout) {
-            this.timeout = Codegen.ofNullable(timeout);
-            return this;
+
+        public Builder timeout(String timeout) {
+            return timeout(Output.of(timeout));
         }
+
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
-            this.volumes = volumes;
+            $.volumes = volumes;
             return this;
         }
-        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Codegen.ofNullable(volumes);
-            return this;
+
+        public Builder volumes(List<VolumeArgs> volumes) {
+            return volumes(Output.of(volumes));
         }
+
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }
+
         public Builder waitFor(@Nullable Output<List<String>> waitFor) {
-            this.waitFor = waitFor;
+            $.waitFor = waitFor;
             return this;
         }
-        public Builder waitFor(@Nullable List<String> waitFor) {
-            this.waitFor = Codegen.ofNullable(waitFor);
-            return this;
+
+        public Builder waitFor(List<String> waitFor) {
+            return waitFor(Output.of(waitFor));
         }
+
         public Builder waitFor(String... waitFor) {
             return waitFor(List.of(waitFor));
-        }        public BuildStepArgs build() {
-            return new BuildStepArgs(args, dir, entrypoint, env, id, name, script, secretEnv, timeout, volumes, waitFor);
+        }
+
+        public BuildStepArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

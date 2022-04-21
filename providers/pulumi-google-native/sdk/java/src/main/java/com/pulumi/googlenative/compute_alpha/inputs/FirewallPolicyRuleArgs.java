@@ -5,7 +5,6 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.FirewallPolicyRuleDirection;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagArgs;
@@ -14,6 +13,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="direction")
-      private final @Nullable Output<FirewallPolicyRuleDirection> direction;
+    private @Nullable Output<FirewallPolicyRuleDirection> direction;
 
-    public Output<FirewallPolicyRuleDirection> direction() {
-        return this.direction == null ? Codegen.empty() : this.direction;
+    public Optional<Output<FirewallPolicyRuleDirection>> direction() {
+        return Optional.ofNullable(this.direction);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="enableLogging")
-      private final @Nullable Output<Boolean> enableLogging;
+    private @Nullable Output<Boolean> enableLogging;
 
-    public Output<Boolean> enableLogging() {
-        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
+    public Optional<Output<Boolean>> enableLogging() {
+        return Optional.ofNullable(this.enableLogging);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="match")
-      private final @Nullable Output<FirewallPolicyRuleMatcherArgs> match;
+    private @Nullable Output<FirewallPolicyRuleMatcherArgs> match;
 
-    public Output<FirewallPolicyRuleMatcherArgs> match() {
-        return this.match == null ? Codegen.empty() : this.match;
+    public Optional<Output<FirewallPolicyRuleMatcherArgs>> match() {
+        return Optional.ofNullable(this.match);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<Integer> priority;
+    private @Nullable Output<Integer> priority;
 
-    public Output<Integer> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<Integer>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -107,10 +107,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetResources")
-      private final @Nullable Output<List<String>> targetResources;
+    private @Nullable Output<List<String>> targetResources;
 
-    public Output<List<String>> targetResources() {
-        return this.targetResources == null ? Codegen.empty() : this.targetResources;
+    public Optional<Output<List<String>>> targetResources() {
+        return Optional.ofNullable(this.targetResources);
     }
 
     /**
@@ -118,10 +118,10 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetSecureTags")
-      private final @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags;
+    private @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags;
 
-    public Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags() {
-        return this.targetSecureTags == null ? Codegen.empty() : this.targetSecureTags;
+    public Optional<Output<List<FirewallPolicyRuleSecureTagArgs>>> targetSecureTags() {
+        return Optional.ofNullable(this.targetSecureTags);
     }
 
     /**
@@ -129,176 +129,150 @@ public final class FirewallPolicyRuleArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="targetServiceAccounts")
-      private final @Nullable Output<List<String>> targetServiceAccounts;
+    private @Nullable Output<List<String>> targetServiceAccounts;
 
-    public Output<List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts == null ? Codegen.empty() : this.targetServiceAccounts;
+    public Optional<Output<List<String>>> targetServiceAccounts() {
+        return Optional.ofNullable(this.targetServiceAccounts);
     }
 
-    public FirewallPolicyRuleArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<String> description,
-        @Nullable Output<FirewallPolicyRuleDirection> direction,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<Boolean> enableLogging,
-        @Nullable Output<FirewallPolicyRuleMatcherArgs> match,
-        @Nullable Output<Integer> priority,
-        @Nullable Output<List<String>> targetResources,
-        @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags,
-        @Nullable Output<List<String>> targetServiceAccounts) {
-        this.action = action;
-        this.description = description;
-        this.direction = direction;
-        this.disabled = disabled;
-        this.enableLogging = enableLogging;
-        this.match = match;
-        this.priority = priority;
-        this.targetResources = targetResources;
-        this.targetSecureTags = targetSecureTags;
-        this.targetServiceAccounts = targetServiceAccounts;
-    }
+    private FirewallPolicyRuleArgs() {}
 
-    private FirewallPolicyRuleArgs() {
-        this.action = Codegen.empty();
-        this.description = Codegen.empty();
-        this.direction = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.enableLogging = Codegen.empty();
-        this.match = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.targetResources = Codegen.empty();
-        this.targetSecureTags = Codegen.empty();
-        this.targetServiceAccounts = Codegen.empty();
+    private FirewallPolicyRuleArgs(FirewallPolicyRuleArgs $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.direction = $.direction;
+        this.disabled = $.disabled;
+        this.enableLogging = $.enableLogging;
+        this.match = $.match;
+        this.priority = $.priority;
+        this.targetResources = $.targetResources;
+        this.targetSecureTags = $.targetSecureTags;
+        this.targetServiceAccounts = $.targetServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> description;
-        private @Nullable Output<FirewallPolicyRuleDirection> direction;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<Boolean> enableLogging;
-        private @Nullable Output<FirewallPolicyRuleMatcherArgs> match;
-        private @Nullable Output<Integer> priority;
-        private @Nullable Output<List<String>> targetResources;
-        private @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags;
-        private @Nullable Output<List<String>> targetServiceAccounts;
+        private FirewallPolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleArgs();
         }
 
         public Builder(FirewallPolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.direction = defaults.direction;
-    	      this.disabled = defaults.disabled;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.match = defaults.match;
-    	      this.priority = defaults.priority;
-    	      this.targetResources = defaults.targetResources;
-    	      this.targetSecureTags = defaults.targetSecureTags;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
+            $ = new FirewallPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder direction(@Nullable Output<FirewallPolicyRuleDirection> direction) {
-            this.direction = direction;
+            $.direction = direction;
             return this;
         }
-        public Builder direction(@Nullable FirewallPolicyRuleDirection direction) {
-            this.direction = Codegen.ofNullable(direction);
-            return this;
+
+        public Builder direction(FirewallPolicyRuleDirection direction) {
+            return direction(Output.of(direction));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
-            this.enableLogging = enableLogging;
+            $.enableLogging = enableLogging;
             return this;
         }
-        public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Codegen.ofNullable(enableLogging);
-            return this;
+
+        public Builder enableLogging(Boolean enableLogging) {
+            return enableLogging(Output.of(enableLogging));
         }
+
         public Builder match(@Nullable Output<FirewallPolicyRuleMatcherArgs> match) {
-            this.match = match;
+            $.match = match;
             return this;
         }
-        public Builder match(@Nullable FirewallPolicyRuleMatcherArgs match) {
-            this.match = Codegen.ofNullable(match);
-            return this;
+
+        public Builder match(FirewallPolicyRuleMatcherArgs match) {
+            return match(Output.of(match));
         }
+
         public Builder priority(@Nullable Output<Integer> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable Integer priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(Integer priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder targetResources(@Nullable Output<List<String>> targetResources) {
-            this.targetResources = targetResources;
+            $.targetResources = targetResources;
             return this;
         }
-        public Builder targetResources(@Nullable List<String> targetResources) {
-            this.targetResources = Codegen.ofNullable(targetResources);
-            return this;
+
+        public Builder targetResources(List<String> targetResources) {
+            return targetResources(Output.of(targetResources));
         }
+
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
+
         public Builder targetSecureTags(@Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> targetSecureTags) {
-            this.targetSecureTags = targetSecureTags;
+            $.targetSecureTags = targetSecureTags;
             return this;
         }
-        public Builder targetSecureTags(@Nullable List<FirewallPolicyRuleSecureTagArgs> targetSecureTags) {
-            this.targetSecureTags = Codegen.ofNullable(targetSecureTags);
-            return this;
+
+        public Builder targetSecureTags(List<FirewallPolicyRuleSecureTagArgs> targetSecureTags) {
+            return targetSecureTags(Output.of(targetSecureTags));
         }
+
         public Builder targetSecureTags(FirewallPolicyRuleSecureTagArgs... targetSecureTags) {
             return targetSecureTags(List.of(targetSecureTags));
         }
+
         public Builder targetServiceAccounts(@Nullable Output<List<String>> targetServiceAccounts) {
-            this.targetServiceAccounts = targetServiceAccounts;
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
-        public Builder targetServiceAccounts(@Nullable List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Codegen.ofNullable(targetServiceAccounts);
-            return this;
+
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
+            return targetServiceAccounts(Output.of(targetServiceAccounts));
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
-        }        public FirewallPolicyRuleArgs build() {
-            return new FirewallPolicyRuleArgs(action, description, direction, disabled, enableLogging, match, priority, targetResources, targetSecureTags, targetServiceAccounts);
+        }
+
+        public FirewallPolicyRuleArgs build() {
+            return $;
         }
     }
+
 }

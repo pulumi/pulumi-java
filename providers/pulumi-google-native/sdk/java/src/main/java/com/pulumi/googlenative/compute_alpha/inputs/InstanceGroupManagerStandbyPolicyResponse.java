@@ -13,45 +13,45 @@ public final class InstanceGroupManagerStandbyPolicyResponse extends com.pulumi.
     public static final InstanceGroupManagerStandbyPolicyResponse Empty = new InstanceGroupManagerStandbyPolicyResponse();
 
     @Import(name="initialDelaySec", required=true)
-      private final Integer initialDelaySec;
+    private Integer initialDelaySec;
 
     public Integer initialDelaySec() {
         return this.initialDelaySec;
     }
 
-    public InstanceGroupManagerStandbyPolicyResponse(Integer initialDelaySec) {
-        this.initialDelaySec = Objects.requireNonNull(initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
-    }
+    private InstanceGroupManagerStandbyPolicyResponse() {}
 
-    private InstanceGroupManagerStandbyPolicyResponse() {
-        this.initialDelaySec = null;
+    private InstanceGroupManagerStandbyPolicyResponse(InstanceGroupManagerStandbyPolicyResponse $) {
+        this.initialDelaySec = $.initialDelaySec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceGroupManagerStandbyPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer initialDelaySec;
+        private InstanceGroupManagerStandbyPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceGroupManagerStandbyPolicyResponse();
         }
 
         public Builder(InstanceGroupManagerStandbyPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.initialDelaySec = defaults.initialDelaySec;
+            $ = new InstanceGroupManagerStandbyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder initialDelaySec(Integer initialDelaySec) {
-            this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
+            $.initialDelaySec = initialDelaySec;
             return this;
-        }        public InstanceGroupManagerStandbyPolicyResponse build() {
-            return new InstanceGroupManagerStandbyPolicyResponse(initialDelaySec);
+        }
+
+        public InstanceGroupManagerStandbyPolicyResponse build() {
+            $.initialDelaySec = Objects.requireNonNull($.initialDelaySec, "expected parameter 'initialDelaySec' to be non-null");
+            return $;
         }
     }
+
 }

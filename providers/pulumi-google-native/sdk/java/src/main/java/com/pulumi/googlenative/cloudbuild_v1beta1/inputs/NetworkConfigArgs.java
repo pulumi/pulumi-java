@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudbuild_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class NetworkConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="peeredNetwork", required=true)
-      private final Output<String> peeredNetwork;
+    private Output<String> peeredNetwork;
 
     public Output<String> peeredNetwork() {
         return this.peeredNetwork;
     }
 
-    public NetworkConfigArgs(Output<String> peeredNetwork) {
-        this.peeredNetwork = Objects.requireNonNull(peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
-    }
+    private NetworkConfigArgs() {}
 
-    private NetworkConfigArgs() {
-        this.peeredNetwork = Codegen.empty();
+    private NetworkConfigArgs(NetworkConfigArgs $) {
+        this.peeredNetwork = $.peeredNetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> peeredNetwork;
+        private NetworkConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkConfigArgs();
         }
 
         public Builder(NetworkConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.peeredNetwork = defaults.peeredNetwork;
+            $ = new NetworkConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder peeredNetwork(Output<String> peeredNetwork) {
-            this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
+            $.peeredNetwork = peeredNetwork;
             return this;
         }
+
         public Builder peeredNetwork(String peeredNetwork) {
-            this.peeredNetwork = Output.of(Objects.requireNonNull(peeredNetwork));
-            return this;
-        }        public NetworkConfigArgs build() {
-            return new NetworkConfigArgs(peeredNetwork);
+            return peeredNetwork(Output.of(peeredNetwork));
+        }
+
+        public NetworkConfigArgs build() {
+            $.peeredNetwork = Objects.requireNonNull($.peeredNetwork, "expected parameter 'peeredNetwork' to be non-null");
+            return $;
         }
     }
+
 }

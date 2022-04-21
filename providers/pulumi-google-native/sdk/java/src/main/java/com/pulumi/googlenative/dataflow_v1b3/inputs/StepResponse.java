@@ -22,7 +22,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -33,7 +33,7 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -44,64 +44,59 @@ public final class StepResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
     }
 
-    public StepResponse(
-        String kind,
-        String name,
-        Map<String,String> properties) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private StepResponse() {}
 
-    private StepResponse() {
-        this.kind = null;
-        this.name = null;
-        this.properties = Map.of();
+    private StepResponse(StepResponse $) {
+        this.kind = $.kind;
+        this.name = $.name;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private String name;
-        private Map<String,String> properties;
+        private StepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new StepResponse();
         }
 
         public Builder(StepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.properties = defaults.properties;
+            $ = new StepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public StepResponse build() {
-            return new StepResponse(kind, name, properties);
+        }
+
+        public StepResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

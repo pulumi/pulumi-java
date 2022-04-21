@@ -15,62 +15,58 @@ public final class GetTestMatrixArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetTestMatrixArgs Empty = new GetTestMatrixArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="testMatrixId", required=true)
-      private final String testMatrixId;
+    private String testMatrixId;
 
     public String testMatrixId() {
         return this.testMatrixId;
     }
 
-    public GetTestMatrixArgs(
-        @Nullable String project,
-        String testMatrixId) {
-        this.project = project;
-        this.testMatrixId = Objects.requireNonNull(testMatrixId, "expected parameter 'testMatrixId' to be non-null");
-    }
+    private GetTestMatrixArgs() {}
 
-    private GetTestMatrixArgs() {
-        this.project = null;
-        this.testMatrixId = null;
+    private GetTestMatrixArgs(GetTestMatrixArgs $) {
+        this.project = $.project;
+        this.testMatrixId = $.testMatrixId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTestMatrixArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String testMatrixId;
+        private GetTestMatrixArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTestMatrixArgs();
         }
 
         public Builder(GetTestMatrixArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.testMatrixId = defaults.testMatrixId;
+            $ = new GetTestMatrixArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder testMatrixId(String testMatrixId) {
-            this.testMatrixId = Objects.requireNonNull(testMatrixId);
+            $.testMatrixId = testMatrixId;
             return this;
-        }        public GetTestMatrixArgs build() {
-            return new GetTestMatrixArgs(project, testMatrixId);
+        }
+
+        public GetTestMatrixArgs build() {
+            $.testMatrixId = Objects.requireNonNull($.testMatrixId, "expected parameter 'testMatrixId' to be non-null");
+            return $;
         }
     }
+
 }

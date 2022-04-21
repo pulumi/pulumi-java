@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.enums.CisBenchmarkSeverity;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,70 +21,65 @@ public final class CisBenchmarkArgs extends com.pulumi.resources.ResourceArgs {
     public static final CisBenchmarkArgs Empty = new CisBenchmarkArgs();
 
     @Import(name="profileLevel")
-      private final @Nullable Output<Integer> profileLevel;
+    private @Nullable Output<Integer> profileLevel;
 
-    public Output<Integer> profileLevel() {
-        return this.profileLevel == null ? Codegen.empty() : this.profileLevel;
+    public Optional<Output<Integer>> profileLevel() {
+        return Optional.ofNullable(this.profileLevel);
     }
 
     @Import(name="severity")
-      private final @Nullable Output<CisBenchmarkSeverity> severity;
+    private @Nullable Output<CisBenchmarkSeverity> severity;
 
-    public Output<CisBenchmarkSeverity> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<CisBenchmarkSeverity>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
-    public CisBenchmarkArgs(
-        @Nullable Output<Integer> profileLevel,
-        @Nullable Output<CisBenchmarkSeverity> severity) {
-        this.profileLevel = profileLevel;
-        this.severity = severity;
-    }
+    private CisBenchmarkArgs() {}
 
-    private CisBenchmarkArgs() {
-        this.profileLevel = Codegen.empty();
-        this.severity = Codegen.empty();
+    private CisBenchmarkArgs(CisBenchmarkArgs $) {
+        this.profileLevel = $.profileLevel;
+        this.severity = $.severity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CisBenchmarkArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> profileLevel;
-        private @Nullable Output<CisBenchmarkSeverity> severity;
+        private CisBenchmarkArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CisBenchmarkArgs();
         }
 
         public Builder(CisBenchmarkArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.profileLevel = defaults.profileLevel;
-    	      this.severity = defaults.severity;
+            $ = new CisBenchmarkArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder profileLevel(@Nullable Output<Integer> profileLevel) {
-            this.profileLevel = profileLevel;
+            $.profileLevel = profileLevel;
             return this;
         }
-        public Builder profileLevel(@Nullable Integer profileLevel) {
-            this.profileLevel = Codegen.ofNullable(profileLevel);
-            return this;
+
+        public Builder profileLevel(Integer profileLevel) {
+            return profileLevel(Output.of(profileLevel));
         }
+
         public Builder severity(@Nullable Output<CisBenchmarkSeverity> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable CisBenchmarkSeverity severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
-        }        public CisBenchmarkArgs build() {
-            return new CisBenchmarkArgs(profileLevel, severity);
+
+        public Builder severity(CisBenchmarkSeverity severity) {
+            return severity(Output.of(severity));
+        }
+
+        public CisBenchmarkArgs build() {
+            return $;
         }
     }
+
 }

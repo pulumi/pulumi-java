@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="producerProjectId")
-      private final @Nullable Output<String> producerProjectId;
+    private @Nullable Output<String> producerProjectId;
 
-    public Output<String> producerProjectId() {
-        return this.producerProjectId == null ? Codegen.empty() : this.producerProjectId;
+    public Optional<Output<String>> producerProjectId() {
+        return Optional.ofNullable(this.producerProjectId);
     }
 
     /**
@@ -31,63 +31,58 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceName")
-      private final @Nullable Output<String> serviceName;
+    private @Nullable Output<String> serviceName;
 
-    public Output<String> serviceName() {
-        return this.serviceName == null ? Codegen.empty() : this.serviceName;
+    public Optional<Output<String>> serviceName() {
+        return Optional.ofNullable(this.serviceName);
     }
 
-    public ServiceArgs(
-        @Nullable Output<String> producerProjectId,
-        @Nullable Output<String> serviceName) {
-        this.producerProjectId = producerProjectId;
-        this.serviceName = serviceName;
-    }
+    private ServiceArgs() {}
 
-    private ServiceArgs() {
-        this.producerProjectId = Codegen.empty();
-        this.serviceName = Codegen.empty();
+    private ServiceArgs(ServiceArgs $) {
+        this.producerProjectId = $.producerProjectId;
+        this.serviceName = $.serviceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> producerProjectId;
-        private @Nullable Output<String> serviceName;
+        private ServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceArgs();
         }
 
         public Builder(ServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.producerProjectId = defaults.producerProjectId;
-    	      this.serviceName = defaults.serviceName;
+            $ = new ServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder producerProjectId(@Nullable Output<String> producerProjectId) {
-            this.producerProjectId = producerProjectId;
+            $.producerProjectId = producerProjectId;
             return this;
         }
-        public Builder producerProjectId(@Nullable String producerProjectId) {
-            this.producerProjectId = Codegen.ofNullable(producerProjectId);
-            return this;
+
+        public Builder producerProjectId(String producerProjectId) {
+            return producerProjectId(Output.of(producerProjectId));
         }
+
         public Builder serviceName(@Nullable Output<String> serviceName) {
-            this.serviceName = serviceName;
+            $.serviceName = serviceName;
             return this;
         }
-        public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Codegen.ofNullable(serviceName);
-            return this;
-        }        public ServiceArgs build() {
-            return new ServiceArgs(producerProjectId, serviceName);
+
+        public Builder serviceName(String serviceName) {
+            return serviceName(Output.of(serviceName));
+        }
+
+        public ServiceArgs build() {
+            return $;
         }
     }
+
 }

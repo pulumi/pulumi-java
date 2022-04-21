@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.ResourcePolicyWeeklyCycleDayOfWeekArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class ResourcePolicyWeeklyCycleArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="dayOfWeeks")
-      private final @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
+    private @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
-    public Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks() {
-        return this.dayOfWeeks == null ? Codegen.empty() : this.dayOfWeeks;
+    public Optional<Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>>> dayOfWeeks() {
+        return Optional.ofNullable(this.dayOfWeeks);
     }
 
-    public ResourcePolicyWeeklyCycleArgs(@Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
-        this.dayOfWeeks = dayOfWeeks;
-    }
+    private ResourcePolicyWeeklyCycleArgs() {}
 
-    private ResourcePolicyWeeklyCycleArgs() {
-        this.dayOfWeeks = Codegen.empty();
+    private ResourcePolicyWeeklyCycleArgs(ResourcePolicyWeeklyCycleArgs $) {
+        this.dayOfWeeks = $.dayOfWeeks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicyWeeklyCycleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
+        private ResourcePolicyWeeklyCycleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicyWeeklyCycleArgs();
         }
 
         public Builder(ResourcePolicyWeeklyCycleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeeks = defaults.dayOfWeeks;
+            $ = new ResourcePolicyWeeklyCycleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeeks(@Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
-            this.dayOfWeeks = dayOfWeeks;
+            $.dayOfWeeks = dayOfWeeks;
             return this;
         }
-        public Builder dayOfWeeks(@Nullable List<ResourcePolicyWeeklyCycleDayOfWeekArgs> dayOfWeeks) {
-            this.dayOfWeeks = Codegen.ofNullable(dayOfWeeks);
-            return this;
+
+        public Builder dayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekArgs> dayOfWeeks) {
+            return dayOfWeeks(Output.of(dayOfWeeks));
         }
+
         public Builder dayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeekArgs... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
-        }        public ResourcePolicyWeeklyCycleArgs build() {
-            return new ResourcePolicyWeeklyCycleArgs(dayOfWeeks);
+        }
+
+        public ResourcePolicyWeeklyCycleArgs build() {
+            return $;
         }
     }
+
 }

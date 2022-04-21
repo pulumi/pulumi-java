@@ -22,7 +22,7 @@ public final class PhraseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="boost", required=true)
-      private final Double boost;
+    private Double boost;
 
     public Double boost() {
         return this.boost;
@@ -33,55 +33,52 @@ public final class PhraseResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public PhraseResponse(
-        Double boost,
-        String value) {
-        this.boost = Objects.requireNonNull(boost, "expected parameter 'boost' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private PhraseResponse() {}
 
-    private PhraseResponse() {
-        this.boost = null;
-        this.value = null;
+    private PhraseResponse(PhraseResponse $) {
+        this.boost = $.boost;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PhraseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double boost;
-        private String value;
+        private PhraseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PhraseResponse();
         }
 
         public Builder(PhraseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boost = defaults.boost;
-    	      this.value = defaults.value;
+            $ = new PhraseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder boost(Double boost) {
-            this.boost = Objects.requireNonNull(boost);
+            $.boost = boost;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public PhraseResponse build() {
-            return new PhraseResponse(boost, value);
+        }
+
+        public PhraseResponse build() {
+            $.boost = Objects.requireNonNull($.boost, "expected parameter 'boost' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

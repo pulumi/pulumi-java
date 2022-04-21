@@ -21,45 +21,45 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse extends com.pulumi.
      * 
      */
     @Import(name="groupedEntry", required=true)
-      private final String groupedEntry;
+    private String groupedEntry;
 
     public String groupedEntry() {
         return this.groupedEntry;
     }
 
-    public GoogleCloudDatacatalogV1TableSpecResponse(String groupedEntry) {
-        this.groupedEntry = Objects.requireNonNull(groupedEntry, "expected parameter 'groupedEntry' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1TableSpecResponse() {}
 
-    private GoogleCloudDatacatalogV1TableSpecResponse() {
-        this.groupedEntry = null;
+    private GoogleCloudDatacatalogV1TableSpecResponse(GoogleCloudDatacatalogV1TableSpecResponse $) {
+        this.groupedEntry = $.groupedEntry;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1TableSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupedEntry;
+        private GoogleCloudDatacatalogV1TableSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1TableSpecResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1TableSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupedEntry = defaults.groupedEntry;
+            $ = new GoogleCloudDatacatalogV1TableSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupedEntry(String groupedEntry) {
-            this.groupedEntry = Objects.requireNonNull(groupedEntry);
+            $.groupedEntry = groupedEntry;
             return this;
-        }        public GoogleCloudDatacatalogV1TableSpecResponse build() {
-            return new GoogleCloudDatacatalogV1TableSpecResponse(groupedEntry);
+        }
+
+        public GoogleCloudDatacatalogV1TableSpecResponse build() {
+            $.groupedEntry = Objects.requireNonNull($.groupedEntry, "expected parameter 'groupedEntry' to be non-null");
+            return $;
         }
     }
+
 }

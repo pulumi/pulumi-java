@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="boolValue")
-      private final @Nullable Output<Boolean> boolValue;
+    private @Nullable Output<Boolean> boolValue;
 
-    public Output<Boolean> boolValue() {
-        return this.boolValue == null ? Codegen.empty() : this.boolValue;
+    public Optional<Output<Boolean>> boolValue() {
+        return Optional.ofNullable(this.boolValue);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="durationValue")
-      private final @Nullable Output<String> durationValue;
+    private @Nullable Output<String> durationValue;
 
-    public Output<String> durationValue() {
-        return this.durationValue == null ? Codegen.empty() : this.durationValue;
+    public Optional<Output<String>> durationValue() {
+        return Optional.ofNullable(this.durationValue);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="floatValue")
-      private final @Nullable Output<Double> floatValue;
+    private @Nullable Output<Double> floatValue;
 
-    public Output<Double> floatValue() {
-        return this.floatValue == null ? Codegen.empty() : this.floatValue;
+    public Optional<Output<Double>> floatValue() {
+        return Optional.ofNullable(this.floatValue);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="int64Value")
-      private final @Nullable Output<String> int64Value;
+    private @Nullable Output<String> int64Value;
 
-    public Output<String> int64Value() {
-        return this.int64Value == null ? Codegen.empty() : this.int64Value;
+    public Optional<Output<String>> int64Value() {
+        return Optional.ofNullable(this.int64Value);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="javaClassValue")
-      private final @Nullable Output<String> javaClassValue;
+    private @Nullable Output<String> javaClassValue;
 
-    public Output<String> javaClassValue() {
-        return this.javaClassValue == null ? Codegen.empty() : this.javaClassValue;
+    public Optional<Output<String>> javaClassValue() {
+        return Optional.ofNullable(this.javaClassValue);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="label")
-      private final @Nullable Output<String> label;
+    private @Nullable Output<String> label;
 
-    public Output<String> label() {
-        return this.label == null ? Codegen.empty() : this.label;
+    public Optional<Output<String>> label() {
+        return Optional.ofNullable(this.label);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortStrValue")
-      private final @Nullable Output<String> shortStrValue;
+    private @Nullable Output<String> shortStrValue;
 
-    public Output<String> shortStrValue() {
-        return this.shortStrValue == null ? Codegen.empty() : this.shortStrValue;
+    public Optional<Output<String>> shortStrValue() {
+        return Optional.ofNullable(this.shortStrValue);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="strValue")
-      private final @Nullable Output<String> strValue;
+    private @Nullable Output<String> strValue;
 
-    public Output<String> strValue() {
-        return this.strValue == null ? Codegen.empty() : this.strValue;
+    public Optional<Output<String>> strValue() {
+        return Optional.ofNullable(this.strValue);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timestampValue")
-      private final @Nullable Output<String> timestampValue;
+    private @Nullable Output<String> timestampValue;
 
-    public Output<String> timestampValue() {
-        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
+    public Optional<Output<String>> timestampValue() {
+        return Optional.ofNullable(this.timestampValue);
     }
 
     /**
@@ -147,193 +147,158 @@ public final class DisplayDataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public DisplayDataArgs(
-        @Nullable Output<Boolean> boolValue,
-        @Nullable Output<String> durationValue,
-        @Nullable Output<Double> floatValue,
-        @Nullable Output<String> int64Value,
-        @Nullable Output<String> javaClassValue,
-        @Nullable Output<String> key,
-        @Nullable Output<String> label,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> shortStrValue,
-        @Nullable Output<String> strValue,
-        @Nullable Output<String> timestampValue,
-        @Nullable Output<String> url) {
-        this.boolValue = boolValue;
-        this.durationValue = durationValue;
-        this.floatValue = floatValue;
-        this.int64Value = int64Value;
-        this.javaClassValue = javaClassValue;
-        this.key = key;
-        this.label = label;
-        this.namespace = namespace;
-        this.shortStrValue = shortStrValue;
-        this.strValue = strValue;
-        this.timestampValue = timestampValue;
-        this.url = url;
-    }
+    private DisplayDataArgs() {}
 
-    private DisplayDataArgs() {
-        this.boolValue = Codegen.empty();
-        this.durationValue = Codegen.empty();
-        this.floatValue = Codegen.empty();
-        this.int64Value = Codegen.empty();
-        this.javaClassValue = Codegen.empty();
-        this.key = Codegen.empty();
-        this.label = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.shortStrValue = Codegen.empty();
-        this.strValue = Codegen.empty();
-        this.timestampValue = Codegen.empty();
-        this.url = Codegen.empty();
+    private DisplayDataArgs(DisplayDataArgs $) {
+        this.boolValue = $.boolValue;
+        this.durationValue = $.durationValue;
+        this.floatValue = $.floatValue;
+        this.int64Value = $.int64Value;
+        this.javaClassValue = $.javaClassValue;
+        this.key = $.key;
+        this.label = $.label;
+        this.namespace = $.namespace;
+        this.shortStrValue = $.shortStrValue;
+        this.strValue = $.strValue;
+        this.timestampValue = $.timestampValue;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DisplayDataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> boolValue;
-        private @Nullable Output<String> durationValue;
-        private @Nullable Output<Double> floatValue;
-        private @Nullable Output<String> int64Value;
-        private @Nullable Output<String> javaClassValue;
-        private @Nullable Output<String> key;
-        private @Nullable Output<String> label;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> shortStrValue;
-        private @Nullable Output<String> strValue;
-        private @Nullable Output<String> timestampValue;
-        private @Nullable Output<String> url;
+        private DisplayDataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DisplayDataArgs();
         }
 
         public Builder(DisplayDataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.boolValue = defaults.boolValue;
-    	      this.durationValue = defaults.durationValue;
-    	      this.floatValue = defaults.floatValue;
-    	      this.int64Value = defaults.int64Value;
-    	      this.javaClassValue = defaults.javaClassValue;
-    	      this.key = defaults.key;
-    	      this.label = defaults.label;
-    	      this.namespace = defaults.namespace;
-    	      this.shortStrValue = defaults.shortStrValue;
-    	      this.strValue = defaults.strValue;
-    	      this.timestampValue = defaults.timestampValue;
-    	      this.url = defaults.url;
+            $ = new DisplayDataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder boolValue(@Nullable Output<Boolean> boolValue) {
-            this.boolValue = boolValue;
+            $.boolValue = boolValue;
             return this;
         }
-        public Builder boolValue(@Nullable Boolean boolValue) {
-            this.boolValue = Codegen.ofNullable(boolValue);
-            return this;
+
+        public Builder boolValue(Boolean boolValue) {
+            return boolValue(Output.of(boolValue));
         }
+
         public Builder durationValue(@Nullable Output<String> durationValue) {
-            this.durationValue = durationValue;
+            $.durationValue = durationValue;
             return this;
         }
-        public Builder durationValue(@Nullable String durationValue) {
-            this.durationValue = Codegen.ofNullable(durationValue);
-            return this;
+
+        public Builder durationValue(String durationValue) {
+            return durationValue(Output.of(durationValue));
         }
+
         public Builder floatValue(@Nullable Output<Double> floatValue) {
-            this.floatValue = floatValue;
+            $.floatValue = floatValue;
             return this;
         }
-        public Builder floatValue(@Nullable Double floatValue) {
-            this.floatValue = Codegen.ofNullable(floatValue);
-            return this;
+
+        public Builder floatValue(Double floatValue) {
+            return floatValue(Output.of(floatValue));
         }
+
         public Builder int64Value(@Nullable Output<String> int64Value) {
-            this.int64Value = int64Value;
+            $.int64Value = int64Value;
             return this;
         }
-        public Builder int64Value(@Nullable String int64Value) {
-            this.int64Value = Codegen.ofNullable(int64Value);
-            return this;
+
+        public Builder int64Value(String int64Value) {
+            return int64Value(Output.of(int64Value));
         }
+
         public Builder javaClassValue(@Nullable Output<String> javaClassValue) {
-            this.javaClassValue = javaClassValue;
+            $.javaClassValue = javaClassValue;
             return this;
         }
-        public Builder javaClassValue(@Nullable String javaClassValue) {
-            this.javaClassValue = Codegen.ofNullable(javaClassValue);
-            return this;
+
+        public Builder javaClassValue(String javaClassValue) {
+            return javaClassValue(Output.of(javaClassValue));
         }
+
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder label(@Nullable Output<String> label) {
-            this.label = label;
+            $.label = label;
             return this;
         }
-        public Builder label(@Nullable String label) {
-            this.label = Codegen.ofNullable(label);
-            return this;
+
+        public Builder label(String label) {
+            return label(Output.of(label));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder shortStrValue(@Nullable Output<String> shortStrValue) {
-            this.shortStrValue = shortStrValue;
+            $.shortStrValue = shortStrValue;
             return this;
         }
-        public Builder shortStrValue(@Nullable String shortStrValue) {
-            this.shortStrValue = Codegen.ofNullable(shortStrValue);
-            return this;
+
+        public Builder shortStrValue(String shortStrValue) {
+            return shortStrValue(Output.of(shortStrValue));
         }
+
         public Builder strValue(@Nullable Output<String> strValue) {
-            this.strValue = strValue;
+            $.strValue = strValue;
             return this;
         }
-        public Builder strValue(@Nullable String strValue) {
-            this.strValue = Codegen.ofNullable(strValue);
-            return this;
+
+        public Builder strValue(String strValue) {
+            return strValue(Output.of(strValue));
         }
+
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
-            this.timestampValue = timestampValue;
+            $.timestampValue = timestampValue;
             return this;
         }
-        public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Codegen.ofNullable(timestampValue);
-            return this;
+
+        public Builder timestampValue(String timestampValue) {
+            return timestampValue(Output.of(timestampValue));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public DisplayDataArgs build() {
-            return new DisplayDataArgs(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public DisplayDataArgs build() {
+            return $;
         }
     }
+
 }

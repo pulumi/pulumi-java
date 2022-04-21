@@ -21,45 +21,45 @@ public final class EcKeyTypeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="signatureAlgorithm", required=true)
-      private final String signatureAlgorithm;
+    private String signatureAlgorithm;
 
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 
-    public EcKeyTypeResponse(String signatureAlgorithm) {
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
-    }
+    private EcKeyTypeResponse() {}
 
-    private EcKeyTypeResponse() {
-        this.signatureAlgorithm = null;
+    private EcKeyTypeResponse(EcKeyTypeResponse $) {
+        this.signatureAlgorithm = $.signatureAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EcKeyTypeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String signatureAlgorithm;
+        private EcKeyTypeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EcKeyTypeResponse();
         }
 
         public Builder(EcKeyTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
+            $ = new EcKeyTypeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
-        }        public EcKeyTypeResponse build() {
-            return new EcKeyTypeResponse(signatureAlgorithm);
+        }
+
+        public EcKeyTypeResponse build() {
+            $.signatureAlgorithm = Objects.requireNonNull($.signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
+            return $;
         }
     }
+
 }

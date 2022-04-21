@@ -22,7 +22,7 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="eventType", required=true)
-      private final String eventType;
+    private String eventType;
 
     public String eventType() {
         return this.eventType;
@@ -33,7 +33,7 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="failurePolicy", required=true)
-      private final FailurePolicyResponse failurePolicy;
+    private FailurePolicyResponse failurePolicy;
 
     public FailurePolicyResponse failurePolicy() {
         return this.failurePolicy;
@@ -44,7 +44,7 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
@@ -55,73 +55,66 @@ public final class EventTriggerResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
     }
 
-    public EventTriggerResponse(
-        String eventType,
-        FailurePolicyResponse failurePolicy,
-        String resource,
-        String service) {
-        this.eventType = Objects.requireNonNull(eventType, "expected parameter 'eventType' to be non-null");
-        this.failurePolicy = Objects.requireNonNull(failurePolicy, "expected parameter 'failurePolicy' to be non-null");
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-    }
+    private EventTriggerResponse() {}
 
-    private EventTriggerResponse() {
-        this.eventType = null;
-        this.failurePolicy = null;
-        this.resource = null;
-        this.service = null;
+    private EventTriggerResponse(EventTriggerResponse $) {
+        this.eventType = $.eventType;
+        this.failurePolicy = $.failurePolicy;
+        this.resource = $.resource;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EventTriggerResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String eventType;
-        private FailurePolicyResponse failurePolicy;
-        private String resource;
-        private String service;
+        private EventTriggerResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EventTriggerResponse();
         }
 
         public Builder(EventTriggerResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.eventType = defaults.eventType;
-    	      this.failurePolicy = defaults.failurePolicy;
-    	      this.resource = defaults.resource;
-    	      this.service = defaults.service;
+            $ = new EventTriggerResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder eventType(String eventType) {
-            this.eventType = Objects.requireNonNull(eventType);
+            $.eventType = eventType;
             return this;
         }
+
         public Builder failurePolicy(FailurePolicyResponse failurePolicy) {
-            this.failurePolicy = Objects.requireNonNull(failurePolicy);
+            $.failurePolicy = failurePolicy;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
-        }        public EventTriggerResponse build() {
-            return new EventTriggerResponse(eventType, failurePolicy, resource, service);
+        }
+
+        public EventTriggerResponse build() {
+            $.eventType = Objects.requireNonNull($.eventType, "expected parameter 'eventType' to be non-null");
+            $.failurePolicy = Objects.requireNonNull($.failurePolicy, "expected parameter 'failurePolicy' to be non-null");
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceAnalysisStatus;
 import com.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceContinuousAnalysis;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.StatusArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="analysisStatus")
-      private final @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
+    private @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
 
-    public Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus() {
-        return this.analysisStatus == null ? Codegen.empty() : this.analysisStatus;
+    public Optional<Output<DiscoveryOccurrenceAnalysisStatus>> analysisStatus() {
+        return Optional.ofNullable(this.analysisStatus);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="analysisStatusError")
-      private final @Nullable Output<StatusArgs> analysisStatusError;
+    private @Nullable Output<StatusArgs> analysisStatusError;
 
-    public Output<StatusArgs> analysisStatusError() {
-        return this.analysisStatusError == null ? Codegen.empty() : this.analysisStatusError;
+    public Optional<Output<StatusArgs>> analysisStatusError() {
+        return Optional.ofNullable(this.analysisStatusError);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="continuousAnalysis")
-      private final @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
+    private @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
 
-    public Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis() {
-        return this.continuousAnalysis == null ? Codegen.empty() : this.continuousAnalysis;
+    public Optional<Output<DiscoveryOccurrenceContinuousAnalysis>> continuousAnalysis() {
+        return Optional.ofNullable(this.continuousAnalysis);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="cpe")
-      private final @Nullable Output<String> cpe;
+    private @Nullable Output<String> cpe;
 
-    public Output<String> cpe() {
-        return this.cpe == null ? Codegen.empty() : this.cpe;
+    public Optional<Output<String>> cpe() {
+        return Optional.ofNullable(this.cpe);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class DiscoveryOccurrenceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="lastScanTime")
-      private final @Nullable Output<String> lastScanTime;
+    private @Nullable Output<String> lastScanTime;
 
-    public Output<String> lastScanTime() {
-        return this.lastScanTime == null ? Codegen.empty() : this.lastScanTime;
+    public Optional<Output<String>> lastScanTime() {
+        return Optional.ofNullable(this.lastScanTime);
     }
 
-    public DiscoveryOccurrenceArgs(
-        @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus,
-        @Nullable Output<StatusArgs> analysisStatusError,
-        @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis,
-        @Nullable Output<String> cpe,
-        @Nullable Output<String> lastScanTime) {
-        this.analysisStatus = analysisStatus;
-        this.analysisStatusError = analysisStatusError;
-        this.continuousAnalysis = continuousAnalysis;
-        this.cpe = cpe;
-        this.lastScanTime = lastScanTime;
-    }
+    private DiscoveryOccurrenceArgs() {}
 
-    private DiscoveryOccurrenceArgs() {
-        this.analysisStatus = Codegen.empty();
-        this.analysisStatusError = Codegen.empty();
-        this.continuousAnalysis = Codegen.empty();
-        this.cpe = Codegen.empty();
-        this.lastScanTime = Codegen.empty();
+    private DiscoveryOccurrenceArgs(DiscoveryOccurrenceArgs $) {
+        this.analysisStatus = $.analysisStatus;
+        this.analysisStatusError = $.analysisStatusError;
+        this.continuousAnalysis = $.continuousAnalysis;
+        this.cpe = $.cpe;
+        this.lastScanTime = $.lastScanTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiscoveryOccurrenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
-        private @Nullable Output<StatusArgs> analysisStatusError;
-        private @Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
-        private @Nullable Output<String> cpe;
-        private @Nullable Output<String> lastScanTime;
+        private DiscoveryOccurrenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiscoveryOccurrenceArgs();
         }
 
         public Builder(DiscoveryOccurrenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.analysisStatus = defaults.analysisStatus;
-    	      this.analysisStatusError = defaults.analysisStatusError;
-    	      this.continuousAnalysis = defaults.continuousAnalysis;
-    	      this.cpe = defaults.cpe;
-    	      this.lastScanTime = defaults.lastScanTime;
+            $ = new DiscoveryOccurrenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder analysisStatus(@Nullable Output<DiscoveryOccurrenceAnalysisStatus> analysisStatus) {
-            this.analysisStatus = analysisStatus;
+            $.analysisStatus = analysisStatus;
             return this;
         }
-        public Builder analysisStatus(@Nullable DiscoveryOccurrenceAnalysisStatus analysisStatus) {
-            this.analysisStatus = Codegen.ofNullable(analysisStatus);
-            return this;
+
+        public Builder analysisStatus(DiscoveryOccurrenceAnalysisStatus analysisStatus) {
+            return analysisStatus(Output.of(analysisStatus));
         }
+
         public Builder analysisStatusError(@Nullable Output<StatusArgs> analysisStatusError) {
-            this.analysisStatusError = analysisStatusError;
+            $.analysisStatusError = analysisStatusError;
             return this;
         }
-        public Builder analysisStatusError(@Nullable StatusArgs analysisStatusError) {
-            this.analysisStatusError = Codegen.ofNullable(analysisStatusError);
-            return this;
+
+        public Builder analysisStatusError(StatusArgs analysisStatusError) {
+            return analysisStatusError(Output.of(analysisStatusError));
         }
+
         public Builder continuousAnalysis(@Nullable Output<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis) {
-            this.continuousAnalysis = continuousAnalysis;
+            $.continuousAnalysis = continuousAnalysis;
             return this;
         }
-        public Builder continuousAnalysis(@Nullable DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
-            this.continuousAnalysis = Codegen.ofNullable(continuousAnalysis);
-            return this;
+
+        public Builder continuousAnalysis(DiscoveryOccurrenceContinuousAnalysis continuousAnalysis) {
+            return continuousAnalysis(Output.of(continuousAnalysis));
         }
+
         public Builder cpe(@Nullable Output<String> cpe) {
-            this.cpe = cpe;
+            $.cpe = cpe;
             return this;
         }
-        public Builder cpe(@Nullable String cpe) {
-            this.cpe = Codegen.ofNullable(cpe);
-            return this;
+
+        public Builder cpe(String cpe) {
+            return cpe(Output.of(cpe));
         }
+
         public Builder lastScanTime(@Nullable Output<String> lastScanTime) {
-            this.lastScanTime = lastScanTime;
+            $.lastScanTime = lastScanTime;
             return this;
         }
-        public Builder lastScanTime(@Nullable String lastScanTime) {
-            this.lastScanTime = Codegen.ofNullable(lastScanTime);
-            return this;
-        }        public DiscoveryOccurrenceArgs build() {
-            return new DiscoveryOccurrenceArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
+
+        public Builder lastScanTime(String lastScanTime) {
+            return lastScanTime(Output.of(lastScanTime));
+        }
+
+        public DiscoveryOccurrenceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.DateArgs;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.TimeOfDayArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endTimeOfDay")
-      private final @Nullable Output<TimeOfDayArgs> endTimeOfDay;
+    private @Nullable Output<TimeOfDayArgs> endTimeOfDay;
 
-    public Output<TimeOfDayArgs> endTimeOfDay() {
-        return this.endTimeOfDay == null ? Codegen.empty() : this.endTimeOfDay;
+    public Optional<Output<TimeOfDayArgs>> endTimeOfDay() {
+        return Optional.ofNullable(this.endTimeOfDay);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="repeatInterval")
-      private final @Nullable Output<String> repeatInterval;
+    private @Nullable Output<String> repeatInterval;
 
-    public Output<String> repeatInterval() {
-        return this.repeatInterval == null ? Codegen.empty() : this.repeatInterval;
+    public Optional<Output<String>> repeatInterval() {
+        return Optional.ofNullable(this.repeatInterval);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleEndDate")
-      private final @Nullable Output<DateArgs> scheduleEndDate;
+    private @Nullable Output<DateArgs> scheduleEndDate;
 
-    public Output<DateArgs> scheduleEndDate() {
-        return this.scheduleEndDate == null ? Codegen.empty() : this.scheduleEndDate;
+    public Optional<Output<DateArgs>> scheduleEndDate() {
+        return Optional.ofNullable(this.scheduleEndDate);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduleStartDate", required=true)
-      private final Output<DateArgs> scheduleStartDate;
+    private Output<DateArgs> scheduleStartDate;
 
     public Output<DateArgs> scheduleStartDate() {
         return this.scheduleStartDate;
@@ -70,102 +70,89 @@ public final class ScheduleArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTimeOfDay")
-      private final @Nullable Output<TimeOfDayArgs> startTimeOfDay;
+    private @Nullable Output<TimeOfDayArgs> startTimeOfDay;
 
-    public Output<TimeOfDayArgs> startTimeOfDay() {
-        return this.startTimeOfDay == null ? Codegen.empty() : this.startTimeOfDay;
+    public Optional<Output<TimeOfDayArgs>> startTimeOfDay() {
+        return Optional.ofNullable(this.startTimeOfDay);
     }
 
-    public ScheduleArgs(
-        @Nullable Output<TimeOfDayArgs> endTimeOfDay,
-        @Nullable Output<String> repeatInterval,
-        @Nullable Output<DateArgs> scheduleEndDate,
-        Output<DateArgs> scheduleStartDate,
-        @Nullable Output<TimeOfDayArgs> startTimeOfDay) {
-        this.endTimeOfDay = endTimeOfDay;
-        this.repeatInterval = repeatInterval;
-        this.scheduleEndDate = scheduleEndDate;
-        this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate, "expected parameter 'scheduleStartDate' to be non-null");
-        this.startTimeOfDay = startTimeOfDay;
-    }
+    private ScheduleArgs() {}
 
-    private ScheduleArgs() {
-        this.endTimeOfDay = Codegen.empty();
-        this.repeatInterval = Codegen.empty();
-        this.scheduleEndDate = Codegen.empty();
-        this.scheduleStartDate = Codegen.empty();
-        this.startTimeOfDay = Codegen.empty();
+    private ScheduleArgs(ScheduleArgs $) {
+        this.endTimeOfDay = $.endTimeOfDay;
+        this.repeatInterval = $.repeatInterval;
+        this.scheduleEndDate = $.scheduleEndDate;
+        this.scheduleStartDate = $.scheduleStartDate;
+        this.startTimeOfDay = $.startTimeOfDay;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<TimeOfDayArgs> endTimeOfDay;
-        private @Nullable Output<String> repeatInterval;
-        private @Nullable Output<DateArgs> scheduleEndDate;
-        private Output<DateArgs> scheduleStartDate;
-        private @Nullable Output<TimeOfDayArgs> startTimeOfDay;
+        private ScheduleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleArgs();
         }
 
         public Builder(ScheduleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endTimeOfDay = defaults.endTimeOfDay;
-    	      this.repeatInterval = defaults.repeatInterval;
-    	      this.scheduleEndDate = defaults.scheduleEndDate;
-    	      this.scheduleStartDate = defaults.scheduleStartDate;
-    	      this.startTimeOfDay = defaults.startTimeOfDay;
+            $ = new ScheduleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder endTimeOfDay(@Nullable Output<TimeOfDayArgs> endTimeOfDay) {
-            this.endTimeOfDay = endTimeOfDay;
+            $.endTimeOfDay = endTimeOfDay;
             return this;
         }
-        public Builder endTimeOfDay(@Nullable TimeOfDayArgs endTimeOfDay) {
-            this.endTimeOfDay = Codegen.ofNullable(endTimeOfDay);
-            return this;
+
+        public Builder endTimeOfDay(TimeOfDayArgs endTimeOfDay) {
+            return endTimeOfDay(Output.of(endTimeOfDay));
         }
+
         public Builder repeatInterval(@Nullable Output<String> repeatInterval) {
-            this.repeatInterval = repeatInterval;
+            $.repeatInterval = repeatInterval;
             return this;
         }
-        public Builder repeatInterval(@Nullable String repeatInterval) {
-            this.repeatInterval = Codegen.ofNullable(repeatInterval);
-            return this;
+
+        public Builder repeatInterval(String repeatInterval) {
+            return repeatInterval(Output.of(repeatInterval));
         }
+
         public Builder scheduleEndDate(@Nullable Output<DateArgs> scheduleEndDate) {
-            this.scheduleEndDate = scheduleEndDate;
+            $.scheduleEndDate = scheduleEndDate;
             return this;
         }
-        public Builder scheduleEndDate(@Nullable DateArgs scheduleEndDate) {
-            this.scheduleEndDate = Codegen.ofNullable(scheduleEndDate);
-            return this;
+
+        public Builder scheduleEndDate(DateArgs scheduleEndDate) {
+            return scheduleEndDate(Output.of(scheduleEndDate));
         }
+
         public Builder scheduleStartDate(Output<DateArgs> scheduleStartDate) {
-            this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
+            $.scheduleStartDate = scheduleStartDate;
             return this;
         }
+
         public Builder scheduleStartDate(DateArgs scheduleStartDate) {
-            this.scheduleStartDate = Output.of(Objects.requireNonNull(scheduleStartDate));
-            return this;
+            return scheduleStartDate(Output.of(scheduleStartDate));
         }
+
         public Builder startTimeOfDay(@Nullable Output<TimeOfDayArgs> startTimeOfDay) {
-            this.startTimeOfDay = startTimeOfDay;
+            $.startTimeOfDay = startTimeOfDay;
             return this;
         }
-        public Builder startTimeOfDay(@Nullable TimeOfDayArgs startTimeOfDay) {
-            this.startTimeOfDay = Codegen.ofNullable(startTimeOfDay);
-            return this;
-        }        public ScheduleArgs build() {
-            return new ScheduleArgs(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
+
+        public Builder startTimeOfDay(TimeOfDayArgs startTimeOfDay) {
+            return startTimeOfDay(Output.of(startTimeOfDay));
+        }
+
+        public ScheduleArgs build() {
+            $.scheduleStartDate = Objects.requireNonNull($.scheduleStartDate, "expected parameter 'scheduleStartDate' to be non-null");
+            return $;
         }
     }
+
 }

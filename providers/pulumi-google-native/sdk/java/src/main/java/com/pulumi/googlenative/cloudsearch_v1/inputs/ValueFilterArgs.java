@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.ValueArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ValueFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="operatorName")
-      private final @Nullable Output<String> operatorName;
+    private @Nullable Output<String> operatorName;
 
-    public Output<String> operatorName() {
-        return this.operatorName == null ? Codegen.empty() : this.operatorName;
+    public Optional<Output<String>> operatorName() {
+        return Optional.ofNullable(this.operatorName);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ValueFilterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<ValueArgs> value;
+    private @Nullable Output<ValueArgs> value;
 
-    public Output<ValueArgs> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<ValueArgs>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public ValueFilterArgs(
-        @Nullable Output<String> operatorName,
-        @Nullable Output<ValueArgs> value) {
-        this.operatorName = operatorName;
-        this.value = value;
-    }
+    private ValueFilterArgs() {}
 
-    private ValueFilterArgs() {
-        this.operatorName = Codegen.empty();
-        this.value = Codegen.empty();
+    private ValueFilterArgs(ValueFilterArgs $) {
+        this.operatorName = $.operatorName;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValueFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> operatorName;
-        private @Nullable Output<ValueArgs> value;
+        private ValueFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValueFilterArgs();
         }
 
         public Builder(ValueFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.operatorName = defaults.operatorName;
-    	      this.value = defaults.value;
+            $ = new ValueFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder operatorName(@Nullable Output<String> operatorName) {
-            this.operatorName = operatorName;
+            $.operatorName = operatorName;
             return this;
         }
-        public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Codegen.ofNullable(operatorName);
-            return this;
+
+        public Builder operatorName(String operatorName) {
+            return operatorName(Output.of(operatorName));
         }
+
         public Builder value(@Nullable Output<ValueArgs> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable ValueArgs value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public ValueFilterArgs build() {
-            return new ValueFilterArgs(operatorName, value);
+
+        public Builder value(ValueArgs value) {
+            return value(Output.of(value));
+        }
+
+        public ValueFilterArgs build() {
+            return $;
         }
     }
+
 }

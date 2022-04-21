@@ -23,7 +23,7 @@ public final class ZypperSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="categories", required=true)
-      private final List<String> categories;
+    private List<String> categories;
 
     public List<String> categories() {
         return this.categories;
@@ -34,7 +34,7 @@ public final class ZypperSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="excludes", required=true)
-      private final List<String> excludes;
+    private List<String> excludes;
 
     public List<String> excludes() {
         return this.excludes;
@@ -45,7 +45,7 @@ public final class ZypperSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exclusivePatches", required=true)
-      private final List<String> exclusivePatches;
+    private List<String> exclusivePatches;
 
     public List<String> exclusivePatches() {
         return this.exclusivePatches;
@@ -56,7 +56,7 @@ public final class ZypperSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="severities", required=true)
-      private final List<String> severities;
+    private List<String> severities;
 
     public List<String> severities() {
         return this.severities;
@@ -67,7 +67,7 @@ public final class ZypperSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="withOptional", required=true)
-      private final Boolean withOptional;
+    private Boolean withOptional;
 
     public Boolean withOptional() {
         return this.withOptional;
@@ -78,103 +78,96 @@ public final class ZypperSettingsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="withUpdate", required=true)
-      private final Boolean withUpdate;
+    private Boolean withUpdate;
 
     public Boolean withUpdate() {
         return this.withUpdate;
     }
 
-    public ZypperSettingsResponse(
-        List<String> categories,
-        List<String> excludes,
-        List<String> exclusivePatches,
-        List<String> severities,
-        Boolean withOptional,
-        Boolean withUpdate) {
-        this.categories = Objects.requireNonNull(categories, "expected parameter 'categories' to be non-null");
-        this.excludes = Objects.requireNonNull(excludes, "expected parameter 'excludes' to be non-null");
-        this.exclusivePatches = Objects.requireNonNull(exclusivePatches, "expected parameter 'exclusivePatches' to be non-null");
-        this.severities = Objects.requireNonNull(severities, "expected parameter 'severities' to be non-null");
-        this.withOptional = Objects.requireNonNull(withOptional, "expected parameter 'withOptional' to be non-null");
-        this.withUpdate = Objects.requireNonNull(withUpdate, "expected parameter 'withUpdate' to be non-null");
-    }
+    private ZypperSettingsResponse() {}
 
-    private ZypperSettingsResponse() {
-        this.categories = List.of();
-        this.excludes = List.of();
-        this.exclusivePatches = List.of();
-        this.severities = List.of();
-        this.withOptional = null;
-        this.withUpdate = null;
+    private ZypperSettingsResponse(ZypperSettingsResponse $) {
+        this.categories = $.categories;
+        this.excludes = $.excludes;
+        this.exclusivePatches = $.exclusivePatches;
+        this.severities = $.severities;
+        this.withOptional = $.withOptional;
+        this.withUpdate = $.withUpdate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ZypperSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> categories;
-        private List<String> excludes;
-        private List<String> exclusivePatches;
-        private List<String> severities;
-        private Boolean withOptional;
-        private Boolean withUpdate;
+        private ZypperSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ZypperSettingsResponse();
         }
 
         public Builder(ZypperSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.categories = defaults.categories;
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePatches = defaults.exclusivePatches;
-    	      this.severities = defaults.severities;
-    	      this.withOptional = defaults.withOptional;
-    	      this.withUpdate = defaults.withUpdate;
+            $ = new ZypperSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder categories(List<String> categories) {
-            this.categories = Objects.requireNonNull(categories);
+            $.categories = categories;
             return this;
         }
+
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
+
         public Builder excludes(List<String> excludes) {
-            this.excludes = Objects.requireNonNull(excludes);
+            $.excludes = excludes;
             return this;
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePatches(List<String> exclusivePatches) {
-            this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
+            $.exclusivePatches = exclusivePatches;
             return this;
         }
+
         public Builder exclusivePatches(String... exclusivePatches) {
             return exclusivePatches(List.of(exclusivePatches));
         }
+
         public Builder severities(List<String> severities) {
-            this.severities = Objects.requireNonNull(severities);
+            $.severities = severities;
             return this;
         }
+
         public Builder severities(String... severities) {
             return severities(List.of(severities));
         }
+
         public Builder withOptional(Boolean withOptional) {
-            this.withOptional = Objects.requireNonNull(withOptional);
+            $.withOptional = withOptional;
             return this;
         }
+
         public Builder withUpdate(Boolean withUpdate) {
-            this.withUpdate = Objects.requireNonNull(withUpdate);
+            $.withUpdate = withUpdate;
             return this;
-        }        public ZypperSettingsResponse build() {
-            return new ZypperSettingsResponse(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
+        }
+
+        public ZypperSettingsResponse build() {
+            $.categories = Objects.requireNonNull($.categories, "expected parameter 'categories' to be non-null");
+            $.excludes = Objects.requireNonNull($.excludes, "expected parameter 'excludes' to be non-null");
+            $.exclusivePatches = Objects.requireNonNull($.exclusivePatches, "expected parameter 'exclusivePatches' to be non-null");
+            $.severities = Objects.requireNonNull($.severities, "expected parameter 'severities' to be non-null");
+            $.withOptional = Objects.requireNonNull($.withOptional, "expected parameter 'withOptional' to be non-null");
+            $.withUpdate = Objects.requireNonNull($.withUpdate, "expected parameter 'withUpdate' to be non-null");
+            return $;
         }
     }
+
 }

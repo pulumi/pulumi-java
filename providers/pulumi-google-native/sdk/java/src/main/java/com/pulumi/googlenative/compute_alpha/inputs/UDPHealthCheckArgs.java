@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<Integer> port;
+    private @Nullable Output<Integer> port;
 
-    public Output<Integer> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<Integer>> port() {
+        return Optional.ofNullable(this.port);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="portName")
-      private final @Nullable Output<String> portName;
+    private @Nullable Output<String> portName;
 
-    public Output<String> portName() {
-        return this.portName == null ? Codegen.empty() : this.portName;
+    public Optional<Output<String>> portName() {
+        return Optional.ofNullable(this.portName);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="request")
-      private final @Nullable Output<String> request;
+    private @Nullable Output<String> request;
 
-    public Output<String> request() {
-        return this.request == null ? Codegen.empty() : this.request;
+    public Optional<Output<String>> request() {
+        return Optional.ofNullable(this.request);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class UDPHealthCheckArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="response")
-      private final @Nullable Output<String> response;
+    private @Nullable Output<String> response;
 
-    public Output<String> response() {
-        return this.response == null ? Codegen.empty() : this.response;
+    public Optional<Output<String>> response() {
+        return Optional.ofNullable(this.response);
     }
 
-    public UDPHealthCheckArgs(
-        @Nullable Output<Integer> port,
-        @Nullable Output<String> portName,
-        @Nullable Output<String> request,
-        @Nullable Output<String> response) {
-        this.port = port;
-        this.portName = portName;
-        this.request = request;
-        this.response = response;
-    }
+    private UDPHealthCheckArgs() {}
 
-    private UDPHealthCheckArgs() {
-        this.port = Codegen.empty();
-        this.portName = Codegen.empty();
-        this.request = Codegen.empty();
-        this.response = Codegen.empty();
+    private UDPHealthCheckArgs(UDPHealthCheckArgs $) {
+        this.port = $.port;
+        this.portName = $.portName;
+        this.request = $.request;
+        this.response = $.response;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UDPHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> port;
-        private @Nullable Output<String> portName;
-        private @Nullable Output<String> request;
-        private @Nullable Output<String> response;
+        private UDPHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UDPHealthCheckArgs();
         }
 
         public Builder(UDPHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.portName = defaults.portName;
-    	      this.request = defaults.request;
-    	      this.response = defaults.response;
+            $ = new UDPHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(@Nullable Output<Integer> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable Integer port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
+
+        public Builder port(Integer port) {
+            return port(Output.of(port));
         }
+
         public Builder portName(@Nullable Output<String> portName) {
-            this.portName = portName;
+            $.portName = portName;
             return this;
         }
-        public Builder portName(@Nullable String portName) {
-            this.portName = Codegen.ofNullable(portName);
-            return this;
+
+        public Builder portName(String portName) {
+            return portName(Output.of(portName));
         }
+
         public Builder request(@Nullable Output<String> request) {
-            this.request = request;
+            $.request = request;
             return this;
         }
-        public Builder request(@Nullable String request) {
-            this.request = Codegen.ofNullable(request);
-            return this;
+
+        public Builder request(String request) {
+            return request(Output.of(request));
         }
+
         public Builder response(@Nullable Output<String> response) {
-            this.response = response;
+            $.response = response;
             return this;
         }
-        public Builder response(@Nullable String response) {
-            this.response = Codegen.ofNullable(response);
-            return this;
-        }        public UDPHealthCheckArgs build() {
-            return new UDPHealthCheckArgs(port, portName, request, response);
+
+        public Builder response(String response) {
+            return response(Output.of(response));
+        }
+
+        public UDPHealthCheckArgs build() {
+            return $;
         }
     }
+
 }

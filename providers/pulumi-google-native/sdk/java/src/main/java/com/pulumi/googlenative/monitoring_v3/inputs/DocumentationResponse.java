@@ -21,7 +21,7 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -32,55 +32,52 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="mimeType", required=true)
-      private final String mimeType;
+    private String mimeType;
 
     public String mimeType() {
         return this.mimeType;
     }
 
-    public DocumentationResponse(
-        String content,
-        String mimeType) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.mimeType = Objects.requireNonNull(mimeType, "expected parameter 'mimeType' to be non-null");
-    }
+    private DocumentationResponse() {}
 
-    private DocumentationResponse() {
-        this.content = null;
-        this.mimeType = null;
+    private DocumentationResponse(DocumentationResponse $) {
+        this.content = $.content;
+        this.mimeType = $.mimeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String mimeType;
+        private DocumentationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationResponse();
         }
 
         public Builder(DocumentationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.mimeType = defaults.mimeType;
+            $ = new DocumentationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder mimeType(String mimeType) {
-            this.mimeType = Objects.requireNonNull(mimeType);
+            $.mimeType = mimeType;
             return this;
-        }        public DocumentationResponse build() {
-            return new DocumentationResponse(content, mimeType);
+        }
+
+        public DocumentationResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.mimeType = Objects.requireNonNull($.mimeType, "expected parameter 'mimeType' to be non-null");
+            return $;
         }
     }
+
 }

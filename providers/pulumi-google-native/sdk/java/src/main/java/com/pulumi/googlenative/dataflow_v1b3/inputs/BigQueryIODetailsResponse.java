@@ -21,7 +21,7 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="dataset", required=true)
-      private final String dataset;
+    private String dataset;
 
     public String dataset() {
         return this.dataset;
@@ -32,7 +32,7 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -43,7 +43,7 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="query", required=true)
-      private final String query;
+    private String query;
 
     public String query() {
         return this.query;
@@ -54,73 +54,66 @@ public final class BigQueryIODetailsResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="table", required=true)
-      private final String table;
+    private String table;
 
     public String table() {
         return this.table;
     }
 
-    public BigQueryIODetailsResponse(
-        String dataset,
-        String project,
-        String query,
-        String table) {
-        this.dataset = Objects.requireNonNull(dataset, "expected parameter 'dataset' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.query = Objects.requireNonNull(query, "expected parameter 'query' to be non-null");
-        this.table = Objects.requireNonNull(table, "expected parameter 'table' to be non-null");
-    }
+    private BigQueryIODetailsResponse() {}
 
-    private BigQueryIODetailsResponse() {
-        this.dataset = null;
-        this.project = null;
-        this.query = null;
-        this.table = null;
+    private BigQueryIODetailsResponse(BigQueryIODetailsResponse $) {
+        this.dataset = $.dataset;
+        this.project = $.project;
+        this.query = $.query;
+        this.table = $.table;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BigQueryIODetailsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dataset;
-        private String project;
-        private String query;
-        private String table;
+        private BigQueryIODetailsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BigQueryIODetailsResponse();
         }
 
         public Builder(BigQueryIODetailsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataset = defaults.dataset;
-    	      this.project = defaults.project;
-    	      this.query = defaults.query;
-    	      this.table = defaults.table;
+            $ = new BigQueryIODetailsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dataset(String dataset) {
-            this.dataset = Objects.requireNonNull(dataset);
+            $.dataset = dataset;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder query(String query) {
-            this.query = Objects.requireNonNull(query);
+            $.query = query;
             return this;
         }
+
         public Builder table(String table) {
-            this.table = Objects.requireNonNull(table);
+            $.table = table;
             return this;
-        }        public BigQueryIODetailsResponse build() {
-            return new BigQueryIODetailsResponse(dataset, project, query, table);
+        }
+
+        public BigQueryIODetailsResponse build() {
+            $.dataset = Objects.requireNonNull($.dataset, "expected parameter 'dataset' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.query = Objects.requireNonNull($.query, "expected parameter 'query' to be non-null");
+            $.table = Objects.requireNonNull($.table, "expected parameter 'table' to be non-null");
+            return $;
         }
     }
+
 }

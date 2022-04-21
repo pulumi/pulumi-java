@@ -21,7 +21,7 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosModelId", required=true)
-      private final String iosModelId;
+    private String iosModelId;
 
     public String iosModelId() {
         return this.iosModelId;
@@ -32,7 +32,7 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="iosVersionId", required=true)
-      private final String iosVersionId;
+    private String iosVersionId;
 
     public String iosVersionId() {
         return this.iosVersionId;
@@ -43,7 +43,7 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locale", required=true)
-      private final String locale;
+    private String locale;
 
     public String locale() {
         return this.locale;
@@ -54,73 +54,66 @@ public final class IosDeviceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="orientation", required=true)
-      private final String orientation;
+    private String orientation;
 
     public String orientation() {
         return this.orientation;
     }
 
-    public IosDeviceResponse(
-        String iosModelId,
-        String iosVersionId,
-        String locale,
-        String orientation) {
-        this.iosModelId = Objects.requireNonNull(iosModelId, "expected parameter 'iosModelId' to be non-null");
-        this.iosVersionId = Objects.requireNonNull(iosVersionId, "expected parameter 'iosVersionId' to be non-null");
-        this.locale = Objects.requireNonNull(locale, "expected parameter 'locale' to be non-null");
-        this.orientation = Objects.requireNonNull(orientation, "expected parameter 'orientation' to be non-null");
-    }
+    private IosDeviceResponse() {}
 
-    private IosDeviceResponse() {
-        this.iosModelId = null;
-        this.iosVersionId = null;
-        this.locale = null;
-        this.orientation = null;
+    private IosDeviceResponse(IosDeviceResponse $) {
+        this.iosModelId = $.iosModelId;
+        this.iosVersionId = $.iosVersionId;
+        this.locale = $.locale;
+        this.orientation = $.orientation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosDeviceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String iosModelId;
-        private String iosVersionId;
-        private String locale;
-        private String orientation;
+        private IosDeviceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosDeviceResponse();
         }
 
         public Builder(IosDeviceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosModelId = defaults.iosModelId;
-    	      this.iosVersionId = defaults.iosVersionId;
-    	      this.locale = defaults.locale;
-    	      this.orientation = defaults.orientation;
+            $ = new IosDeviceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iosModelId(String iosModelId) {
-            this.iosModelId = Objects.requireNonNull(iosModelId);
+            $.iosModelId = iosModelId;
             return this;
         }
+
         public Builder iosVersionId(String iosVersionId) {
-            this.iosVersionId = Objects.requireNonNull(iosVersionId);
+            $.iosVersionId = iosVersionId;
             return this;
         }
+
         public Builder locale(String locale) {
-            this.locale = Objects.requireNonNull(locale);
+            $.locale = locale;
             return this;
         }
+
         public Builder orientation(String orientation) {
-            this.orientation = Objects.requireNonNull(orientation);
+            $.orientation = orientation;
             return this;
-        }        public IosDeviceResponse build() {
-            return new IosDeviceResponse(iosModelId, iosVersionId, locale, orientation);
+        }
+
+        public IosDeviceResponse build() {
+            $.iosModelId = Objects.requireNonNull($.iosModelId, "expected parameter 'iosModelId' to be non-null");
+            $.iosVersionId = Objects.requireNonNull($.iosVersionId, "expected parameter 'iosVersionId' to be non-null");
+            $.locale = Objects.requireNonNull($.locale, "expected parameter 'locale' to be non-null");
+            $.orientation = Objects.requireNonNull($.orientation, "expected parameter 'orientation' to be non-null");
+            return $;
         }
     }
+
 }

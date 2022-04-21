@@ -5,9 +5,9 @@ package com.pulumi.googlenative.pubsub_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class OidcTokenArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccountEmail")
-      private final @Nullable Output<String> serviceAccountEmail;
+    private @Nullable Output<String> serviceAccountEmail;
 
-    public Output<String> serviceAccountEmail() {
-        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
+    public Optional<Output<String>> serviceAccountEmail() {
+        return Optional.ofNullable(this.serviceAccountEmail);
     }
 
-    public OidcTokenArgs(
-        @Nullable Output<String> audience,
-        @Nullable Output<String> serviceAccountEmail) {
-        this.audience = audience;
-        this.serviceAccountEmail = serviceAccountEmail;
-    }
+    private OidcTokenArgs() {}
 
-    private OidcTokenArgs() {
-        this.audience = Codegen.empty();
-        this.serviceAccountEmail = Codegen.empty();
+    private OidcTokenArgs(OidcTokenArgs $) {
+        this.audience = $.audience;
+        this.serviceAccountEmail = $.serviceAccountEmail;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OidcTokenArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audience;
-        private @Nullable Output<String> serviceAccountEmail;
+        private OidcTokenArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OidcTokenArgs();
         }
 
         public Builder(OidcTokenArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.serviceAccountEmail = defaults.serviceAccountEmail;
+            $ = new OidcTokenArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
-            this.serviceAccountEmail = serviceAccountEmail;
+            $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
-        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
-            return this;
-        }        public OidcTokenArgs build() {
-            return new OidcTokenArgs(audience, serviceAccountEmail);
+
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
+            return serviceAccountEmail(Output.of(serviceAccountEmail));
+        }
+
+        public OidcTokenArgs build() {
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class AddressableResponse extends com.pulumi.resources.InvokeArgs {
     public static final AddressableResponse Empty = new AddressableResponse();
 
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
     }
 
-    public AddressableResponse(String url) {
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-    }
+    private AddressableResponse() {}
 
-    private AddressableResponse() {
-        this.url = null;
+    private AddressableResponse(AddressableResponse $) {
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AddressableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String url;
+        private AddressableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AddressableResponse();
         }
 
         public Builder(AddressableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
+            $ = new AddressableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
-        }        public AddressableResponse build() {
-            return new AddressableResponse(url);
+        }
+
+        public AddressableResponse build() {
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            return $;
         }
     }
+
 }

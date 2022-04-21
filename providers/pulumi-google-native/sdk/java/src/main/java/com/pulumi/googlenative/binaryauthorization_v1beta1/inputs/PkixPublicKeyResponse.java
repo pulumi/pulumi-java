@@ -21,7 +21,7 @@ public final class PkixPublicKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="publicKeyPem", required=true)
-      private final String publicKeyPem;
+    private String publicKeyPem;
 
     public String publicKeyPem() {
         return this.publicKeyPem;
@@ -32,55 +32,52 @@ public final class PkixPublicKeyResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="signatureAlgorithm", required=true)
-      private final String signatureAlgorithm;
+    private String signatureAlgorithm;
 
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
 
-    public PkixPublicKeyResponse(
-        String publicKeyPem,
-        String signatureAlgorithm) {
-        this.publicKeyPem = Objects.requireNonNull(publicKeyPem, "expected parameter 'publicKeyPem' to be non-null");
-        this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
-    }
+    private PkixPublicKeyResponse() {}
 
-    private PkixPublicKeyResponse() {
-        this.publicKeyPem = null;
-        this.signatureAlgorithm = null;
+    private PkixPublicKeyResponse(PkixPublicKeyResponse $) {
+        this.publicKeyPem = $.publicKeyPem;
+        this.signatureAlgorithm = $.signatureAlgorithm;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PkixPublicKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String publicKeyPem;
-        private String signatureAlgorithm;
+        private PkixPublicKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PkixPublicKeyResponse();
         }
 
         public Builder(PkixPublicKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyPem = defaults.publicKeyPem;
-    	      this.signatureAlgorithm = defaults.signatureAlgorithm;
+            $ = new PkixPublicKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyPem(String publicKeyPem) {
-            this.publicKeyPem = Objects.requireNonNull(publicKeyPem);
+            $.publicKeyPem = publicKeyPem;
             return this;
         }
+
         public Builder signatureAlgorithm(String signatureAlgorithm) {
-            this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
+            $.signatureAlgorithm = signatureAlgorithm;
             return this;
-        }        public PkixPublicKeyResponse build() {
-            return new PkixPublicKeyResponse(publicKeyPem, signatureAlgorithm);
+        }
+
+        public PkixPublicKeyResponse build() {
+            $.publicKeyPem = Objects.requireNonNull($.publicKeyPem, "expected parameter 'publicKeyPem' to be non-null");
+            $.signatureAlgorithm = Objects.requireNonNull($.signatureAlgorithm, "expected parameter 'signatureAlgorithm' to be non-null");
+            return $;
         }
     }
+
 }

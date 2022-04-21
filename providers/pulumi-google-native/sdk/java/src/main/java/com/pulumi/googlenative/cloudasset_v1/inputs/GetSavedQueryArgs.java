@@ -13,78 +13,73 @@ public final class GetSavedQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSavedQueryArgs Empty = new GetSavedQueryArgs();
 
     @Import(name="savedQueryId", required=true)
-      private final String savedQueryId;
+    private String savedQueryId;
 
     public String savedQueryId() {
         return this.savedQueryId;
     }
 
     @Import(name="v1Id", required=true)
-      private final String v1Id;
+    private String v1Id;
 
     public String v1Id() {
         return this.v1Id;
     }
 
     @Import(name="v1Id1", required=true)
-      private final String v1Id1;
+    private String v1Id1;
 
     public String v1Id1() {
         return this.v1Id1;
     }
 
-    public GetSavedQueryArgs(
-        String savedQueryId,
-        String v1Id,
-        String v1Id1) {
-        this.savedQueryId = Objects.requireNonNull(savedQueryId, "expected parameter 'savedQueryId' to be non-null");
-        this.v1Id = Objects.requireNonNull(v1Id, "expected parameter 'v1Id' to be non-null");
-        this.v1Id1 = Objects.requireNonNull(v1Id1, "expected parameter 'v1Id1' to be non-null");
-    }
+    private GetSavedQueryArgs() {}
 
-    private GetSavedQueryArgs() {
-        this.savedQueryId = null;
-        this.v1Id = null;
-        this.v1Id1 = null;
+    private GetSavedQueryArgs(GetSavedQueryArgs $) {
+        this.savedQueryId = $.savedQueryId;
+        this.v1Id = $.v1Id;
+        this.v1Id1 = $.v1Id1;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSavedQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String savedQueryId;
-        private String v1Id;
-        private String v1Id1;
+        private GetSavedQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSavedQueryArgs();
         }
 
         public Builder(GetSavedQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.savedQueryId = defaults.savedQueryId;
-    	      this.v1Id = defaults.v1Id;
-    	      this.v1Id1 = defaults.v1Id1;
+            $ = new GetSavedQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder savedQueryId(String savedQueryId) {
-            this.savedQueryId = Objects.requireNonNull(savedQueryId);
+            $.savedQueryId = savedQueryId;
             return this;
         }
+
         public Builder v1Id(String v1Id) {
-            this.v1Id = Objects.requireNonNull(v1Id);
+            $.v1Id = v1Id;
             return this;
         }
+
         public Builder v1Id1(String v1Id1) {
-            this.v1Id1 = Objects.requireNonNull(v1Id1);
+            $.v1Id1 = v1Id1;
             return this;
-        }        public GetSavedQueryArgs build() {
-            return new GetSavedQueryArgs(savedQueryId, v1Id, v1Id1);
+        }
+
+        public GetSavedQueryArgs build() {
+            $.savedQueryId = Objects.requireNonNull($.savedQueryId, "expected parameter 'savedQueryId' to be non-null");
+            $.v1Id = Objects.requireNonNull($.v1Id, "expected parameter 'v1Id' to be non-null");
+            $.v1Id1 = Objects.requireNonNull($.v1Id1, "expected parameter 'v1Id1' to be non-null");
+            return $;
         }
     }
+
 }

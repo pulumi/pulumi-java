@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldTransformationArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordSuppressionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends com.pulum
      * 
      */
     @Import(name="fieldTransformations")
-      private final @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
+    private @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
 
-    public Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations() {
-        return this.fieldTransformations == null ? Codegen.empty() : this.fieldTransformations;
+    public Optional<Output<List<GooglePrivacyDlpV2FieldTransformationArgs>>> fieldTransformations() {
+        return Optional.ofNullable(this.fieldTransformations);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class GooglePrivacyDlpV2RecordTransformationsArgs extends com.pulum
      * 
      */
     @Import(name="recordSuppressions")
-      private final @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
+    private @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
 
-    public Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions() {
-        return this.recordSuppressions == null ? Codegen.empty() : this.recordSuppressions;
+    public Optional<Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>>> recordSuppressions() {
+        return Optional.ofNullable(this.recordSuppressions);
     }
 
-    public GooglePrivacyDlpV2RecordTransformationsArgs(
-        @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations,
-        @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions) {
-        this.fieldTransformations = fieldTransformations;
-        this.recordSuppressions = recordSuppressions;
-    }
+    private GooglePrivacyDlpV2RecordTransformationsArgs() {}
 
-    private GooglePrivacyDlpV2RecordTransformationsArgs() {
-        this.fieldTransformations = Codegen.empty();
-        this.recordSuppressions = Codegen.empty();
+    private GooglePrivacyDlpV2RecordTransformationsArgs(GooglePrivacyDlpV2RecordTransformationsArgs $) {
+        this.fieldTransformations = $.fieldTransformations;
+        this.recordSuppressions = $.recordSuppressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2RecordTransformationsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations;
-        private @Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions;
+        private GooglePrivacyDlpV2RecordTransformationsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2RecordTransformationsArgs();
         }
 
         public Builder(GooglePrivacyDlpV2RecordTransformationsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fieldTransformations = defaults.fieldTransformations;
-    	      this.recordSuppressions = defaults.recordSuppressions;
+            $ = new GooglePrivacyDlpV2RecordTransformationsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fieldTransformations(@Nullable Output<List<GooglePrivacyDlpV2FieldTransformationArgs>> fieldTransformations) {
-            this.fieldTransformations = fieldTransformations;
+            $.fieldTransformations = fieldTransformations;
             return this;
         }
-        public Builder fieldTransformations(@Nullable List<GooglePrivacyDlpV2FieldTransformationArgs> fieldTransformations) {
-            this.fieldTransformations = Codegen.ofNullable(fieldTransformations);
-            return this;
+
+        public Builder fieldTransformations(List<GooglePrivacyDlpV2FieldTransformationArgs> fieldTransformations) {
+            return fieldTransformations(Output.of(fieldTransformations));
         }
+
         public Builder fieldTransformations(GooglePrivacyDlpV2FieldTransformationArgs... fieldTransformations) {
             return fieldTransformations(List.of(fieldTransformations));
         }
+
         public Builder recordSuppressions(@Nullable Output<List<GooglePrivacyDlpV2RecordSuppressionArgs>> recordSuppressions) {
-            this.recordSuppressions = recordSuppressions;
+            $.recordSuppressions = recordSuppressions;
             return this;
         }
-        public Builder recordSuppressions(@Nullable List<GooglePrivacyDlpV2RecordSuppressionArgs> recordSuppressions) {
-            this.recordSuppressions = Codegen.ofNullable(recordSuppressions);
-            return this;
+
+        public Builder recordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionArgs> recordSuppressions) {
+            return recordSuppressions(Output.of(recordSuppressions));
         }
+
         public Builder recordSuppressions(GooglePrivacyDlpV2RecordSuppressionArgs... recordSuppressions) {
             return recordSuppressions(List.of(recordSuppressions));
-        }        public GooglePrivacyDlpV2RecordTransformationsArgs build() {
-            return new GooglePrivacyDlpV2RecordTransformationsArgs(fieldTransformations, recordSuppressions);
+        }
+
+        public GooglePrivacyDlpV2RecordTransformationsArgs build() {
+            return $;
         }
     }
+
 }

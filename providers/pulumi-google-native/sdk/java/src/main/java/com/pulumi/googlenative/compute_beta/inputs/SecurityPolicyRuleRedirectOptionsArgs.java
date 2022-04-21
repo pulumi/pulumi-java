@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.enums.SecurityPolicyRuleRedirectOptionsType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends com.pulumi.reso
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
+    private @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
 
-    public Output<SecurityPolicyRuleRedirectOptionsType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<SecurityPolicyRuleRedirectOptionsType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SecurityPolicyRuleRedirectOptionsArgs(
-        @Nullable Output<String> target,
-        @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type) {
-        this.target = target;
-        this.type = type;
-    }
+    private SecurityPolicyRuleRedirectOptionsArgs() {}
 
-    private SecurityPolicyRuleRedirectOptionsArgs() {
-        this.target = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecurityPolicyRuleRedirectOptionsArgs(SecurityPolicyRuleRedirectOptionsArgs $) {
+        this.target = $.target;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleRedirectOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> target;
-        private @Nullable Output<SecurityPolicyRuleRedirectOptionsType> type;
+        private SecurityPolicyRuleRedirectOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleRedirectOptionsArgs();
         }
 
         public Builder(SecurityPolicyRuleRedirectOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
-    	      this.type = defaults.type;
+            $ = new SecurityPolicyRuleRedirectOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder type(@Nullable Output<SecurityPolicyRuleRedirectOptionsType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable SecurityPolicyRuleRedirectOptionsType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SecurityPolicyRuleRedirectOptionsArgs build() {
-            return new SecurityPolicyRuleRedirectOptionsArgs(target, type);
+
+        public Builder type(SecurityPolicyRuleRedirectOptionsType type) {
+            return type(Output.of(type));
+        }
+
+        public SecurityPolicyRuleRedirectOptionsArgs build() {
+            return $;
         }
     }
+
 }

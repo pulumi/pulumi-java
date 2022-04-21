@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs extends co
      * 
      */
     @Import(name="loggingSettings")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
-    public Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings() {
-        return this.loggingSettings == null ? Codegen.empty() : this.loggingSettings;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs>> loggingSettings() {
+        return Optional.ofNullable(this.loggingSettings);
     }
 
-    public GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(@Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
-        this.loggingSettings = loggingSettings;
-    }
+    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs() {
-        this.loggingSettings = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs $) {
+        this.loggingSettings = $.loggingSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings;
+        private GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.loggingSettings = defaults.loggingSettings;
+            $ = new GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder loggingSettings(@Nullable Output<GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs> loggingSettings) {
-            this.loggingSettings = loggingSettings;
+            $.loggingSettings = loggingSettings;
             return this;
         }
-        public Builder loggingSettings(@Nullable GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs loggingSettings) {
-            this.loggingSettings = Codegen.ofNullable(loggingSettings);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs(loggingSettings);
+
+        public Builder loggingSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsArgs loggingSettings) {
+            return loggingSettings(Output.of(loggingSettings));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1AdvancedSettingsArgs build() {
+            return $;
         }
     }
+
 }

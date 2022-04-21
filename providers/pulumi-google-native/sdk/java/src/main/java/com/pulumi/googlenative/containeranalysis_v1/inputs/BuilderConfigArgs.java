@@ -5,9 +5,9 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,49 +16,48 @@ public final class BuilderConfigArgs extends com.pulumi.resources.ResourceArgs {
     public static final BuilderConfigArgs Empty = new BuilderConfigArgs();
 
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
-    public BuilderConfigArgs(@Nullable Output<String> id) {
-        this.id = id;
-    }
+    private BuilderConfigArgs() {}
 
-    private BuilderConfigArgs() {
-        this.id = Codegen.empty();
+    private BuilderConfigArgs(BuilderConfigArgs $) {
+        this.id = $.id;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuilderConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> id;
+        private BuilderConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuilderConfigArgs();
         }
 
         public Builder(BuilderConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.id = defaults.id;
+            $ = new BuilderConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
-        }        public BuilderConfigArgs build() {
-            return new BuilderConfigArgs(id);
+
+        public Builder id(String id) {
+            return id(Output.of(id));
+        }
+
+        public BuilderConfigArgs build() {
+            return $;
         }
     }
+
 }

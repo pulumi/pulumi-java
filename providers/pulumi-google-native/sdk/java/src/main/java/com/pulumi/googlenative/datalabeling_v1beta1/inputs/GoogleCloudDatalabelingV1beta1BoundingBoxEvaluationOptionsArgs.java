@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArg
      * 
      */
     @Import(name="iouThreshold")
-      private final @Nullable Output<Double> iouThreshold;
+    private @Nullable Output<Double> iouThreshold;
 
-    public Output<Double> iouThreshold() {
-        return this.iouThreshold == null ? Codegen.empty() : this.iouThreshold;
+    public Optional<Output<Double>> iouThreshold() {
+        return Optional.ofNullable(this.iouThreshold);
     }
 
-    public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(@Nullable Output<Double> iouThreshold) {
-        this.iouThreshold = iouThreshold;
-    }
+    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs() {}
 
-    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs() {
-        this.iouThreshold = Codegen.empty();
+    private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs $) {
+        this.iouThreshold = $.iouThreshold;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> iouThreshold;
+        private GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs();
         }
 
         public Builder(GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iouThreshold = defaults.iouThreshold;
+            $ = new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iouThreshold(@Nullable Output<Double> iouThreshold) {
-            this.iouThreshold = iouThreshold;
+            $.iouThreshold = iouThreshold;
             return this;
         }
-        public Builder iouThreshold(@Nullable Double iouThreshold) {
-            this.iouThreshold = Codegen.ofNullable(iouThreshold);
-            return this;
-        }        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {
-            return new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs(iouThreshold);
+
+        public Builder iouThreshold(Double iouThreshold) {
+            return iouThreshold(Output.of(iouThreshold));
+        }
+
+        public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs build() {
+            return $;
         }
     }
+
 }

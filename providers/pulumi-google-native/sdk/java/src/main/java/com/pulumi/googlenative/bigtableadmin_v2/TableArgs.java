@@ -5,13 +5,13 @@ package com.pulumi.googlenative.bigtableadmin_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.bigtableadmin_v2.enums.TableGranularity;
 import com.pulumi.googlenative.bigtableadmin_v2.inputs.SplitArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columnFamilies")
-      private final @Nullable Output<Map<String,String>> columnFamilies;
+    private @Nullable Output<Map<String,String>> columnFamilies;
 
-    public Output<Map<String,String>> columnFamilies() {
-        return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
+    public Optional<Output<Map<String,String>>> columnFamilies() {
+        return Optional.ofNullable(this.columnFamilies);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="granularity")
-      private final @Nullable Output<TableGranularity> granularity;
+    private @Nullable Output<TableGranularity> granularity;
 
-    public Output<TableGranularity> granularity() {
-        return this.granularity == null ? Codegen.empty() : this.granularity;
+    public Optional<Output<TableGranularity>> granularity() {
+        return Optional.ofNullable(this.granularity);
     }
 
     /**
@@ -46,14 +46,14 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initialSplits")
-      private final @Nullable Output<List<SplitArgs>> initialSplits;
+    private @Nullable Output<List<SplitArgs>> initialSplits;
 
-    public Output<List<SplitArgs>> initialSplits() {
-        return this.initialSplits == null ? Codegen.empty() : this.initialSplits;
+    public Optional<Output<List<SplitArgs>>> initialSplits() {
+        return Optional.ofNullable(this.initialSplits);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -64,17 +64,17 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -82,131 +82,114 @@ public final class TableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tableId", required=true)
-      private final Output<String> tableId;
+    private Output<String> tableId;
 
     public Output<String> tableId() {
         return this.tableId;
     }
 
-    public TableArgs(
-        @Nullable Output<Map<String,String>> columnFamilies,
-        @Nullable Output<TableGranularity> granularity,
-        @Nullable Output<List<SplitArgs>> initialSplits,
-        Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> tableId) {
-        this.columnFamilies = columnFamilies;
-        this.granularity = granularity;
-        this.initialSplits = initialSplits;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private TableArgs() {}
 
-    private TableArgs() {
-        this.columnFamilies = Codegen.empty();
-        this.granularity = Codegen.empty();
-        this.initialSplits = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.tableId = Codegen.empty();
+    private TableArgs(TableArgs $) {
+        this.columnFamilies = $.columnFamilies;
+        this.granularity = $.granularity;
+        this.initialSplits = $.initialSplits;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> columnFamilies;
-        private @Nullable Output<TableGranularity> granularity;
-        private @Nullable Output<List<SplitArgs>> initialSplits;
-        private Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> tableId;
+        private TableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableArgs();
         }
 
         public Builder(TableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columnFamilies = defaults.columnFamilies;
-    	      this.granularity = defaults.granularity;
-    	      this.initialSplits = defaults.initialSplits;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new TableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columnFamilies(@Nullable Output<Map<String,String>> columnFamilies) {
-            this.columnFamilies = columnFamilies;
+            $.columnFamilies = columnFamilies;
             return this;
         }
-        public Builder columnFamilies(@Nullable Map<String,String> columnFamilies) {
-            this.columnFamilies = Codegen.ofNullable(columnFamilies);
-            return this;
+
+        public Builder columnFamilies(Map<String,String> columnFamilies) {
+            return columnFamilies(Output.of(columnFamilies));
         }
+
         public Builder granularity(@Nullable Output<TableGranularity> granularity) {
-            this.granularity = granularity;
+            $.granularity = granularity;
             return this;
         }
-        public Builder granularity(@Nullable TableGranularity granularity) {
-            this.granularity = Codegen.ofNullable(granularity);
-            return this;
+
+        public Builder granularity(TableGranularity granularity) {
+            return granularity(Output.of(granularity));
         }
+
         public Builder initialSplits(@Nullable Output<List<SplitArgs>> initialSplits) {
-            this.initialSplits = initialSplits;
+            $.initialSplits = initialSplits;
             return this;
         }
-        public Builder initialSplits(@Nullable List<SplitArgs> initialSplits) {
-            this.initialSplits = Codegen.ofNullable(initialSplits);
-            return this;
+
+        public Builder initialSplits(List<SplitArgs> initialSplits) {
+            return initialSplits(Output.of(initialSplits));
         }
+
         public Builder initialSplits(SplitArgs... initialSplits) {
             return initialSplits(List.of(initialSplits));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder tableId(Output<String> tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Output.of(Objects.requireNonNull(tableId));
-            return this;
-        }        public TableArgs build() {
-            return new TableArgs(columnFamilies, granularity, initialSplits, instanceId, name, project, tableId);
+            return tableId(Output.of(tableId));
+        }
+
+        public TableArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

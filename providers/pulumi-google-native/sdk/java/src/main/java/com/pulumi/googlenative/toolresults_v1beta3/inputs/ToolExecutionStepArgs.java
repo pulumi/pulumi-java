@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExecutionArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ToolExecutionStepArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="toolExecution")
-      private final @Nullable Output<ToolExecutionArgs> toolExecution;
+    private @Nullable Output<ToolExecutionArgs> toolExecution;
 
-    public Output<ToolExecutionArgs> toolExecution() {
-        return this.toolExecution == null ? Codegen.empty() : this.toolExecution;
+    public Optional<Output<ToolExecutionArgs>> toolExecution() {
+        return Optional.ofNullable(this.toolExecution);
     }
 
-    public ToolExecutionStepArgs(@Nullable Output<ToolExecutionArgs> toolExecution) {
-        this.toolExecution = toolExecution;
-    }
+    private ToolExecutionStepArgs() {}
 
-    private ToolExecutionStepArgs() {
-        this.toolExecution = Codegen.empty();
+    private ToolExecutionStepArgs(ToolExecutionStepArgs $) {
+        this.toolExecution = $.toolExecution;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolExecutionStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ToolExecutionArgs> toolExecution;
+        private ToolExecutionStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolExecutionStepArgs();
         }
 
         public Builder(ToolExecutionStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.toolExecution = defaults.toolExecution;
+            $ = new ToolExecutionStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder toolExecution(@Nullable Output<ToolExecutionArgs> toolExecution) {
-            this.toolExecution = toolExecution;
+            $.toolExecution = toolExecution;
             return this;
         }
-        public Builder toolExecution(@Nullable ToolExecutionArgs toolExecution) {
-            this.toolExecution = Codegen.ofNullable(toolExecution);
-            return this;
-        }        public ToolExecutionStepArgs build() {
-            return new ToolExecutionStepArgs(toolExecution);
+
+        public Builder toolExecution(ToolExecutionArgs toolExecution) {
+            return toolExecution(Output.of(toolExecution));
+        }
+
+        public ToolExecutionStepArgs build() {
+            return $;
         }
     }
+
 }

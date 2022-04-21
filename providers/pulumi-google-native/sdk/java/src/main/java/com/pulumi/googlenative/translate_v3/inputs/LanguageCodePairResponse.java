@@ -21,7 +21,7 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="sourceLanguageCode", required=true)
-      private final String sourceLanguageCode;
+    private String sourceLanguageCode;
 
     public String sourceLanguageCode() {
         return this.sourceLanguageCode;
@@ -32,55 +32,52 @@ public final class LanguageCodePairResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="targetLanguageCode", required=true)
-      private final String targetLanguageCode;
+    private String targetLanguageCode;
 
     public String targetLanguageCode() {
         return this.targetLanguageCode;
     }
 
-    public LanguageCodePairResponse(
-        String sourceLanguageCode,
-        String targetLanguageCode) {
-        this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode, "expected parameter 'sourceLanguageCode' to be non-null");
-        this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode, "expected parameter 'targetLanguageCode' to be non-null");
-    }
+    private LanguageCodePairResponse() {}
 
-    private LanguageCodePairResponse() {
-        this.sourceLanguageCode = null;
-        this.targetLanguageCode = null;
+    private LanguageCodePairResponse(LanguageCodePairResponse $) {
+        this.sourceLanguageCode = $.sourceLanguageCode;
+        this.targetLanguageCode = $.targetLanguageCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LanguageCodePairResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String sourceLanguageCode;
-        private String targetLanguageCode;
+        private LanguageCodePairResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LanguageCodePairResponse();
         }
 
         public Builder(LanguageCodePairResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceLanguageCode = defaults.sourceLanguageCode;
-    	      this.targetLanguageCode = defaults.targetLanguageCode;
+            $ = new LanguageCodePairResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceLanguageCode(String sourceLanguageCode) {
-            this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
+            $.sourceLanguageCode = sourceLanguageCode;
             return this;
         }
+
         public Builder targetLanguageCode(String targetLanguageCode) {
-            this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
+            $.targetLanguageCode = targetLanguageCode;
             return this;
-        }        public LanguageCodePairResponse build() {
-            return new LanguageCodePairResponse(sourceLanguageCode, targetLanguageCode);
+        }
+
+        public LanguageCodePairResponse build() {
+            $.sourceLanguageCode = Objects.requireNonNull($.sourceLanguageCode, "expected parameter 'sourceLanguageCode' to be non-null");
+            $.targetLanguageCode = Objects.requireNonNull($.targetLanguageCode, "expected parameter 'targetLanguageCode' to be non-null");
+            return $;
         }
     }
+
 }

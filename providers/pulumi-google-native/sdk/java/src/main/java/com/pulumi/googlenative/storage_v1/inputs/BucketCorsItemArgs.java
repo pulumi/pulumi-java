@@ -5,11 +5,11 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxAgeSeconds")
-      private final @Nullable Output<Integer> maxAgeSeconds;
+    private @Nullable Output<Integer> maxAgeSeconds;
 
-    public Output<Integer> maxAgeSeconds() {
-        return this.maxAgeSeconds == null ? Codegen.empty() : this.maxAgeSeconds;
+    public Optional<Output<Integer>> maxAgeSeconds() {
+        return Optional.ofNullable(this.maxAgeSeconds);
     }
 
     /**
@@ -33,10 +33,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="method")
-      private final @Nullable Output<List<String>> method;
+    private @Nullable Output<List<String>> method;
 
-    public Output<List<String>> method() {
-        return this.method == null ? Codegen.empty() : this.method;
+    public Optional<Output<List<String>>> method() {
+        return Optional.ofNullable(this.method);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="origin")
-      private final @Nullable Output<List<String>> origin;
+    private @Nullable Output<List<String>> origin;
 
-    public Output<List<String>> origin() {
-        return this.origin == null ? Codegen.empty() : this.origin;
+    public Optional<Output<List<String>>> origin() {
+        return Optional.ofNullable(this.origin);
     }
 
     /**
@@ -55,98 +55,90 @@ public final class BucketCorsItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="responseHeader")
-      private final @Nullable Output<List<String>> responseHeader;
+    private @Nullable Output<List<String>> responseHeader;
 
-    public Output<List<String>> responseHeader() {
-        return this.responseHeader == null ? Codegen.empty() : this.responseHeader;
+    public Optional<Output<List<String>>> responseHeader() {
+        return Optional.ofNullable(this.responseHeader);
     }
 
-    public BucketCorsItemArgs(
-        @Nullable Output<Integer> maxAgeSeconds,
-        @Nullable Output<List<String>> method,
-        @Nullable Output<List<String>> origin,
-        @Nullable Output<List<String>> responseHeader) {
-        this.maxAgeSeconds = maxAgeSeconds;
-        this.method = method;
-        this.origin = origin;
-        this.responseHeader = responseHeader;
-    }
+    private BucketCorsItemArgs() {}
 
-    private BucketCorsItemArgs() {
-        this.maxAgeSeconds = Codegen.empty();
-        this.method = Codegen.empty();
-        this.origin = Codegen.empty();
-        this.responseHeader = Codegen.empty();
+    private BucketCorsItemArgs(BucketCorsItemArgs $) {
+        this.maxAgeSeconds = $.maxAgeSeconds;
+        this.method = $.method;
+        this.origin = $.origin;
+        this.responseHeader = $.responseHeader;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketCorsItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxAgeSeconds;
-        private @Nullable Output<List<String>> method;
-        private @Nullable Output<List<String>> origin;
-        private @Nullable Output<List<String>> responseHeader;
+        private BucketCorsItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketCorsItemArgs();
         }
 
         public Builder(BucketCorsItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxAgeSeconds = defaults.maxAgeSeconds;
-    	      this.method = defaults.method;
-    	      this.origin = defaults.origin;
-    	      this.responseHeader = defaults.responseHeader;
+            $ = new BucketCorsItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxAgeSeconds(@Nullable Output<Integer> maxAgeSeconds) {
-            this.maxAgeSeconds = maxAgeSeconds;
+            $.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
-        public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
-            this.maxAgeSeconds = Codegen.ofNullable(maxAgeSeconds);
-            return this;
+
+        public Builder maxAgeSeconds(Integer maxAgeSeconds) {
+            return maxAgeSeconds(Output.of(maxAgeSeconds));
         }
+
         public Builder method(@Nullable Output<List<String>> method) {
-            this.method = method;
+            $.method = method;
             return this;
         }
-        public Builder method(@Nullable List<String> method) {
-            this.method = Codegen.ofNullable(method);
-            return this;
+
+        public Builder method(List<String> method) {
+            return method(Output.of(method));
         }
+
         public Builder method(String... method) {
             return method(List.of(method));
         }
+
         public Builder origin(@Nullable Output<List<String>> origin) {
-            this.origin = origin;
+            $.origin = origin;
             return this;
         }
-        public Builder origin(@Nullable List<String> origin) {
-            this.origin = Codegen.ofNullable(origin);
-            return this;
+
+        public Builder origin(List<String> origin) {
+            return origin(Output.of(origin));
         }
+
         public Builder origin(String... origin) {
             return origin(List.of(origin));
         }
+
         public Builder responseHeader(@Nullable Output<List<String>> responseHeader) {
-            this.responseHeader = responseHeader;
+            $.responseHeader = responseHeader;
             return this;
         }
-        public Builder responseHeader(@Nullable List<String> responseHeader) {
-            this.responseHeader = Codegen.ofNullable(responseHeader);
-            return this;
+
+        public Builder responseHeader(List<String> responseHeader) {
+            return responseHeader(Output.of(responseHeader));
         }
+
         public Builder responseHeader(String... responseHeader) {
             return responseHeader(List.of(responseHeader));
-        }        public BucketCorsItemArgs build() {
-            return new BucketCorsItemArgs(maxAgeSeconds, method, origin, responseHeader);
+        }
+
+        public BucketCorsItemArgs build() {
+            return $;
         }
     }
+
 }

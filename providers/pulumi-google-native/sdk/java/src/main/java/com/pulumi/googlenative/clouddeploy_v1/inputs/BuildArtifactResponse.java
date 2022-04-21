@@ -21,7 +21,7 @@ public final class BuildArtifactResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="image", required=true)
-      private final String image;
+    private String image;
 
     public String image() {
         return this.image;
@@ -32,55 +32,52 @@ public final class BuildArtifactResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
     }
 
-    public BuildArtifactResponse(
-        String image,
-        String tag) {
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private BuildArtifactResponse() {}
 
-    private BuildArtifactResponse() {
-        this.image = null;
-        this.tag = null;
+    private BuildArtifactResponse(BuildArtifactResponse $) {
+        this.image = $.image;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildArtifactResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String image;
-        private String tag;
+        private BuildArtifactResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildArtifactResponse();
         }
 
         public Builder(BuildArtifactResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.tag = defaults.tag;
+            $ = new BuildArtifactResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder image(String image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public BuildArtifactResponse build() {
-            return new BuildArtifactResponse(image, tag);
+        }
+
+        public BuildArtifactResponse build() {
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

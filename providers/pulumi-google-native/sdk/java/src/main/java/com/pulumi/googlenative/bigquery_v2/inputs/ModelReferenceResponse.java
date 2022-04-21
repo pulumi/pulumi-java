@@ -17,7 +17,7 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -28,7 +28,7 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="modelId", required=true)
-      private final String modelId;
+    private String modelId;
 
     public String modelId() {
         return this.modelId;
@@ -39,64 +39,59 @@ public final class ModelReferenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public ModelReferenceResponse(
-        String datasetId,
-        String modelId,
-        String project) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.modelId = Objects.requireNonNull(modelId, "expected parameter 'modelId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private ModelReferenceResponse() {}
 
-    private ModelReferenceResponse() {
-        this.datasetId = null;
-        this.modelId = null;
-        this.project = null;
+    private ModelReferenceResponse(ModelReferenceResponse $) {
+        this.datasetId = $.datasetId;
+        this.modelId = $.modelId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String modelId;
-        private String project;
+        private ModelReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelReferenceResponse();
         }
 
         public Builder(ModelReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.modelId = defaults.modelId;
-    	      this.project = defaults.project;
+            $ = new ModelReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder modelId(String modelId) {
-            this.modelId = Objects.requireNonNull(modelId);
+            $.modelId = modelId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public ModelReferenceResponse build() {
-            return new ModelReferenceResponse(datasetId, modelId, project);
+        }
+
+        public ModelReferenceResponse build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.modelId = Objects.requireNonNull($.modelId, "expected parameter 'modelId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

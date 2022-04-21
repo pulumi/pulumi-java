@@ -22,7 +22,7 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bootDiskSizeGb", required=true)
-      private final Integer bootDiskSizeGb;
+    private Integer bootDiskSizeGb;
 
     public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
@@ -33,7 +33,7 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="bootDiskType", required=true)
-      private final String bootDiskType;
+    private String bootDiskType;
 
     public String bootDiskType() {
         return this.bootDiskType;
@@ -44,7 +44,7 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="localSsdInterface", required=true)
-      private final String localSsdInterface;
+    private String localSsdInterface;
 
     public String localSsdInterface() {
         return this.localSsdInterface;
@@ -55,73 +55,66 @@ public final class DiskConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numLocalSsds", required=true)
-      private final Integer numLocalSsds;
+    private Integer numLocalSsds;
 
     public Integer numLocalSsds() {
         return this.numLocalSsds;
     }
 
-    public DiskConfigResponse(
-        Integer bootDiskSizeGb,
-        String bootDiskType,
-        String localSsdInterface,
-        Integer numLocalSsds) {
-        this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb, "expected parameter 'bootDiskSizeGb' to be non-null");
-        this.bootDiskType = Objects.requireNonNull(bootDiskType, "expected parameter 'bootDiskType' to be non-null");
-        this.localSsdInterface = Objects.requireNonNull(localSsdInterface, "expected parameter 'localSsdInterface' to be non-null");
-        this.numLocalSsds = Objects.requireNonNull(numLocalSsds, "expected parameter 'numLocalSsds' to be non-null");
-    }
+    private DiskConfigResponse() {}
 
-    private DiskConfigResponse() {
-        this.bootDiskSizeGb = null;
-        this.bootDiskType = null;
-        this.localSsdInterface = null;
-        this.numLocalSsds = null;
+    private DiskConfigResponse(DiskConfigResponse $) {
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.bootDiskType = $.bootDiskType;
+        this.localSsdInterface = $.localSsdInterface;
+        this.numLocalSsds = $.numLocalSsds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer bootDiskSizeGb;
-        private String bootDiskType;
-        private String localSsdInterface;
-        private Integer numLocalSsds;
+        private DiskConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskConfigResponse();
         }
 
         public Builder(DiskConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.bootDiskType = defaults.bootDiskType;
-    	      this.localSsdInterface = defaults.localSsdInterface;
-    	      this.numLocalSsds = defaults.numLocalSsds;
+            $ = new DiskConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
+
         public Builder bootDiskType(String bootDiskType) {
-            this.bootDiskType = Objects.requireNonNull(bootDiskType);
+            $.bootDiskType = bootDiskType;
             return this;
         }
+
         public Builder localSsdInterface(String localSsdInterface) {
-            this.localSsdInterface = Objects.requireNonNull(localSsdInterface);
+            $.localSsdInterface = localSsdInterface;
             return this;
         }
+
         public Builder numLocalSsds(Integer numLocalSsds) {
-            this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
+            $.numLocalSsds = numLocalSsds;
             return this;
-        }        public DiskConfigResponse build() {
-            return new DiskConfigResponse(bootDiskSizeGb, bootDiskType, localSsdInterface, numLocalSsds);
+        }
+
+        public DiskConfigResponse build() {
+            $.bootDiskSizeGb = Objects.requireNonNull($.bootDiskSizeGb, "expected parameter 'bootDiskSizeGb' to be non-null");
+            $.bootDiskType = Objects.requireNonNull($.bootDiskType, "expected parameter 'bootDiskType' to be non-null");
+            $.localSsdInterface = Objects.requireNonNull($.localSsdInterface, "expected parameter 'localSsdInterface' to be non-null");
+            $.numLocalSsds = Objects.requireNonNull($.numLocalSsds, "expected parameter 'numLocalSsds' to be non-null");
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="bucketPolicyOnly", required=true)
-      private final BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
+    private BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
 
     public BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly() {
         return this.bucketPolicyOnly;
@@ -34,7 +34,7 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicAccessPrevention", required=true)
-      private final String publicAccessPrevention;
+    private String publicAccessPrevention;
 
     public String publicAccessPrevention() {
         return this.publicAccessPrevention;
@@ -45,64 +45,59 @@ public final class BucketIamConfigurationResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="uniformBucketLevelAccess", required=true)
-      private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
+    private BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
     public BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
     }
 
-    public BucketIamConfigurationResponse(
-        BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
-        String publicAccessPrevention,
-        BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
-        this.bucketPolicyOnly = Objects.requireNonNull(bucketPolicyOnly, "expected parameter 'bucketPolicyOnly' to be non-null");
-        this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention, "expected parameter 'publicAccessPrevention' to be non-null");
-        this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess, "expected parameter 'uniformBucketLevelAccess' to be non-null");
-    }
+    private BucketIamConfigurationResponse() {}
 
-    private BucketIamConfigurationResponse() {
-        this.bucketPolicyOnly = null;
-        this.publicAccessPrevention = null;
-        this.uniformBucketLevelAccess = null;
+    private BucketIamConfigurationResponse(BucketIamConfigurationResponse $) {
+        this.bucketPolicyOnly = $.bucketPolicyOnly;
+        this.publicAccessPrevention = $.publicAccessPrevention;
+        this.uniformBucketLevelAccess = $.uniformBucketLevelAccess;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BucketIamConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
-        private String publicAccessPrevention;
-        private BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
+        private BucketIamConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BucketIamConfigurationResponse();
         }
 
         public Builder(BucketIamConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bucketPolicyOnly = defaults.bucketPolicyOnly;
-    	      this.publicAccessPrevention = defaults.publicAccessPrevention;
-    	      this.uniformBucketLevelAccess = defaults.uniformBucketLevelAccess;
+            $ = new BucketIamConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly) {
-            this.bucketPolicyOnly = Objects.requireNonNull(bucketPolicyOnly);
+            $.bucketPolicyOnly = bucketPolicyOnly;
             return this;
         }
+
         public Builder publicAccessPrevention(String publicAccessPrevention) {
-            this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
+            $.publicAccessPrevention = publicAccessPrevention;
             return this;
         }
+
         public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
-            this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
+            $.uniformBucketLevelAccess = uniformBucketLevelAccess;
             return this;
-        }        public BucketIamConfigurationResponse build() {
-            return new BucketIamConfigurationResponse(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
+        }
+
+        public BucketIamConfigurationResponse build() {
+            $.bucketPolicyOnly = Objects.requireNonNull($.bucketPolicyOnly, "expected parameter 'bucketPolicyOnly' to be non-null");
+            $.publicAccessPrevention = Objects.requireNonNull($.publicAccessPrevention, "expected parameter 'publicAccessPrevention' to be non-null");
+            $.uniformBucketLevelAccess = Objects.requireNonNull($.uniformBucketLevelAccess, "expected parameter 'uniformBucketLevelAccess' to be non-null");
+            return $;
         }
     }
+
 }

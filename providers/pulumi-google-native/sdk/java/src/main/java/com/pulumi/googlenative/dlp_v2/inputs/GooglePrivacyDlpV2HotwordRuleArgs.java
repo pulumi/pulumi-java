@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LikelihoodAdjustmentArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ProximityArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="hotwordRegex")
-      private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex;
+    private @Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex;
 
-    public Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex() {
-        return this.hotwordRegex == null ? Codegen.empty() : this.hotwordRegex;
+    public Optional<Output<GooglePrivacyDlpV2RegexArgs>> hotwordRegex() {
+        return Optional.ofNullable(this.hotwordRegex);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="likelihoodAdjustment")
-      private final @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment;
+    private @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment;
 
-    public Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment() {
-        return this.likelihoodAdjustment == null ? Codegen.empty() : this.likelihoodAdjustment;
+    public Optional<Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs>> likelihoodAdjustment() {
+        return Optional.ofNullable(this.likelihoodAdjustment);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends com.pulumi.resource
      * 
      */
     @Import(name="proximity")
-      private final @Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity;
+    private @Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity;
 
-    public Output<GooglePrivacyDlpV2ProximityArgs> proximity() {
-        return this.proximity == null ? Codegen.empty() : this.proximity;
+    public Optional<Output<GooglePrivacyDlpV2ProximityArgs>> proximity() {
+        return Optional.ofNullable(this.proximity);
     }
 
-    public GooglePrivacyDlpV2HotwordRuleArgs(
-        @Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex,
-        @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment,
-        @Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity) {
-        this.hotwordRegex = hotwordRegex;
-        this.likelihoodAdjustment = likelihoodAdjustment;
-        this.proximity = proximity;
-    }
+    private GooglePrivacyDlpV2HotwordRuleArgs() {}
 
-    private GooglePrivacyDlpV2HotwordRuleArgs() {
-        this.hotwordRegex = Codegen.empty();
-        this.likelihoodAdjustment = Codegen.empty();
-        this.proximity = Codegen.empty();
+    private GooglePrivacyDlpV2HotwordRuleArgs(GooglePrivacyDlpV2HotwordRuleArgs $) {
+        this.hotwordRegex = $.hotwordRegex;
+        this.likelihoodAdjustment = $.likelihoodAdjustment;
+        this.proximity = $.proximity;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2HotwordRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex;
-        private @Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment;
-        private @Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity;
+        private GooglePrivacyDlpV2HotwordRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2HotwordRuleArgs();
         }
 
         public Builder(GooglePrivacyDlpV2HotwordRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hotwordRegex = defaults.hotwordRegex;
-    	      this.likelihoodAdjustment = defaults.likelihoodAdjustment;
-    	      this.proximity = defaults.proximity;
+            $ = new GooglePrivacyDlpV2HotwordRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hotwordRegex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> hotwordRegex) {
-            this.hotwordRegex = hotwordRegex;
+            $.hotwordRegex = hotwordRegex;
             return this;
         }
-        public Builder hotwordRegex(@Nullable GooglePrivacyDlpV2RegexArgs hotwordRegex) {
-            this.hotwordRegex = Codegen.ofNullable(hotwordRegex);
-            return this;
+
+        public Builder hotwordRegex(GooglePrivacyDlpV2RegexArgs hotwordRegex) {
+            return hotwordRegex(Output.of(hotwordRegex));
         }
+
         public Builder likelihoodAdjustment(@Nullable Output<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment) {
-            this.likelihoodAdjustment = likelihoodAdjustment;
+            $.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
-        public Builder likelihoodAdjustment(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentArgs likelihoodAdjustment) {
-            this.likelihoodAdjustment = Codegen.ofNullable(likelihoodAdjustment);
-            return this;
+
+        public Builder likelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentArgs likelihoodAdjustment) {
+            return likelihoodAdjustment(Output.of(likelihoodAdjustment));
         }
+
         public Builder proximity(@Nullable Output<GooglePrivacyDlpV2ProximityArgs> proximity) {
-            this.proximity = proximity;
+            $.proximity = proximity;
             return this;
         }
-        public Builder proximity(@Nullable GooglePrivacyDlpV2ProximityArgs proximity) {
-            this.proximity = Codegen.ofNullable(proximity);
-            return this;
-        }        public GooglePrivacyDlpV2HotwordRuleArgs build() {
-            return new GooglePrivacyDlpV2HotwordRuleArgs(hotwordRegex, likelihoodAdjustment, proximity);
+
+        public Builder proximity(GooglePrivacyDlpV2ProximityArgs proximity) {
+            return proximity(Output.of(proximity));
+        }
+
+        public GooglePrivacyDlpV2HotwordRuleArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.retail_v2beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends com.pulumi.resour
      * 
      */
     @Import(name="exclusiveMaximum")
-      private final @Nullable Output<Double> exclusiveMaximum;
+    private @Nullable Output<Double> exclusiveMaximum;
 
-    public Output<Double> exclusiveMaximum() {
-        return this.exclusiveMaximum == null ? Codegen.empty() : this.exclusiveMaximum;
+    public Optional<Output<Double>> exclusiveMaximum() {
+        return Optional.ofNullable(this.exclusiveMaximum);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends com.pulumi.resour
      * 
      */
     @Import(name="exclusiveMinimum")
-      private final @Nullable Output<Double> exclusiveMinimum;
+    private @Nullable Output<Double> exclusiveMinimum;
 
-    public Output<Double> exclusiveMinimum() {
-        return this.exclusiveMinimum == null ? Codegen.empty() : this.exclusiveMinimum;
+    public Optional<Output<Double>> exclusiveMinimum() {
+        return Optional.ofNullable(this.exclusiveMinimum);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends com.pulumi.resour
      * 
      */
     @Import(name="maximum")
-      private final @Nullable Output<Double> maximum;
+    private @Nullable Output<Double> maximum;
 
-    public Output<Double> maximum() {
-        return this.maximum == null ? Codegen.empty() : this.maximum;
+    public Optional<Output<Double>> maximum() {
+        return Optional.ofNullable(this.maximum);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class GoogleCloudRetailV2betaIntervalArgs extends com.pulumi.resour
      * 
      */
     @Import(name="minimum")
-      private final @Nullable Output<Double> minimum;
+    private @Nullable Output<Double> minimum;
 
-    public Output<Double> minimum() {
-        return this.minimum == null ? Codegen.empty() : this.minimum;
+    public Optional<Output<Double>> minimum() {
+        return Optional.ofNullable(this.minimum);
     }
 
-    public GoogleCloudRetailV2betaIntervalArgs(
-        @Nullable Output<Double> exclusiveMaximum,
-        @Nullable Output<Double> exclusiveMinimum,
-        @Nullable Output<Double> maximum,
-        @Nullable Output<Double> minimum) {
-        this.exclusiveMaximum = exclusiveMaximum;
-        this.exclusiveMinimum = exclusiveMinimum;
-        this.maximum = maximum;
-        this.minimum = minimum;
-    }
+    private GoogleCloudRetailV2betaIntervalArgs() {}
 
-    private GoogleCloudRetailV2betaIntervalArgs() {
-        this.exclusiveMaximum = Codegen.empty();
-        this.exclusiveMinimum = Codegen.empty();
-        this.maximum = Codegen.empty();
-        this.minimum = Codegen.empty();
+    private GoogleCloudRetailV2betaIntervalArgs(GoogleCloudRetailV2betaIntervalArgs $) {
+        this.exclusiveMaximum = $.exclusiveMaximum;
+        this.exclusiveMinimum = $.exclusiveMinimum;
+        this.maximum = $.maximum;
+        this.minimum = $.minimum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaIntervalArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> exclusiveMaximum;
-        private @Nullable Output<Double> exclusiveMinimum;
-        private @Nullable Output<Double> maximum;
-        private @Nullable Output<Double> minimum;
+        private GoogleCloudRetailV2betaIntervalArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaIntervalArgs();
         }
 
         public Builder(GoogleCloudRetailV2betaIntervalArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exclusiveMaximum = defaults.exclusiveMaximum;
-    	      this.exclusiveMinimum = defaults.exclusiveMinimum;
-    	      this.maximum = defaults.maximum;
-    	      this.minimum = defaults.minimum;
+            $ = new GoogleCloudRetailV2betaIntervalArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exclusiveMaximum(@Nullable Output<Double> exclusiveMaximum) {
-            this.exclusiveMaximum = exclusiveMaximum;
+            $.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
-        public Builder exclusiveMaximum(@Nullable Double exclusiveMaximum) {
-            this.exclusiveMaximum = Codegen.ofNullable(exclusiveMaximum);
-            return this;
+
+        public Builder exclusiveMaximum(Double exclusiveMaximum) {
+            return exclusiveMaximum(Output.of(exclusiveMaximum));
         }
+
         public Builder exclusiveMinimum(@Nullable Output<Double> exclusiveMinimum) {
-            this.exclusiveMinimum = exclusiveMinimum;
+            $.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
-        public Builder exclusiveMinimum(@Nullable Double exclusiveMinimum) {
-            this.exclusiveMinimum = Codegen.ofNullable(exclusiveMinimum);
-            return this;
+
+        public Builder exclusiveMinimum(Double exclusiveMinimum) {
+            return exclusiveMinimum(Output.of(exclusiveMinimum));
         }
+
         public Builder maximum(@Nullable Output<Double> maximum) {
-            this.maximum = maximum;
+            $.maximum = maximum;
             return this;
         }
-        public Builder maximum(@Nullable Double maximum) {
-            this.maximum = Codegen.ofNullable(maximum);
-            return this;
+
+        public Builder maximum(Double maximum) {
+            return maximum(Output.of(maximum));
         }
+
         public Builder minimum(@Nullable Output<Double> minimum) {
-            this.minimum = minimum;
+            $.minimum = minimum;
             return this;
         }
-        public Builder minimum(@Nullable Double minimum) {
-            this.minimum = Codegen.ofNullable(minimum);
-            return this;
-        }        public GoogleCloudRetailV2betaIntervalArgs build() {
-            return new GoogleCloudRetailV2betaIntervalArgs(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
+
+        public Builder minimum(Double minimum) {
+            return minimum(Output.of(minimum));
+        }
+
+        public GoogleCloudRetailV2betaIntervalArgs build() {
+            return $;
         }
     }
+
 }

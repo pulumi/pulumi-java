@@ -23,7 +23,7 @@ public final class ConfigMapKeySelectorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -34,7 +34,7 @@ public final class ConfigMapKeySelectorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="localObjectReference", required=true)
-      private final LocalObjectReferenceResponse localObjectReference;
+    private LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse localObjectReference() {
         return this.localObjectReference;
@@ -45,7 +45,7 @@ public final class ConfigMapKeySelectorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -56,73 +56,66 @@ public final class ConfigMapKeySelectorResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
     }
 
-    public ConfigMapKeySelectorResponse(
-        String key,
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.localObjectReference = Objects.requireNonNull(localObjectReference, "expected parameter 'localObjectReference' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-    }
+    private ConfigMapKeySelectorResponse() {}
 
-    private ConfigMapKeySelectorResponse() {
-        this.key = null;
-        this.localObjectReference = null;
-        this.name = null;
-        this.optional = null;
+    private ConfigMapKeySelectorResponse(ConfigMapKeySelectorResponse $) {
+        this.key = $.key;
+        this.localObjectReference = $.localObjectReference;
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapKeySelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private LocalObjectReferenceResponse localObjectReference;
-        private String name;
-        private Boolean optional;
+        private ConfigMapKeySelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapKeySelectorResponse();
         }
 
         public Builder(ConfigMapKeySelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.localObjectReference = defaults.localObjectReference;
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new ConfigMapKeySelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
-            this.localObjectReference = Objects.requireNonNull(localObjectReference);
+            $.localObjectReference = localObjectReference;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
-        }        public ConfigMapKeySelectorResponse build() {
-            return new ConfigMapKeySelectorResponse(key, localObjectReference, name, optional);
+        }
+
+        public ConfigMapKeySelectorResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.localObjectReference = Objects.requireNonNull($.localObjectReference, "expected parameter 'localObjectReference' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            return $;
         }
     }
+
 }

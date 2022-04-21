@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2PublishToPubSubArgs extends com.pulumi.reso
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public GooglePrivacyDlpV2PublishToPubSubArgs(@Nullable Output<String> topic) {
-        this.topic = topic;
-    }
+    private GooglePrivacyDlpV2PublishToPubSubArgs() {}
 
-    private GooglePrivacyDlpV2PublishToPubSubArgs() {
-        this.topic = Codegen.empty();
+    private GooglePrivacyDlpV2PublishToPubSubArgs(GooglePrivacyDlpV2PublishToPubSubArgs $) {
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2PublishToPubSubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> topic;
+        private GooglePrivacyDlpV2PublishToPubSubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2PublishToPubSubArgs();
         }
 
         public Builder(GooglePrivacyDlpV2PublishToPubSubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.topic = defaults.topic;
+            $ = new GooglePrivacyDlpV2PublishToPubSubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public GooglePrivacyDlpV2PublishToPubSubArgs build() {
-            return new GooglePrivacyDlpV2PublishToPubSubArgs(topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public GooglePrivacyDlpV2PublishToPubSubArgs build() {
+            return $;
         }
     }
+
 }

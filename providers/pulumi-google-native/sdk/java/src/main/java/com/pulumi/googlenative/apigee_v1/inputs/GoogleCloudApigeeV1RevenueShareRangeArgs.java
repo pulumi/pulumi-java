@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
      * 
      */
     @Import(name="end")
-      private final @Nullable Output<String> end;
+    private @Nullable Output<String> end;
 
-    public Output<String> end() {
-        return this.end == null ? Codegen.empty() : this.end;
+    public Optional<Output<String>> end() {
+        return Optional.ofNullable(this.end);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
      * 
      */
     @Import(name="sharePercentage")
-      private final @Nullable Output<Double> sharePercentage;
+    private @Nullable Output<Double> sharePercentage;
 
-    public Output<Double> sharePercentage() {
-        return this.sharePercentage == null ? Codegen.empty() : this.sharePercentage;
+    public Optional<Output<Double>> sharePercentage() {
+        return Optional.ofNullable(this.sharePercentage);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class GoogleCloudApigeeV1RevenueShareRangeArgs extends com.pulumi.r
      * 
      */
     @Import(name="start")
-      private final @Nullable Output<String> start;
+    private @Nullable Output<String> start;
 
-    public Output<String> start() {
-        return this.start == null ? Codegen.empty() : this.start;
+    public Optional<Output<String>> start() {
+        return Optional.ofNullable(this.start);
     }
 
-    public GoogleCloudApigeeV1RevenueShareRangeArgs(
-        @Nullable Output<String> end,
-        @Nullable Output<Double> sharePercentage,
-        @Nullable Output<String> start) {
-        this.end = end;
-        this.sharePercentage = sharePercentage;
-        this.start = start;
-    }
+    private GoogleCloudApigeeV1RevenueShareRangeArgs() {}
 
-    private GoogleCloudApigeeV1RevenueShareRangeArgs() {
-        this.end = Codegen.empty();
-        this.sharePercentage = Codegen.empty();
-        this.start = Codegen.empty();
+    private GoogleCloudApigeeV1RevenueShareRangeArgs(GoogleCloudApigeeV1RevenueShareRangeArgs $) {
+        this.end = $.end;
+        this.sharePercentage = $.sharePercentage;
+        this.start = $.start;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1RevenueShareRangeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> end;
-        private @Nullable Output<Double> sharePercentage;
-        private @Nullable Output<String> start;
+        private GoogleCloudApigeeV1RevenueShareRangeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1RevenueShareRangeArgs();
         }
 
         public Builder(GoogleCloudApigeeV1RevenueShareRangeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.end = defaults.end;
-    	      this.sharePercentage = defaults.sharePercentage;
-    	      this.start = defaults.start;
+            $ = new GoogleCloudApigeeV1RevenueShareRangeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder end(@Nullable Output<String> end) {
-            this.end = end;
+            $.end = end;
             return this;
         }
-        public Builder end(@Nullable String end) {
-            this.end = Codegen.ofNullable(end);
-            return this;
+
+        public Builder end(String end) {
+            return end(Output.of(end));
         }
+
         public Builder sharePercentage(@Nullable Output<Double> sharePercentage) {
-            this.sharePercentage = sharePercentage;
+            $.sharePercentage = sharePercentage;
             return this;
         }
-        public Builder sharePercentage(@Nullable Double sharePercentage) {
-            this.sharePercentage = Codegen.ofNullable(sharePercentage);
-            return this;
+
+        public Builder sharePercentage(Double sharePercentage) {
+            return sharePercentage(Output.of(sharePercentage));
         }
+
         public Builder start(@Nullable Output<String> start) {
-            this.start = start;
+            $.start = start;
             return this;
         }
-        public Builder start(@Nullable String start) {
-            this.start = Codegen.ofNullable(start);
-            return this;
-        }        public GoogleCloudApigeeV1RevenueShareRangeArgs build() {
-            return new GoogleCloudApigeeV1RevenueShareRangeArgs(end, sharePercentage, start);
+
+        public Builder start(String start) {
+            return start(Output.of(start));
+        }
+
+        public GoogleCloudApigeeV1RevenueShareRangeArgs build() {
+            return $;
         }
     }
+
 }

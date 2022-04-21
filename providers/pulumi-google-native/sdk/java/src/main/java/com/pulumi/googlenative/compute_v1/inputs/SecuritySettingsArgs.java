@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="clientTlsPolicy")
-      private final @Nullable Output<String> clientTlsPolicy;
+    private @Nullable Output<String> clientTlsPolicy;
 
-    public Output<String> clientTlsPolicy() {
-        return this.clientTlsPolicy == null ? Codegen.empty() : this.clientTlsPolicy;
+    public Optional<Output<String>> clientTlsPolicy() {
+        return Optional.ofNullable(this.clientTlsPolicy);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class SecuritySettingsArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="subjectAltNames")
-      private final @Nullable Output<List<String>> subjectAltNames;
+    private @Nullable Output<List<String>> subjectAltNames;
 
-    public Output<List<String>> subjectAltNames() {
-        return this.subjectAltNames == null ? Codegen.empty() : this.subjectAltNames;
+    public Optional<Output<List<String>>> subjectAltNames() {
+        return Optional.ofNullable(this.subjectAltNames);
     }
 
-    public SecuritySettingsArgs(
-        @Nullable Output<String> clientTlsPolicy,
-        @Nullable Output<List<String>> subjectAltNames) {
-        this.clientTlsPolicy = clientTlsPolicy;
-        this.subjectAltNames = subjectAltNames;
-    }
+    private SecuritySettingsArgs() {}
 
-    private SecuritySettingsArgs() {
-        this.clientTlsPolicy = Codegen.empty();
-        this.subjectAltNames = Codegen.empty();
+    private SecuritySettingsArgs(SecuritySettingsArgs $) {
+        this.clientTlsPolicy = $.clientTlsPolicy;
+        this.subjectAltNames = $.subjectAltNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecuritySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> clientTlsPolicy;
-        private @Nullable Output<List<String>> subjectAltNames;
+        private SecuritySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecuritySettingsArgs();
         }
 
         public Builder(SecuritySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientTlsPolicy = defaults.clientTlsPolicy;
-    	      this.subjectAltNames = defaults.subjectAltNames;
+            $ = new SecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientTlsPolicy(@Nullable Output<String> clientTlsPolicy) {
-            this.clientTlsPolicy = clientTlsPolicy;
+            $.clientTlsPolicy = clientTlsPolicy;
             return this;
         }
-        public Builder clientTlsPolicy(@Nullable String clientTlsPolicy) {
-            this.clientTlsPolicy = Codegen.ofNullable(clientTlsPolicy);
-            return this;
+
+        public Builder clientTlsPolicy(String clientTlsPolicy) {
+            return clientTlsPolicy(Output.of(clientTlsPolicy));
         }
+
         public Builder subjectAltNames(@Nullable Output<List<String>> subjectAltNames) {
-            this.subjectAltNames = subjectAltNames;
+            $.subjectAltNames = subjectAltNames;
             return this;
         }
-        public Builder subjectAltNames(@Nullable List<String> subjectAltNames) {
-            this.subjectAltNames = Codegen.ofNullable(subjectAltNames);
-            return this;
+
+        public Builder subjectAltNames(List<String> subjectAltNames) {
+            return subjectAltNames(Output.of(subjectAltNames));
         }
+
         public Builder subjectAltNames(String... subjectAltNames) {
             return subjectAltNames(List.of(subjectAltNames));
-        }        public SecuritySettingsArgs build() {
-            return new SecuritySettingsArgs(clientTlsPolicy, subjectAltNames);
+        }
+
+        public SecuritySettingsArgs build() {
+            return $;
         }
     }
+
 }

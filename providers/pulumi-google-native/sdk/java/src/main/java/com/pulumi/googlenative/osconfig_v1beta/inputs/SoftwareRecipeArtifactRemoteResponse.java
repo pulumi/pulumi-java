@@ -21,7 +21,7 @@ public final class SoftwareRecipeArtifactRemoteResponse extends com.pulumi.resou
      * 
      */
     @Import(name="checksum", required=true)
-      private final String checksum;
+    private String checksum;
 
     public String checksum() {
         return this.checksum;
@@ -32,55 +32,52 @@ public final class SoftwareRecipeArtifactRemoteResponse extends com.pulumi.resou
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public SoftwareRecipeArtifactRemoteResponse(
-        String checksum,
-        String uri) {
-        this.checksum = Objects.requireNonNull(checksum, "expected parameter 'checksum' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private SoftwareRecipeArtifactRemoteResponse() {}
 
-    private SoftwareRecipeArtifactRemoteResponse() {
-        this.checksum = null;
-        this.uri = null;
+    private SoftwareRecipeArtifactRemoteResponse(SoftwareRecipeArtifactRemoteResponse $) {
+        this.checksum = $.checksum;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeArtifactRemoteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String checksum;
-        private String uri;
+        private SoftwareRecipeArtifactRemoteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeArtifactRemoteResponse();
         }
 
         public Builder(SoftwareRecipeArtifactRemoteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.uri = defaults.uri;
+            $ = new SoftwareRecipeArtifactRemoteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(String checksum) {
-            this.checksum = Objects.requireNonNull(checksum);
+            $.checksum = checksum;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public SoftwareRecipeArtifactRemoteResponse build() {
-            return new SoftwareRecipeArtifactRemoteResponse(checksum, uri);
+        }
+
+        public SoftwareRecipeArtifactRemoteResponse build() {
+            $.checksum = Objects.requireNonNull($.checksum, "expected parameter 'checksum' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

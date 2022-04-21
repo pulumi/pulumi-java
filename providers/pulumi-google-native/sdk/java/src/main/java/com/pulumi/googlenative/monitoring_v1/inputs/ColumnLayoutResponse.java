@@ -22,48 +22,49 @@ public final class ColumnLayoutResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="columns", required=true)
-      private final List<ColumnResponse> columns;
+    private List<ColumnResponse> columns;
 
     public List<ColumnResponse> columns() {
         return this.columns;
     }
 
-    public ColumnLayoutResponse(List<ColumnResponse> columns) {
-        this.columns = Objects.requireNonNull(columns, "expected parameter 'columns' to be non-null");
-    }
+    private ColumnLayoutResponse() {}
 
-    private ColumnLayoutResponse() {
-        this.columns = List.of();
+    private ColumnLayoutResponse(ColumnLayoutResponse $) {
+        this.columns = $.columns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColumnLayoutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<ColumnResponse> columns;
+        private ColumnLayoutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColumnLayoutResponse();
         }
 
         public Builder(ColumnLayoutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
+            $ = new ColumnLayoutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(List<ColumnResponse> columns) {
-            this.columns = Objects.requireNonNull(columns);
+            $.columns = columns;
             return this;
         }
+
         public Builder columns(ColumnResponse... columns) {
             return columns(List.of(columns));
-        }        public ColumnLayoutResponse build() {
-            return new ColumnLayoutResponse(columns);
+        }
+
+        public ColumnLayoutResponse build() {
+            $.columns = Objects.requireNonNull($.columns, "expected parameter 'columns' to be non-null");
+            return $;
         }
     }
+
 }

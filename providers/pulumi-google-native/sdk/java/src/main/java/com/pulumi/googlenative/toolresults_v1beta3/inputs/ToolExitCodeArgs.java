@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class ToolExitCodeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Integer> number;
+    private @Nullable Output<Integer> number;
 
-    public Output<Integer> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Integer>> number() {
+        return Optional.ofNullable(this.number);
     }
 
-    public ToolExitCodeArgs(@Nullable Output<Integer> number) {
-        this.number = number;
-    }
+    private ToolExitCodeArgs() {}
 
-    private ToolExitCodeArgs() {
-        this.number = Codegen.empty();
+    private ToolExitCodeArgs(ToolExitCodeArgs $) {
+        this.number = $.number;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolExitCodeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> number;
+        private ToolExitCodeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolExitCodeArgs();
         }
 
         public Builder(ToolExitCodeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.number = defaults.number;
+            $ = new ToolExitCodeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder number(@Nullable Output<Integer> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Integer number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
-        }        public ToolExitCodeArgs build() {
-            return new ToolExitCodeArgs(number);
+
+        public Builder number(Integer number) {
+            return number(Output.of(number));
+        }
+
+        public ToolExitCodeArgs build() {
+            return $;
         }
     }
+
 }

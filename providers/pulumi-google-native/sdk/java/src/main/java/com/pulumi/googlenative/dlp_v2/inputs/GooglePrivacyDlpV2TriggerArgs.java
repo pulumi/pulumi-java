@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ManualArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ScheduleArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GooglePrivacyDlpV2TriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="manual")
-      private final @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
+    private @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
 
-    public Output<GooglePrivacyDlpV2ManualArgs> manual() {
-        return this.manual == null ? Codegen.empty() : this.manual;
+    public Optional<Output<GooglePrivacyDlpV2ManualArgs>> manual() {
+        return Optional.ofNullable(this.manual);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GooglePrivacyDlpV2TriggerArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="schedule")
-      private final @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
+    private @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
-    public Output<GooglePrivacyDlpV2ScheduleArgs> schedule() {
-        return this.schedule == null ? Codegen.empty() : this.schedule;
+    public Optional<Output<GooglePrivacyDlpV2ScheduleArgs>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
-    public GooglePrivacyDlpV2TriggerArgs(
-        @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual,
-        @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule) {
-        this.manual = manual;
-        this.schedule = schedule;
-    }
+    private GooglePrivacyDlpV2TriggerArgs() {}
 
-    private GooglePrivacyDlpV2TriggerArgs() {
-        this.manual = Codegen.empty();
-        this.schedule = Codegen.empty();
+    private GooglePrivacyDlpV2TriggerArgs(GooglePrivacyDlpV2TriggerArgs $) {
+        this.manual = $.manual;
+        this.schedule = $.schedule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
-        private @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
+        private GooglePrivacyDlpV2TriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TriggerArgs();
         }
 
         public Builder(GooglePrivacyDlpV2TriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.manual = defaults.manual;
-    	      this.schedule = defaults.schedule;
+            $ = new GooglePrivacyDlpV2TriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder manual(@Nullable Output<GooglePrivacyDlpV2ManualArgs> manual) {
-            this.manual = manual;
+            $.manual = manual;
             return this;
         }
-        public Builder manual(@Nullable GooglePrivacyDlpV2ManualArgs manual) {
-            this.manual = Codegen.ofNullable(manual);
-            return this;
+
+        public Builder manual(GooglePrivacyDlpV2ManualArgs manual) {
+            return manual(Output.of(manual));
         }
+
         public Builder schedule(@Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule) {
-            this.schedule = schedule;
+            $.schedule = schedule;
             return this;
         }
-        public Builder schedule(@Nullable GooglePrivacyDlpV2ScheduleArgs schedule) {
-            this.schedule = Codegen.ofNullable(schedule);
-            return this;
-        }        public GooglePrivacyDlpV2TriggerArgs build() {
-            return new GooglePrivacyDlpV2TriggerArgs(manual, schedule);
+
+        public Builder schedule(GooglePrivacyDlpV2ScheduleArgs schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        public GooglePrivacyDlpV2TriggerArgs build() {
+            return $;
         }
     }
+
 }

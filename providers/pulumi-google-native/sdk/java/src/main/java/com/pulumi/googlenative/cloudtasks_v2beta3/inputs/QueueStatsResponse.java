@@ -22,7 +22,7 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="concurrentDispatchesCount", required=true)
-      private final String concurrentDispatchesCount;
+    private String concurrentDispatchesCount;
 
     public String concurrentDispatchesCount() {
         return this.concurrentDispatchesCount;
@@ -33,7 +33,7 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="effectiveExecutionRate", required=true)
-      private final Double effectiveExecutionRate;
+    private Double effectiveExecutionRate;
 
     public Double effectiveExecutionRate() {
         return this.effectiveExecutionRate;
@@ -44,7 +44,7 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executedLastMinuteCount", required=true)
-      private final String executedLastMinuteCount;
+    private String executedLastMinuteCount;
 
     public String executedLastMinuteCount() {
         return this.executedLastMinuteCount;
@@ -55,7 +55,7 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oldestEstimatedArrivalTime", required=true)
-      private final String oldestEstimatedArrivalTime;
+    private String oldestEstimatedArrivalTime;
 
     public String oldestEstimatedArrivalTime() {
         return this.oldestEstimatedArrivalTime;
@@ -66,82 +66,73 @@ public final class QueueStatsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tasksCount", required=true)
-      private final String tasksCount;
+    private String tasksCount;
 
     public String tasksCount() {
         return this.tasksCount;
     }
 
-    public QueueStatsResponse(
-        String concurrentDispatchesCount,
-        Double effectiveExecutionRate,
-        String executedLastMinuteCount,
-        String oldestEstimatedArrivalTime,
-        String tasksCount) {
-        this.concurrentDispatchesCount = Objects.requireNonNull(concurrentDispatchesCount, "expected parameter 'concurrentDispatchesCount' to be non-null");
-        this.effectiveExecutionRate = Objects.requireNonNull(effectiveExecutionRate, "expected parameter 'effectiveExecutionRate' to be non-null");
-        this.executedLastMinuteCount = Objects.requireNonNull(executedLastMinuteCount, "expected parameter 'executedLastMinuteCount' to be non-null");
-        this.oldestEstimatedArrivalTime = Objects.requireNonNull(oldestEstimatedArrivalTime, "expected parameter 'oldestEstimatedArrivalTime' to be non-null");
-        this.tasksCount = Objects.requireNonNull(tasksCount, "expected parameter 'tasksCount' to be non-null");
-    }
+    private QueueStatsResponse() {}
 
-    private QueueStatsResponse() {
-        this.concurrentDispatchesCount = null;
-        this.effectiveExecutionRate = null;
-        this.executedLastMinuteCount = null;
-        this.oldestEstimatedArrivalTime = null;
-        this.tasksCount = null;
+    private QueueStatsResponse(QueueStatsResponse $) {
+        this.concurrentDispatchesCount = $.concurrentDispatchesCount;
+        this.effectiveExecutionRate = $.effectiveExecutionRate;
+        this.executedLastMinuteCount = $.executedLastMinuteCount;
+        this.oldestEstimatedArrivalTime = $.oldestEstimatedArrivalTime;
+        this.tasksCount = $.tasksCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QueueStatsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String concurrentDispatchesCount;
-        private Double effectiveExecutionRate;
-        private String executedLastMinuteCount;
-        private String oldestEstimatedArrivalTime;
-        private String tasksCount;
+        private QueueStatsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QueueStatsResponse();
         }
 
         public Builder(QueueStatsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.concurrentDispatchesCount = defaults.concurrentDispatchesCount;
-    	      this.effectiveExecutionRate = defaults.effectiveExecutionRate;
-    	      this.executedLastMinuteCount = defaults.executedLastMinuteCount;
-    	      this.oldestEstimatedArrivalTime = defaults.oldestEstimatedArrivalTime;
-    	      this.tasksCount = defaults.tasksCount;
+            $ = new QueueStatsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder concurrentDispatchesCount(String concurrentDispatchesCount) {
-            this.concurrentDispatchesCount = Objects.requireNonNull(concurrentDispatchesCount);
+            $.concurrentDispatchesCount = concurrentDispatchesCount;
             return this;
         }
+
         public Builder effectiveExecutionRate(Double effectiveExecutionRate) {
-            this.effectiveExecutionRate = Objects.requireNonNull(effectiveExecutionRate);
+            $.effectiveExecutionRate = effectiveExecutionRate;
             return this;
         }
+
         public Builder executedLastMinuteCount(String executedLastMinuteCount) {
-            this.executedLastMinuteCount = Objects.requireNonNull(executedLastMinuteCount);
+            $.executedLastMinuteCount = executedLastMinuteCount;
             return this;
         }
+
         public Builder oldestEstimatedArrivalTime(String oldestEstimatedArrivalTime) {
-            this.oldestEstimatedArrivalTime = Objects.requireNonNull(oldestEstimatedArrivalTime);
+            $.oldestEstimatedArrivalTime = oldestEstimatedArrivalTime;
             return this;
         }
+
         public Builder tasksCount(String tasksCount) {
-            this.tasksCount = Objects.requireNonNull(tasksCount);
+            $.tasksCount = tasksCount;
             return this;
-        }        public QueueStatsResponse build() {
-            return new QueueStatsResponse(concurrentDispatchesCount, effectiveExecutionRate, executedLastMinuteCount, oldestEstimatedArrivalTime, tasksCount);
+        }
+
+        public QueueStatsResponse build() {
+            $.concurrentDispatchesCount = Objects.requireNonNull($.concurrentDispatchesCount, "expected parameter 'concurrentDispatchesCount' to be non-null");
+            $.effectiveExecutionRate = Objects.requireNonNull($.effectiveExecutionRate, "expected parameter 'effectiveExecutionRate' to be non-null");
+            $.executedLastMinuteCount = Objects.requireNonNull($.executedLastMinuteCount, "expected parameter 'executedLastMinuteCount' to be non-null");
+            $.oldestEstimatedArrivalTime = Objects.requireNonNull($.oldestEstimatedArrivalTime, "expected parameter 'oldestEstimatedArrivalTime' to be non-null");
+            $.tasksCount = Objects.requireNonNull($.tasksCount, "expected parameter 'tasksCount' to be non-null");
+            return $;
         }
     }
+
 }

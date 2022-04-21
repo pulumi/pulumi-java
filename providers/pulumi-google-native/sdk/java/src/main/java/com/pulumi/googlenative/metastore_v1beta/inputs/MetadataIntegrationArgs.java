@@ -5,10 +5,10 @@ package com.pulumi.googlenative.metastore_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.metastore_v1beta.inputs.DataCatalogConfigArgs;
 import com.pulumi.googlenative.metastore_v1beta.inputs.DataplexConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetadataIntegrationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dataCatalogConfig")
-      private final @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
+    private @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
 
-    public Output<DataCatalogConfigArgs> dataCatalogConfig() {
-        return this.dataCatalogConfig == null ? Codegen.empty() : this.dataCatalogConfig;
+    public Optional<Output<DataCatalogConfigArgs>> dataCatalogConfig() {
+        return Optional.ofNullable(this.dataCatalogConfig);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class MetadataIntegrationArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="dataplexConfig")
-      private final @Nullable Output<DataplexConfigArgs> dataplexConfig;
+    private @Nullable Output<DataplexConfigArgs> dataplexConfig;
 
-    public Output<DataplexConfigArgs> dataplexConfig() {
-        return this.dataplexConfig == null ? Codegen.empty() : this.dataplexConfig;
+    public Optional<Output<DataplexConfigArgs>> dataplexConfig() {
+        return Optional.ofNullable(this.dataplexConfig);
     }
 
-    public MetadataIntegrationArgs(
-        @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig,
-        @Nullable Output<DataplexConfigArgs> dataplexConfig) {
-        this.dataCatalogConfig = dataCatalogConfig;
-        this.dataplexConfig = dataplexConfig;
-    }
+    private MetadataIntegrationArgs() {}
 
-    private MetadataIntegrationArgs() {
-        this.dataCatalogConfig = Codegen.empty();
-        this.dataplexConfig = Codegen.empty();
+    private MetadataIntegrationArgs(MetadataIntegrationArgs $) {
+        this.dataCatalogConfig = $.dataCatalogConfig;
+        this.dataplexConfig = $.dataplexConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataIntegrationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DataCatalogConfigArgs> dataCatalogConfig;
-        private @Nullable Output<DataplexConfigArgs> dataplexConfig;
+        private MetadataIntegrationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataIntegrationArgs();
         }
 
         public Builder(MetadataIntegrationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCatalogConfig = defaults.dataCatalogConfig;
-    	      this.dataplexConfig = defaults.dataplexConfig;
+            $ = new MetadataIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCatalogConfig(@Nullable Output<DataCatalogConfigArgs> dataCatalogConfig) {
-            this.dataCatalogConfig = dataCatalogConfig;
+            $.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
-        public Builder dataCatalogConfig(@Nullable DataCatalogConfigArgs dataCatalogConfig) {
-            this.dataCatalogConfig = Codegen.ofNullable(dataCatalogConfig);
-            return this;
+
+        public Builder dataCatalogConfig(DataCatalogConfigArgs dataCatalogConfig) {
+            return dataCatalogConfig(Output.of(dataCatalogConfig));
         }
+
         public Builder dataplexConfig(@Nullable Output<DataplexConfigArgs> dataplexConfig) {
-            this.dataplexConfig = dataplexConfig;
+            $.dataplexConfig = dataplexConfig;
             return this;
         }
-        public Builder dataplexConfig(@Nullable DataplexConfigArgs dataplexConfig) {
-            this.dataplexConfig = Codegen.ofNullable(dataplexConfig);
-            return this;
-        }        public MetadataIntegrationArgs build() {
-            return new MetadataIntegrationArgs(dataCatalogConfig, dataplexConfig);
+
+        public Builder dataplexConfig(DataplexConfigArgs dataplexConfig) {
+            return dataplexConfig(Output.of(dataplexConfig));
+        }
+
+        public MetadataIntegrationArgs build() {
+            return $;
         }
     }
+
 }

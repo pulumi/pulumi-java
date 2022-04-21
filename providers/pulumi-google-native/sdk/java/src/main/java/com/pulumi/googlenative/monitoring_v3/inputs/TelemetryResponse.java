@@ -21,45 +21,45 @@ public final class TelemetryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceName", required=true)
-      private final String resourceName;
+    private String resourceName;
 
     public String resourceName() {
         return this.resourceName;
     }
 
-    public TelemetryResponse(String resourceName) {
-        this.resourceName = Objects.requireNonNull(resourceName, "expected parameter 'resourceName' to be non-null");
-    }
+    private TelemetryResponse() {}
 
-    private TelemetryResponse() {
-        this.resourceName = null;
+    private TelemetryResponse(TelemetryResponse $) {
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TelemetryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String resourceName;
+        private TelemetryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TelemetryResponse();
         }
 
         public Builder(TelemetryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceName = defaults.resourceName;
+            $ = new TelemetryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceName(String resourceName) {
-            this.resourceName = Objects.requireNonNull(resourceName);
+            $.resourceName = resourceName;
             return this;
-        }        public TelemetryResponse build() {
-            return new TelemetryResponse(resourceName);
+        }
+
+        public TelemetryResponse build() {
+            $.resourceName = Objects.requireNonNull($.resourceName, "expected parameter 'resourceName' to be non-null");
+            return $;
         }
     }
+
 }

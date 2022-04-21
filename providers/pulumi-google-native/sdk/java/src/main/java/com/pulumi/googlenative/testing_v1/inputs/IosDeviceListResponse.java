@@ -22,48 +22,49 @@ public final class IosDeviceListResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="iosDevices", required=true)
-      private final List<IosDeviceResponse> iosDevices;
+    private List<IosDeviceResponse> iosDevices;
 
     public List<IosDeviceResponse> iosDevices() {
         return this.iosDevices;
     }
 
-    public IosDeviceListResponse(List<IosDeviceResponse> iosDevices) {
-        this.iosDevices = Objects.requireNonNull(iosDevices, "expected parameter 'iosDevices' to be non-null");
-    }
+    private IosDeviceListResponse() {}
 
-    private IosDeviceListResponse() {
-        this.iosDevices = List.of();
+    private IosDeviceListResponse(IosDeviceListResponse $) {
+        this.iosDevices = $.iosDevices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosDeviceListResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<IosDeviceResponse> iosDevices;
+        private IosDeviceListResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosDeviceListResponse();
         }
 
         public Builder(IosDeviceListResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iosDevices = defaults.iosDevices;
+            $ = new IosDeviceListResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder iosDevices(List<IosDeviceResponse> iosDevices) {
-            this.iosDevices = Objects.requireNonNull(iosDevices);
+            $.iosDevices = iosDevices;
             return this;
         }
+
         public Builder iosDevices(IosDeviceResponse... iosDevices) {
             return iosDevices(List.of(iosDevices));
-        }        public IosDeviceListResponse build() {
-            return new IosDeviceListResponse(iosDevices);
+        }
+
+        public IosDeviceListResponse build() {
+            $.iosDevices = Objects.requireNonNull($.iosDevices, "expected parameter 'iosDevices' to be non-null");
+            return $;
         }
     }
+
 }

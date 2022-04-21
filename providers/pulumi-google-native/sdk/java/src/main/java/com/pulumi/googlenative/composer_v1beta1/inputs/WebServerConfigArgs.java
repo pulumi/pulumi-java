@@ -5,9 +5,9 @@ package com.pulumi.googlenative.composer_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WebServerConfigArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="machineType")
-      private final @Nullable Output<String> machineType;
+    private @Nullable Output<String> machineType;
 
-    public Output<String> machineType() {
-        return this.machineType == null ? Codegen.empty() : this.machineType;
+    public Optional<Output<String>> machineType() {
+        return Optional.ofNullable(this.machineType);
     }
 
-    public WebServerConfigArgs(@Nullable Output<String> machineType) {
-        this.machineType = machineType;
-    }
+    private WebServerConfigArgs() {}
 
-    private WebServerConfigArgs() {
-        this.machineType = Codegen.empty();
+    private WebServerConfigArgs(WebServerConfigArgs $) {
+        this.machineType = $.machineType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WebServerConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> machineType;
+        private WebServerConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WebServerConfigArgs();
         }
 
         public Builder(WebServerConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.machineType = defaults.machineType;
+            $ = new WebServerConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder machineType(@Nullable Output<String> machineType) {
-            this.machineType = machineType;
+            $.machineType = machineType;
             return this;
         }
-        public Builder machineType(@Nullable String machineType) {
-            this.machineType = Codegen.ofNullable(machineType);
-            return this;
-        }        public WebServerConfigArgs build() {
-            return new WebServerConfigArgs(machineType);
+
+        public Builder machineType(String machineType) {
+            return machineType(Output.of(machineType));
+        }
+
+        public WebServerConfigArgs build() {
+            return $;
         }
     }
+
 }

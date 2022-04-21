@@ -15,78 +15,72 @@ public final class GetRegionSslPolicyArgs extends com.pulumi.resources.InvokeArg
     public static final GetRegionSslPolicyArgs Empty = new GetRegionSslPolicyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
     }
 
     @Import(name="sslPolicy", required=true)
-      private final String sslPolicy;
+    private String sslPolicy;
 
     public String sslPolicy() {
         return this.sslPolicy;
     }
 
-    public GetRegionSslPolicyArgs(
-        @Nullable String project,
-        String region,
-        String sslPolicy) {
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.sslPolicy = Objects.requireNonNull(sslPolicy, "expected parameter 'sslPolicy' to be non-null");
-    }
+    private GetRegionSslPolicyArgs() {}
 
-    private GetRegionSslPolicyArgs() {
-        this.project = null;
-        this.region = null;
-        this.sslPolicy = null;
+    private GetRegionSslPolicyArgs(GetRegionSslPolicyArgs $) {
+        this.project = $.project;
+        this.region = $.region;
+        this.sslPolicy = $.sslPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRegionSslPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String region;
-        private String sslPolicy;
+        private GetRegionSslPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRegionSslPolicyArgs();
         }
 
         public Builder(GetRegionSslPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.sslPolicy = defaults.sslPolicy;
+            $ = new GetRegionSslPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder sslPolicy(String sslPolicy) {
-            this.sslPolicy = Objects.requireNonNull(sslPolicy);
+            $.sslPolicy = sslPolicy;
             return this;
-        }        public GetRegionSslPolicyArgs build() {
-            return new GetRegionSslPolicyArgs(project, region, sslPolicy);
+        }
+
+        public GetRegionSslPolicyArgs build() {
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.sslPolicy = Objects.requireNonNull($.sslPolicy, "expected parameter 'sslPolicy' to be non-null");
+            return $;
         }
     }
+
 }

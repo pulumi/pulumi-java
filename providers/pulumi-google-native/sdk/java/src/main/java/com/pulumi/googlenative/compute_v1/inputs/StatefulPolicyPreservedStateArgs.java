@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class StatefulPolicyPreservedStateArgs extends com.pulumi.resources
      * 
      */
     @Import(name="disks")
-      private final @Nullable Output<Map<String,String>> disks;
+    private @Nullable Output<Map<String,String>> disks;
 
-    public Output<Map<String,String>> disks() {
-        return this.disks == null ? Codegen.empty() : this.disks;
+    public Optional<Output<Map<String,String>>> disks() {
+        return Optional.ofNullable(this.disks);
     }
 
-    public StatefulPolicyPreservedStateArgs(@Nullable Output<Map<String,String>> disks) {
-        this.disks = disks;
-    }
+    private StatefulPolicyPreservedStateArgs() {}
 
-    private StatefulPolicyPreservedStateArgs() {
-        this.disks = Codegen.empty();
+    private StatefulPolicyPreservedStateArgs(StatefulPolicyPreservedStateArgs $) {
+        this.disks = $.disks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulPolicyPreservedStateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> disks;
+        private StatefulPolicyPreservedStateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulPolicyPreservedStateArgs();
         }
 
         public Builder(StatefulPolicyPreservedStateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disks = defaults.disks;
+            $ = new StatefulPolicyPreservedStateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disks(@Nullable Output<Map<String,String>> disks) {
-            this.disks = disks;
+            $.disks = disks;
             return this;
         }
-        public Builder disks(@Nullable Map<String,String> disks) {
-            this.disks = Codegen.ofNullable(disks);
-            return this;
-        }        public StatefulPolicyPreservedStateArgs build() {
-            return new StatefulPolicyPreservedStateArgs(disks);
+
+        public Builder disks(Map<String,String> disks) {
+            return disks(Output.of(disks));
+        }
+
+        public StatefulPolicyPreservedStateArgs build() {
+            return $;
         }
     }
+
 }

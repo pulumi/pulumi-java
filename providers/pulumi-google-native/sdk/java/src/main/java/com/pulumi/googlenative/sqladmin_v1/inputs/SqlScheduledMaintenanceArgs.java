@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
     public static final SqlScheduledMaintenanceArgs Empty = new SqlScheduledMaintenanceArgs();
 
     @Import(name="canDefer")
-      private final @Nullable Output<Boolean> canDefer;
+    private @Nullable Output<Boolean> canDefer;
 
-    public Output<Boolean> canDefer() {
-        return this.canDefer == null ? Codegen.empty() : this.canDefer;
+    public Optional<Output<Boolean>> canDefer() {
+        return Optional.ofNullable(this.canDefer);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="canReschedule")
-      private final @Nullable Output<Boolean> canReschedule;
+    private @Nullable Output<Boolean> canReschedule;
 
-    public Output<Boolean> canReschedule() {
-        return this.canReschedule == null ? Codegen.empty() : this.canReschedule;
+    public Optional<Output<Boolean>> canReschedule() {
+        return Optional.ofNullable(this.canReschedule);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="scheduleDeadlineTime")
-      private final @Nullable Output<String> scheduleDeadlineTime;
+    private @Nullable Output<String> scheduleDeadlineTime;
 
-    public Output<String> scheduleDeadlineTime() {
-        return this.scheduleDeadlineTime == null ? Codegen.empty() : this.scheduleDeadlineTime;
+    public Optional<Output<String>> scheduleDeadlineTime() {
+        return Optional.ofNullable(this.scheduleDeadlineTime);
     }
 
     /**
@@ -54,89 +54,78 @@ public final class SqlScheduledMaintenanceArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public SqlScheduledMaintenanceArgs(
-        @Nullable Output<Boolean> canDefer,
-        @Nullable Output<Boolean> canReschedule,
-        @Nullable Output<String> scheduleDeadlineTime,
-        @Nullable Output<String> startTime) {
-        this.canDefer = canDefer;
-        this.canReschedule = canReschedule;
-        this.scheduleDeadlineTime = scheduleDeadlineTime;
-        this.startTime = startTime;
-    }
+    private SqlScheduledMaintenanceArgs() {}
 
-    private SqlScheduledMaintenanceArgs() {
-        this.canDefer = Codegen.empty();
-        this.canReschedule = Codegen.empty();
-        this.scheduleDeadlineTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private SqlScheduledMaintenanceArgs(SqlScheduledMaintenanceArgs $) {
+        this.canDefer = $.canDefer;
+        this.canReschedule = $.canReschedule;
+        this.scheduleDeadlineTime = $.scheduleDeadlineTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlScheduledMaintenanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> canDefer;
-        private @Nullable Output<Boolean> canReschedule;
-        private @Nullable Output<String> scheduleDeadlineTime;
-        private @Nullable Output<String> startTime;
+        private SqlScheduledMaintenanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlScheduledMaintenanceArgs();
         }
 
         public Builder(SqlScheduledMaintenanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.canDefer = defaults.canDefer;
-    	      this.canReschedule = defaults.canReschedule;
-    	      this.scheduleDeadlineTime = defaults.scheduleDeadlineTime;
-    	      this.startTime = defaults.startTime;
+            $ = new SqlScheduledMaintenanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder canDefer(@Nullable Output<Boolean> canDefer) {
-            this.canDefer = canDefer;
+            $.canDefer = canDefer;
             return this;
         }
-        public Builder canDefer(@Nullable Boolean canDefer) {
-            this.canDefer = Codegen.ofNullable(canDefer);
-            return this;
+
+        public Builder canDefer(Boolean canDefer) {
+            return canDefer(Output.of(canDefer));
         }
+
         public Builder canReschedule(@Nullable Output<Boolean> canReschedule) {
-            this.canReschedule = canReschedule;
+            $.canReschedule = canReschedule;
             return this;
         }
-        public Builder canReschedule(@Nullable Boolean canReschedule) {
-            this.canReschedule = Codegen.ofNullable(canReschedule);
-            return this;
+
+        public Builder canReschedule(Boolean canReschedule) {
+            return canReschedule(Output.of(canReschedule));
         }
+
         public Builder scheduleDeadlineTime(@Nullable Output<String> scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = scheduleDeadlineTime;
+            $.scheduleDeadlineTime = scheduleDeadlineTime;
             return this;
         }
-        public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Codegen.ofNullable(scheduleDeadlineTime);
-            return this;
+
+        public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
+            return scheduleDeadlineTime(Output.of(scheduleDeadlineTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public SqlScheduledMaintenanceArgs build() {
-            return new SqlScheduledMaintenanceArgs(canDefer, canReschedule, scheduleDeadlineTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public SqlScheduledMaintenanceArgs build() {
+            return $;
         }
     }
+
 }

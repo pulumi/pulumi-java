@@ -13,45 +13,45 @@ public final class GetGroupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetGroupArgs Empty = new GetGroupArgs();
 
     @Import(name="groupId", required=true)
-      private final String groupId;
+    private String groupId;
 
     public String groupId() {
         return this.groupId;
     }
 
-    public GetGroupArgs(String groupId) {
-        this.groupId = Objects.requireNonNull(groupId, "expected parameter 'groupId' to be non-null");
-    }
+    private GetGroupArgs() {}
 
-    private GetGroupArgs() {
-        this.groupId = null;
+    private GetGroupArgs(GetGroupArgs $) {
+        this.groupId = $.groupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetGroupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String groupId;
+        private GetGroupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetGroupArgs();
         }
 
         public Builder(GetGroupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupId = defaults.groupId;
+            $ = new GetGroupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder groupId(String groupId) {
-            this.groupId = Objects.requireNonNull(groupId);
+            $.groupId = groupId;
             return this;
-        }        public GetGroupArgs build() {
-            return new GetGroupArgs(groupId);
+        }
+
+        public GetGroupArgs build() {
+            $.groupId = Objects.requireNonNull($.groupId, "expected parameter 'groupId' to be non-null");
+            return $;
         }
     }
+
 }

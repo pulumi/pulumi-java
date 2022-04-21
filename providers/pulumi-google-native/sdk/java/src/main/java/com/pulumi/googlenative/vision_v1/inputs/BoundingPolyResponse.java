@@ -23,7 +23,7 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="normalizedVertices", required=true)
-      private final List<NormalizedVertexResponse> normalizedVertices;
+    private List<NormalizedVertexResponse> normalizedVertices;
 
     public List<NormalizedVertexResponse> normalizedVertices() {
         return this.normalizedVertices;
@@ -34,61 +34,60 @@ public final class BoundingPolyResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="vertices", required=true)
-      private final List<VertexResponse> vertices;
+    private List<VertexResponse> vertices;
 
     public List<VertexResponse> vertices() {
         return this.vertices;
     }
 
-    public BoundingPolyResponse(
-        List<NormalizedVertexResponse> normalizedVertices,
-        List<VertexResponse> vertices) {
-        this.normalizedVertices = Objects.requireNonNull(normalizedVertices, "expected parameter 'normalizedVertices' to be non-null");
-        this.vertices = Objects.requireNonNull(vertices, "expected parameter 'vertices' to be non-null");
-    }
+    private BoundingPolyResponse() {}
 
-    private BoundingPolyResponse() {
-        this.normalizedVertices = List.of();
-        this.vertices = List.of();
+    private BoundingPolyResponse(BoundingPolyResponse $) {
+        this.normalizedVertices = $.normalizedVertices;
+        this.vertices = $.vertices;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BoundingPolyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<NormalizedVertexResponse> normalizedVertices;
-        private List<VertexResponse> vertices;
+        private BoundingPolyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new BoundingPolyResponse();
         }
 
         public Builder(BoundingPolyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.normalizedVertices = defaults.normalizedVertices;
-    	      this.vertices = defaults.vertices;
+            $ = new BoundingPolyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder normalizedVertices(List<NormalizedVertexResponse> normalizedVertices) {
-            this.normalizedVertices = Objects.requireNonNull(normalizedVertices);
+            $.normalizedVertices = normalizedVertices;
             return this;
         }
+
         public Builder normalizedVertices(NormalizedVertexResponse... normalizedVertices) {
             return normalizedVertices(List.of(normalizedVertices));
         }
+
         public Builder vertices(List<VertexResponse> vertices) {
-            this.vertices = Objects.requireNonNull(vertices);
+            $.vertices = vertices;
             return this;
         }
+
         public Builder vertices(VertexResponse... vertices) {
             return vertices(List.of(vertices));
-        }        public BoundingPolyResponse build() {
-            return new BoundingPolyResponse(normalizedVertices, vertices);
+        }
+
+        public BoundingPolyResponse build() {
+            $.normalizedVertices = Objects.requireNonNull($.normalizedVertices, "expected parameter 'normalizedVertices' to be non-null");
+            $.vertices = Objects.requireNonNull($.vertices, "expected parameter 'vertices' to be non-null");
+            return $;
         }
     }
+
 }

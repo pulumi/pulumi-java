@@ -22,7 +22,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="executionTemplate", required=true)
-      private final ExecutionTemplateResponse executionTemplate;
+    private ExecutionTemplateResponse executionTemplate;
 
     public ExecutionTemplateResponse executionTemplate() {
         return this.executionTemplate;
@@ -66,7 +66,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="jobUri", required=true)
-      private final String jobUri;
+    private String jobUri;
 
     public String jobUri() {
         return this.jobUri;
@@ -77,7 +77,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -88,7 +88,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="outputNotebookFile", required=true)
-      private final String outputNotebookFile;
+    private String outputNotebookFile;
 
     public String outputNotebookFile() {
         return this.outputNotebookFile;
@@ -99,7 +99,7 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -110,118 +110,101 @@ public final class ExecutionResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public ExecutionResponse(
-        String createTime,
-        String description,
-        String displayName,
-        ExecutionTemplateResponse executionTemplate,
-        String jobUri,
-        String name,
-        String outputNotebookFile,
-        String state,
-        String updateTime) {
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.executionTemplate = Objects.requireNonNull(executionTemplate, "expected parameter 'executionTemplate' to be non-null");
-        this.jobUri = Objects.requireNonNull(jobUri, "expected parameter 'jobUri' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.outputNotebookFile = Objects.requireNonNull(outputNotebookFile, "expected parameter 'outputNotebookFile' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private ExecutionResponse() {}
 
-    private ExecutionResponse() {
-        this.createTime = null;
-        this.description = null;
-        this.displayName = null;
-        this.executionTemplate = null;
-        this.jobUri = null;
-        this.name = null;
-        this.outputNotebookFile = null;
-        this.state = null;
-        this.updateTime = null;
+    private ExecutionResponse(ExecutionResponse $) {
+        this.createTime = $.createTime;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.executionTemplate = $.executionTemplate;
+        this.jobUri = $.jobUri;
+        this.name = $.name;
+        this.outputNotebookFile = $.outputNotebookFile;
+        this.state = $.state;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String createTime;
-        private String description;
-        private String displayName;
-        private ExecutionTemplateResponse executionTemplate;
-        private String jobUri;
-        private String name;
-        private String outputNotebookFile;
-        private String state;
-        private String updateTime;
+        private ExecutionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionResponse();
         }
 
         public Builder(ExecutionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.executionTemplate = defaults.executionTemplate;
-    	      this.jobUri = defaults.jobUri;
-    	      this.name = defaults.name;
-    	      this.outputNotebookFile = defaults.outputNotebookFile;
-    	      this.state = defaults.state;
-    	      this.updateTime = defaults.updateTime;
+            $ = new ExecutionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder executionTemplate(ExecutionTemplateResponse executionTemplate) {
-            this.executionTemplate = Objects.requireNonNull(executionTemplate);
+            $.executionTemplate = executionTemplate;
             return this;
         }
+
         public Builder jobUri(String jobUri) {
-            this.jobUri = Objects.requireNonNull(jobUri);
+            $.jobUri = jobUri;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder outputNotebookFile(String outputNotebookFile) {
-            this.outputNotebookFile = Objects.requireNonNull(outputNotebookFile);
+            $.outputNotebookFile = outputNotebookFile;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public ExecutionResponse build() {
-            return new ExecutionResponse(createTime, description, displayName, executionTemplate, jobUri, name, outputNotebookFile, state, updateTime);
+        }
+
+        public ExecutionResponse build() {
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.executionTemplate = Objects.requireNonNull($.executionTemplate, "expected parameter 'executionTemplate' to be non-null");
+            $.jobUri = Objects.requireNonNull($.jobUri, "expected parameter 'jobUri' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.outputNotebookFile = Objects.requireNonNull($.outputNotebookFile, "expected parameter 'outputNotebookFile' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

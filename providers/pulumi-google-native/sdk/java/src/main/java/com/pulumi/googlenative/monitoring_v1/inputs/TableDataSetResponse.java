@@ -23,7 +23,7 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="minAlignmentPeriod", required=true)
-      private final String minAlignmentPeriod;
+    private String minAlignmentPeriod;
 
     public String minAlignmentPeriod() {
         return this.minAlignmentPeriod;
@@ -34,7 +34,7 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tableDisplayOptions", required=true)
-      private final TableDisplayOptionsResponse tableDisplayOptions;
+    private TableDisplayOptionsResponse tableDisplayOptions;
 
     public TableDisplayOptionsResponse tableDisplayOptions() {
         return this.tableDisplayOptions;
@@ -45,7 +45,7 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tableTemplate", required=true)
-      private final String tableTemplate;
+    private String tableTemplate;
 
     public String tableTemplate() {
         return this.tableTemplate;
@@ -56,73 +56,66 @@ public final class TableDataSetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="timeSeriesQuery", required=true)
-      private final TimeSeriesQueryResponse timeSeriesQuery;
+    private TimeSeriesQueryResponse timeSeriesQuery;
 
     public TimeSeriesQueryResponse timeSeriesQuery() {
         return this.timeSeriesQuery;
     }
 
-    public TableDataSetResponse(
-        String minAlignmentPeriod,
-        TableDisplayOptionsResponse tableDisplayOptions,
-        String tableTemplate,
-        TimeSeriesQueryResponse timeSeriesQuery) {
-        this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod, "expected parameter 'minAlignmentPeriod' to be non-null");
-        this.tableDisplayOptions = Objects.requireNonNull(tableDisplayOptions, "expected parameter 'tableDisplayOptions' to be non-null");
-        this.tableTemplate = Objects.requireNonNull(tableTemplate, "expected parameter 'tableTemplate' to be non-null");
-        this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
-    }
+    private TableDataSetResponse() {}
 
-    private TableDataSetResponse() {
-        this.minAlignmentPeriod = null;
-        this.tableDisplayOptions = null;
-        this.tableTemplate = null;
-        this.timeSeriesQuery = null;
+    private TableDataSetResponse(TableDataSetResponse $) {
+        this.minAlignmentPeriod = $.minAlignmentPeriod;
+        this.tableDisplayOptions = $.tableDisplayOptions;
+        this.tableTemplate = $.tableTemplate;
+        this.timeSeriesQuery = $.timeSeriesQuery;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableDataSetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String minAlignmentPeriod;
-        private TableDisplayOptionsResponse tableDisplayOptions;
-        private String tableTemplate;
-        private TimeSeriesQueryResponse timeSeriesQuery;
+        private TableDataSetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableDataSetResponse();
         }
 
         public Builder(TableDataSetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minAlignmentPeriod = defaults.minAlignmentPeriod;
-    	      this.tableDisplayOptions = defaults.tableDisplayOptions;
-    	      this.tableTemplate = defaults.tableTemplate;
-    	      this.timeSeriesQuery = defaults.timeSeriesQuery;
+            $ = new TableDataSetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minAlignmentPeriod(String minAlignmentPeriod) {
-            this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
+            $.minAlignmentPeriod = minAlignmentPeriod;
             return this;
         }
+
         public Builder tableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
-            this.tableDisplayOptions = Objects.requireNonNull(tableDisplayOptions);
+            $.tableDisplayOptions = tableDisplayOptions;
             return this;
         }
+
         public Builder tableTemplate(String tableTemplate) {
-            this.tableTemplate = Objects.requireNonNull(tableTemplate);
+            $.tableTemplate = tableTemplate;
             return this;
         }
+
         public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
-            this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
+            $.timeSeriesQuery = timeSeriesQuery;
             return this;
-        }        public TableDataSetResponse build() {
-            return new TableDataSetResponse(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
+        }
+
+        public TableDataSetResponse build() {
+            $.minAlignmentPeriod = Objects.requireNonNull($.minAlignmentPeriod, "expected parameter 'minAlignmentPeriod' to be non-null");
+            $.tableDisplayOptions = Objects.requireNonNull($.tableDisplayOptions, "expected parameter 'tableDisplayOptions' to be non-null");
+            $.tableTemplate = Objects.requireNonNull($.tableTemplate, "expected parameter 'tableTemplate' to be non-null");
+            $.timeSeriesQuery = Objects.requireNonNull($.timeSeriesQuery, "expected parameter 'timeSeriesQuery' to be non-null");
+            return $;
         }
     }
+
 }

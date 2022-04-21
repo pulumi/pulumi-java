@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends
      * 
      */
     @Import(name="queryTerms", required=true)
-      private final List<String> queryTerms;
+    private List<String> queryTerms;
 
     public List<String> queryTerms() {
         return this.queryTerms;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends
      * 
      */
     @Import(name="replacementTerm", required=true)
-      private final String replacementTerm;
+    private String replacementTerm;
 
     public String replacementTerm() {
         return this.replacementTerm;
@@ -44,67 +44,63 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionResponse extends
      * 
      */
     @Import(name="term", required=true)
-      private final String term;
+    private String term;
 
     public String term() {
         return this.term;
     }
 
-    public GoogleCloudRetailV2alphaRuleReplacementActionResponse(
-        List<String> queryTerms,
-        String replacementTerm,
-        String term) {
-        this.queryTerms = Objects.requireNonNull(queryTerms, "expected parameter 'queryTerms' to be non-null");
-        this.replacementTerm = Objects.requireNonNull(replacementTerm, "expected parameter 'replacementTerm' to be non-null");
-        this.term = Objects.requireNonNull(term, "expected parameter 'term' to be non-null");
-    }
+    private GoogleCloudRetailV2alphaRuleReplacementActionResponse() {}
 
-    private GoogleCloudRetailV2alphaRuleReplacementActionResponse() {
-        this.queryTerms = List.of();
-        this.replacementTerm = null;
-        this.term = null;
+    private GoogleCloudRetailV2alphaRuleReplacementActionResponse(GoogleCloudRetailV2alphaRuleReplacementActionResponse $) {
+        this.queryTerms = $.queryTerms;
+        this.replacementTerm = $.replacementTerm;
+        this.term = $.term;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleReplacementActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> queryTerms;
-        private String replacementTerm;
-        private String term;
+        private GoogleCloudRetailV2alphaRuleReplacementActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleReplacementActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleReplacementActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queryTerms = defaults.queryTerms;
-    	      this.replacementTerm = defaults.replacementTerm;
-    	      this.term = defaults.term;
+            $ = new GoogleCloudRetailV2alphaRuleReplacementActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder queryTerms(List<String> queryTerms) {
-            this.queryTerms = Objects.requireNonNull(queryTerms);
+            $.queryTerms = queryTerms;
             return this;
         }
+
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
+
         public Builder replacementTerm(String replacementTerm) {
-            this.replacementTerm = Objects.requireNonNull(replacementTerm);
+            $.replacementTerm = replacementTerm;
             return this;
         }
+
         public Builder term(String term) {
-            this.term = Objects.requireNonNull(term);
+            $.term = term;
             return this;
-        }        public GoogleCloudRetailV2alphaRuleReplacementActionResponse build() {
-            return new GoogleCloudRetailV2alphaRuleReplacementActionResponse(queryTerms, replacementTerm, term);
+        }
+
+        public GoogleCloudRetailV2alphaRuleReplacementActionResponse build() {
+            $.queryTerms = Objects.requireNonNull($.queryTerms, "expected parameter 'queryTerms' to be non-null");
+            $.replacementTerm = Objects.requireNonNull($.replacementTerm, "expected parameter 'replacementTerm' to be non-null");
+            $.term = Objects.requireNonNull($.term, "expected parameter 'term' to be non-null");
+            return $;
         }
     }
+
 }

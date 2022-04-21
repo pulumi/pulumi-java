@@ -5,11 +5,11 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class YumSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="excludes")
-      private final @Nullable Output<List<String>> excludes;
+    private @Nullable Output<List<String>> excludes;
 
-    public Output<List<String>> excludes() {
-        return this.excludes == null ? Codegen.empty() : this.excludes;
+    public Optional<Output<List<String>>> excludes() {
+        return Optional.ofNullable(this.excludes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class YumSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="exclusivePackages")
-      private final @Nullable Output<List<String>> exclusivePackages;
+    private @Nullable Output<List<String>> exclusivePackages;
 
-    public Output<List<String>> exclusivePackages() {
-        return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
+    public Optional<Output<List<String>>> exclusivePackages() {
+        return Optional.ofNullable(this.exclusivePackages);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class YumSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="minimal")
-      private final @Nullable Output<Boolean> minimal;
+    private @Nullable Output<Boolean> minimal;
 
-    public Output<Boolean> minimal() {
-        return this.minimal == null ? Codegen.empty() : this.minimal;
+    public Optional<Output<Boolean>> minimal() {
+        return Optional.ofNullable(this.minimal);
     }
 
     /**
@@ -59,95 +59,86 @@ public final class YumSettingsArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="security")
-      private final @Nullable Output<Boolean> security;
+    private @Nullable Output<Boolean> security;
 
-    public Output<Boolean> security() {
-        return this.security == null ? Codegen.empty() : this.security;
+    public Optional<Output<Boolean>> security() {
+        return Optional.ofNullable(this.security);
     }
 
-    public YumSettingsArgs(
-        @Nullable Output<List<String>> excludes,
-        @Nullable Output<List<String>> exclusivePackages,
-        @Nullable Output<Boolean> minimal,
-        @Nullable Output<Boolean> security) {
-        this.excludes = excludes;
-        this.exclusivePackages = exclusivePackages;
-        this.minimal = minimal;
-        this.security = security;
-    }
+    private YumSettingsArgs() {}
 
-    private YumSettingsArgs() {
-        this.excludes = Codegen.empty();
-        this.exclusivePackages = Codegen.empty();
-        this.minimal = Codegen.empty();
-        this.security = Codegen.empty();
+    private YumSettingsArgs(YumSettingsArgs $) {
+        this.excludes = $.excludes;
+        this.exclusivePackages = $.exclusivePackages;
+        this.minimal = $.minimal;
+        this.security = $.security;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(YumSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> excludes;
-        private @Nullable Output<List<String>> exclusivePackages;
-        private @Nullable Output<Boolean> minimal;
-        private @Nullable Output<Boolean> security;
+        private YumSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new YumSettingsArgs();
         }
 
         public Builder(YumSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludes = defaults.excludes;
-    	      this.exclusivePackages = defaults.exclusivePackages;
-    	      this.minimal = defaults.minimal;
-    	      this.security = defaults.security;
+            $ = new YumSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder excludes(@Nullable Output<List<String>> excludes) {
-            this.excludes = excludes;
+            $.excludes = excludes;
             return this;
         }
-        public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Codegen.ofNullable(excludes);
-            return this;
+
+        public Builder excludes(List<String> excludes) {
+            return excludes(Output.of(excludes));
         }
+
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
+
         public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
-            this.exclusivePackages = exclusivePackages;
+            $.exclusivePackages = exclusivePackages;
             return this;
         }
-        public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Codegen.ofNullable(exclusivePackages);
-            return this;
+
+        public Builder exclusivePackages(List<String> exclusivePackages) {
+            return exclusivePackages(Output.of(exclusivePackages));
         }
+
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
+
         public Builder minimal(@Nullable Output<Boolean> minimal) {
-            this.minimal = minimal;
+            $.minimal = minimal;
             return this;
         }
-        public Builder minimal(@Nullable Boolean minimal) {
-            this.minimal = Codegen.ofNullable(minimal);
-            return this;
+
+        public Builder minimal(Boolean minimal) {
+            return minimal(Output.of(minimal));
         }
+
         public Builder security(@Nullable Output<Boolean> security) {
-            this.security = security;
+            $.security = security;
             return this;
         }
-        public Builder security(@Nullable Boolean security) {
-            this.security = Codegen.ofNullable(security);
-            return this;
-        }        public YumSettingsArgs build() {
-            return new YumSettingsArgs(excludes, exclusivePackages, minimal, security);
+
+        public Builder security(Boolean security) {
+            return security(Output.of(security));
+        }
+
+        public YumSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class VertexAIParametersResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="env", required=true)
-      private final Map<String,String> env;
+    private Map<String,String> env;
 
     public Map<String,String> env() {
         return this.env;
@@ -33,55 +33,52 @@ public final class VertexAIParametersResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
     }
 
-    public VertexAIParametersResponse(
-        Map<String,String> env,
-        String network) {
-        this.env = Objects.requireNonNull(env, "expected parameter 'env' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-    }
+    private VertexAIParametersResponse() {}
 
-    private VertexAIParametersResponse() {
-        this.env = Map.of();
-        this.network = null;
+    private VertexAIParametersResponse(VertexAIParametersResponse $) {
+        this.env = $.env;
+        this.network = $.network;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VertexAIParametersResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> env;
-        private String network;
+        private VertexAIParametersResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VertexAIParametersResponse();
         }
 
         public Builder(VertexAIParametersResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.env = defaults.env;
-    	      this.network = defaults.network;
+            $ = new VertexAIParametersResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder env(Map<String,String> env) {
-            this.env = Objects.requireNonNull(env);
+            $.env = env;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
-        }        public VertexAIParametersResponse build() {
-            return new VertexAIParametersResponse(env, network);
+        }
+
+        public VertexAIParametersResponse build() {
+            $.env = Objects.requireNonNull($.env, "expected parameter 'env' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            return $;
         }
     }
+
 }

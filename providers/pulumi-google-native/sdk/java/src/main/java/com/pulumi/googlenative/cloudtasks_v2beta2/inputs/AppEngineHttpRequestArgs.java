@@ -5,12 +5,12 @@ package com.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudtasks_v2beta2.enums.AppEngineHttpRequestHttpMethod;
 import com.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineRoutingArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="appEngineRouting")
-      private final @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
+    private @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
 
-    public Output<AppEngineRoutingArgs> appEngineRouting() {
-        return this.appEngineRouting == null ? Codegen.empty() : this.appEngineRouting;
+    public Optional<Output<AppEngineRoutingArgs>> appEngineRouting() {
+        return Optional.ofNullable(this.appEngineRouting);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="headers")
-      private final @Nullable Output<Map<String,String>> headers;
+    private @Nullable Output<Map<String,String>> headers;
 
-    public Output<Map<String,String>> headers() {
-        return this.headers == null ? Codegen.empty() : this.headers;
+    public Optional<Output<Map<String,String>>> headers() {
+        return Optional.ofNullable(this.headers);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="httpMethod")
-      private final @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
+    private @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
 
-    public Output<AppEngineHttpRequestHttpMethod> httpMethod() {
-        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
+    public Optional<Output<AppEngineHttpRequestHttpMethod>> httpMethod() {
+        return Optional.ofNullable(this.httpMethod);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="payload")
-      private final @Nullable Output<String> payload;
+    private @Nullable Output<String> payload;
 
-    public Output<String> payload() {
-        return this.payload == null ? Codegen.empty() : this.payload;
+    public Optional<Output<String>> payload() {
+        return Optional.ofNullable(this.payload);
     }
 
     /**
@@ -71,102 +71,88 @@ public final class AppEngineHttpRequestArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="relativeUrl")
-      private final @Nullable Output<String> relativeUrl;
+    private @Nullable Output<String> relativeUrl;
 
-    public Output<String> relativeUrl() {
-        return this.relativeUrl == null ? Codegen.empty() : this.relativeUrl;
+    public Optional<Output<String>> relativeUrl() {
+        return Optional.ofNullable(this.relativeUrl);
     }
 
-    public AppEngineHttpRequestArgs(
-        @Nullable Output<AppEngineRoutingArgs> appEngineRouting,
-        @Nullable Output<Map<String,String>> headers,
-        @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod,
-        @Nullable Output<String> payload,
-        @Nullable Output<String> relativeUrl) {
-        this.appEngineRouting = appEngineRouting;
-        this.headers = headers;
-        this.httpMethod = httpMethod;
-        this.payload = payload;
-        this.relativeUrl = relativeUrl;
-    }
+    private AppEngineHttpRequestArgs() {}
 
-    private AppEngineHttpRequestArgs() {
-        this.appEngineRouting = Codegen.empty();
-        this.headers = Codegen.empty();
-        this.httpMethod = Codegen.empty();
-        this.payload = Codegen.empty();
-        this.relativeUrl = Codegen.empty();
+    private AppEngineHttpRequestArgs(AppEngineHttpRequestArgs $) {
+        this.appEngineRouting = $.appEngineRouting;
+        this.headers = $.headers;
+        this.httpMethod = $.httpMethod;
+        this.payload = $.payload;
+        this.relativeUrl = $.relativeUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AppEngineHttpRequestArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AppEngineRoutingArgs> appEngineRouting;
-        private @Nullable Output<Map<String,String>> headers;
-        private @Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod;
-        private @Nullable Output<String> payload;
-        private @Nullable Output<String> relativeUrl;
+        private AppEngineHttpRequestArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AppEngineHttpRequestArgs();
         }
 
         public Builder(AppEngineHttpRequestArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appEngineRouting = defaults.appEngineRouting;
-    	      this.headers = defaults.headers;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.payload = defaults.payload;
-    	      this.relativeUrl = defaults.relativeUrl;
+            $ = new AppEngineHttpRequestArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appEngineRouting(@Nullable Output<AppEngineRoutingArgs> appEngineRouting) {
-            this.appEngineRouting = appEngineRouting;
+            $.appEngineRouting = appEngineRouting;
             return this;
         }
-        public Builder appEngineRouting(@Nullable AppEngineRoutingArgs appEngineRouting) {
-            this.appEngineRouting = Codegen.ofNullable(appEngineRouting);
-            return this;
+
+        public Builder appEngineRouting(AppEngineRoutingArgs appEngineRouting) {
+            return appEngineRouting(Output.of(appEngineRouting));
         }
+
         public Builder headers(@Nullable Output<Map<String,String>> headers) {
-            this.headers = headers;
+            $.headers = headers;
             return this;
         }
-        public Builder headers(@Nullable Map<String,String> headers) {
-            this.headers = Codegen.ofNullable(headers);
-            return this;
+
+        public Builder headers(Map<String,String> headers) {
+            return headers(Output.of(headers));
         }
+
         public Builder httpMethod(@Nullable Output<AppEngineHttpRequestHttpMethod> httpMethod) {
-            this.httpMethod = httpMethod;
+            $.httpMethod = httpMethod;
             return this;
         }
-        public Builder httpMethod(@Nullable AppEngineHttpRequestHttpMethod httpMethod) {
-            this.httpMethod = Codegen.ofNullable(httpMethod);
-            return this;
+
+        public Builder httpMethod(AppEngineHttpRequestHttpMethod httpMethod) {
+            return httpMethod(Output.of(httpMethod));
         }
+
         public Builder payload(@Nullable Output<String> payload) {
-            this.payload = payload;
+            $.payload = payload;
             return this;
         }
-        public Builder payload(@Nullable String payload) {
-            this.payload = Codegen.ofNullable(payload);
-            return this;
+
+        public Builder payload(String payload) {
+            return payload(Output.of(payload));
         }
+
         public Builder relativeUrl(@Nullable Output<String> relativeUrl) {
-            this.relativeUrl = relativeUrl;
+            $.relativeUrl = relativeUrl;
             return this;
         }
-        public Builder relativeUrl(@Nullable String relativeUrl) {
-            this.relativeUrl = Codegen.ofNullable(relativeUrl);
-            return this;
-        }        public AppEngineHttpRequestArgs build() {
-            return new AppEngineHttpRequestArgs(appEngineRouting, headers, httpMethod, payload, relativeUrl);
+
+        public Builder relativeUrl(String relativeUrl) {
+            return relativeUrl(Output.of(relativeUrl));
+        }
+
+        public AppEngineHttpRequestArgs build() {
+            return $;
         }
     }
+
 }

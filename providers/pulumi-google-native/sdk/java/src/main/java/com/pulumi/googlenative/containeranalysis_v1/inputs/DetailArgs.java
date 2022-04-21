@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedCpeUri", required=true)
-      private final Output<String> affectedCpeUri;
+    private Output<String> affectedCpeUri;
 
     public Output<String> affectedCpeUri() {
         return this.affectedCpeUri;
@@ -37,7 +37,7 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedPackage", required=true)
-      private final Output<String> affectedPackage;
+    private Output<String> affectedPackage;
 
     public Output<String> affectedPackage() {
         return this.affectedPackage;
@@ -48,10 +48,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedVersionEnd")
-      private final @Nullable Output<VersionArgs> affectedVersionEnd;
+    private @Nullable Output<VersionArgs> affectedVersionEnd;
 
-    public Output<VersionArgs> affectedVersionEnd() {
-        return this.affectedVersionEnd == null ? Codegen.empty() : this.affectedVersionEnd;
+    public Optional<Output<VersionArgs>> affectedVersionEnd() {
+        return Optional.ofNullable(this.affectedVersionEnd);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="affectedVersionStart")
-      private final @Nullable Output<VersionArgs> affectedVersionStart;
+    private @Nullable Output<VersionArgs> affectedVersionStart;
 
-    public Output<VersionArgs> affectedVersionStart() {
-        return this.affectedVersionStart == null ? Codegen.empty() : this.affectedVersionStart;
+    public Optional<Output<VersionArgs>> affectedVersionStart() {
+        return Optional.ofNullable(this.affectedVersionStart);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedCpeUri")
-      private final @Nullable Output<String> fixedCpeUri;
+    private @Nullable Output<String> fixedCpeUri;
 
-    public Output<String> fixedCpeUri() {
-        return this.fixedCpeUri == null ? Codegen.empty() : this.fixedCpeUri;
+    public Optional<Output<String>> fixedCpeUri() {
+        return Optional.ofNullable(this.fixedCpeUri);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedPackage")
-      private final @Nullable Output<String> fixedPackage;
+    private @Nullable Output<String> fixedPackage;
 
-    public Output<String> fixedPackage() {
-        return this.fixedPackage == null ? Codegen.empty() : this.fixedPackage;
+    public Optional<Output<String>> fixedPackage() {
+        return Optional.ofNullable(this.fixedPackage);
     }
 
     /**
@@ -103,10 +103,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fixedVersion")
-      private final @Nullable Output<VersionArgs> fixedVersion;
+    private @Nullable Output<VersionArgs> fixedVersion;
 
-    public Output<VersionArgs> fixedVersion() {
-        return this.fixedVersion == null ? Codegen.empty() : this.fixedVersion;
+    public Optional<Output<VersionArgs>> fixedVersion() {
+        return Optional.ofNullable(this.fixedVersion);
     }
 
     /**
@@ -114,10 +114,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="isObsolete")
-      private final @Nullable Output<Boolean> isObsolete;
+    private @Nullable Output<Boolean> isObsolete;
 
-    public Output<Boolean> isObsolete() {
-        return this.isObsolete == null ? Codegen.empty() : this.isObsolete;
+    public Optional<Output<Boolean>> isObsolete() {
+        return Optional.ofNullable(this.isObsolete);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="packageType")
-      private final @Nullable Output<String> packageType;
+    private @Nullable Output<String> packageType;
 
-    public Output<String> packageType() {
-        return this.packageType == null ? Codegen.empty() : this.packageType;
+    public Optional<Output<String>> packageType() {
+        return Optional.ofNullable(this.packageType);
     }
 
     /**
@@ -136,10 +136,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severityName")
-      private final @Nullable Output<String> severityName;
+    private @Nullable Output<String> severityName;
 
-    public Output<String> severityName() {
-        return this.severityName == null ? Codegen.empty() : this.severityName;
+    public Optional<Output<String>> severityName() {
+        return Optional.ofNullable(this.severityName);
     }
 
     /**
@@ -147,10 +147,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -158,10 +158,10 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceUpdateTime")
-      private final @Nullable Output<String> sourceUpdateTime;
+    private @Nullable Output<String> sourceUpdateTime;
 
-    public Output<String> sourceUpdateTime() {
-        return this.sourceUpdateTime == null ? Codegen.empty() : this.sourceUpdateTime;
+    public Optional<Output<String>> sourceUpdateTime() {
+        return Optional.ofNullable(this.sourceUpdateTime);
     }
 
     /**
@@ -169,219 +169,180 @@ public final class DetailArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vendor")
-      private final @Nullable Output<String> vendor;
+    private @Nullable Output<String> vendor;
 
-    public Output<String> vendor() {
-        return this.vendor == null ? Codegen.empty() : this.vendor;
+    public Optional<Output<String>> vendor() {
+        return Optional.ofNullable(this.vendor);
     }
 
-    public DetailArgs(
-        Output<String> affectedCpeUri,
-        Output<String> affectedPackage,
-        @Nullable Output<VersionArgs> affectedVersionEnd,
-        @Nullable Output<VersionArgs> affectedVersionStart,
-        @Nullable Output<String> description,
-        @Nullable Output<String> fixedCpeUri,
-        @Nullable Output<String> fixedPackage,
-        @Nullable Output<VersionArgs> fixedVersion,
-        @Nullable Output<Boolean> isObsolete,
-        @Nullable Output<String> packageType,
-        @Nullable Output<String> severityName,
-        @Nullable Output<String> source,
-        @Nullable Output<String> sourceUpdateTime,
-        @Nullable Output<String> vendor) {
-        this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
-        this.affectedPackage = Objects.requireNonNull(affectedPackage, "expected parameter 'affectedPackage' to be non-null");
-        this.affectedVersionEnd = affectedVersionEnd;
-        this.affectedVersionStart = affectedVersionStart;
-        this.description = description;
-        this.fixedCpeUri = fixedCpeUri;
-        this.fixedPackage = fixedPackage;
-        this.fixedVersion = fixedVersion;
-        this.isObsolete = isObsolete;
-        this.packageType = packageType;
-        this.severityName = severityName;
-        this.source = source;
-        this.sourceUpdateTime = sourceUpdateTime;
-        this.vendor = vendor;
-    }
+    private DetailArgs() {}
 
-    private DetailArgs() {
-        this.affectedCpeUri = Codegen.empty();
-        this.affectedPackage = Codegen.empty();
-        this.affectedVersionEnd = Codegen.empty();
-        this.affectedVersionStart = Codegen.empty();
-        this.description = Codegen.empty();
-        this.fixedCpeUri = Codegen.empty();
-        this.fixedPackage = Codegen.empty();
-        this.fixedVersion = Codegen.empty();
-        this.isObsolete = Codegen.empty();
-        this.packageType = Codegen.empty();
-        this.severityName = Codegen.empty();
-        this.source = Codegen.empty();
-        this.sourceUpdateTime = Codegen.empty();
-        this.vendor = Codegen.empty();
+    private DetailArgs(DetailArgs $) {
+        this.affectedCpeUri = $.affectedCpeUri;
+        this.affectedPackage = $.affectedPackage;
+        this.affectedVersionEnd = $.affectedVersionEnd;
+        this.affectedVersionStart = $.affectedVersionStart;
+        this.description = $.description;
+        this.fixedCpeUri = $.fixedCpeUri;
+        this.fixedPackage = $.fixedPackage;
+        this.fixedVersion = $.fixedVersion;
+        this.isObsolete = $.isObsolete;
+        this.packageType = $.packageType;
+        this.severityName = $.severityName;
+        this.source = $.source;
+        this.sourceUpdateTime = $.sourceUpdateTime;
+        this.vendor = $.vendor;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DetailArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> affectedCpeUri;
-        private Output<String> affectedPackage;
-        private @Nullable Output<VersionArgs> affectedVersionEnd;
-        private @Nullable Output<VersionArgs> affectedVersionStart;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> fixedCpeUri;
-        private @Nullable Output<String> fixedPackage;
-        private @Nullable Output<VersionArgs> fixedVersion;
-        private @Nullable Output<Boolean> isObsolete;
-        private @Nullable Output<String> packageType;
-        private @Nullable Output<String> severityName;
-        private @Nullable Output<String> source;
-        private @Nullable Output<String> sourceUpdateTime;
-        private @Nullable Output<String> vendor;
+        private DetailArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DetailArgs();
         }
 
         public Builder(DetailArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.affectedCpeUri = defaults.affectedCpeUri;
-    	      this.affectedPackage = defaults.affectedPackage;
-    	      this.affectedVersionEnd = defaults.affectedVersionEnd;
-    	      this.affectedVersionStart = defaults.affectedVersionStart;
-    	      this.description = defaults.description;
-    	      this.fixedCpeUri = defaults.fixedCpeUri;
-    	      this.fixedPackage = defaults.fixedPackage;
-    	      this.fixedVersion = defaults.fixedVersion;
-    	      this.isObsolete = defaults.isObsolete;
-    	      this.packageType = defaults.packageType;
-    	      this.severityName = defaults.severityName;
-    	      this.source = defaults.source;
-    	      this.sourceUpdateTime = defaults.sourceUpdateTime;
-    	      this.vendor = defaults.vendor;
+            $ = new DetailArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder affectedCpeUri(Output<String> affectedCpeUri) {
-            this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
+            $.affectedCpeUri = affectedCpeUri;
             return this;
         }
+
         public Builder affectedCpeUri(String affectedCpeUri) {
-            this.affectedCpeUri = Output.of(Objects.requireNonNull(affectedCpeUri));
-            return this;
+            return affectedCpeUri(Output.of(affectedCpeUri));
         }
+
         public Builder affectedPackage(Output<String> affectedPackage) {
-            this.affectedPackage = Objects.requireNonNull(affectedPackage);
+            $.affectedPackage = affectedPackage;
             return this;
         }
+
         public Builder affectedPackage(String affectedPackage) {
-            this.affectedPackage = Output.of(Objects.requireNonNull(affectedPackage));
-            return this;
+            return affectedPackage(Output.of(affectedPackage));
         }
+
         public Builder affectedVersionEnd(@Nullable Output<VersionArgs> affectedVersionEnd) {
-            this.affectedVersionEnd = affectedVersionEnd;
+            $.affectedVersionEnd = affectedVersionEnd;
             return this;
         }
-        public Builder affectedVersionEnd(@Nullable VersionArgs affectedVersionEnd) {
-            this.affectedVersionEnd = Codegen.ofNullable(affectedVersionEnd);
-            return this;
+
+        public Builder affectedVersionEnd(VersionArgs affectedVersionEnd) {
+            return affectedVersionEnd(Output.of(affectedVersionEnd));
         }
+
         public Builder affectedVersionStart(@Nullable Output<VersionArgs> affectedVersionStart) {
-            this.affectedVersionStart = affectedVersionStart;
+            $.affectedVersionStart = affectedVersionStart;
             return this;
         }
-        public Builder affectedVersionStart(@Nullable VersionArgs affectedVersionStart) {
-            this.affectedVersionStart = Codegen.ofNullable(affectedVersionStart);
-            return this;
+
+        public Builder affectedVersionStart(VersionArgs affectedVersionStart) {
+            return affectedVersionStart(Output.of(affectedVersionStart));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder fixedCpeUri(@Nullable Output<String> fixedCpeUri) {
-            this.fixedCpeUri = fixedCpeUri;
+            $.fixedCpeUri = fixedCpeUri;
             return this;
         }
-        public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
-            this.fixedCpeUri = Codegen.ofNullable(fixedCpeUri);
-            return this;
+
+        public Builder fixedCpeUri(String fixedCpeUri) {
+            return fixedCpeUri(Output.of(fixedCpeUri));
         }
+
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
-            this.fixedPackage = fixedPackage;
+            $.fixedPackage = fixedPackage;
             return this;
         }
-        public Builder fixedPackage(@Nullable String fixedPackage) {
-            this.fixedPackage = Codegen.ofNullable(fixedPackage);
-            return this;
+
+        public Builder fixedPackage(String fixedPackage) {
+            return fixedPackage(Output.of(fixedPackage));
         }
+
         public Builder fixedVersion(@Nullable Output<VersionArgs> fixedVersion) {
-            this.fixedVersion = fixedVersion;
+            $.fixedVersion = fixedVersion;
             return this;
         }
-        public Builder fixedVersion(@Nullable VersionArgs fixedVersion) {
-            this.fixedVersion = Codegen.ofNullable(fixedVersion);
-            return this;
+
+        public Builder fixedVersion(VersionArgs fixedVersion) {
+            return fixedVersion(Output.of(fixedVersion));
         }
+
         public Builder isObsolete(@Nullable Output<Boolean> isObsolete) {
-            this.isObsolete = isObsolete;
+            $.isObsolete = isObsolete;
             return this;
         }
-        public Builder isObsolete(@Nullable Boolean isObsolete) {
-            this.isObsolete = Codegen.ofNullable(isObsolete);
-            return this;
+
+        public Builder isObsolete(Boolean isObsolete) {
+            return isObsolete(Output.of(isObsolete));
         }
+
         public Builder packageType(@Nullable Output<String> packageType) {
-            this.packageType = packageType;
+            $.packageType = packageType;
             return this;
         }
-        public Builder packageType(@Nullable String packageType) {
-            this.packageType = Codegen.ofNullable(packageType);
-            return this;
+
+        public Builder packageType(String packageType) {
+            return packageType(Output.of(packageType));
         }
+
         public Builder severityName(@Nullable Output<String> severityName) {
-            this.severityName = severityName;
+            $.severityName = severityName;
             return this;
         }
-        public Builder severityName(@Nullable String severityName) {
-            this.severityName = Codegen.ofNullable(severityName);
-            return this;
+
+        public Builder severityName(String severityName) {
+            return severityName(Output.of(severityName));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder sourceUpdateTime(@Nullable Output<String> sourceUpdateTime) {
-            this.sourceUpdateTime = sourceUpdateTime;
+            $.sourceUpdateTime = sourceUpdateTime;
             return this;
         }
-        public Builder sourceUpdateTime(@Nullable String sourceUpdateTime) {
-            this.sourceUpdateTime = Codegen.ofNullable(sourceUpdateTime);
-            return this;
+
+        public Builder sourceUpdateTime(String sourceUpdateTime) {
+            return sourceUpdateTime(Output.of(sourceUpdateTime));
         }
+
         public Builder vendor(@Nullable Output<String> vendor) {
-            this.vendor = vendor;
+            $.vendor = vendor;
             return this;
         }
-        public Builder vendor(@Nullable String vendor) {
-            this.vendor = Codegen.ofNullable(vendor);
-            return this;
-        }        public DetailArgs build() {
-            return new DetailArgs(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
+
+        public Builder vendor(String vendor) {
+            return vendor(Output.of(vendor));
+        }
+
+        public DetailArgs build() {
+            $.affectedCpeUri = Objects.requireNonNull($.affectedCpeUri, "expected parameter 'affectedCpeUri' to be non-null");
+            $.affectedPackage = Objects.requireNonNull($.affectedPackage, "expected parameter 'affectedPackage' to be non-null");
+            return $;
         }
     }
+
 }

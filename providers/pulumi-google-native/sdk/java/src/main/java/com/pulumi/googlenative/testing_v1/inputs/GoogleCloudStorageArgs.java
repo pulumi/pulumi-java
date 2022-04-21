@@ -5,7 +5,6 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class GoogleCloudStorageArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="gcsPath", required=true)
-      private final Output<String> gcsPath;
+    private Output<String> gcsPath;
 
     public Output<String> gcsPath() {
         return this.gcsPath;
     }
 
-    public GoogleCloudStorageArgs(Output<String> gcsPath) {
-        this.gcsPath = Objects.requireNonNull(gcsPath, "expected parameter 'gcsPath' to be non-null");
-    }
+    private GoogleCloudStorageArgs() {}
 
-    private GoogleCloudStorageArgs() {
-        this.gcsPath = Codegen.empty();
+    private GoogleCloudStorageArgs(GoogleCloudStorageArgs $) {
+        this.gcsPath = $.gcsPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudStorageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> gcsPath;
+        private GoogleCloudStorageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudStorageArgs();
         }
 
         public Builder(GoogleCloudStorageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gcsPath = defaults.gcsPath;
+            $ = new GoogleCloudStorageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gcsPath(Output<String> gcsPath) {
-            this.gcsPath = Objects.requireNonNull(gcsPath);
+            $.gcsPath = gcsPath;
             return this;
         }
+
         public Builder gcsPath(String gcsPath) {
-            this.gcsPath = Output.of(Objects.requireNonNull(gcsPath));
-            return this;
-        }        public GoogleCloudStorageArgs build() {
-            return new GoogleCloudStorageArgs(gcsPath);
+            return gcsPath(Output.of(gcsPath));
+        }
+
+        public GoogleCloudStorageArgs build() {
+            $.gcsPath = Objects.requireNonNull($.gcsPath, "expected parameter 'gcsPath' to be non-null");
+            return $;
         }
     }
+
 }

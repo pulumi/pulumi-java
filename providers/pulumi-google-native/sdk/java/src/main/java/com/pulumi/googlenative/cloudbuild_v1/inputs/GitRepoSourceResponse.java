@@ -21,7 +21,7 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="ref", required=true)
-      private final String ref;
+    private String ref;
 
     public String ref() {
         return this.ref;
@@ -32,7 +32,7 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="repoType", required=true)
-      private final String repoType;
+    private String repoType;
 
     public String repoType() {
         return this.repoType;
@@ -43,64 +43,59 @@ public final class GitRepoSourceResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public GitRepoSourceResponse(
-        String ref,
-        String repoType,
-        String uri) {
-        this.ref = Objects.requireNonNull(ref, "expected parameter 'ref' to be non-null");
-        this.repoType = Objects.requireNonNull(repoType, "expected parameter 'repoType' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private GitRepoSourceResponse() {}
 
-    private GitRepoSourceResponse() {
-        this.ref = null;
-        this.repoType = null;
-        this.uri = null;
+    private GitRepoSourceResponse(GitRepoSourceResponse $) {
+        this.ref = $.ref;
+        this.repoType = $.repoType;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GitRepoSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ref;
-        private String repoType;
-        private String uri;
+        private GitRepoSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GitRepoSourceResponse();
         }
 
         public Builder(GitRepoSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ref = defaults.ref;
-    	      this.repoType = defaults.repoType;
-    	      this.uri = defaults.uri;
+            $ = new GitRepoSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ref(String ref) {
-            this.ref = Objects.requireNonNull(ref);
+            $.ref = ref;
             return this;
         }
+
         public Builder repoType(String repoType) {
-            this.repoType = Objects.requireNonNull(repoType);
+            $.repoType = repoType;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public GitRepoSourceResponse build() {
-            return new GitRepoSourceResponse(ref, repoType, uri);
+        }
+
+        public GitRepoSourceResponse build() {
+            $.ref = Objects.requireNonNull($.ref, "expected parameter 'ref' to be non-null");
+            $.repoType = Objects.requireNonNull($.repoType, "expected parameter 'repoType' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class TelemetryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
-    public TelemetryArgs(@Nullable Output<String> resourceName) {
-        this.resourceName = resourceName;
-    }
+    private TelemetryArgs() {}
 
-    private TelemetryArgs() {
-        this.resourceName = Codegen.empty();
+    private TelemetryArgs(TelemetryArgs $) {
+        this.resourceName = $.resourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TelemetryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceName;
+        private TelemetryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TelemetryArgs();
         }
 
         public Builder(TelemetryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceName = defaults.resourceName;
+            $ = new TelemetryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
-        }        public TelemetryArgs build() {
-            return new TelemetryArgs(resourceName);
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
+        }
+
+        public TelemetryArgs build() {
+            return $;
         }
     }
+
 }

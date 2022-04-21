@@ -24,7 +24,7 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="groupLabels", required=true)
-      private final List<AssignmentGroupLabelResponse> groupLabels;
+    private List<AssignmentGroupLabelResponse> groupLabels;
 
     public List<AssignmentGroupLabelResponse> groupLabels() {
         return this.groupLabels;
@@ -35,7 +35,7 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceNamePrefixes", required=true)
-      private final List<String> instanceNamePrefixes;
+    private List<String> instanceNamePrefixes;
 
     public List<String> instanceNamePrefixes() {
         return this.instanceNamePrefixes;
@@ -46,7 +46,7 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instances", required=true)
-      private final List<String> instances;
+    private List<String> instances;
 
     public List<String> instances() {
         return this.instances;
@@ -57,7 +57,7 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="osTypes", required=true)
-      private final List<AssignmentOsTypeResponse> osTypes;
+    private List<AssignmentOsTypeResponse> osTypes;
 
     public List<AssignmentOsTypeResponse> osTypes() {
         return this.osTypes;
@@ -68,97 +68,93 @@ public final class AssignmentResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zones", required=true)
-      private final List<String> zones;
+    private List<String> zones;
 
     public List<String> zones() {
         return this.zones;
     }
 
-    public AssignmentResponse(
-        List<AssignmentGroupLabelResponse> groupLabels,
-        List<String> instanceNamePrefixes,
-        List<String> instances,
-        List<AssignmentOsTypeResponse> osTypes,
-        List<String> zones) {
-        this.groupLabels = Objects.requireNonNull(groupLabels, "expected parameter 'groupLabels' to be non-null");
-        this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes, "expected parameter 'instanceNamePrefixes' to be non-null");
-        this.instances = Objects.requireNonNull(instances, "expected parameter 'instances' to be non-null");
-        this.osTypes = Objects.requireNonNull(osTypes, "expected parameter 'osTypes' to be non-null");
-        this.zones = Objects.requireNonNull(zones, "expected parameter 'zones' to be non-null");
-    }
+    private AssignmentResponse() {}
 
-    private AssignmentResponse() {
-        this.groupLabels = List.of();
-        this.instanceNamePrefixes = List.of();
-        this.instances = List.of();
-        this.osTypes = List.of();
-        this.zones = List.of();
+    private AssignmentResponse(AssignmentResponse $) {
+        this.groupLabels = $.groupLabels;
+        this.instanceNamePrefixes = $.instanceNamePrefixes;
+        this.instances = $.instances;
+        this.osTypes = $.osTypes;
+        this.zones = $.zones;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AssignmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AssignmentGroupLabelResponse> groupLabels;
-        private List<String> instanceNamePrefixes;
-        private List<String> instances;
-        private List<AssignmentOsTypeResponse> osTypes;
-        private List<String> zones;
+        private AssignmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AssignmentResponse();
         }
 
         public Builder(AssignmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.groupLabels = defaults.groupLabels;
-    	      this.instanceNamePrefixes = defaults.instanceNamePrefixes;
-    	      this.instances = defaults.instances;
-    	      this.osTypes = defaults.osTypes;
-    	      this.zones = defaults.zones;
+            $ = new AssignmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder groupLabels(List<AssignmentGroupLabelResponse> groupLabels) {
-            this.groupLabels = Objects.requireNonNull(groupLabels);
+            $.groupLabels = groupLabels;
             return this;
         }
+
         public Builder groupLabels(AssignmentGroupLabelResponse... groupLabels) {
             return groupLabels(List.of(groupLabels));
         }
+
         public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
-            this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
+            $.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
+
         public Builder instanceNamePrefixes(String... instanceNamePrefixes) {
             return instanceNamePrefixes(List.of(instanceNamePrefixes));
         }
+
         public Builder instances(List<String> instances) {
-            this.instances = Objects.requireNonNull(instances);
+            $.instances = instances;
             return this;
         }
+
         public Builder instances(String... instances) {
             return instances(List.of(instances));
         }
+
         public Builder osTypes(List<AssignmentOsTypeResponse> osTypes) {
-            this.osTypes = Objects.requireNonNull(osTypes);
+            $.osTypes = osTypes;
             return this;
         }
+
         public Builder osTypes(AssignmentOsTypeResponse... osTypes) {
             return osTypes(List.of(osTypes));
         }
+
         public Builder zones(List<String> zones) {
-            this.zones = Objects.requireNonNull(zones);
+            $.zones = zones;
             return this;
         }
+
         public Builder zones(String... zones) {
             return zones(List.of(zones));
-        }        public AssignmentResponse build() {
-            return new AssignmentResponse(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
+        }
+
+        public AssignmentResponse build() {
+            $.groupLabels = Objects.requireNonNull($.groupLabels, "expected parameter 'groupLabels' to be non-null");
+            $.instanceNamePrefixes = Objects.requireNonNull($.instanceNamePrefixes, "expected parameter 'instanceNamePrefixes' to be non-null");
+            $.instances = Objects.requireNonNull($.instances, "expected parameter 'instances' to be non-null");
+            $.osTypes = Objects.requireNonNull($.osTypes, "expected parameter 'osTypes' to be non-null");
+            $.zones = Objects.requireNonNull($.zones, "expected parameter 'zones' to be non-null");
+            return $;
         }
     }
+
 }

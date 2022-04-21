@@ -5,7 +5,6 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.NodeManagementArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.ShieldedInstanceConfigArgs;
 import com.pulumi.googlenative.container_v1beta1.inputs.UpgradeSettingsArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="bootDiskKmsKey")
-      private final @Nullable Output<String> bootDiskKmsKey;
+    private @Nullable Output<String> bootDiskKmsKey;
 
-    public Output<String> bootDiskKmsKey() {
-        return this.bootDiskKmsKey == null ? Codegen.empty() : this.bootDiskKmsKey;
+    public Optional<Output<String>> bootDiskKmsKey() {
+        return Optional.ofNullable(this.bootDiskKmsKey);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="diskSizeGb")
-      private final @Nullable Output<Integer> diskSizeGb;
+    private @Nullable Output<Integer> diskSizeGb;
 
-    public Output<Integer> diskSizeGb() {
-        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
+    public Optional<Output<Integer>> diskSizeGb() {
+        return Optional.ofNullable(this.diskSizeGb);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="diskType")
-      private final @Nullable Output<String> diskType;
+    private @Nullable Output<String> diskType;
 
-    public Output<String> diskType() {
-        return this.diskType == null ? Codegen.empty() : this.diskType;
+    public Optional<Output<String>> diskType() {
+        return Optional.ofNullable(this.diskType);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="imageType")
-      private final @Nullable Output<String> imageType;
+    private @Nullable Output<String> imageType;
 
-    public Output<String> imageType() {
-        return this.imageType == null ? Codegen.empty() : this.imageType;
+    public Optional<Output<String>> imageType() {
+        return Optional.ofNullable(this.imageType);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="management")
-      private final @Nullable Output<NodeManagementArgs> management;
+    private @Nullable Output<NodeManagementArgs> management;
 
-    public Output<NodeManagementArgs> management() {
-        return this.management == null ? Codegen.empty() : this.management;
+    public Optional<Output<NodeManagementArgs>> management() {
+        return Optional.ofNullable(this.management);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="minCpuPlatform")
-      private final @Nullable Output<String> minCpuPlatform;
+    private @Nullable Output<String> minCpuPlatform;
 
-    public Output<String> minCpuPlatform() {
-        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
+    public Optional<Output<String>> minCpuPlatform() {
+        return Optional.ofNullable(this.minCpuPlatform);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="oauthScopes")
-      private final @Nullable Output<List<String>> oauthScopes;
+    private @Nullable Output<List<String>> oauthScopes;
 
-    public Output<List<String>> oauthScopes() {
-        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
+    public Optional<Output<List<String>>> oauthScopes() {
+        return Optional.ofNullable(this.oauthScopes);
     }
 
     /**
@@ -106,10 +106,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -117,10 +117,10 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="shieldedInstanceConfig")
-      private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+    private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
-    public Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
+    public Optional<Output<ShieldedInstanceConfigArgs>> shieldedInstanceConfig() {
+        return Optional.ofNullable(this.shieldedInstanceConfig);
     }
 
     /**
@@ -128,170 +128,142 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends com.pulumi.resou
      * 
      */
     @Import(name="upgradeSettings")
-      private final @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
+    private @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
 
-    public Output<UpgradeSettingsArgs> upgradeSettings() {
-        return this.upgradeSettings == null ? Codegen.empty() : this.upgradeSettings;
+    public Optional<Output<UpgradeSettingsArgs>> upgradeSettings() {
+        return Optional.ofNullable(this.upgradeSettings);
     }
 
-    public AutoprovisioningNodePoolDefaultsArgs(
-        @Nullable Output<String> bootDiskKmsKey,
-        @Nullable Output<Integer> diskSizeGb,
-        @Nullable Output<String> diskType,
-        @Nullable Output<String> imageType,
-        @Nullable Output<NodeManagementArgs> management,
-        @Nullable Output<String> minCpuPlatform,
-        @Nullable Output<List<String>> oauthScopes,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig,
-        @Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
-        this.bootDiskKmsKey = bootDiskKmsKey;
-        this.diskSizeGb = diskSizeGb;
-        this.diskType = diskType;
-        this.imageType = imageType;
-        this.management = management;
-        this.minCpuPlatform = minCpuPlatform;
-        this.oauthScopes = oauthScopes;
-        this.serviceAccount = serviceAccount;
-        this.shieldedInstanceConfig = shieldedInstanceConfig;
-        this.upgradeSettings = upgradeSettings;
-    }
+    private AutoprovisioningNodePoolDefaultsArgs() {}
 
-    private AutoprovisioningNodePoolDefaultsArgs() {
-        this.bootDiskKmsKey = Codegen.empty();
-        this.diskSizeGb = Codegen.empty();
-        this.diskType = Codegen.empty();
-        this.imageType = Codegen.empty();
-        this.management = Codegen.empty();
-        this.minCpuPlatform = Codegen.empty();
-        this.oauthScopes = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.shieldedInstanceConfig = Codegen.empty();
-        this.upgradeSettings = Codegen.empty();
+    private AutoprovisioningNodePoolDefaultsArgs(AutoprovisioningNodePoolDefaultsArgs $) {
+        this.bootDiskKmsKey = $.bootDiskKmsKey;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.imageType = $.imageType;
+        this.management = $.management;
+        this.minCpuPlatform = $.minCpuPlatform;
+        this.oauthScopes = $.oauthScopes;
+        this.serviceAccount = $.serviceAccount;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.upgradeSettings = $.upgradeSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoprovisioningNodePoolDefaultsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bootDiskKmsKey;
-        private @Nullable Output<Integer> diskSizeGb;
-        private @Nullable Output<String> diskType;
-        private @Nullable Output<String> imageType;
-        private @Nullable Output<NodeManagementArgs> management;
-        private @Nullable Output<String> minCpuPlatform;
-        private @Nullable Output<List<String>> oauthScopes;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
-        private @Nullable Output<UpgradeSettingsArgs> upgradeSettings;
+        private AutoprovisioningNodePoolDefaultsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoprovisioningNodePoolDefaultsArgs();
         }
 
         public Builder(AutoprovisioningNodePoolDefaultsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskKmsKey = defaults.bootDiskKmsKey;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.imageType = defaults.imageType;
-    	      this.management = defaults.management;
-    	      this.minCpuPlatform = defaults.minCpuPlatform;
-    	      this.oauthScopes = defaults.oauthScopes;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.upgradeSettings = defaults.upgradeSettings;
+            $ = new AutoprovisioningNodePoolDefaultsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskKmsKey(@Nullable Output<String> bootDiskKmsKey) {
-            this.bootDiskKmsKey = bootDiskKmsKey;
+            $.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
-        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
-            this.bootDiskKmsKey = Codegen.ofNullable(bootDiskKmsKey);
-            return this;
+
+        public Builder bootDiskKmsKey(String bootDiskKmsKey) {
+            return bootDiskKmsKey(Output.of(bootDiskKmsKey));
         }
+
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
-            this.diskSizeGb = diskSizeGb;
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
-        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
-            return this;
+
+        public Builder diskSizeGb(Integer diskSizeGb) {
+            return diskSizeGb(Output.of(diskSizeGb));
         }
+
         public Builder diskType(@Nullable Output<String> diskType) {
-            this.diskType = diskType;
+            $.diskType = diskType;
             return this;
         }
-        public Builder diskType(@Nullable String diskType) {
-            this.diskType = Codegen.ofNullable(diskType);
-            return this;
+
+        public Builder diskType(String diskType) {
+            return diskType(Output.of(diskType));
         }
+
         public Builder imageType(@Nullable Output<String> imageType) {
-            this.imageType = imageType;
+            $.imageType = imageType;
             return this;
         }
-        public Builder imageType(@Nullable String imageType) {
-            this.imageType = Codegen.ofNullable(imageType);
-            return this;
+
+        public Builder imageType(String imageType) {
+            return imageType(Output.of(imageType));
         }
+
         public Builder management(@Nullable Output<NodeManagementArgs> management) {
-            this.management = management;
+            $.management = management;
             return this;
         }
-        public Builder management(@Nullable NodeManagementArgs management) {
-            this.management = Codegen.ofNullable(management);
-            return this;
+
+        public Builder management(NodeManagementArgs management) {
+            return management(Output.of(management));
         }
+
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
-            this.minCpuPlatform = minCpuPlatform;
+            $.minCpuPlatform = minCpuPlatform;
             return this;
         }
-        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
-            return this;
+
+        public Builder minCpuPlatform(String minCpuPlatform) {
+            return minCpuPlatform(Output.of(minCpuPlatform));
         }
+
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
-            this.oauthScopes = oauthScopes;
+            $.oauthScopes = oauthScopes;
             return this;
         }
-        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Codegen.ofNullable(oauthScopes);
-            return this;
+
+        public Builder oauthScopes(List<String> oauthScopes) {
+            return oauthScopes(Output.of(oauthScopes));
         }
+
         public Builder oauthScopes(String... oauthScopes) {
             return oauthScopes(List.of(oauthScopes));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder shieldedInstanceConfig(@Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = shieldedInstanceConfig;
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
-        public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
-            return this;
+
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigArgs shieldedInstanceConfig) {
+            return shieldedInstanceConfig(Output.of(shieldedInstanceConfig));
         }
+
         public Builder upgradeSettings(@Nullable Output<UpgradeSettingsArgs> upgradeSettings) {
-            this.upgradeSettings = upgradeSettings;
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
-        public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
-            this.upgradeSettings = Codegen.ofNullable(upgradeSettings);
-            return this;
-        }        public AutoprovisioningNodePoolDefaultsArgs build() {
-            return new AutoprovisioningNodePoolDefaultsArgs(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
+
+        public Builder upgradeSettings(UpgradeSettingsArgs upgradeSettings) {
+            return upgradeSettings(Output.of(upgradeSettings));
+        }
+
+        public AutoprovisioningNodePoolDefaultsArgs build() {
+            return $;
         }
     }
+
 }

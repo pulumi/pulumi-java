@@ -22,48 +22,49 @@ public final class TableDisplayOptionsResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="shownColumns", required=true)
-      private final List<String> shownColumns;
+    private List<String> shownColumns;
 
     public List<String> shownColumns() {
         return this.shownColumns;
     }
 
-    public TableDisplayOptionsResponse(List<String> shownColumns) {
-        this.shownColumns = Objects.requireNonNull(shownColumns, "expected parameter 'shownColumns' to be non-null");
-    }
+    private TableDisplayOptionsResponse() {}
 
-    private TableDisplayOptionsResponse() {
-        this.shownColumns = List.of();
+    private TableDisplayOptionsResponse(TableDisplayOptionsResponse $) {
+        this.shownColumns = $.shownColumns;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TableDisplayOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> shownColumns;
+        private TableDisplayOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TableDisplayOptionsResponse();
         }
 
         public Builder(TableDisplayOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.shownColumns = defaults.shownColumns;
+            $ = new TableDisplayOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder shownColumns(List<String> shownColumns) {
-            this.shownColumns = Objects.requireNonNull(shownColumns);
+            $.shownColumns = shownColumns;
             return this;
         }
+
         public Builder shownColumns(String... shownColumns) {
             return shownColumns(List.of(shownColumns));
-        }        public TableDisplayOptionsResponse build() {
-            return new TableDisplayOptionsResponse(shownColumns);
+        }
+
+        public TableDisplayOptionsResponse build() {
+            $.shownColumns = Objects.requireNonNull($.shownColumns, "expected parameter 'shownColumns' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.testing_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,7 +26,7 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="appIpa", required=true)
-      private final Output<FileReferenceArgs> appIpa;
+    private Output<FileReferenceArgs> appIpa;
 
     public Output<FileReferenceArgs> appIpa() {
         return this.appIpa;
@@ -37,66 +37,63 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scenarios")
-      private final @Nullable Output<List<Integer>> scenarios;
+    private @Nullable Output<List<Integer>> scenarios;
 
-    public Output<List<Integer>> scenarios() {
-        return this.scenarios == null ? Codegen.empty() : this.scenarios;
+    public Optional<Output<List<Integer>>> scenarios() {
+        return Optional.ofNullable(this.scenarios);
     }
 
-    public IosTestLoopArgs(
-        Output<FileReferenceArgs> appIpa,
-        @Nullable Output<List<Integer>> scenarios) {
-        this.appIpa = Objects.requireNonNull(appIpa, "expected parameter 'appIpa' to be non-null");
-        this.scenarios = scenarios;
-    }
+    private IosTestLoopArgs() {}
 
-    private IosTestLoopArgs() {
-        this.appIpa = Codegen.empty();
-        this.scenarios = Codegen.empty();
+    private IosTestLoopArgs(IosTestLoopArgs $) {
+        this.appIpa = $.appIpa;
+        this.scenarios = $.scenarios;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestLoopArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<FileReferenceArgs> appIpa;
-        private @Nullable Output<List<Integer>> scenarios;
+        private IosTestLoopArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestLoopArgs();
         }
 
         public Builder(IosTestLoopArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appIpa = defaults.appIpa;
-    	      this.scenarios = defaults.scenarios;
+            $ = new IosTestLoopArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appIpa(Output<FileReferenceArgs> appIpa) {
-            this.appIpa = Objects.requireNonNull(appIpa);
+            $.appIpa = appIpa;
             return this;
         }
+
         public Builder appIpa(FileReferenceArgs appIpa) {
-            this.appIpa = Output.of(Objects.requireNonNull(appIpa));
-            return this;
+            return appIpa(Output.of(appIpa));
         }
+
         public Builder scenarios(@Nullable Output<List<Integer>> scenarios) {
-            this.scenarios = scenarios;
+            $.scenarios = scenarios;
             return this;
         }
-        public Builder scenarios(@Nullable List<Integer> scenarios) {
-            this.scenarios = Codegen.ofNullable(scenarios);
-            return this;
+
+        public Builder scenarios(List<Integer> scenarios) {
+            return scenarios(Output.of(scenarios));
         }
+
         public Builder scenarios(Integer... scenarios) {
             return scenarios(List.of(scenarios));
-        }        public IosTestLoopArgs build() {
-            return new IosTestLoopArgs(appIpa, scenarios);
+        }
+
+        public IosTestLoopArgs build() {
+            $.appIpa = Objects.requireNonNull($.appIpa, "expected parameter 'appIpa' to be non-null");
+            return $;
         }
     }
+
 }

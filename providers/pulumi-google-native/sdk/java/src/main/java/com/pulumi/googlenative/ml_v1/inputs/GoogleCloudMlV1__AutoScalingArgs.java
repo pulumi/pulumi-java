@@ -5,11 +5,11 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MetricSpecArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="maxNodes")
-      private final @Nullable Output<Integer> maxNodes;
+    private @Nullable Output<Integer> maxNodes;
 
-    public Output<Integer> maxNodes() {
-        return this.maxNodes == null ? Codegen.empty() : this.maxNodes;
+    public Optional<Output<Integer>> maxNodes() {
+        return Optional.ofNullable(this.maxNodes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="metrics")
-      private final @Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics;
+    private @Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics;
 
-    public Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics() {
-        return this.metrics == null ? Codegen.empty() : this.metrics;
+    public Optional<Output<List<GoogleCloudMlV1__MetricSpecArgs>>> metrics() {
+        return Optional.ofNullable(this.metrics);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class GoogleCloudMlV1__AutoScalingArgs extends com.pulumi.resources
      * 
      */
     @Import(name="minNodes")
-      private final @Nullable Output<Integer> minNodes;
+    private @Nullable Output<Integer> minNodes;
 
-    public Output<Integer> minNodes() {
-        return this.minNodes == null ? Codegen.empty() : this.minNodes;
+    public Optional<Output<Integer>> minNodes() {
+        return Optional.ofNullable(this.minNodes);
     }
 
-    public GoogleCloudMlV1__AutoScalingArgs(
-        @Nullable Output<Integer> maxNodes,
-        @Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics,
-        @Nullable Output<Integer> minNodes) {
-        this.maxNodes = maxNodes;
-        this.metrics = metrics;
-        this.minNodes = minNodes;
-    }
+    private GoogleCloudMlV1__AutoScalingArgs() {}
 
-    private GoogleCloudMlV1__AutoScalingArgs() {
-        this.maxNodes = Codegen.empty();
-        this.metrics = Codegen.empty();
-        this.minNodes = Codegen.empty();
+    private GoogleCloudMlV1__AutoScalingArgs(GoogleCloudMlV1__AutoScalingArgs $) {
+        this.maxNodes = $.maxNodes;
+        this.metrics = $.metrics;
+        this.minNodes = $.minNodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__AutoScalingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> maxNodes;
-        private @Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics;
-        private @Nullable Output<Integer> minNodes;
+        private GoogleCloudMlV1__AutoScalingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__AutoScalingArgs();
         }
 
         public Builder(GoogleCloudMlV1__AutoScalingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxNodes = defaults.maxNodes;
-    	      this.metrics = defaults.metrics;
-    	      this.minNodes = defaults.minNodes;
+            $ = new GoogleCloudMlV1__AutoScalingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxNodes(@Nullable Output<Integer> maxNodes) {
-            this.maxNodes = maxNodes;
+            $.maxNodes = maxNodes;
             return this;
         }
-        public Builder maxNodes(@Nullable Integer maxNodes) {
-            this.maxNodes = Codegen.ofNullable(maxNodes);
-            return this;
+
+        public Builder maxNodes(Integer maxNodes) {
+            return maxNodes(Output.of(maxNodes));
         }
+
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1__MetricSpecArgs>> metrics) {
-            this.metrics = metrics;
+            $.metrics = metrics;
             return this;
         }
-        public Builder metrics(@Nullable List<GoogleCloudMlV1__MetricSpecArgs> metrics) {
-            this.metrics = Codegen.ofNullable(metrics);
-            return this;
+
+        public Builder metrics(List<GoogleCloudMlV1__MetricSpecArgs> metrics) {
+            return metrics(Output.of(metrics));
         }
+
         public Builder metrics(GoogleCloudMlV1__MetricSpecArgs... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder minNodes(@Nullable Output<Integer> minNodes) {
-            this.minNodes = minNodes;
+            $.minNodes = minNodes;
             return this;
         }
-        public Builder minNodes(@Nullable Integer minNodes) {
-            this.minNodes = Codegen.ofNullable(minNodes);
-            return this;
-        }        public GoogleCloudMlV1__AutoScalingArgs build() {
-            return new GoogleCloudMlV1__AutoScalingArgs(maxNodes, metrics, minNodes);
+
+        public Builder minNodes(Integer minNodes) {
+            return minNodes(Output.of(minNodes));
+        }
+
+        public GoogleCloudMlV1__AutoScalingArgs build() {
+            return $;
         }
     }
+
 }

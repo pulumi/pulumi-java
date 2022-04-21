@@ -24,7 +24,7 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="documentationRootUrl", required=true)
-      private final String documentationRootUrl;
+    private String documentationRootUrl;
 
     public String documentationRootUrl() {
         return this.documentationRootUrl;
@@ -35,7 +35,7 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="overview", required=true)
-      private final String overview;
+    private String overview;
 
     public String overview() {
         return this.overview;
@@ -46,7 +46,7 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="pages", required=true)
-      private final List<PageResponse> pages;
+    private List<PageResponse> pages;
 
     public List<PageResponse> pages() {
         return this.pages;
@@ -57,7 +57,7 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="rules", required=true)
-      private final List<DocumentationRuleResponse> rules;
+    private List<DocumentationRuleResponse> rules;
 
     public List<DocumentationRuleResponse> rules() {
         return this.rules;
@@ -68,7 +68,7 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="serviceRootUrl", required=true)
-      private final String serviceRootUrl;
+    private String serviceRootUrl;
 
     public String serviceRootUrl() {
         return this.serviceRootUrl;
@@ -79,97 +79,88 @@ public final class DocumentationResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="summary", required=true)
-      private final String summary;
+    private String summary;
 
     public String summary() {
         return this.summary;
     }
 
-    public DocumentationResponse(
-        String documentationRootUrl,
-        String overview,
-        List<PageResponse> pages,
-        List<DocumentationRuleResponse> rules,
-        String serviceRootUrl,
-        String summary) {
-        this.documentationRootUrl = Objects.requireNonNull(documentationRootUrl, "expected parameter 'documentationRootUrl' to be non-null");
-        this.overview = Objects.requireNonNull(overview, "expected parameter 'overview' to be non-null");
-        this.pages = Objects.requireNonNull(pages, "expected parameter 'pages' to be non-null");
-        this.rules = Objects.requireNonNull(rules, "expected parameter 'rules' to be non-null");
-        this.serviceRootUrl = Objects.requireNonNull(serviceRootUrl, "expected parameter 'serviceRootUrl' to be non-null");
-        this.summary = Objects.requireNonNull(summary, "expected parameter 'summary' to be non-null");
-    }
+    private DocumentationResponse() {}
 
-    private DocumentationResponse() {
-        this.documentationRootUrl = null;
-        this.overview = null;
-        this.pages = List.of();
-        this.rules = List.of();
-        this.serviceRootUrl = null;
-        this.summary = null;
+    private DocumentationResponse(DocumentationResponse $) {
+        this.documentationRootUrl = $.documentationRootUrl;
+        this.overview = $.overview;
+        this.pages = $.pages;
+        this.rules = $.rules;
+        this.serviceRootUrl = $.serviceRootUrl;
+        this.summary = $.summary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String documentationRootUrl;
-        private String overview;
-        private List<PageResponse> pages;
-        private List<DocumentationRuleResponse> rules;
-        private String serviceRootUrl;
-        private String summary;
+        private DocumentationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationResponse();
         }
 
         public Builder(DocumentationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.documentationRootUrl = defaults.documentationRootUrl;
-    	      this.overview = defaults.overview;
-    	      this.pages = defaults.pages;
-    	      this.rules = defaults.rules;
-    	      this.serviceRootUrl = defaults.serviceRootUrl;
-    	      this.summary = defaults.summary;
+            $ = new DocumentationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder documentationRootUrl(String documentationRootUrl) {
-            this.documentationRootUrl = Objects.requireNonNull(documentationRootUrl);
+            $.documentationRootUrl = documentationRootUrl;
             return this;
         }
+
         public Builder overview(String overview) {
-            this.overview = Objects.requireNonNull(overview);
+            $.overview = overview;
             return this;
         }
+
         public Builder pages(List<PageResponse> pages) {
-            this.pages = Objects.requireNonNull(pages);
+            $.pages = pages;
             return this;
         }
+
         public Builder pages(PageResponse... pages) {
             return pages(List.of(pages));
         }
+
         public Builder rules(List<DocumentationRuleResponse> rules) {
-            this.rules = Objects.requireNonNull(rules);
+            $.rules = rules;
             return this;
         }
+
         public Builder rules(DocumentationRuleResponse... rules) {
             return rules(List.of(rules));
         }
+
         public Builder serviceRootUrl(String serviceRootUrl) {
-            this.serviceRootUrl = Objects.requireNonNull(serviceRootUrl);
+            $.serviceRootUrl = serviceRootUrl;
             return this;
         }
+
         public Builder summary(String summary) {
-            this.summary = Objects.requireNonNull(summary);
+            $.summary = summary;
             return this;
-        }        public DocumentationResponse build() {
-            return new DocumentationResponse(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);
+        }
+
+        public DocumentationResponse build() {
+            $.documentationRootUrl = Objects.requireNonNull($.documentationRootUrl, "expected parameter 'documentationRootUrl' to be non-null");
+            $.overview = Objects.requireNonNull($.overview, "expected parameter 'overview' to be non-null");
+            $.pages = Objects.requireNonNull($.pages, "expected parameter 'pages' to be non-null");
+            $.rules = Objects.requireNonNull($.rules, "expected parameter 'rules' to be non-null");
+            $.serviceRootUrl = Objects.requireNonNull($.serviceRootUrl, "expected parameter 'serviceRootUrl' to be non-null");
+            $.summary = Objects.requireNonNull($.summary, "expected parameter 'summary' to be non-null");
+            return $;
         }
     }
+
 }

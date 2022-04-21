@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,49 +21,48 @@ public final class ByProductsArgs extends com.pulumi.resources.ResourceArgs {
     public static final ByProductsArgs Empty = new ByProductsArgs();
 
     @Import(name="customValues")
-      private final @Nullable Output<Map<String,String>> customValues;
+    private @Nullable Output<Map<String,String>> customValues;
 
-    public Output<Map<String,String>> customValues() {
-        return this.customValues == null ? Codegen.empty() : this.customValues;
+    public Optional<Output<Map<String,String>>> customValues() {
+        return Optional.ofNullable(this.customValues);
     }
 
-    public ByProductsArgs(@Nullable Output<Map<String,String>> customValues) {
-        this.customValues = customValues;
-    }
+    private ByProductsArgs() {}
 
-    private ByProductsArgs() {
-        this.customValues = Codegen.empty();
+    private ByProductsArgs(ByProductsArgs $) {
+        this.customValues = $.customValues;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ByProductsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> customValues;
+        private ByProductsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ByProductsArgs();
         }
 
         public Builder(ByProductsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customValues = defaults.customValues;
+            $ = new ByProductsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder customValues(@Nullable Output<Map<String,String>> customValues) {
-            this.customValues = customValues;
+            $.customValues = customValues;
             return this;
         }
-        public Builder customValues(@Nullable Map<String,String> customValues) {
-            this.customValues = Codegen.ofNullable(customValues);
-            return this;
-        }        public ByProductsArgs build() {
-            return new ByProductsArgs(customValues);
+
+        public Builder customValues(Map<String,String> customValues) {
+            return customValues(Output.of(customValues));
+        }
+
+        public ByProductsArgs build() {
+            return $;
         }
     }
+
 }

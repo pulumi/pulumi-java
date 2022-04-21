@@ -23,7 +23,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeHost", required=true)
-      private final Boolean includeHost;
+    private Boolean includeHost;
 
     public Boolean includeHost() {
         return this.includeHost;
@@ -34,7 +34,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeHttpHeaders", required=true)
-      private final List<String> includeHttpHeaders;
+    private List<String> includeHttpHeaders;
 
     public List<String> includeHttpHeaders() {
         return this.includeHttpHeaders;
@@ -45,7 +45,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeNamedCookies", required=true)
-      private final List<String> includeNamedCookies;
+    private List<String> includeNamedCookies;
 
     public List<String> includeNamedCookies() {
         return this.includeNamedCookies;
@@ -56,7 +56,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeProtocol", required=true)
-      private final Boolean includeProtocol;
+    private Boolean includeProtocol;
 
     public Boolean includeProtocol() {
         return this.includeProtocol;
@@ -67,7 +67,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="includeQueryString", required=true)
-      private final Boolean includeQueryString;
+    private Boolean includeQueryString;
 
     public Boolean includeQueryString() {
         return this.includeQueryString;
@@ -78,7 +78,7 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryStringBlacklist", required=true)
-      private final List<String> queryStringBlacklist;
+    private List<String> queryStringBlacklist;
 
     public List<String> queryStringBlacklist() {
         return this.queryStringBlacklist;
@@ -89,112 +89,103 @@ public final class CacheKeyPolicyResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="queryStringWhitelist", required=true)
-      private final List<String> queryStringWhitelist;
+    private List<String> queryStringWhitelist;
 
     public List<String> queryStringWhitelist() {
         return this.queryStringWhitelist;
     }
 
-    public CacheKeyPolicyResponse(
-        Boolean includeHost,
-        List<String> includeHttpHeaders,
-        List<String> includeNamedCookies,
-        Boolean includeProtocol,
-        Boolean includeQueryString,
-        List<String> queryStringBlacklist,
-        List<String> queryStringWhitelist) {
-        this.includeHost = Objects.requireNonNull(includeHost, "expected parameter 'includeHost' to be non-null");
-        this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders, "expected parameter 'includeHttpHeaders' to be non-null");
-        this.includeNamedCookies = Objects.requireNonNull(includeNamedCookies, "expected parameter 'includeNamedCookies' to be non-null");
-        this.includeProtocol = Objects.requireNonNull(includeProtocol, "expected parameter 'includeProtocol' to be non-null");
-        this.includeQueryString = Objects.requireNonNull(includeQueryString, "expected parameter 'includeQueryString' to be non-null");
-        this.queryStringBlacklist = Objects.requireNonNull(queryStringBlacklist, "expected parameter 'queryStringBlacklist' to be non-null");
-        this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist, "expected parameter 'queryStringWhitelist' to be non-null");
-    }
+    private CacheKeyPolicyResponse() {}
 
-    private CacheKeyPolicyResponse() {
-        this.includeHost = null;
-        this.includeHttpHeaders = List.of();
-        this.includeNamedCookies = List.of();
-        this.includeProtocol = null;
-        this.includeQueryString = null;
-        this.queryStringBlacklist = List.of();
-        this.queryStringWhitelist = List.of();
+    private CacheKeyPolicyResponse(CacheKeyPolicyResponse $) {
+        this.includeHost = $.includeHost;
+        this.includeHttpHeaders = $.includeHttpHeaders;
+        this.includeNamedCookies = $.includeNamedCookies;
+        this.includeProtocol = $.includeProtocol;
+        this.includeQueryString = $.includeQueryString;
+        this.queryStringBlacklist = $.queryStringBlacklist;
+        this.queryStringWhitelist = $.queryStringWhitelist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CacheKeyPolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean includeHost;
-        private List<String> includeHttpHeaders;
-        private List<String> includeNamedCookies;
-        private Boolean includeProtocol;
-        private Boolean includeQueryString;
-        private List<String> queryStringBlacklist;
-        private List<String> queryStringWhitelist;
+        private CacheKeyPolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CacheKeyPolicyResponse();
         }
 
         public Builder(CacheKeyPolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.includeHost = defaults.includeHost;
-    	      this.includeHttpHeaders = defaults.includeHttpHeaders;
-    	      this.includeNamedCookies = defaults.includeNamedCookies;
-    	      this.includeProtocol = defaults.includeProtocol;
-    	      this.includeQueryString = defaults.includeQueryString;
-    	      this.queryStringBlacklist = defaults.queryStringBlacklist;
-    	      this.queryStringWhitelist = defaults.queryStringWhitelist;
+            $ = new CacheKeyPolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder includeHost(Boolean includeHost) {
-            this.includeHost = Objects.requireNonNull(includeHost);
+            $.includeHost = includeHost;
             return this;
         }
+
         public Builder includeHttpHeaders(List<String> includeHttpHeaders) {
-            this.includeHttpHeaders = Objects.requireNonNull(includeHttpHeaders);
+            $.includeHttpHeaders = includeHttpHeaders;
             return this;
         }
+
         public Builder includeHttpHeaders(String... includeHttpHeaders) {
             return includeHttpHeaders(List.of(includeHttpHeaders));
         }
+
         public Builder includeNamedCookies(List<String> includeNamedCookies) {
-            this.includeNamedCookies = Objects.requireNonNull(includeNamedCookies);
+            $.includeNamedCookies = includeNamedCookies;
             return this;
         }
+
         public Builder includeNamedCookies(String... includeNamedCookies) {
             return includeNamedCookies(List.of(includeNamedCookies));
         }
+
         public Builder includeProtocol(Boolean includeProtocol) {
-            this.includeProtocol = Objects.requireNonNull(includeProtocol);
+            $.includeProtocol = includeProtocol;
             return this;
         }
+
         public Builder includeQueryString(Boolean includeQueryString) {
-            this.includeQueryString = Objects.requireNonNull(includeQueryString);
+            $.includeQueryString = includeQueryString;
             return this;
         }
+
         public Builder queryStringBlacklist(List<String> queryStringBlacklist) {
-            this.queryStringBlacklist = Objects.requireNonNull(queryStringBlacklist);
+            $.queryStringBlacklist = queryStringBlacklist;
             return this;
         }
+
         public Builder queryStringBlacklist(String... queryStringBlacklist) {
             return queryStringBlacklist(List.of(queryStringBlacklist));
         }
+
         public Builder queryStringWhitelist(List<String> queryStringWhitelist) {
-            this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
+            $.queryStringWhitelist = queryStringWhitelist;
             return this;
         }
+
         public Builder queryStringWhitelist(String... queryStringWhitelist) {
             return queryStringWhitelist(List.of(queryStringWhitelist));
-        }        public CacheKeyPolicyResponse build() {
-            return new CacheKeyPolicyResponse(includeHost, includeHttpHeaders, includeNamedCookies, includeProtocol, includeQueryString, queryStringBlacklist, queryStringWhitelist);
+        }
+
+        public CacheKeyPolicyResponse build() {
+            $.includeHost = Objects.requireNonNull($.includeHost, "expected parameter 'includeHost' to be non-null");
+            $.includeHttpHeaders = Objects.requireNonNull($.includeHttpHeaders, "expected parameter 'includeHttpHeaders' to be non-null");
+            $.includeNamedCookies = Objects.requireNonNull($.includeNamedCookies, "expected parameter 'includeNamedCookies' to be non-null");
+            $.includeProtocol = Objects.requireNonNull($.includeProtocol, "expected parameter 'includeProtocol' to be non-null");
+            $.includeQueryString = Objects.requireNonNull($.includeQueryString, "expected parameter 'includeQueryString' to be non-null");
+            $.queryStringBlacklist = Objects.requireNonNull($.queryStringBlacklist, "expected parameter 'queryStringBlacklist' to be non-null");
+            $.queryStringWhitelist = Objects.requireNonNull($.queryStringWhitelist, "expected parameter 'queryStringWhitelist' to be non-null");
+            return $;
         }
     }
+
 }

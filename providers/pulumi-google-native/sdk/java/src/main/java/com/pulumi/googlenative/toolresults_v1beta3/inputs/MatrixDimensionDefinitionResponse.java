@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class MatrixDimensionDefinitionResponse extends com.pulumi.resource
 
     public static final MatrixDimensionDefinitionResponse Empty = new MatrixDimensionDefinitionResponse();
 
-    public MatrixDimensionDefinitionResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(MatrixDimensionDefinitionResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private MatrixDimensionDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(MatrixDimensionDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new MatrixDimensionDefinitionResponse();
         }
         public MatrixDimensionDefinitionResponse build() {
-            return new MatrixDimensionDefinitionResponse();
+            return $;
         }
     }
+
 }

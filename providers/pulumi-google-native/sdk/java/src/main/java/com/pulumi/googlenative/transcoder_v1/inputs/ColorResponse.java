@@ -21,7 +21,7 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="brightness", required=true)
-      private final Double brightness;
+    private Double brightness;
 
     public Double brightness() {
         return this.brightness;
@@ -32,7 +32,7 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="contrast", required=true)
-      private final Double contrast;
+    private Double contrast;
 
     public Double contrast() {
         return this.contrast;
@@ -43,64 +43,59 @@ public final class ColorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="saturation", required=true)
-      private final Double saturation;
+    private Double saturation;
 
     public Double saturation() {
         return this.saturation;
     }
 
-    public ColorResponse(
-        Double brightness,
-        Double contrast,
-        Double saturation) {
-        this.brightness = Objects.requireNonNull(brightness, "expected parameter 'brightness' to be non-null");
-        this.contrast = Objects.requireNonNull(contrast, "expected parameter 'contrast' to be non-null");
-        this.saturation = Objects.requireNonNull(saturation, "expected parameter 'saturation' to be non-null");
-    }
+    private ColorResponse() {}
 
-    private ColorResponse() {
-        this.brightness = null;
-        this.contrast = null;
-        this.saturation = null;
+    private ColorResponse(ColorResponse $) {
+        this.brightness = $.brightness;
+        this.contrast = $.contrast;
+        this.saturation = $.saturation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ColorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double brightness;
-        private Double contrast;
-        private Double saturation;
+        private ColorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ColorResponse();
         }
 
         public Builder(ColorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.brightness = defaults.brightness;
-    	      this.contrast = defaults.contrast;
-    	      this.saturation = defaults.saturation;
+            $ = new ColorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder brightness(Double brightness) {
-            this.brightness = Objects.requireNonNull(brightness);
+            $.brightness = brightness;
             return this;
         }
+
         public Builder contrast(Double contrast) {
-            this.contrast = Objects.requireNonNull(contrast);
+            $.contrast = contrast;
             return this;
         }
+
         public Builder saturation(Double saturation) {
-            this.saturation = Objects.requireNonNull(saturation);
+            $.saturation = saturation;
             return this;
-        }        public ColorResponse build() {
-            return new ColorResponse(brightness, contrast, saturation);
+        }
+
+        public ColorResponse build() {
+            $.brightness = Objects.requireNonNull($.brightness, "expected parameter 'brightness' to be non-null");
+            $.contrast = Objects.requireNonNull($.contrast, "expected parameter 'contrast' to be non-null");
+            $.saturation = Objects.requireNonNull($.saturation, "expected parameter 'saturation' to be non-null");
+            return $;
         }
     }
+
 }

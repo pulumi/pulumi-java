@@ -24,7 +24,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="labels", required=true)
-      private final List<LabelDescriptorResponse> labels;
+    private List<LabelDescriptorResponse> labels;
 
     public List<LabelDescriptorResponse> labels() {
         return this.labels;
@@ -57,7 +57,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="launchStage", required=true)
-      private final String launchStage;
+    private String launchStage;
 
     public String launchStage() {
         return this.launchStage;
@@ -68,7 +68,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metadata", required=true)
-      private final MetricDescriptorMetadataResponse metadata;
+    private MetricDescriptorMetadataResponse metadata;
 
     public MetricDescriptorMetadataResponse metadata() {
         return this.metadata;
@@ -79,7 +79,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metricKind", required=true)
-      private final String metricKind;
+    private String metricKind;
 
     public String metricKind() {
         return this.metricKind;
@@ -90,7 +90,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="monitoredResourceTypes", required=true)
-      private final List<String> monitoredResourceTypes;
+    private List<String> monitoredResourceTypes;
 
     public List<String> monitoredResourceTypes() {
         return this.monitoredResourceTypes;
@@ -101,7 +101,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -112,7 +112,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -123,7 +123,7 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
@@ -134,142 +134,123 @@ public final class MetricDescriptorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="valueType", required=true)
-      private final String valueType;
+    private String valueType;
 
     public String valueType() {
         return this.valueType;
     }
 
-    public MetricDescriptorResponse(
-        String description,
-        String displayName,
-        List<LabelDescriptorResponse> labels,
-        String launchStage,
-        MetricDescriptorMetadataResponse metadata,
-        String metricKind,
-        List<String> monitoredResourceTypes,
-        String name,
-        String type,
-        String unit,
-        String valueType) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.launchStage = Objects.requireNonNull(launchStage, "expected parameter 'launchStage' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.metricKind = Objects.requireNonNull(metricKind, "expected parameter 'metricKind' to be non-null");
-        this.monitoredResourceTypes = Objects.requireNonNull(monitoredResourceTypes, "expected parameter 'monitoredResourceTypes' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.valueType = Objects.requireNonNull(valueType, "expected parameter 'valueType' to be non-null");
-    }
+    private MetricDescriptorResponse() {}
 
-    private MetricDescriptorResponse() {
-        this.description = null;
-        this.displayName = null;
-        this.labels = List.of();
-        this.launchStage = null;
-        this.metadata = null;
-        this.metricKind = null;
-        this.monitoredResourceTypes = List.of();
-        this.name = null;
-        this.type = null;
-        this.unit = null;
-        this.valueType = null;
+    private MetricDescriptorResponse(MetricDescriptorResponse $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.labels = $.labels;
+        this.launchStage = $.launchStage;
+        this.metadata = $.metadata;
+        this.metricKind = $.metricKind;
+        this.monitoredResourceTypes = $.monitoredResourceTypes;
+        this.name = $.name;
+        this.type = $.type;
+        this.unit = $.unit;
+        this.valueType = $.valueType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricDescriptorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String displayName;
-        private List<LabelDescriptorResponse> labels;
-        private String launchStage;
-        private MetricDescriptorMetadataResponse metadata;
-        private String metricKind;
-        private List<String> monitoredResourceTypes;
-        private String name;
-        private String type;
-        private String unit;
-        private String valueType;
+        private MetricDescriptorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricDescriptorResponse();
         }
 
         public Builder(MetricDescriptorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.labels = defaults.labels;
-    	      this.launchStage = defaults.launchStage;
-    	      this.metadata = defaults.metadata;
-    	      this.metricKind = defaults.metricKind;
-    	      this.monitoredResourceTypes = defaults.monitoredResourceTypes;
-    	      this.name = defaults.name;
-    	      this.type = defaults.type;
-    	      this.unit = defaults.unit;
-    	      this.valueType = defaults.valueType;
+            $ = new MetricDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder labels(List<LabelDescriptorResponse> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder labels(LabelDescriptorResponse... labels) {
             return labels(List.of(labels));
         }
+
         public Builder launchStage(String launchStage) {
-            this.launchStage = Objects.requireNonNull(launchStage);
+            $.launchStage = launchStage;
             return this;
         }
+
         public Builder metadata(MetricDescriptorMetadataResponse metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder metricKind(String metricKind) {
-            this.metricKind = Objects.requireNonNull(metricKind);
+            $.metricKind = metricKind;
             return this;
         }
+
         public Builder monitoredResourceTypes(List<String> monitoredResourceTypes) {
-            this.monitoredResourceTypes = Objects.requireNonNull(monitoredResourceTypes);
+            $.monitoredResourceTypes = monitoredResourceTypes;
             return this;
         }
+
         public Builder monitoredResourceTypes(String... monitoredResourceTypes) {
             return monitoredResourceTypes(List.of(monitoredResourceTypes));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder valueType(String valueType) {
-            this.valueType = Objects.requireNonNull(valueType);
+            $.valueType = valueType;
             return this;
-        }        public MetricDescriptorResponse build() {
-            return new MetricDescriptorResponse(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, type, unit, valueType);
+        }
+
+        public MetricDescriptorResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.launchStage = Objects.requireNonNull($.launchStage, "expected parameter 'launchStage' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.metricKind = Objects.requireNonNull($.metricKind, "expected parameter 'metricKind' to be non-null");
+            $.monitoredResourceTypes = Objects.requireNonNull($.monitoredResourceTypes, "expected parameter 'monitoredResourceTypes' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            $.valueType = Objects.requireNonNull($.valueType, "expected parameter 'valueType' to be non-null");
+            return $;
         }
     }
+
 }

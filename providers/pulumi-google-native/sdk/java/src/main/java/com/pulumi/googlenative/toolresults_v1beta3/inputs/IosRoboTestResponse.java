@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class IosRoboTestResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final IosRoboTestResponse Empty = new IosRoboTestResponse();
 
-    public IosRoboTestResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(IosRoboTestResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private IosRoboTestResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(IosRoboTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new IosRoboTestResponse();
         }
         public IosRoboTestResponse build() {
-            return new IosRoboTestResponse();
+            return $;
         }
     }
+
 }

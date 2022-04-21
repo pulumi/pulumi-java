@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudbuild_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.enums.TriggerEventType;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.ApprovalConfigArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerTriggerConfigArgs;
@@ -21,6 +20,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,10 +33,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="approvalConfig")
-      private final @Nullable Output<ApprovalConfigArgs> approvalConfig;
+    private @Nullable Output<ApprovalConfigArgs> approvalConfig;
 
-    public Output<ApprovalConfigArgs> approvalConfig() {
-        return this.approvalConfig == null ? Codegen.empty() : this.approvalConfig;
+    public Optional<Output<ApprovalConfigArgs>> approvalConfig() {
+        return Optional.ofNullable(this.approvalConfig);
     }
 
     /**
@@ -44,10 +44,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autodetect")
-      private final @Nullable Output<Boolean> autodetect;
+    private @Nullable Output<Boolean> autodetect;
 
-    public Output<Boolean> autodetect() {
-        return this.autodetect == null ? Codegen.empty() : this.autodetect;
+    public Optional<Output<Boolean>> autodetect() {
+        return Optional.ofNullable(this.autodetect);
     }
 
     /**
@@ -55,10 +55,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bitbucketServerTriggerConfig")
-      private final @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
+    private @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
 
-    public Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig() {
-        return this.bitbucketServerTriggerConfig == null ? Codegen.empty() : this.bitbucketServerTriggerConfig;
+    public Optional<Output<BitbucketServerTriggerConfigArgs>> bitbucketServerTriggerConfig() {
+        return Optional.ofNullable(this.bitbucketServerTriggerConfig);
     }
 
     /**
@@ -66,10 +66,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="build")
-      private final @Nullable Output<BuildArgs> build;
+    private @Nullable Output<BuildArgs> build;
 
-    public Output<BuildArgs> build() {
-        return this.build == null ? Codegen.empty() : this.build;
+    public Optional<Output<BuildArgs>> build() {
+        return Optional.ofNullable(this.build);
     }
 
     /**
@@ -77,10 +77,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -88,10 +88,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="disabled")
-      private final @Nullable Output<Boolean> disabled;
+    private @Nullable Output<Boolean> disabled;
 
-    public Output<Boolean> disabled() {
-        return this.disabled == null ? Codegen.empty() : this.disabled;
+    public Optional<Output<Boolean>> disabled() {
+        return Optional.ofNullable(this.disabled);
     }
 
     /**
@@ -99,10 +99,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="eventType")
-      private final @Nullable Output<TriggerEventType> eventType;
+    private @Nullable Output<TriggerEventType> eventType;
 
-    public Output<TriggerEventType> eventType() {
-        return this.eventType == null ? Codegen.empty() : this.eventType;
+    public Optional<Output<TriggerEventType>> eventType() {
+        return Optional.ofNullable(this.eventType);
     }
 
     /**
@@ -110,10 +110,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filename")
-      private final @Nullable Output<String> filename;
+    private @Nullable Output<String> filename;
 
-    public Output<String> filename() {
-        return this.filename == null ? Codegen.empty() : this.filename;
+    public Optional<Output<String>> filename() {
+        return Optional.ofNullable(this.filename);
     }
 
     /**
@@ -121,10 +121,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<String> filter;
+    private @Nullable Output<String> filter;
 
-    public Output<String> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<String>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -132,10 +132,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gitFileSource")
-      private final @Nullable Output<GitFileSourceArgs> gitFileSource;
+    private @Nullable Output<GitFileSourceArgs> gitFileSource;
 
-    public Output<GitFileSourceArgs> gitFileSource() {
-        return this.gitFileSource == null ? Codegen.empty() : this.gitFileSource;
+    public Optional<Output<GitFileSourceArgs>> gitFileSource() {
+        return Optional.ofNullable(this.gitFileSource);
     }
 
     /**
@@ -143,10 +143,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="github")
-      private final @Nullable Output<GitHubEventsConfigArgs> github;
+    private @Nullable Output<GitHubEventsConfigArgs> github;
 
-    public Output<GitHubEventsConfigArgs> github() {
-        return this.github == null ? Codegen.empty() : this.github;
+    public Optional<Output<GitHubEventsConfigArgs>> github() {
+        return Optional.ofNullable(this.github);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ignoredFiles")
-      private final @Nullable Output<List<String>> ignoredFiles;
+    private @Nullable Output<List<String>> ignoredFiles;
 
-    public Output<List<String>> ignoredFiles() {
-        return this.ignoredFiles == null ? Codegen.empty() : this.ignoredFiles;
+    public Optional<Output<List<String>>> ignoredFiles() {
+        return Optional.ofNullable(this.ignoredFiles);
     }
 
     /**
@@ -165,17 +165,17 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="includedFiles")
-      private final @Nullable Output<List<String>> includedFiles;
+    private @Nullable Output<List<String>> includedFiles;
 
-    public Output<List<String>> includedFiles() {
-        return this.includedFiles == null ? Codegen.empty() : this.includedFiles;
+    public Optional<Output<List<String>>> includedFiles() {
+        return Optional.ofNullable(this.includedFiles);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -183,21 +183,21 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="projectId", required=true)
-      private final Output<String> projectId;
+    private Output<String> projectId;
 
     public Output<String> projectId() {
         return this.projectId;
@@ -208,10 +208,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubConfig")
-      private final @Nullable Output<PubsubConfigArgs> pubsubConfig;
+    private @Nullable Output<PubsubConfigArgs> pubsubConfig;
 
-    public Output<PubsubConfigArgs> pubsubConfig() {
-        return this.pubsubConfig == null ? Codegen.empty() : this.pubsubConfig;
+    public Optional<Output<PubsubConfigArgs>> pubsubConfig() {
+        return Optional.ofNullable(this.pubsubConfig);
     }
 
     /**
@@ -219,10 +219,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceName")
-      private final @Nullable Output<String> resourceName;
+    private @Nullable Output<String> resourceName;
 
-    public Output<String> resourceName() {
-        return this.resourceName == null ? Codegen.empty() : this.resourceName;
+    public Optional<Output<String>> resourceName() {
+        return Optional.ofNullable(this.resourceName);
     }
 
     /**
@@ -230,10 +230,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="serviceAccount")
-      private final @Nullable Output<String> serviceAccount;
+    private @Nullable Output<String> serviceAccount;
 
-    public Output<String> serviceAccount() {
-        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
+    public Optional<Output<String>> serviceAccount() {
+        return Optional.ofNullable(this.serviceAccount);
     }
 
     /**
@@ -241,10 +241,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceToBuild")
-      private final @Nullable Output<GitRepoSourceArgs> sourceToBuild;
+    private @Nullable Output<GitRepoSourceArgs> sourceToBuild;
 
-    public Output<GitRepoSourceArgs> sourceToBuild() {
-        return this.sourceToBuild == null ? Codegen.empty() : this.sourceToBuild;
+    public Optional<Output<GitRepoSourceArgs>> sourceToBuild() {
+        return Optional.ofNullable(this.sourceToBuild);
     }
 
     /**
@@ -252,10 +252,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="substitutions")
-      private final @Nullable Output<Map<String,String>> substitutions;
+    private @Nullable Output<Map<String,String>> substitutions;
 
-    public Output<Map<String,String>> substitutions() {
-        return this.substitutions == null ? Codegen.empty() : this.substitutions;
+    public Optional<Output<Map<String,String>>> substitutions() {
+        return Optional.ofNullable(this.substitutions);
     }
 
     /**
@@ -263,10 +263,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tags")
-      private final @Nullable Output<List<String>> tags;
+    private @Nullable Output<List<String>> tags;
 
-    public Output<List<String>> tags() {
-        return this.tags == null ? Codegen.empty() : this.tags;
+    public Optional<Output<List<String>>> tags() {
+        return Optional.ofNullable(this.tags);
     }
 
     /**
@@ -274,10 +274,10 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="triggerTemplate")
-      private final @Nullable Output<RepoSourceArgs> triggerTemplate;
+    private @Nullable Output<RepoSourceArgs> triggerTemplate;
 
-    public Output<RepoSourceArgs> triggerTemplate() {
-        return this.triggerTemplate == null ? Codegen.empty() : this.triggerTemplate;
+    public Optional<Output<RepoSourceArgs>> triggerTemplate() {
+        return Optional.ofNullable(this.triggerTemplate);
     }
 
     /**
@@ -285,371 +285,301 @@ public final class TriggerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="webhookConfig")
-      private final @Nullable Output<WebhookConfigArgs> webhookConfig;
+    private @Nullable Output<WebhookConfigArgs> webhookConfig;
 
-    public Output<WebhookConfigArgs> webhookConfig() {
-        return this.webhookConfig == null ? Codegen.empty() : this.webhookConfig;
+    public Optional<Output<WebhookConfigArgs>> webhookConfig() {
+        return Optional.ofNullable(this.webhookConfig);
     }
 
-    public TriggerArgs(
-        @Nullable Output<ApprovalConfigArgs> approvalConfig,
-        @Nullable Output<Boolean> autodetect,
-        @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig,
-        @Nullable Output<BuildArgs> build,
-        @Nullable Output<String> description,
-        @Nullable Output<Boolean> disabled,
-        @Nullable Output<TriggerEventType> eventType,
-        @Nullable Output<String> filename,
-        @Nullable Output<String> filter,
-        @Nullable Output<GitFileSourceArgs> gitFileSource,
-        @Nullable Output<GitHubEventsConfigArgs> github,
-        @Nullable Output<List<String>> ignoredFiles,
-        @Nullable Output<List<String>> includedFiles,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> projectId,
-        @Nullable Output<PubsubConfigArgs> pubsubConfig,
-        @Nullable Output<String> resourceName,
-        @Nullable Output<String> serviceAccount,
-        @Nullable Output<GitRepoSourceArgs> sourceToBuild,
-        @Nullable Output<Map<String,String>> substitutions,
-        @Nullable Output<List<String>> tags,
-        @Nullable Output<RepoSourceArgs> triggerTemplate,
-        @Nullable Output<WebhookConfigArgs> webhookConfig) {
-        this.approvalConfig = approvalConfig;
-        this.autodetect = autodetect;
-        this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
-        this.build = build;
-        this.description = description;
-        this.disabled = disabled;
-        this.eventType = eventType;
-        this.filename = filename;
-        this.filter = filter;
-        this.gitFileSource = gitFileSource;
-        this.github = github;
-        this.ignoredFiles = ignoredFiles;
-        this.includedFiles = includedFiles;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-        this.projectId = Objects.requireNonNull(projectId, "expected parameter 'projectId' to be non-null");
-        this.pubsubConfig = pubsubConfig;
-        this.resourceName = resourceName;
-        this.serviceAccount = serviceAccount;
-        this.sourceToBuild = sourceToBuild;
-        this.substitutions = substitutions;
-        this.tags = tags;
-        this.triggerTemplate = triggerTemplate;
-        this.webhookConfig = webhookConfig;
-    }
+    private TriggerArgs() {}
 
-    private TriggerArgs() {
-        this.approvalConfig = Codegen.empty();
-        this.autodetect = Codegen.empty();
-        this.bitbucketServerTriggerConfig = Codegen.empty();
-        this.build = Codegen.empty();
-        this.description = Codegen.empty();
-        this.disabled = Codegen.empty();
-        this.eventType = Codegen.empty();
-        this.filename = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.gitFileSource = Codegen.empty();
-        this.github = Codegen.empty();
-        this.ignoredFiles = Codegen.empty();
-        this.includedFiles = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.projectId = Codegen.empty();
-        this.pubsubConfig = Codegen.empty();
-        this.resourceName = Codegen.empty();
-        this.serviceAccount = Codegen.empty();
-        this.sourceToBuild = Codegen.empty();
-        this.substitutions = Codegen.empty();
-        this.tags = Codegen.empty();
-        this.triggerTemplate = Codegen.empty();
-        this.webhookConfig = Codegen.empty();
+    private TriggerArgs(TriggerArgs $) {
+        this.approvalConfig = $.approvalConfig;
+        this.autodetect = $.autodetect;
+        this.bitbucketServerTriggerConfig = $.bitbucketServerTriggerConfig;
+        this.build = $.build;
+        this.description = $.description;
+        this.disabled = $.disabled;
+        this.eventType = $.eventType;
+        this.filename = $.filename;
+        this.filter = $.filter;
+        this.gitFileSource = $.gitFileSource;
+        this.github = $.github;
+        this.ignoredFiles = $.ignoredFiles;
+        this.includedFiles = $.includedFiles;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
+        this.projectId = $.projectId;
+        this.pubsubConfig = $.pubsubConfig;
+        this.resourceName = $.resourceName;
+        this.serviceAccount = $.serviceAccount;
+        this.sourceToBuild = $.sourceToBuild;
+        this.substitutions = $.substitutions;
+        this.tags = $.tags;
+        this.triggerTemplate = $.triggerTemplate;
+        this.webhookConfig = $.webhookConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TriggerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ApprovalConfigArgs> approvalConfig;
-        private @Nullable Output<Boolean> autodetect;
-        private @Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig;
-        private @Nullable Output<BuildArgs> build;
-        private @Nullable Output<String> description;
-        private @Nullable Output<Boolean> disabled;
-        private @Nullable Output<TriggerEventType> eventType;
-        private @Nullable Output<String> filename;
-        private @Nullable Output<String> filter;
-        private @Nullable Output<GitFileSourceArgs> gitFileSource;
-        private @Nullable Output<GitHubEventsConfigArgs> github;
-        private @Nullable Output<List<String>> ignoredFiles;
-        private @Nullable Output<List<String>> includedFiles;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> projectId;
-        private @Nullable Output<PubsubConfigArgs> pubsubConfig;
-        private @Nullable Output<String> resourceName;
-        private @Nullable Output<String> serviceAccount;
-        private @Nullable Output<GitRepoSourceArgs> sourceToBuild;
-        private @Nullable Output<Map<String,String>> substitutions;
-        private @Nullable Output<List<String>> tags;
-        private @Nullable Output<RepoSourceArgs> triggerTemplate;
-        private @Nullable Output<WebhookConfigArgs> webhookConfig;
+        private TriggerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TriggerArgs();
         }
 
         public Builder(TriggerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.approvalConfig = defaults.approvalConfig;
-    	      this.autodetect = defaults.autodetect;
-    	      this.bitbucketServerTriggerConfig = defaults.bitbucketServerTriggerConfig;
-    	      this.build = defaults.build;
-    	      this.description = defaults.description;
-    	      this.disabled = defaults.disabled;
-    	      this.eventType = defaults.eventType;
-    	      this.filename = defaults.filename;
-    	      this.filter = defaults.filter;
-    	      this.gitFileSource = defaults.gitFileSource;
-    	      this.github = defaults.github;
-    	      this.ignoredFiles = defaults.ignoredFiles;
-    	      this.includedFiles = defaults.includedFiles;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.projectId = defaults.projectId;
-    	      this.pubsubConfig = defaults.pubsubConfig;
-    	      this.resourceName = defaults.resourceName;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.sourceToBuild = defaults.sourceToBuild;
-    	      this.substitutions = defaults.substitutions;
-    	      this.tags = defaults.tags;
-    	      this.triggerTemplate = defaults.triggerTemplate;
-    	      this.webhookConfig = defaults.webhookConfig;
+            $ = new TriggerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder approvalConfig(@Nullable Output<ApprovalConfigArgs> approvalConfig) {
-            this.approvalConfig = approvalConfig;
+            $.approvalConfig = approvalConfig;
             return this;
         }
-        public Builder approvalConfig(@Nullable ApprovalConfigArgs approvalConfig) {
-            this.approvalConfig = Codegen.ofNullable(approvalConfig);
-            return this;
+
+        public Builder approvalConfig(ApprovalConfigArgs approvalConfig) {
+            return approvalConfig(Output.of(approvalConfig));
         }
+
         public Builder autodetect(@Nullable Output<Boolean> autodetect) {
-            this.autodetect = autodetect;
+            $.autodetect = autodetect;
             return this;
         }
-        public Builder autodetect(@Nullable Boolean autodetect) {
-            this.autodetect = Codegen.ofNullable(autodetect);
-            return this;
+
+        public Builder autodetect(Boolean autodetect) {
+            return autodetect(Output.of(autodetect));
         }
+
         public Builder bitbucketServerTriggerConfig(@Nullable Output<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
-            this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
+            $.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
             return this;
         }
-        public Builder bitbucketServerTriggerConfig(@Nullable BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
-            this.bitbucketServerTriggerConfig = Codegen.ofNullable(bitbucketServerTriggerConfig);
-            return this;
+
+        public Builder bitbucketServerTriggerConfig(BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
+            return bitbucketServerTriggerConfig(Output.of(bitbucketServerTriggerConfig));
         }
+
         public Builder build(@Nullable Output<BuildArgs> build) {
-            this.build = build;
+            $.build = build;
             return this;
         }
-        public Builder build(@Nullable BuildArgs build) {
-            this.build = Codegen.ofNullable(build);
-            return this;
+
+        public Builder build(BuildArgs build) {
+            return build(Output.of(build));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder disabled(@Nullable Output<Boolean> disabled) {
-            this.disabled = disabled;
+            $.disabled = disabled;
             return this;
         }
-        public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Codegen.ofNullable(disabled);
-            return this;
+
+        public Builder disabled(Boolean disabled) {
+            return disabled(Output.of(disabled));
         }
+
         public Builder eventType(@Nullable Output<TriggerEventType> eventType) {
-            this.eventType = eventType;
+            $.eventType = eventType;
             return this;
         }
-        public Builder eventType(@Nullable TriggerEventType eventType) {
-            this.eventType = Codegen.ofNullable(eventType);
-            return this;
+
+        public Builder eventType(TriggerEventType eventType) {
+            return eventType(Output.of(eventType));
         }
+
         public Builder filename(@Nullable Output<String> filename) {
-            this.filename = filename;
+            $.filename = filename;
             return this;
         }
-        public Builder filename(@Nullable String filename) {
-            this.filename = Codegen.ofNullable(filename);
-            return this;
+
+        public Builder filename(String filename) {
+            return filename(Output.of(filename));
         }
+
         public Builder filter(@Nullable Output<String> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable String filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(String filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder gitFileSource(@Nullable Output<GitFileSourceArgs> gitFileSource) {
-            this.gitFileSource = gitFileSource;
+            $.gitFileSource = gitFileSource;
             return this;
         }
-        public Builder gitFileSource(@Nullable GitFileSourceArgs gitFileSource) {
-            this.gitFileSource = Codegen.ofNullable(gitFileSource);
-            return this;
+
+        public Builder gitFileSource(GitFileSourceArgs gitFileSource) {
+            return gitFileSource(Output.of(gitFileSource));
         }
+
         public Builder github(@Nullable Output<GitHubEventsConfigArgs> github) {
-            this.github = github;
+            $.github = github;
             return this;
         }
-        public Builder github(@Nullable GitHubEventsConfigArgs github) {
-            this.github = Codegen.ofNullable(github);
-            return this;
+
+        public Builder github(GitHubEventsConfigArgs github) {
+            return github(Output.of(github));
         }
+
         public Builder ignoredFiles(@Nullable Output<List<String>> ignoredFiles) {
-            this.ignoredFiles = ignoredFiles;
+            $.ignoredFiles = ignoredFiles;
             return this;
         }
-        public Builder ignoredFiles(@Nullable List<String> ignoredFiles) {
-            this.ignoredFiles = Codegen.ofNullable(ignoredFiles);
-            return this;
+
+        public Builder ignoredFiles(List<String> ignoredFiles) {
+            return ignoredFiles(Output.of(ignoredFiles));
         }
+
         public Builder ignoredFiles(String... ignoredFiles) {
             return ignoredFiles(List.of(ignoredFiles));
         }
+
         public Builder includedFiles(@Nullable Output<List<String>> includedFiles) {
-            this.includedFiles = includedFiles;
+            $.includedFiles = includedFiles;
             return this;
         }
-        public Builder includedFiles(@Nullable List<String> includedFiles) {
-            this.includedFiles = Codegen.ofNullable(includedFiles);
-            return this;
+
+        public Builder includedFiles(List<String> includedFiles) {
+            return includedFiles(Output.of(includedFiles));
         }
+
         public Builder includedFiles(String... includedFiles) {
             return includedFiles(List.of(includedFiles));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder projectId(Output<String> projectId) {
-            this.projectId = Objects.requireNonNull(projectId);
+            $.projectId = projectId;
             return this;
         }
+
         public Builder projectId(String projectId) {
-            this.projectId = Output.of(Objects.requireNonNull(projectId));
-            return this;
+            return projectId(Output.of(projectId));
         }
+
         public Builder pubsubConfig(@Nullable Output<PubsubConfigArgs> pubsubConfig) {
-            this.pubsubConfig = pubsubConfig;
+            $.pubsubConfig = pubsubConfig;
             return this;
         }
-        public Builder pubsubConfig(@Nullable PubsubConfigArgs pubsubConfig) {
-            this.pubsubConfig = Codegen.ofNullable(pubsubConfig);
-            return this;
+
+        public Builder pubsubConfig(PubsubConfigArgs pubsubConfig) {
+            return pubsubConfig(Output.of(pubsubConfig));
         }
+
         public Builder resourceName(@Nullable Output<String> resourceName) {
-            this.resourceName = resourceName;
+            $.resourceName = resourceName;
             return this;
         }
-        public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Codegen.ofNullable(resourceName);
-            return this;
+
+        public Builder resourceName(String resourceName) {
+            return resourceName(Output.of(resourceName));
         }
+
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
-            this.serviceAccount = serviceAccount;
+            $.serviceAccount = serviceAccount;
             return this;
         }
-        public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Codegen.ofNullable(serviceAccount);
-            return this;
+
+        public Builder serviceAccount(String serviceAccount) {
+            return serviceAccount(Output.of(serviceAccount));
         }
+
         public Builder sourceToBuild(@Nullable Output<GitRepoSourceArgs> sourceToBuild) {
-            this.sourceToBuild = sourceToBuild;
+            $.sourceToBuild = sourceToBuild;
             return this;
         }
-        public Builder sourceToBuild(@Nullable GitRepoSourceArgs sourceToBuild) {
-            this.sourceToBuild = Codegen.ofNullable(sourceToBuild);
-            return this;
+
+        public Builder sourceToBuild(GitRepoSourceArgs sourceToBuild) {
+            return sourceToBuild(Output.of(sourceToBuild));
         }
+
         public Builder substitutions(@Nullable Output<Map<String,String>> substitutions) {
-            this.substitutions = substitutions;
+            $.substitutions = substitutions;
             return this;
         }
-        public Builder substitutions(@Nullable Map<String,String> substitutions) {
-            this.substitutions = Codegen.ofNullable(substitutions);
-            return this;
+
+        public Builder substitutions(Map<String,String> substitutions) {
+            return substitutions(Output.of(substitutions));
         }
+
         public Builder tags(@Nullable Output<List<String>> tags) {
-            this.tags = tags;
+            $.tags = tags;
             return this;
         }
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = Codegen.ofNullable(tags);
-            return this;
+
+        public Builder tags(List<String> tags) {
+            return tags(Output.of(tags));
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder triggerTemplate(@Nullable Output<RepoSourceArgs> triggerTemplate) {
-            this.triggerTemplate = triggerTemplate;
+            $.triggerTemplate = triggerTemplate;
             return this;
         }
-        public Builder triggerTemplate(@Nullable RepoSourceArgs triggerTemplate) {
-            this.triggerTemplate = Codegen.ofNullable(triggerTemplate);
-            return this;
+
+        public Builder triggerTemplate(RepoSourceArgs triggerTemplate) {
+            return triggerTemplate(Output.of(triggerTemplate));
         }
+
         public Builder webhookConfig(@Nullable Output<WebhookConfigArgs> webhookConfig) {
-            this.webhookConfig = webhookConfig;
+            $.webhookConfig = webhookConfig;
             return this;
         }
-        public Builder webhookConfig(@Nullable WebhookConfigArgs webhookConfig) {
-            this.webhookConfig = Codegen.ofNullable(webhookConfig);
-            return this;
-        }        public TriggerArgs build() {
-            return new TriggerArgs(approvalConfig, autodetect, bitbucketServerTriggerConfig, build, description, disabled, eventType, filename, filter, gitFileSource, github, ignoredFiles, includedFiles, location, name, project, projectId, pubsubConfig, resourceName, serviceAccount, sourceToBuild, substitutions, tags, triggerTemplate, webhookConfig);
+
+        public Builder webhookConfig(WebhookConfigArgs webhookConfig) {
+            return webhookConfig(Output.of(webhookConfig));
+        }
+
+        public TriggerArgs build() {
+            $.projectId = Objects.requireNonNull($.projectId, "expected parameter 'projectId' to be non-null");
+            return $;
         }
     }
+
 }

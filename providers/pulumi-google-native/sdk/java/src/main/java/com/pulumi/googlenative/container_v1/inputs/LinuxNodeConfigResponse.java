@@ -22,45 +22,45 @@ public final class LinuxNodeConfigResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="sysctls", required=true)
-      private final Map<String,String> sysctls;
+    private Map<String,String> sysctls;
 
     public Map<String,String> sysctls() {
         return this.sysctls;
     }
 
-    public LinuxNodeConfigResponse(Map<String,String> sysctls) {
-        this.sysctls = Objects.requireNonNull(sysctls, "expected parameter 'sysctls' to be non-null");
-    }
+    private LinuxNodeConfigResponse() {}
 
-    private LinuxNodeConfigResponse() {
-        this.sysctls = Map.of();
+    private LinuxNodeConfigResponse(LinuxNodeConfigResponse $) {
+        this.sysctls = $.sysctls;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinuxNodeConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> sysctls;
+        private LinuxNodeConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinuxNodeConfigResponse();
         }
 
         public Builder(LinuxNodeConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sysctls = defaults.sysctls;
+            $ = new LinuxNodeConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder sysctls(Map<String,String> sysctls) {
-            this.sysctls = Objects.requireNonNull(sysctls);
+            $.sysctls = sysctls;
             return this;
-        }        public LinuxNodeConfigResponse build() {
-            return new LinuxNodeConfigResponse(sysctls);
+        }
+
+        public LinuxNodeConfigResponse build() {
+            $.sysctls = Objects.requireNonNull($.sysctls, "expected parameter 'sysctls' to be non-null");
+            return $;
         }
     }
+
 }

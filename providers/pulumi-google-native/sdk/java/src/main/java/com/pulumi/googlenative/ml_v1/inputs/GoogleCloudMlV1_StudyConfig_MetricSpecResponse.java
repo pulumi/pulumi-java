@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends com.pu
      * 
      */
     @Import(name="goal", required=true)
-      private final String goal;
+    private String goal;
 
     public String goal() {
         return this.goal;
@@ -32,55 +32,52 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends com.pu
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
     }
 
-    public GoogleCloudMlV1_StudyConfig_MetricSpecResponse(
-        String goal,
-        String metric) {
-        this.goal = Objects.requireNonNull(goal, "expected parameter 'goal' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-    }
+    private GoogleCloudMlV1_StudyConfig_MetricSpecResponse() {}
 
-    private GoogleCloudMlV1_StudyConfig_MetricSpecResponse() {
-        this.goal = null;
-        this.metric = null;
+    private GoogleCloudMlV1_StudyConfig_MetricSpecResponse(GoogleCloudMlV1_StudyConfig_MetricSpecResponse $) {
+        this.goal = $.goal;
+        this.metric = $.metric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfig_MetricSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String goal;
-        private String metric;
+        private GoogleCloudMlV1_StudyConfig_MetricSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfig_MetricSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfig_MetricSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.goal = defaults.goal;
-    	      this.metric = defaults.metric;
+            $ = new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder goal(String goal) {
-            this.goal = Objects.requireNonNull(goal);
+            $.goal = goal;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
-        }        public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
-            return new GoogleCloudMlV1_StudyConfig_MetricSpecResponse(goal, metric);
+        }
+
+        public GoogleCloudMlV1_StudyConfig_MetricSpecResponse build() {
+            $.goal = Objects.requireNonNull($.goal, "expected parameter 'goal' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="allowlist", required=true)
-      private final OracleRdbmsResponse allowlist;
+    private OracleRdbmsResponse allowlist;
 
     public OracleRdbmsResponse allowlist() {
         return this.allowlist;
@@ -32,55 +32,52 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rejectlist", required=true)
-      private final OracleRdbmsResponse rejectlist;
+    private OracleRdbmsResponse rejectlist;
 
     public OracleRdbmsResponse rejectlist() {
         return this.rejectlist;
     }
 
-    public OracleSourceConfigResponse(
-        OracleRdbmsResponse allowlist,
-        OracleRdbmsResponse rejectlist) {
-        this.allowlist = Objects.requireNonNull(allowlist, "expected parameter 'allowlist' to be non-null");
-        this.rejectlist = Objects.requireNonNull(rejectlist, "expected parameter 'rejectlist' to be non-null");
-    }
+    private OracleSourceConfigResponse() {}
 
-    private OracleSourceConfigResponse() {
-        this.allowlist = null;
-        this.rejectlist = null;
+    private OracleSourceConfigResponse(OracleSourceConfigResponse $) {
+        this.allowlist = $.allowlist;
+        this.rejectlist = $.rejectlist;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSourceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private OracleRdbmsResponse allowlist;
-        private OracleRdbmsResponse rejectlist;
+        private OracleSourceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSourceConfigResponse();
         }
 
         public Builder(OracleSourceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowlist = defaults.allowlist;
-    	      this.rejectlist = defaults.rejectlist;
+            $ = new OracleSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowlist(OracleRdbmsResponse allowlist) {
-            this.allowlist = Objects.requireNonNull(allowlist);
+            $.allowlist = allowlist;
             return this;
         }
+
         public Builder rejectlist(OracleRdbmsResponse rejectlist) {
-            this.rejectlist = Objects.requireNonNull(rejectlist);
+            $.rejectlist = rejectlist;
             return this;
-        }        public OracleSourceConfigResponse build() {
-            return new OracleSourceConfigResponse(allowlist, rejectlist);
+        }
+
+        public OracleSourceConfigResponse build() {
+            $.allowlist = Objects.requireNonNull($.allowlist, "expected parameter 'allowlist' to be non-null");
+            $.rejectlist = Objects.requireNonNull($.rejectlist, "expected parameter 'rejectlist' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,86 @@ public final class GetNodePoolArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNodePoolArgs Empty = new GetNodePoolArgs();
 
     @Import(name="clusterId", required=true)
-      private final String clusterId;
+    private String clusterId;
 
     public String clusterId() {
         return this.clusterId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="nodePoolId", required=true)
-      private final String nodePoolId;
+    private String nodePoolId;
 
     public String nodePoolId() {
         return this.nodePoolId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetNodePoolArgs(
-        String clusterId,
-        String location,
-        String nodePoolId,
-        @Nullable String project) {
-        this.clusterId = Objects.requireNonNull(clusterId, "expected parameter 'clusterId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.nodePoolId = Objects.requireNonNull(nodePoolId, "expected parameter 'nodePoolId' to be non-null");
-        this.project = project;
-    }
+    private GetNodePoolArgs() {}
 
-    private GetNodePoolArgs() {
-        this.clusterId = null;
-        this.location = null;
-        this.nodePoolId = null;
-        this.project = null;
+    private GetNodePoolArgs(GetNodePoolArgs $) {
+        this.clusterId = $.clusterId;
+        this.location = $.location;
+        this.nodePoolId = $.nodePoolId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetNodePoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String clusterId;
-        private String location;
-        private String nodePoolId;
-        private @Nullable String project;
+        private GetNodePoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetNodePoolArgs();
         }
 
         public Builder(GetNodePoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterId = defaults.clusterId;
-    	      this.location = defaults.location;
-    	      this.nodePoolId = defaults.nodePoolId;
-    	      this.project = defaults.project;
+            $ = new GetNodePoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterId(String clusterId) {
-            this.clusterId = Objects.requireNonNull(clusterId);
+            $.clusterId = clusterId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder nodePoolId(String nodePoolId) {
-            this.nodePoolId = Objects.requireNonNull(nodePoolId);
+            $.nodePoolId = nodePoolId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetNodePoolArgs build() {
-            return new GetNodePoolArgs(clusterId, location, nodePoolId, project);
+        }
+
+        public GetNodePoolArgs build() {
+            $.clusterId = Objects.requireNonNull($.clusterId, "expected parameter 'clusterId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.nodePoolId = Objects.requireNonNull($.nodePoolId, "expected parameter 'nodePoolId' to be non-null");
+            return $;
         }
     }
+
 }

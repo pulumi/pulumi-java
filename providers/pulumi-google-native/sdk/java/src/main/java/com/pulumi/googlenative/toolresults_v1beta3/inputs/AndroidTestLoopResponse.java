@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class AndroidTestLoopResponse extends com.pulumi.resources.InvokeAr
 
     public static final AndroidTestLoopResponse Empty = new AndroidTestLoopResponse();
 
-    public AndroidTestLoopResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(AndroidTestLoopResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private AndroidTestLoopResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(AndroidTestLoopResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new AndroidTestLoopResponse();
         }
         public AndroidTestLoopResponse build() {
-            return new AndroidTestLoopResponse();
+            return $;
         }
     }
+
 }

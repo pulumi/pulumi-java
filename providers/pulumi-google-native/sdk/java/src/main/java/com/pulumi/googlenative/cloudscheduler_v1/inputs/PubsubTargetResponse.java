@@ -22,7 +22,7 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="attributes", required=true)
-      private final Map<String,String> attributes;
+    private Map<String,String> attributes;
 
     public Map<String,String> attributes() {
         return this.attributes;
@@ -33,7 +33,7 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="data", required=true)
-      private final String data;
+    private String data;
 
     public String data() {
         return this.data;
@@ -44,64 +44,59 @@ public final class PubsubTargetResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="topicName", required=true)
-      private final String topicName;
+    private String topicName;
 
     public String topicName() {
         return this.topicName;
     }
 
-    public PubsubTargetResponse(
-        Map<String,String> attributes,
-        String data,
-        String topicName) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.data = Objects.requireNonNull(data, "expected parameter 'data' to be non-null");
-        this.topicName = Objects.requireNonNull(topicName, "expected parameter 'topicName' to be non-null");
-    }
+    private PubsubTargetResponse() {}
 
-    private PubsubTargetResponse() {
-        this.attributes = Map.of();
-        this.data = null;
-        this.topicName = null;
+    private PubsubTargetResponse(PubsubTargetResponse $) {
+        this.attributes = $.attributes;
+        this.data = $.data;
+        this.topicName = $.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubsubTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> attributes;
-        private String data;
-        private String topicName;
+        private PubsubTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubsubTargetResponse();
         }
 
         public Builder(PubsubTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.data = defaults.data;
-    	      this.topicName = defaults.topicName;
+            $ = new PubsubTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Map<String,String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder data(String data) {
-            this.data = Objects.requireNonNull(data);
+            $.data = data;
             return this;
         }
+
         public Builder topicName(String topicName) {
-            this.topicName = Objects.requireNonNull(topicName);
+            $.topicName = topicName;
             return this;
-        }        public PubsubTargetResponse build() {
-            return new PubsubTargetResponse(attributes, data, topicName);
+        }
+
+        public PubsubTargetResponse build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.data = Objects.requireNonNull($.data, "expected parameter 'data' to be non-null");
+            $.topicName = Objects.requireNonNull($.topicName, "expected parameter 'topicName' to be non-null");
+            return $;
         }
     }
+
 }

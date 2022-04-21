@@ -15,78 +15,72 @@ public final class GetAccessLevelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetAccessLevelArgs Empty = new GetAccessLevelArgs();
 
     @Import(name="accessLevelFormat")
-      private final @Nullable String accessLevelFormat;
+    private @Nullable String accessLevelFormat;
 
     public Optional<String> accessLevelFormat() {
-        return this.accessLevelFormat == null ? Optional.empty() : Optional.ofNullable(this.accessLevelFormat);
+        return Optional.ofNullable(this.accessLevelFormat);
     }
 
     @Import(name="accessLevelId", required=true)
-      private final String accessLevelId;
+    private String accessLevelId;
 
     public String accessLevelId() {
         return this.accessLevelId;
     }
 
     @Import(name="accessPolicyId", required=true)
-      private final String accessPolicyId;
+    private String accessPolicyId;
 
     public String accessPolicyId() {
         return this.accessPolicyId;
     }
 
-    public GetAccessLevelArgs(
-        @Nullable String accessLevelFormat,
-        String accessLevelId,
-        String accessPolicyId) {
-        this.accessLevelFormat = accessLevelFormat;
-        this.accessLevelId = Objects.requireNonNull(accessLevelId, "expected parameter 'accessLevelId' to be non-null");
-        this.accessPolicyId = Objects.requireNonNull(accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
-    }
+    private GetAccessLevelArgs() {}
 
-    private GetAccessLevelArgs() {
-        this.accessLevelFormat = null;
-        this.accessLevelId = null;
-        this.accessPolicyId = null;
+    private GetAccessLevelArgs(GetAccessLevelArgs $) {
+        this.accessLevelFormat = $.accessLevelFormat;
+        this.accessLevelId = $.accessLevelId;
+        this.accessPolicyId = $.accessPolicyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAccessLevelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String accessLevelFormat;
-        private String accessLevelId;
-        private String accessPolicyId;
+        private GetAccessLevelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAccessLevelArgs();
         }
 
         public Builder(GetAccessLevelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.accessLevelFormat = defaults.accessLevelFormat;
-    	      this.accessLevelId = defaults.accessLevelId;
-    	      this.accessPolicyId = defaults.accessPolicyId;
+            $ = new GetAccessLevelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder accessLevelFormat(@Nullable String accessLevelFormat) {
-            this.accessLevelFormat = accessLevelFormat;
+            $.accessLevelFormat = accessLevelFormat;
             return this;
         }
+
         public Builder accessLevelId(String accessLevelId) {
-            this.accessLevelId = Objects.requireNonNull(accessLevelId);
+            $.accessLevelId = accessLevelId;
             return this;
         }
+
         public Builder accessPolicyId(String accessPolicyId) {
-            this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
+            $.accessPolicyId = accessPolicyId;
             return this;
-        }        public GetAccessLevelArgs build() {
-            return new GetAccessLevelArgs(accessLevelFormat, accessLevelId, accessPolicyId);
+        }
+
+        public GetAccessLevelArgs build() {
+            $.accessLevelId = Objects.requireNonNull($.accessLevelId, "expected parameter 'accessLevelId' to be non-null");
+            $.accessPolicyId = Objects.requireNonNull($.accessPolicyId, "expected parameter 'accessPolicyId' to be non-null");
+            return $;
         }
     }
+
 }

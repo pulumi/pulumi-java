@@ -21,7 +21,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      * 
      */
     @Import(name="resourceId", required=true)
-      private final String resourceId;
+    private String resourceId;
 
     public String resourceId() {
         return this.resourceId;
@@ -43,64 +43,59 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      * 
      */
     @Import(name="resourceType", required=true)
-      private final String resourceType;
+    private String resourceType;
 
     public String resourceType() {
         return this.resourceType;
     }
 
-    public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(
-        String displayName,
-        String resourceId,
-        String resourceType) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.resourceId = Objects.requireNonNull(resourceId, "expected parameter 'resourceId' to be non-null");
-        this.resourceType = Objects.requireNonNull(resourceType, "expected parameter 'resourceType' to be non-null");
-    }
+    private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse() {}
 
-    private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse() {
-        this.displayName = null;
-        this.resourceId = null;
-        this.resourceType = null;
+    private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse $) {
+        this.displayName = $.displayName;
+        this.resourceId = $.resourceId;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String resourceId;
-        private String resourceType;
+        private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse();
         }
 
         public Builder(GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.resourceId = defaults.resourceId;
-    	      this.resourceType = defaults.resourceType;
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder resourceId(String resourceId) {
-            this.resourceId = Objects.requireNonNull(resourceId);
+            $.resourceId = resourceId;
             return this;
         }
+
         public Builder resourceType(String resourceType) {
-            this.resourceType = Objects.requireNonNull(resourceType);
+            $.resourceType = resourceType;
             return this;
-        }        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse build() {
-            return new GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(displayName, resourceId, resourceType);
+        }
+
+        public GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.resourceId = Objects.requireNonNull($.resourceId, "expected parameter 'resourceId' to be non-null");
+            $.resourceType = Objects.requireNonNull($.resourceType, "expected parameter 'resourceType' to be non-null");
+            return $;
         }
     }
+
 }

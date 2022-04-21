@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse() {
-        this.phoneNumber = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String phoneNumber;
+        private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(phoneNumber);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse build() {
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

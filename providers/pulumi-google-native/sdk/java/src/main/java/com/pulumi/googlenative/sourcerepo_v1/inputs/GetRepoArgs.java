@@ -15,62 +15,58 @@ public final class GetRepoArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetRepoArgs Empty = new GetRepoArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="repoId", required=true)
-      private final String repoId;
+    private String repoId;
 
     public String repoId() {
         return this.repoId;
     }
 
-    public GetRepoArgs(
-        @Nullable String project,
-        String repoId) {
-        this.project = project;
-        this.repoId = Objects.requireNonNull(repoId, "expected parameter 'repoId' to be non-null");
-    }
+    private GetRepoArgs() {}
 
-    private GetRepoArgs() {
-        this.project = null;
-        this.repoId = null;
+    private GetRepoArgs(GetRepoArgs $) {
+        this.project = $.project;
+        this.repoId = $.repoId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetRepoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String repoId;
+        private GetRepoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetRepoArgs();
         }
 
         public Builder(GetRepoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.repoId = defaults.repoId;
+            $ = new GetRepoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder repoId(String repoId) {
-            this.repoId = Objects.requireNonNull(repoId);
+            $.repoId = repoId;
             return this;
-        }        public GetRepoArgs build() {
-            return new GetRepoArgs(project, repoId);
+        }
+
+        public GetRepoArgs build() {
+            $.repoId = Objects.requireNonNull($.repoId, "expected parameter 'repoId' to be non-null");
+            return $;
         }
     }
+
 }

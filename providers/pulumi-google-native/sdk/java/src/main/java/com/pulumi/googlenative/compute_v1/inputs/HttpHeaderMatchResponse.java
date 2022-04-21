@@ -23,7 +23,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="exactMatch", required=true)
-      private final String exactMatch;
+    private String exactMatch;
 
     public String exactMatch() {
         return this.exactMatch;
@@ -34,7 +34,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="headerName", required=true)
-      private final String headerName;
+    private String headerName;
 
     public String headerName() {
         return this.headerName;
@@ -45,7 +45,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="invertMatch", required=true)
-      private final Boolean invertMatch;
+    private Boolean invertMatch;
 
     public Boolean invertMatch() {
         return this.invertMatch;
@@ -56,7 +56,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="prefixMatch", required=true)
-      private final String prefixMatch;
+    private String prefixMatch;
 
     public String prefixMatch() {
         return this.prefixMatch;
@@ -67,7 +67,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="presentMatch", required=true)
-      private final Boolean presentMatch;
+    private Boolean presentMatch;
 
     public Boolean presentMatch() {
         return this.presentMatch;
@@ -78,7 +78,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="rangeMatch", required=true)
-      private final Int64RangeMatchResponse rangeMatch;
+    private Int64RangeMatchResponse rangeMatch;
 
     public Int64RangeMatchResponse rangeMatch() {
         return this.rangeMatch;
@@ -89,7 +89,7 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="regexMatch", required=true)
-      private final String regexMatch;
+    private String regexMatch;
 
     public String regexMatch() {
         return this.regexMatch;
@@ -100,109 +100,94 @@ public final class HttpHeaderMatchResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="suffixMatch", required=true)
-      private final String suffixMatch;
+    private String suffixMatch;
 
     public String suffixMatch() {
         return this.suffixMatch;
     }
 
-    public HttpHeaderMatchResponse(
-        String exactMatch,
-        String headerName,
-        Boolean invertMatch,
-        String prefixMatch,
-        Boolean presentMatch,
-        Int64RangeMatchResponse rangeMatch,
-        String regexMatch,
-        String suffixMatch) {
-        this.exactMatch = Objects.requireNonNull(exactMatch, "expected parameter 'exactMatch' to be non-null");
-        this.headerName = Objects.requireNonNull(headerName, "expected parameter 'headerName' to be non-null");
-        this.invertMatch = Objects.requireNonNull(invertMatch, "expected parameter 'invertMatch' to be non-null");
-        this.prefixMatch = Objects.requireNonNull(prefixMatch, "expected parameter 'prefixMatch' to be non-null");
-        this.presentMatch = Objects.requireNonNull(presentMatch, "expected parameter 'presentMatch' to be non-null");
-        this.rangeMatch = Objects.requireNonNull(rangeMatch, "expected parameter 'rangeMatch' to be non-null");
-        this.regexMatch = Objects.requireNonNull(regexMatch, "expected parameter 'regexMatch' to be non-null");
-        this.suffixMatch = Objects.requireNonNull(suffixMatch, "expected parameter 'suffixMatch' to be non-null");
-    }
+    private HttpHeaderMatchResponse() {}
 
-    private HttpHeaderMatchResponse() {
-        this.exactMatch = null;
-        this.headerName = null;
-        this.invertMatch = null;
-        this.prefixMatch = null;
-        this.presentMatch = null;
-        this.rangeMatch = null;
-        this.regexMatch = null;
-        this.suffixMatch = null;
+    private HttpHeaderMatchResponse(HttpHeaderMatchResponse $) {
+        this.exactMatch = $.exactMatch;
+        this.headerName = $.headerName;
+        this.invertMatch = $.invertMatch;
+        this.prefixMatch = $.prefixMatch;
+        this.presentMatch = $.presentMatch;
+        this.rangeMatch = $.rangeMatch;
+        this.regexMatch = $.regexMatch;
+        this.suffixMatch = $.suffixMatch;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpHeaderMatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String exactMatch;
-        private String headerName;
-        private Boolean invertMatch;
-        private String prefixMatch;
-        private Boolean presentMatch;
-        private Int64RangeMatchResponse rangeMatch;
-        private String regexMatch;
-        private String suffixMatch;
+        private HttpHeaderMatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpHeaderMatchResponse();
         }
 
         public Builder(HttpHeaderMatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatch = defaults.exactMatch;
-    	      this.headerName = defaults.headerName;
-    	      this.invertMatch = defaults.invertMatch;
-    	      this.prefixMatch = defaults.prefixMatch;
-    	      this.presentMatch = defaults.presentMatch;
-    	      this.rangeMatch = defaults.rangeMatch;
-    	      this.regexMatch = defaults.regexMatch;
-    	      this.suffixMatch = defaults.suffixMatch;
+            $ = new HttpHeaderMatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatch(String exactMatch) {
-            this.exactMatch = Objects.requireNonNull(exactMatch);
+            $.exactMatch = exactMatch;
             return this;
         }
+
         public Builder headerName(String headerName) {
-            this.headerName = Objects.requireNonNull(headerName);
+            $.headerName = headerName;
             return this;
         }
+
         public Builder invertMatch(Boolean invertMatch) {
-            this.invertMatch = Objects.requireNonNull(invertMatch);
+            $.invertMatch = invertMatch;
             return this;
         }
+
         public Builder prefixMatch(String prefixMatch) {
-            this.prefixMatch = Objects.requireNonNull(prefixMatch);
+            $.prefixMatch = prefixMatch;
             return this;
         }
+
         public Builder presentMatch(Boolean presentMatch) {
-            this.presentMatch = Objects.requireNonNull(presentMatch);
+            $.presentMatch = presentMatch;
             return this;
         }
+
         public Builder rangeMatch(Int64RangeMatchResponse rangeMatch) {
-            this.rangeMatch = Objects.requireNonNull(rangeMatch);
+            $.rangeMatch = rangeMatch;
             return this;
         }
+
         public Builder regexMatch(String regexMatch) {
-            this.regexMatch = Objects.requireNonNull(regexMatch);
+            $.regexMatch = regexMatch;
             return this;
         }
+
         public Builder suffixMatch(String suffixMatch) {
-            this.suffixMatch = Objects.requireNonNull(suffixMatch);
+            $.suffixMatch = suffixMatch;
             return this;
-        }        public HttpHeaderMatchResponse build() {
-            return new HttpHeaderMatchResponse(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
+        }
+
+        public HttpHeaderMatchResponse build() {
+            $.exactMatch = Objects.requireNonNull($.exactMatch, "expected parameter 'exactMatch' to be non-null");
+            $.headerName = Objects.requireNonNull($.headerName, "expected parameter 'headerName' to be non-null");
+            $.invertMatch = Objects.requireNonNull($.invertMatch, "expected parameter 'invertMatch' to be non-null");
+            $.prefixMatch = Objects.requireNonNull($.prefixMatch, "expected parameter 'prefixMatch' to be non-null");
+            $.presentMatch = Objects.requireNonNull($.presentMatch, "expected parameter 'presentMatch' to be non-null");
+            $.rangeMatch = Objects.requireNonNull($.rangeMatch, "expected parameter 'rangeMatch' to be non-null");
+            $.regexMatch = Objects.requireNonNull($.regexMatch, "expected parameter 'regexMatch' to be non-null");
+            $.suffixMatch = Objects.requireNonNull($.suffixMatch, "expected parameter 'suffixMatch' to be non-null");
+            return $;
         }
     }
+
 }

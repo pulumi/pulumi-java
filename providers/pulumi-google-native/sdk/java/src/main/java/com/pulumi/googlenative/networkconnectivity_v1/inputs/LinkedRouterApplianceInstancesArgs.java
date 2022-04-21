@@ -5,11 +5,11 @@ package com.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkconnectivity_v1.inputs.RouterApplianceInstanceArgs;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class LinkedRouterApplianceInstancesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="instances")
-      private final @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
+    private @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
 
-    public Output<List<RouterApplianceInstanceArgs>> instances() {
-        return this.instances == null ? Codegen.empty() : this.instances;
+    public Optional<Output<List<RouterApplianceInstanceArgs>>> instances() {
+        return Optional.ofNullable(this.instances);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class LinkedRouterApplianceInstancesArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="siteToSiteDataTransfer")
-      private final @Nullable Output<Boolean> siteToSiteDataTransfer;
+    private @Nullable Output<Boolean> siteToSiteDataTransfer;
 
-    public Output<Boolean> siteToSiteDataTransfer() {
-        return this.siteToSiteDataTransfer == null ? Codegen.empty() : this.siteToSiteDataTransfer;
+    public Optional<Output<Boolean>> siteToSiteDataTransfer() {
+        return Optional.ofNullable(this.siteToSiteDataTransfer);
     }
 
-    public LinkedRouterApplianceInstancesArgs(
-        @Nullable Output<List<RouterApplianceInstanceArgs>> instances,
-        @Nullable Output<Boolean> siteToSiteDataTransfer) {
-        this.instances = instances;
-        this.siteToSiteDataTransfer = siteToSiteDataTransfer;
-    }
+    private LinkedRouterApplianceInstancesArgs() {}
 
-    private LinkedRouterApplianceInstancesArgs() {
-        this.instances = Codegen.empty();
-        this.siteToSiteDataTransfer = Codegen.empty();
+    private LinkedRouterApplianceInstancesArgs(LinkedRouterApplianceInstancesArgs $) {
+        this.instances = $.instances;
+        this.siteToSiteDataTransfer = $.siteToSiteDataTransfer;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LinkedRouterApplianceInstancesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<RouterApplianceInstanceArgs>> instances;
-        private @Nullable Output<Boolean> siteToSiteDataTransfer;
+        private LinkedRouterApplianceInstancesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LinkedRouterApplianceInstancesArgs();
         }
 
         public Builder(LinkedRouterApplianceInstancesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instances = defaults.instances;
-    	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
+            $ = new LinkedRouterApplianceInstancesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instances(@Nullable Output<List<RouterApplianceInstanceArgs>> instances) {
-            this.instances = instances;
+            $.instances = instances;
             return this;
         }
-        public Builder instances(@Nullable List<RouterApplianceInstanceArgs> instances) {
-            this.instances = Codegen.ofNullable(instances);
-            return this;
+
+        public Builder instances(List<RouterApplianceInstanceArgs> instances) {
+            return instances(Output.of(instances));
         }
+
         public Builder instances(RouterApplianceInstanceArgs... instances) {
             return instances(List.of(instances));
         }
+
         public Builder siteToSiteDataTransfer(@Nullable Output<Boolean> siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = siteToSiteDataTransfer;
+            $.siteToSiteDataTransfer = siteToSiteDataTransfer;
             return this;
         }
-        public Builder siteToSiteDataTransfer(@Nullable Boolean siteToSiteDataTransfer) {
-            this.siteToSiteDataTransfer = Codegen.ofNullable(siteToSiteDataTransfer);
-            return this;
-        }        public LinkedRouterApplianceInstancesArgs build() {
-            return new LinkedRouterApplianceInstancesArgs(instances, siteToSiteDataTransfer);
+
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+            return siteToSiteDataTransfer(Output.of(siteToSiteDataTransfer));
+        }
+
+        public LinkedRouterApplianceInstancesArgs build() {
+            return $;
         }
     }
+
 }

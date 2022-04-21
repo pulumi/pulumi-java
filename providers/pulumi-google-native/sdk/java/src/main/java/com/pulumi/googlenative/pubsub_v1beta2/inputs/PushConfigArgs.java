@@ -5,11 +5,11 @@ package com.pulumi.googlenative.pubsub_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsub_v1beta2.inputs.OidcTokenArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<Map<String,String>> attributes;
+    private @Nullable Output<Map<String,String>> attributes;
 
-    public Output<Map<String,String>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<Map<String,String>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="oidcToken")
-      private final @Nullable Output<OidcTokenArgs> oidcToken;
+    private @Nullable Output<OidcTokenArgs> oidcToken;
 
-    public Output<OidcTokenArgs> oidcToken() {
-        return this.oidcToken == null ? Codegen.empty() : this.oidcToken;
+    public Optional<Output<OidcTokenArgs>> oidcToken() {
+        return Optional.ofNullable(this.oidcToken);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PushConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pushEndpoint")
-      private final @Nullable Output<String> pushEndpoint;
+    private @Nullable Output<String> pushEndpoint;
 
-    public Output<String> pushEndpoint() {
-        return this.pushEndpoint == null ? Codegen.empty() : this.pushEndpoint;
+    public Optional<Output<String>> pushEndpoint() {
+        return Optional.ofNullable(this.pushEndpoint);
     }
 
-    public PushConfigArgs(
-        @Nullable Output<Map<String,String>> attributes,
-        @Nullable Output<OidcTokenArgs> oidcToken,
-        @Nullable Output<String> pushEndpoint) {
-        this.attributes = attributes;
-        this.oidcToken = oidcToken;
-        this.pushEndpoint = pushEndpoint;
-    }
+    private PushConfigArgs() {}
 
-    private PushConfigArgs() {
-        this.attributes = Codegen.empty();
-        this.oidcToken = Codegen.empty();
-        this.pushEndpoint = Codegen.empty();
+    private PushConfigArgs(PushConfigArgs $) {
+        this.attributes = $.attributes;
+        this.oidcToken = $.oidcToken;
+        this.pushEndpoint = $.pushEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> attributes;
-        private @Nullable Output<OidcTokenArgs> oidcToken;
-        private @Nullable Output<String> pushEndpoint;
+        private PushConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushConfigArgs();
         }
 
         public Builder(PushConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.oidcToken = defaults.oidcToken;
-    	      this.pushEndpoint = defaults.pushEndpoint;
+            $ = new PushConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(Map<String,String> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder oidcToken(@Nullable Output<OidcTokenArgs> oidcToken) {
-            this.oidcToken = oidcToken;
+            $.oidcToken = oidcToken;
             return this;
         }
-        public Builder oidcToken(@Nullable OidcTokenArgs oidcToken) {
-            this.oidcToken = Codegen.ofNullable(oidcToken);
-            return this;
+
+        public Builder oidcToken(OidcTokenArgs oidcToken) {
+            return oidcToken(Output.of(oidcToken));
         }
+
         public Builder pushEndpoint(@Nullable Output<String> pushEndpoint) {
-            this.pushEndpoint = pushEndpoint;
+            $.pushEndpoint = pushEndpoint;
             return this;
         }
-        public Builder pushEndpoint(@Nullable String pushEndpoint) {
-            this.pushEndpoint = Codegen.ofNullable(pushEndpoint);
-            return this;
-        }        public PushConfigArgs build() {
-            return new PushConfigArgs(attributes, oidcToken, pushEndpoint);
+
+        public Builder pushEndpoint(String pushEndpoint) {
+            return pushEndpoint(Output.of(pushEndpoint));
+        }
+
+        public PushConfigArgs build() {
+            return $;
         }
     }
+
 }

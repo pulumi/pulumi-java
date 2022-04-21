@@ -5,11 +5,11 @@ package com.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.AliasContextArgs;
 import com.pulumi.googlenative.containeranalysis_v1.inputs.RepoIdArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="aliasContext")
-      private final @Nullable Output<AliasContextArgs> aliasContext;
+    private @Nullable Output<AliasContextArgs> aliasContext;
 
-    public Output<AliasContextArgs> aliasContext() {
-        return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
+    public Optional<Output<AliasContextArgs>> aliasContext() {
+        return Optional.ofNullable(this.aliasContext);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="repoId")
-      private final @Nullable Output<RepoIdArgs> repoId;
+    private @Nullable Output<RepoIdArgs> repoId;
 
-    public Output<RepoIdArgs> repoId() {
-        return this.repoId == null ? Codegen.empty() : this.repoId;
+    public Optional<Output<RepoIdArgs>> repoId() {
+        return Optional.ofNullable(this.repoId);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class CloudRepoSourceContextArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="revisionId")
-      private final @Nullable Output<String> revisionId;
+    private @Nullable Output<String> revisionId;
 
-    public Output<String> revisionId() {
-        return this.revisionId == null ? Codegen.empty() : this.revisionId;
+    public Optional<Output<String>> revisionId() {
+        return Optional.ofNullable(this.revisionId);
     }
 
-    public CloudRepoSourceContextArgs(
-        @Nullable Output<AliasContextArgs> aliasContext,
-        @Nullable Output<RepoIdArgs> repoId,
-        @Nullable Output<String> revisionId) {
-        this.aliasContext = aliasContext;
-        this.repoId = repoId;
-        this.revisionId = revisionId;
-    }
+    private CloudRepoSourceContextArgs() {}
 
-    private CloudRepoSourceContextArgs() {
-        this.aliasContext = Codegen.empty();
-        this.repoId = Codegen.empty();
-        this.revisionId = Codegen.empty();
+    private CloudRepoSourceContextArgs(CloudRepoSourceContextArgs $) {
+        this.aliasContext = $.aliasContext;
+        this.repoId = $.repoId;
+        this.revisionId = $.revisionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudRepoSourceContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AliasContextArgs> aliasContext;
-        private @Nullable Output<RepoIdArgs> repoId;
-        private @Nullable Output<String> revisionId;
+        private CloudRepoSourceContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudRepoSourceContextArgs();
         }
 
         public Builder(CloudRepoSourceContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aliasContext = defaults.aliasContext;
-    	      this.repoId = defaults.repoId;
-    	      this.revisionId = defaults.revisionId;
+            $ = new CloudRepoSourceContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder aliasContext(@Nullable Output<AliasContextArgs> aliasContext) {
-            this.aliasContext = aliasContext;
+            $.aliasContext = aliasContext;
             return this;
         }
-        public Builder aliasContext(@Nullable AliasContextArgs aliasContext) {
-            this.aliasContext = Codegen.ofNullable(aliasContext);
-            return this;
+
+        public Builder aliasContext(AliasContextArgs aliasContext) {
+            return aliasContext(Output.of(aliasContext));
         }
+
         public Builder repoId(@Nullable Output<RepoIdArgs> repoId) {
-            this.repoId = repoId;
+            $.repoId = repoId;
             return this;
         }
-        public Builder repoId(@Nullable RepoIdArgs repoId) {
-            this.repoId = Codegen.ofNullable(repoId);
-            return this;
+
+        public Builder repoId(RepoIdArgs repoId) {
+            return repoId(Output.of(repoId));
         }
+
         public Builder revisionId(@Nullable Output<String> revisionId) {
-            this.revisionId = revisionId;
+            $.revisionId = revisionId;
             return this;
         }
-        public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Codegen.ofNullable(revisionId);
-            return this;
-        }        public CloudRepoSourceContextArgs build() {
-            return new CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);
+
+        public Builder revisionId(String revisionId) {
+            return revisionId(Output.of(revisionId));
+        }
+
+        public CloudRepoSourceContextArgs build() {
+            return $;
         }
     }
+
 }

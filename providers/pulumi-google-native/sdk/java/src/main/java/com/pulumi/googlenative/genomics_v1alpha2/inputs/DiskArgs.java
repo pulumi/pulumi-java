@@ -5,12 +5,12 @@ package com.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.genomics_v1alpha2.enums.DiskType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountPoint")
-      private final @Nullable Output<String> mountPoint;
+    private @Nullable Output<String> mountPoint;
 
-    public Output<String> mountPoint() {
-        return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
+    public Optional<Output<String>> mountPoint() {
+        return Optional.ofNullable(this.mountPoint);
     }
 
     /**
@@ -38,7 +38,7 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -49,10 +49,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeGb")
-      private final @Nullable Output<Integer> sizeGb;
+    private @Nullable Output<Integer> sizeGb;
 
-    public Output<Integer> sizeGb() {
-        return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
+    public Optional<Output<Integer>> sizeGb() {
+        return Optional.ofNullable(this.sizeGb);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source")
-      private final @Nullable Output<String> source;
+    private @Nullable Output<String> source;
 
-    public Output<String> source() {
-        return this.source == null ? Codegen.empty() : this.source;
+    public Optional<Output<String>> source() {
+        return Optional.ofNullable(this.source);
     }
 
     /**
@@ -82,115 +82,100 @@ public final class DiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<DiskType> type;
+    private Output<DiskType> type;
 
     public Output<DiskType> type() {
         return this.type;
     }
 
-    public DiskArgs(
-        @Nullable Output<String> mountPoint,
-        Output<String> name,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<Integer> sizeGb,
-        @Nullable Output<String> source,
-        Output<DiskType> type) {
-        this.mountPoint = mountPoint;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.readOnly = readOnly;
-        this.sizeGb = sizeGb;
-        this.source = source;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private DiskArgs() {}
 
-    private DiskArgs() {
-        this.mountPoint = Codegen.empty();
-        this.name = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.sizeGb = Codegen.empty();
-        this.source = Codegen.empty();
-        this.type = Codegen.empty();
+    private DiskArgs(DiskArgs $) {
+        this.mountPoint = $.mountPoint;
+        this.name = $.name;
+        this.readOnly = $.readOnly;
+        this.sizeGb = $.sizeGb;
+        this.source = $.source;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> mountPoint;
-        private Output<String> name;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<Integer> sizeGb;
-        private @Nullable Output<String> source;
-        private Output<DiskType> type;
+        private DiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DiskArgs();
         }
 
         public Builder(DiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mountPoint = defaults.mountPoint;
-    	      this.name = defaults.name;
-    	      this.readOnly = defaults.readOnly;
-    	      this.sizeGb = defaults.sizeGb;
-    	      this.source = defaults.source;
-    	      this.type = defaults.type;
+            $ = new DiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mountPoint(@Nullable Output<String> mountPoint) {
-            this.mountPoint = mountPoint;
+            $.mountPoint = mountPoint;
             return this;
         }
-        public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Codegen.ofNullable(mountPoint);
-            return this;
+
+        public Builder mountPoint(String mountPoint) {
+            return mountPoint(Output.of(mountPoint));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
-            this.sizeGb = sizeGb;
+            $.sizeGb = sizeGb;
             return this;
         }
-        public Builder sizeGb(@Nullable Integer sizeGb) {
-            this.sizeGb = Codegen.ofNullable(sizeGb);
-            return this;
+
+        public Builder sizeGb(Integer sizeGb) {
+            return sizeGb(Output.of(sizeGb));
         }
+
         public Builder source(@Nullable Output<String> source) {
-            this.source = source;
+            $.source = source;
             return this;
         }
-        public Builder source(@Nullable String source) {
-            this.source = Codegen.ofNullable(source);
-            return this;
+
+        public Builder source(String source) {
+            return source(Output.of(source));
         }
+
         public Builder type(Output<DiskType> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(DiskType type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public DiskArgs build() {
-            return new DiskArgs(mountPoint, name, readOnly, sizeGb, source, type);
+            return type(Output.of(type));
+        }
+
+        public DiskArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

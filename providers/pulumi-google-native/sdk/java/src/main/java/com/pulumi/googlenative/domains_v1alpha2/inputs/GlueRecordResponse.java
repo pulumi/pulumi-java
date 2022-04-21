@@ -22,7 +22,7 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostName", required=true)
-      private final String hostName;
+    private String hostName;
 
     public String hostName() {
         return this.hostName;
@@ -33,7 +33,7 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv4Addresses", required=true)
-      private final List<String> ipv4Addresses;
+    private List<String> ipv4Addresses;
 
     public List<String> ipv4Addresses() {
         return this.ipv4Addresses;
@@ -44,70 +44,67 @@ public final class GlueRecordResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipv6Addresses", required=true)
-      private final List<String> ipv6Addresses;
+    private List<String> ipv6Addresses;
 
     public List<String> ipv6Addresses() {
         return this.ipv6Addresses;
     }
 
-    public GlueRecordResponse(
-        String hostName,
-        List<String> ipv4Addresses,
-        List<String> ipv6Addresses) {
-        this.hostName = Objects.requireNonNull(hostName, "expected parameter 'hostName' to be non-null");
-        this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses, "expected parameter 'ipv4Addresses' to be non-null");
-        this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses, "expected parameter 'ipv6Addresses' to be non-null");
-    }
+    private GlueRecordResponse() {}
 
-    private GlueRecordResponse() {
-        this.hostName = null;
-        this.ipv4Addresses = List.of();
-        this.ipv6Addresses = List.of();
+    private GlueRecordResponse(GlueRecordResponse $) {
+        this.hostName = $.hostName;
+        this.ipv4Addresses = $.ipv4Addresses;
+        this.ipv6Addresses = $.ipv6Addresses;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlueRecordResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostName;
-        private List<String> ipv4Addresses;
-        private List<String> ipv6Addresses;
+        private GlueRecordResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlueRecordResponse();
         }
 
         public Builder(GlueRecordResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostName = defaults.hostName;
-    	      this.ipv4Addresses = defaults.ipv4Addresses;
-    	      this.ipv6Addresses = defaults.ipv6Addresses;
+            $ = new GlueRecordResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostName(String hostName) {
-            this.hostName = Objects.requireNonNull(hostName);
+            $.hostName = hostName;
             return this;
         }
+
         public Builder ipv4Addresses(List<String> ipv4Addresses) {
-            this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
+            $.ipv4Addresses = ipv4Addresses;
             return this;
         }
+
         public Builder ipv4Addresses(String... ipv4Addresses) {
             return ipv4Addresses(List.of(ipv4Addresses));
         }
+
         public Builder ipv6Addresses(List<String> ipv6Addresses) {
-            this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
+            $.ipv6Addresses = ipv6Addresses;
             return this;
         }
+
         public Builder ipv6Addresses(String... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
-        }        public GlueRecordResponse build() {
-            return new GlueRecordResponse(hostName, ipv4Addresses, ipv6Addresses);
+        }
+
+        public GlueRecordResponse build() {
+            $.hostName = Objects.requireNonNull($.hostName, "expected parameter 'hostName' to be non-null");
+            $.ipv4Addresses = Objects.requireNonNull($.ipv4Addresses, "expected parameter 'ipv4Addresses' to be non-null");
+            $.ipv6Addresses = Objects.requireNonNull($.ipv6Addresses, "expected parameter 'ipv6Addresses' to be non-null");
+            return $;
         }
     }
+
 }

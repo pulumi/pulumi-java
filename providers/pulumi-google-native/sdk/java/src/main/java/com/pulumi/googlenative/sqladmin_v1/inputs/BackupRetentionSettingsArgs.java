@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1.enums.BackupRetentionSettingsRetentionUnit;
 import java.lang.Integer;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="retainedBackups")
-      private final @Nullable Output<Integer> retainedBackups;
+    private @Nullable Output<Integer> retainedBackups;
 
-    public Output<Integer> retainedBackups() {
-        return this.retainedBackups == null ? Codegen.empty() : this.retainedBackups;
+    public Optional<Output<Integer>> retainedBackups() {
+        return Optional.ofNullable(this.retainedBackups);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class BackupRetentionSettingsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="retentionUnit")
-      private final @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
+    private @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
 
-    public Output<BackupRetentionSettingsRetentionUnit> retentionUnit() {
-        return this.retentionUnit == null ? Codegen.empty() : this.retentionUnit;
+    public Optional<Output<BackupRetentionSettingsRetentionUnit>> retentionUnit() {
+        return Optional.ofNullable(this.retentionUnit);
     }
 
-    public BackupRetentionSettingsArgs(
-        @Nullable Output<Integer> retainedBackups,
-        @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit) {
-        this.retainedBackups = retainedBackups;
-        this.retentionUnit = retentionUnit;
-    }
+    private BackupRetentionSettingsArgs() {}
 
-    private BackupRetentionSettingsArgs() {
-        this.retainedBackups = Codegen.empty();
-        this.retentionUnit = Codegen.empty();
+    private BackupRetentionSettingsArgs(BackupRetentionSettingsArgs $) {
+        this.retainedBackups = $.retainedBackups;
+        this.retentionUnit = $.retentionUnit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BackupRetentionSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> retainedBackups;
-        private @Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit;
+        private BackupRetentionSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BackupRetentionSettingsArgs();
         }
 
         public Builder(BackupRetentionSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.retainedBackups = defaults.retainedBackups;
-    	      this.retentionUnit = defaults.retentionUnit;
+            $ = new BackupRetentionSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder retainedBackups(@Nullable Output<Integer> retainedBackups) {
-            this.retainedBackups = retainedBackups;
+            $.retainedBackups = retainedBackups;
             return this;
         }
-        public Builder retainedBackups(@Nullable Integer retainedBackups) {
-            this.retainedBackups = Codegen.ofNullable(retainedBackups);
-            return this;
+
+        public Builder retainedBackups(Integer retainedBackups) {
+            return retainedBackups(Output.of(retainedBackups));
         }
+
         public Builder retentionUnit(@Nullable Output<BackupRetentionSettingsRetentionUnit> retentionUnit) {
-            this.retentionUnit = retentionUnit;
+            $.retentionUnit = retentionUnit;
             return this;
         }
-        public Builder retentionUnit(@Nullable BackupRetentionSettingsRetentionUnit retentionUnit) {
-            this.retentionUnit = Codegen.ofNullable(retentionUnit);
-            return this;
-        }        public BackupRetentionSettingsArgs build() {
-            return new BackupRetentionSettingsArgs(retainedBackups, retentionUnit);
+
+        public Builder retentionUnit(BackupRetentionSettingsRetentionUnit retentionUnit) {
+            return retentionUnit(Output.of(retentionUnit));
+        }
+
+        public BackupRetentionSettingsArgs build() {
+            return $;
         }
     }
+
 }

@@ -15,62 +15,58 @@ public final class GetMetricDescriptorArgs extends com.pulumi.resources.InvokeAr
     public static final GetMetricDescriptorArgs Empty = new GetMetricDescriptorArgs();
 
     @Import(name="metricDescriptorId", required=true)
-      private final String metricDescriptorId;
+    private String metricDescriptorId;
 
     public String metricDescriptorId() {
         return this.metricDescriptorId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetMetricDescriptorArgs(
-        String metricDescriptorId,
-        @Nullable String project) {
-        this.metricDescriptorId = Objects.requireNonNull(metricDescriptorId, "expected parameter 'metricDescriptorId' to be non-null");
-        this.project = project;
-    }
+    private GetMetricDescriptorArgs() {}
 
-    private GetMetricDescriptorArgs() {
-        this.metricDescriptorId = null;
-        this.project = null;
+    private GetMetricDescriptorArgs(GetMetricDescriptorArgs $) {
+        this.metricDescriptorId = $.metricDescriptorId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetMetricDescriptorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String metricDescriptorId;
-        private @Nullable String project;
+        private GetMetricDescriptorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetMetricDescriptorArgs();
         }
 
         public Builder(GetMetricDescriptorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricDescriptorId = defaults.metricDescriptorId;
-    	      this.project = defaults.project;
+            $ = new GetMetricDescriptorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricDescriptorId(String metricDescriptorId) {
-            this.metricDescriptorId = Objects.requireNonNull(metricDescriptorId);
+            $.metricDescriptorId = metricDescriptorId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetMetricDescriptorArgs build() {
-            return new GetMetricDescriptorArgs(metricDescriptorId, project);
+        }
+
+        public GetMetricDescriptorArgs build() {
+            $.metricDescriptorId = Objects.requireNonNull($.metricDescriptorId, "expected parameter 'metricDescriptorId' to be non-null");
+            return $;
         }
     }
+
 }

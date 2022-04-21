@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageSummaryKind;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.ComponentSourceArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.ComponentTransformArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.dataflow_v1b3.inputs.StageSourceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="componentSource")
-      private final @Nullable Output<List<ComponentSourceArgs>> componentSource;
+    private @Nullable Output<List<ComponentSourceArgs>> componentSource;
 
-    public Output<List<ComponentSourceArgs>> componentSource() {
-        return this.componentSource == null ? Codegen.empty() : this.componentSource;
+    public Optional<Output<List<ComponentSourceArgs>>> componentSource() {
+        return Optional.ofNullable(this.componentSource);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="componentTransform")
-      private final @Nullable Output<List<ComponentTransformArgs>> componentTransform;
+    private @Nullable Output<List<ComponentTransformArgs>> componentTransform;
 
-    public Output<List<ComponentTransformArgs>> componentTransform() {
-        return this.componentTransform == null ? Codegen.empty() : this.componentTransform;
+    public Optional<Output<List<ComponentTransformArgs>>> componentTransform() {
+        return Optional.ofNullable(this.componentTransform);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="inputSource")
-      private final @Nullable Output<List<StageSourceArgs>> inputSource;
+    private @Nullable Output<List<StageSourceArgs>> inputSource;
 
-    public Output<List<StageSourceArgs>> inputSource() {
-        return this.inputSource == null ? Codegen.empty() : this.inputSource;
+    public Optional<Output<List<StageSourceArgs>>> inputSource() {
+        return Optional.ofNullable(this.inputSource);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<ExecutionStageSummaryKind> kind;
+    private @Nullable Output<ExecutionStageSummaryKind> kind;
 
-    public Output<ExecutionStageSummaryKind> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<ExecutionStageSummaryKind>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -84,10 +84,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -95,10 +95,10 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="outputSource")
-      private final @Nullable Output<List<StageSourceArgs>> outputSource;
+    private @Nullable Output<List<StageSourceArgs>> outputSource;
 
-    public Output<List<StageSourceArgs>> outputSource() {
-        return this.outputSource == null ? Codegen.empty() : this.outputSource;
+    public Optional<Output<List<StageSourceArgs>>> outputSource() {
+        return Optional.ofNullable(this.outputSource);
     }
 
     /**
@@ -106,156 +106,138 @@ public final class ExecutionStageSummaryArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="prerequisiteStage")
-      private final @Nullable Output<List<String>> prerequisiteStage;
+    private @Nullable Output<List<String>> prerequisiteStage;
 
-    public Output<List<String>> prerequisiteStage() {
-        return this.prerequisiteStage == null ? Codegen.empty() : this.prerequisiteStage;
+    public Optional<Output<List<String>>> prerequisiteStage() {
+        return Optional.ofNullable(this.prerequisiteStage);
     }
 
-    public ExecutionStageSummaryArgs(
-        @Nullable Output<List<ComponentSourceArgs>> componentSource,
-        @Nullable Output<List<ComponentTransformArgs>> componentTransform,
-        @Nullable Output<String> id,
-        @Nullable Output<List<StageSourceArgs>> inputSource,
-        @Nullable Output<ExecutionStageSummaryKind> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<List<StageSourceArgs>> outputSource,
-        @Nullable Output<List<String>> prerequisiteStage) {
-        this.componentSource = componentSource;
-        this.componentTransform = componentTransform;
-        this.id = id;
-        this.inputSource = inputSource;
-        this.kind = kind;
-        this.name = name;
-        this.outputSource = outputSource;
-        this.prerequisiteStage = prerequisiteStage;
-    }
+    private ExecutionStageSummaryArgs() {}
 
-    private ExecutionStageSummaryArgs() {
-        this.componentSource = Codegen.empty();
-        this.componentTransform = Codegen.empty();
-        this.id = Codegen.empty();
-        this.inputSource = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.outputSource = Codegen.empty();
-        this.prerequisiteStage = Codegen.empty();
+    private ExecutionStageSummaryArgs(ExecutionStageSummaryArgs $) {
+        this.componentSource = $.componentSource;
+        this.componentTransform = $.componentTransform;
+        this.id = $.id;
+        this.inputSource = $.inputSource;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.outputSource = $.outputSource;
+        this.prerequisiteStage = $.prerequisiteStage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExecutionStageSummaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ComponentSourceArgs>> componentSource;
-        private @Nullable Output<List<ComponentTransformArgs>> componentTransform;
-        private @Nullable Output<String> id;
-        private @Nullable Output<List<StageSourceArgs>> inputSource;
-        private @Nullable Output<ExecutionStageSummaryKind> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<StageSourceArgs>> outputSource;
-        private @Nullable Output<List<String>> prerequisiteStage;
+        private ExecutionStageSummaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExecutionStageSummaryArgs();
         }
 
         public Builder(ExecutionStageSummaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.componentSource = defaults.componentSource;
-    	      this.componentTransform = defaults.componentTransform;
-    	      this.id = defaults.id;
-    	      this.inputSource = defaults.inputSource;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.outputSource = defaults.outputSource;
-    	      this.prerequisiteStage = defaults.prerequisiteStage;
+            $ = new ExecutionStageSummaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder componentSource(@Nullable Output<List<ComponentSourceArgs>> componentSource) {
-            this.componentSource = componentSource;
+            $.componentSource = componentSource;
             return this;
         }
-        public Builder componentSource(@Nullable List<ComponentSourceArgs> componentSource) {
-            this.componentSource = Codegen.ofNullable(componentSource);
-            return this;
+
+        public Builder componentSource(List<ComponentSourceArgs> componentSource) {
+            return componentSource(Output.of(componentSource));
         }
+
         public Builder componentSource(ComponentSourceArgs... componentSource) {
             return componentSource(List.of(componentSource));
         }
+
         public Builder componentTransform(@Nullable Output<List<ComponentTransformArgs>> componentTransform) {
-            this.componentTransform = componentTransform;
+            $.componentTransform = componentTransform;
             return this;
         }
-        public Builder componentTransform(@Nullable List<ComponentTransformArgs> componentTransform) {
-            this.componentTransform = Codegen.ofNullable(componentTransform);
-            return this;
+
+        public Builder componentTransform(List<ComponentTransformArgs> componentTransform) {
+            return componentTransform(Output.of(componentTransform));
         }
+
         public Builder componentTransform(ComponentTransformArgs... componentTransform) {
             return componentTransform(List.of(componentTransform));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder inputSource(@Nullable Output<List<StageSourceArgs>> inputSource) {
-            this.inputSource = inputSource;
+            $.inputSource = inputSource;
             return this;
         }
-        public Builder inputSource(@Nullable List<StageSourceArgs> inputSource) {
-            this.inputSource = Codegen.ofNullable(inputSource);
-            return this;
+
+        public Builder inputSource(List<StageSourceArgs> inputSource) {
+            return inputSource(Output.of(inputSource));
         }
+
         public Builder inputSource(StageSourceArgs... inputSource) {
             return inputSource(List.of(inputSource));
         }
+
         public Builder kind(@Nullable Output<ExecutionStageSummaryKind> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable ExecutionStageSummaryKind kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(ExecutionStageSummaryKind kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder outputSource(@Nullable Output<List<StageSourceArgs>> outputSource) {
-            this.outputSource = outputSource;
+            $.outputSource = outputSource;
             return this;
         }
-        public Builder outputSource(@Nullable List<StageSourceArgs> outputSource) {
-            this.outputSource = Codegen.ofNullable(outputSource);
-            return this;
+
+        public Builder outputSource(List<StageSourceArgs> outputSource) {
+            return outputSource(Output.of(outputSource));
         }
+
         public Builder outputSource(StageSourceArgs... outputSource) {
             return outputSource(List.of(outputSource));
         }
+
         public Builder prerequisiteStage(@Nullable Output<List<String>> prerequisiteStage) {
-            this.prerequisiteStage = prerequisiteStage;
+            $.prerequisiteStage = prerequisiteStage;
             return this;
         }
-        public Builder prerequisiteStage(@Nullable List<String> prerequisiteStage) {
-            this.prerequisiteStage = Codegen.ofNullable(prerequisiteStage);
-            return this;
+
+        public Builder prerequisiteStage(List<String> prerequisiteStage) {
+            return prerequisiteStage(Output.of(prerequisiteStage));
         }
+
         public Builder prerequisiteStage(String... prerequisiteStage) {
             return prerequisiteStage(List.of(prerequisiteStage));
-        }        public ExecutionStageSummaryArgs build() {
-            return new ExecutionStageSummaryArgs(componentSource, componentTransform, id, inputSource, kind, name, outputSource, prerequisiteStage);
+        }
+
+        public ExecutionStageSummaryArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends com
      * 
      */
     @Import(name="messageFormat", required=true)
-      private final String messageFormat;
+    private String messageFormat;
 
     public String messageFormat() {
         return this.messageFormat;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends com
      * 
      */
     @Import(name="topic", required=true)
-      private final String topic;
+    private String topic;
 
     public String topic() {
         return this.topic;
     }
 
-    public GoogleCloudDialogflowV2NotificationConfigResponse(
-        String messageFormat,
-        String topic) {
-        this.messageFormat = Objects.requireNonNull(messageFormat, "expected parameter 'messageFormat' to be non-null");
-        this.topic = Objects.requireNonNull(topic, "expected parameter 'topic' to be non-null");
-    }
+    private GoogleCloudDialogflowV2NotificationConfigResponse() {}
 
-    private GoogleCloudDialogflowV2NotificationConfigResponse() {
-        this.messageFormat = null;
-        this.topic = null;
+    private GoogleCloudDialogflowV2NotificationConfigResponse(GoogleCloudDialogflowV2NotificationConfigResponse $) {
+        this.messageFormat = $.messageFormat;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2NotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String messageFormat;
-        private String topic;
+        private GoogleCloudDialogflowV2NotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2NotificationConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2NotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.messageFormat = defaults.messageFormat;
-    	      this.topic = defaults.topic;
+            $ = new GoogleCloudDialogflowV2NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder messageFormat(String messageFormat) {
-            this.messageFormat = Objects.requireNonNull(messageFormat);
+            $.messageFormat = messageFormat;
             return this;
         }
+
         public Builder topic(String topic) {
-            this.topic = Objects.requireNonNull(topic);
+            $.topic = topic;
             return this;
-        }        public GoogleCloudDialogflowV2NotificationConfigResponse build() {
-            return new GoogleCloudDialogflowV2NotificationConfigResponse(messageFormat, topic);
+        }
+
+        public GoogleCloudDialogflowV2NotificationConfigResponse build() {
+            $.messageFormat = Objects.requireNonNull($.messageFormat, "expected parameter 'messageFormat' to be non-null");
+            $.topic = Objects.requireNonNull($.topic, "expected parameter 'topic' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      * 
      */
     @Import(name="setupErrors", required=true)
-      private final List<String> setupErrors;
+    private List<String> setupErrors;
 
     public List<String> setupErrors() {
         return this.setupErrors;
@@ -33,58 +33,56 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      * 
      */
     @Import(name="setupStatus", required=true)
-      private final String setupStatus;
+    private String setupStatus;
 
     public String setupStatus() {
         return this.setupStatus;
     }
 
-    public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(
-        List<String> setupErrors,
-        String setupStatus) {
-        this.setupErrors = Objects.requireNonNull(setupErrors, "expected parameter 'setupErrors' to be non-null");
-        this.setupStatus = Objects.requireNonNull(setupStatus, "expected parameter 'setupStatus' to be non-null");
-    }
+    private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse() {}
 
-    private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse() {
-        this.setupErrors = List.of();
-        this.setupStatus = null;
+    private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse $) {
+        this.setupErrors = $.setupErrors;
+        this.setupStatus = $.setupStatus;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> setupErrors;
-        private String setupStatus;
+        private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse();
         }
 
         public Builder(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.setupErrors = defaults.setupErrors;
-    	      this.setupStatus = defaults.setupStatus;
+            $ = new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder setupErrors(List<String> setupErrors) {
-            this.setupErrors = Objects.requireNonNull(setupErrors);
+            $.setupErrors = setupErrors;
             return this;
         }
+
         public Builder setupErrors(String... setupErrors) {
             return setupErrors(List.of(setupErrors));
         }
+
         public Builder setupStatus(String setupStatus) {
-            this.setupStatus = Objects.requireNonNull(setupStatus);
+            $.setupStatus = setupStatus;
             return this;
-        }        public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
-            return new GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(setupErrors, setupStatus);
+        }
+
+        public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse build() {
+            $.setupErrors = Objects.requireNonNull($.setupErrors, "expected parameter 'setupErrors' to be non-null");
+            $.setupStatus = Objects.requireNonNull($.setupStatus, "expected parameter 'setupStatus' to be non-null");
+            return $;
         }
     }
+
 }

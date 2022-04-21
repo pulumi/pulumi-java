@@ -21,7 +21,7 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="persistenceMode", required=true)
-      private final String persistenceMode;
+    private String persistenceMode;
 
     public String persistenceMode() {
         return this.persistenceMode;
@@ -32,7 +32,7 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rdbNextSnapshotTime", required=true)
-      private final String rdbNextSnapshotTime;
+    private String rdbNextSnapshotTime;
 
     public String rdbNextSnapshotTime() {
         return this.rdbNextSnapshotTime;
@@ -43,7 +43,7 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rdbSnapshotPeriod", required=true)
-      private final String rdbSnapshotPeriod;
+    private String rdbSnapshotPeriod;
 
     public String rdbSnapshotPeriod() {
         return this.rdbSnapshotPeriod;
@@ -54,73 +54,66 @@ public final class PersistenceConfigResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="rdbSnapshotStartTime", required=true)
-      private final String rdbSnapshotStartTime;
+    private String rdbSnapshotStartTime;
 
     public String rdbSnapshotStartTime() {
         return this.rdbSnapshotStartTime;
     }
 
-    public PersistenceConfigResponse(
-        String persistenceMode,
-        String rdbNextSnapshotTime,
-        String rdbSnapshotPeriod,
-        String rdbSnapshotStartTime) {
-        this.persistenceMode = Objects.requireNonNull(persistenceMode, "expected parameter 'persistenceMode' to be non-null");
-        this.rdbNextSnapshotTime = Objects.requireNonNull(rdbNextSnapshotTime, "expected parameter 'rdbNextSnapshotTime' to be non-null");
-        this.rdbSnapshotPeriod = Objects.requireNonNull(rdbSnapshotPeriod, "expected parameter 'rdbSnapshotPeriod' to be non-null");
-        this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime, "expected parameter 'rdbSnapshotStartTime' to be non-null");
-    }
+    private PersistenceConfigResponse() {}
 
-    private PersistenceConfigResponse() {
-        this.persistenceMode = null;
-        this.rdbNextSnapshotTime = null;
-        this.rdbSnapshotPeriod = null;
-        this.rdbSnapshotStartTime = null;
+    private PersistenceConfigResponse(PersistenceConfigResponse $) {
+        this.persistenceMode = $.persistenceMode;
+        this.rdbNextSnapshotTime = $.rdbNextSnapshotTime;
+        this.rdbSnapshotPeriod = $.rdbSnapshotPeriod;
+        this.rdbSnapshotStartTime = $.rdbSnapshotStartTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistenceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String persistenceMode;
-        private String rdbNextSnapshotTime;
-        private String rdbSnapshotPeriod;
-        private String rdbSnapshotStartTime;
+        private PersistenceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistenceConfigResponse();
         }
 
         public Builder(PersistenceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.persistenceMode = defaults.persistenceMode;
-    	      this.rdbNextSnapshotTime = defaults.rdbNextSnapshotTime;
-    	      this.rdbSnapshotPeriod = defaults.rdbSnapshotPeriod;
-    	      this.rdbSnapshotStartTime = defaults.rdbSnapshotStartTime;
+            $ = new PersistenceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder persistenceMode(String persistenceMode) {
-            this.persistenceMode = Objects.requireNonNull(persistenceMode);
+            $.persistenceMode = persistenceMode;
             return this;
         }
+
         public Builder rdbNextSnapshotTime(String rdbNextSnapshotTime) {
-            this.rdbNextSnapshotTime = Objects.requireNonNull(rdbNextSnapshotTime);
+            $.rdbNextSnapshotTime = rdbNextSnapshotTime;
             return this;
         }
+
         public Builder rdbSnapshotPeriod(String rdbSnapshotPeriod) {
-            this.rdbSnapshotPeriod = Objects.requireNonNull(rdbSnapshotPeriod);
+            $.rdbSnapshotPeriod = rdbSnapshotPeriod;
             return this;
         }
+
         public Builder rdbSnapshotStartTime(String rdbSnapshotStartTime) {
-            this.rdbSnapshotStartTime = Objects.requireNonNull(rdbSnapshotStartTime);
+            $.rdbSnapshotStartTime = rdbSnapshotStartTime;
             return this;
-        }        public PersistenceConfigResponse build() {
-            return new PersistenceConfigResponse(persistenceMode, rdbNextSnapshotTime, rdbSnapshotPeriod, rdbSnapshotStartTime);
+        }
+
+        public PersistenceConfigResponse build() {
+            $.persistenceMode = Objects.requireNonNull($.persistenceMode, "expected parameter 'persistenceMode' to be non-null");
+            $.rdbNextSnapshotTime = Objects.requireNonNull($.rdbNextSnapshotTime, "expected parameter 'rdbNextSnapshotTime' to be non-null");
+            $.rdbSnapshotPeriod = Objects.requireNonNull($.rdbSnapshotPeriod, "expected parameter 'rdbSnapshotPeriod' to be non-null");
+            $.rdbSnapshotStartTime = Objects.requireNonNull($.rdbSnapshotStartTime, "expected parameter 'rdbSnapshotStartTime' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.vmmigration_v1alpha1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -16,21 +16,21 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
     public static final CloneJobArgs Empty = new CloneJobArgs();
 
     @Import(name="cloneJobId", required=true)
-      private final Output<String> cloneJobId;
+    private Output<String> cloneJobId;
 
     public Output<String> cloneJobId() {
         return this.cloneJobId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="migratingVmId", required=true)
-      private final Output<String> migratingVmId;
+    private Output<String> migratingVmId;
 
     public Output<String> migratingVmId() {
         return this.migratingVmId;
@@ -41,149 +41,132 @@ public final class CloneJobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     @Import(name="sourceId", required=true)
-      private final Output<String> sourceId;
+    private Output<String> sourceId;
 
     public Output<String> sourceId() {
         return this.sourceId;
     }
 
-    public CloneJobArgs(
-        Output<String> cloneJobId,
-        @Nullable Output<String> location,
-        Output<String> migratingVmId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<String> sourceId) {
-        this.cloneJobId = Objects.requireNonNull(cloneJobId, "expected parameter 'cloneJobId' to be non-null");
-        this.location = location;
-        this.migratingVmId = Objects.requireNonNull(migratingVmId, "expected parameter 'migratingVmId' to be non-null");
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.sourceId = Objects.requireNonNull(sourceId, "expected parameter 'sourceId' to be non-null");
-    }
+    private CloneJobArgs() {}
 
-    private CloneJobArgs() {
-        this.cloneJobId = Codegen.empty();
-        this.location = Codegen.empty();
-        this.migratingVmId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.sourceId = Codegen.empty();
+    private CloneJobArgs(CloneJobArgs $) {
+        this.cloneJobId = $.cloneJobId;
+        this.location = $.location;
+        this.migratingVmId = $.migratingVmId;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.sourceId = $.sourceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloneJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> cloneJobId;
-        private @Nullable Output<String> location;
-        private Output<String> migratingVmId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<String> sourceId;
+        private CloneJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloneJobArgs();
         }
 
         public Builder(CloneJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloneJobId = defaults.cloneJobId;
-    	      this.location = defaults.location;
-    	      this.migratingVmId = defaults.migratingVmId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.sourceId = defaults.sourceId;
+            $ = new CloneJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloneJobId(Output<String> cloneJobId) {
-            this.cloneJobId = Objects.requireNonNull(cloneJobId);
+            $.cloneJobId = cloneJobId;
             return this;
         }
+
         public Builder cloneJobId(String cloneJobId) {
-            this.cloneJobId = Output.of(Objects.requireNonNull(cloneJobId));
-            return this;
+            return cloneJobId(Output.of(cloneJobId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder migratingVmId(Output<String> migratingVmId) {
-            this.migratingVmId = Objects.requireNonNull(migratingVmId);
+            $.migratingVmId = migratingVmId;
             return this;
         }
+
         public Builder migratingVmId(String migratingVmId) {
-            this.migratingVmId = Output.of(Objects.requireNonNull(migratingVmId));
-            return this;
+            return migratingVmId(Output.of(migratingVmId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder sourceId(Output<String> sourceId) {
-            this.sourceId = Objects.requireNonNull(sourceId);
+            $.sourceId = sourceId;
             return this;
         }
+
         public Builder sourceId(String sourceId) {
-            this.sourceId = Output.of(Objects.requireNonNull(sourceId));
-            return this;
-        }        public CloneJobArgs build() {
-            return new CloneJobArgs(cloneJobId, location, migratingVmId, name, project, requestId, sourceId);
+            return sourceId(Output.of(sourceId));
+        }
+
+        public CloneJobArgs build() {
+            $.cloneJobId = Objects.requireNonNull($.cloneJobId, "expected parameter 'cloneJobId' to be non-null");
+            $.migratingVmId = Objects.requireNonNull($.migratingVmId, "expected parameter 'migratingVmId' to be non-null");
+            $.sourceId = Objects.requireNonNull($.sourceId, "expected parameter 'sourceId' to be non-null");
+            return $;
         }
     }
+
 }

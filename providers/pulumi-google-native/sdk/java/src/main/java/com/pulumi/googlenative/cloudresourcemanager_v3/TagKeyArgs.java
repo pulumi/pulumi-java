@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudresourcemanager_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,10 +31,10 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -53,10 +53,10 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -64,122 +64,106 @@ public final class TagKeyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="shortName", required=true)
-      private final Output<String> shortName;
+    private Output<String> shortName;
 
     public Output<String> shortName() {
         return this.shortName;
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public TagKeyArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        Output<String> shortName,
-        @Nullable Output<String> validateOnly) {
-        this.description = description;
-        this.etag = etag;
-        this.name = name;
-        this.parent = parent;
-        this.shortName = Objects.requireNonNull(shortName, "expected parameter 'shortName' to be non-null");
-        this.validateOnly = validateOnly;
-    }
+    private TagKeyArgs() {}
 
-    private TagKeyArgs() {
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.shortName = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private TagKeyArgs(TagKeyArgs $) {
+        this.description = $.description;
+        this.etag = $.etag;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.shortName = $.shortName;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TagKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private Output<String> shortName;
-        private @Nullable Output<String> validateOnly;
+        private TagKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TagKeyArgs();
         }
 
         public Builder(TagKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.shortName = defaults.shortName;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new TagKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder shortName(Output<String> shortName) {
-            this.shortName = Objects.requireNonNull(shortName);
+            $.shortName = shortName;
             return this;
         }
+
         public Builder shortName(String shortName) {
-            this.shortName = Output.of(Objects.requireNonNull(shortName));
-            return this;
+            return shortName(Output.of(shortName));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public TagKeyArgs build() {
-            return new TagKeyArgs(description, etag, name, parent, shortName, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public TagKeyArgs build() {
+            $.shortName = Objects.requireNonNull($.shortName, "expected parameter 'shortName' to be non-null");
+            return $;
         }
     }
+
 }

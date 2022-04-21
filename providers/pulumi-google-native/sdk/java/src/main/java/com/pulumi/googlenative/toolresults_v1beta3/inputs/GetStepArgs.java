@@ -15,94 +15,86 @@ public final class GetStepArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetStepArgs Empty = new GetStepArgs();
 
     @Import(name="executionId", required=true)
-      private final String executionId;
+    private String executionId;
 
     public String executionId() {
         return this.executionId;
     }
 
     @Import(name="historyId", required=true)
-      private final String historyId;
+    private String historyId;
 
     public String historyId() {
         return this.historyId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="stepId", required=true)
-      private final String stepId;
+    private String stepId;
 
     public String stepId() {
         return this.stepId;
     }
 
-    public GetStepArgs(
-        String executionId,
-        String historyId,
-        @Nullable String project,
-        String stepId) {
-        this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.project = project;
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private GetStepArgs() {}
 
-    private GetStepArgs() {
-        this.executionId = null;
-        this.historyId = null;
-        this.project = null;
-        this.stepId = null;
+    private GetStepArgs(GetStepArgs $) {
+        this.executionId = $.executionId;
+        this.historyId = $.historyId;
+        this.project = $.project;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetStepArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String executionId;
-        private String historyId;
-        private @Nullable String project;
-        private String stepId;
+        private GetStepArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetStepArgs();
         }
 
         public Builder(GetStepArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionId = defaults.executionId;
-    	      this.historyId = defaults.historyId;
-    	      this.project = defaults.project;
-    	      this.stepId = defaults.stepId;
+            $ = new GetStepArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Objects.requireNonNull(executionId);
+            $.executionId = executionId;
             return this;
         }
+
         public Builder historyId(String historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
-        }        public GetStepArgs build() {
-            return new GetStepArgs(executionId, historyId, project, stepId);
+        }
+
+        public GetStepArgs build() {
+            $.executionId = Objects.requireNonNull($.executionId, "expected parameter 'executionId' to be non-null");
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

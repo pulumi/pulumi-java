@@ -15,62 +15,58 @@ public final class GetEvaluationJobArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetEvaluationJobArgs Empty = new GetEvaluationJobArgs();
 
     @Import(name="evaluationJobId", required=true)
-      private final String evaluationJobId;
+    private String evaluationJobId;
 
     public String evaluationJobId() {
         return this.evaluationJobId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetEvaluationJobArgs(
-        String evaluationJobId,
-        @Nullable String project) {
-        this.evaluationJobId = Objects.requireNonNull(evaluationJobId, "expected parameter 'evaluationJobId' to be non-null");
-        this.project = project;
-    }
+    private GetEvaluationJobArgs() {}
 
-    private GetEvaluationJobArgs() {
-        this.evaluationJobId = null;
-        this.project = null;
+    private GetEvaluationJobArgs(GetEvaluationJobArgs $) {
+        this.evaluationJobId = $.evaluationJobId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetEvaluationJobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String evaluationJobId;
-        private @Nullable String project;
+        private GetEvaluationJobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetEvaluationJobArgs();
         }
 
         public Builder(GetEvaluationJobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.evaluationJobId = defaults.evaluationJobId;
-    	      this.project = defaults.project;
+            $ = new GetEvaluationJobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder evaluationJobId(String evaluationJobId) {
-            this.evaluationJobId = Objects.requireNonNull(evaluationJobId);
+            $.evaluationJobId = evaluationJobId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetEvaluationJobArgs build() {
-            return new GetEvaluationJobArgs(evaluationJobId, project);
+        }
+
+        public GetEvaluationJobArgs build() {
+            $.evaluationJobId = Objects.requireNonNull($.evaluationJobId, "expected parameter 'evaluationJobId' to be non-null");
+            return $;
         }
     }
+
 }

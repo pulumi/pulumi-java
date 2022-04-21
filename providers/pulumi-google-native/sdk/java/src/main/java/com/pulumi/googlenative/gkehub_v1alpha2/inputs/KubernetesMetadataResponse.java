@@ -22,7 +22,7 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kubernetesApiServerVersion", required=true)
-      private final String kubernetesApiServerVersion;
+    private String kubernetesApiServerVersion;
 
     public String kubernetesApiServerVersion() {
         return this.kubernetesApiServerVersion;
@@ -33,7 +33,7 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="memoryMb", required=true)
-      private final Integer memoryMb;
+    private Integer memoryMb;
 
     public Integer memoryMb() {
         return this.memoryMb;
@@ -44,7 +44,7 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeCount", required=true)
-      private final Integer nodeCount;
+    private Integer nodeCount;
 
     public Integer nodeCount() {
         return this.nodeCount;
@@ -55,7 +55,7 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="nodeProviderId", required=true)
-      private final String nodeProviderId;
+    private String nodeProviderId;
 
     public String nodeProviderId() {
         return this.nodeProviderId;
@@ -66,7 +66,7 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
@@ -77,91 +77,80 @@ public final class KubernetesMetadataResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="vcpuCount", required=true)
-      private final Integer vcpuCount;
+    private Integer vcpuCount;
 
     public Integer vcpuCount() {
         return this.vcpuCount;
     }
 
-    public KubernetesMetadataResponse(
-        String kubernetesApiServerVersion,
-        Integer memoryMb,
-        Integer nodeCount,
-        String nodeProviderId,
-        String updateTime,
-        Integer vcpuCount) {
-        this.kubernetesApiServerVersion = Objects.requireNonNull(kubernetesApiServerVersion, "expected parameter 'kubernetesApiServerVersion' to be non-null");
-        this.memoryMb = Objects.requireNonNull(memoryMb, "expected parameter 'memoryMb' to be non-null");
-        this.nodeCount = Objects.requireNonNull(nodeCount, "expected parameter 'nodeCount' to be non-null");
-        this.nodeProviderId = Objects.requireNonNull(nodeProviderId, "expected parameter 'nodeProviderId' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-        this.vcpuCount = Objects.requireNonNull(vcpuCount, "expected parameter 'vcpuCount' to be non-null");
-    }
+    private KubernetesMetadataResponse() {}
 
-    private KubernetesMetadataResponse() {
-        this.kubernetesApiServerVersion = null;
-        this.memoryMb = null;
-        this.nodeCount = null;
-        this.nodeProviderId = null;
-        this.updateTime = null;
-        this.vcpuCount = null;
+    private KubernetesMetadataResponse(KubernetesMetadataResponse $) {
+        this.kubernetesApiServerVersion = $.kubernetesApiServerVersion;
+        this.memoryMb = $.memoryMb;
+        this.nodeCount = $.nodeCount;
+        this.nodeProviderId = $.nodeProviderId;
+        this.updateTime = $.updateTime;
+        this.vcpuCount = $.vcpuCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KubernetesMetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kubernetesApiServerVersion;
-        private Integer memoryMb;
-        private Integer nodeCount;
-        private String nodeProviderId;
-        private String updateTime;
-        private Integer vcpuCount;
+        private KubernetesMetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KubernetesMetadataResponse();
         }
 
         public Builder(KubernetesMetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kubernetesApiServerVersion = defaults.kubernetesApiServerVersion;
-    	      this.memoryMb = defaults.memoryMb;
-    	      this.nodeCount = defaults.nodeCount;
-    	      this.nodeProviderId = defaults.nodeProviderId;
-    	      this.updateTime = defaults.updateTime;
-    	      this.vcpuCount = defaults.vcpuCount;
+            $ = new KubernetesMetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kubernetesApiServerVersion(String kubernetesApiServerVersion) {
-            this.kubernetesApiServerVersion = Objects.requireNonNull(kubernetesApiServerVersion);
+            $.kubernetesApiServerVersion = kubernetesApiServerVersion;
             return this;
         }
+
         public Builder memoryMb(Integer memoryMb) {
-            this.memoryMb = Objects.requireNonNull(memoryMb);
+            $.memoryMb = memoryMb;
             return this;
         }
+
         public Builder nodeCount(Integer nodeCount) {
-            this.nodeCount = Objects.requireNonNull(nodeCount);
+            $.nodeCount = nodeCount;
             return this;
         }
+
         public Builder nodeProviderId(String nodeProviderId) {
-            this.nodeProviderId = Objects.requireNonNull(nodeProviderId);
+            $.nodeProviderId = nodeProviderId;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
         }
+
         public Builder vcpuCount(Integer vcpuCount) {
-            this.vcpuCount = Objects.requireNonNull(vcpuCount);
+            $.vcpuCount = vcpuCount;
             return this;
-        }        public KubernetesMetadataResponse build() {
-            return new KubernetesMetadataResponse(kubernetesApiServerVersion, memoryMb, nodeCount, nodeProviderId, updateTime, vcpuCount);
+        }
+
+        public KubernetesMetadataResponse build() {
+            $.kubernetesApiServerVersion = Objects.requireNonNull($.kubernetesApiServerVersion, "expected parameter 'kubernetesApiServerVersion' to be non-null");
+            $.memoryMb = Objects.requireNonNull($.memoryMb, "expected parameter 'memoryMb' to be non-null");
+            $.nodeCount = Objects.requireNonNull($.nodeCount, "expected parameter 'nodeCount' to be non-null");
+            $.nodeProviderId = Objects.requireNonNull($.nodeProviderId, "expected parameter 'nodeProviderId' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            $.vcpuCount = Objects.requireNonNull($.vcpuCount, "expected parameter 'vcpuCount' to be non-null");
+            return $;
         }
     }
+
 }

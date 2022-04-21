@@ -21,45 +21,45 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends com.pulumi.res
      * 
      */
     @Import(name="outputConfig", required=true)
-      private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
+    private GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
     public GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig() {
         return this.outputConfig;
     }
 
-    public GooglePrivacyDlpV2SaveFindingsResponse(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
-        this.outputConfig = Objects.requireNonNull(outputConfig, "expected parameter 'outputConfig' to be non-null");
-    }
+    private GooglePrivacyDlpV2SaveFindingsResponse() {}
 
-    private GooglePrivacyDlpV2SaveFindingsResponse() {
-        this.outputConfig = null;
+    private GooglePrivacyDlpV2SaveFindingsResponse(GooglePrivacyDlpV2SaveFindingsResponse $) {
+        this.outputConfig = $.outputConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2SaveFindingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
+        private GooglePrivacyDlpV2SaveFindingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2SaveFindingsResponse();
         }
 
         public Builder(GooglePrivacyDlpV2SaveFindingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.outputConfig = defaults.outputConfig;
+            $ = new GooglePrivacyDlpV2SaveFindingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder outputConfig(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
-            this.outputConfig = Objects.requireNonNull(outputConfig);
+            $.outputConfig = outputConfig;
             return this;
-        }        public GooglePrivacyDlpV2SaveFindingsResponse build() {
-            return new GooglePrivacyDlpV2SaveFindingsResponse(outputConfig);
+        }
+
+        public GooglePrivacyDlpV2SaveFindingsResponse build() {
+            $.outputConfig = Objects.requireNonNull($.outputConfig, "expected parameter 'outputConfig' to be non-null");
+            return $;
         }
     }
+
 }

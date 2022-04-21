@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs e
 
     public static final GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs Empty = new GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs();
 
-    public GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs();
         }
         public GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs build() {
-            return new GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs();
+            return $;
         }
     }
+
 }

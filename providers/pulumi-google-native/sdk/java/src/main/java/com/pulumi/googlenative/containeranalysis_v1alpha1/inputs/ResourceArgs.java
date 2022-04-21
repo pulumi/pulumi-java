@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.HashArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentHash")
-      private final @Nullable Output<HashArgs> contentHash;
+    private @Nullable Output<HashArgs> contentHash;
 
-    public Output<HashArgs> contentHash() {
-        return this.contentHash == null ? Codegen.empty() : this.contentHash;
+    public Optional<Output<HashArgs>> contentHash() {
+        return Optional.ofNullable(this.contentHash);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public ResourceArgs(
-        @Nullable Output<HashArgs> contentHash,
-        @Nullable Output<String> name,
-        @Nullable Output<String> uri) {
-        this.contentHash = contentHash;
-        this.name = name;
-        this.uri = uri;
-    }
+    private ResourceArgs() {}
 
-    private ResourceArgs() {
-        this.contentHash = Codegen.empty();
-        this.name = Codegen.empty();
-        this.uri = Codegen.empty();
+    private ResourceArgs(ResourceArgs $) {
+        this.contentHash = $.contentHash;
+        this.name = $.name;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HashArgs> contentHash;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> uri;
+        private ResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceArgs();
         }
 
         public Builder(ResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.contentHash = defaults.contentHash;
-    	      this.name = defaults.name;
-    	      this.uri = defaults.uri;
+            $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder contentHash(@Nullable Output<HashArgs> contentHash) {
-            this.contentHash = contentHash;
+            $.contentHash = contentHash;
             return this;
         }
-        public Builder contentHash(@Nullable HashArgs contentHash) {
-            this.contentHash = Codegen.ofNullable(contentHash);
-            return this;
+
+        public Builder contentHash(HashArgs contentHash) {
+            return contentHash(Output.of(contentHash));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public ResourceArgs build() {
-            return new ResourceArgs(contentHash, name, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public ResourceArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.enums.DataCollectorType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
     public static final DataCollectorArgs Empty = new DataCollectorArgs();
 
     @Import(name="dataCollectorId")
-      private final @Nullable Output<String> dataCollectorId;
+    private @Nullable Output<String> dataCollectorId;
 
-    public Output<String> dataCollectorId() {
-        return this.dataCollectorId == null ? Codegen.empty() : this.dataCollectorId;
+    public Optional<Output<String>> dataCollectorId() {
+        return Optional.ofNullable(this.dataCollectorId);
     }
 
     /**
@@ -28,10 +28,10 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -39,14 +39,14 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -57,102 +57,89 @@ public final class DataCollectorArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<DataCollectorType> type;
+    private @Nullable Output<DataCollectorType> type;
 
-    public Output<DataCollectorType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<DataCollectorType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public DataCollectorArgs(
-        @Nullable Output<String> dataCollectorId,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<DataCollectorType> type) {
-        this.dataCollectorId = dataCollectorId;
-        this.description = description;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.type = type;
-    }
+    private DataCollectorArgs() {}
 
-    private DataCollectorArgs() {
-        this.dataCollectorId = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.type = Codegen.empty();
+    private DataCollectorArgs(DataCollectorArgs $) {
+        this.dataCollectorId = $.dataCollectorId;
+        this.description = $.description;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DataCollectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> dataCollectorId;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<DataCollectorType> type;
+        private DataCollectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DataCollectorArgs();
         }
 
         public Builder(DataCollectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dataCollectorId = defaults.dataCollectorId;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.type = defaults.type;
+            $ = new DataCollectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder dataCollectorId(@Nullable Output<String> dataCollectorId) {
-            this.dataCollectorId = dataCollectorId;
+            $.dataCollectorId = dataCollectorId;
             return this;
         }
-        public Builder dataCollectorId(@Nullable String dataCollectorId) {
-            this.dataCollectorId = Codegen.ofNullable(dataCollectorId);
-            return this;
+
+        public Builder dataCollectorId(String dataCollectorId) {
+            return dataCollectorId(Output.of(dataCollectorId));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder type(@Nullable Output<DataCollectorType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable DataCollectorType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public DataCollectorArgs build() {
-            return new DataCollectorArgs(dataCollectorId, description, name, organizationId, type);
+
+        public Builder type(DataCollectorType type) {
+            return type(Output.of(type));
+        }
+
+        public DataCollectorArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

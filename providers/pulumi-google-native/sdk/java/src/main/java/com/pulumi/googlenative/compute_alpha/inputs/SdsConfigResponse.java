@@ -21,45 +21,45 @@ public final class SdsConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="grpcServiceConfig", required=true)
-      private final GrpcServiceConfigResponse grpcServiceConfig;
+    private GrpcServiceConfigResponse grpcServiceConfig;
 
     public GrpcServiceConfigResponse grpcServiceConfig() {
         return this.grpcServiceConfig;
     }
 
-    public SdsConfigResponse(GrpcServiceConfigResponse grpcServiceConfig) {
-        this.grpcServiceConfig = Objects.requireNonNull(grpcServiceConfig, "expected parameter 'grpcServiceConfig' to be non-null");
-    }
+    private SdsConfigResponse() {}
 
-    private SdsConfigResponse() {
-        this.grpcServiceConfig = null;
+    private SdsConfigResponse(SdsConfigResponse $) {
+        this.grpcServiceConfig = $.grpcServiceConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SdsConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GrpcServiceConfigResponse grpcServiceConfig;
+        private SdsConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SdsConfigResponse();
         }
 
         public Builder(SdsConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.grpcServiceConfig = defaults.grpcServiceConfig;
+            $ = new SdsConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder grpcServiceConfig(GrpcServiceConfigResponse grpcServiceConfig) {
-            this.grpcServiceConfig = Objects.requireNonNull(grpcServiceConfig);
+            $.grpcServiceConfig = grpcServiceConfig;
             return this;
-        }        public SdsConfigResponse build() {
-            return new SdsConfigResponse(grpcServiceConfig);
+        }
+
+        public SdsConfigResponse build() {
+            $.grpcServiceConfig = Objects.requireNonNull($.grpcServiceConfig, "expected parameter 'grpcServiceConfig' to be non-null");
+            return $;
         }
     }
+
 }

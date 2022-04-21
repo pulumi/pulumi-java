@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class VpcPeeringConnectivityArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="vpc")
-      private final @Nullable Output<String> vpc;
+    private @Nullable Output<String> vpc;
 
-    public Output<String> vpc() {
-        return this.vpc == null ? Codegen.empty() : this.vpc;
+    public Optional<Output<String>> vpc() {
+        return Optional.ofNullable(this.vpc);
     }
 
-    public VpcPeeringConnectivityArgs(@Nullable Output<String> vpc) {
-        this.vpc = vpc;
-    }
+    private VpcPeeringConnectivityArgs() {}
 
-    private VpcPeeringConnectivityArgs() {
-        this.vpc = Codegen.empty();
+    private VpcPeeringConnectivityArgs(VpcPeeringConnectivityArgs $) {
+        this.vpc = $.vpc;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcPeeringConnectivityArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> vpc;
+        private VpcPeeringConnectivityArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcPeeringConnectivityArgs();
         }
 
         public Builder(VpcPeeringConnectivityArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.vpc = defaults.vpc;
+            $ = new VpcPeeringConnectivityArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder vpc(@Nullable Output<String> vpc) {
-            this.vpc = vpc;
+            $.vpc = vpc;
             return this;
         }
-        public Builder vpc(@Nullable String vpc) {
-            this.vpc = Codegen.ofNullable(vpc);
-            return this;
-        }        public VpcPeeringConnectivityArgs build() {
-            return new VpcPeeringConnectivityArgs(vpc);
+
+        public Builder vpc(String vpc) {
+            return vpc(Output.of(vpc));
+        }
+
+        public VpcPeeringConnectivityArgs build() {
+            return $;
         }
     }
+
 }

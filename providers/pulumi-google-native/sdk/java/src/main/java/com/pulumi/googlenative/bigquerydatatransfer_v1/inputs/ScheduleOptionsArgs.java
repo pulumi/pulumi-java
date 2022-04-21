@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ScheduleOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="disableAutoScheduling")
-      private final @Nullable Output<Boolean> disableAutoScheduling;
+    private @Nullable Output<Boolean> disableAutoScheduling;
 
-    public Output<Boolean> disableAutoScheduling() {
-        return this.disableAutoScheduling == null ? Codegen.empty() : this.disableAutoScheduling;
+    public Optional<Output<Boolean>> disableAutoScheduling() {
+        return Optional.ofNullable(this.disableAutoScheduling);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ScheduleOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="endTime")
-      private final @Nullable Output<String> endTime;
+    private @Nullable Output<String> endTime;
 
-    public Output<String> endTime() {
-        return this.endTime == null ? Codegen.empty() : this.endTime;
+    public Optional<Output<String>> endTime() {
+        return Optional.ofNullable(this.endTime);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class ScheduleOptionsArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public ScheduleOptionsArgs(
-        @Nullable Output<Boolean> disableAutoScheduling,
-        @Nullable Output<String> endTime,
-        @Nullable Output<String> startTime) {
-        this.disableAutoScheduling = disableAutoScheduling;
-        this.endTime = endTime;
-        this.startTime = startTime;
-    }
+    private ScheduleOptionsArgs() {}
 
-    private ScheduleOptionsArgs() {
-        this.disableAutoScheduling = Codegen.empty();
-        this.endTime = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private ScheduleOptionsArgs(ScheduleOptionsArgs $) {
+        this.disableAutoScheduling = $.disableAutoScheduling;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> disableAutoScheduling;
-        private @Nullable Output<String> endTime;
-        private @Nullable Output<String> startTime;
+        private ScheduleOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleOptionsArgs();
         }
 
         public Builder(ScheduleOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disableAutoScheduling = defaults.disableAutoScheduling;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new ScheduleOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder disableAutoScheduling(@Nullable Output<Boolean> disableAutoScheduling) {
-            this.disableAutoScheduling = disableAutoScheduling;
+            $.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
-        public Builder disableAutoScheduling(@Nullable Boolean disableAutoScheduling) {
-            this.disableAutoScheduling = Codegen.ofNullable(disableAutoScheduling);
-            return this;
+
+        public Builder disableAutoScheduling(Boolean disableAutoScheduling) {
+            return disableAutoScheduling(Output.of(disableAutoScheduling));
         }
+
         public Builder endTime(@Nullable Output<String> endTime) {
-            this.endTime = endTime;
+            $.endTime = endTime;
             return this;
         }
-        public Builder endTime(@Nullable String endTime) {
-            this.endTime = Codegen.ofNullable(endTime);
-            return this;
+
+        public Builder endTime(String endTime) {
+            return endTime(Output.of(endTime));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public ScheduleOptionsArgs build() {
-            return new ScheduleOptionsArgs(disableAutoScheduling, endTime, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public ScheduleOptionsArgs build() {
+            return $;
         }
     }
+
 }

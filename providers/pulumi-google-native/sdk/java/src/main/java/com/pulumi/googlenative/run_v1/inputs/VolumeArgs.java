@@ -5,11 +5,11 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v1.inputs.ConfigMapVolumeSourceArgs;
 import com.pulumi.googlenative.run_v1.inputs.SecretVolumeSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
     public static final VolumeArgs Empty = new VolumeArgs();
 
     @Import(name="configMap")
-      private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
+    private @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
-    public Output<ConfigMapVolumeSourceArgs> configMap() {
-        return this.configMap == null ? Codegen.empty() : this.configMap;
+    public Optional<Output<ConfigMapVolumeSourceArgs>> configMap() {
+        return Optional.ofNullable(this.configMap);
     }
 
     /**
@@ -33,83 +33,75 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="secret")
-      private final @Nullable Output<SecretVolumeSourceArgs> secret;
+    private @Nullable Output<SecretVolumeSourceArgs> secret;
 
-    public Output<SecretVolumeSourceArgs> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<SecretVolumeSourceArgs>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
-    public VolumeArgs(
-        @Nullable Output<ConfigMapVolumeSourceArgs> configMap,
-        @Nullable Output<String> name,
-        @Nullable Output<SecretVolumeSourceArgs> secret) {
-        this.configMap = configMap;
-        this.name = name;
-        this.secret = secret;
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.configMap = Codegen.empty();
-        this.name = Codegen.empty();
-        this.secret = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.configMap = $.configMap;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
-        private @Nullable Output<String> name;
-        private @Nullable Output<SecretVolumeSourceArgs> secret;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configMap = defaults.configMap;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configMap(@Nullable Output<ConfigMapVolumeSourceArgs> configMap) {
-            this.configMap = configMap;
+            $.configMap = configMap;
             return this;
         }
-        public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
-            this.configMap = Codegen.ofNullable(configMap);
-            return this;
+
+        public Builder configMap(ConfigMapVolumeSourceArgs configMap) {
+            return configMap(Output.of(configMap));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder secret(@Nullable Output<SecretVolumeSourceArgs> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(configMap, name, secret);
+
+        public Builder secret(SecretVolumeSourceArgs secret) {
+            return secret(Output.of(secret));
+        }
+
+        public VolumeArgs build() {
+            return $;
         }
     }
+
 }

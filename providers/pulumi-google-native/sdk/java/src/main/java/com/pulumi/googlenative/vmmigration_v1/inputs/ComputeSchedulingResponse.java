@@ -24,7 +24,7 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="minNodeCpus", required=true)
-      private final Integer minNodeCpus;
+    private Integer minNodeCpus;
 
     public Integer minNodeCpus() {
         return this.minNodeCpus;
@@ -35,7 +35,7 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="nodeAffinities", required=true)
-      private final List<SchedulingNodeAffinityResponse> nodeAffinities;
+    private List<SchedulingNodeAffinityResponse> nodeAffinities;
 
     public List<SchedulingNodeAffinityResponse> nodeAffinities() {
         return this.nodeAffinities;
@@ -46,7 +46,7 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="onHostMaintenance", required=true)
-      private final String onHostMaintenance;
+    private String onHostMaintenance;
 
     public String onHostMaintenance() {
         return this.onHostMaintenance;
@@ -57,76 +57,70 @@ public final class ComputeSchedulingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="restartType", required=true)
-      private final String restartType;
+    private String restartType;
 
     public String restartType() {
         return this.restartType;
     }
 
-    public ComputeSchedulingResponse(
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        String restartType) {
-        this.minNodeCpus = Objects.requireNonNull(minNodeCpus, "expected parameter 'minNodeCpus' to be non-null");
-        this.nodeAffinities = Objects.requireNonNull(nodeAffinities, "expected parameter 'nodeAffinities' to be non-null");
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
-        this.restartType = Objects.requireNonNull(restartType, "expected parameter 'restartType' to be non-null");
-    }
+    private ComputeSchedulingResponse() {}
 
-    private ComputeSchedulingResponse() {
-        this.minNodeCpus = null;
-        this.nodeAffinities = List.of();
-        this.onHostMaintenance = null;
-        this.restartType = null;
+    private ComputeSchedulingResponse(ComputeSchedulingResponse $) {
+        this.minNodeCpus = $.minNodeCpus;
+        this.nodeAffinities = $.nodeAffinities;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.restartType = $.restartType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComputeSchedulingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer minNodeCpus;
-        private List<SchedulingNodeAffinityResponse> nodeAffinities;
-        private String onHostMaintenance;
-        private String restartType;
+        private ComputeSchedulingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComputeSchedulingResponse();
         }
 
         public Builder(ComputeSchedulingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minNodeCpus = defaults.minNodeCpus;
-    	      this.nodeAffinities = defaults.nodeAffinities;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.restartType = defaults.restartType;
+            $ = new ComputeSchedulingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder minNodeCpus(Integer minNodeCpus) {
-            this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
+            $.minNodeCpus = minNodeCpus;
             return this;
         }
+
         public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
-            this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
+            $.nodeAffinities = nodeAffinities;
             return this;
         }
+
         public Builder nodeAffinities(SchedulingNodeAffinityResponse... nodeAffinities) {
             return nodeAffinities(List.of(nodeAffinities));
         }
+
         public Builder onHostMaintenance(String onHostMaintenance) {
-            this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
+
         public Builder restartType(String restartType) {
-            this.restartType = Objects.requireNonNull(restartType);
+            $.restartType = restartType;
             return this;
-        }        public ComputeSchedulingResponse build() {
-            return new ComputeSchedulingResponse(minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
+        }
+
+        public ComputeSchedulingResponse build() {
+            $.minNodeCpus = Objects.requireNonNull($.minNodeCpus, "expected parameter 'minNodeCpus' to be non-null");
+            $.nodeAffinities = Objects.requireNonNull($.nodeAffinities, "expected parameter 'nodeAffinities' to be non-null");
+            $.onHostMaintenance = Objects.requireNonNull($.onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
+            $.restartType = Objects.requireNonNull($.restartType, "expected parameter 'restartType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -13,62 +13,59 @@ public final class GetServiceConsumerIamPolicyArgs extends com.pulumi.resources.
     public static final GetServiceConsumerIamPolicyArgs Empty = new GetServiceConsumerIamPolicyArgs();
 
     @Import(name="consumerId", required=true)
-      private final String consumerId;
+    private String consumerId;
 
     public String consumerId() {
         return this.consumerId;
     }
 
     @Import(name="serviceId", required=true)
-      private final String serviceId;
+    private String serviceId;
 
     public String serviceId() {
         return this.serviceId;
     }
 
-    public GetServiceConsumerIamPolicyArgs(
-        String consumerId,
-        String serviceId) {
-        this.consumerId = Objects.requireNonNull(consumerId, "expected parameter 'consumerId' to be non-null");
-        this.serviceId = Objects.requireNonNull(serviceId, "expected parameter 'serviceId' to be non-null");
-    }
+    private GetServiceConsumerIamPolicyArgs() {}
 
-    private GetServiceConsumerIamPolicyArgs() {
-        this.consumerId = null;
-        this.serviceId = null;
+    private GetServiceConsumerIamPolicyArgs(GetServiceConsumerIamPolicyArgs $) {
+        this.consumerId = $.consumerId;
+        this.serviceId = $.serviceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetServiceConsumerIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String consumerId;
-        private String serviceId;
+        private GetServiceConsumerIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetServiceConsumerIamPolicyArgs();
         }
 
         public Builder(GetServiceConsumerIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consumerId = defaults.consumerId;
-    	      this.serviceId = defaults.serviceId;
+            $ = new GetServiceConsumerIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consumerId(String consumerId) {
-            this.consumerId = Objects.requireNonNull(consumerId);
+            $.consumerId = consumerId;
             return this;
         }
+
         public Builder serviceId(String serviceId) {
-            this.serviceId = Objects.requireNonNull(serviceId);
+            $.serviceId = serviceId;
             return this;
-        }        public GetServiceConsumerIamPolicyArgs build() {
-            return new GetServiceConsumerIamPolicyArgs(consumerId, serviceId);
+        }
+
+        public GetServiceConsumerIamPolicyArgs build() {
+            $.consumerId = Objects.requireNonNull($.consumerId, "expected parameter 'consumerId' to be non-null");
+            $.serviceId = Objects.requireNonNull($.serviceId, "expected parameter 'serviceId' to be non-null");
+            return $;
         }
     }
+
 }

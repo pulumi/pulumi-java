@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="className")
-      private final @Nullable Output<String> className;
+    private @Nullable Output<String> className;
 
-    public Output<String> className() {
-        return this.className == null ? Codegen.empty() : this.className;
+    public Optional<Output<String>> className() {
+        return Optional.ofNullable(this.className);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class TestCaseReferenceArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="testSuiteName")
-      private final @Nullable Output<String> testSuiteName;
+    private @Nullable Output<String> testSuiteName;
 
-    public Output<String> testSuiteName() {
-        return this.testSuiteName == null ? Codegen.empty() : this.testSuiteName;
+    public Optional<Output<String>> testSuiteName() {
+        return Optional.ofNullable(this.testSuiteName);
     }
 
-    public TestCaseReferenceArgs(
-        @Nullable Output<String> className,
-        @Nullable Output<String> name,
-        @Nullable Output<String> testSuiteName) {
-        this.className = className;
-        this.name = name;
-        this.testSuiteName = testSuiteName;
-    }
+    private TestCaseReferenceArgs() {}
 
-    private TestCaseReferenceArgs() {
-        this.className = Codegen.empty();
-        this.name = Codegen.empty();
-        this.testSuiteName = Codegen.empty();
+    private TestCaseReferenceArgs(TestCaseReferenceArgs $) {
+        this.className = $.className;
+        this.name = $.name;
+        this.testSuiteName = $.testSuiteName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestCaseReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> className;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> testSuiteName;
+        private TestCaseReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestCaseReferenceArgs();
         }
 
         public Builder(TestCaseReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.className = defaults.className;
-    	      this.name = defaults.name;
-    	      this.testSuiteName = defaults.testSuiteName;
+            $ = new TestCaseReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder className(@Nullable Output<String> className) {
-            this.className = className;
+            $.className = className;
             return this;
         }
-        public Builder className(@Nullable String className) {
-            this.className = Codegen.ofNullable(className);
-            return this;
+
+        public Builder className(String className) {
+            return className(Output.of(className));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder testSuiteName(@Nullable Output<String> testSuiteName) {
-            this.testSuiteName = testSuiteName;
+            $.testSuiteName = testSuiteName;
             return this;
         }
-        public Builder testSuiteName(@Nullable String testSuiteName) {
-            this.testSuiteName = Codegen.ofNullable(testSuiteName);
-            return this;
-        }        public TestCaseReferenceArgs build() {
-            return new TestCaseReferenceArgs(className, name, testSuiteName);
+
+        public Builder testSuiteName(String testSuiteName) {
+            return testSuiteName(Output.of(testSuiteName));
+        }
+
+        public TestCaseReferenceArgs build() {
+            return $;
         }
     }
+
 }

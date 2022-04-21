@@ -21,45 +21,45 @@ public final class GoogleCloudRetailV2PromotionResponse extends com.pulumi.resou
      * 
      */
     @Import(name="promotionId", required=true)
-      private final String promotionId;
+    private String promotionId;
 
     public String promotionId() {
         return this.promotionId;
     }
 
-    public GoogleCloudRetailV2PromotionResponse(String promotionId) {
-        this.promotionId = Objects.requireNonNull(promotionId, "expected parameter 'promotionId' to be non-null");
-    }
+    private GoogleCloudRetailV2PromotionResponse() {}
 
-    private GoogleCloudRetailV2PromotionResponse() {
-        this.promotionId = null;
+    private GoogleCloudRetailV2PromotionResponse(GoogleCloudRetailV2PromotionResponse $) {
+        this.promotionId = $.promotionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2PromotionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String promotionId;
+        private GoogleCloudRetailV2PromotionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2PromotionResponse();
         }
 
         public Builder(GoogleCloudRetailV2PromotionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.promotionId = defaults.promotionId;
+            $ = new GoogleCloudRetailV2PromotionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder promotionId(String promotionId) {
-            this.promotionId = Objects.requireNonNull(promotionId);
+            $.promotionId = promotionId;
             return this;
-        }        public GoogleCloudRetailV2PromotionResponse build() {
-            return new GoogleCloudRetailV2PromotionResponse(promotionId);
+        }
+
+        public GoogleCloudRetailV2PromotionResponse build() {
+            $.promotionId = Objects.requireNonNull($.promotionId, "expected parameter 'promotionId' to be non-null");
+            return $;
         }
     }
+
 }

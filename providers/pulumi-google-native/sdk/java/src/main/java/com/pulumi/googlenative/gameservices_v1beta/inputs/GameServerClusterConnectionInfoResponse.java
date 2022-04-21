@@ -22,7 +22,7 @@ public final class GameServerClusterConnectionInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="gkeClusterReference", required=true)
-      private final GkeClusterReferenceResponse gkeClusterReference;
+    private GkeClusterReferenceResponse gkeClusterReference;
 
     public GkeClusterReferenceResponse gkeClusterReference() {
         return this.gkeClusterReference;
@@ -33,55 +33,52 @@ public final class GameServerClusterConnectionInfoResponse extends com.pulumi.re
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
     }
 
-    public GameServerClusterConnectionInfoResponse(
-        GkeClusterReferenceResponse gkeClusterReference,
-        String namespace) {
-        this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference, "expected parameter 'gkeClusterReference' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private GameServerClusterConnectionInfoResponse() {}
 
-    private GameServerClusterConnectionInfoResponse() {
-        this.gkeClusterReference = null;
-        this.namespace = null;
+    private GameServerClusterConnectionInfoResponse(GameServerClusterConnectionInfoResponse $) {
+        this.gkeClusterReference = $.gkeClusterReference;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GameServerClusterConnectionInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GkeClusterReferenceResponse gkeClusterReference;
-        private String namespace;
+        private GameServerClusterConnectionInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GameServerClusterConnectionInfoResponse();
         }
 
         public Builder(GameServerClusterConnectionInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gkeClusterReference = defaults.gkeClusterReference;
-    	      this.namespace = defaults.namespace;
+            $ = new GameServerClusterConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder gkeClusterReference(GkeClusterReferenceResponse gkeClusterReference) {
-            this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
+            $.gkeClusterReference = gkeClusterReference;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
-        }        public GameServerClusterConnectionInfoResponse build() {
-            return new GameServerClusterConnectionInfoResponse(gkeClusterReference, namespace);
+        }
+
+        public GameServerClusterConnectionInfoResponse build() {
+            $.gkeClusterReference = Objects.requireNonNull($.gkeClusterReference, "expected parameter 'gkeClusterReference' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

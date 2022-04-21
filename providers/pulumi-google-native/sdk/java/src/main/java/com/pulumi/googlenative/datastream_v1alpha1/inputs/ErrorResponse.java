@@ -22,7 +22,7 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="details", required=true)
-      private final Map<String,String> details;
+    private Map<String,String> details;
 
     public Map<String,String> details() {
         return this.details;
@@ -33,7 +33,7 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorTime", required=true)
-      private final String errorTime;
+    private String errorTime;
 
     public String errorTime() {
         return this.errorTime;
@@ -44,7 +44,7 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorUuid", required=true)
-      private final String errorUuid;
+    private String errorUuid;
 
     public String errorUuid() {
         return this.errorUuid;
@@ -55,7 +55,7 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="message", required=true)
-      private final String message;
+    private String message;
 
     public String message() {
         return this.message;
@@ -66,82 +66,73 @@ public final class ErrorResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="reason", required=true)
-      private final String reason;
+    private String reason;
 
     public String reason() {
         return this.reason;
     }
 
-    public ErrorResponse(
-        Map<String,String> details,
-        String errorTime,
-        String errorUuid,
-        String message,
-        String reason) {
-        this.details = Objects.requireNonNull(details, "expected parameter 'details' to be non-null");
-        this.errorTime = Objects.requireNonNull(errorTime, "expected parameter 'errorTime' to be non-null");
-        this.errorUuid = Objects.requireNonNull(errorUuid, "expected parameter 'errorUuid' to be non-null");
-        this.message = Objects.requireNonNull(message, "expected parameter 'message' to be non-null");
-        this.reason = Objects.requireNonNull(reason, "expected parameter 'reason' to be non-null");
-    }
+    private ErrorResponse() {}
 
-    private ErrorResponse() {
-        this.details = Map.of();
-        this.errorTime = null;
-        this.errorUuid = null;
-        this.message = null;
-        this.reason = null;
+    private ErrorResponse(ErrorResponse $) {
+        this.details = $.details;
+        this.errorTime = $.errorTime;
+        this.errorUuid = $.errorUuid;
+        this.message = $.message;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ErrorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> details;
-        private String errorTime;
-        private String errorUuid;
-        private String message;
-        private String reason;
+        private ErrorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ErrorResponse();
         }
 
         public Builder(ErrorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.details = defaults.details;
-    	      this.errorTime = defaults.errorTime;
-    	      this.errorUuid = defaults.errorUuid;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
+            $ = new ErrorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder details(Map<String,String> details) {
-            this.details = Objects.requireNonNull(details);
+            $.details = details;
             return this;
         }
+
         public Builder errorTime(String errorTime) {
-            this.errorTime = Objects.requireNonNull(errorTime);
+            $.errorTime = errorTime;
             return this;
         }
+
         public Builder errorUuid(String errorUuid) {
-            this.errorUuid = Objects.requireNonNull(errorUuid);
+            $.errorUuid = errorUuid;
             return this;
         }
+
         public Builder message(String message) {
-            this.message = Objects.requireNonNull(message);
+            $.message = message;
             return this;
         }
+
         public Builder reason(String reason) {
-            this.reason = Objects.requireNonNull(reason);
+            $.reason = reason;
             return this;
-        }        public ErrorResponse build() {
-            return new ErrorResponse(details, errorTime, errorUuid, message, reason);
+        }
+
+        public ErrorResponse build() {
+            $.details = Objects.requireNonNull($.details, "expected parameter 'details' to be non-null");
+            $.errorTime = Objects.requireNonNull($.errorTime, "expected parameter 'errorTime' to be non-null");
+            $.errorUuid = Objects.requireNonNull($.errorUuid, "expected parameter 'errorUuid' to be non-null");
+            $.message = Objects.requireNonNull($.message, "expected parameter 'message' to be non-null");
+            $.reason = Objects.requireNonNull($.reason, "expected parameter 'reason' to be non-null");
+            return $;
         }
     }
+
 }

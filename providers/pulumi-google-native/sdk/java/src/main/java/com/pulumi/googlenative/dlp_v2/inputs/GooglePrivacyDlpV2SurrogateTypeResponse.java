@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.dlp_v2.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GooglePrivacyDlpV2SurrogateTypeResponse extends com.pulumi.re
 
     public static final GooglePrivacyDlpV2SurrogateTypeResponse Empty = new GooglePrivacyDlpV2SurrogateTypeResponse();
 
-    public GooglePrivacyDlpV2SurrogateTypeResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GooglePrivacyDlpV2SurrogateTypeResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GooglePrivacyDlpV2SurrogateTypeResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GooglePrivacyDlpV2SurrogateTypeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GooglePrivacyDlpV2SurrogateTypeResponse();
         }
         public GooglePrivacyDlpV2SurrogateTypeResponse build() {
-            return new GooglePrivacyDlpV2SurrogateTypeResponse();
+            return $;
         }
     }
+
 }

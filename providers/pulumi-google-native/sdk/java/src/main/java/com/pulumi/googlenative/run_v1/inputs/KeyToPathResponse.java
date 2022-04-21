@@ -22,7 +22,7 @@ public final class KeyToPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
@@ -33,7 +33,7 @@ public final class KeyToPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mode", required=true)
-      private final Integer mode;
+    private Integer mode;
 
     public Integer mode() {
         return this.mode;
@@ -44,64 +44,59 @@ public final class KeyToPathResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public KeyToPathResponse(
-        String key,
-        Integer mode,
-        String path) {
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-        this.mode = Objects.requireNonNull(mode, "expected parameter 'mode' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private KeyToPathResponse() {}
 
-    private KeyToPathResponse() {
-        this.key = null;
-        this.mode = null;
-        this.path = null;
+    private KeyToPathResponse(KeyToPathResponse $) {
+        this.key = $.key;
+        this.mode = $.mode;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyToPathResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String key;
-        private Integer mode;
-        private String path;
+        private KeyToPathResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyToPathResponse();
         }
 
         public Builder(KeyToPathResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
+            $ = new KeyToPathResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
         }
+
         public Builder mode(Integer mode) {
-            this.mode = Objects.requireNonNull(mode);
+            $.mode = mode;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public KeyToPathResponse build() {
-            return new KeyToPathResponse(key, mode, path);
+        }
+
+        public KeyToPathResponse build() {
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            $.mode = Objects.requireNonNull($.mode, "expected parameter 'mode' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

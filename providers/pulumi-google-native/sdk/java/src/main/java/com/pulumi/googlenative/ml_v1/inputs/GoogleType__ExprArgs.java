@@ -5,9 +5,9 @@ package com.pulumi.googlenative.ml_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleType__ExprArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class GoogleType__ExprArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="expression")
-      private final @Nullable Output<String> expression;
+    private @Nullable Output<String> expression;
 
-    public Output<String> expression() {
-        return this.expression == null ? Codegen.empty() : this.expression;
+    public Optional<Output<String>> expression() {
+        return Optional.ofNullable(this.expression);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class GoogleType__ExprArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class GoogleType__ExprArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public GoogleType__ExprArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> expression,
-        @Nullable Output<String> location,
-        @Nullable Output<String> title) {
-        this.description = description;
-        this.expression = expression;
-        this.location = location;
-        this.title = title;
-    }
+    private GoogleType__ExprArgs() {}
 
-    private GoogleType__ExprArgs() {
-        this.description = Codegen.empty();
-        this.expression = Codegen.empty();
-        this.location = Codegen.empty();
-        this.title = Codegen.empty();
+    private GoogleType__ExprArgs(GoogleType__ExprArgs $) {
+        this.description = $.description;
+        this.expression = $.expression;
+        this.location = $.location;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleType__ExprArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> expression;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> title;
+        private GoogleType__ExprArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleType__ExprArgs();
         }
 
         public Builder(GoogleType__ExprArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.expression = defaults.expression;
-    	      this.location = defaults.location;
-    	      this.title = defaults.title;
+            $ = new GoogleType__ExprArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder expression(@Nullable Output<String> expression) {
-            this.expression = expression;
+            $.expression = expression;
             return this;
         }
-        public Builder expression(@Nullable String expression) {
-            this.expression = Codegen.ofNullable(expression);
-            return this;
+
+        public Builder expression(String expression) {
+            return expression(Output.of(expression));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public GoogleType__ExprArgs build() {
-            return new GoogleType__ExprArgs(description, expression, location, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public GoogleType__ExprArgs build() {
+            return $;
         }
     }
+
 }

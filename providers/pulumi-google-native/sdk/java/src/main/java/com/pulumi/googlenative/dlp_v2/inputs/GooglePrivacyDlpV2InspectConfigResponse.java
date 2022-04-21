@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="customInfoTypes", required=true)
-      private final List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
+    private List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
 
     public List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes() {
         return this.customInfoTypes;
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="excludeInfoTypes", required=true)
-      private final Boolean excludeInfoTypes;
+    private Boolean excludeInfoTypes;
 
     public Boolean excludeInfoTypes() {
         return this.excludeInfoTypes;
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="includeQuote", required=true)
-      private final Boolean includeQuote;
+    private Boolean includeQuote;
 
     public Boolean includeQuote() {
         return this.includeQuote;
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="infoTypes", required=true)
-      private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+    private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
     public List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes() {
         return this.infoTypes;
@@ -71,7 +71,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="limits", required=true)
-      private final GooglePrivacyDlpV2FindingLimitsResponse limits;
+    private GooglePrivacyDlpV2FindingLimitsResponse limits;
 
     public GooglePrivacyDlpV2FindingLimitsResponse limits() {
         return this.limits;
@@ -82,7 +82,7 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="minLikelihood", required=true)
-      private final String minLikelihood;
+    private String minLikelihood;
 
     public String minLikelihood() {
         return this.minLikelihood;
@@ -93,109 +93,99 @@ public final class GooglePrivacyDlpV2InspectConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="ruleSet", required=true)
-      private final List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
+    private List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
 
     public List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet() {
         return this.ruleSet;
     }
 
-    public GooglePrivacyDlpV2InspectConfigResponse(
-        List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes,
-        Boolean excludeInfoTypes,
-        Boolean includeQuote,
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        GooglePrivacyDlpV2FindingLimitsResponse limits,
-        String minLikelihood,
-        List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
-        this.customInfoTypes = Objects.requireNonNull(customInfoTypes, "expected parameter 'customInfoTypes' to be non-null");
-        this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes, "expected parameter 'excludeInfoTypes' to be non-null");
-        this.includeQuote = Objects.requireNonNull(includeQuote, "expected parameter 'includeQuote' to be non-null");
-        this.infoTypes = Objects.requireNonNull(infoTypes, "expected parameter 'infoTypes' to be non-null");
-        this.limits = Objects.requireNonNull(limits, "expected parameter 'limits' to be non-null");
-        this.minLikelihood = Objects.requireNonNull(minLikelihood, "expected parameter 'minLikelihood' to be non-null");
-        this.ruleSet = Objects.requireNonNull(ruleSet, "expected parameter 'ruleSet' to be non-null");
-    }
+    private GooglePrivacyDlpV2InspectConfigResponse() {}
 
-    private GooglePrivacyDlpV2InspectConfigResponse() {
-        this.customInfoTypes = List.of();
-        this.excludeInfoTypes = null;
-        this.includeQuote = null;
-        this.infoTypes = List.of();
-        this.limits = null;
-        this.minLikelihood = null;
-        this.ruleSet = List.of();
+    private GooglePrivacyDlpV2InspectConfigResponse(GooglePrivacyDlpV2InspectConfigResponse $) {
+        this.customInfoTypes = $.customInfoTypes;
+        this.excludeInfoTypes = $.excludeInfoTypes;
+        this.includeQuote = $.includeQuote;
+        this.infoTypes = $.infoTypes;
+        this.limits = $.limits;
+        this.minLikelihood = $.minLikelihood;
+        this.ruleSet = $.ruleSet;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2InspectConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes;
-        private Boolean excludeInfoTypes;
-        private Boolean includeQuote;
-        private List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
-        private GooglePrivacyDlpV2FindingLimitsResponse limits;
-        private String minLikelihood;
-        private List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
+        private GooglePrivacyDlpV2InspectConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2InspectConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2InspectConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.customInfoTypes = defaults.customInfoTypes;
-    	      this.excludeInfoTypes = defaults.excludeInfoTypes;
-    	      this.includeQuote = defaults.includeQuote;
-    	      this.infoTypes = defaults.infoTypes;
-    	      this.limits = defaults.limits;
-    	      this.minLikelihood = defaults.minLikelihood;
-    	      this.ruleSet = defaults.ruleSet;
+            $ = new GooglePrivacyDlpV2InspectConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder customInfoTypes(List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes) {
-            this.customInfoTypes = Objects.requireNonNull(customInfoTypes);
+            $.customInfoTypes = customInfoTypes;
             return this;
         }
+
         public Builder customInfoTypes(GooglePrivacyDlpV2CustomInfoTypeResponse... customInfoTypes) {
             return customInfoTypes(List.of(customInfoTypes));
         }
+
         public Builder excludeInfoTypes(Boolean excludeInfoTypes) {
-            this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
+            $.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
+
         public Builder includeQuote(Boolean includeQuote) {
-            this.includeQuote = Objects.requireNonNull(includeQuote);
+            $.includeQuote = includeQuote;
             return this;
         }
+
         public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
-            this.infoTypes = Objects.requireNonNull(infoTypes);
+            $.infoTypes = infoTypes;
             return this;
         }
+
         public Builder infoTypes(GooglePrivacyDlpV2InfoTypeResponse... infoTypes) {
             return infoTypes(List.of(infoTypes));
         }
+
         public Builder limits(GooglePrivacyDlpV2FindingLimitsResponse limits) {
-            this.limits = Objects.requireNonNull(limits);
+            $.limits = limits;
             return this;
         }
+
         public Builder minLikelihood(String minLikelihood) {
-            this.minLikelihood = Objects.requireNonNull(minLikelihood);
+            $.minLikelihood = minLikelihood;
             return this;
         }
+
         public Builder ruleSet(List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
-            this.ruleSet = Objects.requireNonNull(ruleSet);
+            $.ruleSet = ruleSet;
             return this;
         }
+
         public Builder ruleSet(GooglePrivacyDlpV2InspectionRuleSetResponse... ruleSet) {
             return ruleSet(List.of(ruleSet));
-        }        public GooglePrivacyDlpV2InspectConfigResponse build() {
-            return new GooglePrivacyDlpV2InspectConfigResponse(customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSet);
+        }
+
+        public GooglePrivacyDlpV2InspectConfigResponse build() {
+            $.customInfoTypes = Objects.requireNonNull($.customInfoTypes, "expected parameter 'customInfoTypes' to be non-null");
+            $.excludeInfoTypes = Objects.requireNonNull($.excludeInfoTypes, "expected parameter 'excludeInfoTypes' to be non-null");
+            $.includeQuote = Objects.requireNonNull($.includeQuote, "expected parameter 'includeQuote' to be non-null");
+            $.infoTypes = Objects.requireNonNull($.infoTypes, "expected parameter 'infoTypes' to be non-null");
+            $.limits = Objects.requireNonNull($.limits, "expected parameter 'limits' to be non-null");
+            $.minLikelihood = Objects.requireNonNull($.minLikelihood, "expected parameter 'minLikelihood' to be non-null");
+            $.ruleSet = Objects.requireNonNull($.ruleSet, "expected parameter 'ruleSet' to be non-null");
+            return $;
         }
     }
+
 }

@@ -17,45 +17,45 @@ public final class AttestationResponse extends com.pulumi.resources.InvokeArgs {
     public static final AttestationResponse Empty = new AttestationResponse();
 
     @Import(name="pgpSignedAttestation", required=true)
-      private final PgpSignedAttestationResponse pgpSignedAttestation;
+    private PgpSignedAttestationResponse pgpSignedAttestation;
 
     public PgpSignedAttestationResponse pgpSignedAttestation() {
         return this.pgpSignedAttestation;
     }
 
-    public AttestationResponse(PgpSignedAttestationResponse pgpSignedAttestation) {
-        this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation, "expected parameter 'pgpSignedAttestation' to be non-null");
-    }
+    private AttestationResponse() {}
 
-    private AttestationResponse() {
-        this.pgpSignedAttestation = null;
+    private AttestationResponse(AttestationResponse $) {
+        this.pgpSignedAttestation = $.pgpSignedAttestation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PgpSignedAttestationResponse pgpSignedAttestation;
+        private AttestationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationResponse();
         }
 
         public Builder(AttestationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
+            $ = new AttestationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
-            this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
+            $.pgpSignedAttestation = pgpSignedAttestation;
             return this;
-        }        public AttestationResponse build() {
-            return new AttestationResponse(pgpSignedAttestation);
+        }
+
+        public AttestationResponse build() {
+            $.pgpSignedAttestation = Objects.requireNonNull($.pgpSignedAttestation, "expected parameter 'pgpSignedAttestation' to be non-null");
+            return $;
         }
     }
+
 }

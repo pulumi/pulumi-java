@@ -21,7 +21,7 @@ public final class ToolResultsStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="executionId", required=true)
-      private final String executionId;
+    private String executionId;
 
     public String executionId() {
         return this.executionId;
@@ -32,7 +32,7 @@ public final class ToolResultsStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="historyId", required=true)
-      private final String historyId;
+    private String historyId;
 
     public String historyId() {
         return this.historyId;
@@ -43,7 +43,7 @@ public final class ToolResultsStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -54,73 +54,66 @@ public final class ToolResultsStepResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="stepId", required=true)
-      private final String stepId;
+    private String stepId;
 
     public String stepId() {
         return this.stepId;
     }
 
-    public ToolResultsStepResponse(
-        String executionId,
-        String historyId,
-        String project,
-        String stepId) {
-        this.executionId = Objects.requireNonNull(executionId, "expected parameter 'executionId' to be non-null");
-        this.historyId = Objects.requireNonNull(historyId, "expected parameter 'historyId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.stepId = Objects.requireNonNull(stepId, "expected parameter 'stepId' to be non-null");
-    }
+    private ToolResultsStepResponse() {}
 
-    private ToolResultsStepResponse() {
-        this.executionId = null;
-        this.historyId = null;
-        this.project = null;
-        this.stepId = null;
+    private ToolResultsStepResponse(ToolResultsStepResponse $) {
+        this.executionId = $.executionId;
+        this.historyId = $.historyId;
+        this.project = $.project;
+        this.stepId = $.stepId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ToolResultsStepResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String executionId;
-        private String historyId;
-        private String project;
-        private String stepId;
+        private ToolResultsStepResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ToolResultsStepResponse();
         }
 
         public Builder(ToolResultsStepResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.executionId = defaults.executionId;
-    	      this.historyId = defaults.historyId;
-    	      this.project = defaults.project;
-    	      this.stepId = defaults.stepId;
+            $ = new ToolResultsStepResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder executionId(String executionId) {
-            this.executionId = Objects.requireNonNull(executionId);
+            $.executionId = executionId;
             return this;
         }
+
         public Builder historyId(String historyId) {
-            this.historyId = Objects.requireNonNull(historyId);
+            $.historyId = historyId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder stepId(String stepId) {
-            this.stepId = Objects.requireNonNull(stepId);
+            $.stepId = stepId;
             return this;
-        }        public ToolResultsStepResponse build() {
-            return new ToolResultsStepResponse(executionId, historyId, project, stepId);
+        }
+
+        public ToolResultsStepResponse build() {
+            $.executionId = Objects.requireNonNull($.executionId, "expected parameter 'executionId' to be non-null");
+            $.historyId = Objects.requireNonNull($.historyId, "expected parameter 'historyId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.stepId = Objects.requireNonNull($.stepId, "expected parameter 'stepId' to be non-null");
+            return $;
         }
     }
+
 }

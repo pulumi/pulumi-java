@@ -13,62 +13,59 @@ public final class GetProviderNoteIamPolicyArgs extends com.pulumi.resources.Inv
     public static final GetProviderNoteIamPolicyArgs Empty = new GetProviderNoteIamPolicyArgs();
 
     @Import(name="noteId", required=true)
-      private final String noteId;
+    private String noteId;
 
     public String noteId() {
         return this.noteId;
     }
 
     @Import(name="providerId", required=true)
-      private final String providerId;
+    private String providerId;
 
     public String providerId() {
         return this.providerId;
     }
 
-    public GetProviderNoteIamPolicyArgs(
-        String noteId,
-        String providerId) {
-        this.noteId = Objects.requireNonNull(noteId, "expected parameter 'noteId' to be non-null");
-        this.providerId = Objects.requireNonNull(providerId, "expected parameter 'providerId' to be non-null");
-    }
+    private GetProviderNoteIamPolicyArgs() {}
 
-    private GetProviderNoteIamPolicyArgs() {
-        this.noteId = null;
-        this.providerId = null;
+    private GetProviderNoteIamPolicyArgs(GetProviderNoteIamPolicyArgs $) {
+        this.noteId = $.noteId;
+        this.providerId = $.providerId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetProviderNoteIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String noteId;
-        private String providerId;
+        private GetProviderNoteIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetProviderNoteIamPolicyArgs();
         }
 
         public Builder(GetProviderNoteIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.noteId = defaults.noteId;
-    	      this.providerId = defaults.providerId;
+            $ = new GetProviderNoteIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder noteId(String noteId) {
-            this.noteId = Objects.requireNonNull(noteId);
+            $.noteId = noteId;
             return this;
         }
+
         public Builder providerId(String providerId) {
-            this.providerId = Objects.requireNonNull(providerId);
+            $.providerId = providerId;
             return this;
-        }        public GetProviderNoteIamPolicyArgs build() {
-            return new GetProviderNoteIamPolicyArgs(noteId, providerId);
+        }
+
+        public GetProviderNoteIamPolicyArgs build() {
+            $.noteId = Objects.requireNonNull($.noteId, "expected parameter 'noteId' to be non-null");
+            $.providerId = Objects.requireNonNull($.providerId, "expected parameter 'providerId' to be non-null");
+            return $;
         }
     }
+
 }

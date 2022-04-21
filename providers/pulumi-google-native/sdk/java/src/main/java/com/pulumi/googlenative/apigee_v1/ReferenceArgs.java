@@ -5,9 +5,9 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,14 +20,14 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -38,14 +38,14 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -56,7 +56,7 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="refers", required=true)
-      private final Output<String> refers;
+    private Output<String> refers;
 
     public Output<String> refers() {
         return this.refers;
@@ -67,115 +67,101 @@ public final class ReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceType")
-      private final @Nullable Output<String> resourceType;
+    private @Nullable Output<String> resourceType;
 
-    public Output<String> resourceType() {
-        return this.resourceType == null ? Codegen.empty() : this.resourceType;
+    public Optional<Output<String>> resourceType() {
+        return Optional.ofNullable(this.resourceType);
     }
 
-    public ReferenceArgs(
-        @Nullable Output<String> description,
-        Output<String> environmentId,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        Output<String> refers,
-        @Nullable Output<String> resourceType) {
-        this.description = description;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.refers = Objects.requireNonNull(refers, "expected parameter 'refers' to be non-null");
-        this.resourceType = resourceType;
-    }
+    private ReferenceArgs() {}
 
-    private ReferenceArgs() {
-        this.description = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.refers = Codegen.empty();
-        this.resourceType = Codegen.empty();
+    private ReferenceArgs(ReferenceArgs $) {
+        this.description = $.description;
+        this.environmentId = $.environmentId;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.refers = $.refers;
+        this.resourceType = $.resourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> environmentId;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private Output<String> refers;
-        private @Nullable Output<String> resourceType;
+        private ReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReferenceArgs();
         }
 
         public Builder(ReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.environmentId = defaults.environmentId;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.refers = defaults.refers;
-    	      this.resourceType = defaults.resourceType;
+            $ = new ReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder refers(Output<String> refers) {
-            this.refers = Objects.requireNonNull(refers);
+            $.refers = refers;
             return this;
         }
+
         public Builder refers(String refers) {
-            this.refers = Output.of(Objects.requireNonNull(refers));
-            return this;
+            return refers(Output.of(refers));
         }
+
         public Builder resourceType(@Nullable Output<String> resourceType) {
-            this.resourceType = resourceType;
+            $.resourceType = resourceType;
             return this;
         }
-        public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Codegen.ofNullable(resourceType);
-            return this;
-        }        public ReferenceArgs build() {
-            return new ReferenceArgs(description, environmentId, name, organizationId, refers, resourceType);
+
+        public Builder resourceType(String resourceType) {
+            return resourceType(Output.of(resourceType));
+        }
+
+        public ReferenceArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.refers = Objects.requireNonNull($.refers, "expected parameter 'refers' to be non-null");
+            return $;
         }
     }
+
 }

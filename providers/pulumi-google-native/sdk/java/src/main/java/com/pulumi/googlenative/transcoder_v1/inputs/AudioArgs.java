@@ -5,10 +5,10 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="highBoost")
-      private final @Nullable Output<Boolean> highBoost;
+    private @Nullable Output<Boolean> highBoost;
 
-    public Output<Boolean> highBoost() {
-        return this.highBoost == null ? Codegen.empty() : this.highBoost;
+    public Optional<Output<Boolean>> highBoost() {
+        return Optional.ofNullable(this.highBoost);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lowBoost")
-      private final @Nullable Output<Boolean> lowBoost;
+    private @Nullable Output<Boolean> lowBoost;
 
-    public Output<Boolean> lowBoost() {
-        return this.lowBoost == null ? Codegen.empty() : this.lowBoost;
+    public Optional<Output<Boolean>> lowBoost() {
+        return Optional.ofNullable(this.lowBoost);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class AudioArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lufs")
-      private final @Nullable Output<Double> lufs;
+    private @Nullable Output<Double> lufs;
 
-    public Output<Double> lufs() {
-        return this.lufs == null ? Codegen.empty() : this.lufs;
+    public Optional<Output<Double>> lufs() {
+        return Optional.ofNullable(this.lufs);
     }
 
-    public AudioArgs(
-        @Nullable Output<Boolean> highBoost,
-        @Nullable Output<Boolean> lowBoost,
-        @Nullable Output<Double> lufs) {
-        this.highBoost = highBoost;
-        this.lowBoost = lowBoost;
-        this.lufs = lufs;
-    }
+    private AudioArgs() {}
 
-    private AudioArgs() {
-        this.highBoost = Codegen.empty();
-        this.lowBoost = Codegen.empty();
-        this.lufs = Codegen.empty();
+    private AudioArgs(AudioArgs $) {
+        this.highBoost = $.highBoost;
+        this.lowBoost = $.lowBoost;
+        this.lufs = $.lufs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AudioArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> highBoost;
-        private @Nullable Output<Boolean> lowBoost;
-        private @Nullable Output<Double> lufs;
+        private AudioArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AudioArgs();
         }
 
         public Builder(AudioArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.highBoost = defaults.highBoost;
-    	      this.lowBoost = defaults.lowBoost;
-    	      this.lufs = defaults.lufs;
+            $ = new AudioArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder highBoost(@Nullable Output<Boolean> highBoost) {
-            this.highBoost = highBoost;
+            $.highBoost = highBoost;
             return this;
         }
-        public Builder highBoost(@Nullable Boolean highBoost) {
-            this.highBoost = Codegen.ofNullable(highBoost);
-            return this;
+
+        public Builder highBoost(Boolean highBoost) {
+            return highBoost(Output.of(highBoost));
         }
+
         public Builder lowBoost(@Nullable Output<Boolean> lowBoost) {
-            this.lowBoost = lowBoost;
+            $.lowBoost = lowBoost;
             return this;
         }
-        public Builder lowBoost(@Nullable Boolean lowBoost) {
-            this.lowBoost = Codegen.ofNullable(lowBoost);
-            return this;
+
+        public Builder lowBoost(Boolean lowBoost) {
+            return lowBoost(Output.of(lowBoost));
         }
+
         public Builder lufs(@Nullable Output<Double> lufs) {
-            this.lufs = lufs;
+            $.lufs = lufs;
             return this;
         }
-        public Builder lufs(@Nullable Double lufs) {
-            this.lufs = Codegen.ofNullable(lufs);
-            return this;
-        }        public AudioArgs build() {
-            return new AudioArgs(highBoost, lowBoost, lufs);
+
+        public Builder lufs(Double lufs) {
+            return lufs(Output.of(lufs));
+        }
+
+        public AudioArgs build() {
+            return $;
         }
     }
+
 }

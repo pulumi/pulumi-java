@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class SavedDiskArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceDisk")
-      private final @Nullable Output<String> sourceDisk;
+    private @Nullable Output<String> sourceDisk;
 
-    public Output<String> sourceDisk() {
-        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
+    public Optional<Output<String>> sourceDisk() {
+        return Optional.ofNullable(this.sourceDisk);
     }
 
-    public SavedDiskArgs(@Nullable Output<String> sourceDisk) {
-        this.sourceDisk = sourceDisk;
-    }
+    private SavedDiskArgs() {}
 
-    private SavedDiskArgs() {
-        this.sourceDisk = Codegen.empty();
+    private SavedDiskArgs(SavedDiskArgs $) {
+        this.sourceDisk = $.sourceDisk;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SavedDiskArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> sourceDisk;
+        private SavedDiskArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SavedDiskArgs();
         }
 
         public Builder(SavedDiskArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.sourceDisk = defaults.sourceDisk;
+            $ = new SavedDiskArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder sourceDisk(@Nullable Output<String> sourceDisk) {
-            this.sourceDisk = sourceDisk;
+            $.sourceDisk = sourceDisk;
             return this;
         }
-        public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Codegen.ofNullable(sourceDisk);
-            return this;
-        }        public SavedDiskArgs build() {
-            return new SavedDiskArgs(sourceDisk);
+
+        public Builder sourceDisk(String sourceDisk) {
+            return sourceDisk(Output.of(sourceDisk));
+        }
+
+        public SavedDiskArgs build() {
+            return $;
         }
     }
+
 }

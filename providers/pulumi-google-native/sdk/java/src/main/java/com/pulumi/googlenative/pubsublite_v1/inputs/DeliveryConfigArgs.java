@@ -5,9 +5,9 @@ package com.pulumi.googlenative.pubsublite_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsublite_v1.enums.DeliveryConfigDeliveryRequirement;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class DeliveryConfigArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="deliveryRequirement")
-      private final @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
+    private @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
-    public Output<DeliveryConfigDeliveryRequirement> deliveryRequirement() {
-        return this.deliveryRequirement == null ? Codegen.empty() : this.deliveryRequirement;
+    public Optional<Output<DeliveryConfigDeliveryRequirement>> deliveryRequirement() {
+        return Optional.ofNullable(this.deliveryRequirement);
     }
 
-    public DeliveryConfigArgs(@Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
-        this.deliveryRequirement = deliveryRequirement;
-    }
+    private DeliveryConfigArgs() {}
 
-    private DeliveryConfigArgs() {
-        this.deliveryRequirement = Codegen.empty();
+    private DeliveryConfigArgs(DeliveryConfigArgs $) {
+        this.deliveryRequirement = $.deliveryRequirement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeliveryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
+        private DeliveryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeliveryConfigArgs();
         }
 
         public Builder(DeliveryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deliveryRequirement = defaults.deliveryRequirement;
+            $ = new DeliveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deliveryRequirement(@Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
-            this.deliveryRequirement = deliveryRequirement;
+            $.deliveryRequirement = deliveryRequirement;
             return this;
         }
-        public Builder deliveryRequirement(@Nullable DeliveryConfigDeliveryRequirement deliveryRequirement) {
-            this.deliveryRequirement = Codegen.ofNullable(deliveryRequirement);
-            return this;
-        }        public DeliveryConfigArgs build() {
-            return new DeliveryConfigArgs(deliveryRequirement);
+
+        public Builder deliveryRequirement(DeliveryConfigDeliveryRequirement deliveryRequirement) {
+            return deliveryRequirement(Output.of(deliveryRequirement));
+        }
+
+        public DeliveryConfigArgs build() {
+            return $;
         }
     }
+
 }

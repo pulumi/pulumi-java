@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.NetworkConfigArgs;
 import com.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PrivatePoolV1ConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="networkConfig")
-      private final @Nullable Output<NetworkConfigArgs> networkConfig;
+    private @Nullable Output<NetworkConfigArgs> networkConfig;
 
-    public Output<NetworkConfigArgs> networkConfig() {
-        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
+    public Optional<Output<NetworkConfigArgs>> networkConfig() {
+        return Optional.ofNullable(this.networkConfig);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class PrivatePoolV1ConfigArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<WorkerConfigArgs> workerConfig;
+    private @Nullable Output<WorkerConfigArgs> workerConfig;
 
-    public Output<WorkerConfigArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<WorkerConfigArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
-    public PrivatePoolV1ConfigArgs(
-        @Nullable Output<NetworkConfigArgs> networkConfig,
-        @Nullable Output<WorkerConfigArgs> workerConfig) {
-        this.networkConfig = networkConfig;
-        this.workerConfig = workerConfig;
-    }
+    private PrivatePoolV1ConfigArgs() {}
 
-    private PrivatePoolV1ConfigArgs() {
-        this.networkConfig = Codegen.empty();
-        this.workerConfig = Codegen.empty();
+    private PrivatePoolV1ConfigArgs(PrivatePoolV1ConfigArgs $) {
+        this.networkConfig = $.networkConfig;
+        this.workerConfig = $.workerConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PrivatePoolV1ConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<NetworkConfigArgs> networkConfig;
-        private @Nullable Output<WorkerConfigArgs> workerConfig;
+        private PrivatePoolV1ConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PrivatePoolV1ConfigArgs();
         }
 
         public Builder(PrivatePoolV1ConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.workerConfig = defaults.workerConfig;
+            $ = new PrivatePoolV1ConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder networkConfig(@Nullable Output<NetworkConfigArgs> networkConfig) {
-            this.networkConfig = networkConfig;
+            $.networkConfig = networkConfig;
             return this;
         }
-        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
-            this.networkConfig = Codegen.ofNullable(networkConfig);
-            return this;
+
+        public Builder networkConfig(NetworkConfigArgs networkConfig) {
+            return networkConfig(Output.of(networkConfig));
         }
+
         public Builder workerConfig(@Nullable Output<WorkerConfigArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
-        }        public PrivatePoolV1ConfigArgs build() {
-            return new PrivatePoolV1ConfigArgs(networkConfig, workerConfig);
+
+        public Builder workerConfig(WorkerConfigArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
+        }
+
+        public PrivatePoolV1ConfigArgs build() {
+            return $;
         }
     }
+
 }

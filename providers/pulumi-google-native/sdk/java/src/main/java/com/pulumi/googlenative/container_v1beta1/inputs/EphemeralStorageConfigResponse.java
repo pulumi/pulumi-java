@@ -21,45 +21,45 @@ public final class EphemeralStorageConfigResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="localSsdCount", required=true)
-      private final Integer localSsdCount;
+    private Integer localSsdCount;
 
     public Integer localSsdCount() {
         return this.localSsdCount;
     }
 
-    public EphemeralStorageConfigResponse(Integer localSsdCount) {
-        this.localSsdCount = Objects.requireNonNull(localSsdCount, "expected parameter 'localSsdCount' to be non-null");
-    }
+    private EphemeralStorageConfigResponse() {}
 
-    private EphemeralStorageConfigResponse() {
-        this.localSsdCount = null;
+    private EphemeralStorageConfigResponse(EphemeralStorageConfigResponse $) {
+        this.localSsdCount = $.localSsdCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EphemeralStorageConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer localSsdCount;
+        private EphemeralStorageConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EphemeralStorageConfigResponse();
         }
 
         public Builder(EphemeralStorageConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.localSsdCount = defaults.localSsdCount;
+            $ = new EphemeralStorageConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder localSsdCount(Integer localSsdCount) {
-            this.localSsdCount = Objects.requireNonNull(localSsdCount);
+            $.localSsdCount = localSsdCount;
             return this;
-        }        public EphemeralStorageConfigResponse build() {
-            return new EphemeralStorageConfigResponse(localSsdCount);
+        }
+
+        public EphemeralStorageConfigResponse build() {
+            $.localSsdCount = Objects.requireNonNull($.localSsdCount, "expected parameter 'localSsdCount' to be non-null");
+            return $;
         }
     }
+
 }

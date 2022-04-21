@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudkms_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ExternalProtectionLevelOptionsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="ekmConnectionKeyPath")
-      private final @Nullable Output<String> ekmConnectionKeyPath;
+    private @Nullable Output<String> ekmConnectionKeyPath;
 
-    public Output<String> ekmConnectionKeyPath() {
-        return this.ekmConnectionKeyPath == null ? Codegen.empty() : this.ekmConnectionKeyPath;
+    public Optional<Output<String>> ekmConnectionKeyPath() {
+        return Optional.ofNullable(this.ekmConnectionKeyPath);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ExternalProtectionLevelOptionsArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="externalKeyUri")
-      private final @Nullable Output<String> externalKeyUri;
+    private @Nullable Output<String> externalKeyUri;
 
-    public Output<String> externalKeyUri() {
-        return this.externalKeyUri == null ? Codegen.empty() : this.externalKeyUri;
+    public Optional<Output<String>> externalKeyUri() {
+        return Optional.ofNullable(this.externalKeyUri);
     }
 
-    public ExternalProtectionLevelOptionsArgs(
-        @Nullable Output<String> ekmConnectionKeyPath,
-        @Nullable Output<String> externalKeyUri) {
-        this.ekmConnectionKeyPath = ekmConnectionKeyPath;
-        this.externalKeyUri = externalKeyUri;
-    }
+    private ExternalProtectionLevelOptionsArgs() {}
 
-    private ExternalProtectionLevelOptionsArgs() {
-        this.ekmConnectionKeyPath = Codegen.empty();
-        this.externalKeyUri = Codegen.empty();
+    private ExternalProtectionLevelOptionsArgs(ExternalProtectionLevelOptionsArgs $) {
+        this.ekmConnectionKeyPath = $.ekmConnectionKeyPath;
+        this.externalKeyUri = $.externalKeyUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalProtectionLevelOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ekmConnectionKeyPath;
-        private @Nullable Output<String> externalKeyUri;
+        private ExternalProtectionLevelOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalProtectionLevelOptionsArgs();
         }
 
         public Builder(ExternalProtectionLevelOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ekmConnectionKeyPath = defaults.ekmConnectionKeyPath;
-    	      this.externalKeyUri = defaults.externalKeyUri;
+            $ = new ExternalProtectionLevelOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ekmConnectionKeyPath(@Nullable Output<String> ekmConnectionKeyPath) {
-            this.ekmConnectionKeyPath = ekmConnectionKeyPath;
+            $.ekmConnectionKeyPath = ekmConnectionKeyPath;
             return this;
         }
-        public Builder ekmConnectionKeyPath(@Nullable String ekmConnectionKeyPath) {
-            this.ekmConnectionKeyPath = Codegen.ofNullable(ekmConnectionKeyPath);
-            return this;
+
+        public Builder ekmConnectionKeyPath(String ekmConnectionKeyPath) {
+            return ekmConnectionKeyPath(Output.of(ekmConnectionKeyPath));
         }
+
         public Builder externalKeyUri(@Nullable Output<String> externalKeyUri) {
-            this.externalKeyUri = externalKeyUri;
+            $.externalKeyUri = externalKeyUri;
             return this;
         }
-        public Builder externalKeyUri(@Nullable String externalKeyUri) {
-            this.externalKeyUri = Codegen.ofNullable(externalKeyUri);
-            return this;
-        }        public ExternalProtectionLevelOptionsArgs build() {
-            return new ExternalProtectionLevelOptionsArgs(ekmConnectionKeyPath, externalKeyUri);
+
+        public Builder externalKeyUri(String externalKeyUri) {
+            return externalKeyUri(Output.of(externalKeyUri));
+        }
+
+        public ExternalProtectionLevelOptionsArgs build() {
+            return $;
         }
     }
+
 }

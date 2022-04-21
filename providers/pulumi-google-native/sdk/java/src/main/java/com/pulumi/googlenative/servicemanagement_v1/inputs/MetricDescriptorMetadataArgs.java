@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ingestDelay")
-      private final @Nullable Output<String> ingestDelay;
+    private @Nullable Output<String> ingestDelay;
 
-    public Output<String> ingestDelay() {
-        return this.ingestDelay == null ? Codegen.empty() : this.ingestDelay;
+    public Optional<Output<String>> ingestDelay() {
+        return Optional.ofNullable(this.ingestDelay);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class MetricDescriptorMetadataArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="samplePeriod")
-      private final @Nullable Output<String> samplePeriod;
+    private @Nullable Output<String> samplePeriod;
 
-    public Output<String> samplePeriod() {
-        return this.samplePeriod == null ? Codegen.empty() : this.samplePeriod;
+    public Optional<Output<String>> samplePeriod() {
+        return Optional.ofNullable(this.samplePeriod);
     }
 
-    public MetricDescriptorMetadataArgs(
-        @Nullable Output<String> ingestDelay,
-        @Nullable Output<String> samplePeriod) {
-        this.ingestDelay = ingestDelay;
-        this.samplePeriod = samplePeriod;
-    }
+    private MetricDescriptorMetadataArgs() {}
 
-    private MetricDescriptorMetadataArgs() {
-        this.ingestDelay = Codegen.empty();
-        this.samplePeriod = Codegen.empty();
+    private MetricDescriptorMetadataArgs(MetricDescriptorMetadataArgs $) {
+        this.ingestDelay = $.ingestDelay;
+        this.samplePeriod = $.samplePeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricDescriptorMetadataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ingestDelay;
-        private @Nullable Output<String> samplePeriod;
+        private MetricDescriptorMetadataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricDescriptorMetadataArgs();
         }
 
         public Builder(MetricDescriptorMetadataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ingestDelay = defaults.ingestDelay;
-    	      this.samplePeriod = defaults.samplePeriod;
+            $ = new MetricDescriptorMetadataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ingestDelay(@Nullable Output<String> ingestDelay) {
-            this.ingestDelay = ingestDelay;
+            $.ingestDelay = ingestDelay;
             return this;
         }
-        public Builder ingestDelay(@Nullable String ingestDelay) {
-            this.ingestDelay = Codegen.ofNullable(ingestDelay);
-            return this;
+
+        public Builder ingestDelay(String ingestDelay) {
+            return ingestDelay(Output.of(ingestDelay));
         }
+
         public Builder samplePeriod(@Nullable Output<String> samplePeriod) {
-            this.samplePeriod = samplePeriod;
+            $.samplePeriod = samplePeriod;
             return this;
         }
-        public Builder samplePeriod(@Nullable String samplePeriod) {
-            this.samplePeriod = Codegen.ofNullable(samplePeriod);
-            return this;
-        }        public MetricDescriptorMetadataArgs build() {
-            return new MetricDescriptorMetadataArgs(ingestDelay, samplePeriod);
+
+        public Builder samplePeriod(String samplePeriod) {
+            return samplePeriod(Output.of(samplePeriod));
+        }
+
+        public MetricDescriptorMetadataArgs build() {
+            return $;
         }
     }
+
 }

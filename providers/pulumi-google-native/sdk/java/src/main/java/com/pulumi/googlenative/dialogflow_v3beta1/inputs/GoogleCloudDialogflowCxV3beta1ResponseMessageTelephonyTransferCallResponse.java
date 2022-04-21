@@ -21,45 +21,45 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransfe
      * 
      */
     @Import(name="phoneNumber", required=true)
-      private final String phoneNumber;
+    private String phoneNumber;
 
     public String phoneNumber() {
         return this.phoneNumber;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse(String phoneNumber) {
-        this.phoneNumber = Objects.requireNonNull(phoneNumber, "expected parameter 'phoneNumber' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse() {
-        this.phoneNumber = null;
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse $) {
+        this.phoneNumber = $.phoneNumber;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String phoneNumber;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.phoneNumber = defaults.phoneNumber;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder phoneNumber(String phoneNumber) {
-            this.phoneNumber = Objects.requireNonNull(phoneNumber);
+            $.phoneNumber = phoneNumber;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse(phoneNumber);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallResponse build() {
+            $.phoneNumber = Objects.requireNonNull($.phoneNumber, "expected parameter 'phoneNumber' to be non-null");
+            return $;
         }
     }
+
 }

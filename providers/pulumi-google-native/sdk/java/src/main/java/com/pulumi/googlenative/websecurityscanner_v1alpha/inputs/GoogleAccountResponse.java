@@ -21,7 +21,7 @@ public final class GoogleAccountResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -32,55 +32,52 @@ public final class GoogleAccountResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public GoogleAccountResponse(
-        String password,
-        String username) {
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private GoogleAccountResponse() {}
 
-    private GoogleAccountResponse() {
-        this.password = null;
-        this.username = null;
+    private GoogleAccountResponse(GoogleAccountResponse $) {
+        this.password = $.password;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleAccountResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String password;
-        private String username;
+        private GoogleAccountResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleAccountResponse();
         }
 
         public Builder(GoogleAccountResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.password = defaults.password;
-    	      this.username = defaults.username;
+            $ = new GoogleAccountResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public GoogleAccountResponse build() {
-            return new GoogleAccountResponse(password, username);
+        }
+
+        public GoogleAccountResponse build() {
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1.enums.EndpointsApiServiceRolloutStrategy;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="configId")
-      private final @Nullable Output<String> configId;
+    private @Nullable Output<String> configId;
 
-    public Output<String> configId() {
-        return this.configId == null ? Codegen.empty() : this.configId;
+    public Optional<Output<String>> configId() {
+        return Optional.ofNullable(this.configId);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="disableTraceSampling")
-      private final @Nullable Output<Boolean> disableTraceSampling;
+    private @Nullable Output<Boolean> disableTraceSampling;
 
-    public Output<Boolean> disableTraceSampling() {
-        return this.disableTraceSampling == null ? Codegen.empty() : this.disableTraceSampling;
+    public Optional<Output<Boolean>> disableTraceSampling() {
+        return Optional.ofNullable(this.disableTraceSampling);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -59,89 +59,78 @@ public final class EndpointsApiServiceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="rolloutStrategy")
-      private final @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
+    private @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
-    public Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy() {
-        return this.rolloutStrategy == null ? Codegen.empty() : this.rolloutStrategy;
+    public Optional<Output<EndpointsApiServiceRolloutStrategy>> rolloutStrategy() {
+        return Optional.ofNullable(this.rolloutStrategy);
     }
 
-    public EndpointsApiServiceArgs(
-        @Nullable Output<String> configId,
-        @Nullable Output<Boolean> disableTraceSampling,
-        @Nullable Output<String> name,
-        @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
-        this.configId = configId;
-        this.disableTraceSampling = disableTraceSampling;
-        this.name = name;
-        this.rolloutStrategy = rolloutStrategy;
-    }
+    private EndpointsApiServiceArgs() {}
 
-    private EndpointsApiServiceArgs() {
-        this.configId = Codegen.empty();
-        this.disableTraceSampling = Codegen.empty();
-        this.name = Codegen.empty();
-        this.rolloutStrategy = Codegen.empty();
+    private EndpointsApiServiceArgs(EndpointsApiServiceArgs $) {
+        this.configId = $.configId;
+        this.disableTraceSampling = $.disableTraceSampling;
+        this.name = $.name;
+        this.rolloutStrategy = $.rolloutStrategy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointsApiServiceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> configId;
-        private @Nullable Output<Boolean> disableTraceSampling;
-        private @Nullable Output<String> name;
-        private @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
+        private EndpointsApiServiceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointsApiServiceArgs();
         }
 
         public Builder(EndpointsApiServiceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.configId = defaults.configId;
-    	      this.disableTraceSampling = defaults.disableTraceSampling;
-    	      this.name = defaults.name;
-    	      this.rolloutStrategy = defaults.rolloutStrategy;
+            $ = new EndpointsApiServiceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder configId(@Nullable Output<String> configId) {
-            this.configId = configId;
+            $.configId = configId;
             return this;
         }
-        public Builder configId(@Nullable String configId) {
-            this.configId = Codegen.ofNullable(configId);
-            return this;
+
+        public Builder configId(String configId) {
+            return configId(Output.of(configId));
         }
+
         public Builder disableTraceSampling(@Nullable Output<Boolean> disableTraceSampling) {
-            this.disableTraceSampling = disableTraceSampling;
+            $.disableTraceSampling = disableTraceSampling;
             return this;
         }
-        public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
-            this.disableTraceSampling = Codegen.ofNullable(disableTraceSampling);
-            return this;
+
+        public Builder disableTraceSampling(Boolean disableTraceSampling) {
+            return disableTraceSampling(Output.of(disableTraceSampling));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder rolloutStrategy(@Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy) {
-            this.rolloutStrategy = rolloutStrategy;
+            $.rolloutStrategy = rolloutStrategy;
             return this;
         }
-        public Builder rolloutStrategy(@Nullable EndpointsApiServiceRolloutStrategy rolloutStrategy) {
-            this.rolloutStrategy = Codegen.ofNullable(rolloutStrategy);
-            return this;
-        }        public EndpointsApiServiceArgs build() {
-            return new EndpointsApiServiceArgs(configId, disableTraceSampling, name, rolloutStrategy);
+
+        public Builder rolloutStrategy(EndpointsApiServiceRolloutStrategy rolloutStrategy) {
+            return rolloutStrategy(Output.of(rolloutStrategy));
+        }
+
+        public EndpointsApiServiceArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="monthDay", required=true)
-      private final Integer monthDay;
+    private Integer monthDay;
 
     public Integer monthDay() {
         return this.monthDay;
@@ -33,55 +33,52 @@ public final class MonthlyScheduleResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="weekDayOfMonth", required=true)
-      private final WeekDayOfMonthResponse weekDayOfMonth;
+    private WeekDayOfMonthResponse weekDayOfMonth;
 
     public WeekDayOfMonthResponse weekDayOfMonth() {
         return this.weekDayOfMonth;
     }
 
-    public MonthlyScheduleResponse(
-        Integer monthDay,
-        WeekDayOfMonthResponse weekDayOfMonth) {
-        this.monthDay = Objects.requireNonNull(monthDay, "expected parameter 'monthDay' to be non-null");
-        this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth, "expected parameter 'weekDayOfMonth' to be non-null");
-    }
+    private MonthlyScheduleResponse() {}
 
-    private MonthlyScheduleResponse() {
-        this.monthDay = null;
-        this.weekDayOfMonth = null;
+    private MonthlyScheduleResponse(MonthlyScheduleResponse $) {
+        this.monthDay = $.monthDay;
+        this.weekDayOfMonth = $.weekDayOfMonth;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MonthlyScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer monthDay;
-        private WeekDayOfMonthResponse weekDayOfMonth;
+        private MonthlyScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MonthlyScheduleResponse();
         }
 
         public Builder(MonthlyScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.monthDay = defaults.monthDay;
-    	      this.weekDayOfMonth = defaults.weekDayOfMonth;
+            $ = new MonthlyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder monthDay(Integer monthDay) {
-            this.monthDay = Objects.requireNonNull(monthDay);
+            $.monthDay = monthDay;
             return this;
         }
+
         public Builder weekDayOfMonth(WeekDayOfMonthResponse weekDayOfMonth) {
-            this.weekDayOfMonth = Objects.requireNonNull(weekDayOfMonth);
+            $.weekDayOfMonth = weekDayOfMonth;
             return this;
-        }        public MonthlyScheduleResponse build() {
-            return new MonthlyScheduleResponse(monthDay, weekDayOfMonth);
+        }
+
+        public MonthlyScheduleResponse build() {
+            $.monthDay = Objects.requireNonNull($.monthDay, "expected parameter 'monthDay' to be non-null");
+            $.weekDayOfMonth = Objects.requireNonNull($.weekDayOfMonth, "expected parameter 'weekDayOfMonth' to be non-null");
+            return $;
         }
     }
+
 }

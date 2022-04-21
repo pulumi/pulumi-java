@@ -21,7 +21,7 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="hostRewrite", required=true)
-      private final String hostRewrite;
+    private String hostRewrite;
 
     public String hostRewrite() {
         return this.hostRewrite;
@@ -32,55 +32,52 @@ public final class UrlRewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pathPrefixRewrite", required=true)
-      private final String pathPrefixRewrite;
+    private String pathPrefixRewrite;
 
     public String pathPrefixRewrite() {
         return this.pathPrefixRewrite;
     }
 
-    public UrlRewriteResponse(
-        String hostRewrite,
-        String pathPrefixRewrite) {
-        this.hostRewrite = Objects.requireNonNull(hostRewrite, "expected parameter 'hostRewrite' to be non-null");
-        this.pathPrefixRewrite = Objects.requireNonNull(pathPrefixRewrite, "expected parameter 'pathPrefixRewrite' to be non-null");
-    }
+    private UrlRewriteResponse() {}
 
-    private UrlRewriteResponse() {
-        this.hostRewrite = null;
-        this.pathPrefixRewrite = null;
+    private UrlRewriteResponse(UrlRewriteResponse $) {
+        this.hostRewrite = $.hostRewrite;
+        this.pathPrefixRewrite = $.pathPrefixRewrite;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UrlRewriteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostRewrite;
-        private String pathPrefixRewrite;
+        private UrlRewriteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new UrlRewriteResponse();
         }
 
         public Builder(UrlRewriteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostRewrite = defaults.hostRewrite;
-    	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
+            $ = new UrlRewriteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder hostRewrite(String hostRewrite) {
-            this.hostRewrite = Objects.requireNonNull(hostRewrite);
+            $.hostRewrite = hostRewrite;
             return this;
         }
+
         public Builder pathPrefixRewrite(String pathPrefixRewrite) {
-            this.pathPrefixRewrite = Objects.requireNonNull(pathPrefixRewrite);
+            $.pathPrefixRewrite = pathPrefixRewrite;
             return this;
-        }        public UrlRewriteResponse build() {
-            return new UrlRewriteResponse(hostRewrite, pathPrefixRewrite);
+        }
+
+        public UrlRewriteResponse build() {
+            $.hostRewrite = Objects.requireNonNull($.hostRewrite, "expected parameter 'hostRewrite' to be non-null");
+            $.pathPrefixRewrite = Objects.requireNonNull($.pathPrefixRewrite, "expected parameter 'pathPrefixRewrite' to be non-null");
+            return $;
         }
     }
+
 }

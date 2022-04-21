@@ -5,10 +5,10 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @Import(name="doNotAssociateTerms")
-      private final @Nullable Output<List<String>> doNotAssociateTerms;
+    private @Nullable Output<List<String>> doNotAssociateTerms;
 
-    public Output<List<String>> doNotAssociateTerms() {
-        return this.doNotAssociateTerms == null ? Codegen.empty() : this.doNotAssociateTerms;
+    public Optional<Output<List<String>>> doNotAssociateTerms() {
+        return Optional.ofNullable(this.doNotAssociateTerms);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @Import(name="queryTerms")
-      private final @Nullable Output<List<String>> queryTerms;
+    private @Nullable Output<List<String>> queryTerms;
 
-    public Output<List<String>> queryTerms() {
-        return this.queryTerms == null ? Codegen.empty() : this.queryTerms;
+    public Optional<Output<List<String>>> queryTerms() {
+        return Optional.ofNullable(this.queryTerms);
     }
 
     /**
@@ -47,85 +47,80 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs extends 
      * 
      */
     @Import(name="terms")
-      private final @Nullable Output<List<String>> terms;
+    private @Nullable Output<List<String>> terms;
 
-    public Output<List<String>> terms() {
-        return this.terms == null ? Codegen.empty() : this.terms;
+    public Optional<Output<List<String>>> terms() {
+        return Optional.ofNullable(this.terms);
     }
 
-    public GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs(
-        @Nullable Output<List<String>> doNotAssociateTerms,
-        @Nullable Output<List<String>> queryTerms,
-        @Nullable Output<List<String>> terms) {
-        this.doNotAssociateTerms = doNotAssociateTerms;
-        this.queryTerms = queryTerms;
-        this.terms = terms;
-    }
+    private GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs() {}
 
-    private GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs() {
-        this.doNotAssociateTerms = Codegen.empty();
-        this.queryTerms = Codegen.empty();
-        this.terms = Codegen.empty();
+    private GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs(GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs $) {
+        this.doNotAssociateTerms = $.doNotAssociateTerms;
+        this.queryTerms = $.queryTerms;
+        this.terms = $.terms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> doNotAssociateTerms;
-        private @Nullable Output<List<String>> queryTerms;
-        private @Nullable Output<List<String>> terms;
+        private GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doNotAssociateTerms = defaults.doNotAssociateTerms;
-    	      this.queryTerms = defaults.queryTerms;
-    	      this.terms = defaults.terms;
+            $ = new GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder doNotAssociateTerms(@Nullable Output<List<String>> doNotAssociateTerms) {
-            this.doNotAssociateTerms = doNotAssociateTerms;
+            $.doNotAssociateTerms = doNotAssociateTerms;
             return this;
         }
-        public Builder doNotAssociateTerms(@Nullable List<String> doNotAssociateTerms) {
-            this.doNotAssociateTerms = Codegen.ofNullable(doNotAssociateTerms);
-            return this;
+
+        public Builder doNotAssociateTerms(List<String> doNotAssociateTerms) {
+            return doNotAssociateTerms(Output.of(doNotAssociateTerms));
         }
+
         public Builder doNotAssociateTerms(String... doNotAssociateTerms) {
             return doNotAssociateTerms(List.of(doNotAssociateTerms));
         }
+
         public Builder queryTerms(@Nullable Output<List<String>> queryTerms) {
-            this.queryTerms = queryTerms;
+            $.queryTerms = queryTerms;
             return this;
         }
-        public Builder queryTerms(@Nullable List<String> queryTerms) {
-            this.queryTerms = Codegen.ofNullable(queryTerms);
-            return this;
+
+        public Builder queryTerms(List<String> queryTerms) {
+            return queryTerms(Output.of(queryTerms));
         }
+
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
+
         public Builder terms(@Nullable Output<List<String>> terms) {
-            this.terms = terms;
+            $.terms = terms;
             return this;
         }
-        public Builder terms(@Nullable List<String> terms) {
-            this.terms = Codegen.ofNullable(terms);
-            return this;
+
+        public Builder terms(List<String> terms) {
+            return terms(Output.of(terms));
         }
+
         public Builder terms(String... terms) {
             return terms(List.of(terms));
-        }        public GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs build() {
-            return new GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs(doNotAssociateTerms, queryTerms, terms);
+        }
+
+        public GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs build() {
+            return $;
         }
     }
+
 }

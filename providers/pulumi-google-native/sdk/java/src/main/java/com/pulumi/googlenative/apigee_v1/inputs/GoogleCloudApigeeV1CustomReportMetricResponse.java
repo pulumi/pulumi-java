@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends com.pul
      * 
      */
     @Import(name="function", required=true)
-      private final String function;
+    private String function;
 
     public String function() {
         return this.function;
@@ -32,55 +32,52 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends com.pul
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public GoogleCloudApigeeV1CustomReportMetricResponse(
-        String function,
-        String name) {
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private GoogleCloudApigeeV1CustomReportMetricResponse() {}
 
-    private GoogleCloudApigeeV1CustomReportMetricResponse() {
-        this.function = null;
-        this.name = null;
+    private GoogleCloudApigeeV1CustomReportMetricResponse(GoogleCloudApigeeV1CustomReportMetricResponse $) {
+        this.function = $.function;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1CustomReportMetricResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String function;
-        private String name;
+        private GoogleCloudApigeeV1CustomReportMetricResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1CustomReportMetricResponse();
         }
 
         public Builder(GoogleCloudApigeeV1CustomReportMetricResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.function = defaults.function;
-    	      this.name = defaults.name;
+            $ = new GoogleCloudApigeeV1CustomReportMetricResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder function(String function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public GoogleCloudApigeeV1CustomReportMetricResponse build() {
-            return new GoogleCloudApigeeV1CustomReportMetricResponse(function, name);
+        }
+
+        public GoogleCloudApigeeV1CustomReportMetricResponse build() {
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,45 +21,45 @@ public final class HttpLoadBalancingResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="disabled", required=true)
-      private final Boolean disabled;
+    private Boolean disabled;
 
     public Boolean disabled() {
         return this.disabled;
     }
 
-    public HttpLoadBalancingResponse(Boolean disabled) {
-        this.disabled = Objects.requireNonNull(disabled, "expected parameter 'disabled' to be non-null");
-    }
+    private HttpLoadBalancingResponse() {}
 
-    private HttpLoadBalancingResponse() {
-        this.disabled = null;
+    private HttpLoadBalancingResponse(HttpLoadBalancingResponse $) {
+        this.disabled = $.disabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpLoadBalancingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean disabled;
+        private HttpLoadBalancingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpLoadBalancingResponse();
         }
 
         public Builder(HttpLoadBalancingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.disabled = defaults.disabled;
+            $ = new HttpLoadBalancingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder disabled(Boolean disabled) {
-            this.disabled = Objects.requireNonNull(disabled);
+            $.disabled = disabled;
             return this;
-        }        public HttpLoadBalancingResponse build() {
-            return new HttpLoadBalancingResponse(disabled);
+        }
+
+        public HttpLoadBalancingResponse build() {
+            $.disabled = Objects.requireNonNull($.disabled, "expected parameter 'disabled' to be non-null");
+            return $;
         }
     }
+
 }

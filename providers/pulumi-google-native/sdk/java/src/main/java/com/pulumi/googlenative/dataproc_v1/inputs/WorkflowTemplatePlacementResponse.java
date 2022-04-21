@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clusterSelector", required=true)
-      private final ClusterSelectorResponse clusterSelector;
+    private ClusterSelectorResponse clusterSelector;
 
     public ClusterSelectorResponse clusterSelector() {
         return this.clusterSelector;
@@ -33,55 +33,52 @@ public final class WorkflowTemplatePlacementResponse extends com.pulumi.resource
      * 
      */
     @Import(name="managedCluster", required=true)
-      private final ManagedClusterResponse managedCluster;
+    private ManagedClusterResponse managedCluster;
 
     public ManagedClusterResponse managedCluster() {
         return this.managedCluster;
     }
 
-    public WorkflowTemplatePlacementResponse(
-        ClusterSelectorResponse clusterSelector,
-        ManagedClusterResponse managedCluster) {
-        this.clusterSelector = Objects.requireNonNull(clusterSelector, "expected parameter 'clusterSelector' to be non-null");
-        this.managedCluster = Objects.requireNonNull(managedCluster, "expected parameter 'managedCluster' to be non-null");
-    }
+    private WorkflowTemplatePlacementResponse() {}
 
-    private WorkflowTemplatePlacementResponse() {
-        this.clusterSelector = null;
-        this.managedCluster = null;
+    private WorkflowTemplatePlacementResponse(WorkflowTemplatePlacementResponse $) {
+        this.clusterSelector = $.clusterSelector;
+        this.managedCluster = $.managedCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkflowTemplatePlacementResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ClusterSelectorResponse clusterSelector;
-        private ManagedClusterResponse managedCluster;
+        private WorkflowTemplatePlacementResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkflowTemplatePlacementResponse();
         }
 
         public Builder(WorkflowTemplatePlacementResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterSelector = defaults.clusterSelector;
-    	      this.managedCluster = defaults.managedCluster;
+            $ = new WorkflowTemplatePlacementResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterSelector(ClusterSelectorResponse clusterSelector) {
-            this.clusterSelector = Objects.requireNonNull(clusterSelector);
+            $.clusterSelector = clusterSelector;
             return this;
         }
+
         public Builder managedCluster(ManagedClusterResponse managedCluster) {
-            this.managedCluster = Objects.requireNonNull(managedCluster);
+            $.managedCluster = managedCluster;
             return this;
-        }        public WorkflowTemplatePlacementResponse build() {
-            return new WorkflowTemplatePlacementResponse(clusterSelector, managedCluster);
+        }
+
+        public WorkflowTemplatePlacementResponse build() {
+            $.clusterSelector = Objects.requireNonNull($.clusterSelector, "expected parameter 'clusterSelector' to be non-null");
+            $.managedCluster = Objects.requireNonNull($.managedCluster, "expected parameter 'managedCluster' to be non-null");
+            return $;
         }
     }
+
 }

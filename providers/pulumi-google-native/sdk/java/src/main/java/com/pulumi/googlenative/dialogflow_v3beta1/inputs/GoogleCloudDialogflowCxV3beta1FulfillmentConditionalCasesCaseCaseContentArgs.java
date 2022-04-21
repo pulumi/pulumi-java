@@ -5,10 +5,10 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * 
      */
     @Import(name="additionalCases")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases;
 
-    public Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases() {
-        return this.additionalCases == null ? Codegen.empty() : this.additionalCases;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs>> additionalCases() {
+        return Optional.ofNullable(this.additionalCases);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message;
+    private @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message;
 
-    public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs>> message() {
+        return Optional.ofNullable(this.message);
     }
 
-    public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs(
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases,
-        @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message) {
-        this.additionalCases = additionalCases;
-        this.message = message;
-    }
+    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs() {
-        this.additionalCases = Codegen.empty();
-        this.message = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs $) {
+        this.additionalCases = $.additionalCases;
+        this.message = $.message;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases;
-        private @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message;
+        private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.additionalCases = defaults.additionalCases;
-    	      this.message = defaults.message;
+            $ = new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder additionalCases(@Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases) {
-            this.additionalCases = additionalCases;
+            $.additionalCases = additionalCases;
             return this;
         }
-        public Builder additionalCases(@Nullable GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs additionalCases) {
-            this.additionalCases = Codegen.ofNullable(additionalCases);
-            return this;
+
+        public Builder additionalCases(GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs additionalCases) {
+            return additionalCases(Output.of(additionalCases));
         }
+
         public Builder message(@Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable GoogleCloudDialogflowCxV3beta1ResponseMessageArgs message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
-        }        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs(additionalCases, message);
+
+        public Builder message(GoogleCloudDialogflowCxV3beta1ResponseMessageArgs message) {
+            return message(Output.of(message));
+        }
+
+        public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentArgs build() {
+            return $;
         }
     }
+
 }

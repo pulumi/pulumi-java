@@ -21,45 +21,45 @@ public final class MaxPodsConstraintResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="maxPodsPerNode", required=true)
-      private final String maxPodsPerNode;
+    private String maxPodsPerNode;
 
     public String maxPodsPerNode() {
         return this.maxPodsPerNode;
     }
 
-    public MaxPodsConstraintResponse(String maxPodsPerNode) {
-        this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
-    }
+    private MaxPodsConstraintResponse() {}
 
-    private MaxPodsConstraintResponse() {
-        this.maxPodsPerNode = null;
+    private MaxPodsConstraintResponse(MaxPodsConstraintResponse $) {
+        this.maxPodsPerNode = $.maxPodsPerNode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MaxPodsConstraintResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maxPodsPerNode;
+        private MaxPodsConstraintResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MaxPodsConstraintResponse();
         }
 
         public Builder(MaxPodsConstraintResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxPodsPerNode = defaults.maxPodsPerNode;
+            $ = new MaxPodsConstraintResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxPodsPerNode(String maxPodsPerNode) {
-            this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
+            $.maxPodsPerNode = maxPodsPerNode;
             return this;
-        }        public MaxPodsConstraintResponse build() {
-            return new MaxPodsConstraintResponse(maxPodsPerNode);
+        }
+
+        public MaxPodsConstraintResponse build() {
+            $.maxPodsPerNode = Objects.requireNonNull($.maxPodsPerNode, "expected parameter 'maxPodsPerNode' to be non-null");
+            return $;
         }
     }
+
 }

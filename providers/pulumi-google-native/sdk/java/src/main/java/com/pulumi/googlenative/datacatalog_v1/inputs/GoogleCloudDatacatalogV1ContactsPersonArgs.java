@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends com.pulumi
      * 
      */
     @Import(name="designation")
-      private final @Nullable Output<String> designation;
+    private @Nullable Output<String> designation;
 
-    public Output<String> designation() {
-        return this.designation == null ? Codegen.empty() : this.designation;
+    public Optional<Output<String>> designation() {
+        return Optional.ofNullable(this.designation);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends com.pulumi
      * 
      */
     @Import(name="email")
-      private final @Nullable Output<String> email;
+    private @Nullable Output<String> email;
 
-    public Output<String> email() {
-        return this.email == null ? Codegen.empty() : this.email;
+    public Optional<Output<String>> email() {
+        return Optional.ofNullable(this.email);
     }
 
-    public GoogleCloudDatacatalogV1ContactsPersonArgs(
-        @Nullable Output<String> designation,
-        @Nullable Output<String> email) {
-        this.designation = designation;
-        this.email = email;
-    }
+    private GoogleCloudDatacatalogV1ContactsPersonArgs() {}
 
-    private GoogleCloudDatacatalogV1ContactsPersonArgs() {
-        this.designation = Codegen.empty();
-        this.email = Codegen.empty();
+    private GoogleCloudDatacatalogV1ContactsPersonArgs(GoogleCloudDatacatalogV1ContactsPersonArgs $) {
+        this.designation = $.designation;
+        this.email = $.email;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1ContactsPersonArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> designation;
-        private @Nullable Output<String> email;
+        private GoogleCloudDatacatalogV1ContactsPersonArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1ContactsPersonArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1ContactsPersonArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.designation = defaults.designation;
-    	      this.email = defaults.email;
+            $ = new GoogleCloudDatacatalogV1ContactsPersonArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder designation(@Nullable Output<String> designation) {
-            this.designation = designation;
+            $.designation = designation;
             return this;
         }
-        public Builder designation(@Nullable String designation) {
-            this.designation = Codegen.ofNullable(designation);
-            return this;
+
+        public Builder designation(String designation) {
+            return designation(Output.of(designation));
         }
+
         public Builder email(@Nullable Output<String> email) {
-            this.email = email;
+            $.email = email;
             return this;
         }
-        public Builder email(@Nullable String email) {
-            this.email = Codegen.ofNullable(email);
-            return this;
-        }        public GoogleCloudDatacatalogV1ContactsPersonArgs build() {
-            return new GoogleCloudDatacatalogV1ContactsPersonArgs(designation, email);
+
+        public Builder email(String email) {
+            return email(Output.of(email));
+        }
+
+        public GoogleCloudDatacatalogV1ContactsPersonArgs build() {
+            return $;
         }
     }
+
 }

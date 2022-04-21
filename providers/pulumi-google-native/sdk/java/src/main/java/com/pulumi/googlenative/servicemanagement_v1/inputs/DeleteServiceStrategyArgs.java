@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class DeleteServiceStrategyArgs extends com.pulumi.resources.Resour
 
     public static final DeleteServiceStrategyArgs Empty = new DeleteServiceStrategyArgs();
 
-    public DeleteServiceStrategyArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(DeleteServiceStrategyArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private DeleteServiceStrategyArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(DeleteServiceStrategyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new DeleteServiceStrategyArgs();
         }
         public DeleteServiceStrategyArgs build() {
-            return new DeleteServiceStrategyArgs();
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datalabeling_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,10 +20,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -31,7 +31,7 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
@@ -42,96 +42,86 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastMigrateTime")
-      private final @Nullable Output<String> lastMigrateTime;
+    private @Nullable Output<String> lastMigrateTime;
 
-    public Output<String> lastMigrateTime() {
-        return this.lastMigrateTime == null ? Codegen.empty() : this.lastMigrateTime;
+    public Optional<Output<String>> lastMigrateTime() {
+        return Optional.ofNullable(this.lastMigrateTime);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public DatasetArgs(
-        @Nullable Output<String> description,
-        Output<String> displayName,
-        @Nullable Output<String> lastMigrateTime,
-        @Nullable Output<String> project) {
-        this.description = description;
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.lastMigrateTime = lastMigrateTime;
-        this.project = project;
-    }
+    private DatasetArgs() {}
 
-    private DatasetArgs() {
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.lastMigrateTime = Codegen.empty();
-        this.project = Codegen.empty();
+    private DatasetArgs(DatasetArgs $) {
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.lastMigrateTime = $.lastMigrateTime;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private Output<String> displayName;
-        private @Nullable Output<String> lastMigrateTime;
-        private @Nullable Output<String> project;
+        private DatasetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetArgs();
         }
 
         public Builder(DatasetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.lastMigrateTime = defaults.lastMigrateTime;
-    	      this.project = defaults.project;
+            $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder lastMigrateTime(@Nullable Output<String> lastMigrateTime) {
-            this.lastMigrateTime = lastMigrateTime;
+            $.lastMigrateTime = lastMigrateTime;
             return this;
         }
-        public Builder lastMigrateTime(@Nullable String lastMigrateTime) {
-            this.lastMigrateTime = Codegen.ofNullable(lastMigrateTime);
-            return this;
+
+        public Builder lastMigrateTime(String lastMigrateTime) {
+            return lastMigrateTime(Output.of(lastMigrateTime));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public DatasetArgs build() {
-            return new DatasetArgs(description, displayName, lastMigrateTime, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public DatasetArgs build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            return $;
         }
     }
+
 }

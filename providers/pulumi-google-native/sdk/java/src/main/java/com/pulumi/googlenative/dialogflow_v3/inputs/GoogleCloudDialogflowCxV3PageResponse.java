@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="entryFulfillment", required=true)
-      private final GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment;
+    private GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment;
 
     public GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment() {
         return this.entryFulfillment;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="eventHandlers", required=true)
-      private final List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers;
+    private List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers;
 
     public List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers() {
         return this.eventHandlers;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="form", required=true)
-      private final GoogleCloudDialogflowCxV3FormResponse form;
+    private GoogleCloudDialogflowCxV3FormResponse form;
 
     public GoogleCloudDialogflowCxV3FormResponse form() {
         return this.form;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="transitionRouteGroups", required=true)
-      private final List<String> transitionRouteGroups;
+    private List<String> transitionRouteGroups;
 
     public List<String> transitionRouteGroups() {
         return this.transitionRouteGroups;
@@ -92,109 +92,99 @@ public final class GoogleCloudDialogflowCxV3PageResponse extends com.pulumi.reso
      * 
      */
     @Import(name="transitionRoutes", required=true)
-      private final List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
+    private List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
 
     public List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes() {
         return this.transitionRoutes;
     }
 
-    public GoogleCloudDialogflowCxV3PageResponse(
-        String displayName,
-        GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment,
-        List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers,
-        GoogleCloudDialogflowCxV3FormResponse form,
-        String name,
-        List<String> transitionRouteGroups,
-        List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.entryFulfillment = Objects.requireNonNull(entryFulfillment, "expected parameter 'entryFulfillment' to be non-null");
-        this.eventHandlers = Objects.requireNonNull(eventHandlers, "expected parameter 'eventHandlers' to be non-null");
-        this.form = Objects.requireNonNull(form, "expected parameter 'form' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups, "expected parameter 'transitionRouteGroups' to be non-null");
-        this.transitionRoutes = Objects.requireNonNull(transitionRoutes, "expected parameter 'transitionRoutes' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3PageResponse() {}
 
-    private GoogleCloudDialogflowCxV3PageResponse() {
-        this.displayName = null;
-        this.entryFulfillment = null;
-        this.eventHandlers = List.of();
-        this.form = null;
-        this.name = null;
-        this.transitionRouteGroups = List.of();
-        this.transitionRoutes = List.of();
+    private GoogleCloudDialogflowCxV3PageResponse(GoogleCloudDialogflowCxV3PageResponse $) {
+        this.displayName = $.displayName;
+        this.entryFulfillment = $.entryFulfillment;
+        this.eventHandlers = $.eventHandlers;
+        this.form = $.form;
+        this.name = $.name;
+        this.transitionRouteGroups = $.transitionRouteGroups;
+        this.transitionRoutes = $.transitionRoutes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3PageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment;
-        private List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers;
-        private GoogleCloudDialogflowCxV3FormResponse form;
-        private String name;
-        private List<String> transitionRouteGroups;
-        private List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes;
+        private GoogleCloudDialogflowCxV3PageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3PageResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3PageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.entryFulfillment = defaults.entryFulfillment;
-    	      this.eventHandlers = defaults.eventHandlers;
-    	      this.form = defaults.form;
-    	      this.name = defaults.name;
-    	      this.transitionRouteGroups = defaults.transitionRouteGroups;
-    	      this.transitionRoutes = defaults.transitionRoutes;
+            $ = new GoogleCloudDialogflowCxV3PageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder entryFulfillment(GoogleCloudDialogflowCxV3FulfillmentResponse entryFulfillment) {
-            this.entryFulfillment = Objects.requireNonNull(entryFulfillment);
+            $.entryFulfillment = entryFulfillment;
             return this;
         }
+
         public Builder eventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerResponse> eventHandlers) {
-            this.eventHandlers = Objects.requireNonNull(eventHandlers);
+            $.eventHandlers = eventHandlers;
             return this;
         }
+
         public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerResponse... eventHandlers) {
             return eventHandlers(List.of(eventHandlers));
         }
+
         public Builder form(GoogleCloudDialogflowCxV3FormResponse form) {
-            this.form = Objects.requireNonNull(form);
+            $.form = form;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
+            $.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
+
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
             return transitionRouteGroups(List.of(transitionRouteGroups));
         }
+
         public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3TransitionRouteResponse> transitionRoutes) {
-            this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
+            $.transitionRoutes = transitionRoutes;
             return this;
         }
+
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteResponse... transitionRoutes) {
             return transitionRoutes(List.of(transitionRoutes));
-        }        public GoogleCloudDialogflowCxV3PageResponse build() {
-            return new GoogleCloudDialogflowCxV3PageResponse(displayName, entryFulfillment, eventHandlers, form, name, transitionRouteGroups, transitionRoutes);
+        }
+
+        public GoogleCloudDialogflowCxV3PageResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.entryFulfillment = Objects.requireNonNull($.entryFulfillment, "expected parameter 'entryFulfillment' to be non-null");
+            $.eventHandlers = Objects.requireNonNull($.eventHandlers, "expected parameter 'eventHandlers' to be non-null");
+            $.form = Objects.requireNonNull($.form, "expected parameter 'form' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.transitionRouteGroups = Objects.requireNonNull($.transitionRouteGroups, "expected parameter 'transitionRouteGroups' to be non-null");
+            $.transitionRoutes = Objects.requireNonNull($.transitionRoutes, "expected parameter 'transitionRoutes' to be non-null");
+            return $;
         }
     }
+
 }

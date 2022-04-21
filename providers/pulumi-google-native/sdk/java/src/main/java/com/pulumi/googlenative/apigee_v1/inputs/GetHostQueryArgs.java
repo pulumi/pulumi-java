@@ -13,62 +13,59 @@ public final class GetHostQueryArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetHostQueryArgs Empty = new GetHostQueryArgs();
 
     @Import(name="hostQueryId", required=true)
-      private final String hostQueryId;
+    private String hostQueryId;
 
     public String hostQueryId() {
         return this.hostQueryId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetHostQueryArgs(
-        String hostQueryId,
-        String organizationId) {
-        this.hostQueryId = Objects.requireNonNull(hostQueryId, "expected parameter 'hostQueryId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetHostQueryArgs() {}
 
-    private GetHostQueryArgs() {
-        this.hostQueryId = null;
-        this.organizationId = null;
+    private GetHostQueryArgs(GetHostQueryArgs $) {
+        this.hostQueryId = $.hostQueryId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHostQueryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String hostQueryId;
-        private String organizationId;
+        private GetHostQueryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHostQueryArgs();
         }
 
         public Builder(GetHostQueryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostQueryId = defaults.hostQueryId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetHostQueryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostQueryId(String hostQueryId) {
-            this.hostQueryId = Objects.requireNonNull(hostQueryId);
+            $.hostQueryId = hostQueryId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetHostQueryArgs build() {
-            return new GetHostQueryArgs(hostQueryId, organizationId);
+        }
+
+        public GetHostQueryArgs build() {
+            $.hostQueryId = Objects.requireNonNull($.hostQueryId, "expected parameter 'hostQueryId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,48 +22,49 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
      * 
      */
     @Import(name="transcriptSegments", required=true)
-      private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
+    private List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments() {
         return this.transcriptSegments;
     }
 
-    public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
-        this.transcriptSegments = Objects.requireNonNull(transcriptSegments, "expected parameter 'transcriptSegments' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse() {
-        this.transcriptSegments = List.of();
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse $) {
+        this.transcriptSegments = $.transcriptSegments;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
+        private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.transcriptSegments = defaults.transcriptSegments;
+            $ = new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder transcriptSegments(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
-            this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
+            $.transcriptSegments = transcriptSegments;
             return this;
         }
+
         public Builder transcriptSegments(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse... transcriptSegments) {
             return transcriptSegments(List.of(transcriptSegments));
-        }        public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse build() {
-            return new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(transcriptSegments);
+        }
+
+        public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse build() {
+            $.transcriptSegments = Objects.requireNonNull($.transcriptSegments, "expected parameter 'transcriptSegments' to be non-null");
+            return $;
         }
     }
+
 }

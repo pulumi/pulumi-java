@@ -5,12 +5,12 @@ package com.pulumi.googlenative.run_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2VersionToPathArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="defaultMode")
-      private final @Nullable Output<Integer> defaultMode;
+    private @Nullable Output<Integer> defaultMode;
 
-    public Output<Integer> defaultMode() {
-        return this.defaultMode == null ? Codegen.empty() : this.defaultMode;
+    public Optional<Output<Integer>> defaultMode() {
+        return Optional.ofNullable(this.defaultMode);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="items")
-      private final @Nullable Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items;
+    private @Nullable Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items;
 
-    public Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items() {
-        return this.items == null ? Codegen.empty() : this.items;
+    public Optional<Output<List<GoogleCloudRunOpV2VersionToPathArgs>>> items() {
+        return Optional.ofNullable(this.items);
     }
 
     /**
@@ -49,79 +49,73 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceArgs extends com.pulumi.r
      * 
      */
     @Import(name="secret", required=true)
-      private final Output<String> secret;
+    private Output<String> secret;
 
     public Output<String> secret() {
         return this.secret;
     }
 
-    public GoogleCloudRunOpV2SecretVolumeSourceArgs(
-        @Nullable Output<Integer> defaultMode,
-        @Nullable Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items,
-        Output<String> secret) {
-        this.defaultMode = defaultMode;
-        this.items = items;
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private GoogleCloudRunOpV2SecretVolumeSourceArgs() {}
 
-    private GoogleCloudRunOpV2SecretVolumeSourceArgs() {
-        this.defaultMode = Codegen.empty();
-        this.items = Codegen.empty();
-        this.secret = Codegen.empty();
+    private GoogleCloudRunOpV2SecretVolumeSourceArgs(GoogleCloudRunOpV2SecretVolumeSourceArgs $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2SecretVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> defaultMode;
-        private @Nullable Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items;
-        private Output<String> secret;
+        private GoogleCloudRunOpV2SecretVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2SecretVolumeSourceArgs();
         }
 
         public Builder(GoogleCloudRunOpV2SecretVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
-    	      this.secret = defaults.secret;
+            $ = new GoogleCloudRunOpV2SecretVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
-            this.defaultMode = defaultMode;
+            $.defaultMode = defaultMode;
             return this;
         }
-        public Builder defaultMode(@Nullable Integer defaultMode) {
-            this.defaultMode = Codegen.ofNullable(defaultMode);
-            return this;
+
+        public Builder defaultMode(Integer defaultMode) {
+            return defaultMode(Output.of(defaultMode));
         }
+
         public Builder items(@Nullable Output<List<GoogleCloudRunOpV2VersionToPathArgs>> items) {
-            this.items = items;
+            $.items = items;
             return this;
         }
-        public Builder items(@Nullable List<GoogleCloudRunOpV2VersionToPathArgs> items) {
-            this.items = Codegen.ofNullable(items);
-            return this;
+
+        public Builder items(List<GoogleCloudRunOpV2VersionToPathArgs> items) {
+            return items(Output.of(items));
         }
+
         public Builder items(GoogleCloudRunOpV2VersionToPathArgs... items) {
             return items(List.of(items));
         }
+
         public Builder secret(Output<String> secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
         }
+
         public Builder secret(String secret) {
-            this.secret = Output.of(Objects.requireNonNull(secret));
-            return this;
-        }        public GoogleCloudRunOpV2SecretVolumeSourceArgs build() {
-            return new GoogleCloudRunOpV2SecretVolumeSourceArgs(defaultMode, items, secret);
+            return secret(Output.of(secret));
+        }
+
+        public GoogleCloudRunOpV2SecretVolumeSourceArgs build() {
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

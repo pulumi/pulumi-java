@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
      * 
      */
     @Import(name="allowAllPackageNames", required=true)
-      private final Boolean allowAllPackageNames;
+    private Boolean allowAllPackageNames;
 
     public Boolean allowAllPackageNames() {
         return this.allowAllPackageNames;
@@ -34,58 +34,56 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse ex
      * 
      */
     @Import(name="allowedPackageNames", required=true)
-      private final List<String> allowedPackageNames;
+    private List<String> allowedPackageNames;
 
     public List<String> allowedPackageNames() {
         return this.allowedPackageNames;
     }
 
-    public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(
-        Boolean allowAllPackageNames,
-        List<String> allowedPackageNames) {
-        this.allowAllPackageNames = Objects.requireNonNull(allowAllPackageNames, "expected parameter 'allowAllPackageNames' to be non-null");
-        this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames, "expected parameter 'allowedPackageNames' to be non-null");
-    }
+    private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse() {}
 
-    private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse() {
-        this.allowAllPackageNames = null;
-        this.allowedPackageNames = List.of();
+    private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse $) {
+        this.allowAllPackageNames = $.allowAllPackageNames;
+        this.allowedPackageNames = $.allowedPackageNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowAllPackageNames;
-        private List<String> allowedPackageNames;
+        private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAllPackageNames = defaults.allowAllPackageNames;
-    	      this.allowedPackageNames = defaults.allowedPackageNames;
+            $ = new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAllPackageNames(Boolean allowAllPackageNames) {
-            this.allowAllPackageNames = Objects.requireNonNull(allowAllPackageNames);
+            $.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
+
         public Builder allowedPackageNames(List<String> allowedPackageNames) {
-            this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
+            $.allowedPackageNames = allowedPackageNames;
             return this;
         }
+
         public Builder allowedPackageNames(String... allowedPackageNames) {
             return allowedPackageNames(List.of(allowedPackageNames));
-        }        public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse build() {
-            return new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(allowAllPackageNames, allowedPackageNames);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse build() {
+            $.allowAllPackageNames = Objects.requireNonNull($.allowAllPackageNames, "expected parameter 'allowAllPackageNames' to be non-null");
+            $.allowedPackageNames = Objects.requireNonNull($.allowedPackageNames, "expected parameter 'allowedPackageNames' to be non-null");
+            return $;
         }
     }
+
 }

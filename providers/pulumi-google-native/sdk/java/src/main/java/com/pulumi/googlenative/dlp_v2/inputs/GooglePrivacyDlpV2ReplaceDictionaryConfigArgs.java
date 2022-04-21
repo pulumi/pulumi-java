@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigArgs extends com.pul
      * 
      */
     @Import(name="wordList")
-      private final @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
+    private @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
 
-    public Output<GooglePrivacyDlpV2WordListArgs> wordList() {
-        return this.wordList == null ? Codegen.empty() : this.wordList;
+    public Optional<Output<GooglePrivacyDlpV2WordListArgs>> wordList() {
+        return Optional.ofNullable(this.wordList);
     }
 
-    public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(@Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
-        this.wordList = wordList;
-    }
+    private GooglePrivacyDlpV2ReplaceDictionaryConfigArgs() {}
 
-    private GooglePrivacyDlpV2ReplaceDictionaryConfigArgs() {
-        this.wordList = Codegen.empty();
+    private GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(GooglePrivacyDlpV2ReplaceDictionaryConfigArgs $) {
+        this.wordList = $.wordList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2ReplaceDictionaryConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList;
+        private GooglePrivacyDlpV2ReplaceDictionaryConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2ReplaceDictionaryConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.wordList = defaults.wordList;
+            $ = new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder wordList(@Nullable Output<GooglePrivacyDlpV2WordListArgs> wordList) {
-            this.wordList = wordList;
+            $.wordList = wordList;
             return this;
         }
-        public Builder wordList(@Nullable GooglePrivacyDlpV2WordListArgs wordList) {
-            this.wordList = Codegen.ofNullable(wordList);
-            return this;
-        }        public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs build() {
-            return new GooglePrivacyDlpV2ReplaceDictionaryConfigArgs(wordList);
+
+        public Builder wordList(GooglePrivacyDlpV2WordListArgs wordList) {
+            return wordList(Output.of(wordList));
+        }
+
+        public GooglePrivacyDlpV2ReplaceDictionaryConfigArgs build() {
+            return $;
         }
     }
+
 }

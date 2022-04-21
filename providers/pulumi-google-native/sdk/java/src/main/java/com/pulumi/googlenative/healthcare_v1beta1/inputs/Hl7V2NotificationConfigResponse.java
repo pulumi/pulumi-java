@@ -21,7 +21,7 @@ public final class Hl7V2NotificationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -32,55 +32,52 @@ public final class Hl7V2NotificationConfigResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="pubsubTopic", required=true)
-      private final String pubsubTopic;
+    private String pubsubTopic;
 
     public String pubsubTopic() {
         return this.pubsubTopic;
     }
 
-    public Hl7V2NotificationConfigResponse(
-        String filter,
-        String pubsubTopic) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.pubsubTopic = Objects.requireNonNull(pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
-    }
+    private Hl7V2NotificationConfigResponse() {}
 
-    private Hl7V2NotificationConfigResponse() {
-        this.filter = null;
-        this.pubsubTopic = null;
+    private Hl7V2NotificationConfigResponse(Hl7V2NotificationConfigResponse $) {
+        this.filter = $.filter;
+        this.pubsubTopic = $.pubsubTopic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(Hl7V2NotificationConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private String pubsubTopic;
+        private Hl7V2NotificationConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new Hl7V2NotificationConfigResponse();
         }
 
         public Builder(Hl7V2NotificationConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.pubsubTopic = defaults.pubsubTopic;
+            $ = new Hl7V2NotificationConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder pubsubTopic(String pubsubTopic) {
-            this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
+            $.pubsubTopic = pubsubTopic;
             return this;
-        }        public Hl7V2NotificationConfigResponse build() {
-            return new Hl7V2NotificationConfigResponse(filter, pubsubTopic);
+        }
+
+        public Hl7V2NotificationConfigResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.pubsubTopic = Objects.requireNonNull($.pubsubTopic, "expected parameter 'pubsubTopic' to be non-null");
+            return $;
         }
     }
+
 }

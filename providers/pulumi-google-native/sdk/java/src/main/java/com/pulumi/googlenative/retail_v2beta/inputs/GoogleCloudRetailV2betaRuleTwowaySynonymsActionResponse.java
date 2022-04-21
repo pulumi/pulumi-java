@@ -22,48 +22,49 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse exten
      * 
      */
     @Import(name="synonyms", required=true)
-      private final List<String> synonyms;
+    private List<String> synonyms;
 
     public List<String> synonyms() {
         return this.synonyms;
     }
 
-    public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(List<String> synonyms) {
-        this.synonyms = Objects.requireNonNull(synonyms, "expected parameter 'synonyms' to be non-null");
-    }
+    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse() {}
 
-    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse() {
-        this.synonyms = List.of();
+    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse $) {
+        this.synonyms = $.synonyms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> synonyms;
+        private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.synonyms = defaults.synonyms;
+            $ = new GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder synonyms(List<String> synonyms) {
-            this.synonyms = Objects.requireNonNull(synonyms);
+            $.synonyms = synonyms;
             return this;
         }
+
         public Builder synonyms(String... synonyms) {
             return synonyms(List.of(synonyms));
-        }        public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse build() {
-            return new GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(synonyms);
+        }
+
+        public GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse build() {
+            $.synonyms = Objects.requireNonNull($.synonyms, "expected parameter 'synonyms' to be non-null");
+            return $;
         }
     }
+
 }

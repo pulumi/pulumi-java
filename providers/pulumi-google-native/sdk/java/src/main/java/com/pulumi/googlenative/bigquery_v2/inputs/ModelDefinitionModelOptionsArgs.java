@@ -5,10 +5,10 @@ package com.pulumi.googlenative.bigquery_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,93 +21,86 @@ public final class ModelDefinitionModelOptionsArgs extends com.pulumi.resources.
     public static final ModelDefinitionModelOptionsArgs Empty = new ModelDefinitionModelOptionsArgs();
 
     @Import(name="labels")
-      private final @Nullable Output<List<String>> labels;
+    private @Nullable Output<List<String>> labels;
 
-    public Output<List<String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<List<String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="lossType")
-      private final @Nullable Output<String> lossType;
+    private @Nullable Output<String> lossType;
 
-    public Output<String> lossType() {
-        return this.lossType == null ? Codegen.empty() : this.lossType;
+    public Optional<Output<String>> lossType() {
+        return Optional.ofNullable(this.lossType);
     }
 
     @Import(name="modelType")
-      private final @Nullable Output<String> modelType;
+    private @Nullable Output<String> modelType;
 
-    public Output<String> modelType() {
-        return this.modelType == null ? Codegen.empty() : this.modelType;
+    public Optional<Output<String>> modelType() {
+        return Optional.ofNullable(this.modelType);
     }
 
-    public ModelDefinitionModelOptionsArgs(
-        @Nullable Output<List<String>> labels,
-        @Nullable Output<String> lossType,
-        @Nullable Output<String> modelType) {
-        this.labels = labels;
-        this.lossType = lossType;
-        this.modelType = modelType;
-    }
+    private ModelDefinitionModelOptionsArgs() {}
 
-    private ModelDefinitionModelOptionsArgs() {
-        this.labels = Codegen.empty();
-        this.lossType = Codegen.empty();
-        this.modelType = Codegen.empty();
+    private ModelDefinitionModelOptionsArgs(ModelDefinitionModelOptionsArgs $) {
+        this.labels = $.labels;
+        this.lossType = $.lossType;
+        this.modelType = $.modelType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelDefinitionModelOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> labels;
-        private @Nullable Output<String> lossType;
-        private @Nullable Output<String> modelType;
+        private ModelDefinitionModelOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelDefinitionModelOptionsArgs();
         }
 
         public Builder(ModelDefinitionModelOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.lossType = defaults.lossType;
-    	      this.modelType = defaults.modelType;
+            $ = new ModelDefinitionModelOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(@Nullable Output<List<String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable List<String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(List<String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
+
         public Builder lossType(@Nullable Output<String> lossType) {
-            this.lossType = lossType;
+            $.lossType = lossType;
             return this;
         }
-        public Builder lossType(@Nullable String lossType) {
-            this.lossType = Codegen.ofNullable(lossType);
-            return this;
+
+        public Builder lossType(String lossType) {
+            return lossType(Output.of(lossType));
         }
+
         public Builder modelType(@Nullable Output<String> modelType) {
-            this.modelType = modelType;
+            $.modelType = modelType;
             return this;
         }
-        public Builder modelType(@Nullable String modelType) {
-            this.modelType = Codegen.ofNullable(modelType);
-            return this;
-        }        public ModelDefinitionModelOptionsArgs build() {
-            return new ModelDefinitionModelOptionsArgs(labels, lossType, modelType);
+
+        public Builder modelType(String modelType) {
+            return modelType(Output.of(modelType));
+        }
+
+        public ModelDefinitionModelOptionsArgs build() {
+            return $;
         }
     }
+
 }

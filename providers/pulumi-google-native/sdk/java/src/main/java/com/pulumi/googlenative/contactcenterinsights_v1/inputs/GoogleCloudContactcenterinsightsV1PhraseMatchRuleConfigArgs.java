@@ -5,9 +5,9 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
      * 
      */
     @Import(name="exactMatchConfig")
-      private final @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
+    private @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
-    public Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig() {
-        return this.exactMatchConfig == null ? Codegen.empty() : this.exactMatchConfig;
+    public Optional<Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs>> exactMatchConfig() {
+        return Optional.ofNullable(this.exactMatchConfig);
     }
 
-    public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(@Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
-        this.exactMatchConfig = exactMatchConfig;
-    }
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs() {
-        this.exactMatchConfig = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs $) {
+        this.exactMatchConfig = $.exactMatchConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
+        private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exactMatchConfig = defaults.exactMatchConfig;
+            $ = new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder exactMatchConfig(@Nullable Output<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig) {
-            this.exactMatchConfig = exactMatchConfig;
+            $.exactMatchConfig = exactMatchConfig;
             return this;
         }
-        public Builder exactMatchConfig(@Nullable GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
-            this.exactMatchConfig = Codegen.ofNullable(exactMatchConfig);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
-            return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(exactMatchConfig);
+
+        public Builder exactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs exactMatchConfig) {
+            return exactMatchConfig(Output.of(exactMatchConfig));
+        }
+
+        public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
+            return $;
         }
     }
+
 }

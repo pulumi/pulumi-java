@@ -22,7 +22,7 @@ public final class ValidationCAResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="certificateProviderInstance", required=true)
-      private final CertificateProviderInstanceResponse certificateProviderInstance;
+    private CertificateProviderInstanceResponse certificateProviderInstance;
 
     public CertificateProviderInstanceResponse certificateProviderInstance() {
         return this.certificateProviderInstance;
@@ -33,55 +33,52 @@ public final class ValidationCAResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="grpcEndpoint", required=true)
-      private final GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
+    private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
 
     public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint() {
         return this.grpcEndpoint;
     }
 
-    public ValidationCAResponse(
-        CertificateProviderInstanceResponse certificateProviderInstance,
-        GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint) {
-        this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance, "expected parameter 'certificateProviderInstance' to be non-null");
-        this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint, "expected parameter 'grpcEndpoint' to be non-null");
-    }
+    private ValidationCAResponse() {}
 
-    private ValidationCAResponse() {
-        this.certificateProviderInstance = null;
-        this.grpcEndpoint = null;
+    private ValidationCAResponse(ValidationCAResponse $) {
+        this.certificateProviderInstance = $.certificateProviderInstance;
+        this.grpcEndpoint = $.grpcEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValidationCAResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CertificateProviderInstanceResponse certificateProviderInstance;
-        private GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint;
+        private ValidationCAResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValidationCAResponse();
         }
 
         public Builder(ValidationCAResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateProviderInstance = defaults.certificateProviderInstance;
-    	      this.grpcEndpoint = defaults.grpcEndpoint;
+            $ = new ValidationCAResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
-            this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance);
+            $.certificateProviderInstance = certificateProviderInstance;
             return this;
         }
+
         public Builder grpcEndpoint(GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse grpcEndpoint) {
-            this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
+            $.grpcEndpoint = grpcEndpoint;
             return this;
-        }        public ValidationCAResponse build() {
-            return new ValidationCAResponse(certificateProviderInstance, grpcEndpoint);
+        }
+
+        public ValidationCAResponse build() {
+            $.certificateProviderInstance = Objects.requireNonNull($.certificateProviderInstance, "expected parameter 'certificateProviderInstance' to be non-null");
+            $.grpcEndpoint = Objects.requireNonNull($.grpcEndpoint, "expected parameter 'grpcEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

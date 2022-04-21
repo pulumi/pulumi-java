@@ -21,45 +21,45 @@ public final class EndpointMatcherResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metadataLabelMatcher", required=true)
-      private final MetadataLabelMatcherResponse metadataLabelMatcher;
+    private MetadataLabelMatcherResponse metadataLabelMatcher;
 
     public MetadataLabelMatcherResponse metadataLabelMatcher() {
         return this.metadataLabelMatcher;
     }
 
-    public EndpointMatcherResponse(MetadataLabelMatcherResponse metadataLabelMatcher) {
-        this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher, "expected parameter 'metadataLabelMatcher' to be non-null");
-    }
+    private EndpointMatcherResponse() {}
 
-    private EndpointMatcherResponse() {
-        this.metadataLabelMatcher = null;
+    private EndpointMatcherResponse(EndpointMatcherResponse $) {
+        this.metadataLabelMatcher = $.metadataLabelMatcher;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointMatcherResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private MetadataLabelMatcherResponse metadataLabelMatcher;
+        private EndpointMatcherResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointMatcherResponse();
         }
 
         public Builder(EndpointMatcherResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadataLabelMatcher = defaults.metadataLabelMatcher;
+            $ = new EndpointMatcherResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadataLabelMatcher(MetadataLabelMatcherResponse metadataLabelMatcher) {
-            this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
+            $.metadataLabelMatcher = metadataLabelMatcher;
             return this;
-        }        public EndpointMatcherResponse build() {
-            return new EndpointMatcherResponse(metadataLabelMatcher);
+        }
+
+        public EndpointMatcherResponse build() {
+            $.metadataLabelMatcher = Objects.requireNonNull($.metadataLabelMatcher, "expected parameter 'metadataLabelMatcher' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,12 +5,12 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.DateArgs;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,150 +23,133 @@ public final class ValueArgs extends com.pulumi.resources.ResourceArgs {
     public static final ValueArgs Empty = new ValueArgs();
 
     @Import(name="booleanValue")
-      private final @Nullable Output<Boolean> booleanValue;
+    private @Nullable Output<Boolean> booleanValue;
 
-    public Output<Boolean> booleanValue() {
-        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
+    public Optional<Output<Boolean>> booleanValue() {
+        return Optional.ofNullable(this.booleanValue);
     }
 
     @Import(name="dateValue")
-      private final @Nullable Output<DateArgs> dateValue;
+    private @Nullable Output<DateArgs> dateValue;
 
-    public Output<DateArgs> dateValue() {
-        return this.dateValue == null ? Codegen.empty() : this.dateValue;
+    public Optional<Output<DateArgs>> dateValue() {
+        return Optional.ofNullable(this.dateValue);
     }
 
     @Import(name="doubleValue")
-      private final @Nullable Output<Double> doubleValue;
+    private @Nullable Output<Double> doubleValue;
 
-    public Output<Double> doubleValue() {
-        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
+    public Optional<Output<Double>> doubleValue() {
+        return Optional.ofNullable(this.doubleValue);
     }
 
     @Import(name="integerValue")
-      private final @Nullable Output<String> integerValue;
+    private @Nullable Output<String> integerValue;
 
-    public Output<String> integerValue() {
-        return this.integerValue == null ? Codegen.empty() : this.integerValue;
+    public Optional<Output<String>> integerValue() {
+        return Optional.ofNullable(this.integerValue);
     }
 
     @Import(name="stringValue")
-      private final @Nullable Output<String> stringValue;
+    private @Nullable Output<String> stringValue;
 
-    public Output<String> stringValue() {
-        return this.stringValue == null ? Codegen.empty() : this.stringValue;
+    public Optional<Output<String>> stringValue() {
+        return Optional.ofNullable(this.stringValue);
     }
 
     @Import(name="timestampValue")
-      private final @Nullable Output<String> timestampValue;
+    private @Nullable Output<String> timestampValue;
 
-    public Output<String> timestampValue() {
-        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
+    public Optional<Output<String>> timestampValue() {
+        return Optional.ofNullable(this.timestampValue);
     }
 
-    public ValueArgs(
-        @Nullable Output<Boolean> booleanValue,
-        @Nullable Output<DateArgs> dateValue,
-        @Nullable Output<Double> doubleValue,
-        @Nullable Output<String> integerValue,
-        @Nullable Output<String> stringValue,
-        @Nullable Output<String> timestampValue) {
-        this.booleanValue = booleanValue;
-        this.dateValue = dateValue;
-        this.doubleValue = doubleValue;
-        this.integerValue = integerValue;
-        this.stringValue = stringValue;
-        this.timestampValue = timestampValue;
-    }
+    private ValueArgs() {}
 
-    private ValueArgs() {
-        this.booleanValue = Codegen.empty();
-        this.dateValue = Codegen.empty();
-        this.doubleValue = Codegen.empty();
-        this.integerValue = Codegen.empty();
-        this.stringValue = Codegen.empty();
-        this.timestampValue = Codegen.empty();
+    private ValueArgs(ValueArgs $) {
+        this.booleanValue = $.booleanValue;
+        this.dateValue = $.dateValue;
+        this.doubleValue = $.doubleValue;
+        this.integerValue = $.integerValue;
+        this.stringValue = $.stringValue;
+        this.timestampValue = $.timestampValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ValueArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> booleanValue;
-        private @Nullable Output<DateArgs> dateValue;
-        private @Nullable Output<Double> doubleValue;
-        private @Nullable Output<String> integerValue;
-        private @Nullable Output<String> stringValue;
-        private @Nullable Output<String> timestampValue;
+        private ValueArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ValueArgs();
         }
 
         public Builder(ValueArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.booleanValue = defaults.booleanValue;
-    	      this.dateValue = defaults.dateValue;
-    	      this.doubleValue = defaults.doubleValue;
-    	      this.integerValue = defaults.integerValue;
-    	      this.stringValue = defaults.stringValue;
-    	      this.timestampValue = defaults.timestampValue;
+            $ = new ValueArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder booleanValue(@Nullable Output<Boolean> booleanValue) {
-            this.booleanValue = booleanValue;
+            $.booleanValue = booleanValue;
             return this;
         }
-        public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Codegen.ofNullable(booleanValue);
-            return this;
+
+        public Builder booleanValue(Boolean booleanValue) {
+            return booleanValue(Output.of(booleanValue));
         }
+
         public Builder dateValue(@Nullable Output<DateArgs> dateValue) {
-            this.dateValue = dateValue;
+            $.dateValue = dateValue;
             return this;
         }
-        public Builder dateValue(@Nullable DateArgs dateValue) {
-            this.dateValue = Codegen.ofNullable(dateValue);
-            return this;
+
+        public Builder dateValue(DateArgs dateValue) {
+            return dateValue(Output.of(dateValue));
         }
+
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
-            this.doubleValue = doubleValue;
+            $.doubleValue = doubleValue;
             return this;
         }
-        public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Codegen.ofNullable(doubleValue);
-            return this;
+
+        public Builder doubleValue(Double doubleValue) {
+            return doubleValue(Output.of(doubleValue));
         }
+
         public Builder integerValue(@Nullable Output<String> integerValue) {
-            this.integerValue = integerValue;
+            $.integerValue = integerValue;
             return this;
         }
-        public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Codegen.ofNullable(integerValue);
-            return this;
+
+        public Builder integerValue(String integerValue) {
+            return integerValue(Output.of(integerValue));
         }
+
         public Builder stringValue(@Nullable Output<String> stringValue) {
-            this.stringValue = stringValue;
+            $.stringValue = stringValue;
             return this;
         }
-        public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Codegen.ofNullable(stringValue);
-            return this;
+
+        public Builder stringValue(String stringValue) {
+            return stringValue(Output.of(stringValue));
         }
+
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
-            this.timestampValue = timestampValue;
+            $.timestampValue = timestampValue;
             return this;
         }
-        public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Codegen.ofNullable(timestampValue);
-            return this;
-        }        public ValueArgs build() {
-            return new ValueArgs(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
+
+        public Builder timestampValue(String timestampValue) {
+            return timestampValue(Output.of(timestampValue));
+        }
+
+        public ValueArgs build() {
+            return $;
         }
     }
+
 }

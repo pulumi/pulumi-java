@@ -22,7 +22,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="containerImageSources", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources() {
         return this.containerImageSources;
@@ -33,7 +33,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerAddCapabilities", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities() {
         return this.dockerAddCapabilities;
@@ -44,7 +44,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerChrootPath", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath() {
         return this.dockerChrootPath;
@@ -55,7 +55,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerNetwork", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork() {
         return this.dockerNetwork;
@@ -66,7 +66,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerPrivileged", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged() {
         return this.dockerPrivileged;
@@ -77,7 +77,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerRunAsRoot", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot() {
         return this.dockerRunAsRoot;
@@ -88,7 +88,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerRuntime", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime() {
         return this.dockerRuntime;
@@ -99,7 +99,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="dockerSiblingContainers", required=true)
-      private final GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers;
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers() {
         return this.dockerSiblingContainers;
@@ -110,118 +110,101 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      * 
      */
     @Import(name="linuxIsolation", required=true)
-      private final String linuxIsolation;
+    private String linuxIsolation;
 
     public String linuxIsolation() {
         return this.linuxIsolation;
     }
 
-    public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
-        String linuxIsolation) {
-        this.containerImageSources = Objects.requireNonNull(containerImageSources, "expected parameter 'containerImageSources' to be non-null");
-        this.dockerAddCapabilities = Objects.requireNonNull(dockerAddCapabilities, "expected parameter 'dockerAddCapabilities' to be non-null");
-        this.dockerChrootPath = Objects.requireNonNull(dockerChrootPath, "expected parameter 'dockerChrootPath' to be non-null");
-        this.dockerNetwork = Objects.requireNonNull(dockerNetwork, "expected parameter 'dockerNetwork' to be non-null");
-        this.dockerPrivileged = Objects.requireNonNull(dockerPrivileged, "expected parameter 'dockerPrivileged' to be non-null");
-        this.dockerRunAsRoot = Objects.requireNonNull(dockerRunAsRoot, "expected parameter 'dockerRunAsRoot' to be non-null");
-        this.dockerRuntime = Objects.requireNonNull(dockerRuntime, "expected parameter 'dockerRuntime' to be non-null");
-        this.dockerSiblingContainers = Objects.requireNonNull(dockerSiblingContainers, "expected parameter 'dockerSiblingContainers' to be non-null");
-        this.linuxIsolation = Objects.requireNonNull(linuxIsolation, "expected parameter 'linuxIsolation' to be non-null");
-    }
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse() {}
 
-    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse() {
-        this.containerImageSources = null;
-        this.dockerAddCapabilities = null;
-        this.dockerChrootPath = null;
-        this.dockerNetwork = null;
-        this.dockerPrivileged = null;
-        this.dockerRunAsRoot = null;
-        this.dockerRuntime = null;
-        this.dockerSiblingContainers = null;
-        this.linuxIsolation = null;
+    private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse $) {
+        this.containerImageSources = $.containerImageSources;
+        this.dockerAddCapabilities = $.dockerAddCapabilities;
+        this.dockerChrootPath = $.dockerChrootPath;
+        this.dockerNetwork = $.dockerNetwork;
+        this.dockerPrivileged = $.dockerPrivileged;
+        this.dockerRunAsRoot = $.dockerRunAsRoot;
+        this.dockerRuntime = $.dockerRuntime;
+        this.dockerSiblingContainers = $.dockerSiblingContainers;
+        this.linuxIsolation = $.linuxIsolation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime;
-        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers;
-        private String linuxIsolation;
+        private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse();
         }
 
         public Builder(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerImageSources = defaults.containerImageSources;
-    	      this.dockerAddCapabilities = defaults.dockerAddCapabilities;
-    	      this.dockerChrootPath = defaults.dockerChrootPath;
-    	      this.dockerNetwork = defaults.dockerNetwork;
-    	      this.dockerPrivileged = defaults.dockerPrivileged;
-    	      this.dockerRunAsRoot = defaults.dockerRunAsRoot;
-    	      this.dockerRuntime = defaults.dockerRuntime;
-    	      this.dockerSiblingContainers = defaults.dockerSiblingContainers;
-    	      this.linuxIsolation = defaults.linuxIsolation;
+            $ = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerImageSources(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources) {
-            this.containerImageSources = Objects.requireNonNull(containerImageSources);
+            $.containerImageSources = containerImageSources;
             return this;
         }
+
         public Builder dockerAddCapabilities(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities) {
-            this.dockerAddCapabilities = Objects.requireNonNull(dockerAddCapabilities);
+            $.dockerAddCapabilities = dockerAddCapabilities;
             return this;
         }
+
         public Builder dockerChrootPath(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath) {
-            this.dockerChrootPath = Objects.requireNonNull(dockerChrootPath);
+            $.dockerChrootPath = dockerChrootPath;
             return this;
         }
+
         public Builder dockerNetwork(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork) {
-            this.dockerNetwork = Objects.requireNonNull(dockerNetwork);
+            $.dockerNetwork = dockerNetwork;
             return this;
         }
+
         public Builder dockerPrivileged(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged) {
-            this.dockerPrivileged = Objects.requireNonNull(dockerPrivileged);
+            $.dockerPrivileged = dockerPrivileged;
             return this;
         }
+
         public Builder dockerRunAsRoot(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot) {
-            this.dockerRunAsRoot = Objects.requireNonNull(dockerRunAsRoot);
+            $.dockerRunAsRoot = dockerRunAsRoot;
             return this;
         }
+
         public Builder dockerRuntime(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime) {
-            this.dockerRuntime = Objects.requireNonNull(dockerRuntime);
+            $.dockerRuntime = dockerRuntime;
             return this;
         }
+
         public Builder dockerSiblingContainers(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers) {
-            this.dockerSiblingContainers = Objects.requireNonNull(dockerSiblingContainers);
+            $.dockerSiblingContainers = dockerSiblingContainers;
             return this;
         }
+
         public Builder linuxIsolation(String linuxIsolation) {
-            this.linuxIsolation = Objects.requireNonNull(linuxIsolation);
+            $.linuxIsolation = linuxIsolation;
             return this;
-        }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse build() {
-            return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(containerImageSources, dockerAddCapabilities, dockerChrootPath, dockerNetwork, dockerPrivileged, dockerRunAsRoot, dockerRuntime, dockerSiblingContainers, linuxIsolation);
+        }
+
+        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse build() {
+            $.containerImageSources = Objects.requireNonNull($.containerImageSources, "expected parameter 'containerImageSources' to be non-null");
+            $.dockerAddCapabilities = Objects.requireNonNull($.dockerAddCapabilities, "expected parameter 'dockerAddCapabilities' to be non-null");
+            $.dockerChrootPath = Objects.requireNonNull($.dockerChrootPath, "expected parameter 'dockerChrootPath' to be non-null");
+            $.dockerNetwork = Objects.requireNonNull($.dockerNetwork, "expected parameter 'dockerNetwork' to be non-null");
+            $.dockerPrivileged = Objects.requireNonNull($.dockerPrivileged, "expected parameter 'dockerPrivileged' to be non-null");
+            $.dockerRunAsRoot = Objects.requireNonNull($.dockerRunAsRoot, "expected parameter 'dockerRunAsRoot' to be non-null");
+            $.dockerRuntime = Objects.requireNonNull($.dockerRuntime, "expected parameter 'dockerRuntime' to be non-null");
+            $.dockerSiblingContainers = Objects.requireNonNull($.dockerSiblingContainers, "expected parameter 'dockerSiblingContainers' to be non-null");
+            $.linuxIsolation = Objects.requireNonNull($.linuxIsolation, "expected parameter 'linuxIsolation' to be non-null");
+            return $;
         }
     }
+
 }

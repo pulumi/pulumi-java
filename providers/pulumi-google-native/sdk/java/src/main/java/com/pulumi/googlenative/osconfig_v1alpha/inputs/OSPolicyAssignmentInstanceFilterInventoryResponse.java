@@ -21,7 +21,7 @@ public final class OSPolicyAssignmentInstanceFilterInventoryResponse extends com
      * 
      */
     @Import(name="osShortName", required=true)
-      private final String osShortName;
+    private String osShortName;
 
     public String osShortName() {
         return this.osShortName;
@@ -32,55 +32,52 @@ public final class OSPolicyAssignmentInstanceFilterInventoryResponse extends com
      * 
      */
     @Import(name="osVersion", required=true)
-      private final String osVersion;
+    private String osVersion;
 
     public String osVersion() {
         return this.osVersion;
     }
 
-    public OSPolicyAssignmentInstanceFilterInventoryResponse(
-        String osShortName,
-        String osVersion) {
-        this.osShortName = Objects.requireNonNull(osShortName, "expected parameter 'osShortName' to be non-null");
-        this.osVersion = Objects.requireNonNull(osVersion, "expected parameter 'osVersion' to be non-null");
-    }
+    private OSPolicyAssignmentInstanceFilterInventoryResponse() {}
 
-    private OSPolicyAssignmentInstanceFilterInventoryResponse() {
-        this.osShortName = null;
-        this.osVersion = null;
+    private OSPolicyAssignmentInstanceFilterInventoryResponse(OSPolicyAssignmentInstanceFilterInventoryResponse $) {
+        this.osShortName = $.osShortName;
+        this.osVersion = $.osVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyAssignmentInstanceFilterInventoryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String osShortName;
-        private String osVersion;
+        private OSPolicyAssignmentInstanceFilterInventoryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyAssignmentInstanceFilterInventoryResponse();
         }
 
         public Builder(OSPolicyAssignmentInstanceFilterInventoryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.osShortName = defaults.osShortName;
-    	      this.osVersion = defaults.osVersion;
+            $ = new OSPolicyAssignmentInstanceFilterInventoryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder osShortName(String osShortName) {
-            this.osShortName = Objects.requireNonNull(osShortName);
+            $.osShortName = osShortName;
             return this;
         }
+
         public Builder osVersion(String osVersion) {
-            this.osVersion = Objects.requireNonNull(osVersion);
+            $.osVersion = osVersion;
             return this;
-        }        public OSPolicyAssignmentInstanceFilterInventoryResponse build() {
-            return new OSPolicyAssignmentInstanceFilterInventoryResponse(osShortName, osVersion);
+        }
+
+        public OSPolicyAssignmentInstanceFilterInventoryResponse build() {
+            $.osShortName = Objects.requireNonNull($.osShortName, "expected parameter 'osShortName' to be non-null");
+            $.osVersion = Objects.requireNonNull($.osVersion, "expected parameter 'osVersion' to be non-null");
+            return $;
         }
     }
+
 }

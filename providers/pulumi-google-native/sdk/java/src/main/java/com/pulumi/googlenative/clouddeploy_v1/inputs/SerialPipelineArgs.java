@@ -5,10 +5,10 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.clouddeploy_v1.inputs.StageArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SerialPipelineArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="stages")
-      private final @Nullable Output<List<StageArgs>> stages;
+    private @Nullable Output<List<StageArgs>> stages;
 
-    public Output<List<StageArgs>> stages() {
-        return this.stages == null ? Codegen.empty() : this.stages;
+    public Optional<Output<List<StageArgs>>> stages() {
+        return Optional.ofNullable(this.stages);
     }
 
-    public SerialPipelineArgs(@Nullable Output<List<StageArgs>> stages) {
-        this.stages = stages;
-    }
+    private SerialPipelineArgs() {}
 
-    private SerialPipelineArgs() {
-        this.stages = Codegen.empty();
+    private SerialPipelineArgs(SerialPipelineArgs $) {
+        this.stages = $.stages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SerialPipelineArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<StageArgs>> stages;
+        private SerialPipelineArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SerialPipelineArgs();
         }
 
         public Builder(SerialPipelineArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.stages = defaults.stages;
+            $ = new SerialPipelineArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder stages(@Nullable Output<List<StageArgs>> stages) {
-            this.stages = stages;
+            $.stages = stages;
             return this;
         }
-        public Builder stages(@Nullable List<StageArgs> stages) {
-            this.stages = Codegen.ofNullable(stages);
-            return this;
+
+        public Builder stages(List<StageArgs> stages) {
+            return stages(Output.of(stages));
         }
+
         public Builder stages(StageArgs... stages) {
             return stages(List.of(stages));
-        }        public SerialPipelineArgs build() {
-            return new SerialPipelineArgs(stages);
+        }
+
+        public SerialPipelineArgs build() {
+            return $;
         }
     }
+
 }

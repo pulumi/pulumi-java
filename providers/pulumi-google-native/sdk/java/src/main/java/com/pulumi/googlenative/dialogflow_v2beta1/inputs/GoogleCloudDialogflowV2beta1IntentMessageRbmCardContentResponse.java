@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @Import(name="media", required=true)
-      private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media() {
         return this.media;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @Import(name="suggestions", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions() {
         return this.suggestions;
@@ -57,76 +57,70 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
-        String title) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.media = Objects.requireNonNull(media, "expected parameter 'media' to be non-null");
-        this.suggestions = Objects.requireNonNull(suggestions, "expected parameter 'suggestions' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse() {
-        this.description = null;
-        this.media = null;
-        this.suggestions = List.of();
-        this.title = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse $) {
+        this.description = $.description;
+        this.media = $.media;
+        this.suggestions = $.suggestions;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media;
-        private List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions;
-        private String title;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.media = defaults.media;
-    	      this.suggestions = defaults.suggestions;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder media(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
-            this.media = Objects.requireNonNull(media);
+            $.media = media;
             return this;
         }
+
         public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
-            this.suggestions = Objects.requireNonNull(suggestions);
+            $.suggestions = suggestions;
             return this;
         }
+
         public Builder suggestions(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse... suggestions) {
             return suggestions(List.of(suggestions));
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(description, media, suggestions, title);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.media = Objects.requireNonNull($.media, "expected parameter 'media' to be non-null");
+            $.suggestions = Objects.requireNonNull($.suggestions, "expected parameter 'suggestions' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

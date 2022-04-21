@@ -21,7 +21,7 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse extends com.pulumi.r
      * 
      */
     @Import(name="arrayConfig", required=true)
-      private final String arrayConfig;
+    private String arrayConfig;
 
     public String arrayConfig() {
         return this.arrayConfig;
@@ -32,7 +32,7 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse extends com.pulumi.r
      * 
      */
     @Import(name="fieldPath", required=true)
-      private final String fieldPath;
+    private String fieldPath;
 
     public String fieldPath() {
         return this.fieldPath;
@@ -43,64 +43,59 @@ public final class GoogleFirestoreAdminV1IndexFieldResponse extends com.pulumi.r
      * 
      */
     @Import(name="order", required=true)
-      private final String order;
+    private String order;
 
     public String order() {
         return this.order;
     }
 
-    public GoogleFirestoreAdminV1IndexFieldResponse(
-        String arrayConfig,
-        String fieldPath,
-        String order) {
-        this.arrayConfig = Objects.requireNonNull(arrayConfig, "expected parameter 'arrayConfig' to be non-null");
-        this.fieldPath = Objects.requireNonNull(fieldPath, "expected parameter 'fieldPath' to be non-null");
-        this.order = Objects.requireNonNull(order, "expected parameter 'order' to be non-null");
-    }
+    private GoogleFirestoreAdminV1IndexFieldResponse() {}
 
-    private GoogleFirestoreAdminV1IndexFieldResponse() {
-        this.arrayConfig = null;
-        this.fieldPath = null;
-        this.order = null;
+    private GoogleFirestoreAdminV1IndexFieldResponse(GoogleFirestoreAdminV1IndexFieldResponse $) {
+        this.arrayConfig = $.arrayConfig;
+        this.fieldPath = $.fieldPath;
+        this.order = $.order;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleFirestoreAdminV1IndexFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String arrayConfig;
-        private String fieldPath;
-        private String order;
+        private GoogleFirestoreAdminV1IndexFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleFirestoreAdminV1IndexFieldResponse();
         }
 
         public Builder(GoogleFirestoreAdminV1IndexFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arrayConfig = defaults.arrayConfig;
-    	      this.fieldPath = defaults.fieldPath;
-    	      this.order = defaults.order;
+            $ = new GoogleFirestoreAdminV1IndexFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arrayConfig(String arrayConfig) {
-            this.arrayConfig = Objects.requireNonNull(arrayConfig);
+            $.arrayConfig = arrayConfig;
             return this;
         }
+
         public Builder fieldPath(String fieldPath) {
-            this.fieldPath = Objects.requireNonNull(fieldPath);
+            $.fieldPath = fieldPath;
             return this;
         }
+
         public Builder order(String order) {
-            this.order = Objects.requireNonNull(order);
+            $.order = order;
             return this;
-        }        public GoogleFirestoreAdminV1IndexFieldResponse build() {
-            return new GoogleFirestoreAdminV1IndexFieldResponse(arrayConfig, fieldPath, order);
+        }
+
+        public GoogleFirestoreAdminV1IndexFieldResponse build() {
+            $.arrayConfig = Objects.requireNonNull($.arrayConfig, "expected parameter 'arrayConfig' to be non-null");
+            $.fieldPath = Objects.requireNonNull($.fieldPath, "expected parameter 'fieldPath' to be non-null");
+            $.order = Objects.requireNonNull($.order, "expected parameter 'order' to be non-null");
+            return $;
         }
     }
+
 }

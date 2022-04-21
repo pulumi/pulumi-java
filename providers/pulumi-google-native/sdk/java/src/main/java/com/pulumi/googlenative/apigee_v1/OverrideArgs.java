@@ -5,10 +5,10 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TraceSamplingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiProxy")
-      private final @Nullable Output<String> apiProxy;
+    private @Nullable Output<String> apiProxy;
 
-    public Output<String> apiProxy() {
-        return this.apiProxy == null ? Codegen.empty() : this.apiProxy;
+    public Optional<Output<String>> apiProxy() {
+        return Optional.ofNullable(this.apiProxy);
     }
 
     @Import(name="environmentId", required=true)
-      private final Output<String> environmentId;
+    private Output<String> environmentId;
 
     public Output<String> environmentId() {
         return this.environmentId;
@@ -39,14 +39,14 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -57,102 +57,90 @@ public final class OverrideArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="samplingConfig")
-      private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
+    private @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
 
-    public Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig() {
-        return this.samplingConfig == null ? Codegen.empty() : this.samplingConfig;
+    public Optional<Output<GoogleCloudApigeeV1TraceSamplingConfigArgs>> samplingConfig() {
+        return Optional.ofNullable(this.samplingConfig);
     }
 
-    public OverrideArgs(
-        @Nullable Output<String> apiProxy,
-        Output<String> environmentId,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig) {
-        this.apiProxy = apiProxy;
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.samplingConfig = samplingConfig;
-    }
+    private OverrideArgs() {}
 
-    private OverrideArgs() {
-        this.apiProxy = Codegen.empty();
-        this.environmentId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.samplingConfig = Codegen.empty();
+    private OverrideArgs(OverrideArgs $) {
+        this.apiProxy = $.apiProxy;
+        this.environmentId = $.environmentId;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.samplingConfig = $.samplingConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiProxy;
-        private Output<String> environmentId;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig;
+        private OverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OverrideArgs();
         }
 
         public Builder(OverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiProxy = defaults.apiProxy;
-    	      this.environmentId = defaults.environmentId;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.samplingConfig = defaults.samplingConfig;
+            $ = new OverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiProxy(@Nullable Output<String> apiProxy) {
-            this.apiProxy = apiProxy;
+            $.apiProxy = apiProxy;
             return this;
         }
-        public Builder apiProxy(@Nullable String apiProxy) {
-            this.apiProxy = Codegen.ofNullable(apiProxy);
-            return this;
+
+        public Builder apiProxy(String apiProxy) {
+            return apiProxy(Output.of(apiProxy));
         }
+
         public Builder environmentId(Output<String> environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder environmentId(String environmentId) {
-            this.environmentId = Output.of(Objects.requireNonNull(environmentId));
-            return this;
+            return environmentId(Output.of(environmentId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder samplingConfig(@Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigArgs> samplingConfig) {
-            this.samplingConfig = samplingConfig;
+            $.samplingConfig = samplingConfig;
             return this;
         }
-        public Builder samplingConfig(@Nullable GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
-            this.samplingConfig = Codegen.ofNullable(samplingConfig);
-            return this;
-        }        public OverrideArgs build() {
-            return new OverrideArgs(apiProxy, environmentId, name, organizationId, samplingConfig);
+
+        public Builder samplingConfig(GoogleCloudApigeeV1TraceSamplingConfigArgs samplingConfig) {
+            return samplingConfig(Output.of(samplingConfig));
+        }
+
+        public OverrideArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

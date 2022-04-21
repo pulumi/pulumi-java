@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @Import(name="buttons", required=true)
-      private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
+    private List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons() {
         return this.buttons;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @Import(name="formattedText", required=true)
-      private final String formattedText;
+    private String formattedText;
 
     public String formattedText() {
         return this.formattedText;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @Import(name="image", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+    private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @Import(name="subtitle", required=true)
-      private final String subtitle;
+    private String subtitle;
 
     public String subtitle() {
         return this.subtitle;
@@ -68,85 +68,77 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @Import(name="title", required=true)
-      private final String title;
+    private String title;
 
     public String title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageBasicCardResponse(
-        List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons,
-        String formattedText,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        String subtitle,
-        String title) {
-        this.buttons = Objects.requireNonNull(buttons, "expected parameter 'buttons' to be non-null");
-        this.formattedText = Objects.requireNonNull(formattedText, "expected parameter 'formattedText' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.subtitle = Objects.requireNonNull(subtitle, "expected parameter 'subtitle' to be non-null");
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageBasicCardResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageBasicCardResponse() {
-        this.buttons = List.of();
-        this.formattedText = null;
-        this.image = null;
-        this.subtitle = null;
-        this.title = null;
+    private GoogleCloudDialogflowV2IntentMessageBasicCardResponse(GoogleCloudDialogflowV2IntentMessageBasicCardResponse $) {
+        this.buttons = $.buttons;
+        this.formattedText = $.formattedText;
+        this.image = $.image;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageBasicCardResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
-        private String formattedText;
-        private GoogleCloudDialogflowV2IntentMessageImageResponse image;
-        private String subtitle;
-        private String title;
+        private GoogleCloudDialogflowV2IntentMessageBasicCardResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageBasicCardResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttons = defaults.buttons;
-    	      this.formattedText = defaults.formattedText;
-    	      this.image = defaults.image;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageBasicCardResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
-            this.buttons = Objects.requireNonNull(buttons);
+            $.buttons = buttons;
             return this;
         }
+
         public Builder buttons(GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse... buttons) {
             return buttons(List.of(buttons));
         }
+
         public Builder formattedText(String formattedText) {
-            this.formattedText = Objects.requireNonNull(formattedText);
+            $.formattedText = formattedText;
             return this;
         }
+
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder subtitle(String subtitle) {
-            this.subtitle = Objects.requireNonNull(subtitle);
+            $.subtitle = subtitle;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageBasicCardResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageBasicCardResponse(buttons, formattedText, image, subtitle, title);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageBasicCardResponse build() {
+            $.buttons = Objects.requireNonNull($.buttons, "expected parameter 'buttons' to be non-null");
+            $.formattedText = Objects.requireNonNull($.formattedText, "expected parameter 'formattedText' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.subtitle = Objects.requireNonNull($.subtitle, "expected parameter 'subtitle' to be non-null");
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

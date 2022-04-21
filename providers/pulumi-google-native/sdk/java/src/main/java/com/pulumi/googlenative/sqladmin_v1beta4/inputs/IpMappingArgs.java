@@ -5,10 +5,10 @@ package com.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.sqladmin_v1beta4.enums.IpMappingType;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IpMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ipAddress")
-      private final @Nullable Output<String> ipAddress;
+    private @Nullable Output<String> ipAddress;
 
-    public Output<String> ipAddress() {
-        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class IpMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeToRetire")
-      private final @Nullable Output<String> timeToRetire;
+    private @Nullable Output<String> timeToRetire;
 
-    public Output<String> timeToRetire() {
-        return this.timeToRetire == null ? Codegen.empty() : this.timeToRetire;
+    public Optional<Output<String>> timeToRetire() {
+        return Optional.ofNullable(this.timeToRetire);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class IpMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<IpMappingType> type;
+    private @Nullable Output<IpMappingType> type;
 
-    public Output<IpMappingType> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<IpMappingType>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public IpMappingArgs(
-        @Nullable Output<String> ipAddress,
-        @Nullable Output<String> timeToRetire,
-        @Nullable Output<IpMappingType> type) {
-        this.ipAddress = ipAddress;
-        this.timeToRetire = timeToRetire;
-        this.type = type;
-    }
+    private IpMappingArgs() {}
 
-    private IpMappingArgs() {
-        this.ipAddress = Codegen.empty();
-        this.timeToRetire = Codegen.empty();
-        this.type = Codegen.empty();
+    private IpMappingArgs(IpMappingArgs $) {
+        this.ipAddress = $.ipAddress;
+        this.timeToRetire = $.timeToRetire;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IpMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ipAddress;
-        private @Nullable Output<String> timeToRetire;
-        private @Nullable Output<IpMappingType> type;
+        private IpMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IpMappingArgs();
         }
 
         public Builder(IpMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.timeToRetire = defaults.timeToRetire;
-    	      this.type = defaults.type;
+            $ = new IpMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
-            this.ipAddress = ipAddress;
+            $.ipAddress = ipAddress;
             return this;
         }
-        public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Codegen.ofNullable(ipAddress);
-            return this;
+
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
+
         public Builder timeToRetire(@Nullable Output<String> timeToRetire) {
-            this.timeToRetire = timeToRetire;
+            $.timeToRetire = timeToRetire;
             return this;
         }
-        public Builder timeToRetire(@Nullable String timeToRetire) {
-            this.timeToRetire = Codegen.ofNullable(timeToRetire);
-            return this;
+
+        public Builder timeToRetire(String timeToRetire) {
+            return timeToRetire(Output.of(timeToRetire));
         }
+
         public Builder type(@Nullable Output<IpMappingType> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable IpMappingType type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public IpMappingArgs build() {
-            return new IpMappingArgs(ipAddress, timeToRetire, type);
+
+        public Builder type(IpMappingType type) {
+            return type(Output.of(type));
+        }
+
+        public IpMappingArgs build() {
+            return $;
         }
     }
+
 }

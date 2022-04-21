@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1beta1.inputs.PubSubArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NotificationConfigArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="pubsub")
-      private final @Nullable Output<PubSubArgs> pubsub;
+    private @Nullable Output<PubSubArgs> pubsub;
 
-    public Output<PubSubArgs> pubsub() {
-        return this.pubsub == null ? Codegen.empty() : this.pubsub;
+    public Optional<Output<PubSubArgs>> pubsub() {
+        return Optional.ofNullable(this.pubsub);
     }
 
-    public NotificationConfigArgs(@Nullable Output<PubSubArgs> pubsub) {
-        this.pubsub = pubsub;
-    }
+    private NotificationConfigArgs() {}
 
-    private NotificationConfigArgs() {
-        this.pubsub = Codegen.empty();
+    private NotificationConfigArgs(NotificationConfigArgs $) {
+        this.pubsub = $.pubsub;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<PubSubArgs> pubsub;
+        private NotificationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationConfigArgs();
         }
 
         public Builder(NotificationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.pubsub = defaults.pubsub;
+            $ = new NotificationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder pubsub(@Nullable Output<PubSubArgs> pubsub) {
-            this.pubsub = pubsub;
+            $.pubsub = pubsub;
             return this;
         }
-        public Builder pubsub(@Nullable PubSubArgs pubsub) {
-            this.pubsub = Codegen.ofNullable(pubsub);
-            return this;
-        }        public NotificationConfigArgs build() {
-            return new NotificationConfigArgs(pubsub);
+
+        public Builder pubsub(PubSubArgs pubsub) {
+            return pubsub(Output.of(pubsub));
+        }
+
+        public NotificationConfigArgs build() {
+            return $;
         }
     }
+
 }

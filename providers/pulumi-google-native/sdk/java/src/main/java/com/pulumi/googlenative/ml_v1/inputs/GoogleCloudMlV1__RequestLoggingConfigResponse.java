@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends com.pul
      * 
      */
     @Import(name="bigqueryTableName", required=true)
-      private final String bigqueryTableName;
+    private String bigqueryTableName;
 
     public String bigqueryTableName() {
         return this.bigqueryTableName;
@@ -33,55 +33,52 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends com.pul
      * 
      */
     @Import(name="samplingPercentage", required=true)
-      private final Double samplingPercentage;
+    private Double samplingPercentage;
 
     public Double samplingPercentage() {
         return this.samplingPercentage;
     }
 
-    public GoogleCloudMlV1__RequestLoggingConfigResponse(
-        String bigqueryTableName,
-        Double samplingPercentage) {
-        this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName, "expected parameter 'bigqueryTableName' to be non-null");
-        this.samplingPercentage = Objects.requireNonNull(samplingPercentage, "expected parameter 'samplingPercentage' to be non-null");
-    }
+    private GoogleCloudMlV1__RequestLoggingConfigResponse() {}
 
-    private GoogleCloudMlV1__RequestLoggingConfigResponse() {
-        this.bigqueryTableName = null;
-        this.samplingPercentage = null;
+    private GoogleCloudMlV1__RequestLoggingConfigResponse(GoogleCloudMlV1__RequestLoggingConfigResponse $) {
+        this.bigqueryTableName = $.bigqueryTableName;
+        this.samplingPercentage = $.samplingPercentage;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__RequestLoggingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String bigqueryTableName;
-        private Double samplingPercentage;
+        private GoogleCloudMlV1__RequestLoggingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__RequestLoggingConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__RequestLoggingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigqueryTableName = defaults.bigqueryTableName;
-    	      this.samplingPercentage = defaults.samplingPercentage;
+            $ = new GoogleCloudMlV1__RequestLoggingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigqueryTableName(String bigqueryTableName) {
-            this.bigqueryTableName = Objects.requireNonNull(bigqueryTableName);
+            $.bigqueryTableName = bigqueryTableName;
             return this;
         }
+
         public Builder samplingPercentage(Double samplingPercentage) {
-            this.samplingPercentage = Objects.requireNonNull(samplingPercentage);
+            $.samplingPercentage = samplingPercentage;
             return this;
-        }        public GoogleCloudMlV1__RequestLoggingConfigResponse build() {
-            return new GoogleCloudMlV1__RequestLoggingConfigResponse(bigqueryTableName, samplingPercentage);
+        }
+
+        public GoogleCloudMlV1__RequestLoggingConfigResponse build() {
+            $.bigqueryTableName = Objects.requireNonNull($.bigqueryTableName, "expected parameter 'bigqueryTableName' to be non-null");
+            $.samplingPercentage = Objects.requireNonNull($.samplingPercentage, "expected parameter 'samplingPercentage' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,78 +15,72 @@ public final class GetTargetInstanceArgs extends com.pulumi.resources.InvokeArgs
     public static final GetTargetInstanceArgs Empty = new GetTargetInstanceArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="targetInstance", required=true)
-      private final String targetInstance;
+    private String targetInstance;
 
     public String targetInstance() {
         return this.targetInstance;
     }
 
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public GetTargetInstanceArgs(
-        @Nullable String project,
-        String targetInstance,
-        String zone) {
-        this.project = project;
-        this.targetInstance = Objects.requireNonNull(targetInstance, "expected parameter 'targetInstance' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private GetTargetInstanceArgs() {}
 
-    private GetTargetInstanceArgs() {
-        this.project = null;
-        this.targetInstance = null;
-        this.zone = null;
+    private GetTargetInstanceArgs(GetTargetInstanceArgs $) {
+        this.project = $.project;
+        this.targetInstance = $.targetInstance;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTargetInstanceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String targetInstance;
-        private String zone;
+        private GetTargetInstanceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTargetInstanceArgs();
         }
 
         public Builder(GetTargetInstanceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.targetInstance = defaults.targetInstance;
-    	      this.zone = defaults.zone;
+            $ = new GetTargetInstanceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder targetInstance(String targetInstance) {
-            this.targetInstance = Objects.requireNonNull(targetInstance);
+            $.targetInstance = targetInstance;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public GetTargetInstanceArgs build() {
-            return new GetTargetInstanceArgs(project, targetInstance, zone);
+        }
+
+        public GetTargetInstanceArgs build() {
+            $.targetInstance = Objects.requireNonNull($.targetInstance, "expected parameter 'targetInstance' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

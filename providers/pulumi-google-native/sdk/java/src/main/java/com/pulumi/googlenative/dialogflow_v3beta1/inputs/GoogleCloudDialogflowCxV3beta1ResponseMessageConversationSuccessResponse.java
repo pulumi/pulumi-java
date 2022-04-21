@@ -22,45 +22,45 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSucc
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
     }
 
-    public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(Map<String,String> metadata) {
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse() {}
 
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse() {
-        this.metadata = Map.of();
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse $) {
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> metadata;
+        private GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
+            $ = new GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
-        }        public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse build() {
-            return new GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse(metadata);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessResponse build() {
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            return $;
         }
     }
+
 }

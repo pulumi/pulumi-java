@@ -15,62 +15,58 @@ public final class GetSecurityPolicyArgs extends com.pulumi.resources.InvokeArgs
     public static final GetSecurityPolicyArgs Empty = new GetSecurityPolicyArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="securityPolicy", required=true)
-      private final String securityPolicy;
+    private String securityPolicy;
 
     public String securityPolicy() {
         return this.securityPolicy;
     }
 
-    public GetSecurityPolicyArgs(
-        @Nullable String project,
-        String securityPolicy) {
-        this.project = project;
-        this.securityPolicy = Objects.requireNonNull(securityPolicy, "expected parameter 'securityPolicy' to be non-null");
-    }
+    private GetSecurityPolicyArgs() {}
 
-    private GetSecurityPolicyArgs() {
-        this.project = null;
-        this.securityPolicy = null;
+    private GetSecurityPolicyArgs(GetSecurityPolicyArgs $) {
+        this.project = $.project;
+        this.securityPolicy = $.securityPolicy;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSecurityPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String securityPolicy;
+        private GetSecurityPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSecurityPolicyArgs();
         }
 
         public Builder(GetSecurityPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.securityPolicy = defaults.securityPolicy;
+            $ = new GetSecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder securityPolicy(String securityPolicy) {
-            this.securityPolicy = Objects.requireNonNull(securityPolicy);
+            $.securityPolicy = securityPolicy;
             return this;
-        }        public GetSecurityPolicyArgs build() {
-            return new GetSecurityPolicyArgs(project, securityPolicy);
+        }
+
+        public GetSecurityPolicyArgs build() {
+            $.securityPolicy = Objects.requireNonNull($.securityPolicy, "expected parameter 'securityPolicy' to be non-null");
+            return $;
         }
     }
+
 }

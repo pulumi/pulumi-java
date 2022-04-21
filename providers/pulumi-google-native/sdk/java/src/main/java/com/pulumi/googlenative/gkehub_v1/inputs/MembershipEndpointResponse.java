@@ -26,7 +26,7 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="edgeCluster", required=true)
-      private final EdgeClusterResponse edgeCluster;
+    private EdgeClusterResponse edgeCluster;
 
     public EdgeClusterResponse edgeCluster() {
         return this.edgeCluster;
@@ -37,7 +37,7 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="gkeCluster", required=true)
-      private final GkeClusterResponse gkeCluster;
+    private GkeClusterResponse gkeCluster;
 
     public GkeClusterResponse gkeCluster() {
         return this.gkeCluster;
@@ -48,7 +48,7 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kubernetesMetadata", required=true)
-      private final KubernetesMetadataResponse kubernetesMetadata;
+    private KubernetesMetadataResponse kubernetesMetadata;
 
     public KubernetesMetadataResponse kubernetesMetadata() {
         return this.kubernetesMetadata;
@@ -59,7 +59,7 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kubernetesResource", required=true)
-      private final KubernetesResourceResponse kubernetesResource;
+    private KubernetesResourceResponse kubernetesResource;
 
     public KubernetesResourceResponse kubernetesResource() {
         return this.kubernetesResource;
@@ -70,7 +70,7 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="multiCloudCluster", required=true)
-      private final MultiCloudClusterResponse multiCloudCluster;
+    private MultiCloudClusterResponse multiCloudCluster;
 
     public MultiCloudClusterResponse multiCloudCluster() {
         return this.multiCloudCluster;
@@ -81,91 +81,80 @@ public final class MembershipEndpointResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="onPremCluster", required=true)
-      private final OnPremClusterResponse onPremCluster;
+    private OnPremClusterResponse onPremCluster;
 
     public OnPremClusterResponse onPremCluster() {
         return this.onPremCluster;
     }
 
-    public MembershipEndpointResponse(
-        EdgeClusterResponse edgeCluster,
-        GkeClusterResponse gkeCluster,
-        KubernetesMetadataResponse kubernetesMetadata,
-        KubernetesResourceResponse kubernetesResource,
-        MultiCloudClusterResponse multiCloudCluster,
-        OnPremClusterResponse onPremCluster) {
-        this.edgeCluster = Objects.requireNonNull(edgeCluster, "expected parameter 'edgeCluster' to be non-null");
-        this.gkeCluster = Objects.requireNonNull(gkeCluster, "expected parameter 'gkeCluster' to be non-null");
-        this.kubernetesMetadata = Objects.requireNonNull(kubernetesMetadata, "expected parameter 'kubernetesMetadata' to be non-null");
-        this.kubernetesResource = Objects.requireNonNull(kubernetesResource, "expected parameter 'kubernetesResource' to be non-null");
-        this.multiCloudCluster = Objects.requireNonNull(multiCloudCluster, "expected parameter 'multiCloudCluster' to be non-null");
-        this.onPremCluster = Objects.requireNonNull(onPremCluster, "expected parameter 'onPremCluster' to be non-null");
-    }
+    private MembershipEndpointResponse() {}
 
-    private MembershipEndpointResponse() {
-        this.edgeCluster = null;
-        this.gkeCluster = null;
-        this.kubernetesMetadata = null;
-        this.kubernetesResource = null;
-        this.multiCloudCluster = null;
-        this.onPremCluster = null;
+    private MembershipEndpointResponse(MembershipEndpointResponse $) {
+        this.edgeCluster = $.edgeCluster;
+        this.gkeCluster = $.gkeCluster;
+        this.kubernetesMetadata = $.kubernetesMetadata;
+        this.kubernetesResource = $.kubernetesResource;
+        this.multiCloudCluster = $.multiCloudCluster;
+        this.onPremCluster = $.onPremCluster;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipEndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EdgeClusterResponse edgeCluster;
-        private GkeClusterResponse gkeCluster;
-        private KubernetesMetadataResponse kubernetesMetadata;
-        private KubernetesResourceResponse kubernetesResource;
-        private MultiCloudClusterResponse multiCloudCluster;
-        private OnPremClusterResponse onPremCluster;
+        private MembershipEndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipEndpointResponse();
         }
 
         public Builder(MembershipEndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.edgeCluster = defaults.edgeCluster;
-    	      this.gkeCluster = defaults.gkeCluster;
-    	      this.kubernetesMetadata = defaults.kubernetesMetadata;
-    	      this.kubernetesResource = defaults.kubernetesResource;
-    	      this.multiCloudCluster = defaults.multiCloudCluster;
-    	      this.onPremCluster = defaults.onPremCluster;
+            $ = new MembershipEndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder edgeCluster(EdgeClusterResponse edgeCluster) {
-            this.edgeCluster = Objects.requireNonNull(edgeCluster);
+            $.edgeCluster = edgeCluster;
             return this;
         }
+
         public Builder gkeCluster(GkeClusterResponse gkeCluster) {
-            this.gkeCluster = Objects.requireNonNull(gkeCluster);
+            $.gkeCluster = gkeCluster;
             return this;
         }
+
         public Builder kubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
-            this.kubernetesMetadata = Objects.requireNonNull(kubernetesMetadata);
+            $.kubernetesMetadata = kubernetesMetadata;
             return this;
         }
+
         public Builder kubernetesResource(KubernetesResourceResponse kubernetesResource) {
-            this.kubernetesResource = Objects.requireNonNull(kubernetesResource);
+            $.kubernetesResource = kubernetesResource;
             return this;
         }
+
         public Builder multiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
-            this.multiCloudCluster = Objects.requireNonNull(multiCloudCluster);
+            $.multiCloudCluster = multiCloudCluster;
             return this;
         }
+
         public Builder onPremCluster(OnPremClusterResponse onPremCluster) {
-            this.onPremCluster = Objects.requireNonNull(onPremCluster);
+            $.onPremCluster = onPremCluster;
             return this;
-        }        public MembershipEndpointResponse build() {
-            return new MembershipEndpointResponse(edgeCluster, gkeCluster, kubernetesMetadata, kubernetesResource, multiCloudCluster, onPremCluster);
+        }
+
+        public MembershipEndpointResponse build() {
+            $.edgeCluster = Objects.requireNonNull($.edgeCluster, "expected parameter 'edgeCluster' to be non-null");
+            $.gkeCluster = Objects.requireNonNull($.gkeCluster, "expected parameter 'gkeCluster' to be non-null");
+            $.kubernetesMetadata = Objects.requireNonNull($.kubernetesMetadata, "expected parameter 'kubernetesMetadata' to be non-null");
+            $.kubernetesResource = Objects.requireNonNull($.kubernetesResource, "expected parameter 'kubernetesResource' to be non-null");
+            $.multiCloudCluster = Objects.requireNonNull($.multiCloudCluster, "expected parameter 'multiCloudCluster' to be non-null");
+            $.onPremCluster = Objects.requireNonNull($.onPremCluster, "expected parameter 'onPremCluster' to be non-null");
+            return $;
         }
     }
+
 }

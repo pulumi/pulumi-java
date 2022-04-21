@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends com.pul
      * 
      */
     @Import(name="utilizationTarget")
-      private final @Nullable Output<Double> utilizationTarget;
+    private @Nullable Output<Double> utilizationTarget;
 
-    public Output<Double> utilizationTarget() {
-        return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
+    public Optional<Output<Double>> utilizationTarget() {
+        return Optional.ofNullable(this.utilizationTarget);
     }
 
-    public AutoscalingPolicyLoadBalancingUtilizationArgs(@Nullable Output<Double> utilizationTarget) {
-        this.utilizationTarget = utilizationTarget;
-    }
+    private AutoscalingPolicyLoadBalancingUtilizationArgs() {}
 
-    private AutoscalingPolicyLoadBalancingUtilizationArgs() {
-        this.utilizationTarget = Codegen.empty();
+    private AutoscalingPolicyLoadBalancingUtilizationArgs(AutoscalingPolicyLoadBalancingUtilizationArgs $) {
+        this.utilizationTarget = $.utilizationTarget;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalingPolicyLoadBalancingUtilizationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Double> utilizationTarget;
+        private AutoscalingPolicyLoadBalancingUtilizationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalingPolicyLoadBalancingUtilizationArgs();
         }
 
         public Builder(AutoscalingPolicyLoadBalancingUtilizationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.utilizationTarget = defaults.utilizationTarget;
+            $ = new AutoscalingPolicyLoadBalancingUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder utilizationTarget(@Nullable Output<Double> utilizationTarget) {
-            this.utilizationTarget = utilizationTarget;
+            $.utilizationTarget = utilizationTarget;
             return this;
         }
-        public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Codegen.ofNullable(utilizationTarget);
-            return this;
-        }        public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
-            return new AutoscalingPolicyLoadBalancingUtilizationArgs(utilizationTarget);
+
+        public Builder utilizationTarget(Double utilizationTarget) {
+            return utilizationTarget(Output.of(utilizationTarget));
+        }
+
+        public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
+            return $;
         }
     }
+
 }

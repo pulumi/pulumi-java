@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends com
      * 
      */
     @Import(name="projectRepoId")
-      private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
+    private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
 
-    public Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId() {
-        return this.projectRepoId == null ? Codegen.empty() : this.projectRepoId;
+    public Optional<Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs>> projectRepoId() {
+        return Optional.ofNullable(this.projectRepoId);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs extends com
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(
-        @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId,
-        @Nullable Output<String> uid) {
-        this.projectRepoId = projectRepoId;
-        this.uid = uid;
-    }
+    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs() {}
 
-    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs() {
-        this.projectRepoId = Codegen.empty();
-        this.uid = Codegen.empty();
+    private GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs $) {
+        this.projectRepoId = $.projectRepoId;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId;
-        private @Nullable Output<String> uid;
+        private GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs();
         }
 
         public Builder(GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectRepoId = defaults.projectRepoId;
-    	      this.uid = defaults.uid;
+            $ = new GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectRepoId(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs> projectRepoId) {
-            this.projectRepoId = projectRepoId;
+            $.projectRepoId = projectRepoId;
             return this;
         }
-        public Builder projectRepoId(@Nullable GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs projectRepoId) {
-            this.projectRepoId = Codegen.ofNullable(projectRepoId);
-            return this;
+
+        public Builder projectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdArgs projectRepoId) {
+            return projectRepoId(Output.of(projectRepoId));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs build() {
-            return new GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs(projectRepoId, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs build() {
+            return $;
         }
     }
+
 }

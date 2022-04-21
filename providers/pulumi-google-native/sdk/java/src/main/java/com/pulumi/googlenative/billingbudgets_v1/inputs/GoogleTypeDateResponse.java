@@ -21,7 +21,7 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="day", required=true)
-      private final Integer day;
+    private Integer day;
 
     public Integer day() {
         return this.day;
@@ -32,7 +32,7 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="month", required=true)
-      private final Integer month;
+    private Integer month;
 
     public Integer month() {
         return this.month;
@@ -43,64 +43,59 @@ public final class GoogleTypeDateResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="year", required=true)
-      private final Integer year;
+    private Integer year;
 
     public Integer year() {
         return this.year;
     }
 
-    public GoogleTypeDateResponse(
-        Integer day,
-        Integer month,
-        Integer year) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.month = Objects.requireNonNull(month, "expected parameter 'month' to be non-null");
-        this.year = Objects.requireNonNull(year, "expected parameter 'year' to be non-null");
-    }
+    private GoogleTypeDateResponse() {}
 
-    private GoogleTypeDateResponse() {
-        this.day = null;
-        this.month = null;
-        this.year = null;
+    private GoogleTypeDateResponse(GoogleTypeDateResponse $) {
+        this.day = $.day;
+        this.month = $.month;
+        this.year = $.year;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleTypeDateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer day;
-        private Integer month;
-        private Integer year;
+        private GoogleTypeDateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleTypeDateResponse();
         }
 
         public Builder(GoogleTypeDateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.month = defaults.month;
-    	      this.year = defaults.year;
+            $ = new GoogleTypeDateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Integer day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder month(Integer month) {
-            this.month = Objects.requireNonNull(month);
+            $.month = month;
             return this;
         }
+
         public Builder year(Integer year) {
-            this.year = Objects.requireNonNull(year);
+            $.year = year;
             return this;
-        }        public GoogleTypeDateResponse build() {
-            return new GoogleTypeDateResponse(day, month, year);
+        }
+
+        public GoogleTypeDateResponse build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.month = Objects.requireNonNull($.month, "expected parameter 'month' to be non-null");
+            $.year = Objects.requireNonNull($.year, "expected parameter 'year' to be non-null");
+            return $;
         }
     }
+
 }

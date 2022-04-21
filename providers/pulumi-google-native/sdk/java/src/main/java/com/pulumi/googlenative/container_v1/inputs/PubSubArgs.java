@@ -5,11 +5,11 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.inputs.FilterArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="filter")
-      private final @Nullable Output<FilterArgs> filter;
+    private @Nullable Output<FilterArgs> filter;
 
-    public Output<FilterArgs> filter() {
-        return this.filter == null ? Codegen.empty() : this.filter;
+    public Optional<Output<FilterArgs>> filter() {
+        return Optional.ofNullable(this.filter);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class PubSubArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="topic")
-      private final @Nullable Output<String> topic;
+    private @Nullable Output<String> topic;
 
-    public Output<String> topic() {
-        return this.topic == null ? Codegen.empty() : this.topic;
+    public Optional<Output<String>> topic() {
+        return Optional.ofNullable(this.topic);
     }
 
-    public PubSubArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<FilterArgs> filter,
-        @Nullable Output<String> topic) {
-        this.enabled = enabled;
-        this.filter = filter;
-        this.topic = topic;
-    }
+    private PubSubArgs() {}
 
-    private PubSubArgs() {
-        this.enabled = Codegen.empty();
-        this.filter = Codegen.empty();
-        this.topic = Codegen.empty();
+    private PubSubArgs(PubSubArgs $) {
+        this.enabled = $.enabled;
+        this.filter = $.filter;
+        this.topic = $.topic;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PubSubArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<FilterArgs> filter;
-        private @Nullable Output<String> topic;
+        private PubSubArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PubSubArgs();
         }
 
         public Builder(PubSubArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.filter = defaults.filter;
-    	      this.topic = defaults.topic;
+            $ = new PubSubArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder filter(@Nullable Output<FilterArgs> filter) {
-            this.filter = filter;
+            $.filter = filter;
             return this;
         }
-        public Builder filter(@Nullable FilterArgs filter) {
-            this.filter = Codegen.ofNullable(filter);
-            return this;
+
+        public Builder filter(FilterArgs filter) {
+            return filter(Output.of(filter));
         }
+
         public Builder topic(@Nullable Output<String> topic) {
-            this.topic = topic;
+            $.topic = topic;
             return this;
         }
-        public Builder topic(@Nullable String topic) {
-            this.topic = Codegen.ofNullable(topic);
-            return this;
-        }        public PubSubArgs build() {
-            return new PubSubArgs(enabled, filter, topic);
+
+        public Builder topic(String topic) {
+            return topic(Output.of(topic));
+        }
+
+        public PubSubArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="createTime")
-      private final @Nullable Output<String> createTime;
+    private @Nullable Output<String> createTime;
 
-    public Output<String> createTime() {
-        return this.createTime == null ? Codegen.empty() : this.createTime;
+    public Optional<Output<String>> createTime() {
+        return Optional.ofNullable(this.createTime);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class GooglePrivacyDlpV2StoredTypeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public GooglePrivacyDlpV2StoredTypeArgs(
-        @Nullable Output<String> createTime,
-        @Nullable Output<String> name) {
-        this.createTime = createTime;
-        this.name = name;
-    }
+    private GooglePrivacyDlpV2StoredTypeArgs() {}
 
-    private GooglePrivacyDlpV2StoredTypeArgs() {
-        this.createTime = Codegen.empty();
-        this.name = Codegen.empty();
+    private GooglePrivacyDlpV2StoredTypeArgs(GooglePrivacyDlpV2StoredTypeArgs $) {
+        this.createTime = $.createTime;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StoredTypeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> createTime;
-        private @Nullable Output<String> name;
+        private GooglePrivacyDlpV2StoredTypeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StoredTypeArgs();
         }
 
         public Builder(GooglePrivacyDlpV2StoredTypeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.createTime = defaults.createTime;
-    	      this.name = defaults.name;
+            $ = new GooglePrivacyDlpV2StoredTypeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder createTime(@Nullable Output<String> createTime) {
-            this.createTime = createTime;
+            $.createTime = createTime;
             return this;
         }
-        public Builder createTime(@Nullable String createTime) {
-            this.createTime = Codegen.ofNullable(createTime);
-            return this;
+
+        public Builder createTime(String createTime) {
+            return createTime(Output.of(createTime));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public GooglePrivacyDlpV2StoredTypeArgs build() {
-            return new GooglePrivacyDlpV2StoredTypeArgs(createTime, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public GooglePrivacyDlpV2StoredTypeArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class ModelStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="published", required=true)
-      private final Boolean published;
+    private Boolean published;
 
     public Boolean published() {
         return this.published;
@@ -33,55 +33,52 @@ public final class ModelStateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="validationError", required=true)
-      private final StatusResponse validationError;
+    private StatusResponse validationError;
 
     public StatusResponse validationError() {
         return this.validationError;
     }
 
-    public ModelStateResponse(
-        Boolean published,
-        StatusResponse validationError) {
-        this.published = Objects.requireNonNull(published, "expected parameter 'published' to be non-null");
-        this.validationError = Objects.requireNonNull(validationError, "expected parameter 'validationError' to be non-null");
-    }
+    private ModelStateResponse() {}
 
-    private ModelStateResponse() {
-        this.published = null;
-        this.validationError = null;
+    private ModelStateResponse(ModelStateResponse $) {
+        this.published = $.published;
+        this.validationError = $.validationError;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ModelStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean published;
-        private StatusResponse validationError;
+        private ModelStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ModelStateResponse();
         }
 
         public Builder(ModelStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.published = defaults.published;
-    	      this.validationError = defaults.validationError;
+            $ = new ModelStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder published(Boolean published) {
-            this.published = Objects.requireNonNull(published);
+            $.published = published;
             return this;
         }
+
         public Builder validationError(StatusResponse validationError) {
-            this.validationError = Objects.requireNonNull(validationError);
+            $.validationError = validationError;
             return this;
-        }        public ModelStateResponse build() {
-            return new ModelStateResponse(published, validationError);
+        }
+
+        public ModelStateResponse build() {
+            $.published = Objects.requireNonNull($.published, "expected parameter 'published' to be non-null");
+            $.validationError = Objects.requireNonNull($.validationError, "expected parameter 'validationError' to be non-null");
+            return $;
         }
     }
+
 }

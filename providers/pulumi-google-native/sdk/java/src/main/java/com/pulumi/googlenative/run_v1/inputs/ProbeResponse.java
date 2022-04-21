@@ -24,7 +24,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="exec", required=true)
-      private final ExecActionResponse exec;
+    private ExecActionResponse exec;
 
     public ExecActionResponse exec() {
         return this.exec;
@@ -35,7 +35,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="failureThreshold", required=true)
-      private final Integer failureThreshold;
+    private Integer failureThreshold;
 
     public Integer failureThreshold() {
         return this.failureThreshold;
@@ -46,7 +46,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpGet", required=true)
-      private final HTTPGetActionResponse httpGet;
+    private HTTPGetActionResponse httpGet;
 
     public HTTPGetActionResponse httpGet() {
         return this.httpGet;
@@ -57,7 +57,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="initialDelaySeconds", required=true)
-      private final Integer initialDelaySeconds;
+    private Integer initialDelaySeconds;
 
     public Integer initialDelaySeconds() {
         return this.initialDelaySeconds;
@@ -68,7 +68,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="periodSeconds", required=true)
-      private final Integer periodSeconds;
+    private Integer periodSeconds;
 
     public Integer periodSeconds() {
         return this.periodSeconds;
@@ -79,7 +79,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="successThreshold", required=true)
-      private final Integer successThreshold;
+    private Integer successThreshold;
 
     public Integer successThreshold() {
         return this.successThreshold;
@@ -90,7 +90,7 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="tcpSocket", required=true)
-      private final TCPSocketActionResponse tcpSocket;
+    private TCPSocketActionResponse tcpSocket;
 
     public TCPSocketActionResponse tcpSocket() {
         return this.tcpSocket;
@@ -101,109 +101,94 @@ public final class ProbeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="timeoutSeconds", required=true)
-      private final Integer timeoutSeconds;
+    private Integer timeoutSeconds;
 
     public Integer timeoutSeconds() {
         return this.timeoutSeconds;
     }
 
-    public ProbeResponse(
-        ExecActionResponse exec,
-        Integer failureThreshold,
-        HTTPGetActionResponse httpGet,
-        Integer initialDelaySeconds,
-        Integer periodSeconds,
-        Integer successThreshold,
-        TCPSocketActionResponse tcpSocket,
-        Integer timeoutSeconds) {
-        this.exec = Objects.requireNonNull(exec, "expected parameter 'exec' to be non-null");
-        this.failureThreshold = Objects.requireNonNull(failureThreshold, "expected parameter 'failureThreshold' to be non-null");
-        this.httpGet = Objects.requireNonNull(httpGet, "expected parameter 'httpGet' to be non-null");
-        this.initialDelaySeconds = Objects.requireNonNull(initialDelaySeconds, "expected parameter 'initialDelaySeconds' to be non-null");
-        this.periodSeconds = Objects.requireNonNull(periodSeconds, "expected parameter 'periodSeconds' to be non-null");
-        this.successThreshold = Objects.requireNonNull(successThreshold, "expected parameter 'successThreshold' to be non-null");
-        this.tcpSocket = Objects.requireNonNull(tcpSocket, "expected parameter 'tcpSocket' to be non-null");
-        this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds, "expected parameter 'timeoutSeconds' to be non-null");
-    }
+    private ProbeResponse() {}
 
-    private ProbeResponse() {
-        this.exec = null;
-        this.failureThreshold = null;
-        this.httpGet = null;
-        this.initialDelaySeconds = null;
-        this.periodSeconds = null;
-        this.successThreshold = null;
-        this.tcpSocket = null;
-        this.timeoutSeconds = null;
+    private ProbeResponse(ProbeResponse $) {
+        this.exec = $.exec;
+        this.failureThreshold = $.failureThreshold;
+        this.httpGet = $.httpGet;
+        this.initialDelaySeconds = $.initialDelaySeconds;
+        this.periodSeconds = $.periodSeconds;
+        this.successThreshold = $.successThreshold;
+        this.tcpSocket = $.tcpSocket;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ProbeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExecActionResponse exec;
-        private Integer failureThreshold;
-        private HTTPGetActionResponse httpGet;
-        private Integer initialDelaySeconds;
-        private Integer periodSeconds;
-        private Integer successThreshold;
-        private TCPSocketActionResponse tcpSocket;
-        private Integer timeoutSeconds;
+        private ProbeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ProbeResponse();
         }
 
         public Builder(ProbeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.exec = defaults.exec;
-    	      this.failureThreshold = defaults.failureThreshold;
-    	      this.httpGet = defaults.httpGet;
-    	      this.initialDelaySeconds = defaults.initialDelaySeconds;
-    	      this.periodSeconds = defaults.periodSeconds;
-    	      this.successThreshold = defaults.successThreshold;
-    	      this.tcpSocket = defaults.tcpSocket;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new ProbeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder exec(ExecActionResponse exec) {
-            this.exec = Objects.requireNonNull(exec);
+            $.exec = exec;
             return this;
         }
+
         public Builder failureThreshold(Integer failureThreshold) {
-            this.failureThreshold = Objects.requireNonNull(failureThreshold);
+            $.failureThreshold = failureThreshold;
             return this;
         }
+
         public Builder httpGet(HTTPGetActionResponse httpGet) {
-            this.httpGet = Objects.requireNonNull(httpGet);
+            $.httpGet = httpGet;
             return this;
         }
+
         public Builder initialDelaySeconds(Integer initialDelaySeconds) {
-            this.initialDelaySeconds = Objects.requireNonNull(initialDelaySeconds);
+            $.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
+
         public Builder periodSeconds(Integer periodSeconds) {
-            this.periodSeconds = Objects.requireNonNull(periodSeconds);
+            $.periodSeconds = periodSeconds;
             return this;
         }
+
         public Builder successThreshold(Integer successThreshold) {
-            this.successThreshold = Objects.requireNonNull(successThreshold);
+            $.successThreshold = successThreshold;
             return this;
         }
+
         public Builder tcpSocket(TCPSocketActionResponse tcpSocket) {
-            this.tcpSocket = Objects.requireNonNull(tcpSocket);
+            $.tcpSocket = tcpSocket;
             return this;
         }
+
         public Builder timeoutSeconds(Integer timeoutSeconds) {
-            this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
+            $.timeoutSeconds = timeoutSeconds;
             return this;
-        }        public ProbeResponse build() {
-            return new ProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, timeoutSeconds);
+        }
+
+        public ProbeResponse build() {
+            $.exec = Objects.requireNonNull($.exec, "expected parameter 'exec' to be non-null");
+            $.failureThreshold = Objects.requireNonNull($.failureThreshold, "expected parameter 'failureThreshold' to be non-null");
+            $.httpGet = Objects.requireNonNull($.httpGet, "expected parameter 'httpGet' to be non-null");
+            $.initialDelaySeconds = Objects.requireNonNull($.initialDelaySeconds, "expected parameter 'initialDelaySeconds' to be non-null");
+            $.periodSeconds = Objects.requireNonNull($.periodSeconds, "expected parameter 'periodSeconds' to be non-null");
+            $.successThreshold = Objects.requireNonNull($.successThreshold, "expected parameter 'successThreshold' to be non-null");
+            $.tcpSocket = Objects.requireNonNull($.tcpSocket, "expected parameter 'tcpSocket' to be non-null");
+            $.timeoutSeconds = Objects.requireNonNull($.timeoutSeconds, "expected parameter 'timeoutSeconds' to be non-null");
+            return $;
         }
     }
+
 }

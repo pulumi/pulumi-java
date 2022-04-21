@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dns_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,17 +20,17 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
      * 
      */
     @Import(name="deletionTime")
-      private final @Nullable Output<String> deletionTime;
+    private @Nullable Output<String> deletionTime;
 
-    public Output<String> deletionTime() {
-        return this.deletionTime == null ? Codegen.empty() : this.deletionTime;
+    public Optional<Output<String>> deletionTime() {
+        return Optional.ofNullable(this.deletionTime);
     }
 
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -38,76 +38,68 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends com.pu
      * 
      */
     @Import(name="namespaceUrl")
-      private final @Nullable Output<String> namespaceUrl;
+    private @Nullable Output<String> namespaceUrl;
 
-    public Output<String> namespaceUrl() {
-        return this.namespaceUrl == null ? Codegen.empty() : this.namespaceUrl;
+    public Optional<Output<String>> namespaceUrl() {
+        return Optional.ofNullable(this.namespaceUrl);
     }
 
-    public ManagedZoneServiceDirectoryConfigNamespaceArgs(
-        @Nullable Output<String> deletionTime,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> namespaceUrl) {
-        this.deletionTime = deletionTime;
-        this.kind = kind;
-        this.namespaceUrl = namespaceUrl;
-    }
+    private ManagedZoneServiceDirectoryConfigNamespaceArgs() {}
 
-    private ManagedZoneServiceDirectoryConfigNamespaceArgs() {
-        this.deletionTime = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.namespaceUrl = Codegen.empty();
+    private ManagedZoneServiceDirectoryConfigNamespaceArgs(ManagedZoneServiceDirectoryConfigNamespaceArgs $) {
+        this.deletionTime = $.deletionTime;
+        this.kind = $.kind;
+        this.namespaceUrl = $.namespaceUrl;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZoneServiceDirectoryConfigNamespaceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deletionTime;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> namespaceUrl;
+        private ManagedZoneServiceDirectoryConfigNamespaceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZoneServiceDirectoryConfigNamespaceArgs();
         }
 
         public Builder(ManagedZoneServiceDirectoryConfigNamespaceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deletionTime = defaults.deletionTime;
-    	      this.kind = defaults.kind;
-    	      this.namespaceUrl = defaults.namespaceUrl;
+            $ = new ManagedZoneServiceDirectoryConfigNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deletionTime(@Nullable Output<String> deletionTime) {
-            this.deletionTime = deletionTime;
+            $.deletionTime = deletionTime;
             return this;
         }
-        public Builder deletionTime(@Nullable String deletionTime) {
-            this.deletionTime = Codegen.ofNullable(deletionTime);
-            return this;
+
+        public Builder deletionTime(String deletionTime) {
+            return deletionTime(Output.of(deletionTime));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder namespaceUrl(@Nullable Output<String> namespaceUrl) {
-            this.namespaceUrl = namespaceUrl;
+            $.namespaceUrl = namespaceUrl;
             return this;
         }
-        public Builder namespaceUrl(@Nullable String namespaceUrl) {
-            this.namespaceUrl = Codegen.ofNullable(namespaceUrl);
-            return this;
-        }        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
-            return new ManagedZoneServiceDirectoryConfigNamespaceArgs(deletionTime, kind, namespaceUrl);
+
+        public Builder namespaceUrl(String namespaceUrl) {
+            return namespaceUrl(Output.of(namespaceUrl));
+        }
+
+        public ManagedZoneServiceDirectoryConfigNamespaceArgs build() {
+            return $;
         }
     }
+
 }

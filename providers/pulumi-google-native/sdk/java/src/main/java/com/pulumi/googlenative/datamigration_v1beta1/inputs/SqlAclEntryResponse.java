@@ -21,7 +21,7 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="expireTime", required=true)
-      private final String expireTime;
+    private String expireTime;
 
     public String expireTime() {
         return this.expireTime;
@@ -32,7 +32,7 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -43,7 +43,7 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ttl", required=true)
-      private final String ttl;
+    private String ttl;
 
     public String ttl() {
         return this.ttl;
@@ -54,73 +54,66 @@ public final class SqlAclEntryResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public SqlAclEntryResponse(
-        String expireTime,
-        String label,
-        String ttl,
-        String value) {
-        this.expireTime = Objects.requireNonNull(expireTime, "expected parameter 'expireTime' to be non-null");
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.ttl = Objects.requireNonNull(ttl, "expected parameter 'ttl' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private SqlAclEntryResponse() {}
 
-    private SqlAclEntryResponse() {
-        this.expireTime = null;
-        this.label = null;
-        this.ttl = null;
-        this.value = null;
+    private SqlAclEntryResponse(SqlAclEntryResponse $) {
+        this.expireTime = $.expireTime;
+        this.label = $.label;
+        this.ttl = $.ttl;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SqlAclEntryResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String expireTime;
-        private String label;
-        private String ttl;
-        private String value;
+        private SqlAclEntryResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SqlAclEntryResponse();
         }
 
         public Builder(SqlAclEntryResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expireTime = defaults.expireTime;
-    	      this.label = defaults.label;
-    	      this.ttl = defaults.ttl;
-    	      this.value = defaults.value;
+            $ = new SqlAclEntryResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expireTime(String expireTime) {
-            this.expireTime = Objects.requireNonNull(expireTime);
+            $.expireTime = expireTime;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder ttl(String ttl) {
-            this.ttl = Objects.requireNonNull(ttl);
+            $.ttl = ttl;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public SqlAclEntryResponse build() {
-            return new SqlAclEntryResponse(expireTime, label, ttl, value);
+        }
+
+        public SqlAclEntryResponse build() {
+            $.expireTime = Objects.requireNonNull($.expireTime, "expected parameter 'expireTime' to be non-null");
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.ttl = Objects.requireNonNull($.ttl, "expected parameter 'ttl' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

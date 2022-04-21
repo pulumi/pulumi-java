@@ -15,78 +15,72 @@ public final class GetTaxonomyIamPolicyArgs extends com.pulumi.resources.InvokeA
     public static final GetTaxonomyIamPolicyArgs Empty = new GetTaxonomyIamPolicyArgs();
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="taxonomyId", required=true)
-      private final String taxonomyId;
+    private String taxonomyId;
 
     public String taxonomyId() {
         return this.taxonomyId;
     }
 
-    public GetTaxonomyIamPolicyArgs(
-        String location,
-        @Nullable String project,
-        String taxonomyId) {
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-        this.taxonomyId = Objects.requireNonNull(taxonomyId, "expected parameter 'taxonomyId' to be non-null");
-    }
+    private GetTaxonomyIamPolicyArgs() {}
 
-    private GetTaxonomyIamPolicyArgs() {
-        this.location = null;
-        this.project = null;
-        this.taxonomyId = null;
+    private GetTaxonomyIamPolicyArgs(GetTaxonomyIamPolicyArgs $) {
+        this.location = $.location;
+        this.project = $.project;
+        this.taxonomyId = $.taxonomyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetTaxonomyIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String location;
-        private @Nullable String project;
-        private String taxonomyId;
+        private GetTaxonomyIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetTaxonomyIamPolicyArgs();
         }
 
         public Builder(GetTaxonomyIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.taxonomyId = defaults.taxonomyId;
+            $ = new GetTaxonomyIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder taxonomyId(String taxonomyId) {
-            this.taxonomyId = Objects.requireNonNull(taxonomyId);
+            $.taxonomyId = taxonomyId;
             return this;
-        }        public GetTaxonomyIamPolicyArgs build() {
-            return new GetTaxonomyIamPolicyArgs(location, project, taxonomyId);
+        }
+
+        public GetTaxonomyIamPolicyArgs build() {
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.taxonomyId = Objects.requireNonNull($.taxonomyId, "expected parameter 'taxonomyId' to be non-null");
+            return $;
         }
     }
+
 }

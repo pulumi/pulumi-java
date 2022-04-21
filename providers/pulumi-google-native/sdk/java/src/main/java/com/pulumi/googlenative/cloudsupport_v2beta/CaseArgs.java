@@ -5,7 +5,6 @@ package com.pulumi.googlenative.cloudsupport_v2beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsupport_v2beta.enums.CasePriority;
 import com.pulumi.googlenative.cloudsupport_v2beta.inputs.ActorArgs;
 import com.pulumi.googlenative.cloudsupport_v2beta.inputs.CaseClassificationArgs;
@@ -13,6 +12,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="classification")
-      private final @Nullable Output<CaseClassificationArgs> classification;
+    private @Nullable Output<CaseClassificationArgs> classification;
 
-    public Output<CaseClassificationArgs> classification() {
-        return this.classification == null ? Codegen.empty() : this.classification;
+    public Optional<Output<CaseClassificationArgs>> classification() {
+        return Optional.ofNullable(this.classification);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="creator")
-      private final @Nullable Output<ActorArgs> creator;
+    private @Nullable Output<ActorArgs> creator;
 
-    public Output<ActorArgs> creator() {
-        return this.creator == null ? Codegen.empty() : this.creator;
+    public Optional<Output<ActorArgs>> creator() {
+        return Optional.ofNullable(this.creator);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="escalated")
-      private final @Nullable Output<Boolean> escalated;
+    private @Nullable Output<Boolean> escalated;
 
-    public Output<Boolean> escalated() {
-        return this.escalated == null ? Codegen.empty() : this.escalated;
+    public Optional<Output<Boolean>> escalated() {
+        return Optional.ofNullable(this.escalated);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="priority")
-      private final @Nullable Output<CasePriority> priority;
+    private @Nullable Output<CasePriority> priority;
 
-    public Output<CasePriority> priority() {
-        return this.priority == null ? Codegen.empty() : this.priority;
+    public Optional<Output<CasePriority>> priority() {
+        return Optional.ofNullable(this.priority);
     }
 
     /**
@@ -102,10 +102,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscriberEmailAddresses")
-      private final @Nullable Output<List<String>> subscriberEmailAddresses;
+    private @Nullable Output<List<String>> subscriberEmailAddresses;
 
-    public Output<List<String>> subscriberEmailAddresses() {
-        return this.subscriberEmailAddresses == null ? Codegen.empty() : this.subscriberEmailAddresses;
+    public Optional<Output<List<String>>> subscriberEmailAddresses() {
+        return Optional.ofNullable(this.subscriberEmailAddresses);
     }
 
     /**
@@ -113,10 +113,10 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="testCase")
-      private final @Nullable Output<Boolean> testCase;
+    private @Nullable Output<Boolean> testCase;
 
-    public Output<Boolean> testCase() {
-        return this.testCase == null ? Codegen.empty() : this.testCase;
+    public Optional<Output<Boolean>> testCase() {
+        return Optional.ofNullable(this.testCase);
     }
 
     /**
@@ -124,210 +124,178 @@ public final class CaseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="timeZone")
-      private final @Nullable Output<String> timeZone;
+    private @Nullable Output<String> timeZone;
 
-    public Output<String> timeZone() {
-        return this.timeZone == null ? Codegen.empty() : this.timeZone;
+    public Optional<Output<String>> timeZone() {
+        return Optional.ofNullable(this.timeZone);
     }
 
     @Import(name="v2betaId1", required=true)
-      private final Output<String> v2betaId1;
+    private Output<String> v2betaId1;
 
     public Output<String> v2betaId1() {
         return this.v2betaId1;
     }
 
     @Import(name="v2betumId", required=true)
-      private final Output<String> v2betumId;
+    private Output<String> v2betumId;
 
     public Output<String> v2betumId() {
         return this.v2betumId;
     }
 
-    public CaseArgs(
-        @Nullable Output<CaseClassificationArgs> classification,
-        @Nullable Output<ActorArgs> creator,
-        @Nullable Output<String> description,
-        @Nullable Output<String> displayName,
-        @Nullable Output<Boolean> escalated,
-        @Nullable Output<String> name,
-        @Nullable Output<CasePriority> priority,
-        @Nullable Output<List<String>> subscriberEmailAddresses,
-        @Nullable Output<Boolean> testCase,
-        @Nullable Output<String> timeZone,
-        Output<String> v2betaId1,
-        Output<String> v2betumId) {
-        this.classification = classification;
-        this.creator = creator;
-        this.description = description;
-        this.displayName = displayName;
-        this.escalated = escalated;
-        this.name = name;
-        this.priority = priority;
-        this.subscriberEmailAddresses = subscriberEmailAddresses;
-        this.testCase = testCase;
-        this.timeZone = timeZone;
-        this.v2betaId1 = Objects.requireNonNull(v2betaId1, "expected parameter 'v2betaId1' to be non-null");
-        this.v2betumId = Objects.requireNonNull(v2betumId, "expected parameter 'v2betumId' to be non-null");
-    }
+    private CaseArgs() {}
 
-    private CaseArgs() {
-        this.classification = Codegen.empty();
-        this.creator = Codegen.empty();
-        this.description = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.escalated = Codegen.empty();
-        this.name = Codegen.empty();
-        this.priority = Codegen.empty();
-        this.subscriberEmailAddresses = Codegen.empty();
-        this.testCase = Codegen.empty();
-        this.timeZone = Codegen.empty();
-        this.v2betaId1 = Codegen.empty();
-        this.v2betumId = Codegen.empty();
+    private CaseArgs(CaseArgs $) {
+        this.classification = $.classification;
+        this.creator = $.creator;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.escalated = $.escalated;
+        this.name = $.name;
+        this.priority = $.priority;
+        this.subscriberEmailAddresses = $.subscriberEmailAddresses;
+        this.testCase = $.testCase;
+        this.timeZone = $.timeZone;
+        this.v2betaId1 = $.v2betaId1;
+        this.v2betumId = $.v2betumId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CaseClassificationArgs> classification;
-        private @Nullable Output<ActorArgs> creator;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> displayName;
-        private @Nullable Output<Boolean> escalated;
-        private @Nullable Output<String> name;
-        private @Nullable Output<CasePriority> priority;
-        private @Nullable Output<List<String>> subscriberEmailAddresses;
-        private @Nullable Output<Boolean> testCase;
-        private @Nullable Output<String> timeZone;
-        private Output<String> v2betaId1;
-        private Output<String> v2betumId;
+        private CaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CaseArgs();
         }
 
         public Builder(CaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.classification = defaults.classification;
-    	      this.creator = defaults.creator;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.escalated = defaults.escalated;
-    	      this.name = defaults.name;
-    	      this.priority = defaults.priority;
-    	      this.subscriberEmailAddresses = defaults.subscriberEmailAddresses;
-    	      this.testCase = defaults.testCase;
-    	      this.timeZone = defaults.timeZone;
-    	      this.v2betaId1 = defaults.v2betaId1;
-    	      this.v2betumId = defaults.v2betumId;
+            $ = new CaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder classification(@Nullable Output<CaseClassificationArgs> classification) {
-            this.classification = classification;
+            $.classification = classification;
             return this;
         }
-        public Builder classification(@Nullable CaseClassificationArgs classification) {
-            this.classification = Codegen.ofNullable(classification);
-            return this;
+
+        public Builder classification(CaseClassificationArgs classification) {
+            return classification(Output.of(classification));
         }
+
         public Builder creator(@Nullable Output<ActorArgs> creator) {
-            this.creator = creator;
+            $.creator = creator;
             return this;
         }
-        public Builder creator(@Nullable ActorArgs creator) {
-            this.creator = Codegen.ofNullable(creator);
-            return this;
+
+        public Builder creator(ActorArgs creator) {
+            return creator(Output.of(creator));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
         }
+
         public Builder escalated(@Nullable Output<Boolean> escalated) {
-            this.escalated = escalated;
+            $.escalated = escalated;
             return this;
         }
-        public Builder escalated(@Nullable Boolean escalated) {
-            this.escalated = Codegen.ofNullable(escalated);
-            return this;
+
+        public Builder escalated(Boolean escalated) {
+            return escalated(Output.of(escalated));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder priority(@Nullable Output<CasePriority> priority) {
-            this.priority = priority;
+            $.priority = priority;
             return this;
         }
-        public Builder priority(@Nullable CasePriority priority) {
-            this.priority = Codegen.ofNullable(priority);
-            return this;
+
+        public Builder priority(CasePriority priority) {
+            return priority(Output.of(priority));
         }
+
         public Builder subscriberEmailAddresses(@Nullable Output<List<String>> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = subscriberEmailAddresses;
+            $.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
-        public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
-            this.subscriberEmailAddresses = Codegen.ofNullable(subscriberEmailAddresses);
-            return this;
+
+        public Builder subscriberEmailAddresses(List<String> subscriberEmailAddresses) {
+            return subscriberEmailAddresses(Output.of(subscriberEmailAddresses));
         }
+
         public Builder subscriberEmailAddresses(String... subscriberEmailAddresses) {
             return subscriberEmailAddresses(List.of(subscriberEmailAddresses));
         }
+
         public Builder testCase(@Nullable Output<Boolean> testCase) {
-            this.testCase = testCase;
+            $.testCase = testCase;
             return this;
         }
-        public Builder testCase(@Nullable Boolean testCase) {
-            this.testCase = Codegen.ofNullable(testCase);
-            return this;
+
+        public Builder testCase(Boolean testCase) {
+            return testCase(Output.of(testCase));
         }
+
         public Builder timeZone(@Nullable Output<String> timeZone) {
-            this.timeZone = timeZone;
+            $.timeZone = timeZone;
             return this;
         }
-        public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Codegen.ofNullable(timeZone);
-            return this;
+
+        public Builder timeZone(String timeZone) {
+            return timeZone(Output.of(timeZone));
         }
+
         public Builder v2betaId1(Output<String> v2betaId1) {
-            this.v2betaId1 = Objects.requireNonNull(v2betaId1);
+            $.v2betaId1 = v2betaId1;
             return this;
         }
+
         public Builder v2betaId1(String v2betaId1) {
-            this.v2betaId1 = Output.of(Objects.requireNonNull(v2betaId1));
-            return this;
+            return v2betaId1(Output.of(v2betaId1));
         }
+
         public Builder v2betumId(Output<String> v2betumId) {
-            this.v2betumId = Objects.requireNonNull(v2betumId);
+            $.v2betumId = v2betumId;
             return this;
         }
+
         public Builder v2betumId(String v2betumId) {
-            this.v2betumId = Output.of(Objects.requireNonNull(v2betumId));
-            return this;
-        }        public CaseArgs build() {
-            return new CaseArgs(classification, creator, description, displayName, escalated, name, priority, subscriberEmailAddresses, testCase, timeZone, v2betaId1, v2betumId);
+            return v2betumId(Output.of(v2betumId));
+        }
+
+        public CaseArgs build() {
+            $.v2betaId1 = Objects.requireNonNull($.v2betaId1, "expected parameter 'v2betaId1' to be non-null");
+            $.v2betumId = Objects.requireNonNull($.v2betumId, "expected parameter 'v2betumId' to be non-null");
+            return $;
         }
     }
+
 }

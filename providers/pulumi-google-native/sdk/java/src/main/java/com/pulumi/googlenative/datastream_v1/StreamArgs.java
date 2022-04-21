@@ -5,7 +5,6 @@ package com.pulumi.googlenative.datastream_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datastream_v1.enums.StreamState;
 import com.pulumi.googlenative.datastream_v1.inputs.BackfillAllStrategyArgs;
 import com.pulumi.googlenative.datastream_v1.inputs.BackfillNoneStrategyArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.datastream_v1.inputs.SourceConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backfillAll")
-      private final @Nullable Output<BackfillAllStrategyArgs> backfillAll;
+    private @Nullable Output<BackfillAllStrategyArgs> backfillAll;
 
-    public Output<BackfillAllStrategyArgs> backfillAll() {
-        return this.backfillAll == null ? Codegen.empty() : this.backfillAll;
+    public Optional<Output<BackfillAllStrategyArgs>> backfillAll() {
+        return Optional.ofNullable(this.backfillAll);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="backfillNone")
-      private final @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
+    private @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
 
-    public Output<BackfillNoneStrategyArgs> backfillNone() {
-        return this.backfillNone == null ? Codegen.empty() : this.backfillNone;
+    public Optional<Output<BackfillNoneStrategyArgs>> backfillNone() {
+        return Optional.ofNullable(this.backfillNone);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="customerManagedEncryptionKey")
-      private final @Nullable Output<String> customerManagedEncryptionKey;
+    private @Nullable Output<String> customerManagedEncryptionKey;
 
-    public Output<String> customerManagedEncryptionKey() {
-        return this.customerManagedEncryptionKey == null ? Codegen.empty() : this.customerManagedEncryptionKey;
+    public Optional<Output<String>> customerManagedEncryptionKey() {
+        return Optional.ofNullable(this.customerManagedEncryptionKey);
     }
 
     /**
@@ -59,7 +59,7 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="destinationConfig", required=true)
-      private final Output<DestinationConfigArgs> destinationConfig;
+    private Output<DestinationConfigArgs> destinationConfig;
 
     public Output<DestinationConfigArgs> destinationConfig() {
         return this.destinationConfig;
@@ -70,17 +70,17 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final Output<String> displayName;
+    private Output<String> displayName;
 
     public Output<String> displayName() {
         return this.displayName;
     }
 
     @Import(name="force")
-      private final @Nullable Output<String> force;
+    private @Nullable Output<String> force;
 
-    public Output<String> force() {
-        return this.force == null ? Codegen.empty() : this.force;
+    public Optional<Output<String>> force() {
+        return Optional.ofNullable(this.force);
     }
 
     /**
@@ -88,31 +88,31 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -120,7 +120,7 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceConfig", required=true)
-      private final Output<SourceConfigArgs> sourceConfig;
+    private Output<SourceConfigArgs> sourceConfig;
 
     public Output<SourceConfigArgs> sourceConfig() {
         return this.sourceConfig;
@@ -131,233 +131,196 @@ public final class StreamArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="state")
-      private final @Nullable Output<StreamState> state;
+    private @Nullable Output<StreamState> state;
 
-    public Output<StreamState> state() {
-        return this.state == null ? Codegen.empty() : this.state;
+    public Optional<Output<StreamState>> state() {
+        return Optional.ofNullable(this.state);
     }
 
     @Import(name="streamId", required=true)
-      private final Output<String> streamId;
+    private Output<String> streamId;
 
     public Output<String> streamId() {
         return this.streamId;
     }
 
     @Import(name="validateOnly")
-      private final @Nullable Output<String> validateOnly;
+    private @Nullable Output<String> validateOnly;
 
-    public Output<String> validateOnly() {
-        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
+    public Optional<Output<String>> validateOnly() {
+        return Optional.ofNullable(this.validateOnly);
     }
 
-    public StreamArgs(
-        @Nullable Output<BackfillAllStrategyArgs> backfillAll,
-        @Nullable Output<BackfillNoneStrategyArgs> backfillNone,
-        @Nullable Output<String> customerManagedEncryptionKey,
-        Output<DestinationConfigArgs> destinationConfig,
-        Output<String> displayName,
-        @Nullable Output<String> force,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> location,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        Output<SourceConfigArgs> sourceConfig,
-        @Nullable Output<StreamState> state,
-        Output<String> streamId,
-        @Nullable Output<String> validateOnly) {
-        this.backfillAll = backfillAll;
-        this.backfillNone = backfillNone;
-        this.customerManagedEncryptionKey = customerManagedEncryptionKey;
-        this.destinationConfig = Objects.requireNonNull(destinationConfig, "expected parameter 'destinationConfig' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.force = force;
-        this.labels = labels;
-        this.location = location;
-        this.project = project;
-        this.requestId = requestId;
-        this.sourceConfig = Objects.requireNonNull(sourceConfig, "expected parameter 'sourceConfig' to be non-null");
-        this.state = state;
-        this.streamId = Objects.requireNonNull(streamId, "expected parameter 'streamId' to be non-null");
-        this.validateOnly = validateOnly;
-    }
+    private StreamArgs() {}
 
-    private StreamArgs() {
-        this.backfillAll = Codegen.empty();
-        this.backfillNone = Codegen.empty();
-        this.customerManagedEncryptionKey = Codegen.empty();
-        this.destinationConfig = Codegen.empty();
-        this.displayName = Codegen.empty();
-        this.force = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.location = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.sourceConfig = Codegen.empty();
-        this.state = Codegen.empty();
-        this.streamId = Codegen.empty();
-        this.validateOnly = Codegen.empty();
+    private StreamArgs(StreamArgs $) {
+        this.backfillAll = $.backfillAll;
+        this.backfillNone = $.backfillNone;
+        this.customerManagedEncryptionKey = $.customerManagedEncryptionKey;
+        this.destinationConfig = $.destinationConfig;
+        this.displayName = $.displayName;
+        this.force = $.force;
+        this.labels = $.labels;
+        this.location = $.location;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.sourceConfig = $.sourceConfig;
+        this.state = $.state;
+        this.streamId = $.streamId;
+        this.validateOnly = $.validateOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StreamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<BackfillAllStrategyArgs> backfillAll;
-        private @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
-        private @Nullable Output<String> customerManagedEncryptionKey;
-        private Output<DestinationConfigArgs> destinationConfig;
-        private Output<String> displayName;
-        private @Nullable Output<String> force;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private Output<SourceConfigArgs> sourceConfig;
-        private @Nullable Output<StreamState> state;
-        private Output<String> streamId;
-        private @Nullable Output<String> validateOnly;
+        private StreamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StreamArgs();
         }
 
         public Builder(StreamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backfillAll = defaults.backfillAll;
-    	      this.backfillNone = defaults.backfillNone;
-    	      this.customerManagedEncryptionKey = defaults.customerManagedEncryptionKey;
-    	      this.destinationConfig = defaults.destinationConfig;
-    	      this.displayName = defaults.displayName;
-    	      this.force = defaults.force;
-    	      this.labels = defaults.labels;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.sourceConfig = defaults.sourceConfig;
-    	      this.state = defaults.state;
-    	      this.streamId = defaults.streamId;
-    	      this.validateOnly = defaults.validateOnly;
+            $ = new StreamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backfillAll(@Nullable Output<BackfillAllStrategyArgs> backfillAll) {
-            this.backfillAll = backfillAll;
+            $.backfillAll = backfillAll;
             return this;
         }
-        public Builder backfillAll(@Nullable BackfillAllStrategyArgs backfillAll) {
-            this.backfillAll = Codegen.ofNullable(backfillAll);
-            return this;
+
+        public Builder backfillAll(BackfillAllStrategyArgs backfillAll) {
+            return backfillAll(Output.of(backfillAll));
         }
+
         public Builder backfillNone(@Nullable Output<BackfillNoneStrategyArgs> backfillNone) {
-            this.backfillNone = backfillNone;
+            $.backfillNone = backfillNone;
             return this;
         }
-        public Builder backfillNone(@Nullable BackfillNoneStrategyArgs backfillNone) {
-            this.backfillNone = Codegen.ofNullable(backfillNone);
-            return this;
+
+        public Builder backfillNone(BackfillNoneStrategyArgs backfillNone) {
+            return backfillNone(Output.of(backfillNone));
         }
+
         public Builder customerManagedEncryptionKey(@Nullable Output<String> customerManagedEncryptionKey) {
-            this.customerManagedEncryptionKey = customerManagedEncryptionKey;
+            $.customerManagedEncryptionKey = customerManagedEncryptionKey;
             return this;
         }
-        public Builder customerManagedEncryptionKey(@Nullable String customerManagedEncryptionKey) {
-            this.customerManagedEncryptionKey = Codegen.ofNullable(customerManagedEncryptionKey);
-            return this;
+
+        public Builder customerManagedEncryptionKey(String customerManagedEncryptionKey) {
+            return customerManagedEncryptionKey(Output.of(customerManagedEncryptionKey));
         }
+
         public Builder destinationConfig(Output<DestinationConfigArgs> destinationConfig) {
-            this.destinationConfig = Objects.requireNonNull(destinationConfig);
+            $.destinationConfig = destinationConfig;
             return this;
         }
+
         public Builder destinationConfig(DestinationConfigArgs destinationConfig) {
-            this.destinationConfig = Output.of(Objects.requireNonNull(destinationConfig));
-            return this;
+            return destinationConfig(Output.of(destinationConfig));
         }
+
         public Builder displayName(Output<String> displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Output.of(Objects.requireNonNull(displayName));
-            return this;
+            return displayName(Output.of(displayName));
         }
+
         public Builder force(@Nullable Output<String> force) {
-            this.force = force;
+            $.force = force;
             return this;
         }
-        public Builder force(@Nullable String force) {
-            this.force = Codegen.ofNullable(force);
-            return this;
+
+        public Builder force(String force) {
+            return force(Output.of(force));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder sourceConfig(Output<SourceConfigArgs> sourceConfig) {
-            this.sourceConfig = Objects.requireNonNull(sourceConfig);
+            $.sourceConfig = sourceConfig;
             return this;
         }
+
         public Builder sourceConfig(SourceConfigArgs sourceConfig) {
-            this.sourceConfig = Output.of(Objects.requireNonNull(sourceConfig));
-            return this;
+            return sourceConfig(Output.of(sourceConfig));
         }
+
         public Builder state(@Nullable Output<StreamState> state) {
-            this.state = state;
+            $.state = state;
             return this;
         }
-        public Builder state(@Nullable StreamState state) {
-            this.state = Codegen.ofNullable(state);
-            return this;
+
+        public Builder state(StreamState state) {
+            return state(Output.of(state));
         }
+
         public Builder streamId(Output<String> streamId) {
-            this.streamId = Objects.requireNonNull(streamId);
+            $.streamId = streamId;
             return this;
         }
+
         public Builder streamId(String streamId) {
-            this.streamId = Output.of(Objects.requireNonNull(streamId));
-            return this;
+            return streamId(Output.of(streamId));
         }
+
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
-            this.validateOnly = validateOnly;
+            $.validateOnly = validateOnly;
             return this;
         }
-        public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Codegen.ofNullable(validateOnly);
-            return this;
-        }        public StreamArgs build() {
-            return new StreamArgs(backfillAll, backfillNone, customerManagedEncryptionKey, destinationConfig, displayName, force, labels, location, project, requestId, sourceConfig, state, streamId, validateOnly);
+
+        public Builder validateOnly(String validateOnly) {
+            return validateOnly(Output.of(validateOnly));
+        }
+
+        public StreamArgs build() {
+            $.destinationConfig = Objects.requireNonNull($.destinationConfig, "expected parameter 'destinationConfig' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.sourceConfig = Objects.requireNonNull($.sourceConfig, "expected parameter 'sourceConfig' to be non-null");
+            $.streamId = Objects.requireNonNull($.streamId, "expected parameter 'streamId' to be non-null");
+            return $;
         }
     }
+
 }

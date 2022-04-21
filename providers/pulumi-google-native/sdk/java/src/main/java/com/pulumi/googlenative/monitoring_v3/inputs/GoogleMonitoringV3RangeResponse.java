@@ -21,7 +21,7 @@ public final class GoogleMonitoringV3RangeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="max", required=true)
-      private final Double max;
+    private Double max;
 
     public Double max() {
         return this.max;
@@ -32,55 +32,52 @@ public final class GoogleMonitoringV3RangeResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="min", required=true)
-      private final Double min;
+    private Double min;
 
     public Double min() {
         return this.min;
     }
 
-    public GoogleMonitoringV3RangeResponse(
-        Double max,
-        Double min) {
-        this.max = Objects.requireNonNull(max, "expected parameter 'max' to be non-null");
-        this.min = Objects.requireNonNull(min, "expected parameter 'min' to be non-null");
-    }
+    private GoogleMonitoringV3RangeResponse() {}
 
-    private GoogleMonitoringV3RangeResponse() {
-        this.max = null;
-        this.min = null;
+    private GoogleMonitoringV3RangeResponse(GoogleMonitoringV3RangeResponse $) {
+        this.max = $.max;
+        this.min = $.min;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleMonitoringV3RangeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Double max;
-        private Double min;
+        private GoogleMonitoringV3RangeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleMonitoringV3RangeResponse();
         }
 
         public Builder(GoogleMonitoringV3RangeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.max = defaults.max;
-    	      this.min = defaults.min;
+            $ = new GoogleMonitoringV3RangeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder max(Double max) {
-            this.max = Objects.requireNonNull(max);
+            $.max = max;
             return this;
         }
+
         public Builder min(Double min) {
-            this.min = Objects.requireNonNull(min);
+            $.min = min;
             return this;
-        }        public GoogleMonitoringV3RangeResponse build() {
-            return new GoogleMonitoringV3RangeResponse(max, min);
+        }
+
+        public GoogleMonitoringV3RangeResponse build() {
+            $.max = Objects.requireNonNull($.max, "expected parameter 'max' to be non-null");
+            $.min = Objects.requireNonNull($.min, "expected parameter 'min' to be non-null");
+            return $;
         }
     }
+
 }

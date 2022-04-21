@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigArgs extends com.pul
      * 
      */
     @Import(name="speechModelVariant")
-      private final @Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+    private @Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant;
 
-    public Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant() {
-        return this.speechModelVariant == null ? Codegen.empty() : this.speechModelVariant;
+    public Optional<Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant>> speechModelVariant() {
+        return Optional.ofNullable(this.speechModelVariant);
     }
 
-    public GoogleCloudDialogflowV2SpeechToTextConfigArgs(@Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
-        this.speechModelVariant = speechModelVariant;
-    }
+    private GoogleCloudDialogflowV2SpeechToTextConfigArgs() {}
 
-    private GoogleCloudDialogflowV2SpeechToTextConfigArgs() {
-        this.speechModelVariant = Codegen.empty();
+    private GoogleCloudDialogflowV2SpeechToTextConfigArgs(GoogleCloudDialogflowV2SpeechToTextConfigArgs $) {
+        this.speechModelVariant = $.speechModelVariant;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2SpeechToTextConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant;
+        private GoogleCloudDialogflowV2SpeechToTextConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2SpeechToTextConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2SpeechToTextConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.speechModelVariant = defaults.speechModelVariant;
+            $ = new GoogleCloudDialogflowV2SpeechToTextConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder speechModelVariant(@Nullable Output<GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant> speechModelVariant) {
-            this.speechModelVariant = speechModelVariant;
+            $.speechModelVariant = speechModelVariant;
             return this;
         }
-        public Builder speechModelVariant(@Nullable GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant speechModelVariant) {
-            this.speechModelVariant = Codegen.ofNullable(speechModelVariant);
-            return this;
-        }        public GoogleCloudDialogflowV2SpeechToTextConfigArgs build() {
-            return new GoogleCloudDialogflowV2SpeechToTextConfigArgs(speechModelVariant);
+
+        public Builder speechModelVariant(GoogleCloudDialogflowV2SpeechToTextConfigSpeechModelVariant speechModelVariant) {
+            return speechModelVariant(Output.of(speechModelVariant));
+        }
+
+        public GoogleCloudDialogflowV2SpeechToTextConfigArgs build() {
+            return $;
         }
     }
+
 }

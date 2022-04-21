@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
      * 
      */
     @Import(name="model")
-      private final @Nullable Output<String> model;
+    private @Nullable Output<String> model;
 
-    public Output<String> model() {
-        return this.model == null ? Codegen.empty() : this.model;
+    public Optional<Output<String>> model() {
+        return Optional.ofNullable(this.model);
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(@Nullable Output<String> model) {
-        this.model = model;
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs() {
-        this.model = Codegen.empty();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs $) {
+        this.model = $.model;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> model;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.model = defaults.model;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder model(@Nullable Output<String> model) {
-            this.model = model;
+            $.model = model;
             return this;
         }
-        public Builder model(@Nullable String model) {
-            this.model = Codegen.ofNullable(model);
-            return this;
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(model);
+
+        public Builder model(String model) {
+            return model(Output.of(model));
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs build() {
+            return $;
         }
     }
+
 }

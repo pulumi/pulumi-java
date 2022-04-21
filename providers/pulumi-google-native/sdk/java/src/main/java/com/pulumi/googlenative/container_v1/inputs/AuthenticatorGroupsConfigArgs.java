@@ -5,10 +5,10 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AuthenticatorGroupsConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="enabled")
-      private final @Nullable Output<Boolean> enabled;
+    private @Nullable Output<Boolean> enabled;
 
-    public Output<Boolean> enabled() {
-        return this.enabled == null ? Codegen.empty() : this.enabled;
+    public Optional<Output<Boolean>> enabled() {
+        return Optional.ofNullable(this.enabled);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AuthenticatorGroupsConfigArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="securityGroup")
-      private final @Nullable Output<String> securityGroup;
+    private @Nullable Output<String> securityGroup;
 
-    public Output<String> securityGroup() {
-        return this.securityGroup == null ? Codegen.empty() : this.securityGroup;
+    public Optional<Output<String>> securityGroup() {
+        return Optional.ofNullable(this.securityGroup);
     }
 
-    public AuthenticatorGroupsConfigArgs(
-        @Nullable Output<Boolean> enabled,
-        @Nullable Output<String> securityGroup) {
-        this.enabled = enabled;
-        this.securityGroup = securityGroup;
-    }
+    private AuthenticatorGroupsConfigArgs() {}
 
-    private AuthenticatorGroupsConfigArgs() {
-        this.enabled = Codegen.empty();
-        this.securityGroup = Codegen.empty();
+    private AuthenticatorGroupsConfigArgs(AuthenticatorGroupsConfigArgs $) {
+        this.enabled = $.enabled;
+        this.securityGroup = $.securityGroup;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthenticatorGroupsConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> enabled;
-        private @Nullable Output<String> securityGroup;
+        private AuthenticatorGroupsConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthenticatorGroupsConfigArgs();
         }
 
         public Builder(AuthenticatorGroupsConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
-    	      this.securityGroup = defaults.securityGroup;
+            $ = new AuthenticatorGroupsConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(@Nullable Output<Boolean> enabled) {
-            this.enabled = enabled;
+            $.enabled = enabled;
             return this;
         }
-        public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Codegen.ofNullable(enabled);
-            return this;
+
+        public Builder enabled(Boolean enabled) {
+            return enabled(Output.of(enabled));
         }
+
         public Builder securityGroup(@Nullable Output<String> securityGroup) {
-            this.securityGroup = securityGroup;
+            $.securityGroup = securityGroup;
             return this;
         }
-        public Builder securityGroup(@Nullable String securityGroup) {
-            this.securityGroup = Codegen.ofNullable(securityGroup);
-            return this;
-        }        public AuthenticatorGroupsConfigArgs build() {
-            return new AuthenticatorGroupsConfigArgs(enabled, securityGroup);
+
+        public Builder securityGroup(String securityGroup) {
+            return securityGroup(Output.of(securityGroup));
+        }
+
+        public AuthenticatorGroupsConfigArgs build() {
+            return $;
         }
     }
+
 }

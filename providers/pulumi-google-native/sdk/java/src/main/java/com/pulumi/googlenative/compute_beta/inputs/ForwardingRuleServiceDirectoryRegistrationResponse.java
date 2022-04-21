@@ -21,7 +21,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
      * 
      */
     @Import(name="namespace", required=true)
-      private final String namespace;
+    private String namespace;
 
     public String namespace() {
         return this.namespace;
@@ -32,7 +32,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
      * 
      */
     @Import(name="service", required=true)
-      private final String service;
+    private String service;
 
     public String service() {
         return this.service;
@@ -43,64 +43,59 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse extends co
      * 
      */
     @Import(name="serviceDirectoryRegion", required=true)
-      private final String serviceDirectoryRegion;
+    private String serviceDirectoryRegion;
 
     public String serviceDirectoryRegion() {
         return this.serviceDirectoryRegion;
     }
 
-    public ForwardingRuleServiceDirectoryRegistrationResponse(
-        String namespace,
-        String service,
-        String serviceDirectoryRegion) {
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-        this.service = Objects.requireNonNull(service, "expected parameter 'service' to be non-null");
-        this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion, "expected parameter 'serviceDirectoryRegion' to be non-null");
-    }
+    private ForwardingRuleServiceDirectoryRegistrationResponse() {}
 
-    private ForwardingRuleServiceDirectoryRegistrationResponse() {
-        this.namespace = null;
-        this.service = null;
-        this.serviceDirectoryRegion = null;
+    private ForwardingRuleServiceDirectoryRegistrationResponse(ForwardingRuleServiceDirectoryRegistrationResponse $) {
+        this.namespace = $.namespace;
+        this.service = $.service;
+        this.serviceDirectoryRegion = $.serviceDirectoryRegion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ForwardingRuleServiceDirectoryRegistrationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String namespace;
-        private String service;
-        private String serviceDirectoryRegion;
+        private ForwardingRuleServiceDirectoryRegistrationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ForwardingRuleServiceDirectoryRegistrationResponse();
         }
 
         public Builder(ForwardingRuleServiceDirectoryRegistrationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.namespace = defaults.namespace;
-    	      this.service = defaults.service;
-    	      this.serviceDirectoryRegion = defaults.serviceDirectoryRegion;
+            $ = new ForwardingRuleServiceDirectoryRegistrationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder namespace(String namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder service(String service) {
-            this.service = Objects.requireNonNull(service);
+            $.service = service;
             return this;
         }
+
         public Builder serviceDirectoryRegion(String serviceDirectoryRegion) {
-            this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
+            $.serviceDirectoryRegion = serviceDirectoryRegion;
             return this;
-        }        public ForwardingRuleServiceDirectoryRegistrationResponse build() {
-            return new ForwardingRuleServiceDirectoryRegistrationResponse(namespace, service, serviceDirectoryRegion);
+        }
+
+        public ForwardingRuleServiceDirectoryRegistrationResponse build() {
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            $.service = Objects.requireNonNull($.service, "expected parameter 'service' to be non-null");
+            $.serviceDirectoryRegion = Objects.requireNonNull($.serviceDirectoryRegion, "expected parameter 'serviceDirectoryRegion' to be non-null");
+            return $;
         }
     }
+
 }

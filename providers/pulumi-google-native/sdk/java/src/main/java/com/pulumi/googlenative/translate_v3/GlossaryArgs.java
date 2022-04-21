@@ -5,12 +5,12 @@ package com.pulumi.googlenative.translate_v3;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.translate_v3.inputs.GlossaryInputConfigArgs;
 import com.pulumi.googlenative.translate_v3.inputs.LanguageCodePairArgs;
 import com.pulumi.googlenative.translate_v3.inputs.LanguageCodesSetArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,7 +23,7 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputConfig", required=true)
-      private final Output<GlossaryInputConfigArgs> inputConfig;
+    private Output<GlossaryInputConfigArgs> inputConfig;
 
     public Output<GlossaryInputConfigArgs> inputConfig() {
         return this.inputConfig;
@@ -34,10 +34,10 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCodesSet")
-      private final @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
+    private @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
 
-    public Output<LanguageCodesSetArgs> languageCodesSet() {
-        return this.languageCodesSet == null ? Codegen.empty() : this.languageCodesSet;
+    public Optional<Output<LanguageCodesSetArgs>> languageCodesSet() {
+        return Optional.ofNullable(this.languageCodesSet);
     }
 
     /**
@@ -45,17 +45,17 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languagePair")
-      private final @Nullable Output<LanguageCodePairArgs> languagePair;
+    private @Nullable Output<LanguageCodePairArgs> languagePair;
 
-    public Output<LanguageCodePairArgs> languagePair() {
-        return this.languagePair == null ? Codegen.empty() : this.languagePair;
+    public Optional<Output<LanguageCodePairArgs>> languagePair() {
+        return Optional.ofNullable(this.languagePair);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -63,122 +63,106 @@ public final class GlossaryArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public GlossaryArgs(
-        Output<GlossaryInputConfigArgs> inputConfig,
-        @Nullable Output<LanguageCodesSetArgs> languageCodesSet,
-        @Nullable Output<LanguageCodePairArgs> languagePair,
-        @Nullable Output<String> location,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.inputConfig = Objects.requireNonNull(inputConfig, "expected parameter 'inputConfig' to be non-null");
-        this.languageCodesSet = languageCodesSet;
-        this.languagePair = languagePair;
-        this.location = location;
-        this.name = name;
-        this.project = project;
-    }
+    private GlossaryArgs() {}
 
-    private GlossaryArgs() {
-        this.inputConfig = Codegen.empty();
-        this.languageCodesSet = Codegen.empty();
-        this.languagePair = Codegen.empty();
-        this.location = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private GlossaryArgs(GlossaryArgs $) {
+        this.inputConfig = $.inputConfig;
+        this.languageCodesSet = $.languageCodesSet;
+        this.languagePair = $.languagePair;
+        this.location = $.location;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GlossaryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GlossaryInputConfigArgs> inputConfig;
-        private @Nullable Output<LanguageCodesSetArgs> languageCodesSet;
-        private @Nullable Output<LanguageCodePairArgs> languagePair;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private GlossaryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GlossaryArgs();
         }
 
         public Builder(GlossaryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.inputConfig = defaults.inputConfig;
-    	      this.languageCodesSet = defaults.languageCodesSet;
-    	      this.languagePair = defaults.languagePair;
-    	      this.location = defaults.location;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new GlossaryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder inputConfig(Output<GlossaryInputConfigArgs> inputConfig) {
-            this.inputConfig = Objects.requireNonNull(inputConfig);
+            $.inputConfig = inputConfig;
             return this;
         }
+
         public Builder inputConfig(GlossaryInputConfigArgs inputConfig) {
-            this.inputConfig = Output.of(Objects.requireNonNull(inputConfig));
-            return this;
+            return inputConfig(Output.of(inputConfig));
         }
+
         public Builder languageCodesSet(@Nullable Output<LanguageCodesSetArgs> languageCodesSet) {
-            this.languageCodesSet = languageCodesSet;
+            $.languageCodesSet = languageCodesSet;
             return this;
         }
-        public Builder languageCodesSet(@Nullable LanguageCodesSetArgs languageCodesSet) {
-            this.languageCodesSet = Codegen.ofNullable(languageCodesSet);
-            return this;
+
+        public Builder languageCodesSet(LanguageCodesSetArgs languageCodesSet) {
+            return languageCodesSet(Output.of(languageCodesSet));
         }
+
         public Builder languagePair(@Nullable Output<LanguageCodePairArgs> languagePair) {
-            this.languagePair = languagePair;
+            $.languagePair = languagePair;
             return this;
         }
-        public Builder languagePair(@Nullable LanguageCodePairArgs languagePair) {
-            this.languagePair = Codegen.ofNullable(languagePair);
-            return this;
+
+        public Builder languagePair(LanguageCodePairArgs languagePair) {
+            return languagePair(Output.of(languagePair));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public GlossaryArgs build() {
-            return new GlossaryArgs(inputConfig, languageCodesSet, languagePair, location, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public GlossaryArgs build() {
+            $.inputConfig = Objects.requireNonNull($.inputConfig, "expected parameter 'inputConfig' to be non-null");
+            return $;
         }
     }
+
 }

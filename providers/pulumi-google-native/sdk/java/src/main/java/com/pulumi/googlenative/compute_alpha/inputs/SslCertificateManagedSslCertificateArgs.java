@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class SslCertificateManagedSslCertificateArgs extends com.pulumi.re
      * 
      */
     @Import(name="domains")
-      private final @Nullable Output<List<String>> domains;
+    private @Nullable Output<List<String>> domains;
 
-    public Output<List<String>> domains() {
-        return this.domains == null ? Codegen.empty() : this.domains;
+    public Optional<Output<List<String>>> domains() {
+        return Optional.ofNullable(this.domains);
     }
 
-    public SslCertificateManagedSslCertificateArgs(@Nullable Output<List<String>> domains) {
-        this.domains = domains;
-    }
+    private SslCertificateManagedSslCertificateArgs() {}
 
-    private SslCertificateManagedSslCertificateArgs() {
-        this.domains = Codegen.empty();
+    private SslCertificateManagedSslCertificateArgs(SslCertificateManagedSslCertificateArgs $) {
+        this.domains = $.domains;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertificateManagedSslCertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> domains;
+        private SslCertificateManagedSslCertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertificateManagedSslCertificateArgs();
         }
 
         public Builder(SslCertificateManagedSslCertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.domains = defaults.domains;
+            $ = new SslCertificateManagedSslCertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder domains(@Nullable Output<List<String>> domains) {
-            this.domains = domains;
+            $.domains = domains;
             return this;
         }
-        public Builder domains(@Nullable List<String> domains) {
-            this.domains = Codegen.ofNullable(domains);
-            return this;
+
+        public Builder domains(List<String> domains) {
+            return domains(Output.of(domains));
         }
+
         public Builder domains(String... domains) {
             return domains(List.of(domains));
-        }        public SslCertificateManagedSslCertificateArgs build() {
-            return new SslCertificateManagedSslCertificateArgs(domains);
+        }
+
+        public SslCertificateManagedSslCertificateArgs build() {
+            return $;
         }
     }
+
 }

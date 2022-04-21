@@ -5,11 +5,11 @@ package com.pulumi.googlenative.privateca_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1beta1.inputs.CertificateConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,17 +18,17 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
     public static final CertificateArgs Empty = new CertificateArgs();
 
     @Import(name="certificateAuthorityId", required=true)
-      private final Output<String> certificateAuthorityId;
+    private Output<String> certificateAuthorityId;
 
     public Output<String> certificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
     @Import(name="certificateId")
-      private final @Nullable Output<String> certificateId;
+    private @Nullable Output<String> certificateId;
 
-    public Output<String> certificateId() {
-        return this.certificateId == null ? Codegen.empty() : this.certificateId;
+    public Optional<Output<String>> certificateId() {
+        return Optional.ofNullable(this.certificateId);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<CertificateConfigArgs> config;
+    private @Nullable Output<CertificateConfigArgs> config;
 
-    public Output<CertificateConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<CertificateConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -58,17 +58,17 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lifetime", required=true)
-      private final Output<String> lifetime;
+    private Output<String> lifetime;
 
     public Output<String> lifetime() {
         return this.lifetime;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -76,168 +76,144 @@ public final class CertificateArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pemCsr")
-      private final @Nullable Output<String> pemCsr;
+    private @Nullable Output<String> pemCsr;
 
-    public Output<String> pemCsr() {
-        return this.pemCsr == null ? Codegen.empty() : this.pemCsr;
+    public Optional<Output<String>> pemCsr() {
+        return Optional.ofNullable(this.pemCsr);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
-    public CertificateArgs(
-        Output<String> certificateAuthorityId,
-        @Nullable Output<String> certificateId,
-        @Nullable Output<CertificateConfigArgs> config,
-        @Nullable Output<Map<String,String>> labels,
-        Output<String> lifetime,
-        @Nullable Output<String> location,
-        @Nullable Output<String> pemCsr,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId) {
-        this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId, "expected parameter 'certificateAuthorityId' to be non-null");
-        this.certificateId = certificateId;
-        this.config = config;
-        this.labels = labels;
-        this.lifetime = Objects.requireNonNull(lifetime, "expected parameter 'lifetime' to be non-null");
-        this.location = location;
-        this.pemCsr = pemCsr;
-        this.project = project;
-        this.requestId = requestId;
-    }
+    private CertificateArgs() {}
 
-    private CertificateArgs() {
-        this.certificateAuthorityId = Codegen.empty();
-        this.certificateId = Codegen.empty();
-        this.config = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.lifetime = Codegen.empty();
-        this.location = Codegen.empty();
-        this.pemCsr = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
+    private CertificateArgs(CertificateArgs $) {
+        this.certificateAuthorityId = $.certificateAuthorityId;
+        this.certificateId = $.certificateId;
+        this.config = $.config;
+        this.labels = $.labels;
+        this.lifetime = $.lifetime;
+        this.location = $.location;
+        this.pemCsr = $.pemCsr;
+        this.project = $.project;
+        this.requestId = $.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> certificateAuthorityId;
-        private @Nullable Output<String> certificateId;
-        private @Nullable Output<CertificateConfigArgs> config;
-        private @Nullable Output<Map<String,String>> labels;
-        private Output<String> lifetime;
-        private @Nullable Output<String> location;
-        private @Nullable Output<String> pemCsr;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
+        private CertificateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateArgs();
         }
 
         public Builder(CertificateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificateAuthorityId = defaults.certificateAuthorityId;
-    	      this.certificateId = defaults.certificateId;
-    	      this.config = defaults.config;
-    	      this.labels = defaults.labels;
-    	      this.lifetime = defaults.lifetime;
-    	      this.location = defaults.location;
-    	      this.pemCsr = defaults.pemCsr;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
+            $ = new CertificateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder certificateAuthorityId(Output<String> certificateAuthorityId) {
-            this.certificateAuthorityId = Objects.requireNonNull(certificateAuthorityId);
+            $.certificateAuthorityId = certificateAuthorityId;
             return this;
         }
+
         public Builder certificateAuthorityId(String certificateAuthorityId) {
-            this.certificateAuthorityId = Output.of(Objects.requireNonNull(certificateAuthorityId));
-            return this;
+            return certificateAuthorityId(Output.of(certificateAuthorityId));
         }
+
         public Builder certificateId(@Nullable Output<String> certificateId) {
-            this.certificateId = certificateId;
+            $.certificateId = certificateId;
             return this;
         }
-        public Builder certificateId(@Nullable String certificateId) {
-            this.certificateId = Codegen.ofNullable(certificateId);
-            return this;
+
+        public Builder certificateId(String certificateId) {
+            return certificateId(Output.of(certificateId));
         }
+
         public Builder config(@Nullable Output<CertificateConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable CertificateConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(CertificateConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder lifetime(Output<String> lifetime) {
-            this.lifetime = Objects.requireNonNull(lifetime);
+            $.lifetime = lifetime;
             return this;
         }
+
         public Builder lifetime(String lifetime) {
-            this.lifetime = Output.of(Objects.requireNonNull(lifetime));
-            return this;
+            return lifetime(Output.of(lifetime));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder pemCsr(@Nullable Output<String> pemCsr) {
-            this.pemCsr = pemCsr;
+            $.pemCsr = pemCsr;
             return this;
         }
-        public Builder pemCsr(@Nullable String pemCsr) {
-            this.pemCsr = Codegen.ofNullable(pemCsr);
-            return this;
+
+        public Builder pemCsr(String pemCsr) {
+            return pemCsr(Output.of(pemCsr));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
-        }        public CertificateArgs build() {
-            return new CertificateArgs(certificateAuthorityId, certificateId, config, labels, lifetime, location, pemCsr, project, requestId);
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        public CertificateArgs build() {
+            $.certificateAuthorityId = Objects.requireNonNull($.certificateAuthorityId, "expected parameter 'certificateAuthorityId' to be non-null");
+            $.lifetime = Objects.requireNonNull($.lifetime, "expected parameter 'lifetime' to be non-null");
+            return $;
         }
     }
+
 }

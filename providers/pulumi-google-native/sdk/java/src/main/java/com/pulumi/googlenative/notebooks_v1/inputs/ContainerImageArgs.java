@@ -5,9 +5,9 @@ package com.pulumi.googlenative.notebooks_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,7 +24,7 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="repository", required=true)
-      private final Output<String> repository;
+    private Output<String> repository;
 
     public Output<String> repository() {
         return this.repository;
@@ -35,63 +35,59 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public ContainerImageArgs(
-        Output<String> repository,
-        @Nullable Output<String> tag) {
-        this.repository = Objects.requireNonNull(repository, "expected parameter 'repository' to be non-null");
-        this.tag = tag;
-    }
+    private ContainerImageArgs() {}
 
-    private ContainerImageArgs() {
-        this.repository = Codegen.empty();
-        this.tag = Codegen.empty();
+    private ContainerImageArgs(ContainerImageArgs $) {
+        this.repository = $.repository;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerImageArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> repository;
-        private @Nullable Output<String> tag;
+        private ContainerImageArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerImageArgs();
         }
 
         public Builder(ContainerImageArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.repository = defaults.repository;
-    	      this.tag = defaults.tag;
+            $ = new ContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder repository(Output<String> repository) {
-            this.repository = Objects.requireNonNull(repository);
+            $.repository = repository;
             return this;
         }
+
         public Builder repository(String repository) {
-            this.repository = Output.of(Objects.requireNonNull(repository));
-            return this;
+            return repository(Output.of(repository));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public ContainerImageArgs build() {
-            return new ContainerImageArgs(repository, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public ContainerImageArgs build() {
+            $.repository = Objects.requireNonNull($.repository, "expected parameter 'repository' to be non-null");
+            return $;
         }
     }
+
 }

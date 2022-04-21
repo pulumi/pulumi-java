@@ -15,110 +15,99 @@ public final class GetInstanceNamespaceIamPolicyArgs extends com.pulumi.resource
     public static final GetInstanceNamespaceIamPolicyArgs Empty = new GetInstanceNamespaceIamPolicyArgs();
 
     @Import(name="instanceId", required=true)
-      private final String instanceId;
+    private String instanceId;
 
     public String instanceId() {
         return this.instanceId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="namespaceId", required=true)
-      private final String namespaceId;
+    private String namespaceId;
 
     public String namespaceId() {
         return this.namespaceId;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetInstanceNamespaceIamPolicyArgs(
-        String instanceId,
-        String location,
-        String namespaceId,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.namespaceId = Objects.requireNonNull(namespaceId, "expected parameter 'namespaceId' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetInstanceNamespaceIamPolicyArgs() {}
 
-    private GetInstanceNamespaceIamPolicyArgs() {
-        this.instanceId = null;
-        this.location = null;
-        this.namespaceId = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetInstanceNamespaceIamPolicyArgs(GetInstanceNamespaceIamPolicyArgs $) {
+        this.instanceId = $.instanceId;
+        this.location = $.location;
+        this.namespaceId = $.namespaceId;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetInstanceNamespaceIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String instanceId;
-        private String location;
-        private String namespaceId;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetInstanceNamespaceIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetInstanceNamespaceIamPolicyArgs();
         }
 
         public Builder(GetInstanceNamespaceIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.instanceId = defaults.instanceId;
-    	      this.location = defaults.location;
-    	      this.namespaceId = defaults.namespaceId;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetInstanceNamespaceIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder instanceId(String instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder namespaceId(String namespaceId) {
-            this.namespaceId = Objects.requireNonNull(namespaceId);
+            $.namespaceId = namespaceId;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetInstanceNamespaceIamPolicyArgs build() {
-            return new GetInstanceNamespaceIamPolicyArgs(instanceId, location, namespaceId, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetInstanceNamespaceIamPolicyArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            $.namespaceId = Objects.requireNonNull($.namespaceId, "expected parameter 'namespaceId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class NodeGroupMaintenanceWindowArgs extends com.pulumi.resources.R
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public NodeGroupMaintenanceWindowArgs(@Nullable Output<String> startTime) {
-        this.startTime = startTime;
-    }
+    private NodeGroupMaintenanceWindowArgs() {}
 
-    private NodeGroupMaintenanceWindowArgs() {
-        this.startTime = Codegen.empty();
+    private NodeGroupMaintenanceWindowArgs(NodeGroupMaintenanceWindowArgs $) {
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeGroupMaintenanceWindowArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> startTime;
+        private NodeGroupMaintenanceWindowArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeGroupMaintenanceWindowArgs();
         }
 
         public Builder(NodeGroupMaintenanceWindowArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTime = defaults.startTime;
+            $ = new NodeGroupMaintenanceWindowArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public NodeGroupMaintenanceWindowArgs build() {
-            return new NodeGroupMaintenanceWindowArgs(startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public NodeGroupMaintenanceWindowArgs build() {
+            return $;
         }
     }
+
 }

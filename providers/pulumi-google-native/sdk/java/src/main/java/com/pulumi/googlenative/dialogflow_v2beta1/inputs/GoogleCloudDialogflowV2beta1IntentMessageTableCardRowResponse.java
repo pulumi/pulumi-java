@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
      * 
      */
     @Import(name="cells", required=true)
-      private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
+    private List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells() {
         return this.cells;
@@ -34,58 +34,56 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
      * 
      */
     @Import(name="dividerAfter", required=true)
-      private final Boolean dividerAfter;
+    private Boolean dividerAfter;
 
     public Boolean dividerAfter() {
         return this.dividerAfter;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells,
-        Boolean dividerAfter) {
-        this.cells = Objects.requireNonNull(cells, "expected parameter 'cells' to be non-null");
-        this.dividerAfter = Objects.requireNonNull(dividerAfter, "expected parameter 'dividerAfter' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse() {
-        this.cells = List.of();
-        this.dividerAfter = null;
+    private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse $) {
+        this.cells = $.cells;
+        this.dividerAfter = $.dividerAfter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
-        private Boolean dividerAfter;
+        private GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cells = defaults.cells;
-    	      this.dividerAfter = defaults.dividerAfter;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cells(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells) {
-            this.cells = Objects.requireNonNull(cells);
+            $.cells = cells;
             return this;
         }
+
         public Builder cells(GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse... cells) {
             return cells(List.of(cells));
         }
+
         public Builder dividerAfter(Boolean dividerAfter) {
-            this.dividerAfter = Objects.requireNonNull(dividerAfter);
+            $.dividerAfter = dividerAfter;
             return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse(cells, dividerAfter);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse build() {
+            $.cells = Objects.requireNonNull($.cells, "expected parameter 'cells' to be non-null");
+            $.dividerAfter = Objects.requireNonNull($.dividerAfter, "expected parameter 'dividerAfter' to be non-null");
+            return $;
         }
     }
+
 }

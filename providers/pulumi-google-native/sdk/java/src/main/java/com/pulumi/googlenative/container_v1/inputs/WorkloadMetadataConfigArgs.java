@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.container_v1.enums.WorkloadMetadataConfigMode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class WorkloadMetadataConfigArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<WorkloadMetadataConfigMode> mode;
+    private @Nullable Output<WorkloadMetadataConfigMode> mode;
 
-    public Output<WorkloadMetadataConfigMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<WorkloadMetadataConfigMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public WorkloadMetadataConfigArgs(@Nullable Output<WorkloadMetadataConfigMode> mode) {
-        this.mode = mode;
-    }
+    private WorkloadMetadataConfigArgs() {}
 
-    private WorkloadMetadataConfigArgs() {
-        this.mode = Codegen.empty();
+    private WorkloadMetadataConfigArgs(WorkloadMetadataConfigArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkloadMetadataConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<WorkloadMetadataConfigMode> mode;
+        private WorkloadMetadataConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkloadMetadataConfigArgs();
         }
 
         public Builder(WorkloadMetadataConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new WorkloadMetadataConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<WorkloadMetadataConfigMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable WorkloadMetadataConfigMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public WorkloadMetadataConfigArgs build() {
-            return new WorkloadMetadataConfigArgs(mode);
+
+        public Builder mode(WorkloadMetadataConfigMode mode) {
+            return mode(Output.of(mode));
+        }
+
+        public WorkloadMetadataConfigArgs build() {
+            return $;
         }
     }
+
 }

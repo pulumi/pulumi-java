@@ -5,11 +5,11 @@ package com.pulumi.googlenative.datacatalog_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datacatalog_v1.enums.GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType;
 import com.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
      * 
      */
     @Import(name="cloudSql")
-      private final @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
+    private @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
 
-    public Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql() {
-        return this.cloudSql == null ? Codegen.empty() : this.cloudSql;
+    public Optional<Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs>> cloudSql() {
+        return Optional.ofNullable(this.cloudSql);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
      * 
      */
     @Import(name="connectionType")
-      private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
+    private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
 
-    public Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType() {
-        return this.connectionType == null ? Codegen.empty() : this.connectionType;
+    public Optional<Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType>> connectionType() {
+        return Optional.ofNullable(this.connectionType);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs extends co
      * 
      */
     @Import(name="hasCredential")
-      private final @Nullable Output<Boolean> hasCredential;
+    private @Nullable Output<Boolean> hasCredential;
 
-    public Output<Boolean> hasCredential() {
-        return this.hasCredential == null ? Codegen.empty() : this.hasCredential;
+    public Optional<Output<Boolean>> hasCredential() {
+        return Optional.ofNullable(this.hasCredential);
     }
 
-    public GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(
-        @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql,
-        @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType,
-        @Nullable Output<Boolean> hasCredential) {
-        this.cloudSql = cloudSql;
-        this.connectionType = connectionType;
-        this.hasCredential = hasCredential;
-    }
+    private GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs() {}
 
-    private GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs() {
-        this.cloudSql = Codegen.empty();
-        this.connectionType = Codegen.empty();
-        this.hasCredential = Codegen.empty();
+    private GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs $) {
+        this.cloudSql = $.cloudSql;
+        this.connectionType = $.connectionType;
+        this.hasCredential = $.hasCredential;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql;
-        private @Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType;
-        private @Nullable Output<Boolean> hasCredential;
+        private GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs();
         }
 
         public Builder(GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSql = defaults.cloudSql;
-    	      this.connectionType = defaults.connectionType;
-    	      this.hasCredential = defaults.hasCredential;
+            $ = new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSql(@Nullable Output<GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs> cloudSql) {
-            this.cloudSql = cloudSql;
+            $.cloudSql = cloudSql;
             return this;
         }
-        public Builder cloudSql(@Nullable GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs cloudSql) {
-            this.cloudSql = Codegen.ofNullable(cloudSql);
-            return this;
+
+        public Builder cloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecArgs cloudSql) {
+            return cloudSql(Output.of(cloudSql));
         }
+
         public Builder connectionType(@Nullable Output<GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType> connectionType) {
-            this.connectionType = connectionType;
+            $.connectionType = connectionType;
             return this;
         }
-        public Builder connectionType(@Nullable GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType connectionType) {
-            this.connectionType = Codegen.ofNullable(connectionType);
-            return this;
+
+        public Builder connectionType(GoogleCloudDatacatalogV1BigQueryConnectionSpecConnectionType connectionType) {
+            return connectionType(Output.of(connectionType));
         }
+
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
-            this.hasCredential = hasCredential;
+            $.hasCredential = hasCredential;
             return this;
         }
-        public Builder hasCredential(@Nullable Boolean hasCredential) {
-            this.hasCredential = Codegen.ofNullable(hasCredential);
-            return this;
-        }        public GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs build() {
-            return new GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs(cloudSql, connectionType, hasCredential);
+
+        public Builder hasCredential(Boolean hasCredential) {
+            return hasCredential(Output.of(hasCredential));
+        }
+
+        public GoogleCloudDatacatalogV1BigQueryConnectionSpecArgs build() {
+            return $;
         }
     }
+
 }

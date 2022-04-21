@@ -15,78 +15,72 @@ public final class GetBackupArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetBackupArgs Empty = new GetBackupArgs();
 
     @Import(name="backupId", required=true)
-      private final String backupId;
+    private String backupId;
 
     public String backupId() {
         return this.backupId;
     }
 
     @Import(name="domainId", required=true)
-      private final String domainId;
+    private String domainId;
 
     public String domainId() {
         return this.domainId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetBackupArgs(
-        String backupId,
-        String domainId,
-        @Nullable String project) {
-        this.backupId = Objects.requireNonNull(backupId, "expected parameter 'backupId' to be non-null");
-        this.domainId = Objects.requireNonNull(domainId, "expected parameter 'domainId' to be non-null");
-        this.project = project;
-    }
+    private GetBackupArgs() {}
 
-    private GetBackupArgs() {
-        this.backupId = null;
-        this.domainId = null;
-        this.project = null;
+    private GetBackupArgs(GetBackupArgs $) {
+        this.backupId = $.backupId;
+        this.domainId = $.domainId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBackupArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String backupId;
-        private String domainId;
-        private @Nullable String project;
+        private GetBackupArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBackupArgs();
         }
 
         public Builder(GetBackupArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupId = defaults.backupId;
-    	      this.domainId = defaults.domainId;
-    	      this.project = defaults.project;
+            $ = new GetBackupArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder backupId(String backupId) {
-            this.backupId = Objects.requireNonNull(backupId);
+            $.backupId = backupId;
             return this;
         }
+
         public Builder domainId(String domainId) {
-            this.domainId = Objects.requireNonNull(domainId);
+            $.domainId = domainId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetBackupArgs build() {
-            return new GetBackupArgs(backupId, domainId, project);
+        }
+
+        public GetBackupArgs build() {
+            $.backupId = Objects.requireNonNull($.backupId, "expected parameter 'backupId' to be non-null");
+            $.domainId = Objects.requireNonNull($.domainId, "expected parameter 'domainId' to be non-null");
+            return $;
         }
     }
+
 }

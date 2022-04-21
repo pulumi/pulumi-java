@@ -22,7 +22,7 @@ public final class RestoreInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="backupInfo", required=true)
-      private final BackupInfoResponse backupInfo;
+    private BackupInfoResponse backupInfo;
 
     public BackupInfoResponse backupInfo() {
         return this.backupInfo;
@@ -33,55 +33,52 @@ public final class RestoreInfoResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sourceType", required=true)
-      private final String sourceType;
+    private String sourceType;
 
     public String sourceType() {
         return this.sourceType;
     }
 
-    public RestoreInfoResponse(
-        BackupInfoResponse backupInfo,
-        String sourceType) {
-        this.backupInfo = Objects.requireNonNull(backupInfo, "expected parameter 'backupInfo' to be non-null");
-        this.sourceType = Objects.requireNonNull(sourceType, "expected parameter 'sourceType' to be non-null");
-    }
+    private RestoreInfoResponse() {}
 
-    private RestoreInfoResponse() {
-        this.backupInfo = null;
-        this.sourceType = null;
+    private RestoreInfoResponse(RestoreInfoResponse $) {
+        this.backupInfo = $.backupInfo;
+        this.sourceType = $.sourceType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RestoreInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private BackupInfoResponse backupInfo;
-        private String sourceType;
+        private RestoreInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RestoreInfoResponse();
         }
 
         public Builder(RestoreInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.backupInfo = defaults.backupInfo;
-    	      this.sourceType = defaults.sourceType;
+            $ = new RestoreInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder backupInfo(BackupInfoResponse backupInfo) {
-            this.backupInfo = Objects.requireNonNull(backupInfo);
+            $.backupInfo = backupInfo;
             return this;
         }
+
         public Builder sourceType(String sourceType) {
-            this.sourceType = Objects.requireNonNull(sourceType);
+            $.sourceType = sourceType;
             return this;
-        }        public RestoreInfoResponse build() {
-            return new RestoreInfoResponse(backupInfo, sourceType);
+        }
+
+        public RestoreInfoResponse build() {
+            $.backupInfo = Objects.requireNonNull($.backupInfo, "expected parameter 'backupInfo' to be non-null");
+            $.sourceType = Objects.requireNonNull($.sourceType, "expected parameter 'sourceType' to be non-null");
+            return $;
         }
     }
+
 }

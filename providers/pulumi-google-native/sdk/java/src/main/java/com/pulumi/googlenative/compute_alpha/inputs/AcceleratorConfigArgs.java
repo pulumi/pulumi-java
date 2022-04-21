@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorCount")
-      private final @Nullable Output<Integer> acceleratorCount;
+    private @Nullable Output<Integer> acceleratorCount;
 
-    public Output<Integer> acceleratorCount() {
-        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
+    public Optional<Output<Integer>> acceleratorCount() {
+        return Optional.ofNullable(this.acceleratorCount);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class AcceleratorConfigArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="acceleratorType")
-      private final @Nullable Output<String> acceleratorType;
+    private @Nullable Output<String> acceleratorType;
 
-    public Output<String> acceleratorType() {
-        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
+    public Optional<Output<String>> acceleratorType() {
+        return Optional.ofNullable(this.acceleratorType);
     }
 
-    public AcceleratorConfigArgs(
-        @Nullable Output<Integer> acceleratorCount,
-        @Nullable Output<String> acceleratorType) {
-        this.acceleratorCount = acceleratorCount;
-        this.acceleratorType = acceleratorType;
-    }
+    private AcceleratorConfigArgs() {}
 
-    private AcceleratorConfigArgs() {
-        this.acceleratorCount = Codegen.empty();
-        this.acceleratorType = Codegen.empty();
+    private AcceleratorConfigArgs(AcceleratorConfigArgs $) {
+        this.acceleratorCount = $.acceleratorCount;
+        this.acceleratorType = $.acceleratorType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AcceleratorConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> acceleratorCount;
-        private @Nullable Output<String> acceleratorType;
+        private AcceleratorConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AcceleratorConfigArgs();
         }
 
         public Builder(AcceleratorConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.acceleratorCount = defaults.acceleratorCount;
-    	      this.acceleratorType = defaults.acceleratorType;
+            $ = new AcceleratorConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder acceleratorCount(@Nullable Output<Integer> acceleratorCount) {
-            this.acceleratorCount = acceleratorCount;
+            $.acceleratorCount = acceleratorCount;
             return this;
         }
-        public Builder acceleratorCount(@Nullable Integer acceleratorCount) {
-            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
-            return this;
+
+        public Builder acceleratorCount(Integer acceleratorCount) {
+            return acceleratorCount(Output.of(acceleratorCount));
         }
+
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
-            this.acceleratorType = acceleratorType;
+            $.acceleratorType = acceleratorType;
             return this;
         }
-        public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Codegen.ofNullable(acceleratorType);
-            return this;
-        }        public AcceleratorConfigArgs build() {
-            return new AcceleratorConfigArgs(acceleratorCount, acceleratorType);
+
+        public Builder acceleratorType(String acceleratorType) {
+            return acceleratorType(Output.of(acceleratorType));
+        }
+
+        public AcceleratorConfigArgs build() {
+            return $;
         }
     }
+
 }

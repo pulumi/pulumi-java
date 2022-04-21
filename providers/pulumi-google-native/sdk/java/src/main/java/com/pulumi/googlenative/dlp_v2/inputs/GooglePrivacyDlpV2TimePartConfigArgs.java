@@ -5,9 +5,9 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2TimePartConfigPartToExtract;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends com.pulumi.resou
      * 
      */
     @Import(name="partToExtract")
-      private final @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
+    private @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
-    public Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract() {
-        return this.partToExtract == null ? Codegen.empty() : this.partToExtract;
+    public Optional<Output<GooglePrivacyDlpV2TimePartConfigPartToExtract>> partToExtract() {
+        return Optional.ofNullable(this.partToExtract);
     }
 
-    public GooglePrivacyDlpV2TimePartConfigArgs(@Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
-        this.partToExtract = partToExtract;
-    }
+    private GooglePrivacyDlpV2TimePartConfigArgs() {}
 
-    private GooglePrivacyDlpV2TimePartConfigArgs() {
-        this.partToExtract = Codegen.empty();
+    private GooglePrivacyDlpV2TimePartConfigArgs(GooglePrivacyDlpV2TimePartConfigArgs $) {
+        this.partToExtract = $.partToExtract;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2TimePartConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
+        private GooglePrivacyDlpV2TimePartConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2TimePartConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2TimePartConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.partToExtract = defaults.partToExtract;
+            $ = new GooglePrivacyDlpV2TimePartConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder partToExtract(@Nullable Output<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
-            this.partToExtract = partToExtract;
+            $.partToExtract = partToExtract;
             return this;
         }
-        public Builder partToExtract(@Nullable GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
-            this.partToExtract = Codegen.ofNullable(partToExtract);
-            return this;
-        }        public GooglePrivacyDlpV2TimePartConfigArgs build() {
-            return new GooglePrivacyDlpV2TimePartConfigArgs(partToExtract);
+
+        public Builder partToExtract(GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
+            return partToExtract(Output.of(partToExtract));
+        }
+
+        public GooglePrivacyDlpV2TimePartConfigArgs build() {
+            return $;
         }
     }
+
 }

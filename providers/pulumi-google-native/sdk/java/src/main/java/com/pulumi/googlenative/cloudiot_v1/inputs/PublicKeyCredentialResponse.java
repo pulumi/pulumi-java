@@ -21,7 +21,7 @@ public final class PublicKeyCredentialResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="format", required=true)
-      private final String format;
+    private String format;
 
     public String format() {
         return this.format;
@@ -32,55 +32,52 @@ public final class PublicKeyCredentialResponse extends com.pulumi.resources.Invo
      * 
      */
     @Import(name="key", required=true)
-      private final String key;
+    private String key;
 
     public String key() {
         return this.key;
     }
 
-    public PublicKeyCredentialResponse(
-        String format,
-        String key) {
-        this.format = Objects.requireNonNull(format, "expected parameter 'format' to be non-null");
-        this.key = Objects.requireNonNull(key, "expected parameter 'key' to be non-null");
-    }
+    private PublicKeyCredentialResponse() {}
 
-    private PublicKeyCredentialResponse() {
-        this.format = null;
-        this.key = null;
+    private PublicKeyCredentialResponse(PublicKeyCredentialResponse $) {
+        this.format = $.format;
+        this.key = $.key;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PublicKeyCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String format;
-        private String key;
+        private PublicKeyCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PublicKeyCredentialResponse();
         }
 
         public Builder(PublicKeyCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.format = defaults.format;
-    	      this.key = defaults.key;
+            $ = new PublicKeyCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder format(String format) {
-            this.format = Objects.requireNonNull(format);
+            $.format = format;
             return this;
         }
+
         public Builder key(String key) {
-            this.key = Objects.requireNonNull(key);
+            $.key = key;
             return this;
-        }        public PublicKeyCredentialResponse build() {
-            return new PublicKeyCredentialResponse(format, key);
+        }
+
+        public PublicKeyCredentialResponse build() {
+            $.format = Objects.requireNonNull($.format, "expected parameter 'format' to be non-null");
+            $.key = Objects.requireNonNull($.key, "expected parameter 'key' to be non-null");
+            return $;
         }
     }
+
 }

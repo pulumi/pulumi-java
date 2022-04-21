@@ -5,11 +5,11 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.enums.CompositeFilterLogicOperator;
 import com.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class CompositeFilterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="logicOperator")
-      private final @Nullable Output<CompositeFilterLogicOperator> logicOperator;
+    private @Nullable Output<CompositeFilterLogicOperator> logicOperator;
 
-    public Output<CompositeFilterLogicOperator> logicOperator() {
-        return this.logicOperator == null ? Codegen.empty() : this.logicOperator;
+    public Optional<Output<CompositeFilterLogicOperator>> logicOperator() {
+        return Optional.ofNullable(this.logicOperator);
     }
 
     /**
@@ -33,66 +33,62 @@ public final class CompositeFilterArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="subFilters")
-      private final @Nullable Output<List<FilterArgs>> subFilters;
+    private @Nullable Output<List<FilterArgs>> subFilters;
 
-    public Output<List<FilterArgs>> subFilters() {
-        return this.subFilters == null ? Codegen.empty() : this.subFilters;
+    public Optional<Output<List<FilterArgs>>> subFilters() {
+        return Optional.ofNullable(this.subFilters);
     }
 
-    public CompositeFilterArgs(
-        @Nullable Output<CompositeFilterLogicOperator> logicOperator,
-        @Nullable Output<List<FilterArgs>> subFilters) {
-        this.logicOperator = logicOperator;
-        this.subFilters = subFilters;
-    }
+    private CompositeFilterArgs() {}
 
-    private CompositeFilterArgs() {
-        this.logicOperator = Codegen.empty();
-        this.subFilters = Codegen.empty();
+    private CompositeFilterArgs(CompositeFilterArgs $) {
+        this.logicOperator = $.logicOperator;
+        this.subFilters = $.subFilters;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CompositeFilterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CompositeFilterLogicOperator> logicOperator;
-        private @Nullable Output<List<FilterArgs>> subFilters;
+        private CompositeFilterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CompositeFilterArgs();
         }
 
         public Builder(CompositeFilterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.logicOperator = defaults.logicOperator;
-    	      this.subFilters = defaults.subFilters;
+            $ = new CompositeFilterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder logicOperator(@Nullable Output<CompositeFilterLogicOperator> logicOperator) {
-            this.logicOperator = logicOperator;
+            $.logicOperator = logicOperator;
             return this;
         }
-        public Builder logicOperator(@Nullable CompositeFilterLogicOperator logicOperator) {
-            this.logicOperator = Codegen.ofNullable(logicOperator);
-            return this;
+
+        public Builder logicOperator(CompositeFilterLogicOperator logicOperator) {
+            return logicOperator(Output.of(logicOperator));
         }
+
         public Builder subFilters(@Nullable Output<List<FilterArgs>> subFilters) {
-            this.subFilters = subFilters;
+            $.subFilters = subFilters;
             return this;
         }
-        public Builder subFilters(@Nullable List<FilterArgs> subFilters) {
-            this.subFilters = Codegen.ofNullable(subFilters);
-            return this;
+
+        public Builder subFilters(List<FilterArgs> subFilters) {
+            return subFilters(Output.of(subFilters));
         }
+
         public Builder subFilters(FilterArgs... subFilters) {
             return subFilters(List.of(subFilters));
-        }        public CompositeFilterArgs build() {
-            return new CompositeFilterArgs(logicOperator, subFilters);
+        }
+
+        public CompositeFilterArgs build() {
+            return $;
         }
     }
+
 }

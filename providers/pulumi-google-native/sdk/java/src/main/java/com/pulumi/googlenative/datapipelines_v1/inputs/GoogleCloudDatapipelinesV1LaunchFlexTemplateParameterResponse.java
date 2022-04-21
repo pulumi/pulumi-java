@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="containerSpecGcsPath", required=true)
-      private final String containerSpecGcsPath;
+    private String containerSpecGcsPath;
 
     public String containerSpecGcsPath() {
         return this.containerSpecGcsPath;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="environment", required=true)
-      private final GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
+    private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
 
     public GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment() {
         return this.environment;
@@ -46,7 +46,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="jobName", required=true)
-      private final String jobName;
+    private String jobName;
 
     public String jobName() {
         return this.jobName;
@@ -57,7 +57,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="launchOptions", required=true)
-      private final Map<String,String> launchOptions;
+    private Map<String,String> launchOptions;
 
     public Map<String,String> launchOptions() {
         return this.launchOptions;
@@ -68,7 +68,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="parameters", required=true)
-      private final Map<String,String> parameters;
+    private Map<String,String> parameters;
 
     public Map<String,String> parameters() {
         return this.parameters;
@@ -79,7 +79,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="transformNameMappings", required=true)
-      private final Map<String,String> transformNameMappings;
+    private Map<String,String> transformNameMappings;
 
     public Map<String,String> transformNameMappings() {
         return this.transformNameMappings;
@@ -90,100 +90,87 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      * 
      */
     @Import(name="update", required=true)
-      private final Boolean update;
+    private Boolean update;
 
     public Boolean update() {
         return this.update;
     }
 
-    public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(
-        String containerSpecGcsPath,
-        GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
-        String jobName,
-        Map<String,String> launchOptions,
-        Map<String,String> parameters,
-        Map<String,String> transformNameMappings,
-        Boolean update) {
-        this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath, "expected parameter 'containerSpecGcsPath' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.jobName = Objects.requireNonNull(jobName, "expected parameter 'jobName' to be non-null");
-        this.launchOptions = Objects.requireNonNull(launchOptions, "expected parameter 'launchOptions' to be non-null");
-        this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
-        this.transformNameMappings = Objects.requireNonNull(transformNameMappings, "expected parameter 'transformNameMappings' to be non-null");
-        this.update = Objects.requireNonNull(update, "expected parameter 'update' to be non-null");
-    }
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse() {}
 
-    private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse() {
-        this.containerSpecGcsPath = null;
-        this.environment = null;
-        this.jobName = null;
-        this.launchOptions = Map.of();
-        this.parameters = Map.of();
-        this.transformNameMappings = Map.of();
-        this.update = null;
+    private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse $) {
+        this.containerSpecGcsPath = $.containerSpecGcsPath;
+        this.environment = $.environment;
+        this.jobName = $.jobName;
+        this.launchOptions = $.launchOptions;
+        this.parameters = $.parameters;
+        this.transformNameMappings = $.transformNameMappings;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerSpecGcsPath;
-        private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment;
-        private String jobName;
-        private Map<String,String> launchOptions;
-        private Map<String,String> parameters;
-        private Map<String,String> transformNameMappings;
-        private Boolean update;
+        private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse();
         }
 
         public Builder(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerSpecGcsPath = defaults.containerSpecGcsPath;
-    	      this.environment = defaults.environment;
-    	      this.jobName = defaults.jobName;
-    	      this.launchOptions = defaults.launchOptions;
-    	      this.parameters = defaults.parameters;
-    	      this.transformNameMappings = defaults.transformNameMappings;
-    	      this.update = defaults.update;
+            $ = new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerSpecGcsPath(String containerSpecGcsPath) {
-            this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
+            $.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
+
         public Builder environment(GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder jobName(String jobName) {
-            this.jobName = Objects.requireNonNull(jobName);
+            $.jobName = jobName;
             return this;
         }
+
         public Builder launchOptions(Map<String,String> launchOptions) {
-            this.launchOptions = Objects.requireNonNull(launchOptions);
+            $.launchOptions = launchOptions;
             return this;
         }
+
         public Builder parameters(Map<String,String> parameters) {
-            this.parameters = Objects.requireNonNull(parameters);
+            $.parameters = parameters;
             return this;
         }
+
         public Builder transformNameMappings(Map<String,String> transformNameMappings) {
-            this.transformNameMappings = Objects.requireNonNull(transformNameMappings);
+            $.transformNameMappings = transformNameMappings;
             return this;
         }
+
         public Builder update(Boolean update) {
-            this.update = Objects.requireNonNull(update);
+            $.update = update;
             return this;
-        }        public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse build() {
-            return new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(containerSpecGcsPath, environment, jobName, launchOptions, parameters, transformNameMappings, update);
+        }
+
+        public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse build() {
+            $.containerSpecGcsPath = Objects.requireNonNull($.containerSpecGcsPath, "expected parameter 'containerSpecGcsPath' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.jobName = Objects.requireNonNull($.jobName, "expected parameter 'jobName' to be non-null");
+            $.launchOptions = Objects.requireNonNull($.launchOptions, "expected parameter 'launchOptions' to be non-null");
+            $.parameters = Objects.requireNonNull($.parameters, "expected parameter 'parameters' to be non-null");
+            $.transformNameMappings = Objects.requireNonNull($.transformNameMappings, "expected parameter 'transformNameMappings' to be non-null");
+            $.update = Objects.requireNonNull($.update, "expected parameter 'update' to be non-null");
+            return $;
         }
     }
+
 }

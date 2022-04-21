@@ -23,7 +23,7 @@ public final class TraceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endpointInfo", required=true)
-      private final EndpointInfoResponse endpointInfo;
+    private EndpointInfoResponse endpointInfo;
 
     public EndpointInfoResponse endpointInfo() {
         return this.endpointInfo;
@@ -34,58 +34,56 @@ public final class TraceResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="steps", required=true)
-      private final List<StepResponse> steps;
+    private List<StepResponse> steps;
 
     public List<StepResponse> steps() {
         return this.steps;
     }
 
-    public TraceResponse(
-        EndpointInfoResponse endpointInfo,
-        List<StepResponse> steps) {
-        this.endpointInfo = Objects.requireNonNull(endpointInfo, "expected parameter 'endpointInfo' to be non-null");
-        this.steps = Objects.requireNonNull(steps, "expected parameter 'steps' to be non-null");
-    }
+    private TraceResponse() {}
 
-    private TraceResponse() {
-        this.endpointInfo = null;
-        this.steps = List.of();
+    private TraceResponse(TraceResponse $) {
+        this.endpointInfo = $.endpointInfo;
+        this.steps = $.steps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TraceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private EndpointInfoResponse endpointInfo;
-        private List<StepResponse> steps;
+        private TraceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TraceResponse();
         }
 
         public Builder(TraceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.endpointInfo = defaults.endpointInfo;
-    	      this.steps = defaults.steps;
+            $ = new TraceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
-            this.endpointInfo = Objects.requireNonNull(endpointInfo);
+            $.endpointInfo = endpointInfo;
             return this;
         }
+
         public Builder steps(List<StepResponse> steps) {
-            this.steps = Objects.requireNonNull(steps);
+            $.steps = steps;
             return this;
         }
+
         public Builder steps(StepResponse... steps) {
             return steps(List.of(steps));
-        }        public TraceResponse build() {
-            return new TraceResponse(endpointInfo, steps);
+        }
+
+        public TraceResponse build() {
+            $.endpointInfo = Objects.requireNonNull($.endpointInfo, "expected parameter 'endpointInfo' to be non-null");
+            $.steps = Objects.requireNonNull($.steps, "expected parameter 'steps' to be non-null");
+            return $;
         }
     }
+
 }

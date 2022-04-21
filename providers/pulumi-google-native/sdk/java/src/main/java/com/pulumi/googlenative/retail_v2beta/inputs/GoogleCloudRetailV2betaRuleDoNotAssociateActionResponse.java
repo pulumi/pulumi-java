@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
      * 
      */
     @Import(name="doNotAssociateTerms", required=true)
-      private final List<String> doNotAssociateTerms;
+    private List<String> doNotAssociateTerms;
 
     public List<String> doNotAssociateTerms() {
         return this.doNotAssociateTerms;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
      * 
      */
     @Import(name="queryTerms", required=true)
-      private final List<String> queryTerms;
+    private List<String> queryTerms;
 
     public List<String> queryTerms() {
         return this.queryTerms;
@@ -44,73 +44,71 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse exten
      * 
      */
     @Import(name="terms", required=true)
-      private final List<String> terms;
+    private List<String> terms;
 
     public List<String> terms() {
         return this.terms;
     }
 
-    public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(
-        List<String> doNotAssociateTerms,
-        List<String> queryTerms,
-        List<String> terms) {
-        this.doNotAssociateTerms = Objects.requireNonNull(doNotAssociateTerms, "expected parameter 'doNotAssociateTerms' to be non-null");
-        this.queryTerms = Objects.requireNonNull(queryTerms, "expected parameter 'queryTerms' to be non-null");
-        this.terms = Objects.requireNonNull(terms, "expected parameter 'terms' to be non-null");
-    }
+    private GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse() {}
 
-    private GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse() {
-        this.doNotAssociateTerms = List.of();
-        this.queryTerms = List.of();
-        this.terms = List.of();
+    private GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse $) {
+        this.doNotAssociateTerms = $.doNotAssociateTerms;
+        this.queryTerms = $.queryTerms;
+        this.terms = $.terms;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> doNotAssociateTerms;
-        private List<String> queryTerms;
-        private List<String> terms;
+        private GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse();
         }
 
         public Builder(GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.doNotAssociateTerms = defaults.doNotAssociateTerms;
-    	      this.queryTerms = defaults.queryTerms;
-    	      this.terms = defaults.terms;
+            $ = new GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder doNotAssociateTerms(List<String> doNotAssociateTerms) {
-            this.doNotAssociateTerms = Objects.requireNonNull(doNotAssociateTerms);
+            $.doNotAssociateTerms = doNotAssociateTerms;
             return this;
         }
+
         public Builder doNotAssociateTerms(String... doNotAssociateTerms) {
             return doNotAssociateTerms(List.of(doNotAssociateTerms));
         }
+
         public Builder queryTerms(List<String> queryTerms) {
-            this.queryTerms = Objects.requireNonNull(queryTerms);
+            $.queryTerms = queryTerms;
             return this;
         }
+
         public Builder queryTerms(String... queryTerms) {
             return queryTerms(List.of(queryTerms));
         }
+
         public Builder terms(List<String> terms) {
-            this.terms = Objects.requireNonNull(terms);
+            $.terms = terms;
             return this;
         }
+
         public Builder terms(String... terms) {
             return terms(List.of(terms));
-        }        public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse build() {
-            return new GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(doNotAssociateTerms, queryTerms, terms);
+        }
+
+        public GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse build() {
+            $.doNotAssociateTerms = Objects.requireNonNull($.doNotAssociateTerms, "expected parameter 'doNotAssociateTerms' to be non-null");
+            $.queryTerms = Objects.requireNonNull($.queryTerms, "expected parameter 'queryTerms' to be non-null");
+            $.terms = Objects.requireNonNull($.terms, "expected parameter 'terms' to be non-null");
+            return $;
         }
     }
+
 }

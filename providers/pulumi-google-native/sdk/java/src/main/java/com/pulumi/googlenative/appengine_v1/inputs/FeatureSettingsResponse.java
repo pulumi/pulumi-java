@@ -21,7 +21,7 @@ public final class FeatureSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="splitHealthChecks", required=true)
-      private final Boolean splitHealthChecks;
+    private Boolean splitHealthChecks;
 
     public Boolean splitHealthChecks() {
         return this.splitHealthChecks;
@@ -32,55 +32,52 @@ public final class FeatureSettingsResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="useContainerOptimizedOs", required=true)
-      private final Boolean useContainerOptimizedOs;
+    private Boolean useContainerOptimizedOs;
 
     public Boolean useContainerOptimizedOs() {
         return this.useContainerOptimizedOs;
     }
 
-    public FeatureSettingsResponse(
-        Boolean splitHealthChecks,
-        Boolean useContainerOptimizedOs) {
-        this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks, "expected parameter 'splitHealthChecks' to be non-null");
-        this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs, "expected parameter 'useContainerOptimizedOs' to be non-null");
-    }
+    private FeatureSettingsResponse() {}
 
-    private FeatureSettingsResponse() {
-        this.splitHealthChecks = null;
-        this.useContainerOptimizedOs = null;
+    private FeatureSettingsResponse(FeatureSettingsResponse $) {
+        this.splitHealthChecks = $.splitHealthChecks;
+        this.useContainerOptimizedOs = $.useContainerOptimizedOs;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureSettingsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean splitHealthChecks;
-        private Boolean useContainerOptimizedOs;
+        private FeatureSettingsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureSettingsResponse();
         }
 
         public Builder(FeatureSettingsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.splitHealthChecks = defaults.splitHealthChecks;
-    	      this.useContainerOptimizedOs = defaults.useContainerOptimizedOs;
+            $ = new FeatureSettingsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder splitHealthChecks(Boolean splitHealthChecks) {
-            this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
+            $.splitHealthChecks = splitHealthChecks;
             return this;
         }
+
         public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
-            this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
+            $.useContainerOptimizedOs = useContainerOptimizedOs;
             return this;
-        }        public FeatureSettingsResponse build() {
-            return new FeatureSettingsResponse(splitHealthChecks, useContainerOptimizedOs);
+        }
+
+        public FeatureSettingsResponse build() {
+            $.splitHealthChecks = Objects.requireNonNull($.splitHealthChecks, "expected parameter 'splitHealthChecks' to be non-null");
+            $.useContainerOptimizedOs = Objects.requireNonNull($.useContainerOptimizedOs, "expected parameter 'useContainerOptimizedOs' to be non-null");
+            return $;
         }
     }
+
 }

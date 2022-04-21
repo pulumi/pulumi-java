@@ -21,45 +21,45 @@ public final class ConnectionDrainingResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="drainingTimeoutSec", required=true)
-      private final Integer drainingTimeoutSec;
+    private Integer drainingTimeoutSec;
 
     public Integer drainingTimeoutSec() {
         return this.drainingTimeoutSec;
     }
 
-    public ConnectionDrainingResponse(Integer drainingTimeoutSec) {
-        this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec, "expected parameter 'drainingTimeoutSec' to be non-null");
-    }
+    private ConnectionDrainingResponse() {}
 
-    private ConnectionDrainingResponse() {
-        this.drainingTimeoutSec = null;
+    private ConnectionDrainingResponse(ConnectionDrainingResponse $) {
+        this.drainingTimeoutSec = $.drainingTimeoutSec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectionDrainingResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer drainingTimeoutSec;
+        private ConnectionDrainingResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectionDrainingResponse();
         }
 
         public Builder(ConnectionDrainingResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.drainingTimeoutSec = defaults.drainingTimeoutSec;
+            $ = new ConnectionDrainingResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder drainingTimeoutSec(Integer drainingTimeoutSec) {
-            this.drainingTimeoutSec = Objects.requireNonNull(drainingTimeoutSec);
+            $.drainingTimeoutSec = drainingTimeoutSec;
             return this;
-        }        public ConnectionDrainingResponse build() {
-            return new ConnectionDrainingResponse(drainingTimeoutSec);
+        }
+
+        public ConnectionDrainingResponse build() {
+            $.drainingTimeoutSec = Objects.requireNonNull($.drainingTimeoutSec, "expected parameter 'drainingTimeoutSec' to be non-null");
+            return $;
         }
     }
+
 }

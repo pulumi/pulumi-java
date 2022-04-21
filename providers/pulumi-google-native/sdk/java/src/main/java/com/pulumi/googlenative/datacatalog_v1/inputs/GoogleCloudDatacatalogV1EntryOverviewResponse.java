@@ -21,45 +21,45 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends com.pul
      * 
      */
     @Import(name="overview", required=true)
-      private final String overview;
+    private String overview;
 
     public String overview() {
         return this.overview;
     }
 
-    public GoogleCloudDatacatalogV1EntryOverviewResponse(String overview) {
-        this.overview = Objects.requireNonNull(overview, "expected parameter 'overview' to be non-null");
-    }
+    private GoogleCloudDatacatalogV1EntryOverviewResponse() {}
 
-    private GoogleCloudDatacatalogV1EntryOverviewResponse() {
-        this.overview = null;
+    private GoogleCloudDatacatalogV1EntryOverviewResponse(GoogleCloudDatacatalogV1EntryOverviewResponse $) {
+        this.overview = $.overview;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDatacatalogV1EntryOverviewResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String overview;
+        private GoogleCloudDatacatalogV1EntryOverviewResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDatacatalogV1EntryOverviewResponse();
         }
 
         public Builder(GoogleCloudDatacatalogV1EntryOverviewResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.overview = defaults.overview;
+            $ = new GoogleCloudDatacatalogV1EntryOverviewResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder overview(String overview) {
-            this.overview = Objects.requireNonNull(overview);
+            $.overview = overview;
             return this;
-        }        public GoogleCloudDatacatalogV1EntryOverviewResponse build() {
-            return new GoogleCloudDatacatalogV1EntryOverviewResponse(overview);
+        }
+
+        public GoogleCloudDatacatalogV1EntryOverviewResponse build() {
+            $.overview = Objects.requireNonNull($.overview, "expected parameter 'overview' to be non-null");
+            return $;
         }
     }
+
 }

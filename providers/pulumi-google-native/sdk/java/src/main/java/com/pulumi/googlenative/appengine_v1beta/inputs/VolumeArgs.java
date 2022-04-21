@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sizeGb")
-      private final @Nullable Output<Double> sizeGb;
+    private @Nullable Output<Double> sizeGb;
 
-    public Output<Double> sizeGb() {
-        return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
+    public Optional<Output<Double>> sizeGb() {
+        return Optional.ofNullable(this.sizeGb);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeType")
-      private final @Nullable Output<String> volumeType;
+    private @Nullable Output<String> volumeType;
 
-    public Output<String> volumeType() {
-        return this.volumeType == null ? Codegen.empty() : this.volumeType;
+    public Optional<Output<String>> volumeType() {
+        return Optional.ofNullable(this.volumeType);
     }
 
-    public VolumeArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Double> sizeGb,
-        @Nullable Output<String> volumeType) {
-        this.name = name;
-        this.sizeGb = sizeGb;
-        this.volumeType = volumeType;
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.name = Codegen.empty();
-        this.sizeGb = Codegen.empty();
-        this.volumeType = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.name = $.name;
+        this.sizeGb = $.sizeGb;
+        this.volumeType = $.volumeType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Double> sizeGb;
-        private @Nullable Output<String> volumeType;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.sizeGb = defaults.sizeGb;
-    	      this.volumeType = defaults.volumeType;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder sizeGb(@Nullable Output<Double> sizeGb) {
-            this.sizeGb = sizeGb;
+            $.sizeGb = sizeGb;
             return this;
         }
-        public Builder sizeGb(@Nullable Double sizeGb) {
-            this.sizeGb = Codegen.ofNullable(sizeGb);
-            return this;
+
+        public Builder sizeGb(Double sizeGb) {
+            return sizeGb(Output.of(sizeGb));
         }
+
         public Builder volumeType(@Nullable Output<String> volumeType) {
-            this.volumeType = volumeType;
+            $.volumeType = volumeType;
             return this;
         }
-        public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Codegen.ofNullable(volumeType);
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(name, sizeGb, volumeType);
+
+        public Builder volumeType(String volumeType) {
+            return volumeType(Output.of(volumeType));
+        }
+
+        public VolumeArgs build() {
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="file", required=true)
-      private final OSPolicyResourceFileResponse file;
+    private OSPolicyResourceFileResponse file;
 
     public OSPolicyResourceFileResponse file() {
         return this.file;
@@ -44,7 +44,7 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -55,7 +55,7 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="permissions", required=true)
-      private final String permissions;
+    private String permissions;
 
     public String permissions() {
         return this.permissions;
@@ -66,82 +66,73 @@ public final class OSPolicyResourceFileResourceResponse extends com.pulumi.resou
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
     }
 
-    public OSPolicyResourceFileResourceResponse(
-        String content,
-        OSPolicyResourceFileResponse file,
-        String path,
-        String permissions,
-        String state) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.file = Objects.requireNonNull(file, "expected parameter 'file' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.permissions = Objects.requireNonNull(permissions, "expected parameter 'permissions' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-    }
+    private OSPolicyResourceFileResourceResponse() {}
 
-    private OSPolicyResourceFileResourceResponse() {
-        this.content = null;
-        this.file = null;
-        this.path = null;
-        this.permissions = null;
-        this.state = null;
+    private OSPolicyResourceFileResourceResponse(OSPolicyResourceFileResourceResponse $) {
+        this.content = $.content;
+        this.file = $.file;
+        this.path = $.path;
+        this.permissions = $.permissions;
+        this.state = $.state;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceFileResourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private OSPolicyResourceFileResponse file;
-        private String path;
-        private String permissions;
-        private String state;
+        private OSPolicyResourceFileResourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceFileResourceResponse();
         }
 
         public Builder(OSPolicyResourceFileResourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.file = defaults.file;
-    	      this.path = defaults.path;
-    	      this.permissions = defaults.permissions;
-    	      this.state = defaults.state;
+            $ = new OSPolicyResourceFileResourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder file(OSPolicyResourceFileResponse file) {
-            this.file = Objects.requireNonNull(file);
+            $.file = file;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder permissions(String permissions) {
-            this.permissions = Objects.requireNonNull(permissions);
+            $.permissions = permissions;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
-        }        public OSPolicyResourceFileResourceResponse build() {
-            return new OSPolicyResourceFileResourceResponse(content, file, path, permissions, state);
+        }
+
+        public OSPolicyResourceFileResourceResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.file = Objects.requireNonNull($.file, "expected parameter 'file' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.permissions = Objects.requireNonNull($.permissions, "expected parameter 'permissions' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            return $;
         }
     }
+
 }

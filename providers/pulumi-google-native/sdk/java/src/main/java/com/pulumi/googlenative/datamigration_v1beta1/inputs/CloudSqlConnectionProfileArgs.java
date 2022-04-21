@@ -5,9 +5,9 @@ package com.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.datamigration_v1beta1.inputs.CloudSqlSettingsArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CloudSqlConnectionProfileArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="settings")
-      private final @Nullable Output<CloudSqlSettingsArgs> settings;
+    private @Nullable Output<CloudSqlSettingsArgs> settings;
 
-    public Output<CloudSqlSettingsArgs> settings() {
-        return this.settings == null ? Codegen.empty() : this.settings;
+    public Optional<Output<CloudSqlSettingsArgs>> settings() {
+        return Optional.ofNullable(this.settings);
     }
 
-    public CloudSqlConnectionProfileArgs(@Nullable Output<CloudSqlSettingsArgs> settings) {
-        this.settings = settings;
-    }
+    private CloudSqlConnectionProfileArgs() {}
 
-    private CloudSqlConnectionProfileArgs() {
-        this.settings = Codegen.empty();
+    private CloudSqlConnectionProfileArgs(CloudSqlConnectionProfileArgs $) {
+        this.settings = $.settings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudSqlConnectionProfileArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<CloudSqlSettingsArgs> settings;
+        private CloudSqlConnectionProfileArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudSqlConnectionProfileArgs();
         }
 
         public Builder(CloudSqlConnectionProfileArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.settings = defaults.settings;
+            $ = new CloudSqlConnectionProfileArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder settings(@Nullable Output<CloudSqlSettingsArgs> settings) {
-            this.settings = settings;
+            $.settings = settings;
             return this;
         }
-        public Builder settings(@Nullable CloudSqlSettingsArgs settings) {
-            this.settings = Codegen.ofNullable(settings);
-            return this;
-        }        public CloudSqlConnectionProfileArgs build() {
-            return new CloudSqlConnectionProfileArgs(settings);
+
+        public Builder settings(CloudSqlSettingsArgs settings) {
+            return settings(Output.of(settings));
+        }
+
+        public CloudSqlConnectionProfileArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.domains_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressLines")
-      private final @Nullable Output<List<String>> addressLines;
+    private @Nullable Output<List<String>> addressLines;
 
-    public Output<List<String>> addressLines() {
-        return this.addressLines == null ? Codegen.empty() : this.addressLines;
+    public Optional<Output<List<String>>> addressLines() {
+        return Optional.ofNullable(this.addressLines);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="administrativeArea")
-      private final @Nullable Output<String> administrativeArea;
+    private @Nullable Output<String> administrativeArea;
 
-    public Output<String> administrativeArea() {
-        return this.administrativeArea == null ? Codegen.empty() : this.administrativeArea;
+    public Optional<Output<String>> administrativeArea() {
+        return Optional.ofNullable(this.administrativeArea);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="languageCode")
-      private final @Nullable Output<String> languageCode;
+    private @Nullable Output<String> languageCode;
 
-    public Output<String> languageCode() {
-        return this.languageCode == null ? Codegen.empty() : this.languageCode;
+    public Optional<Output<String>> languageCode() {
+        return Optional.ofNullable(this.languageCode);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="locality")
-      private final @Nullable Output<String> locality;
+    private @Nullable Output<String> locality;
 
-    public Output<String> locality() {
-        return this.locality == null ? Codegen.empty() : this.locality;
+    public Optional<Output<String>> locality() {
+        return Optional.ofNullable(this.locality);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="organization")
-      private final @Nullable Output<String> organization;
+    private @Nullable Output<String> organization;
 
-    public Output<String> organization() {
-        return this.organization == null ? Codegen.empty() : this.organization;
+    public Optional<Output<String>> organization() {
+        return Optional.ofNullable(this.organization);
     }
 
     /**
@@ -81,10 +81,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="postalCode")
-      private final @Nullable Output<String> postalCode;
+    private @Nullable Output<String> postalCode;
 
-    public Output<String> postalCode() {
-        return this.postalCode == null ? Codegen.empty() : this.postalCode;
+    public Optional<Output<String>> postalCode() {
+        return Optional.ofNullable(this.postalCode);
     }
 
     /**
@@ -92,10 +92,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="recipients")
-      private final @Nullable Output<List<String>> recipients;
+    private @Nullable Output<List<String>> recipients;
 
-    public Output<List<String>> recipients() {
-        return this.recipients == null ? Codegen.empty() : this.recipients;
+    public Optional<Output<List<String>>> recipients() {
+        return Optional.ofNullable(this.recipients);
     }
 
     /**
@@ -103,7 +103,7 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="regionCode", required=true)
-      private final Output<String> regionCode;
+    private Output<String> regionCode;
 
     public Output<String> regionCode() {
         return this.regionCode;
@@ -114,10 +114,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="revision")
-      private final @Nullable Output<Integer> revision;
+    private @Nullable Output<Integer> revision;
 
-    public Output<Integer> revision() {
-        return this.revision == null ? Codegen.empty() : this.revision;
+    public Optional<Output<Integer>> revision() {
+        return Optional.ofNullable(this.revision);
     }
 
     /**
@@ -125,10 +125,10 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sortingCode")
-      private final @Nullable Output<String> sortingCode;
+    private @Nullable Output<String> sortingCode;
 
-    public Output<String> sortingCode() {
-        return this.sortingCode == null ? Codegen.empty() : this.sortingCode;
+    public Optional<Output<String>> sortingCode() {
+        return Optional.ofNullable(this.sortingCode);
     }
 
     /**
@@ -136,186 +136,157 @@ public final class PostalAddressArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sublocality")
-      private final @Nullable Output<String> sublocality;
+    private @Nullable Output<String> sublocality;
 
-    public Output<String> sublocality() {
-        return this.sublocality == null ? Codegen.empty() : this.sublocality;
+    public Optional<Output<String>> sublocality() {
+        return Optional.ofNullable(this.sublocality);
     }
 
-    public PostalAddressArgs(
-        @Nullable Output<List<String>> addressLines,
-        @Nullable Output<String> administrativeArea,
-        @Nullable Output<String> languageCode,
-        @Nullable Output<String> locality,
-        @Nullable Output<String> organization,
-        @Nullable Output<String> postalCode,
-        @Nullable Output<List<String>> recipients,
-        Output<String> regionCode,
-        @Nullable Output<Integer> revision,
-        @Nullable Output<String> sortingCode,
-        @Nullable Output<String> sublocality) {
-        this.addressLines = addressLines;
-        this.administrativeArea = administrativeArea;
-        this.languageCode = languageCode;
-        this.locality = locality;
-        this.organization = organization;
-        this.postalCode = postalCode;
-        this.recipients = recipients;
-        this.regionCode = Objects.requireNonNull(regionCode, "expected parameter 'regionCode' to be non-null");
-        this.revision = revision;
-        this.sortingCode = sortingCode;
-        this.sublocality = sublocality;
-    }
+    private PostalAddressArgs() {}
 
-    private PostalAddressArgs() {
-        this.addressLines = Codegen.empty();
-        this.administrativeArea = Codegen.empty();
-        this.languageCode = Codegen.empty();
-        this.locality = Codegen.empty();
-        this.organization = Codegen.empty();
-        this.postalCode = Codegen.empty();
-        this.recipients = Codegen.empty();
-        this.regionCode = Codegen.empty();
-        this.revision = Codegen.empty();
-        this.sortingCode = Codegen.empty();
-        this.sublocality = Codegen.empty();
+    private PostalAddressArgs(PostalAddressArgs $) {
+        this.addressLines = $.addressLines;
+        this.administrativeArea = $.administrativeArea;
+        this.languageCode = $.languageCode;
+        this.locality = $.locality;
+        this.organization = $.organization;
+        this.postalCode = $.postalCode;
+        this.recipients = $.recipients;
+        this.regionCode = $.regionCode;
+        this.revision = $.revision;
+        this.sortingCode = $.sortingCode;
+        this.sublocality = $.sublocality;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PostalAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> addressLines;
-        private @Nullable Output<String> administrativeArea;
-        private @Nullable Output<String> languageCode;
-        private @Nullable Output<String> locality;
-        private @Nullable Output<String> organization;
-        private @Nullable Output<String> postalCode;
-        private @Nullable Output<List<String>> recipients;
-        private Output<String> regionCode;
-        private @Nullable Output<Integer> revision;
-        private @Nullable Output<String> sortingCode;
-        private @Nullable Output<String> sublocality;
+        private PostalAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PostalAddressArgs();
         }
 
         public Builder(PostalAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressLines = defaults.addressLines;
-    	      this.administrativeArea = defaults.administrativeArea;
-    	      this.languageCode = defaults.languageCode;
-    	      this.locality = defaults.locality;
-    	      this.organization = defaults.organization;
-    	      this.postalCode = defaults.postalCode;
-    	      this.recipients = defaults.recipients;
-    	      this.regionCode = defaults.regionCode;
-    	      this.revision = defaults.revision;
-    	      this.sortingCode = defaults.sortingCode;
-    	      this.sublocality = defaults.sublocality;
+            $ = new PostalAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressLines(@Nullable Output<List<String>> addressLines) {
-            this.addressLines = addressLines;
+            $.addressLines = addressLines;
             return this;
         }
-        public Builder addressLines(@Nullable List<String> addressLines) {
-            this.addressLines = Codegen.ofNullable(addressLines);
-            return this;
+
+        public Builder addressLines(List<String> addressLines) {
+            return addressLines(Output.of(addressLines));
         }
+
         public Builder addressLines(String... addressLines) {
             return addressLines(List.of(addressLines));
         }
+
         public Builder administrativeArea(@Nullable Output<String> administrativeArea) {
-            this.administrativeArea = administrativeArea;
+            $.administrativeArea = administrativeArea;
             return this;
         }
-        public Builder administrativeArea(@Nullable String administrativeArea) {
-            this.administrativeArea = Codegen.ofNullable(administrativeArea);
-            return this;
+
+        public Builder administrativeArea(String administrativeArea) {
+            return administrativeArea(Output.of(administrativeArea));
         }
+
         public Builder languageCode(@Nullable Output<String> languageCode) {
-            this.languageCode = languageCode;
+            $.languageCode = languageCode;
             return this;
         }
-        public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Codegen.ofNullable(languageCode);
-            return this;
+
+        public Builder languageCode(String languageCode) {
+            return languageCode(Output.of(languageCode));
         }
+
         public Builder locality(@Nullable Output<String> locality) {
-            this.locality = locality;
+            $.locality = locality;
             return this;
         }
-        public Builder locality(@Nullable String locality) {
-            this.locality = Codegen.ofNullable(locality);
-            return this;
+
+        public Builder locality(String locality) {
+            return locality(Output.of(locality));
         }
+
         public Builder organization(@Nullable Output<String> organization) {
-            this.organization = organization;
+            $.organization = organization;
             return this;
         }
-        public Builder organization(@Nullable String organization) {
-            this.organization = Codegen.ofNullable(organization);
-            return this;
+
+        public Builder organization(String organization) {
+            return organization(Output.of(organization));
         }
+
         public Builder postalCode(@Nullable Output<String> postalCode) {
-            this.postalCode = postalCode;
+            $.postalCode = postalCode;
             return this;
         }
-        public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Codegen.ofNullable(postalCode);
-            return this;
+
+        public Builder postalCode(String postalCode) {
+            return postalCode(Output.of(postalCode));
         }
+
         public Builder recipients(@Nullable Output<List<String>> recipients) {
-            this.recipients = recipients;
+            $.recipients = recipients;
             return this;
         }
-        public Builder recipients(@Nullable List<String> recipients) {
-            this.recipients = Codegen.ofNullable(recipients);
-            return this;
+
+        public Builder recipients(List<String> recipients) {
+            return recipients(Output.of(recipients));
         }
+
         public Builder recipients(String... recipients) {
             return recipients(List.of(recipients));
         }
+
         public Builder regionCode(Output<String> regionCode) {
-            this.regionCode = Objects.requireNonNull(regionCode);
+            $.regionCode = regionCode;
             return this;
         }
+
         public Builder regionCode(String regionCode) {
-            this.regionCode = Output.of(Objects.requireNonNull(regionCode));
-            return this;
+            return regionCode(Output.of(regionCode));
         }
+
         public Builder revision(@Nullable Output<Integer> revision) {
-            this.revision = revision;
+            $.revision = revision;
             return this;
         }
-        public Builder revision(@Nullable Integer revision) {
-            this.revision = Codegen.ofNullable(revision);
-            return this;
+
+        public Builder revision(Integer revision) {
+            return revision(Output.of(revision));
         }
+
         public Builder sortingCode(@Nullable Output<String> sortingCode) {
-            this.sortingCode = sortingCode;
+            $.sortingCode = sortingCode;
             return this;
         }
-        public Builder sortingCode(@Nullable String sortingCode) {
-            this.sortingCode = Codegen.ofNullable(sortingCode);
-            return this;
+
+        public Builder sortingCode(String sortingCode) {
+            return sortingCode(Output.of(sortingCode));
         }
+
         public Builder sublocality(@Nullable Output<String> sublocality) {
-            this.sublocality = sublocality;
+            $.sublocality = sublocality;
             return this;
         }
-        public Builder sublocality(@Nullable String sublocality) {
-            this.sublocality = Codegen.ofNullable(sublocality);
-            return this;
-        }        public PostalAddressArgs build() {
-            return new PostalAddressArgs(addressLines, administrativeArea, languageCode, locality, organization, postalCode, recipients, regionCode, revision, sortingCode, sublocality);
+
+        public Builder sublocality(String sublocality) {
+            return sublocality(Output.of(sublocality));
+        }
+
+        public PostalAddressArgs build() {
+            $.regionCode = Objects.requireNonNull($.regionCode, "expected parameter 'regionCode' to be non-null");
+            return $;
         }
     }
+
 }

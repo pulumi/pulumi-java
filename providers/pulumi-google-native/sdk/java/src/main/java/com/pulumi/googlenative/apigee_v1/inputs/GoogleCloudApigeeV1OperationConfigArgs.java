@@ -5,13 +5,13 @@ package com.pulumi.googlenative.apigee_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationArgs;
 import com.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QuotaArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,7 +28,7 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="apiSource", required=true)
-      private final Output<String> apiSource;
+    private Output<String> apiSource;
 
     public Output<String> apiSource() {
         return this.apiSource;
@@ -39,10 +39,10 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="attributes")
-      private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+    private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
-    public Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes() {
-        return this.attributes == null ? Codegen.empty() : this.attributes;
+    public Optional<Output<List<GoogleCloudApigeeV1AttributeArgs>>> attributes() {
+        return Optional.ofNullable(this.attributes);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="operations")
-      private final @Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations;
+    private @Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations;
 
-    public Output<List<GoogleCloudApigeeV1OperationArgs>> operations() {
-        return this.operations == null ? Codegen.empty() : this.operations;
+    public Optional<Output<List<GoogleCloudApigeeV1OperationArgs>>> operations() {
+        return Optional.ofNullable(this.operations);
     }
 
     /**
@@ -61,95 +61,87 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends com.pulumi.res
      * 
      */
     @Import(name="quota")
-      private final @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
+    private @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
 
-    public Output<GoogleCloudApigeeV1QuotaArgs> quota() {
-        return this.quota == null ? Codegen.empty() : this.quota;
+    public Optional<Output<GoogleCloudApigeeV1QuotaArgs>> quota() {
+        return Optional.ofNullable(this.quota);
     }
 
-    public GoogleCloudApigeeV1OperationConfigArgs(
-        Output<String> apiSource,
-        @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes,
-        @Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations,
-        @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
-        this.apiSource = Objects.requireNonNull(apiSource, "expected parameter 'apiSource' to be non-null");
-        this.attributes = attributes;
-        this.operations = operations;
-        this.quota = quota;
-    }
+    private GoogleCloudApigeeV1OperationConfigArgs() {}
 
-    private GoogleCloudApigeeV1OperationConfigArgs() {
-        this.apiSource = Codegen.empty();
-        this.attributes = Codegen.empty();
-        this.operations = Codegen.empty();
-        this.quota = Codegen.empty();
+    private GoogleCloudApigeeV1OperationConfigArgs(GoogleCloudApigeeV1OperationConfigArgs $) {
+        this.apiSource = $.apiSource;
+        this.attributes = $.attributes;
+        this.operations = $.operations;
+        this.quota = $.quota;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1OperationConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiSource;
-        private @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
-        private @Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations;
-        private @Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota;
+        private GoogleCloudApigeeV1OperationConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1OperationConfigArgs();
         }
 
         public Builder(GoogleCloudApigeeV1OperationConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiSource = defaults.apiSource;
-    	      this.attributes = defaults.attributes;
-    	      this.operations = defaults.operations;
-    	      this.quota = defaults.quota;
+            $ = new GoogleCloudApigeeV1OperationConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiSource(Output<String> apiSource) {
-            this.apiSource = Objects.requireNonNull(apiSource);
+            $.apiSource = apiSource;
             return this;
         }
+
         public Builder apiSource(String apiSource) {
-            this.apiSource = Output.of(Objects.requireNonNull(apiSource));
-            return this;
+            return apiSource(Output.of(apiSource));
         }
+
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
-            this.attributes = attributes;
+            $.attributes = attributes;
             return this;
         }
-        public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Codegen.ofNullable(attributes);
-            return this;
+
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeArgs> attributes) {
+            return attributes(Output.of(attributes));
         }
+
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
             return attributes(List.of(attributes));
         }
+
         public Builder operations(@Nullable Output<List<GoogleCloudApigeeV1OperationArgs>> operations) {
-            this.operations = operations;
+            $.operations = operations;
             return this;
         }
-        public Builder operations(@Nullable List<GoogleCloudApigeeV1OperationArgs> operations) {
-            this.operations = Codegen.ofNullable(operations);
-            return this;
+
+        public Builder operations(List<GoogleCloudApigeeV1OperationArgs> operations) {
+            return operations(Output.of(operations));
         }
+
         public Builder operations(GoogleCloudApigeeV1OperationArgs... operations) {
             return operations(List.of(operations));
         }
+
         public Builder quota(@Nullable Output<GoogleCloudApigeeV1QuotaArgs> quota) {
-            this.quota = quota;
+            $.quota = quota;
             return this;
         }
-        public Builder quota(@Nullable GoogleCloudApigeeV1QuotaArgs quota) {
-            this.quota = Codegen.ofNullable(quota);
-            return this;
-        }        public GoogleCloudApigeeV1OperationConfigArgs build() {
-            return new GoogleCloudApigeeV1OperationConfigArgs(apiSource, attributes, operations, quota);
+
+        public Builder quota(GoogleCloudApigeeV1QuotaArgs quota) {
+            return quota(Output.of(quota));
+        }
+
+        public GoogleCloudApigeeV1OperationConfigArgs build() {
+            $.apiSource = Objects.requireNonNull($.apiSource, "expected parameter 'apiSource' to be non-null");
+            return $;
         }
     }
+
 }

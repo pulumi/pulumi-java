@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
@@ -43,64 +43,59 @@ public final class GooglePrivacyDlpV2BigQueryTableResponse extends com.pulumi.re
      * 
      */
     @Import(name="tableId", required=true)
-      private final String tableId;
+    private String tableId;
 
     public String tableId() {
         return this.tableId;
     }
 
-    public GooglePrivacyDlpV2BigQueryTableResponse(
-        String datasetId,
-        String project,
-        String tableId) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-        this.tableId = Objects.requireNonNull(tableId, "expected parameter 'tableId' to be non-null");
-    }
+    private GooglePrivacyDlpV2BigQueryTableResponse() {}
 
-    private GooglePrivacyDlpV2BigQueryTableResponse() {
-        this.datasetId = null;
-        this.project = null;
-        this.tableId = null;
+    private GooglePrivacyDlpV2BigQueryTableResponse(GooglePrivacyDlpV2BigQueryTableResponse $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
+        this.tableId = $.tableId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2BigQueryTableResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String project;
-        private String tableId;
+        private GooglePrivacyDlpV2BigQueryTableResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2BigQueryTableResponse();
         }
 
         public Builder(GooglePrivacyDlpV2BigQueryTableResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
-    	      this.tableId = defaults.tableId;
+            $ = new GooglePrivacyDlpV2BigQueryTableResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
         }
+
         public Builder tableId(String tableId) {
-            this.tableId = Objects.requireNonNull(tableId);
+            $.tableId = tableId;
             return this;
-        }        public GooglePrivacyDlpV2BigQueryTableResponse build() {
-            return new GooglePrivacyDlpV2BigQueryTableResponse(datasetId, project, tableId);
+        }
+
+        public GooglePrivacyDlpV2BigQueryTableResponse build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            $.tableId = Objects.requireNonNull($.tableId, "expected parameter 'tableId' to be non-null");
+            return $;
         }
     }
+
 }

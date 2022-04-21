@@ -21,45 +21,45 @@ public final class VirtualNICResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="enabled", required=true)
-      private final Boolean enabled;
+    private Boolean enabled;
 
     public Boolean enabled() {
         return this.enabled;
     }
 
-    public VirtualNICResponse(Boolean enabled) {
-        this.enabled = Objects.requireNonNull(enabled, "expected parameter 'enabled' to be non-null");
-    }
+    private VirtualNICResponse() {}
 
-    private VirtualNICResponse() {
-        this.enabled = null;
+    private VirtualNICResponse(VirtualNICResponse $) {
+        this.enabled = $.enabled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VirtualNICResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enabled;
+        private VirtualNICResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VirtualNICResponse();
         }
 
         public Builder(VirtualNICResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enabled = defaults.enabled;
+            $ = new VirtualNICResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enabled(Boolean enabled) {
-            this.enabled = Objects.requireNonNull(enabled);
+            $.enabled = enabled;
             return this;
-        }        public VirtualNICResponse build() {
-            return new VirtualNICResponse(enabled);
+        }
+
+        public VirtualNICResponse build() {
+            $.enabled = Objects.requireNonNull($.enabled, "expected parameter 'enabled' to be non-null");
+            return $;
         }
     }
+
 }

@@ -22,7 +22,7 @@ public final class RateLimitsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxBurstSize", required=true)
-      private final Integer maxBurstSize;
+    private Integer maxBurstSize;
 
     public Integer maxBurstSize() {
         return this.maxBurstSize;
@@ -33,7 +33,7 @@ public final class RateLimitsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxConcurrentTasks", required=true)
-      private final Integer maxConcurrentTasks;
+    private Integer maxConcurrentTasks;
 
     public Integer maxConcurrentTasks() {
         return this.maxConcurrentTasks;
@@ -44,64 +44,59 @@ public final class RateLimitsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxTasksDispatchedPerSecond", required=true)
-      private final Double maxTasksDispatchedPerSecond;
+    private Double maxTasksDispatchedPerSecond;
 
     public Double maxTasksDispatchedPerSecond() {
         return this.maxTasksDispatchedPerSecond;
     }
 
-    public RateLimitsResponse(
-        Integer maxBurstSize,
-        Integer maxConcurrentTasks,
-        Double maxTasksDispatchedPerSecond) {
-        this.maxBurstSize = Objects.requireNonNull(maxBurstSize, "expected parameter 'maxBurstSize' to be non-null");
-        this.maxConcurrentTasks = Objects.requireNonNull(maxConcurrentTasks, "expected parameter 'maxConcurrentTasks' to be non-null");
-        this.maxTasksDispatchedPerSecond = Objects.requireNonNull(maxTasksDispatchedPerSecond, "expected parameter 'maxTasksDispatchedPerSecond' to be non-null");
-    }
+    private RateLimitsResponse() {}
 
-    private RateLimitsResponse() {
-        this.maxBurstSize = null;
-        this.maxConcurrentTasks = null;
-        this.maxTasksDispatchedPerSecond = null;
+    private RateLimitsResponse(RateLimitsResponse $) {
+        this.maxBurstSize = $.maxBurstSize;
+        this.maxConcurrentTasks = $.maxConcurrentTasks;
+        this.maxTasksDispatchedPerSecond = $.maxTasksDispatchedPerSecond;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RateLimitsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer maxBurstSize;
-        private Integer maxConcurrentTasks;
-        private Double maxTasksDispatchedPerSecond;
+        private RateLimitsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RateLimitsResponse();
         }
 
         public Builder(RateLimitsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxBurstSize = defaults.maxBurstSize;
-    	      this.maxConcurrentTasks = defaults.maxConcurrentTasks;
-    	      this.maxTasksDispatchedPerSecond = defaults.maxTasksDispatchedPerSecond;
+            $ = new RateLimitsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxBurstSize(Integer maxBurstSize) {
-            this.maxBurstSize = Objects.requireNonNull(maxBurstSize);
+            $.maxBurstSize = maxBurstSize;
             return this;
         }
+
         public Builder maxConcurrentTasks(Integer maxConcurrentTasks) {
-            this.maxConcurrentTasks = Objects.requireNonNull(maxConcurrentTasks);
+            $.maxConcurrentTasks = maxConcurrentTasks;
             return this;
         }
+
         public Builder maxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
-            this.maxTasksDispatchedPerSecond = Objects.requireNonNull(maxTasksDispatchedPerSecond);
+            $.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
             return this;
-        }        public RateLimitsResponse build() {
-            return new RateLimitsResponse(maxBurstSize, maxConcurrentTasks, maxTasksDispatchedPerSecond);
+        }
+
+        public RateLimitsResponse build() {
+            $.maxBurstSize = Objects.requireNonNull($.maxBurstSize, "expected parameter 'maxBurstSize' to be non-null");
+            $.maxConcurrentTasks = Objects.requireNonNull($.maxConcurrentTasks, "expected parameter 'maxConcurrentTasks' to be non-null");
+            $.maxTasksDispatchedPerSecond = Objects.requireNonNull($.maxTasksDispatchedPerSecond, "expected parameter 'maxTasksDispatchedPerSecond' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.firebaserules_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.firebaserules_v1.inputs.SourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,10 +17,10 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
     public static final RulesetArgs Empty = new RulesetArgs();
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -28,63 +28,59 @@ public final class RulesetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="source", required=true)
-      private final Output<SourceArgs> source;
+    private Output<SourceArgs> source;
 
     public Output<SourceArgs> source() {
         return this.source;
     }
 
-    public RulesetArgs(
-        @Nullable Output<String> project,
-        Output<SourceArgs> source) {
-        this.project = project;
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private RulesetArgs() {}
 
-    private RulesetArgs() {
-        this.project = Codegen.empty();
-        this.source = Codegen.empty();
+    private RulesetArgs(RulesetArgs $) {
+        this.project = $.project;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RulesetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> project;
-        private Output<SourceArgs> source;
+        private RulesetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RulesetArgs();
         }
 
         public Builder(RulesetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.source = defaults.source;
+            $ = new RulesetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder source(Output<SourceArgs> source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
         }
+
         public Builder source(SourceArgs source) {
-            this.source = Output.of(Objects.requireNonNull(source));
-            return this;
-        }        public RulesetArgs build() {
-            return new RulesetArgs(project, source);
+            return source(Output.of(source));
+        }
+
+        public RulesetArgs build() {
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,7 +5,6 @@ package com.pulumi.googlenative.secretmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class CustomerManagedEncryptionArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final Output<String> kmsKeyName;
+    private Output<String> kmsKeyName;
 
     public Output<String> kmsKeyName() {
         return this.kmsKeyName;
     }
 
-    public CustomerManagedEncryptionArgs(Output<String> kmsKeyName) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-    }
+    private CustomerManagedEncryptionArgs() {}
 
-    private CustomerManagedEncryptionArgs() {
-        this.kmsKeyName = Codegen.empty();
+    private CustomerManagedEncryptionArgs(CustomerManagedEncryptionArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerManagedEncryptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> kmsKeyName;
+        private CustomerManagedEncryptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerManagedEncryptionArgs();
         }
 
         public Builder(CustomerManagedEncryptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
+            $ = new CustomerManagedEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(Output<String> kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Output.of(Objects.requireNonNull(kmsKeyName));
-            return this;
-        }        public CustomerManagedEncryptionArgs build() {
-            return new CustomerManagedEncryptionArgs(kmsKeyName);
+            return kmsKeyName(Output.of(kmsKeyName));
+        }
+
+        public CustomerManagedEncryptionArgs build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            return $;
         }
     }
+
 }

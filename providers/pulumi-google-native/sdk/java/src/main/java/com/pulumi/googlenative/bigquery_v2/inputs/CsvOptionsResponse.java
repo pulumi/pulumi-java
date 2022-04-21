@@ -18,7 +18,7 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowJaggedRows", required=true)
-      private final Boolean allowJaggedRows;
+    private Boolean allowJaggedRows;
 
     public Boolean allowJaggedRows() {
         return this.allowJaggedRows;
@@ -29,7 +29,7 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowQuotedNewlines", required=true)
-      private final Boolean allowQuotedNewlines;
+    private Boolean allowQuotedNewlines;
 
     public Boolean allowQuotedNewlines() {
         return this.allowQuotedNewlines;
@@ -40,7 +40,7 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="encoding", required=true)
-      private final String encoding;
+    private String encoding;
 
     public String encoding() {
         return this.encoding;
@@ -51,7 +51,7 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fieldDelimiter", required=true)
-      private final String fieldDelimiter;
+    private String fieldDelimiter;
 
     public String fieldDelimiter() {
         return this.fieldDelimiter;
@@ -62,7 +62,7 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nullMarker", required=true)
-      private final String nullMarker;
+    private String nullMarker;
 
     public String nullMarker() {
         return this.nullMarker;
@@ -73,7 +73,7 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="quote", required=true)
-      private final String quote;
+    private String quote;
 
     public String quote() {
         return this.quote;
@@ -84,100 +84,87 @@ public final class CsvOptionsResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="skipLeadingRows", required=true)
-      private final String skipLeadingRows;
+    private String skipLeadingRows;
 
     public String skipLeadingRows() {
         return this.skipLeadingRows;
     }
 
-    public CsvOptionsResponse(
-        Boolean allowJaggedRows,
-        Boolean allowQuotedNewlines,
-        String encoding,
-        String fieldDelimiter,
-        String nullMarker,
-        String quote,
-        String skipLeadingRows) {
-        this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows, "expected parameter 'allowJaggedRows' to be non-null");
-        this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines, "expected parameter 'allowQuotedNewlines' to be non-null");
-        this.encoding = Objects.requireNonNull(encoding, "expected parameter 'encoding' to be non-null");
-        this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter, "expected parameter 'fieldDelimiter' to be non-null");
-        this.nullMarker = Objects.requireNonNull(nullMarker, "expected parameter 'nullMarker' to be non-null");
-        this.quote = Objects.requireNonNull(quote, "expected parameter 'quote' to be non-null");
-        this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows, "expected parameter 'skipLeadingRows' to be non-null");
-    }
+    private CsvOptionsResponse() {}
 
-    private CsvOptionsResponse() {
-        this.allowJaggedRows = null;
-        this.allowQuotedNewlines = null;
-        this.encoding = null;
-        this.fieldDelimiter = null;
-        this.nullMarker = null;
-        this.quote = null;
-        this.skipLeadingRows = null;
+    private CsvOptionsResponse(CsvOptionsResponse $) {
+        this.allowJaggedRows = $.allowJaggedRows;
+        this.allowQuotedNewlines = $.allowQuotedNewlines;
+        this.encoding = $.encoding;
+        this.fieldDelimiter = $.fieldDelimiter;
+        this.nullMarker = $.nullMarker;
+        this.quote = $.quote;
+        this.skipLeadingRows = $.skipLeadingRows;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CsvOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean allowJaggedRows;
-        private Boolean allowQuotedNewlines;
-        private String encoding;
-        private String fieldDelimiter;
-        private String nullMarker;
-        private String quote;
-        private String skipLeadingRows;
+        private CsvOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CsvOptionsResponse();
         }
 
         public Builder(CsvOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowJaggedRows = defaults.allowJaggedRows;
-    	      this.allowQuotedNewlines = defaults.allowQuotedNewlines;
-    	      this.encoding = defaults.encoding;
-    	      this.fieldDelimiter = defaults.fieldDelimiter;
-    	      this.nullMarker = defaults.nullMarker;
-    	      this.quote = defaults.quote;
-    	      this.skipLeadingRows = defaults.skipLeadingRows;
+            $ = new CsvOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowJaggedRows(Boolean allowJaggedRows) {
-            this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
+            $.allowJaggedRows = allowJaggedRows;
             return this;
         }
+
         public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
-            this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
+            $.allowQuotedNewlines = allowQuotedNewlines;
             return this;
         }
+
         public Builder encoding(String encoding) {
-            this.encoding = Objects.requireNonNull(encoding);
+            $.encoding = encoding;
             return this;
         }
+
         public Builder fieldDelimiter(String fieldDelimiter) {
-            this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
+            $.fieldDelimiter = fieldDelimiter;
             return this;
         }
+
         public Builder nullMarker(String nullMarker) {
-            this.nullMarker = Objects.requireNonNull(nullMarker);
+            $.nullMarker = nullMarker;
             return this;
         }
+
         public Builder quote(String quote) {
-            this.quote = Objects.requireNonNull(quote);
+            $.quote = quote;
             return this;
         }
+
         public Builder skipLeadingRows(String skipLeadingRows) {
-            this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
+            $.skipLeadingRows = skipLeadingRows;
             return this;
-        }        public CsvOptionsResponse build() {
-            return new CsvOptionsResponse(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, nullMarker, quote, skipLeadingRows);
+        }
+
+        public CsvOptionsResponse build() {
+            $.allowJaggedRows = Objects.requireNonNull($.allowJaggedRows, "expected parameter 'allowJaggedRows' to be non-null");
+            $.allowQuotedNewlines = Objects.requireNonNull($.allowQuotedNewlines, "expected parameter 'allowQuotedNewlines' to be non-null");
+            $.encoding = Objects.requireNonNull($.encoding, "expected parameter 'encoding' to be non-null");
+            $.fieldDelimiter = Objects.requireNonNull($.fieldDelimiter, "expected parameter 'fieldDelimiter' to be non-null");
+            $.nullMarker = Objects.requireNonNull($.nullMarker, "expected parameter 'nullMarker' to be non-null");
+            $.quote = Objects.requireNonNull($.quote, "expected parameter 'quote' to be non-null");
+            $.skipLeadingRows = Objects.requireNonNull($.skipLeadingRows, "expected parameter 'skipLeadingRows' to be non-null");
+            return $;
         }
     }
+
 }

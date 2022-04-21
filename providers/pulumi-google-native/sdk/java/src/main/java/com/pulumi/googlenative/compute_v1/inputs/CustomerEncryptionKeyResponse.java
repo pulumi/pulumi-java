@@ -17,7 +17,7 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="kmsKeyName", required=true)
-      private final String kmsKeyName;
+    private String kmsKeyName;
 
     public String kmsKeyName() {
         return this.kmsKeyName;
@@ -28,7 +28,7 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="kmsKeyServiceAccount", required=true)
-      private final String kmsKeyServiceAccount;
+    private String kmsKeyServiceAccount;
 
     public String kmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount;
@@ -39,7 +39,7 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rawKey", required=true)
-      private final String rawKey;
+    private String rawKey;
 
     public String rawKey() {
         return this.rawKey;
@@ -50,7 +50,7 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="rsaEncryptedKey", required=true)
-      private final String rsaEncryptedKey;
+    private String rsaEncryptedKey;
 
     public String rsaEncryptedKey() {
         return this.rsaEncryptedKey;
@@ -61,82 +61,73 @@ public final class CustomerEncryptionKeyResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="sha256", required=true)
-      private final String sha256;
+    private String sha256;
 
     public String sha256() {
         return this.sha256;
     }
 
-    public CustomerEncryptionKeyResponse(
-        String kmsKeyName,
-        String kmsKeyServiceAccount,
-        String rawKey,
-        String rsaEncryptedKey,
-        String sha256) {
-        this.kmsKeyName = Objects.requireNonNull(kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
-        this.kmsKeyServiceAccount = Objects.requireNonNull(kmsKeyServiceAccount, "expected parameter 'kmsKeyServiceAccount' to be non-null");
-        this.rawKey = Objects.requireNonNull(rawKey, "expected parameter 'rawKey' to be non-null");
-        this.rsaEncryptedKey = Objects.requireNonNull(rsaEncryptedKey, "expected parameter 'rsaEncryptedKey' to be non-null");
-        this.sha256 = Objects.requireNonNull(sha256, "expected parameter 'sha256' to be non-null");
-    }
+    private CustomerEncryptionKeyResponse() {}
 
-    private CustomerEncryptionKeyResponse() {
-        this.kmsKeyName = null;
-        this.kmsKeyServiceAccount = null;
-        this.rawKey = null;
-        this.rsaEncryptedKey = null;
-        this.sha256 = null;
+    private CustomerEncryptionKeyResponse(CustomerEncryptionKeyResponse $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.kmsKeyServiceAccount = $.kmsKeyServiceAccount;
+        this.rawKey = $.rawKey;
+        this.rsaEncryptedKey = $.rsaEncryptedKey;
+        this.sha256 = $.sha256;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomerEncryptionKeyResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kmsKeyName;
-        private String kmsKeyServiceAccount;
-        private String rawKey;
-        private String rsaEncryptedKey;
-        private String sha256;
+        private CustomerEncryptionKeyResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomerEncryptionKeyResponse();
         }
 
         public Builder(CustomerEncryptionKeyResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.kmsKeyServiceAccount = defaults.kmsKeyServiceAccount;
-    	      this.rawKey = defaults.rawKey;
-    	      this.rsaEncryptedKey = defaults.rsaEncryptedKey;
-    	      this.sha256 = defaults.sha256;
+            $ = new CustomerEncryptionKeyResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(String kmsKeyName) {
-            this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
+
         public Builder kmsKeyServiceAccount(String kmsKeyServiceAccount) {
-            this.kmsKeyServiceAccount = Objects.requireNonNull(kmsKeyServiceAccount);
+            $.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
+
         public Builder rawKey(String rawKey) {
-            this.rawKey = Objects.requireNonNull(rawKey);
+            $.rawKey = rawKey;
             return this;
         }
+
         public Builder rsaEncryptedKey(String rsaEncryptedKey) {
-            this.rsaEncryptedKey = Objects.requireNonNull(rsaEncryptedKey);
+            $.rsaEncryptedKey = rsaEncryptedKey;
             return this;
         }
+
         public Builder sha256(String sha256) {
-            this.sha256 = Objects.requireNonNull(sha256);
+            $.sha256 = sha256;
             return this;
-        }        public CustomerEncryptionKeyResponse build() {
-            return new CustomerEncryptionKeyResponse(kmsKeyName, kmsKeyServiceAccount, rawKey, rsaEncryptedKey, sha256);
+        }
+
+        public CustomerEncryptionKeyResponse build() {
+            $.kmsKeyName = Objects.requireNonNull($.kmsKeyName, "expected parameter 'kmsKeyName' to be non-null");
+            $.kmsKeyServiceAccount = Objects.requireNonNull($.kmsKeyServiceAccount, "expected parameter 'kmsKeyServiceAccount' to be non-null");
+            $.rawKey = Objects.requireNonNull($.rawKey, "expected parameter 'rawKey' to be non-null");
+            $.rsaEncryptedKey = Objects.requireNonNull($.rsaEncryptedKey, "expected parameter 'rsaEncryptedKey' to be non-null");
+            $.sha256 = Objects.requireNonNull($.sha256, "expected parameter 'sha256' to be non-null");
+            return $;
         }
     }
+
 }

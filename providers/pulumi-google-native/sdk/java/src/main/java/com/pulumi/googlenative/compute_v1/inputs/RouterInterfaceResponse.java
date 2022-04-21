@@ -17,7 +17,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="ipRange", required=true)
-      private final String ipRange;
+    private String ipRange;
 
     public String ipRange() {
         return this.ipRange;
@@ -28,7 +28,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="linkedInterconnectAttachment", required=true)
-      private final String linkedInterconnectAttachment;
+    private String linkedInterconnectAttachment;
 
     public String linkedInterconnectAttachment() {
         return this.linkedInterconnectAttachment;
@@ -39,7 +39,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="linkedVpnTunnel", required=true)
-      private final String linkedVpnTunnel;
+    private String linkedVpnTunnel;
 
     public String linkedVpnTunnel() {
         return this.linkedVpnTunnel;
@@ -50,7 +50,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="managementType", required=true)
-      private final String managementType;
+    private String managementType;
 
     public String managementType() {
         return this.managementType;
@@ -61,7 +61,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -72,7 +72,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="privateIpAddress", required=true)
-      private final String privateIpAddress;
+    private String privateIpAddress;
 
     public String privateIpAddress() {
         return this.privateIpAddress;
@@ -83,7 +83,7 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="redundantInterface", required=true)
-      private final String redundantInterface;
+    private String redundantInterface;
 
     public String redundantInterface() {
         return this.redundantInterface;
@@ -94,109 +94,94 @@ public final class RouterInterfaceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
     }
 
-    public RouterInterfaceResponse(
-        String ipRange,
-        String linkedInterconnectAttachment,
-        String linkedVpnTunnel,
-        String managementType,
-        String name,
-        String privateIpAddress,
-        String redundantInterface,
-        String subnetwork) {
-        this.ipRange = Objects.requireNonNull(ipRange, "expected parameter 'ipRange' to be non-null");
-        this.linkedInterconnectAttachment = Objects.requireNonNull(linkedInterconnectAttachment, "expected parameter 'linkedInterconnectAttachment' to be non-null");
-        this.linkedVpnTunnel = Objects.requireNonNull(linkedVpnTunnel, "expected parameter 'linkedVpnTunnel' to be non-null");
-        this.managementType = Objects.requireNonNull(managementType, "expected parameter 'managementType' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.privateIpAddress = Objects.requireNonNull(privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
-        this.redundantInterface = Objects.requireNonNull(redundantInterface, "expected parameter 'redundantInterface' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-    }
+    private RouterInterfaceResponse() {}
 
-    private RouterInterfaceResponse() {
-        this.ipRange = null;
-        this.linkedInterconnectAttachment = null;
-        this.linkedVpnTunnel = null;
-        this.managementType = null;
-        this.name = null;
-        this.privateIpAddress = null;
-        this.redundantInterface = null;
-        this.subnetwork = null;
+    private RouterInterfaceResponse(RouterInterfaceResponse $) {
+        this.ipRange = $.ipRange;
+        this.linkedInterconnectAttachment = $.linkedInterconnectAttachment;
+        this.linkedVpnTunnel = $.linkedVpnTunnel;
+        this.managementType = $.managementType;
+        this.name = $.name;
+        this.privateIpAddress = $.privateIpAddress;
+        this.redundantInterface = $.redundantInterface;
+        this.subnetwork = $.subnetwork;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RouterInterfaceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String ipRange;
-        private String linkedInterconnectAttachment;
-        private String linkedVpnTunnel;
-        private String managementType;
-        private String name;
-        private String privateIpAddress;
-        private String redundantInterface;
-        private String subnetwork;
+        private RouterInterfaceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RouterInterfaceResponse();
         }
 
         public Builder(RouterInterfaceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ipRange = defaults.ipRange;
-    	      this.linkedInterconnectAttachment = defaults.linkedInterconnectAttachment;
-    	      this.linkedVpnTunnel = defaults.linkedVpnTunnel;
-    	      this.managementType = defaults.managementType;
-    	      this.name = defaults.name;
-    	      this.privateIpAddress = defaults.privateIpAddress;
-    	      this.redundantInterface = defaults.redundantInterface;
-    	      this.subnetwork = defaults.subnetwork;
+            $ = new RouterInterfaceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder ipRange(String ipRange) {
-            this.ipRange = Objects.requireNonNull(ipRange);
+            $.ipRange = ipRange;
             return this;
         }
+
         public Builder linkedInterconnectAttachment(String linkedInterconnectAttachment) {
-            this.linkedInterconnectAttachment = Objects.requireNonNull(linkedInterconnectAttachment);
+            $.linkedInterconnectAttachment = linkedInterconnectAttachment;
             return this;
         }
+
         public Builder linkedVpnTunnel(String linkedVpnTunnel) {
-            this.linkedVpnTunnel = Objects.requireNonNull(linkedVpnTunnel);
+            $.linkedVpnTunnel = linkedVpnTunnel;
             return this;
         }
+
         public Builder managementType(String managementType) {
-            this.managementType = Objects.requireNonNull(managementType);
+            $.managementType = managementType;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder privateIpAddress(String privateIpAddress) {
-            this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
+            $.privateIpAddress = privateIpAddress;
             return this;
         }
+
         public Builder redundantInterface(String redundantInterface) {
-            this.redundantInterface = Objects.requireNonNull(redundantInterface);
+            $.redundantInterface = redundantInterface;
             return this;
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
-        }        public RouterInterfaceResponse build() {
-            return new RouterInterfaceResponse(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, managementType, name, privateIpAddress, redundantInterface, subnetwork);
+        }
+
+        public RouterInterfaceResponse build() {
+            $.ipRange = Objects.requireNonNull($.ipRange, "expected parameter 'ipRange' to be non-null");
+            $.linkedInterconnectAttachment = Objects.requireNonNull($.linkedInterconnectAttachment, "expected parameter 'linkedInterconnectAttachment' to be non-null");
+            $.linkedVpnTunnel = Objects.requireNonNull($.linkedVpnTunnel, "expected parameter 'linkedVpnTunnel' to be non-null");
+            $.managementType = Objects.requireNonNull($.managementType, "expected parameter 'managementType' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.privateIpAddress = Objects.requireNonNull($.privateIpAddress, "expected parameter 'privateIpAddress' to be non-null");
+            $.redundantInterface = Objects.requireNonNull($.redundantInterface, "expected parameter 'redundantInterface' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            return $;
         }
     }
+
 }

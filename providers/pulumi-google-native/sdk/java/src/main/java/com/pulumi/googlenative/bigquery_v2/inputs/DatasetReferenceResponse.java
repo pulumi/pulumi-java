@@ -17,7 +17,7 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="datasetId", required=true)
-      private final String datasetId;
+    private String datasetId;
 
     public String datasetId() {
         return this.datasetId;
@@ -28,55 +28,52 @@ public final class DatasetReferenceResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public DatasetReferenceResponse(
-        String datasetId,
-        String project) {
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private DatasetReferenceResponse() {}
 
-    private DatasetReferenceResponse() {
-        this.datasetId = null;
-        this.project = null;
+    private DatasetReferenceResponse(DatasetReferenceResponse $) {
+        this.datasetId = $.datasetId;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DatasetReferenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String datasetId;
-        private String project;
+        private DatasetReferenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DatasetReferenceResponse();
         }
 
         public Builder(DatasetReferenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.datasetId = defaults.datasetId;
-    	      this.project = defaults.project;
+            $ = new DatasetReferenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder datasetId(String datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public DatasetReferenceResponse build() {
-            return new DatasetReferenceResponse(datasetId, project);
+        }
+
+        public DatasetReferenceResponse build() {
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

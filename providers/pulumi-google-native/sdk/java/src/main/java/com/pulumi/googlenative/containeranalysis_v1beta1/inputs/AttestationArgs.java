@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.GenericSignedAttestationArgs;
 import com.pulumi.googlenative.containeranalysis_v1beta1.inputs.PgpSignedAttestationArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AttestationArgs extends com.pulumi.resources.ResourceArgs {
     public static final AttestationArgs Empty = new AttestationArgs();
 
     @Import(name="genericSignedAttestation")
-      private final @Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation;
+    private @Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation;
 
-    public Output<GenericSignedAttestationArgs> genericSignedAttestation() {
-        return this.genericSignedAttestation == null ? Codegen.empty() : this.genericSignedAttestation;
+    public Optional<Output<GenericSignedAttestationArgs>> genericSignedAttestation() {
+        return Optional.ofNullable(this.genericSignedAttestation);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class AttestationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pgpSignedAttestation")
-      private final @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
+    private @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
-    public Output<PgpSignedAttestationArgs> pgpSignedAttestation() {
-        return this.pgpSignedAttestation == null ? Codegen.empty() : this.pgpSignedAttestation;
+    public Optional<Output<PgpSignedAttestationArgs>> pgpSignedAttestation() {
+        return Optional.ofNullable(this.pgpSignedAttestation);
     }
 
-    public AttestationArgs(
-        @Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation,
-        @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
-        this.genericSignedAttestation = genericSignedAttestation;
-        this.pgpSignedAttestation = pgpSignedAttestation;
-    }
+    private AttestationArgs() {}
 
-    private AttestationArgs() {
-        this.genericSignedAttestation = Codegen.empty();
-        this.pgpSignedAttestation = Codegen.empty();
+    private AttestationArgs(AttestationArgs $) {
+        this.genericSignedAttestation = $.genericSignedAttestation;
+        this.pgpSignedAttestation = $.pgpSignedAttestation;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttestationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation;
-        private @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
+        private AttestationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttestationArgs();
         }
 
         public Builder(AttestationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.genericSignedAttestation = defaults.genericSignedAttestation;
-    	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
+            $ = new AttestationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder genericSignedAttestation(@Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation) {
-            this.genericSignedAttestation = genericSignedAttestation;
+            $.genericSignedAttestation = genericSignedAttestation;
             return this;
         }
-        public Builder genericSignedAttestation(@Nullable GenericSignedAttestationArgs genericSignedAttestation) {
-            this.genericSignedAttestation = Codegen.ofNullable(genericSignedAttestation);
-            return this;
+
+        public Builder genericSignedAttestation(GenericSignedAttestationArgs genericSignedAttestation) {
+            return genericSignedAttestation(Output.of(genericSignedAttestation));
         }
+
         public Builder pgpSignedAttestation(@Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
-            this.pgpSignedAttestation = pgpSignedAttestation;
+            $.pgpSignedAttestation = pgpSignedAttestation;
             return this;
         }
-        public Builder pgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
-            this.pgpSignedAttestation = Codegen.ofNullable(pgpSignedAttestation);
-            return this;
-        }        public AttestationArgs build() {
-            return new AttestationArgs(genericSignedAttestation, pgpSignedAttestation);
+
+        public Builder pgpSignedAttestation(PgpSignedAttestationArgs pgpSignedAttestation) {
+            return pgpSignedAttestation(Output.of(pgpSignedAttestation));
+        }
+
+        public AttestationArgs build() {
+            return $;
         }
     }
+
 }

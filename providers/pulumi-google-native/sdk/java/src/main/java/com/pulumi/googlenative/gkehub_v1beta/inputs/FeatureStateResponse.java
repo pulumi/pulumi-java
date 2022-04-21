@@ -21,7 +21,7 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="code", required=true)
-      private final String code;
+    private String code;
 
     public String code() {
         return this.code;
@@ -32,7 +32,7 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -43,64 +43,59 @@ public final class FeatureStateResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="updateTime", required=true)
-      private final String updateTime;
+    private String updateTime;
 
     public String updateTime() {
         return this.updateTime;
     }
 
-    public FeatureStateResponse(
-        String code,
-        String description,
-        String updateTime) {
-        this.code = Objects.requireNonNull(code, "expected parameter 'code' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.updateTime = Objects.requireNonNull(updateTime, "expected parameter 'updateTime' to be non-null");
-    }
+    private FeatureStateResponse() {}
 
-    private FeatureStateResponse() {
-        this.code = null;
-        this.description = null;
-        this.updateTime = null;
+    private FeatureStateResponse(FeatureStateResponse $) {
+        this.code = $.code;
+        this.description = $.description;
+        this.updateTime = $.updateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FeatureStateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String code;
-        private String description;
-        private String updateTime;
+        private FeatureStateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FeatureStateResponse();
         }
 
         public Builder(FeatureStateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.code = defaults.code;
-    	      this.description = defaults.description;
-    	      this.updateTime = defaults.updateTime;
+            $ = new FeatureStateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder code(String code) {
-            this.code = Objects.requireNonNull(code);
+            $.code = code;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder updateTime(String updateTime) {
-            this.updateTime = Objects.requireNonNull(updateTime);
+            $.updateTime = updateTime;
             return this;
-        }        public FeatureStateResponse build() {
-            return new FeatureStateResponse(code, description, updateTime);
+        }
+
+        public FeatureStateResponse build() {
+            $.code = Objects.requireNonNull($.code, "expected parameter 'code' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.updateTime = Objects.requireNonNull($.updateTime, "expected parameter 'updateTime' to be non-null");
+            return $;
         }
     }
+
 }

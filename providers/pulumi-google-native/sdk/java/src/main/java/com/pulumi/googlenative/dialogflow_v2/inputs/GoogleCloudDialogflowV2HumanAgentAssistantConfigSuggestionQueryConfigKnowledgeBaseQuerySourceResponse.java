@@ -22,48 +22,49 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @Import(name="knowledgeBases", required=true)
-      private final List<String> knowledgeBases;
+    private List<String> knowledgeBases;
 
     public List<String> knowledgeBases() {
         return this.knowledgeBases;
     }
 
-    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(List<String> knowledgeBases) {
-        this.knowledgeBases = Objects.requireNonNull(knowledgeBases, "expected parameter 'knowledgeBases' to be non-null");
-    }
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse() {}
 
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse() {
-        this.knowledgeBases = List.of();
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse $) {
+        this.knowledgeBases = $.knowledgeBases;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> knowledgeBases;
+        private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.knowledgeBases = defaults.knowledgeBases;
+            $ = new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder knowledgeBases(List<String> knowledgeBases) {
-            this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
+            $.knowledgeBases = knowledgeBases;
             return this;
         }
+
         public Builder knowledgeBases(String... knowledgeBases) {
             return knowledgeBases(List.of(knowledgeBases));
-        }        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse build() {
-            return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(knowledgeBases);
+        }
+
+        public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse build() {
+            $.knowledgeBases = Objects.requireNonNull($.knowledgeBases, "expected parameter 'knowledgeBases' to be non-null");
+            return $;
         }
     }
+
 }

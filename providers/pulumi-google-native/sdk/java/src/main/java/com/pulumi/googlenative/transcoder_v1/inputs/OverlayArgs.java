@@ -5,11 +5,11 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.AnimationArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.ImageArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class OverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="animations")
-      private final @Nullable Output<List<AnimationArgs>> animations;
+    private @Nullable Output<List<AnimationArgs>> animations;
 
-    public Output<List<AnimationArgs>> animations() {
-        return this.animations == null ? Codegen.empty() : this.animations;
+    public Optional<Output<List<AnimationArgs>>> animations() {
+        return Optional.ofNullable(this.animations);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class OverlayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<ImageArgs> image;
+    private @Nullable Output<ImageArgs> image;
 
-    public Output<ImageArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<ImageArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
-    public OverlayArgs(
-        @Nullable Output<List<AnimationArgs>> animations,
-        @Nullable Output<ImageArgs> image) {
-        this.animations = animations;
-        this.image = image;
-    }
+    private OverlayArgs() {}
 
-    private OverlayArgs() {
-        this.animations = Codegen.empty();
-        this.image = Codegen.empty();
+    private OverlayArgs(OverlayArgs $) {
+        this.animations = $.animations;
+        this.image = $.image;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OverlayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AnimationArgs>> animations;
-        private @Nullable Output<ImageArgs> image;
+        private OverlayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OverlayArgs();
         }
 
         public Builder(OverlayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.animations = defaults.animations;
-    	      this.image = defaults.image;
+            $ = new OverlayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder animations(@Nullable Output<List<AnimationArgs>> animations) {
-            this.animations = animations;
+            $.animations = animations;
             return this;
         }
-        public Builder animations(@Nullable List<AnimationArgs> animations) {
-            this.animations = Codegen.ofNullable(animations);
-            return this;
+
+        public Builder animations(List<AnimationArgs> animations) {
+            return animations(Output.of(animations));
         }
+
         public Builder animations(AnimationArgs... animations) {
             return animations(List.of(animations));
         }
+
         public Builder image(@Nullable Output<ImageArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable ImageArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
-        }        public OverlayArgs build() {
-            return new OverlayArgs(animations, image);
+
+        public Builder image(ImageArgs image) {
+            return image(Output.of(image));
+        }
+
+        public OverlayArgs build() {
+            return $;
         }
     }
+
 }

@@ -28,7 +28,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="annotationId", required=true)
-      private final String annotationId;
+    private String annotationId;
 
     public String annotationId() {
         return this.annotationId;
@@ -39,7 +39,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="answerFeedback", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
+    private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
 
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback() {
         return this.answerFeedback;
@@ -50,7 +50,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="articleSuggestion", required=true)
-      private final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
+    private GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
 
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion() {
         return this.articleSuggestion;
@@ -61,7 +61,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -72,7 +72,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="dialogflowInteraction", required=true)
-      private final GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
+    private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
 
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction() {
         return this.dialogflowInteraction;
@@ -83,7 +83,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="endBoundary", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
+    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary() {
         return this.endBoundary;
@@ -94,7 +94,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="faqAnswer", required=true)
-      private final GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
+    private GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
 
     public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer() {
         return this.faqAnswer;
@@ -105,7 +105,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="smartComposeSuggestion", required=true)
-      private final GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
+    private GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
 
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion() {
         return this.smartComposeSuggestion;
@@ -116,7 +116,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="smartReply", required=true)
-      private final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
+    private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
 
     public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply() {
         return this.smartReply;
@@ -127,127 +127,108 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @Import(name="startBoundary", required=true)
-      private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
+    private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary() {
         return this.startBoundary;
     }
 
-    public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(
-        String annotationId,
-        GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback,
-        GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion,
-        String createTime,
-        GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary,
-        GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer,
-        GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion,
-        GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply,
-        GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
-        this.annotationId = Objects.requireNonNull(annotationId, "expected parameter 'annotationId' to be non-null");
-        this.answerFeedback = Objects.requireNonNull(answerFeedback, "expected parameter 'answerFeedback' to be non-null");
-        this.articleSuggestion = Objects.requireNonNull(articleSuggestion, "expected parameter 'articleSuggestion' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.dialogflowInteraction = Objects.requireNonNull(dialogflowInteraction, "expected parameter 'dialogflowInteraction' to be non-null");
-        this.endBoundary = Objects.requireNonNull(endBoundary, "expected parameter 'endBoundary' to be non-null");
-        this.faqAnswer = Objects.requireNonNull(faqAnswer, "expected parameter 'faqAnswer' to be non-null");
-        this.smartComposeSuggestion = Objects.requireNonNull(smartComposeSuggestion, "expected parameter 'smartComposeSuggestion' to be non-null");
-        this.smartReply = Objects.requireNonNull(smartReply, "expected parameter 'smartReply' to be non-null");
-        this.startBoundary = Objects.requireNonNull(startBoundary, "expected parameter 'startBoundary' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse() {
-        this.annotationId = null;
-        this.answerFeedback = null;
-        this.articleSuggestion = null;
-        this.createTime = null;
-        this.dialogflowInteraction = null;
-        this.endBoundary = null;
-        this.faqAnswer = null;
-        this.smartComposeSuggestion = null;
-        this.smartReply = null;
-        this.startBoundary = null;
+    private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse $) {
+        this.annotationId = $.annotationId;
+        this.answerFeedback = $.answerFeedback;
+        this.articleSuggestion = $.articleSuggestion;
+        this.createTime = $.createTime;
+        this.dialogflowInteraction = $.dialogflowInteraction;
+        this.endBoundary = $.endBoundary;
+        this.faqAnswer = $.faqAnswer;
+        this.smartComposeSuggestion = $.smartComposeSuggestion;
+        this.smartReply = $.smartReply;
+        this.startBoundary = $.startBoundary;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String annotationId;
-        private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
-        private GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
-        private String createTime;
-        private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
-        private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
-        private GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
-        private GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
-        private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
-        private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
+        private GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.annotationId = defaults.annotationId;
-    	      this.answerFeedback = defaults.answerFeedback;
-    	      this.articleSuggestion = defaults.articleSuggestion;
-    	      this.createTime = defaults.createTime;
-    	      this.dialogflowInteraction = defaults.dialogflowInteraction;
-    	      this.endBoundary = defaults.endBoundary;
-    	      this.faqAnswer = defaults.faqAnswer;
-    	      this.smartComposeSuggestion = defaults.smartComposeSuggestion;
-    	      this.smartReply = defaults.smartReply;
-    	      this.startBoundary = defaults.startBoundary;
+            $ = new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder annotationId(String annotationId) {
-            this.annotationId = Objects.requireNonNull(annotationId);
+            $.annotationId = annotationId;
             return this;
         }
+
         public Builder answerFeedback(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback) {
-            this.answerFeedback = Objects.requireNonNull(answerFeedback);
+            $.answerFeedback = answerFeedback;
             return this;
         }
+
         public Builder articleSuggestion(GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion) {
-            this.articleSuggestion = Objects.requireNonNull(articleSuggestion);
+            $.articleSuggestion = articleSuggestion;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder dialogflowInteraction(GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction) {
-            this.dialogflowInteraction = Objects.requireNonNull(dialogflowInteraction);
+            $.dialogflowInteraction = dialogflowInteraction;
             return this;
         }
+
         public Builder endBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary) {
-            this.endBoundary = Objects.requireNonNull(endBoundary);
+            $.endBoundary = endBoundary;
             return this;
         }
+
         public Builder faqAnswer(GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer) {
-            this.faqAnswer = Objects.requireNonNull(faqAnswer);
+            $.faqAnswer = faqAnswer;
             return this;
         }
+
         public Builder smartComposeSuggestion(GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion) {
-            this.smartComposeSuggestion = Objects.requireNonNull(smartComposeSuggestion);
+            $.smartComposeSuggestion = smartComposeSuggestion;
             return this;
         }
+
         public Builder smartReply(GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply) {
-            this.smartReply = Objects.requireNonNull(smartReply);
+            $.smartReply = smartReply;
             return this;
         }
+
         public Builder startBoundary(GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary) {
-            this.startBoundary = Objects.requireNonNull(startBoundary);
+            $.startBoundary = startBoundary;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse build() {
-            return new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(annotationId, answerFeedback, articleSuggestion, createTime, dialogflowInteraction, endBoundary, faqAnswer, smartComposeSuggestion, smartReply, startBoundary);
+        }
+
+        public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse build() {
+            $.annotationId = Objects.requireNonNull($.annotationId, "expected parameter 'annotationId' to be non-null");
+            $.answerFeedback = Objects.requireNonNull($.answerFeedback, "expected parameter 'answerFeedback' to be non-null");
+            $.articleSuggestion = Objects.requireNonNull($.articleSuggestion, "expected parameter 'articleSuggestion' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.dialogflowInteraction = Objects.requireNonNull($.dialogflowInteraction, "expected parameter 'dialogflowInteraction' to be non-null");
+            $.endBoundary = Objects.requireNonNull($.endBoundary, "expected parameter 'endBoundary' to be non-null");
+            $.faqAnswer = Objects.requireNonNull($.faqAnswer, "expected parameter 'faqAnswer' to be non-null");
+            $.smartComposeSuggestion = Objects.requireNonNull($.smartComposeSuggestion, "expected parameter 'smartComposeSuggestion' to be non-null");
+            $.smartReply = Objects.requireNonNull($.smartReply, "expected parameter 'smartReply' to be non-null");
+            $.startBoundary = Objects.requireNonNull($.startBoundary, "expected parameter 'startBoundary' to be non-null");
+            return $;
         }
     }
+
 }

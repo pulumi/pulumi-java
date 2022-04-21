@@ -5,9 +5,9 @@ package com.pulumi.googlenative.jobs_v4;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,7 +20,7 @@ public final class TenantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="externalId", required=true)
-      private final Output<String> externalId;
+    private Output<String> externalId;
 
     public Output<String> externalId() {
         return this.externalId;
@@ -31,83 +31,76 @@ public final class TenantArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
-    public TenantArgs(
-        Output<String> externalId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project) {
-        this.externalId = Objects.requireNonNull(externalId, "expected parameter 'externalId' to be non-null");
-        this.name = name;
-        this.project = project;
-    }
+    private TenantArgs() {}
 
-    private TenantArgs() {
-        this.externalId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
+    private TenantArgs(TenantArgs $) {
+        this.externalId = $.externalId;
+        this.name = $.name;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TenantArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> externalId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
+        private TenantArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TenantArgs();
         }
 
         public Builder(TenantArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalId = defaults.externalId;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
+            $ = new TenantArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalId(Output<String> externalId) {
-            this.externalId = Objects.requireNonNull(externalId);
+            $.externalId = externalId;
             return this;
         }
+
         public Builder externalId(String externalId) {
-            this.externalId = Output.of(Objects.requireNonNull(externalId));
-            return this;
+            return externalId(Output.of(externalId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
-        }        public TenantArgs build() {
-            return new TenantArgs(externalId, name, project);
+
+        public Builder project(String project) {
+            return project(Output.of(project));
+        }
+
+        public TenantArgs build() {
+            $.externalId = Objects.requireNonNull($.externalId, "expected parameter 'externalId' to be non-null");
+            return $;
         }
     }
+
 }

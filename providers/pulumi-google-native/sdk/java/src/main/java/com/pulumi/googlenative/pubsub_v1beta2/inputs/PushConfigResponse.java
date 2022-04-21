@@ -23,7 +23,7 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="attributes", required=true)
-      private final Map<String,String> attributes;
+    private Map<String,String> attributes;
 
     public Map<String,String> attributes() {
         return this.attributes;
@@ -34,7 +34,7 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oidcToken", required=true)
-      private final OidcTokenResponse oidcToken;
+    private OidcTokenResponse oidcToken;
 
     public OidcTokenResponse oidcToken() {
         return this.oidcToken;
@@ -45,64 +45,59 @@ public final class PushConfigResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="pushEndpoint", required=true)
-      private final String pushEndpoint;
+    private String pushEndpoint;
 
     public String pushEndpoint() {
         return this.pushEndpoint;
     }
 
-    public PushConfigResponse(
-        Map<String,String> attributes,
-        OidcTokenResponse oidcToken,
-        String pushEndpoint) {
-        this.attributes = Objects.requireNonNull(attributes, "expected parameter 'attributes' to be non-null");
-        this.oidcToken = Objects.requireNonNull(oidcToken, "expected parameter 'oidcToken' to be non-null");
-        this.pushEndpoint = Objects.requireNonNull(pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
-    }
+    private PushConfigResponse() {}
 
-    private PushConfigResponse() {
-        this.attributes = Map.of();
-        this.oidcToken = null;
-        this.pushEndpoint = null;
+    private PushConfigResponse(PushConfigResponse $) {
+        this.attributes = $.attributes;
+        this.oidcToken = $.oidcToken;
+        this.pushEndpoint = $.pushEndpoint;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PushConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> attributes;
-        private OidcTokenResponse oidcToken;
-        private String pushEndpoint;
+        private PushConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new PushConfigResponse();
         }
 
         public Builder(PushConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributes = defaults.attributes;
-    	      this.oidcToken = defaults.oidcToken;
-    	      this.pushEndpoint = defaults.pushEndpoint;
+            $ = new PushConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributes(Map<String,String> attributes) {
-            this.attributes = Objects.requireNonNull(attributes);
+            $.attributes = attributes;
             return this;
         }
+
         public Builder oidcToken(OidcTokenResponse oidcToken) {
-            this.oidcToken = Objects.requireNonNull(oidcToken);
+            $.oidcToken = oidcToken;
             return this;
         }
+
         public Builder pushEndpoint(String pushEndpoint) {
-            this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
+            $.pushEndpoint = pushEndpoint;
             return this;
-        }        public PushConfigResponse build() {
-            return new PushConfigResponse(attributes, oidcToken, pushEndpoint);
+        }
+
+        public PushConfigResponse build() {
+            $.attributes = Objects.requireNonNull($.attributes, "expected parameter 'attributes' to be non-null");
+            $.oidcToken = Objects.requireNonNull($.oidcToken, "expected parameter 'oidcToken' to be non-null");
+            $.pushEndpoint = Objects.requireNonNull($.pushEndpoint, "expected parameter 'pushEndpoint' to be non-null");
+            return $;
         }
     }
+
 }

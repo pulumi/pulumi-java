@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dialogflow_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs;
 import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
@@ -13,6 +12,7 @@ import com.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2Inten
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,10 +29,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends com
      * 
      */
     @Import(name="buttons")
-      private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
+    private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons() {
-        return this.buttons == null ? Codegen.empty() : this.buttons;
+    public Optional<Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>>> buttons() {
+        return Optional.ofNullable(this.buttons);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends com
      * 
      */
     @Import(name="columnProperties")
-      private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
+    private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties() {
-        return this.columnProperties == null ? Codegen.empty() : this.columnProperties;
+    public Optional<Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>>> columnProperties() {
+        return Optional.ofNullable(this.columnProperties);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends com
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+    private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
-    public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<GoogleCloudDialogflowV2IntentMessageImageArgs>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends com
      * 
      */
     @Import(name="rows")
-      private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
+    private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
 
-    public Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows() {
-        return this.rows == null ? Codegen.empty() : this.rows;
+    public Optional<Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>>> rows() {
+        return Optional.ofNullable(this.rows);
     }
 
     /**
@@ -73,10 +73,10 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends com
      * 
      */
     @Import(name="subtitle")
-      private final @Nullable Output<String> subtitle;
+    private @Nullable Output<String> subtitle;
 
-    public Output<String> subtitle() {
-        return this.subtitle == null ? Codegen.empty() : this.subtitle;
+    public Optional<Output<String>> subtitle() {
+        return Optional.ofNullable(this.subtitle);
     }
 
     /**
@@ -84,124 +84,111 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends com
      * 
      */
     @Import(name="title", required=true)
-      private final Output<String> title;
+    private Output<String> title;
 
     public Output<String> title() {
         return this.title;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageTableCardArgs(
-        @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons,
-        @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties,
-        @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image,
-        @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows,
-        @Nullable Output<String> subtitle,
-        Output<String> title) {
-        this.buttons = buttons;
-        this.columnProperties = columnProperties;
-        this.image = image;
-        this.rows = rows;
-        this.subtitle = subtitle;
-        this.title = Objects.requireNonNull(title, "expected parameter 'title' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageTableCardArgs() {}
 
-    private GoogleCloudDialogflowV2IntentMessageTableCardArgs() {
-        this.buttons = Codegen.empty();
-        this.columnProperties = Codegen.empty();
-        this.image = Codegen.empty();
-        this.rows = Codegen.empty();
-        this.subtitle = Codegen.empty();
-        this.title = Codegen.empty();
+    private GoogleCloudDialogflowV2IntentMessageTableCardArgs(GoogleCloudDialogflowV2IntentMessageTableCardArgs $) {
+        this.buttons = $.buttons;
+        this.columnProperties = $.columnProperties;
+        this.image = $.image;
+        this.rows = $.rows;
+        this.subtitle = $.subtitle;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageTableCardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
-        private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
-        private @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
-        private @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
-        private @Nullable Output<String> subtitle;
-        private Output<String> title;
+        private GoogleCloudDialogflowV2IntentMessageTableCardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageTableCardArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageTableCardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.buttons = defaults.buttons;
-    	      this.columnProperties = defaults.columnProperties;
-    	      this.image = defaults.image;
-    	      this.rows = defaults.rows;
-    	      this.subtitle = defaults.subtitle;
-    	      this.title = defaults.title;
+            $ = new GoogleCloudDialogflowV2IntentMessageTableCardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder buttons(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons) {
-            this.buttons = buttons;
+            $.buttons = buttons;
             return this;
         }
-        public Builder buttons(@Nullable List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs> buttons) {
-            this.buttons = Codegen.ofNullable(buttons);
-            return this;
+
+        public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs> buttons) {
+            return buttons(Output.of(buttons));
         }
+
         public Builder buttons(GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs... buttons) {
             return buttons(List.of(buttons));
         }
+
         public Builder columnProperties(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties) {
-            this.columnProperties = columnProperties;
+            $.columnProperties = columnProperties;
             return this;
         }
-        public Builder columnProperties(@Nullable List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs> columnProperties) {
-            this.columnProperties = Codegen.ofNullable(columnProperties);
-            return this;
+
+        public Builder columnProperties(List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs> columnProperties) {
+            return columnProperties(Output.of(columnProperties));
         }
+
         public Builder columnProperties(GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs... columnProperties) {
             return columnProperties(List.of(columnProperties));
         }
+
         public Builder image(@Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(GoogleCloudDialogflowV2IntentMessageImageArgs image) {
+            return image(Output.of(image));
         }
+
         public Builder rows(@Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows) {
-            this.rows = rows;
+            $.rows = rows;
             return this;
         }
-        public Builder rows(@Nullable List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs> rows) {
-            this.rows = Codegen.ofNullable(rows);
-            return this;
+
+        public Builder rows(List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs> rows) {
+            return rows(Output.of(rows));
         }
+
         public Builder rows(GoogleCloudDialogflowV2IntentMessageTableCardRowArgs... rows) {
             return rows(List.of(rows));
         }
+
         public Builder subtitle(@Nullable Output<String> subtitle) {
-            this.subtitle = subtitle;
+            $.subtitle = subtitle;
             return this;
         }
-        public Builder subtitle(@Nullable String subtitle) {
-            this.subtitle = Codegen.ofNullable(subtitle);
-            return this;
+
+        public Builder subtitle(String subtitle) {
+            return subtitle(Output.of(subtitle));
         }
+
         public Builder title(Output<String> title) {
-            this.title = Objects.requireNonNull(title);
+            $.title = title;
             return this;
         }
+
         public Builder title(String title) {
-            this.title = Output.of(Objects.requireNonNull(title));
-            return this;
-        }        public GoogleCloudDialogflowV2IntentMessageTableCardArgs build() {
-            return new GoogleCloudDialogflowV2IntentMessageTableCardArgs(buttons, columnProperties, image, rows, subtitle, title);
+            return title(Output.of(title));
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageTableCardArgs build() {
+            $.title = Objects.requireNonNull($.title, "expected parameter 'title' to be non-null");
+            return $;
         }
     }
+
 }

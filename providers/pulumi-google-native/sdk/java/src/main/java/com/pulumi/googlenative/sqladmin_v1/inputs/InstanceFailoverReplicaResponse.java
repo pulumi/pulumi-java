@@ -22,7 +22,7 @@ public final class InstanceFailoverReplicaResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="available", required=true)
-      private final Boolean available;
+    private Boolean available;
 
     public Boolean available() {
         return this.available;
@@ -33,55 +33,52 @@ public final class InstanceFailoverReplicaResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
     }
 
-    public InstanceFailoverReplicaResponse(
-        Boolean available,
-        String name) {
-        this.available = Objects.requireNonNull(available, "expected parameter 'available' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private InstanceFailoverReplicaResponse() {}
 
-    private InstanceFailoverReplicaResponse() {
-        this.available = null;
-        this.name = null;
+    private InstanceFailoverReplicaResponse(InstanceFailoverReplicaResponse $) {
+        this.available = $.available;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceFailoverReplicaResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean available;
-        private String name;
+        private InstanceFailoverReplicaResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceFailoverReplicaResponse();
         }
 
         public Builder(InstanceFailoverReplicaResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.available = defaults.available;
-    	      this.name = defaults.name;
+            $ = new InstanceFailoverReplicaResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder available(Boolean available) {
-            this.available = Objects.requireNonNull(available);
+            $.available = available;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
-        }        public InstanceFailoverReplicaResponse build() {
-            return new InstanceFailoverReplicaResponse(available, name);
+        }
+
+        public InstanceFailoverReplicaResponse build() {
+            $.available = Objects.requireNonNull($.available, "expected parameter 'available' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

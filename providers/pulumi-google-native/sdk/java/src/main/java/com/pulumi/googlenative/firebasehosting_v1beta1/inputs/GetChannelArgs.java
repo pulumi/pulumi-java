@@ -15,78 +15,72 @@ public final class GetChannelArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
     @Import(name="channelId", required=true)
-      private final String channelId;
+    private String channelId;
 
     public String channelId() {
         return this.channelId;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="siteId", required=true)
-      private final String siteId;
+    private String siteId;
 
     public String siteId() {
         return this.siteId;
     }
 
-    public GetChannelArgs(
-        String channelId,
-        @Nullable String project,
-        String siteId) {
-        this.channelId = Objects.requireNonNull(channelId, "expected parameter 'channelId' to be non-null");
-        this.project = project;
-        this.siteId = Objects.requireNonNull(siteId, "expected parameter 'siteId' to be non-null");
-    }
+    private GetChannelArgs() {}
 
-    private GetChannelArgs() {
-        this.channelId = null;
-        this.project = null;
-        this.siteId = null;
+    private GetChannelArgs(GetChannelArgs $) {
+        this.channelId = $.channelId;
+        this.project = $.project;
+        this.siteId = $.siteId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetChannelArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String channelId;
-        private @Nullable String project;
-        private String siteId;
+        private GetChannelArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetChannelArgs();
         }
 
         public Builder(GetChannelArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.channelId = defaults.channelId;
-    	      this.project = defaults.project;
-    	      this.siteId = defaults.siteId;
+            $ = new GetChannelArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder channelId(String channelId) {
-            this.channelId = Objects.requireNonNull(channelId);
+            $.channelId = channelId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder siteId(String siteId) {
-            this.siteId = Objects.requireNonNull(siteId);
+            $.siteId = siteId;
             return this;
-        }        public GetChannelArgs build() {
-            return new GetChannelArgs(channelId, project, siteId);
+        }
+
+        public GetChannelArgs build() {
+            $.channelId = Objects.requireNonNull($.channelId, "expected parameter 'channelId' to be non-null");
+            $.siteId = Objects.requireNonNull($.siteId, "expected parameter 'siteId' to be non-null");
+            return $;
         }
     }
+
 }

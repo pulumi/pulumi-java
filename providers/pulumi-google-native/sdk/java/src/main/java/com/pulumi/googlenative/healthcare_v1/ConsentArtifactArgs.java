@@ -5,13 +5,13 @@ package com.pulumi.googlenative.healthcare_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.healthcare_v1.inputs.ImageArgs;
 import com.pulumi.googlenative.healthcare_v1.inputs.SignatureArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="consentContentScreenshots")
-      private final @Nullable Output<List<ImageArgs>> consentContentScreenshots;
+    private @Nullable Output<List<ImageArgs>> consentContentScreenshots;
 
-    public Output<List<ImageArgs>> consentContentScreenshots() {
-        return this.consentContentScreenshots == null ? Codegen.empty() : this.consentContentScreenshots;
+    public Optional<Output<List<ImageArgs>>> consentContentScreenshots() {
+        return Optional.ofNullable(this.consentContentScreenshots);
     }
 
     /**
@@ -35,21 +35,21 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="consentContentVersion")
-      private final @Nullable Output<String> consentContentVersion;
+    private @Nullable Output<String> consentContentVersion;
 
-    public Output<String> consentContentVersion() {
-        return this.consentContentVersion == null ? Codegen.empty() : this.consentContentVersion;
+    public Optional<Output<String>> consentContentVersion() {
+        return Optional.ofNullable(this.consentContentVersion);
     }
 
     @Import(name="consentStoreId", required=true)
-      private final Output<String> consentStoreId;
+    private Output<String> consentStoreId;
 
     public Output<String> consentStoreId() {
         return this.consentStoreId;
     }
 
     @Import(name="datasetId", required=true)
-      private final Output<String> datasetId;
+    private Output<String> datasetId;
 
     public Output<String> datasetId() {
         return this.datasetId;
@@ -60,17 +60,17 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="guardianSignature")
-      private final @Nullable Output<SignatureArgs> guardianSignature;
+    private @Nullable Output<SignatureArgs> guardianSignature;
 
-    public Output<SignatureArgs> guardianSignature() {
-        return this.guardianSignature == null ? Codegen.empty() : this.guardianSignature;
+    public Optional<Output<SignatureArgs>> guardianSignature() {
+        return Optional.ofNullable(this.guardianSignature);
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<Map<String,String>> metadata;
+    private @Nullable Output<Map<String,String>> metadata;
 
-    public Output<Map<String,String>> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<Map<String,String>>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -89,17 +89,17 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -107,7 +107,7 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userId", required=true)
-      private final Output<String> userId;
+    private Output<String> userId;
 
     public Output<String> userId() {
         return this.userId;
@@ -118,10 +118,10 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="userSignature")
-      private final @Nullable Output<SignatureArgs> userSignature;
+    private @Nullable Output<SignatureArgs> userSignature;
 
-    public Output<SignatureArgs> userSignature() {
-        return this.userSignature == null ? Codegen.empty() : this.userSignature;
+    public Optional<Output<SignatureArgs>> userSignature() {
+        return Optional.ofNullable(this.userSignature);
     }
 
     /**
@@ -129,196 +129,165 @@ public final class ConsentArtifactArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="witnessSignature")
-      private final @Nullable Output<SignatureArgs> witnessSignature;
+    private @Nullable Output<SignatureArgs> witnessSignature;
 
-    public Output<SignatureArgs> witnessSignature() {
-        return this.witnessSignature == null ? Codegen.empty() : this.witnessSignature;
+    public Optional<Output<SignatureArgs>> witnessSignature() {
+        return Optional.ofNullable(this.witnessSignature);
     }
 
-    public ConsentArtifactArgs(
-        @Nullable Output<List<ImageArgs>> consentContentScreenshots,
-        @Nullable Output<String> consentContentVersion,
-        Output<String> consentStoreId,
-        Output<String> datasetId,
-        @Nullable Output<SignatureArgs> guardianSignature,
-        @Nullable Output<String> location,
-        @Nullable Output<Map<String,String>> metadata,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        Output<String> userId,
-        @Nullable Output<SignatureArgs> userSignature,
-        @Nullable Output<SignatureArgs> witnessSignature) {
-        this.consentContentScreenshots = consentContentScreenshots;
-        this.consentContentVersion = consentContentVersion;
-        this.consentStoreId = Objects.requireNonNull(consentStoreId, "expected parameter 'consentStoreId' to be non-null");
-        this.datasetId = Objects.requireNonNull(datasetId, "expected parameter 'datasetId' to be non-null");
-        this.guardianSignature = guardianSignature;
-        this.location = location;
-        this.metadata = metadata;
-        this.name = name;
-        this.project = project;
-        this.userId = Objects.requireNonNull(userId, "expected parameter 'userId' to be non-null");
-        this.userSignature = userSignature;
-        this.witnessSignature = witnessSignature;
-    }
+    private ConsentArtifactArgs() {}
 
-    private ConsentArtifactArgs() {
-        this.consentContentScreenshots = Codegen.empty();
-        this.consentContentVersion = Codegen.empty();
-        this.consentStoreId = Codegen.empty();
-        this.datasetId = Codegen.empty();
-        this.guardianSignature = Codegen.empty();
-        this.location = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.userId = Codegen.empty();
-        this.userSignature = Codegen.empty();
-        this.witnessSignature = Codegen.empty();
+    private ConsentArtifactArgs(ConsentArtifactArgs $) {
+        this.consentContentScreenshots = $.consentContentScreenshots;
+        this.consentContentVersion = $.consentContentVersion;
+        this.consentStoreId = $.consentStoreId;
+        this.datasetId = $.datasetId;
+        this.guardianSignature = $.guardianSignature;
+        this.location = $.location;
+        this.metadata = $.metadata;
+        this.name = $.name;
+        this.project = $.project;
+        this.userId = $.userId;
+        this.userSignature = $.userSignature;
+        this.witnessSignature = $.witnessSignature;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConsentArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ImageArgs>> consentContentScreenshots;
-        private @Nullable Output<String> consentContentVersion;
-        private Output<String> consentStoreId;
-        private Output<String> datasetId;
-        private @Nullable Output<SignatureArgs> guardianSignature;
-        private @Nullable Output<String> location;
-        private @Nullable Output<Map<String,String>> metadata;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private Output<String> userId;
-        private @Nullable Output<SignatureArgs> userSignature;
-        private @Nullable Output<SignatureArgs> witnessSignature;
+        private ConsentArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConsentArtifactArgs();
         }
 
         public Builder(ConsentArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.consentContentScreenshots = defaults.consentContentScreenshots;
-    	      this.consentContentVersion = defaults.consentContentVersion;
-    	      this.consentStoreId = defaults.consentStoreId;
-    	      this.datasetId = defaults.datasetId;
-    	      this.guardianSignature = defaults.guardianSignature;
-    	      this.location = defaults.location;
-    	      this.metadata = defaults.metadata;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.userId = defaults.userId;
-    	      this.userSignature = defaults.userSignature;
-    	      this.witnessSignature = defaults.witnessSignature;
+            $ = new ConsentArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder consentContentScreenshots(@Nullable Output<List<ImageArgs>> consentContentScreenshots) {
-            this.consentContentScreenshots = consentContentScreenshots;
+            $.consentContentScreenshots = consentContentScreenshots;
             return this;
         }
-        public Builder consentContentScreenshots(@Nullable List<ImageArgs> consentContentScreenshots) {
-            this.consentContentScreenshots = Codegen.ofNullable(consentContentScreenshots);
-            return this;
+
+        public Builder consentContentScreenshots(List<ImageArgs> consentContentScreenshots) {
+            return consentContentScreenshots(Output.of(consentContentScreenshots));
         }
+
         public Builder consentContentScreenshots(ImageArgs... consentContentScreenshots) {
             return consentContentScreenshots(List.of(consentContentScreenshots));
         }
+
         public Builder consentContentVersion(@Nullable Output<String> consentContentVersion) {
-            this.consentContentVersion = consentContentVersion;
+            $.consentContentVersion = consentContentVersion;
             return this;
         }
-        public Builder consentContentVersion(@Nullable String consentContentVersion) {
-            this.consentContentVersion = Codegen.ofNullable(consentContentVersion);
-            return this;
+
+        public Builder consentContentVersion(String consentContentVersion) {
+            return consentContentVersion(Output.of(consentContentVersion));
         }
+
         public Builder consentStoreId(Output<String> consentStoreId) {
-            this.consentStoreId = Objects.requireNonNull(consentStoreId);
+            $.consentStoreId = consentStoreId;
             return this;
         }
+
         public Builder consentStoreId(String consentStoreId) {
-            this.consentStoreId = Output.of(Objects.requireNonNull(consentStoreId));
-            return this;
+            return consentStoreId(Output.of(consentStoreId));
         }
+
         public Builder datasetId(Output<String> datasetId) {
-            this.datasetId = Objects.requireNonNull(datasetId);
+            $.datasetId = datasetId;
             return this;
         }
+
         public Builder datasetId(String datasetId) {
-            this.datasetId = Output.of(Objects.requireNonNull(datasetId));
-            return this;
+            return datasetId(Output.of(datasetId));
         }
+
         public Builder guardianSignature(@Nullable Output<SignatureArgs> guardianSignature) {
-            this.guardianSignature = guardianSignature;
+            $.guardianSignature = guardianSignature;
             return this;
         }
-        public Builder guardianSignature(@Nullable SignatureArgs guardianSignature) {
-            this.guardianSignature = Codegen.ofNullable(guardianSignature);
-            return this;
+
+        public Builder guardianSignature(SignatureArgs guardianSignature) {
+            return guardianSignature(Output.of(guardianSignature));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
+
+        public Builder location(String location) {
+            return location(Output.of(location));
         }
+
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(Map<String,String> metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder userId(Output<String> userId) {
-            this.userId = Objects.requireNonNull(userId);
+            $.userId = userId;
             return this;
         }
+
         public Builder userId(String userId) {
-            this.userId = Output.of(Objects.requireNonNull(userId));
-            return this;
+            return userId(Output.of(userId));
         }
+
         public Builder userSignature(@Nullable Output<SignatureArgs> userSignature) {
-            this.userSignature = userSignature;
+            $.userSignature = userSignature;
             return this;
         }
-        public Builder userSignature(@Nullable SignatureArgs userSignature) {
-            this.userSignature = Codegen.ofNullable(userSignature);
-            return this;
+
+        public Builder userSignature(SignatureArgs userSignature) {
+            return userSignature(Output.of(userSignature));
         }
+
         public Builder witnessSignature(@Nullable Output<SignatureArgs> witnessSignature) {
-            this.witnessSignature = witnessSignature;
+            $.witnessSignature = witnessSignature;
             return this;
         }
-        public Builder witnessSignature(@Nullable SignatureArgs witnessSignature) {
-            this.witnessSignature = Codegen.ofNullable(witnessSignature);
-            return this;
-        }        public ConsentArtifactArgs build() {
-            return new ConsentArtifactArgs(consentContentScreenshots, consentContentVersion, consentStoreId, datasetId, guardianSignature, location, metadata, name, project, userId, userSignature, witnessSignature);
+
+        public Builder witnessSignature(SignatureArgs witnessSignature) {
+            return witnessSignature(Output.of(witnessSignature));
+        }
+
+        public ConsentArtifactArgs build() {
+            $.consentStoreId = Objects.requireNonNull($.consentStoreId, "expected parameter 'consentStoreId' to be non-null");
+            $.datasetId = Objects.requireNonNull($.datasetId, "expected parameter 'datasetId' to be non-null");
+            $.userId = Objects.requireNonNull($.userId, "expected parameter 'userId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -15,94 +15,85 @@ public final class GetFeatureIamPolicyArgs extends com.pulumi.resources.InvokeAr
     public static final GetFeatureIamPolicyArgs Empty = new GetFeatureIamPolicyArgs();
 
     @Import(name="featureId", required=true)
-      private final String featureId;
+    private String featureId;
 
     public String featureId() {
         return this.featureId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetFeatureIamPolicyArgs(
-        String featureId,
-        String location,
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project) {
-        this.featureId = Objects.requireNonNull(featureId, "expected parameter 'featureId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-    }
+    private GetFeatureIamPolicyArgs() {}
 
-    private GetFeatureIamPolicyArgs() {
-        this.featureId = null;
-        this.location = null;
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
+    private GetFeatureIamPolicyArgs(GetFeatureIamPolicyArgs $) {
+        this.featureId = $.featureId;
+        this.location = $.location;
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFeatureIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String featureId;
-        private String location;
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
+        private GetFeatureIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFeatureIamPolicyArgs();
         }
 
         public Builder(GetFeatureIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.featureId = defaults.featureId;
-    	      this.location = defaults.location;
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
+            $ = new GetFeatureIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder featureId(String featureId) {
-            this.featureId = Objects.requireNonNull(featureId);
+            $.featureId = featureId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetFeatureIamPolicyArgs build() {
-            return new GetFeatureIamPolicyArgs(featureId, location, optionsRequestedPolicyVersion, project);
+        }
+
+        public GetFeatureIamPolicyArgs build() {
+            $.featureId = Objects.requireNonNull($.featureId, "expected parameter 'featureId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

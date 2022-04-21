@@ -5,9 +5,9 @@ package com.pulumi.googlenative.retail_v2alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.retail_v2alpha.enums.GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs ext
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
+    private @Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
 
-    public Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
-    public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs(@Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode) {
-        this.mode = mode;
-    }
+    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs() {}
 
-    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs() {
-        this.mode = Codegen.empty();
+    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs $) {
+        this.mode = $.mode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode;
+        private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs();
         }
 
         public Builder(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.mode = defaults.mode;
+            $ = new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder mode(@Nullable Output<GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
-        }        public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs build() {
-            return new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs(mode);
+
+        public Builder mode(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecMode mode) {
+            return mode(Output.of(mode));
+        }
+
+        public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecArgs build() {
+            return $;
         }
     }
+
 }

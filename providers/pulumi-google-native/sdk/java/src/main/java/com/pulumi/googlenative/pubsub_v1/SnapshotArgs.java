@@ -5,10 +5,10 @@ package com.pulumi.googlenative.pubsub_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,21 +21,21 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="snapshotId", required=true)
-      private final Output<String> snapshotId;
+    private Output<String> snapshotId;
 
     public Output<String> snapshotId() {
         return this.snapshotId;
@@ -46,89 +46,80 @@ public final class SnapshotArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="subscription", required=true)
-      private final Output<String> subscription;
+    private Output<String> subscription;
 
     public Output<String> subscription() {
         return this.subscription;
     }
 
-    public SnapshotArgs(
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project,
-        Output<String> snapshotId,
-        Output<String> subscription) {
-        this.labels = labels;
-        this.project = project;
-        this.snapshotId = Objects.requireNonNull(snapshotId, "expected parameter 'snapshotId' to be non-null");
-        this.subscription = Objects.requireNonNull(subscription, "expected parameter 'subscription' to be non-null");
-    }
+    private SnapshotArgs() {}
 
-    private SnapshotArgs() {
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
-        this.snapshotId = Codegen.empty();
-        this.subscription = Codegen.empty();
+    private SnapshotArgs(SnapshotArgs $) {
+        this.labels = $.labels;
+        this.project = $.project;
+        this.snapshotId = $.snapshotId;
+        this.subscription = $.subscription;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
-        private Output<String> snapshotId;
-        private Output<String> subscription;
+        private SnapshotArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotArgs();
         }
 
         public Builder(SnapshotArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
-    	      this.snapshotId = defaults.snapshotId;
-    	      this.subscription = defaults.subscription;
+            $ = new SnapshotArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder snapshotId(Output<String> snapshotId) {
-            this.snapshotId = Objects.requireNonNull(snapshotId);
+            $.snapshotId = snapshotId;
             return this;
         }
+
         public Builder snapshotId(String snapshotId) {
-            this.snapshotId = Output.of(Objects.requireNonNull(snapshotId));
-            return this;
+            return snapshotId(Output.of(snapshotId));
         }
+
         public Builder subscription(Output<String> subscription) {
-            this.subscription = Objects.requireNonNull(subscription);
+            $.subscription = subscription;
             return this;
         }
+
         public Builder subscription(String subscription) {
-            this.subscription = Output.of(Objects.requireNonNull(subscription));
-            return this;
-        }        public SnapshotArgs build() {
-            return new SnapshotArgs(labels, project, snapshotId, subscription);
+            return subscription(Output.of(subscription));
+        }
+
+        public SnapshotArgs build() {
+            $.snapshotId = Objects.requireNonNull($.snapshotId, "expected parameter 'snapshotId' to be non-null");
+            $.subscription = Objects.requireNonNull($.subscription, "expected parameter 'subscription' to be non-null");
+            return $;
         }
     }
+
 }

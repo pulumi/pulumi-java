@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * 
      */
     @Import(name="issue", required=true)
-      private final String issue;
+    private String issue;
 
     public String issue() {
         return this.issue;
@@ -44,64 +44,59 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse ext
      * 
      */
     @Import(name="score", required=true)
-      private final Double score;
+    private Double score;
 
     public Double score() {
         return this.score;
     }
 
-    public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(
-        String displayName,
-        String issue,
-        Double score) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.issue = Objects.requireNonNull(issue, "expected parameter 'issue' to be non-null");
-        this.score = Objects.requireNonNull(score, "expected parameter 'score' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse() {
-        this.displayName = null;
-        this.issue = null;
-        this.score = null;
+    private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(GoogleCloudContactcenterinsightsV1IssueAssignmentResponse $) {
+        this.displayName = $.displayName;
+        this.issue = $.issue;
+        this.score = $.score;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1IssueAssignmentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String issue;
-        private Double score;
+        private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1IssueAssignmentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.issue = defaults.issue;
-    	      this.score = defaults.score;
+            $ = new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder issue(String issue) {
-            this.issue = Objects.requireNonNull(issue);
+            $.issue = issue;
             return this;
         }
+
         public Builder score(Double score) {
-            this.score = Objects.requireNonNull(score);
+            $.score = score;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse build() {
-            return new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(displayName, issue, score);
+        }
+
+        public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.issue = Objects.requireNonNull($.issue, "expected parameter 'issue' to be non-null");
+            $.score = Objects.requireNonNull($.score, "expected parameter 'score' to be non-null");
+            return $;
         }
     }
+
 }

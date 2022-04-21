@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class MembershipRoleRestrictionEvaluationArgs extends com.pulumi.re
 
     public static final MembershipRoleRestrictionEvaluationArgs Empty = new MembershipRoleRestrictionEvaluationArgs();
 
-    public MembershipRoleRestrictionEvaluationArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(MembershipRoleRestrictionEvaluationArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private MembershipRoleRestrictionEvaluationArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(MembershipRoleRestrictionEvaluationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new MembershipRoleRestrictionEvaluationArgs();
         }
         public MembershipRoleRestrictionEvaluationArgs build() {
-            return new MembershipRoleRestrictionEvaluationArgs();
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ImageRawDiskResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="containerType", required=true)
-      private final String containerType;
+    private String containerType;
 
     public String containerType() {
         return this.containerType;
@@ -32,55 +32,52 @@ public final class ImageRawDiskResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="source", required=true)
-      private final String source;
+    private String source;
 
     public String source() {
         return this.source;
     }
 
-    public ImageRawDiskResponse(
-        String containerType,
-        String source) {
-        this.containerType = Objects.requireNonNull(containerType, "expected parameter 'containerType' to be non-null");
-        this.source = Objects.requireNonNull(source, "expected parameter 'source' to be non-null");
-    }
+    private ImageRawDiskResponse() {}
 
-    private ImageRawDiskResponse() {
-        this.containerType = null;
-        this.source = null;
+    private ImageRawDiskResponse(ImageRawDiskResponse $) {
+        this.containerType = $.containerType;
+        this.source = $.source;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ImageRawDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String containerType;
-        private String source;
+        private ImageRawDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ImageRawDiskResponse();
         }
 
         public Builder(ImageRawDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerType = defaults.containerType;
-    	      this.source = defaults.source;
+            $ = new ImageRawDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder containerType(String containerType) {
-            this.containerType = Objects.requireNonNull(containerType);
+            $.containerType = containerType;
             return this;
         }
+
         public Builder source(String source) {
-            this.source = Objects.requireNonNull(source);
+            $.source = source;
             return this;
-        }        public ImageRawDiskResponse build() {
-            return new ImageRawDiskResponse(containerType, source);
+        }
+
+        public ImageRawDiskResponse build() {
+            $.containerType = Objects.requireNonNull($.containerType, "expected parameter 'containerType' to be non-null");
+            $.source = Objects.requireNonNull($.source, "expected parameter 'source' to be non-null");
+            return $;
         }
     }
+
 }

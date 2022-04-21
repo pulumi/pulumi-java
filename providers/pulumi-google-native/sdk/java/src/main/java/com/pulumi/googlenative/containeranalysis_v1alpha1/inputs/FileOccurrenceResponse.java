@@ -23,7 +23,7 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="attributions", required=true)
-      private final List<String> attributions;
+    private List<String> attributions;
 
     public List<String> attributions() {
         return this.attributions;
@@ -34,7 +34,7 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="comment", required=true)
-      private final String comment;
+    private String comment;
 
     public String comment() {
         return this.comment;
@@ -45,7 +45,7 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="contributors", required=true)
-      private final List<String> contributors;
+    private List<String> contributors;
 
     public List<String> contributors() {
         return this.contributors;
@@ -56,7 +56,7 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="copyright", required=true)
-      private final String copyright;
+    private String copyright;
 
     public String copyright() {
         return this.copyright;
@@ -67,7 +67,7 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="filesLicenseInfo", required=true)
-      private final List<String> filesLicenseInfo;
+    private List<String> filesLicenseInfo;
 
     public List<String> filesLicenseInfo() {
         return this.filesLicenseInfo;
@@ -78,7 +78,7 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="licenseConcluded", required=true)
-      private final LicenseResponse licenseConcluded;
+    private LicenseResponse licenseConcluded;
 
     public LicenseResponse licenseConcluded() {
         return this.licenseConcluded;
@@ -89,109 +89,99 @@ public final class FileOccurrenceResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="notice", required=true)
-      private final String notice;
+    private String notice;
 
     public String notice() {
         return this.notice;
     }
 
-    public FileOccurrenceResponse(
-        List<String> attributions,
-        String comment,
-        List<String> contributors,
-        String copyright,
-        List<String> filesLicenseInfo,
-        LicenseResponse licenseConcluded,
-        String notice) {
-        this.attributions = Objects.requireNonNull(attributions, "expected parameter 'attributions' to be non-null");
-        this.comment = Objects.requireNonNull(comment, "expected parameter 'comment' to be non-null");
-        this.contributors = Objects.requireNonNull(contributors, "expected parameter 'contributors' to be non-null");
-        this.copyright = Objects.requireNonNull(copyright, "expected parameter 'copyright' to be non-null");
-        this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo, "expected parameter 'filesLicenseInfo' to be non-null");
-        this.licenseConcluded = Objects.requireNonNull(licenseConcluded, "expected parameter 'licenseConcluded' to be non-null");
-        this.notice = Objects.requireNonNull(notice, "expected parameter 'notice' to be non-null");
-    }
+    private FileOccurrenceResponse() {}
 
-    private FileOccurrenceResponse() {
-        this.attributions = List.of();
-        this.comment = null;
-        this.contributors = List.of();
-        this.copyright = null;
-        this.filesLicenseInfo = List.of();
-        this.licenseConcluded = null;
-        this.notice = null;
+    private FileOccurrenceResponse(FileOccurrenceResponse $) {
+        this.attributions = $.attributions;
+        this.comment = $.comment;
+        this.contributors = $.contributors;
+        this.copyright = $.copyright;
+        this.filesLicenseInfo = $.filesLicenseInfo;
+        this.licenseConcluded = $.licenseConcluded;
+        this.notice = $.notice;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileOccurrenceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> attributions;
-        private String comment;
-        private List<String> contributors;
-        private String copyright;
-        private List<String> filesLicenseInfo;
-        private LicenseResponse licenseConcluded;
-        private String notice;
+        private FileOccurrenceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileOccurrenceResponse();
         }
 
         public Builder(FileOccurrenceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.attributions = defaults.attributions;
-    	      this.comment = defaults.comment;
-    	      this.contributors = defaults.contributors;
-    	      this.copyright = defaults.copyright;
-    	      this.filesLicenseInfo = defaults.filesLicenseInfo;
-    	      this.licenseConcluded = defaults.licenseConcluded;
-    	      this.notice = defaults.notice;
+            $ = new FileOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder attributions(List<String> attributions) {
-            this.attributions = Objects.requireNonNull(attributions);
+            $.attributions = attributions;
             return this;
         }
+
         public Builder attributions(String... attributions) {
             return attributions(List.of(attributions));
         }
+
         public Builder comment(String comment) {
-            this.comment = Objects.requireNonNull(comment);
+            $.comment = comment;
             return this;
         }
+
         public Builder contributors(List<String> contributors) {
-            this.contributors = Objects.requireNonNull(contributors);
+            $.contributors = contributors;
             return this;
         }
+
         public Builder contributors(String... contributors) {
             return contributors(List.of(contributors));
         }
+
         public Builder copyright(String copyright) {
-            this.copyright = Objects.requireNonNull(copyright);
+            $.copyright = copyright;
             return this;
         }
+
         public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
-            this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
+            $.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
+
         public Builder filesLicenseInfo(String... filesLicenseInfo) {
             return filesLicenseInfo(List.of(filesLicenseInfo));
         }
+
         public Builder licenseConcluded(LicenseResponse licenseConcluded) {
-            this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
+            $.licenseConcluded = licenseConcluded;
             return this;
         }
+
         public Builder notice(String notice) {
-            this.notice = Objects.requireNonNull(notice);
+            $.notice = notice;
             return this;
-        }        public FileOccurrenceResponse build() {
-            return new FileOccurrenceResponse(attributions, comment, contributors, copyright, filesLicenseInfo, licenseConcluded, notice);
+        }
+
+        public FileOccurrenceResponse build() {
+            $.attributions = Objects.requireNonNull($.attributions, "expected parameter 'attributions' to be non-null");
+            $.comment = Objects.requireNonNull($.comment, "expected parameter 'comment' to be non-null");
+            $.contributors = Objects.requireNonNull($.contributors, "expected parameter 'contributors' to be non-null");
+            $.copyright = Objects.requireNonNull($.copyright, "expected parameter 'copyright' to be non-null");
+            $.filesLicenseInfo = Objects.requireNonNull($.filesLicenseInfo, "expected parameter 'filesLicenseInfo' to be non-null");
+            $.licenseConcluded = Objects.requireNonNull($.licenseConcluded, "expected parameter 'licenseConcluded' to be non-null");
+            $.notice = Objects.requireNonNull($.notice, "expected parameter 'notice' to be non-null");
+            return $;
         }
     }
+
 }

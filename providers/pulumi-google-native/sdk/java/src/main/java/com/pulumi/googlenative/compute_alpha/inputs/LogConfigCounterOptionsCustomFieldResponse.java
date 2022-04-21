@@ -21,7 +21,7 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends com.pulumi
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class LogConfigCounterOptionsCustomFieldResponse extends com.pulumi
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public LogConfigCounterOptionsCustomFieldResponse(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private LogConfigCounterOptionsCustomFieldResponse() {}
 
-    private LogConfigCounterOptionsCustomFieldResponse() {
-        this.name = null;
-        this.value = null;
+    private LogConfigCounterOptionsCustomFieldResponse(LogConfigCounterOptionsCustomFieldResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogConfigCounterOptionsCustomFieldResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private LogConfigCounterOptionsCustomFieldResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogConfigCounterOptionsCustomFieldResponse();
         }
 
         public Builder(LogConfigCounterOptionsCustomFieldResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new LogConfigCounterOptionsCustomFieldResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public LogConfigCounterOptionsCustomFieldResponse build() {
-            return new LogConfigCounterOptionsCustomFieldResponse(name, value);
+        }
+
+        public LogConfigCounterOptionsCustomFieldResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

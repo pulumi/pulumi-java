@@ -22,7 +22,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultLimit", required=true)
-      private final String defaultLimit;
+    private String defaultLimit;
 
     public String defaultLimit() {
         return this.defaultLimit;
@@ -33,7 +33,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -44,7 +44,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -66,7 +66,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="freeTier", required=true)
-      private final String freeTier;
+    private String freeTier;
 
     public String freeTier() {
         return this.freeTier;
@@ -77,7 +77,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxLimit", required=true)
-      private final String maxLimit;
+    private String maxLimit;
 
     public String maxLimit() {
         return this.maxLimit;
@@ -88,7 +88,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metric", required=true)
-      private final String metric;
+    private String metric;
 
     public String metric() {
         return this.metric;
@@ -99,7 +99,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -110,7 +110,7 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="unit", required=true)
-      private final String unit;
+    private String unit;
 
     public String unit() {
         return this.unit;
@@ -121,127 +121,108 @@ public final class QuotaLimitResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="values", required=true)
-      private final Map<String,String> values;
+    private Map<String,String> values;
 
     public Map<String,String> values() {
         return this.values;
     }
 
-    public QuotaLimitResponse(
-        String defaultLimit,
-        String description,
-        String displayName,
-        String duration,
-        String freeTier,
-        String maxLimit,
-        String metric,
-        String name,
-        String unit,
-        Map<String,String> values) {
-        this.defaultLimit = Objects.requireNonNull(defaultLimit, "expected parameter 'defaultLimit' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.freeTier = Objects.requireNonNull(freeTier, "expected parameter 'freeTier' to be non-null");
-        this.maxLimit = Objects.requireNonNull(maxLimit, "expected parameter 'maxLimit' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.unit = Objects.requireNonNull(unit, "expected parameter 'unit' to be non-null");
-        this.values = Objects.requireNonNull(values, "expected parameter 'values' to be non-null");
-    }
+    private QuotaLimitResponse() {}
 
-    private QuotaLimitResponse() {
-        this.defaultLimit = null;
-        this.description = null;
-        this.displayName = null;
-        this.duration = null;
-        this.freeTier = null;
-        this.maxLimit = null;
-        this.metric = null;
-        this.name = null;
-        this.unit = null;
-        this.values = Map.of();
+    private QuotaLimitResponse(QuotaLimitResponse $) {
+        this.defaultLimit = $.defaultLimit;
+        this.description = $.description;
+        this.displayName = $.displayName;
+        this.duration = $.duration;
+        this.freeTier = $.freeTier;
+        this.maxLimit = $.maxLimit;
+        this.metric = $.metric;
+        this.name = $.name;
+        this.unit = $.unit;
+        this.values = $.values;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuotaLimitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String defaultLimit;
-        private String description;
-        private String displayName;
-        private String duration;
-        private String freeTier;
-        private String maxLimit;
-        private String metric;
-        private String name;
-        private String unit;
-        private Map<String,String> values;
+        private QuotaLimitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuotaLimitResponse();
         }
 
         public Builder(QuotaLimitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultLimit = defaults.defaultLimit;
-    	      this.description = defaults.description;
-    	      this.displayName = defaults.displayName;
-    	      this.duration = defaults.duration;
-    	      this.freeTier = defaults.freeTier;
-    	      this.maxLimit = defaults.maxLimit;
-    	      this.metric = defaults.metric;
-    	      this.name = defaults.name;
-    	      this.unit = defaults.unit;
-    	      this.values = defaults.values;
+            $ = new QuotaLimitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultLimit(String defaultLimit) {
-            this.defaultLimit = Objects.requireNonNull(defaultLimit);
+            $.defaultLimit = defaultLimit;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder freeTier(String freeTier) {
-            this.freeTier = Objects.requireNonNull(freeTier);
+            $.freeTier = freeTier;
             return this;
         }
+
         public Builder maxLimit(String maxLimit) {
-            this.maxLimit = Objects.requireNonNull(maxLimit);
+            $.maxLimit = maxLimit;
             return this;
         }
+
         public Builder metric(String metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder unit(String unit) {
-            this.unit = Objects.requireNonNull(unit);
+            $.unit = unit;
             return this;
         }
+
         public Builder values(Map<String,String> values) {
-            this.values = Objects.requireNonNull(values);
+            $.values = values;
             return this;
-        }        public QuotaLimitResponse build() {
-            return new QuotaLimitResponse(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);
+        }
+
+        public QuotaLimitResponse build() {
+            $.defaultLimit = Objects.requireNonNull($.defaultLimit, "expected parameter 'defaultLimit' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.freeTier = Objects.requireNonNull($.freeTier, "expected parameter 'freeTier' to be non-null");
+            $.maxLimit = Objects.requireNonNull($.maxLimit, "expected parameter 'maxLimit' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.unit = Objects.requireNonNull($.unit, "expected parameter 'unit' to be non-null");
+            $.values = Objects.requireNonNull($.values, "expected parameter 'values' to be non-null");
+            return $;
         }
     }
+
 }

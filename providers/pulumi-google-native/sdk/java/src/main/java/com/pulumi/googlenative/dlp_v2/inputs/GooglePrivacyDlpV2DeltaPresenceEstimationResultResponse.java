@@ -22,48 +22,49 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
      * 
      */
     @Import(name="deltaPresenceEstimationHistogram", required=true)
-      private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
+    private List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram() {
         return this.deltaPresenceEstimationHistogram;
     }
 
-    public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram) {
-        this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram, "expected parameter 'deltaPresenceEstimationHistogram' to be non-null");
-    }
+    private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse() {}
 
-    private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse() {
-        this.deltaPresenceEstimationHistogram = List.of();
+    private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse $) {
+        this.deltaPresenceEstimationHistogram = $.deltaPresenceEstimationHistogram;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
+        private GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse();
         }
 
         public Builder(GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deltaPresenceEstimationHistogram = defaults.deltaPresenceEstimationHistogram;
+            $ = new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deltaPresenceEstimationHistogram(List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram) {
-            this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram);
+            $.deltaPresenceEstimationHistogram = deltaPresenceEstimationHistogram;
             return this;
         }
+
         public Builder deltaPresenceEstimationHistogram(GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse... deltaPresenceEstimationHistogram) {
             return deltaPresenceEstimationHistogram(List.of(deltaPresenceEstimationHistogram));
-        }        public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
-            return new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(deltaPresenceEstimationHistogram);
+        }
+
+        public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
+            $.deltaPresenceEstimationHistogram = Objects.requireNonNull($.deltaPresenceEstimationHistogram, "expected parameter 'deltaPresenceEstimationHistogram' to be non-null");
+            return $;
         }
     }
+
 }

@@ -31,7 +31,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="autoscaling", required=true)
-      private final NodePoolAutoscalingResponse autoscaling;
+    private NodePoolAutoscalingResponse autoscaling;
 
     public NodePoolAutoscalingResponse autoscaling() {
         return this.autoscaling;
@@ -42,7 +42,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="conditions", required=true)
-      private final List<StatusConditionResponse> conditions;
+    private List<StatusConditionResponse> conditions;
 
     public List<StatusConditionResponse> conditions() {
         return this.conditions;
@@ -53,7 +53,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final NodeConfigResponse config;
+    private NodeConfigResponse config;
 
     public NodeConfigResponse config() {
         return this.config;
@@ -64,7 +64,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="initialNodeCount", required=true)
-      private final Integer initialNodeCount;
+    private Integer initialNodeCount;
 
     public Integer initialNodeCount() {
         return this.initialNodeCount;
@@ -75,7 +75,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instanceGroupUrls", required=true)
-      private final List<String> instanceGroupUrls;
+    private List<String> instanceGroupUrls;
 
     public List<String> instanceGroupUrls() {
         return this.instanceGroupUrls;
@@ -86,7 +86,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="locations", required=true)
-      private final List<String> locations;
+    private List<String> locations;
 
     public List<String> locations() {
         return this.locations;
@@ -97,7 +97,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="management", required=true)
-      private final NodeManagementResponse management;
+    private NodeManagementResponse management;
 
     public NodeManagementResponse management() {
         return this.management;
@@ -108,7 +108,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="maxPodsConstraint", required=true)
-      private final MaxPodsConstraintResponse maxPodsConstraint;
+    private MaxPodsConstraintResponse maxPodsConstraint;
 
     public MaxPodsConstraintResponse maxPodsConstraint() {
         return this.maxPodsConstraint;
@@ -119,7 +119,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -130,7 +130,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkConfig", required=true)
-      private final NodeNetworkConfigResponse networkConfig;
+    private NodeNetworkConfigResponse networkConfig;
 
     public NodeNetworkConfigResponse networkConfig() {
         return this.networkConfig;
@@ -141,7 +141,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="placementPolicy", required=true)
-      private final PlacementPolicyResponse placementPolicy;
+    private PlacementPolicyResponse placementPolicy;
 
     public PlacementPolicyResponse placementPolicy() {
         return this.placementPolicy;
@@ -152,7 +152,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="podIpv4CidrSize", required=true)
-      private final Integer podIpv4CidrSize;
+    private Integer podIpv4CidrSize;
 
     public Integer podIpv4CidrSize() {
         return this.podIpv4CidrSize;
@@ -163,7 +163,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selfLink", required=true)
-      private final String selfLink;
+    private String selfLink;
 
     public String selfLink() {
         return this.selfLink;
@@ -174,7 +174,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final String status;
+    private String status;
 
     public String status() {
         return this.status;
@@ -185,7 +185,7 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="upgradeSettings", required=true)
-      private final UpgradeSettingsResponse upgradeSettings;
+    private UpgradeSettingsResponse upgradeSettings;
 
     public UpgradeSettingsResponse upgradeSettings() {
         return this.upgradeSettings;
@@ -196,190 +196,162 @@ public final class NodePoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public NodePoolResponse(
-        NodePoolAutoscalingResponse autoscaling,
-        List<StatusConditionResponse> conditions,
-        NodeConfigResponse config,
-        Integer initialNodeCount,
-        List<String> instanceGroupUrls,
-        List<String> locations,
-        NodeManagementResponse management,
-        MaxPodsConstraintResponse maxPodsConstraint,
-        String name,
-        NodeNetworkConfigResponse networkConfig,
-        PlacementPolicyResponse placementPolicy,
-        Integer podIpv4CidrSize,
-        String selfLink,
-        String status,
-        UpgradeSettingsResponse upgradeSettings,
-        String version) {
-        this.autoscaling = Objects.requireNonNull(autoscaling, "expected parameter 'autoscaling' to be non-null");
-        this.conditions = Objects.requireNonNull(conditions, "expected parameter 'conditions' to be non-null");
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.initialNodeCount = Objects.requireNonNull(initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
-        this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls, "expected parameter 'instanceGroupUrls' to be non-null");
-        this.locations = Objects.requireNonNull(locations, "expected parameter 'locations' to be non-null");
-        this.management = Objects.requireNonNull(management, "expected parameter 'management' to be non-null");
-        this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint, "expected parameter 'maxPodsConstraint' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.networkConfig = Objects.requireNonNull(networkConfig, "expected parameter 'networkConfig' to be non-null");
-        this.placementPolicy = Objects.requireNonNull(placementPolicy, "expected parameter 'placementPolicy' to be non-null");
-        this.podIpv4CidrSize = Objects.requireNonNull(podIpv4CidrSize, "expected parameter 'podIpv4CidrSize' to be non-null");
-        this.selfLink = Objects.requireNonNull(selfLink, "expected parameter 'selfLink' to be non-null");
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.upgradeSettings = Objects.requireNonNull(upgradeSettings, "expected parameter 'upgradeSettings' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private NodePoolResponse() {}
 
-    private NodePoolResponse() {
-        this.autoscaling = null;
-        this.conditions = List.of();
-        this.config = null;
-        this.initialNodeCount = null;
-        this.instanceGroupUrls = List.of();
-        this.locations = List.of();
-        this.management = null;
-        this.maxPodsConstraint = null;
-        this.name = null;
-        this.networkConfig = null;
-        this.placementPolicy = null;
-        this.podIpv4CidrSize = null;
-        this.selfLink = null;
-        this.status = null;
-        this.upgradeSettings = null;
-        this.version = null;
+    private NodePoolResponse(NodePoolResponse $) {
+        this.autoscaling = $.autoscaling;
+        this.conditions = $.conditions;
+        this.config = $.config;
+        this.initialNodeCount = $.initialNodeCount;
+        this.instanceGroupUrls = $.instanceGroupUrls;
+        this.locations = $.locations;
+        this.management = $.management;
+        this.maxPodsConstraint = $.maxPodsConstraint;
+        this.name = $.name;
+        this.networkConfig = $.networkConfig;
+        this.placementPolicy = $.placementPolicy;
+        this.podIpv4CidrSize = $.podIpv4CidrSize;
+        this.selfLink = $.selfLink;
+        this.status = $.status;
+        this.upgradeSettings = $.upgradeSettings;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodePoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private NodePoolAutoscalingResponse autoscaling;
-        private List<StatusConditionResponse> conditions;
-        private NodeConfigResponse config;
-        private Integer initialNodeCount;
-        private List<String> instanceGroupUrls;
-        private List<String> locations;
-        private NodeManagementResponse management;
-        private MaxPodsConstraintResponse maxPodsConstraint;
-        private String name;
-        private NodeNetworkConfigResponse networkConfig;
-        private PlacementPolicyResponse placementPolicy;
-        private Integer podIpv4CidrSize;
-        private String selfLink;
-        private String status;
-        private UpgradeSettingsResponse upgradeSettings;
-        private String version;
+        private NodePoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodePoolResponse();
         }
 
         public Builder(NodePoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscaling = defaults.autoscaling;
-    	      this.conditions = defaults.conditions;
-    	      this.config = defaults.config;
-    	      this.initialNodeCount = defaults.initialNodeCount;
-    	      this.instanceGroupUrls = defaults.instanceGroupUrls;
-    	      this.locations = defaults.locations;
-    	      this.management = defaults.management;
-    	      this.maxPodsConstraint = defaults.maxPodsConstraint;
-    	      this.name = defaults.name;
-    	      this.networkConfig = defaults.networkConfig;
-    	      this.placementPolicy = defaults.placementPolicy;
-    	      this.podIpv4CidrSize = defaults.podIpv4CidrSize;
-    	      this.selfLink = defaults.selfLink;
-    	      this.status = defaults.status;
-    	      this.upgradeSettings = defaults.upgradeSettings;
-    	      this.version = defaults.version;
+            $ = new NodePoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscaling(NodePoolAutoscalingResponse autoscaling) {
-            this.autoscaling = Objects.requireNonNull(autoscaling);
+            $.autoscaling = autoscaling;
             return this;
         }
+
         public Builder conditions(List<StatusConditionResponse> conditions) {
-            this.conditions = Objects.requireNonNull(conditions);
+            $.conditions = conditions;
             return this;
         }
+
         public Builder conditions(StatusConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder config(NodeConfigResponse config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder initialNodeCount(Integer initialNodeCount) {
-            this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
+            $.initialNodeCount = initialNodeCount;
             return this;
         }
+
         public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
-            this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
+            $.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
+
         public Builder instanceGroupUrls(String... instanceGroupUrls) {
             return instanceGroupUrls(List.of(instanceGroupUrls));
         }
+
         public Builder locations(List<String> locations) {
-            this.locations = Objects.requireNonNull(locations);
+            $.locations = locations;
             return this;
         }
+
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
+
         public Builder management(NodeManagementResponse management) {
-            this.management = Objects.requireNonNull(management);
+            $.management = management;
             return this;
         }
+
         public Builder maxPodsConstraint(MaxPodsConstraintResponse maxPodsConstraint) {
-            this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
+            $.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder networkConfig(NodeNetworkConfigResponse networkConfig) {
-            this.networkConfig = Objects.requireNonNull(networkConfig);
+            $.networkConfig = networkConfig;
             return this;
         }
+
         public Builder placementPolicy(PlacementPolicyResponse placementPolicy) {
-            this.placementPolicy = Objects.requireNonNull(placementPolicy);
+            $.placementPolicy = placementPolicy;
             return this;
         }
+
         public Builder podIpv4CidrSize(Integer podIpv4CidrSize) {
-            this.podIpv4CidrSize = Objects.requireNonNull(podIpv4CidrSize);
+            $.podIpv4CidrSize = podIpv4CidrSize;
             return this;
         }
+
         public Builder selfLink(String selfLink) {
-            this.selfLink = Objects.requireNonNull(selfLink);
+            $.selfLink = selfLink;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
-            this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
+            $.upgradeSettings = upgradeSettings;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public NodePoolResponse build() {
-            return new NodePoolResponse(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, podIpv4CidrSize, selfLink, status, upgradeSettings, version);
+        }
+
+        public NodePoolResponse build() {
+            $.autoscaling = Objects.requireNonNull($.autoscaling, "expected parameter 'autoscaling' to be non-null");
+            $.conditions = Objects.requireNonNull($.conditions, "expected parameter 'conditions' to be non-null");
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.initialNodeCount = Objects.requireNonNull($.initialNodeCount, "expected parameter 'initialNodeCount' to be non-null");
+            $.instanceGroupUrls = Objects.requireNonNull($.instanceGroupUrls, "expected parameter 'instanceGroupUrls' to be non-null");
+            $.locations = Objects.requireNonNull($.locations, "expected parameter 'locations' to be non-null");
+            $.management = Objects.requireNonNull($.management, "expected parameter 'management' to be non-null");
+            $.maxPodsConstraint = Objects.requireNonNull($.maxPodsConstraint, "expected parameter 'maxPodsConstraint' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.networkConfig = Objects.requireNonNull($.networkConfig, "expected parameter 'networkConfig' to be non-null");
+            $.placementPolicy = Objects.requireNonNull($.placementPolicy, "expected parameter 'placementPolicy' to be non-null");
+            $.podIpv4CidrSize = Objects.requireNonNull($.podIpv4CidrSize, "expected parameter 'podIpv4CidrSize' to be non-null");
+            $.selfLink = Objects.requireNonNull($.selfLink, "expected parameter 'selfLink' to be non-null");
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.upgradeSettings = Objects.requireNonNull($.upgradeSettings, "expected parameter 'upgradeSettings' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

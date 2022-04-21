@@ -22,7 +22,7 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="color", required=true)
-      private final String color;
+    private String color;
 
     public String color() {
         return this.color;
@@ -33,7 +33,7 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -44,7 +44,7 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -55,7 +55,7 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="targetAxis", required=true)
-      private final String targetAxis;
+    private String targetAxis;
 
     public String targetAxis() {
         return this.targetAxis;
@@ -66,82 +66,73 @@ public final class ThresholdResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="value", required=true)
-      private final Double value;
+    private Double value;
 
     public Double value() {
         return this.value;
     }
 
-    public ThresholdResponse(
-        String color,
-        String direction,
-        String label,
-        String targetAxis,
-        Double value) {
-        this.color = Objects.requireNonNull(color, "expected parameter 'color' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.targetAxis = Objects.requireNonNull(targetAxis, "expected parameter 'targetAxis' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private ThresholdResponse() {}
 
-    private ThresholdResponse() {
-        this.color = null;
-        this.direction = null;
-        this.label = null;
-        this.targetAxis = null;
-        this.value = null;
+    private ThresholdResponse(ThresholdResponse $) {
+        this.color = $.color;
+        this.direction = $.direction;
+        this.label = $.label;
+        this.targetAxis = $.targetAxis;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ThresholdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String color;
-        private String direction;
-        private String label;
-        private String targetAxis;
-        private Double value;
+        private ThresholdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ThresholdResponse();
         }
 
         public Builder(ThresholdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.color = defaults.color;
-    	      this.direction = defaults.direction;
-    	      this.label = defaults.label;
-    	      this.targetAxis = defaults.targetAxis;
-    	      this.value = defaults.value;
+            $ = new ThresholdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder color(String color) {
-            this.color = Objects.requireNonNull(color);
+            $.color = color;
             return this;
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder targetAxis(String targetAxis) {
-            this.targetAxis = Objects.requireNonNull(targetAxis);
+            $.targetAxis = targetAxis;
             return this;
         }
+
         public Builder value(Double value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public ThresholdResponse build() {
-            return new ThresholdResponse(color, direction, label, targetAxis, value);
+        }
+
+        public ThresholdResponse build() {
+            $.color = Objects.requireNonNull($.color, "expected parameter 'color' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.targetAxis = Objects.requireNonNull($.targetAxis, "expected parameter 'targetAxis' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

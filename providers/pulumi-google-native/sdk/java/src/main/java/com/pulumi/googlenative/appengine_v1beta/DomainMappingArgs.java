@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1beta.inputs.SslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -17,7 +17,7 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
     @Import(name="appId", required=true)
-      private final Output<String> appId;
+    private Output<String> appId;
 
     public Output<String> appId() {
         return this.appId;
@@ -28,17 +28,17 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="id")
-      private final @Nullable Output<String> id;
+    private @Nullable Output<String> id;
 
-    public Output<String> id() {
-        return this.id == null ? Codegen.empty() : this.id;
+    public Optional<Output<String>> id() {
+        return Optional.ofNullable(this.id);
     }
 
     @Import(name="overrideStrategy")
-      private final @Nullable Output<String> overrideStrategy;
+    private @Nullable Output<String> overrideStrategy;
 
-    public Output<String> overrideStrategy() {
-        return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
+    public Optional<Output<String>> overrideStrategy() {
+        return Optional.ofNullable(this.overrideStrategy);
     }
 
     /**
@@ -46,89 +46,79 @@ public final class DomainMappingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sslSettings")
-      private final @Nullable Output<SslSettingsArgs> sslSettings;
+    private @Nullable Output<SslSettingsArgs> sslSettings;
 
-    public Output<SslSettingsArgs> sslSettings() {
-        return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
+    public Optional<Output<SslSettingsArgs>> sslSettings() {
+        return Optional.ofNullable(this.sslSettings);
     }
 
-    public DomainMappingArgs(
-        Output<String> appId,
-        @Nullable Output<String> id,
-        @Nullable Output<String> overrideStrategy,
-        @Nullable Output<SslSettingsArgs> sslSettings) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.id = id;
-        this.overrideStrategy = overrideStrategy;
-        this.sslSettings = sslSettings;
-    }
+    private DomainMappingArgs() {}
 
-    private DomainMappingArgs() {
-        this.appId = Codegen.empty();
-        this.id = Codegen.empty();
-        this.overrideStrategy = Codegen.empty();
-        this.sslSettings = Codegen.empty();
+    private DomainMappingArgs(DomainMappingArgs $) {
+        this.appId = $.appId;
+        this.id = $.id;
+        this.overrideStrategy = $.overrideStrategy;
+        this.sslSettings = $.sslSettings;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DomainMappingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> appId;
-        private @Nullable Output<String> id;
-        private @Nullable Output<String> overrideStrategy;
-        private @Nullable Output<SslSettingsArgs> sslSettings;
+        private DomainMappingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DomainMappingArgs();
         }
 
         public Builder(DomainMappingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.id = defaults.id;
-    	      this.overrideStrategy = defaults.overrideStrategy;
-    	      this.sslSettings = defaults.sslSettings;
+            $ = new DomainMappingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(Output<String> appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder appId(String appId) {
-            this.appId = Output.of(Objects.requireNonNull(appId));
-            return this;
+            return appId(Output.of(appId));
         }
+
         public Builder id(@Nullable Output<String> id) {
-            this.id = id;
+            $.id = id;
             return this;
         }
-        public Builder id(@Nullable String id) {
-            this.id = Codegen.ofNullable(id);
-            return this;
+
+        public Builder id(String id) {
+            return id(Output.of(id));
         }
+
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
-            this.overrideStrategy = overrideStrategy;
+            $.overrideStrategy = overrideStrategy;
             return this;
         }
-        public Builder overrideStrategy(@Nullable String overrideStrategy) {
-            this.overrideStrategy = Codegen.ofNullable(overrideStrategy);
-            return this;
+
+        public Builder overrideStrategy(String overrideStrategy) {
+            return overrideStrategy(Output.of(overrideStrategy));
         }
+
         public Builder sslSettings(@Nullable Output<SslSettingsArgs> sslSettings) {
-            this.sslSettings = sslSettings;
+            $.sslSettings = sslSettings;
             return this;
         }
-        public Builder sslSettings(@Nullable SslSettingsArgs sslSettings) {
-            this.sslSettings = Codegen.ofNullable(sslSettings);
-            return this;
-        }        public DomainMappingArgs build() {
-            return new DomainMappingArgs(appId, id, overrideStrategy, sslSettings);
+
+        public Builder sslSettings(SslSettingsArgs sslSettings) {
+            return sslSettings(Output.of(sslSettings));
+        }
+
+        public DomainMappingArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            return $;
         }
     }
+
 }

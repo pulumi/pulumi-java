@@ -5,9 +5,9 @@ package com.pulumi.googlenative.websecurityscanner_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.websecurityscanner_v1.inputs.IapTestServiceAccountInfoArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IapCredentialArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iapTestServiceAccountInfo")
-      private final @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
+    private @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
 
-    public Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo() {
-        return this.iapTestServiceAccountInfo == null ? Codegen.empty() : this.iapTestServiceAccountInfo;
+    public Optional<Output<IapTestServiceAccountInfoArgs>> iapTestServiceAccountInfo() {
+        return Optional.ofNullable(this.iapTestServiceAccountInfo);
     }
 
-    public IapCredentialArgs(@Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
-        this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
-    }
+    private IapCredentialArgs() {}
 
-    private IapCredentialArgs() {
-        this.iapTestServiceAccountInfo = Codegen.empty();
+    private IapCredentialArgs(IapCredentialArgs $) {
+        this.iapTestServiceAccountInfo = $.iapTestServiceAccountInfo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IapCredentialArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo;
+        private IapCredentialArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IapCredentialArgs();
         }
 
         public Builder(IapCredentialArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.iapTestServiceAccountInfo = defaults.iapTestServiceAccountInfo;
+            $ = new IapCredentialArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder iapTestServiceAccountInfo(@Nullable Output<IapTestServiceAccountInfoArgs> iapTestServiceAccountInfo) {
-            this.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
+            $.iapTestServiceAccountInfo = iapTestServiceAccountInfo;
             return this;
         }
-        public Builder iapTestServiceAccountInfo(@Nullable IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
-            this.iapTestServiceAccountInfo = Codegen.ofNullable(iapTestServiceAccountInfo);
-            return this;
-        }        public IapCredentialArgs build() {
-            return new IapCredentialArgs(iapTestServiceAccountInfo);
+
+        public Builder iapTestServiceAccountInfo(IapTestServiceAccountInfoArgs iapTestServiceAccountInfo) {
+            return iapTestServiceAccountInfo(Output.of(iapTestServiceAccountInfo));
+        }
+
+        public IapCredentialArgs build() {
+            return $;
         }
     }
+
 }

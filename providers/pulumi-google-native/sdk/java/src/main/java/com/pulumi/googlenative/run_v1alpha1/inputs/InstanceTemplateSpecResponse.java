@@ -21,45 +21,45 @@ public final class InstanceTemplateSpecResponse extends com.pulumi.resources.Inv
      * 
      */
     @Import(name="spec", required=true)
-      private final InstanceSpecResponse spec;
+    private InstanceSpecResponse spec;
 
     public InstanceSpecResponse spec() {
         return this.spec;
     }
 
-    public InstanceTemplateSpecResponse(InstanceSpecResponse spec) {
-        this.spec = Objects.requireNonNull(spec, "expected parameter 'spec' to be non-null");
-    }
+    private InstanceTemplateSpecResponse() {}
 
-    private InstanceTemplateSpecResponse() {
-        this.spec = null;
+    private InstanceTemplateSpecResponse(InstanceTemplateSpecResponse $) {
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(InstanceTemplateSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private InstanceSpecResponse spec;
+        private InstanceTemplateSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new InstanceTemplateSpecResponse();
         }
 
         public Builder(InstanceTemplateSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.spec = defaults.spec;
+            $ = new InstanceTemplateSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder spec(InstanceSpecResponse spec) {
-            this.spec = Objects.requireNonNull(spec);
+            $.spec = spec;
             return this;
-        }        public InstanceTemplateSpecResponse build() {
-            return new InstanceTemplateSpecResponse(spec);
+        }
+
+        public InstanceTemplateSpecResponse build() {
+            $.spec = Objects.requireNonNull($.spec, "expected parameter 'spec' to be non-null");
+            return $;
         }
     }
+
 }

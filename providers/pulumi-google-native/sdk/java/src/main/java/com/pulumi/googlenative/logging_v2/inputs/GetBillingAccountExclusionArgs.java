@@ -13,62 +13,59 @@ public final class GetBillingAccountExclusionArgs extends com.pulumi.resources.I
     public static final GetBillingAccountExclusionArgs Empty = new GetBillingAccountExclusionArgs();
 
     @Import(name="billingAccountId", required=true)
-      private final String billingAccountId;
+    private String billingAccountId;
 
     public String billingAccountId() {
         return this.billingAccountId;
     }
 
     @Import(name="exclusionId", required=true)
-      private final String exclusionId;
+    private String exclusionId;
 
     public String exclusionId() {
         return this.exclusionId;
     }
 
-    public GetBillingAccountExclusionArgs(
-        String billingAccountId,
-        String exclusionId) {
-        this.billingAccountId = Objects.requireNonNull(billingAccountId, "expected parameter 'billingAccountId' to be non-null");
-        this.exclusionId = Objects.requireNonNull(exclusionId, "expected parameter 'exclusionId' to be non-null");
-    }
+    private GetBillingAccountExclusionArgs() {}
 
-    private GetBillingAccountExclusionArgs() {
-        this.billingAccountId = null;
-        this.exclusionId = null;
+    private GetBillingAccountExclusionArgs(GetBillingAccountExclusionArgs $) {
+        this.billingAccountId = $.billingAccountId;
+        this.exclusionId = $.exclusionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetBillingAccountExclusionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String billingAccountId;
-        private String exclusionId;
+        private GetBillingAccountExclusionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetBillingAccountExclusionArgs();
         }
 
         public Builder(GetBillingAccountExclusionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.billingAccountId = defaults.billingAccountId;
-    	      this.exclusionId = defaults.exclusionId;
+            $ = new GetBillingAccountExclusionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder billingAccountId(String billingAccountId) {
-            this.billingAccountId = Objects.requireNonNull(billingAccountId);
+            $.billingAccountId = billingAccountId;
             return this;
         }
+
         public Builder exclusionId(String exclusionId) {
-            this.exclusionId = Objects.requireNonNull(exclusionId);
+            $.exclusionId = exclusionId;
             return this;
-        }        public GetBillingAccountExclusionArgs build() {
-            return new GetBillingAccountExclusionArgs(billingAccountId, exclusionId);
+        }
+
+        public GetBillingAccountExclusionArgs build() {
+            $.billingAccountId = Objects.requireNonNull($.billingAccountId, "expected parameter 'billingAccountId' to be non-null");
+            $.exclusionId = Objects.requireNonNull($.exclusionId, "expected parameter 'exclusionId' to be non-null");
+            return $;
         }
     }
+
 }

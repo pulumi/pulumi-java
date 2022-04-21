@@ -17,7 +17,7 @@ public final class ParquetOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enableListInference", required=true)
-      private final Boolean enableListInference;
+    private Boolean enableListInference;
 
     public Boolean enableListInference() {
         return this.enableListInference;
@@ -28,55 +28,52 @@ public final class ParquetOptionsResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="enumAsString", required=true)
-      private final Boolean enumAsString;
+    private Boolean enumAsString;
 
     public Boolean enumAsString() {
         return this.enumAsString;
     }
 
-    public ParquetOptionsResponse(
-        Boolean enableListInference,
-        Boolean enumAsString) {
-        this.enableListInference = Objects.requireNonNull(enableListInference, "expected parameter 'enableListInference' to be non-null");
-        this.enumAsString = Objects.requireNonNull(enumAsString, "expected parameter 'enumAsString' to be non-null");
-    }
+    private ParquetOptionsResponse() {}
 
-    private ParquetOptionsResponse() {
-        this.enableListInference = null;
-        this.enumAsString = null;
+    private ParquetOptionsResponse(ParquetOptionsResponse $) {
+        this.enableListInference = $.enableListInference;
+        this.enumAsString = $.enumAsString;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ParquetOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean enableListInference;
-        private Boolean enumAsString;
+        private ParquetOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ParquetOptionsResponse();
         }
 
         public Builder(ParquetOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enableListInference = defaults.enableListInference;
-    	      this.enumAsString = defaults.enumAsString;
+            $ = new ParquetOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder enableListInference(Boolean enableListInference) {
-            this.enableListInference = Objects.requireNonNull(enableListInference);
+            $.enableListInference = enableListInference;
             return this;
         }
+
         public Builder enumAsString(Boolean enumAsString) {
-            this.enumAsString = Objects.requireNonNull(enumAsString);
+            $.enumAsString = enumAsString;
             return this;
-        }        public ParquetOptionsResponse build() {
-            return new ParquetOptionsResponse(enableListInference, enumAsString);
+        }
+
+        public ParquetOptionsResponse build() {
+            $.enableListInference = Objects.requireNonNull($.enableListInference, "expected parameter 'enableListInference' to be non-null");
+            $.enumAsString = Objects.requireNonNull($.enumAsString, "expected parameter 'enumAsString' to be non-null");
+            return $;
         }
     }
+
 }

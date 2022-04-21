@@ -15,78 +15,71 @@ public final class GetSchemaArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSchemaArgs Empty = new GetSchemaArgs();
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="schemaId", required=true)
-      private final String schemaId;
+    private String schemaId;
 
     public String schemaId() {
         return this.schemaId;
     }
 
     @Import(name="view")
-      private final @Nullable String view;
+    private @Nullable String view;
 
     public Optional<String> view() {
-        return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
+        return Optional.ofNullable(this.view);
     }
 
-    public GetSchemaArgs(
-        @Nullable String project,
-        String schemaId,
-        @Nullable String view) {
-        this.project = project;
-        this.schemaId = Objects.requireNonNull(schemaId, "expected parameter 'schemaId' to be non-null");
-        this.view = view;
-    }
+    private GetSchemaArgs() {}
 
-    private GetSchemaArgs() {
-        this.project = null;
-        this.schemaId = null;
-        this.view = null;
+    private GetSchemaArgs(GetSchemaArgs $) {
+        this.project = $.project;
+        this.schemaId = $.schemaId;
+        this.view = $.view;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetSchemaArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String project;
-        private String schemaId;
-        private @Nullable String view;
+        private GetSchemaArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetSchemaArgs();
         }
 
         public Builder(GetSchemaArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.project = defaults.project;
-    	      this.schemaId = defaults.schemaId;
-    	      this.view = defaults.view;
+            $ = new GetSchemaArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder schemaId(String schemaId) {
-            this.schemaId = Objects.requireNonNull(schemaId);
+            $.schemaId = schemaId;
             return this;
         }
+
         public Builder view(@Nullable String view) {
-            this.view = view;
+            $.view = view;
             return this;
-        }        public GetSchemaArgs build() {
-            return new GetSchemaArgs(project, schemaId, view);
+        }
+
+        public GetSchemaArgs build() {
+            $.schemaId = Objects.requireNonNull($.schemaId, "expected parameter 'schemaId' to be non-null");
+            return $;
         }
     }
+
 }

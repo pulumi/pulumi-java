@@ -5,9 +5,9 @@ package com.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class EdgeClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceLink")
-      private final @Nullable Output<String> resourceLink;
+    private @Nullable Output<String> resourceLink;
 
-    public Output<String> resourceLink() {
-        return this.resourceLink == null ? Codegen.empty() : this.resourceLink;
+    public Optional<Output<String>> resourceLink() {
+        return Optional.ofNullable(this.resourceLink);
     }
 
-    public EdgeClusterArgs(@Nullable Output<String> resourceLink) {
-        this.resourceLink = resourceLink;
-    }
+    private EdgeClusterArgs() {}
 
-    private EdgeClusterArgs() {
-        this.resourceLink = Codegen.empty();
+    private EdgeClusterArgs(EdgeClusterArgs $) {
+        this.resourceLink = $.resourceLink;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EdgeClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> resourceLink;
+        private EdgeClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EdgeClusterArgs();
         }
 
         public Builder(EdgeClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceLink = defaults.resourceLink;
+            $ = new EdgeClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceLink(@Nullable Output<String> resourceLink) {
-            this.resourceLink = resourceLink;
+            $.resourceLink = resourceLink;
             return this;
         }
-        public Builder resourceLink(@Nullable String resourceLink) {
-            this.resourceLink = Codegen.ofNullable(resourceLink);
-            return this;
-        }        public EdgeClusterArgs build() {
-            return new EdgeClusterArgs(resourceLink);
+
+        public Builder resourceLink(String resourceLink) {
+            return resourceLink(Output.of(resourceLink));
+        }
+
+        public EdgeClusterArgs build() {
+            return $;
         }
     }
+
 }

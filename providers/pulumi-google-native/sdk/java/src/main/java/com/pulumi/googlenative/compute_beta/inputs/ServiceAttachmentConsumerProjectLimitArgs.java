@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends com.pulumi.
      * 
      */
     @Import(name="connectionLimit")
-      private final @Nullable Output<Integer> connectionLimit;
+    private @Nullable Output<Integer> connectionLimit;
 
-    public Output<Integer> connectionLimit() {
-        return this.connectionLimit == null ? Codegen.empty() : this.connectionLimit;
+    public Optional<Output<Integer>> connectionLimit() {
+        return Optional.ofNullable(this.connectionLimit);
     }
 
     /**
@@ -32,63 +32,58 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends com.pulumi.
      * 
      */
     @Import(name="projectIdOrNum")
-      private final @Nullable Output<String> projectIdOrNum;
+    private @Nullable Output<String> projectIdOrNum;
 
-    public Output<String> projectIdOrNum() {
-        return this.projectIdOrNum == null ? Codegen.empty() : this.projectIdOrNum;
+    public Optional<Output<String>> projectIdOrNum() {
+        return Optional.ofNullable(this.projectIdOrNum);
     }
 
-    public ServiceAttachmentConsumerProjectLimitArgs(
-        @Nullable Output<Integer> connectionLimit,
-        @Nullable Output<String> projectIdOrNum) {
-        this.connectionLimit = connectionLimit;
-        this.projectIdOrNum = projectIdOrNum;
-    }
+    private ServiceAttachmentConsumerProjectLimitArgs() {}
 
-    private ServiceAttachmentConsumerProjectLimitArgs() {
-        this.connectionLimit = Codegen.empty();
-        this.projectIdOrNum = Codegen.empty();
+    private ServiceAttachmentConsumerProjectLimitArgs(ServiceAttachmentConsumerProjectLimitArgs $) {
+        this.connectionLimit = $.connectionLimit;
+        this.projectIdOrNum = $.projectIdOrNum;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAttachmentConsumerProjectLimitArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> connectionLimit;
-        private @Nullable Output<String> projectIdOrNum;
+        private ServiceAttachmentConsumerProjectLimitArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAttachmentConsumerProjectLimitArgs();
         }
 
         public Builder(ServiceAttachmentConsumerProjectLimitArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.connectionLimit = defaults.connectionLimit;
-    	      this.projectIdOrNum = defaults.projectIdOrNum;
+            $ = new ServiceAttachmentConsumerProjectLimitArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder connectionLimit(@Nullable Output<Integer> connectionLimit) {
-            this.connectionLimit = connectionLimit;
+            $.connectionLimit = connectionLimit;
             return this;
         }
-        public Builder connectionLimit(@Nullable Integer connectionLimit) {
-            this.connectionLimit = Codegen.ofNullable(connectionLimit);
-            return this;
+
+        public Builder connectionLimit(Integer connectionLimit) {
+            return connectionLimit(Output.of(connectionLimit));
         }
+
         public Builder projectIdOrNum(@Nullable Output<String> projectIdOrNum) {
-            this.projectIdOrNum = projectIdOrNum;
+            $.projectIdOrNum = projectIdOrNum;
             return this;
         }
-        public Builder projectIdOrNum(@Nullable String projectIdOrNum) {
-            this.projectIdOrNum = Codegen.ofNullable(projectIdOrNum);
-            return this;
-        }        public ServiceAttachmentConsumerProjectLimitArgs build() {
-            return new ServiceAttachmentConsumerProjectLimitArgs(connectionLimit, projectIdOrNum);
+
+        public Builder projectIdOrNum(String projectIdOrNum) {
+            return projectIdOrNum(Output.of(projectIdOrNum));
+        }
+
+        public ServiceAttachmentConsumerProjectLimitArgs build() {
+            return $;
         }
     }
+
 }

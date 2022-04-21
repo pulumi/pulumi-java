@@ -21,45 +21,45 @@ public final class AuthorizationLoggingOptionsResponse extends com.pulumi.resour
      * 
      */
     @Import(name="permissionType", required=true)
-      private final String permissionType;
+    private String permissionType;
 
     public String permissionType() {
         return this.permissionType;
     }
 
-    public AuthorizationLoggingOptionsResponse(String permissionType) {
-        this.permissionType = Objects.requireNonNull(permissionType, "expected parameter 'permissionType' to be non-null");
-    }
+    private AuthorizationLoggingOptionsResponse() {}
 
-    private AuthorizationLoggingOptionsResponse() {
-        this.permissionType = null;
+    private AuthorizationLoggingOptionsResponse(AuthorizationLoggingOptionsResponse $) {
+        this.permissionType = $.permissionType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AuthorizationLoggingOptionsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String permissionType;
+        private AuthorizationLoggingOptionsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AuthorizationLoggingOptionsResponse();
         }
 
         public Builder(AuthorizationLoggingOptionsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.permissionType = defaults.permissionType;
+            $ = new AuthorizationLoggingOptionsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder permissionType(String permissionType) {
-            this.permissionType = Objects.requireNonNull(permissionType);
+            $.permissionType = permissionType;
             return this;
-        }        public AuthorizationLoggingOptionsResponse build() {
-            return new AuthorizationLoggingOptionsResponse(permissionType);
+        }
+
+        public AuthorizationLoggingOptionsResponse build() {
+            $.permissionType = Objects.requireNonNull($.permissionType, "expected parameter 'permissionType' to be non-null");
+            return $;
         }
     }
+
 }

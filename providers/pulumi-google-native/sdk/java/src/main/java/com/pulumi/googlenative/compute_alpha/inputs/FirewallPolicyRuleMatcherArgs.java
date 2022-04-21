@@ -5,12 +5,12 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherLayer4ConfigArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="destAddressGroups")
-      private final @Nullable Output<List<String>> destAddressGroups;
+    private @Nullable Output<List<String>> destAddressGroups;
 
-    public Output<List<String>> destAddressGroups() {
-        return this.destAddressGroups == null ? Codegen.empty() : this.destAddressGroups;
+    public Optional<Output<List<String>>> destAddressGroups() {
+        return Optional.ofNullable(this.destAddressGroups);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="destFqdns")
-      private final @Nullable Output<List<String>> destFqdns;
+    private @Nullable Output<List<String>> destFqdns;
 
-    public Output<List<String>> destFqdns() {
-        return this.destFqdns == null ? Codegen.empty() : this.destFqdns;
+    public Optional<Output<List<String>>> destFqdns() {
+        return Optional.ofNullable(this.destFqdns);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="destIpRanges")
-      private final @Nullable Output<List<String>> destIpRanges;
+    private @Nullable Output<List<String>> destIpRanges;
 
-    public Output<List<String>> destIpRanges() {
-        return this.destIpRanges == null ? Codegen.empty() : this.destIpRanges;
+    public Optional<Output<List<String>>> destIpRanges() {
+        return Optional.ofNullable(this.destIpRanges);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="destRegionCodes")
-      private final @Nullable Output<List<String>> destRegionCodes;
+    private @Nullable Output<List<String>> destRegionCodes;
 
-    public Output<List<String>> destRegionCodes() {
-        return this.destRegionCodes == null ? Codegen.empty() : this.destRegionCodes;
+    public Optional<Output<List<String>>> destRegionCodes() {
+        return Optional.ofNullable(this.destRegionCodes);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="layer4Configs")
-      private final @Nullable Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs;
+    private @Nullable Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs;
 
-    public Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs() {
-        return this.layer4Configs == null ? Codegen.empty() : this.layer4Configs;
+    public Optional<Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>>> layer4Configs() {
+        return Optional.ofNullable(this.layer4Configs);
     }
 
     /**
@@ -82,10 +82,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="srcAddressGroups")
-      private final @Nullable Output<List<String>> srcAddressGroups;
+    private @Nullable Output<List<String>> srcAddressGroups;
 
-    public Output<List<String>> srcAddressGroups() {
-        return this.srcAddressGroups == null ? Codegen.empty() : this.srcAddressGroups;
+    public Optional<Output<List<String>>> srcAddressGroups() {
+        return Optional.ofNullable(this.srcAddressGroups);
     }
 
     /**
@@ -93,10 +93,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="srcFqdns")
-      private final @Nullable Output<List<String>> srcFqdns;
+    private @Nullable Output<List<String>> srcFqdns;
 
-    public Output<List<String>> srcFqdns() {
-        return this.srcFqdns == null ? Codegen.empty() : this.srcFqdns;
+    public Optional<Output<List<String>>> srcFqdns() {
+        return Optional.ofNullable(this.srcFqdns);
     }
 
     /**
@@ -104,10 +104,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="srcIpRanges")
-      private final @Nullable Output<List<String>> srcIpRanges;
+    private @Nullable Output<List<String>> srcIpRanges;
 
-    public Output<List<String>> srcIpRanges() {
-        return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
+    public Optional<Output<List<String>>> srcIpRanges() {
+        return Optional.ofNullable(this.srcIpRanges);
     }
 
     /**
@@ -115,10 +115,10 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="srcRegionCodes")
-      private final @Nullable Output<List<String>> srcRegionCodes;
+    private @Nullable Output<List<String>> srcRegionCodes;
 
-    public Output<List<String>> srcRegionCodes() {
-        return this.srcRegionCodes == null ? Codegen.empty() : this.srcRegionCodes;
+    public Optional<Output<List<String>>> srcRegionCodes() {
+        return Optional.ofNullable(this.srcRegionCodes);
     }
 
     /**
@@ -126,197 +126,178 @@ public final class FirewallPolicyRuleMatcherArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="srcSecureTags")
-      private final @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
+    private @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
 
-    public Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags() {
-        return this.srcSecureTags == null ? Codegen.empty() : this.srcSecureTags;
+    public Optional<Output<List<FirewallPolicyRuleSecureTagArgs>>> srcSecureTags() {
+        return Optional.ofNullable(this.srcSecureTags);
     }
 
-    public FirewallPolicyRuleMatcherArgs(
-        @Nullable Output<List<String>> destAddressGroups,
-        @Nullable Output<List<String>> destFqdns,
-        @Nullable Output<List<String>> destIpRanges,
-        @Nullable Output<List<String>> destRegionCodes,
-        @Nullable Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs,
-        @Nullable Output<List<String>> srcAddressGroups,
-        @Nullable Output<List<String>> srcFqdns,
-        @Nullable Output<List<String>> srcIpRanges,
-        @Nullable Output<List<String>> srcRegionCodes,
-        @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags) {
-        this.destAddressGroups = destAddressGroups;
-        this.destFqdns = destFqdns;
-        this.destIpRanges = destIpRanges;
-        this.destRegionCodes = destRegionCodes;
-        this.layer4Configs = layer4Configs;
-        this.srcAddressGroups = srcAddressGroups;
-        this.srcFqdns = srcFqdns;
-        this.srcIpRanges = srcIpRanges;
-        this.srcRegionCodes = srcRegionCodes;
-        this.srcSecureTags = srcSecureTags;
-    }
+    private FirewallPolicyRuleMatcherArgs() {}
 
-    private FirewallPolicyRuleMatcherArgs() {
-        this.destAddressGroups = Codegen.empty();
-        this.destFqdns = Codegen.empty();
-        this.destIpRanges = Codegen.empty();
-        this.destRegionCodes = Codegen.empty();
-        this.layer4Configs = Codegen.empty();
-        this.srcAddressGroups = Codegen.empty();
-        this.srcFqdns = Codegen.empty();
-        this.srcIpRanges = Codegen.empty();
-        this.srcRegionCodes = Codegen.empty();
-        this.srcSecureTags = Codegen.empty();
+    private FirewallPolicyRuleMatcherArgs(FirewallPolicyRuleMatcherArgs $) {
+        this.destAddressGroups = $.destAddressGroups;
+        this.destFqdns = $.destFqdns;
+        this.destIpRanges = $.destIpRanges;
+        this.destRegionCodes = $.destRegionCodes;
+        this.layer4Configs = $.layer4Configs;
+        this.srcAddressGroups = $.srcAddressGroups;
+        this.srcFqdns = $.srcFqdns;
+        this.srcIpRanges = $.srcIpRanges;
+        this.srcRegionCodes = $.srcRegionCodes;
+        this.srcSecureTags = $.srcSecureTags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FirewallPolicyRuleMatcherArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> destAddressGroups;
-        private @Nullable Output<List<String>> destFqdns;
-        private @Nullable Output<List<String>> destIpRanges;
-        private @Nullable Output<List<String>> destRegionCodes;
-        private @Nullable Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs;
-        private @Nullable Output<List<String>> srcAddressGroups;
-        private @Nullable Output<List<String>> srcFqdns;
-        private @Nullable Output<List<String>> srcIpRanges;
-        private @Nullable Output<List<String>> srcRegionCodes;
-        private @Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags;
+        private FirewallPolicyRuleMatcherArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FirewallPolicyRuleMatcherArgs();
         }
 
         public Builder(FirewallPolicyRuleMatcherArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.destAddressGroups = defaults.destAddressGroups;
-    	      this.destFqdns = defaults.destFqdns;
-    	      this.destIpRanges = defaults.destIpRanges;
-    	      this.destRegionCodes = defaults.destRegionCodes;
-    	      this.layer4Configs = defaults.layer4Configs;
-    	      this.srcAddressGroups = defaults.srcAddressGroups;
-    	      this.srcFqdns = defaults.srcFqdns;
-    	      this.srcIpRanges = defaults.srcIpRanges;
-    	      this.srcRegionCodes = defaults.srcRegionCodes;
-    	      this.srcSecureTags = defaults.srcSecureTags;
+            $ = new FirewallPolicyRuleMatcherArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder destAddressGroups(@Nullable Output<List<String>> destAddressGroups) {
-            this.destAddressGroups = destAddressGroups;
+            $.destAddressGroups = destAddressGroups;
             return this;
         }
-        public Builder destAddressGroups(@Nullable List<String> destAddressGroups) {
-            this.destAddressGroups = Codegen.ofNullable(destAddressGroups);
-            return this;
+
+        public Builder destAddressGroups(List<String> destAddressGroups) {
+            return destAddressGroups(Output.of(destAddressGroups));
         }
+
         public Builder destAddressGroups(String... destAddressGroups) {
             return destAddressGroups(List.of(destAddressGroups));
         }
+
         public Builder destFqdns(@Nullable Output<List<String>> destFqdns) {
-            this.destFqdns = destFqdns;
+            $.destFqdns = destFqdns;
             return this;
         }
-        public Builder destFqdns(@Nullable List<String> destFqdns) {
-            this.destFqdns = Codegen.ofNullable(destFqdns);
-            return this;
+
+        public Builder destFqdns(List<String> destFqdns) {
+            return destFqdns(Output.of(destFqdns));
         }
+
         public Builder destFqdns(String... destFqdns) {
             return destFqdns(List.of(destFqdns));
         }
+
         public Builder destIpRanges(@Nullable Output<List<String>> destIpRanges) {
-            this.destIpRanges = destIpRanges;
+            $.destIpRanges = destIpRanges;
             return this;
         }
-        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
-            this.destIpRanges = Codegen.ofNullable(destIpRanges);
-            return this;
+
+        public Builder destIpRanges(List<String> destIpRanges) {
+            return destIpRanges(Output.of(destIpRanges));
         }
+
         public Builder destIpRanges(String... destIpRanges) {
             return destIpRanges(List.of(destIpRanges));
         }
+
         public Builder destRegionCodes(@Nullable Output<List<String>> destRegionCodes) {
-            this.destRegionCodes = destRegionCodes;
+            $.destRegionCodes = destRegionCodes;
             return this;
         }
-        public Builder destRegionCodes(@Nullable List<String> destRegionCodes) {
-            this.destRegionCodes = Codegen.ofNullable(destRegionCodes);
-            return this;
+
+        public Builder destRegionCodes(List<String> destRegionCodes) {
+            return destRegionCodes(Output.of(destRegionCodes));
         }
+
         public Builder destRegionCodes(String... destRegionCodes) {
             return destRegionCodes(List.of(destRegionCodes));
         }
+
         public Builder layer4Configs(@Nullable Output<List<FirewallPolicyRuleMatcherLayer4ConfigArgs>> layer4Configs) {
-            this.layer4Configs = layer4Configs;
+            $.layer4Configs = layer4Configs;
             return this;
         }
-        public Builder layer4Configs(@Nullable List<FirewallPolicyRuleMatcherLayer4ConfigArgs> layer4Configs) {
-            this.layer4Configs = Codegen.ofNullable(layer4Configs);
-            return this;
+
+        public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigArgs> layer4Configs) {
+            return layer4Configs(Output.of(layer4Configs));
         }
+
         public Builder layer4Configs(FirewallPolicyRuleMatcherLayer4ConfigArgs... layer4Configs) {
             return layer4Configs(List.of(layer4Configs));
         }
+
         public Builder srcAddressGroups(@Nullable Output<List<String>> srcAddressGroups) {
-            this.srcAddressGroups = srcAddressGroups;
+            $.srcAddressGroups = srcAddressGroups;
             return this;
         }
-        public Builder srcAddressGroups(@Nullable List<String> srcAddressGroups) {
-            this.srcAddressGroups = Codegen.ofNullable(srcAddressGroups);
-            return this;
+
+        public Builder srcAddressGroups(List<String> srcAddressGroups) {
+            return srcAddressGroups(Output.of(srcAddressGroups));
         }
+
         public Builder srcAddressGroups(String... srcAddressGroups) {
             return srcAddressGroups(List.of(srcAddressGroups));
         }
+
         public Builder srcFqdns(@Nullable Output<List<String>> srcFqdns) {
-            this.srcFqdns = srcFqdns;
+            $.srcFqdns = srcFqdns;
             return this;
         }
-        public Builder srcFqdns(@Nullable List<String> srcFqdns) {
-            this.srcFqdns = Codegen.ofNullable(srcFqdns);
-            return this;
+
+        public Builder srcFqdns(List<String> srcFqdns) {
+            return srcFqdns(Output.of(srcFqdns));
         }
+
         public Builder srcFqdns(String... srcFqdns) {
             return srcFqdns(List.of(srcFqdns));
         }
+
         public Builder srcIpRanges(@Nullable Output<List<String>> srcIpRanges) {
-            this.srcIpRanges = srcIpRanges;
+            $.srcIpRanges = srcIpRanges;
             return this;
         }
-        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Codegen.ofNullable(srcIpRanges);
-            return this;
+
+        public Builder srcIpRanges(List<String> srcIpRanges) {
+            return srcIpRanges(Output.of(srcIpRanges));
         }
+
         public Builder srcIpRanges(String... srcIpRanges) {
             return srcIpRanges(List.of(srcIpRanges));
         }
+
         public Builder srcRegionCodes(@Nullable Output<List<String>> srcRegionCodes) {
-            this.srcRegionCodes = srcRegionCodes;
+            $.srcRegionCodes = srcRegionCodes;
             return this;
         }
-        public Builder srcRegionCodes(@Nullable List<String> srcRegionCodes) {
-            this.srcRegionCodes = Codegen.ofNullable(srcRegionCodes);
-            return this;
+
+        public Builder srcRegionCodes(List<String> srcRegionCodes) {
+            return srcRegionCodes(Output.of(srcRegionCodes));
         }
+
         public Builder srcRegionCodes(String... srcRegionCodes) {
             return srcRegionCodes(List.of(srcRegionCodes));
         }
+
         public Builder srcSecureTags(@Nullable Output<List<FirewallPolicyRuleSecureTagArgs>> srcSecureTags) {
-            this.srcSecureTags = srcSecureTags;
+            $.srcSecureTags = srcSecureTags;
             return this;
         }
-        public Builder srcSecureTags(@Nullable List<FirewallPolicyRuleSecureTagArgs> srcSecureTags) {
-            this.srcSecureTags = Codegen.ofNullable(srcSecureTags);
-            return this;
+
+        public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagArgs> srcSecureTags) {
+            return srcSecureTags(Output.of(srcSecureTags));
         }
+
         public Builder srcSecureTags(FirewallPolicyRuleSecureTagArgs... srcSecureTags) {
             return srcSecureTags(List.of(srcSecureTags));
-        }        public FirewallPolicyRuleMatcherArgs build() {
-            return new FirewallPolicyRuleMatcherArgs(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags);
+        }
+
+        public FirewallPolicyRuleMatcherArgs build() {
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="displayName", required=true)
-      private final String displayName;
+    private String displayName;
 
     public String displayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -43,7 +43,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="region", required=true)
-      private final String region;
+    private String region;
 
     public String region() {
         return this.region;
@@ -54,7 +54,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="remoteGateway", required=true)
-      private final String remoteGateway;
+    private String remoteGateway;
 
     public String remoteGateway() {
         return this.remoteGateway;
@@ -65,7 +65,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="remoteGatewayIp", required=true)
-      private final String remoteGatewayIp;
+    private String remoteGatewayIp;
 
     public String remoteGatewayIp() {
         return this.remoteGatewayIp;
@@ -76,7 +76,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="routingType", required=true)
-      private final String routingType;
+    private String routingType;
 
     public String routingType() {
         return this.routingType;
@@ -87,7 +87,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceGateway", required=true)
-      private final String sourceGateway;
+    private String sourceGateway;
 
     public String sourceGateway() {
         return this.sourceGateway;
@@ -98,7 +98,7 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="sourceGatewayIp", required=true)
-      private final String sourceGatewayIp;
+    private String sourceGatewayIp;
 
     public String sourceGatewayIp() {
         return this.sourceGatewayIp;
@@ -109,118 +109,101 @@ public final class VpnTunnelInfoResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public VpnTunnelInfoResponse(
-        String displayName,
-        String networkUri,
-        String region,
-        String remoteGateway,
-        String remoteGatewayIp,
-        String routingType,
-        String sourceGateway,
-        String sourceGatewayIp,
-        String uri) {
-        this.displayName = Objects.requireNonNull(displayName, "expected parameter 'displayName' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.remoteGateway = Objects.requireNonNull(remoteGateway, "expected parameter 'remoteGateway' to be non-null");
-        this.remoteGatewayIp = Objects.requireNonNull(remoteGatewayIp, "expected parameter 'remoteGatewayIp' to be non-null");
-        this.routingType = Objects.requireNonNull(routingType, "expected parameter 'routingType' to be non-null");
-        this.sourceGateway = Objects.requireNonNull(sourceGateway, "expected parameter 'sourceGateway' to be non-null");
-        this.sourceGatewayIp = Objects.requireNonNull(sourceGatewayIp, "expected parameter 'sourceGatewayIp' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private VpnTunnelInfoResponse() {}
 
-    private VpnTunnelInfoResponse() {
-        this.displayName = null;
-        this.networkUri = null;
-        this.region = null;
-        this.remoteGateway = null;
-        this.remoteGatewayIp = null;
-        this.routingType = null;
-        this.sourceGateway = null;
-        this.sourceGatewayIp = null;
-        this.uri = null;
+    private VpnTunnelInfoResponse(VpnTunnelInfoResponse $) {
+        this.displayName = $.displayName;
+        this.networkUri = $.networkUri;
+        this.region = $.region;
+        this.remoteGateway = $.remoteGateway;
+        this.remoteGatewayIp = $.remoteGatewayIp;
+        this.routingType = $.routingType;
+        this.sourceGateway = $.sourceGateway;
+        this.sourceGatewayIp = $.sourceGatewayIp;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpnTunnelInfoResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String displayName;
-        private String networkUri;
-        private String region;
-        private String remoteGateway;
-        private String remoteGatewayIp;
-        private String routingType;
-        private String sourceGateway;
-        private String sourceGatewayIp;
-        private String uri;
+        private VpnTunnelInfoResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpnTunnelInfoResponse();
         }
 
         public Builder(VpnTunnelInfoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayName = defaults.displayName;
-    	      this.networkUri = defaults.networkUri;
-    	      this.region = defaults.region;
-    	      this.remoteGateway = defaults.remoteGateway;
-    	      this.remoteGatewayIp = defaults.remoteGatewayIp;
-    	      this.routingType = defaults.routingType;
-    	      this.sourceGateway = defaults.sourceGateway;
-    	      this.sourceGatewayIp = defaults.sourceGatewayIp;
-    	      this.uri = defaults.uri;
+            $ = new VpnTunnelInfoResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder displayName(String displayName) {
-            this.displayName = Objects.requireNonNull(displayName);
+            $.displayName = displayName;
             return this;
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder remoteGateway(String remoteGateway) {
-            this.remoteGateway = Objects.requireNonNull(remoteGateway);
+            $.remoteGateway = remoteGateway;
             return this;
         }
+
         public Builder remoteGatewayIp(String remoteGatewayIp) {
-            this.remoteGatewayIp = Objects.requireNonNull(remoteGatewayIp);
+            $.remoteGatewayIp = remoteGatewayIp;
             return this;
         }
+
         public Builder routingType(String routingType) {
-            this.routingType = Objects.requireNonNull(routingType);
+            $.routingType = routingType;
             return this;
         }
+
         public Builder sourceGateway(String sourceGateway) {
-            this.sourceGateway = Objects.requireNonNull(sourceGateway);
+            $.sourceGateway = sourceGateway;
             return this;
         }
+
         public Builder sourceGatewayIp(String sourceGatewayIp) {
-            this.sourceGatewayIp = Objects.requireNonNull(sourceGatewayIp);
+            $.sourceGatewayIp = sourceGatewayIp;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public VpnTunnelInfoResponse build() {
-            return new VpnTunnelInfoResponse(displayName, networkUri, region, remoteGateway, remoteGatewayIp, routingType, sourceGateway, sourceGatewayIp, uri);
+        }
+
+        public VpnTunnelInfoResponse build() {
+            $.displayName = Objects.requireNonNull($.displayName, "expected parameter 'displayName' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            $.remoteGateway = Objects.requireNonNull($.remoteGateway, "expected parameter 'remoteGateway' to be non-null");
+            $.remoteGatewayIp = Objects.requireNonNull($.remoteGatewayIp, "expected parameter 'remoteGatewayIp' to be non-null");
+            $.routingType = Objects.requireNonNull($.routingType, "expected parameter 'routingType' to be non-null");
+            $.sourceGateway = Objects.requireNonNull($.sourceGateway, "expected parameter 'sourceGateway' to be non-null");
+            $.sourceGatewayIp = Objects.requireNonNull($.sourceGatewayIp, "expected parameter 'sourceGatewayIp' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

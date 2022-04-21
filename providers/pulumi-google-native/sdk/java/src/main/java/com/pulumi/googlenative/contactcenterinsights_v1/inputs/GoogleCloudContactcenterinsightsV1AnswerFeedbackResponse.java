@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * 
      */
     @Import(name="clicked", required=true)
-      private final Boolean clicked;
+    private Boolean clicked;
 
     public Boolean clicked() {
         return this.clicked;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * 
      */
     @Import(name="correctnessLevel", required=true)
-      private final String correctnessLevel;
+    private String correctnessLevel;
 
     public String correctnessLevel() {
         return this.correctnessLevel;
@@ -44,64 +44,59 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse exte
      * 
      */
     @Import(name="displayed", required=true)
-      private final Boolean displayed;
+    private Boolean displayed;
 
     public Boolean displayed() {
         return this.displayed;
     }
 
-    public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(
-        Boolean clicked,
-        String correctnessLevel,
-        Boolean displayed) {
-        this.clicked = Objects.requireNonNull(clicked, "expected parameter 'clicked' to be non-null");
-        this.correctnessLevel = Objects.requireNonNull(correctnessLevel, "expected parameter 'correctnessLevel' to be non-null");
-        this.displayed = Objects.requireNonNull(displayed, "expected parameter 'displayed' to be non-null");
-    }
+    private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse() {}
 
-    private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse() {
-        this.clicked = null;
-        this.correctnessLevel = null;
-        this.displayed = null;
+    private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse $) {
+        this.clicked = $.clicked;
+        this.correctnessLevel = $.correctnessLevel;
+        this.displayed = $.displayed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean clicked;
-        private String correctnessLevel;
-        private Boolean displayed;
+        private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clicked = defaults.clicked;
-    	      this.correctnessLevel = defaults.correctnessLevel;
-    	      this.displayed = defaults.displayed;
+            $ = new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder clicked(Boolean clicked) {
-            this.clicked = Objects.requireNonNull(clicked);
+            $.clicked = clicked;
             return this;
         }
+
         public Builder correctnessLevel(String correctnessLevel) {
-            this.correctnessLevel = Objects.requireNonNull(correctnessLevel);
+            $.correctnessLevel = correctnessLevel;
             return this;
         }
+
         public Builder displayed(Boolean displayed) {
-            this.displayed = Objects.requireNonNull(displayed);
+            $.displayed = displayed;
             return this;
-        }        public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
-            return new GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(clicked, correctnessLevel, displayed);
+        }
+
+        public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse build() {
+            $.clicked = Objects.requireNonNull($.clicked, "expected parameter 'clicked' to be non-null");
+            $.correctnessLevel = Objects.requireNonNull($.correctnessLevel, "expected parameter 'correctnessLevel' to be non-null");
+            $.displayed = Objects.requireNonNull($.displayed, "expected parameter 'displayed' to be non-null");
+            return $;
         }
     }
+
 }

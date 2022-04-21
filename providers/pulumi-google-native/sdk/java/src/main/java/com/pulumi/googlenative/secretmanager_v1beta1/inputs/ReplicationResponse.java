@@ -22,7 +22,7 @@ public final class ReplicationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="automatic", required=true)
-      private final AutomaticResponse automatic;
+    private AutomaticResponse automatic;
 
     public AutomaticResponse automatic() {
         return this.automatic;
@@ -33,55 +33,52 @@ public final class ReplicationResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="userManaged", required=true)
-      private final UserManagedResponse userManaged;
+    private UserManagedResponse userManaged;
 
     public UserManagedResponse userManaged() {
         return this.userManaged;
     }
 
-    public ReplicationResponse(
-        AutomaticResponse automatic,
-        UserManagedResponse userManaged) {
-        this.automatic = Objects.requireNonNull(automatic, "expected parameter 'automatic' to be non-null");
-        this.userManaged = Objects.requireNonNull(userManaged, "expected parameter 'userManaged' to be non-null");
-    }
+    private ReplicationResponse() {}
 
-    private ReplicationResponse() {
-        this.automatic = null;
-        this.userManaged = null;
+    private ReplicationResponse(ReplicationResponse $) {
+        this.automatic = $.automatic;
+        this.userManaged = $.userManaged;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AutomaticResponse automatic;
-        private UserManagedResponse userManaged;
+        private ReplicationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationResponse();
         }
 
         public Builder(ReplicationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.automatic = defaults.automatic;
-    	      this.userManaged = defaults.userManaged;
+            $ = new ReplicationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder automatic(AutomaticResponse automatic) {
-            this.automatic = Objects.requireNonNull(automatic);
+            $.automatic = automatic;
             return this;
         }
+
         public Builder userManaged(UserManagedResponse userManaged) {
-            this.userManaged = Objects.requireNonNull(userManaged);
+            $.userManaged = userManaged;
             return this;
-        }        public ReplicationResponse build() {
-            return new ReplicationResponse(automatic, userManaged);
+        }
+
+        public ReplicationResponse build() {
+            $.automatic = Objects.requireNonNull($.automatic, "expected parameter 'automatic' to be non-null");
+            $.userManaged = Objects.requireNonNull($.userManaged, "expected parameter 'userManaged' to be non-null");
+            return $;
         }
     }
+
 }

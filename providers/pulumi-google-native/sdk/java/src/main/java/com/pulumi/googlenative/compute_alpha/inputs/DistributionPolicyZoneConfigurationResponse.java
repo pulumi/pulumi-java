@@ -17,45 +17,45 @@ public final class DistributionPolicyZoneConfigurationResponse extends com.pulum
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public DistributionPolicyZoneConfigurationResponse(String zone) {
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private DistributionPolicyZoneConfigurationResponse() {}
 
-    private DistributionPolicyZoneConfigurationResponse() {
-        this.zone = null;
+    private DistributionPolicyZoneConfigurationResponse(DistributionPolicyZoneConfigurationResponse $) {
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionPolicyZoneConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String zone;
+        private DistributionPolicyZoneConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionPolicyZoneConfigurationResponse();
         }
 
         public Builder(DistributionPolicyZoneConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.zone = defaults.zone;
+            $ = new DistributionPolicyZoneConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public DistributionPolicyZoneConfigurationResponse build() {
-            return new DistributionPolicyZoneConfigurationResponse(zone);
+        }
+
+        public DistributionPolicyZoneConfigurationResponse build() {
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

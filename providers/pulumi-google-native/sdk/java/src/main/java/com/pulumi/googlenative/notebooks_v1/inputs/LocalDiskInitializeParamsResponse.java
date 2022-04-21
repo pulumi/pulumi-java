@@ -22,7 +22,7 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -33,7 +33,7 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -44,7 +44,7 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -55,7 +55,7 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -66,82 +66,73 @@ public final class LocalDiskInitializeParamsResponse extends com.pulumi.resource
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
     }
 
-    public LocalDiskInitializeParamsResponse(
-        String description,
-        String diskName,
-        String diskSizeGb,
-        String diskType,
-        Map<String,String> labels) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-    }
+    private LocalDiskInitializeParamsResponse() {}
 
-    private LocalDiskInitializeParamsResponse() {
-        this.description = null;
-        this.diskName = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.labels = Map.of();
+    private LocalDiskInitializeParamsResponse(LocalDiskInitializeParamsResponse $) {
+        this.description = $.description;
+        this.diskName = $.diskName;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.labels = $.labels;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalDiskInitializeParamsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String diskName;
-        private String diskSizeGb;
-        private String diskType;
-        private Map<String,String> labels;
+        private LocalDiskInitializeParamsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalDiskInitializeParamsResponse();
         }
 
         public Builder(LocalDiskInitializeParamsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.labels = defaults.labels;
+            $ = new LocalDiskInitializeParamsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
-        }        public LocalDiskInitializeParamsResponse build() {
-            return new LocalDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, labels);
+        }
+
+        public LocalDiskInitializeParamsResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            return $;
         }
     }
+
 }

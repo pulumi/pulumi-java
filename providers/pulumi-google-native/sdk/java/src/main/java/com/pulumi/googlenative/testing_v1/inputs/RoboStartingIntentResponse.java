@@ -23,7 +23,7 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="launcherActivity", required=true)
-      private final LauncherActivityIntentResponse launcherActivity;
+    private LauncherActivityIntentResponse launcherActivity;
 
     public LauncherActivityIntentResponse launcherActivity() {
         return this.launcherActivity;
@@ -34,7 +34,7 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="startActivity", required=true)
-      private final StartActivityIntentResponse startActivity;
+    private StartActivityIntentResponse startActivity;
 
     public StartActivityIntentResponse startActivity() {
         return this.startActivity;
@@ -45,64 +45,59 @@ public final class RoboStartingIntentResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="timeout", required=true)
-      private final String timeout;
+    private String timeout;
 
     public String timeout() {
         return this.timeout;
     }
 
-    public RoboStartingIntentResponse(
-        LauncherActivityIntentResponse launcherActivity,
-        StartActivityIntentResponse startActivity,
-        String timeout) {
-        this.launcherActivity = Objects.requireNonNull(launcherActivity, "expected parameter 'launcherActivity' to be non-null");
-        this.startActivity = Objects.requireNonNull(startActivity, "expected parameter 'startActivity' to be non-null");
-        this.timeout = Objects.requireNonNull(timeout, "expected parameter 'timeout' to be non-null");
-    }
+    private RoboStartingIntentResponse() {}
 
-    private RoboStartingIntentResponse() {
-        this.launcherActivity = null;
-        this.startActivity = null;
-        this.timeout = null;
+    private RoboStartingIntentResponse(RoboStartingIntentResponse $) {
+        this.launcherActivity = $.launcherActivity;
+        this.startActivity = $.startActivity;
+        this.timeout = $.timeout;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoboStartingIntentResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private LauncherActivityIntentResponse launcherActivity;
-        private StartActivityIntentResponse startActivity;
-        private String timeout;
+        private RoboStartingIntentResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoboStartingIntentResponse();
         }
 
         public Builder(RoboStartingIntentResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.launcherActivity = defaults.launcherActivity;
-    	      this.startActivity = defaults.startActivity;
-    	      this.timeout = defaults.timeout;
+            $ = new RoboStartingIntentResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder launcherActivity(LauncherActivityIntentResponse launcherActivity) {
-            this.launcherActivity = Objects.requireNonNull(launcherActivity);
+            $.launcherActivity = launcherActivity;
             return this;
         }
+
         public Builder startActivity(StartActivityIntentResponse startActivity) {
-            this.startActivity = Objects.requireNonNull(startActivity);
+            $.startActivity = startActivity;
             return this;
         }
+
         public Builder timeout(String timeout) {
-            this.timeout = Objects.requireNonNull(timeout);
+            $.timeout = timeout;
             return this;
-        }        public RoboStartingIntentResponse build() {
-            return new RoboStartingIntentResponse(launcherActivity, startActivity, timeout);
+        }
+
+        public RoboStartingIntentResponse build() {
+            $.launcherActivity = Objects.requireNonNull($.launcherActivity, "expected parameter 'launcherActivity' to be non-null");
+            $.startActivity = Objects.requireNonNull($.startActivity, "expected parameter 'startActivity' to be non-null");
+            $.timeout = Objects.requireNonNull($.timeout, "expected parameter 'timeout' to be non-null");
+            return $;
         }
     }
+
 }

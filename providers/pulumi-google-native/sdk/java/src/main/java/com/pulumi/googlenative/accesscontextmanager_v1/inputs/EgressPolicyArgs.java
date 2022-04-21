@@ -5,10 +5,10 @@ package com.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressFromArgs;
 import com.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressToArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EgressPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egressFrom")
-      private final @Nullable Output<EgressFromArgs> egressFrom;
+    private @Nullable Output<EgressFromArgs> egressFrom;
 
-    public Output<EgressFromArgs> egressFrom() {
-        return this.egressFrom == null ? Codegen.empty() : this.egressFrom;
+    public Optional<Output<EgressFromArgs>> egressFrom() {
+        return Optional.ofNullable(this.egressFrom);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class EgressPolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="egressTo")
-      private final @Nullable Output<EgressToArgs> egressTo;
+    private @Nullable Output<EgressToArgs> egressTo;
 
-    public Output<EgressToArgs> egressTo() {
-        return this.egressTo == null ? Codegen.empty() : this.egressTo;
+    public Optional<Output<EgressToArgs>> egressTo() {
+        return Optional.ofNullable(this.egressTo);
     }
 
-    public EgressPolicyArgs(
-        @Nullable Output<EgressFromArgs> egressFrom,
-        @Nullable Output<EgressToArgs> egressTo) {
-        this.egressFrom = egressFrom;
-        this.egressTo = egressTo;
-    }
+    private EgressPolicyArgs() {}
 
-    private EgressPolicyArgs() {
-        this.egressFrom = Codegen.empty();
-        this.egressTo = Codegen.empty();
+    private EgressPolicyArgs(EgressPolicyArgs $) {
+        this.egressFrom = $.egressFrom;
+        this.egressTo = $.egressTo;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EgressPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<EgressFromArgs> egressFrom;
-        private @Nullable Output<EgressToArgs> egressTo;
+        private EgressPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EgressPolicyArgs();
         }
 
         public Builder(EgressPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressFrom = defaults.egressFrom;
-    	      this.egressTo = defaults.egressTo;
+            $ = new EgressPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egressFrom(@Nullable Output<EgressFromArgs> egressFrom) {
-            this.egressFrom = egressFrom;
+            $.egressFrom = egressFrom;
             return this;
         }
-        public Builder egressFrom(@Nullable EgressFromArgs egressFrom) {
-            this.egressFrom = Codegen.ofNullable(egressFrom);
-            return this;
+
+        public Builder egressFrom(EgressFromArgs egressFrom) {
+            return egressFrom(Output.of(egressFrom));
         }
+
         public Builder egressTo(@Nullable Output<EgressToArgs> egressTo) {
-            this.egressTo = egressTo;
+            $.egressTo = egressTo;
             return this;
         }
-        public Builder egressTo(@Nullable EgressToArgs egressTo) {
-            this.egressTo = Codegen.ofNullable(egressTo);
-            return this;
-        }        public EgressPolicyArgs build() {
-            return new EgressPolicyArgs(egressFrom, egressTo);
+
+        public Builder egressTo(EgressToArgs egressTo) {
+            return egressTo(Output.of(egressTo));
+        }
+
+        public EgressPolicyArgs build() {
+            return $;
         }
     }
+
 }

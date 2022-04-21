@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dlp_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import com.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends com.p
      * 
      */
     @Import(name="context")
-      private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
+    private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
-    public Output<GooglePrivacyDlpV2FieldIdArgs> context() {
-        return this.context == null ? Codegen.empty() : this.context;
+    public Optional<Output<GooglePrivacyDlpV2FieldIdArgs>> context() {
+        return Optional.ofNullable(this.context);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends com.p
      * 
      */
     @Import(name="cryptoKey")
-      private final @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
+    private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
 
-    public Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey() {
-        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
+    public Optional<Output<GooglePrivacyDlpV2CryptoKeyArgs>> cryptoKey() {
+        return Optional.ofNullable(this.cryptoKey);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigArgs extends com.p
      * 
      */
     @Import(name="surrogateInfoType")
-      private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
+    private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
-    public Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType() {
-        return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
+    public Optional<Output<GooglePrivacyDlpV2InfoTypeArgs>> surrogateInfoType() {
+        return Optional.ofNullable(this.surrogateInfoType);
     }
 
-    public GooglePrivacyDlpV2CryptoDeterministicConfigArgs(
-        @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context,
-        @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey,
-        @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
-        this.context = context;
-        this.cryptoKey = cryptoKey;
-        this.surrogateInfoType = surrogateInfoType;
-    }
+    private GooglePrivacyDlpV2CryptoDeterministicConfigArgs() {}
 
-    private GooglePrivacyDlpV2CryptoDeterministicConfigArgs() {
-        this.context = Codegen.empty();
-        this.cryptoKey = Codegen.empty();
-        this.surrogateInfoType = Codegen.empty();
+    private GooglePrivacyDlpV2CryptoDeterministicConfigArgs(GooglePrivacyDlpV2CryptoDeterministicConfigArgs $) {
+        this.context = $.context;
+        this.cryptoKey = $.cryptoKey;
+        this.surrogateInfoType = $.surrogateInfoType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2CryptoDeterministicConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
-        private @Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey;
-        private @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
+        private GooglePrivacyDlpV2CryptoDeterministicConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2CryptoDeterministicConfigArgs();
         }
 
         public Builder(GooglePrivacyDlpV2CryptoDeterministicConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.context = defaults.context;
-    	      this.cryptoKey = defaults.cryptoKey;
-    	      this.surrogateInfoType = defaults.surrogateInfoType;
+            $ = new GooglePrivacyDlpV2CryptoDeterministicConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder context(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context) {
-            this.context = context;
+            $.context = context;
             return this;
         }
-        public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
-            this.context = Codegen.ofNullable(context);
-            return this;
+
+        public Builder context(GooglePrivacyDlpV2FieldIdArgs context) {
+            return context(Output.of(context));
         }
+
         public Builder cryptoKey(@Nullable Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
-            this.cryptoKey = cryptoKey;
+            $.cryptoKey = cryptoKey;
             return this;
         }
-        public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Codegen.ofNullable(cryptoKey);
-            return this;
+
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
+            return cryptoKey(Output.of(cryptoKey));
         }
+
         public Builder surrogateInfoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
-            this.surrogateInfoType = surrogateInfoType;
+            $.surrogateInfoType = surrogateInfoType;
             return this;
         }
-        public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
-            this.surrogateInfoType = Codegen.ofNullable(surrogateInfoType);
-            return this;
-        }        public GooglePrivacyDlpV2CryptoDeterministicConfigArgs build() {
-            return new GooglePrivacyDlpV2CryptoDeterministicConfigArgs(context, cryptoKey, surrogateInfoType);
+
+        public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
+            return surrogateInfoType(Output.of(surrogateInfoType));
+        }
+
+        public GooglePrivacyDlpV2CryptoDeterministicConfigArgs build() {
+            return $;
         }
     }
+
 }

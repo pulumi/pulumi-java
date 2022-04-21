@@ -17,7 +17,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      * 
      */
     @Import(name="maxValue", required=true)
-      private final String maxValue;
+    private String maxValue;
 
     public String maxValue() {
         return this.maxValue;
@@ -28,55 +28,52 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
      * 
      */
     @Import(name="minValue", required=true)
-      private final String minValue;
+    private String minValue;
 
     public String minValue() {
         return this.minValue;
     }
 
-    public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(
-        String maxValue,
-        String minValue) {
-        this.maxValue = Objects.requireNonNull(maxValue, "expected parameter 'maxValue' to be non-null");
-        this.minValue = Objects.requireNonNull(minValue, "expected parameter 'minValue' to be non-null");
-    }
+    private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse() {}
 
-    private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse() {
-        this.maxValue = null;
-        this.minValue = null;
+    private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse $) {
+        this.maxValue = $.maxValue;
+        this.minValue = $.minValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String maxValue;
-        private String minValue;
+        private GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse();
         }
 
         public Builder(GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxValue = defaults.maxValue;
-    	      this.minValue = defaults.minValue;
+            $ = new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder maxValue(String maxValue) {
-            this.maxValue = Objects.requireNonNull(maxValue);
+            $.maxValue = maxValue;
             return this;
         }
+
         public Builder minValue(String minValue) {
-            this.minValue = Objects.requireNonNull(minValue);
+            $.minValue = minValue;
             return this;
-        }        public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse build() {
-            return new GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse(maxValue, minValue);
+        }
+
+        public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse build() {
+            $.maxValue = Objects.requireNonNull($.maxValue, "expected parameter 'maxValue' to be non-null");
+            $.minValue = Objects.requireNonNull($.minValue, "expected parameter 'minValue' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.storage_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ObjectAccessControlProjectTeamArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="projectNumber")
-      private final @Nullable Output<String> projectNumber;
+    private @Nullable Output<String> projectNumber;
 
-    public Output<String> projectNumber() {
-        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
+    public Optional<Output<String>> projectNumber() {
+        return Optional.ofNullable(this.projectNumber);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class ObjectAccessControlProjectTeamArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="team")
-      private final @Nullable Output<String> team;
+    private @Nullable Output<String> team;
 
-    public Output<String> team() {
-        return this.team == null ? Codegen.empty() : this.team;
+    public Optional<Output<String>> team() {
+        return Optional.ofNullable(this.team);
     }
 
-    public ObjectAccessControlProjectTeamArgs(
-        @Nullable Output<String> projectNumber,
-        @Nullable Output<String> team) {
-        this.projectNumber = projectNumber;
-        this.team = team;
-    }
+    private ObjectAccessControlProjectTeamArgs() {}
 
-    private ObjectAccessControlProjectTeamArgs() {
-        this.projectNumber = Codegen.empty();
-        this.team = Codegen.empty();
+    private ObjectAccessControlProjectTeamArgs(ObjectAccessControlProjectTeamArgs $) {
+        this.projectNumber = $.projectNumber;
+        this.team = $.team;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectAccessControlProjectTeamArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> projectNumber;
-        private @Nullable Output<String> team;
+        private ObjectAccessControlProjectTeamArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectAccessControlProjectTeamArgs();
         }
 
         public Builder(ObjectAccessControlProjectTeamArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.projectNumber = defaults.projectNumber;
-    	      this.team = defaults.team;
+            $ = new ObjectAccessControlProjectTeamArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder projectNumber(@Nullable Output<String> projectNumber) {
-            this.projectNumber = projectNumber;
+            $.projectNumber = projectNumber;
             return this;
         }
-        public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Codegen.ofNullable(projectNumber);
-            return this;
+
+        public Builder projectNumber(String projectNumber) {
+            return projectNumber(Output.of(projectNumber));
         }
+
         public Builder team(@Nullable Output<String> team) {
-            this.team = team;
+            $.team = team;
             return this;
         }
-        public Builder team(@Nullable String team) {
-            this.team = Codegen.ofNullable(team);
-            return this;
-        }        public ObjectAccessControlProjectTeamArgs build() {
-            return new ObjectAccessControlProjectTeamArgs(projectNumber, team);
+
+        public Builder team(String team) {
+            return team(Output.of(team));
+        }
+
+        public ObjectAccessControlProjectTeamArgs build() {
+            return $;
         }
     }
+
 }

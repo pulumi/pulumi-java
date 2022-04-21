@@ -17,7 +17,7 @@ public final class FileContentBufferResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="content", required=true)
-      private final String content;
+    private String content;
 
     public String content() {
         return this.content;
@@ -28,55 +28,52 @@ public final class FileContentBufferResponse extends com.pulumi.resources.Invoke
      * 
      */
     @Import(name="fileType", required=true)
-      private final String fileType;
+    private String fileType;
 
     public String fileType() {
         return this.fileType;
     }
 
-    public FileContentBufferResponse(
-        String content,
-        String fileType) {
-        this.content = Objects.requireNonNull(content, "expected parameter 'content' to be non-null");
-        this.fileType = Objects.requireNonNull(fileType, "expected parameter 'fileType' to be non-null");
-    }
+    private FileContentBufferResponse() {}
 
-    private FileContentBufferResponse() {
-        this.content = null;
-        this.fileType = null;
+    private FileContentBufferResponse(FileContentBufferResponse $) {
+        this.content = $.content;
+        this.fileType = $.fileType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileContentBufferResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String content;
-        private String fileType;
+        private FileContentBufferResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileContentBufferResponse();
         }
 
         public Builder(FileContentBufferResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.content = defaults.content;
-    	      this.fileType = defaults.fileType;
+            $ = new FileContentBufferResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder content(String content) {
-            this.content = Objects.requireNonNull(content);
+            $.content = content;
             return this;
         }
+
         public Builder fileType(String fileType) {
-            this.fileType = Objects.requireNonNull(fileType);
+            $.fileType = fileType;
             return this;
-        }        public FileContentBufferResponse build() {
-            return new FileContentBufferResponse(content, fileType);
+        }
+
+        public FileContentBufferResponse build() {
+            $.content = Objects.requireNonNull($.content, "expected parameter 'content' to be non-null");
+            $.fileType = Objects.requireNonNull($.fileType, "expected parameter 'fileType' to be non-null");
+            return $;
         }
     }
+
 }

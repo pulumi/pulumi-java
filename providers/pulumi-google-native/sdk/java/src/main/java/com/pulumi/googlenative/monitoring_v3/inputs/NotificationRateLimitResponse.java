@@ -21,45 +21,45 @@ public final class NotificationRateLimitResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="period", required=true)
-      private final String period;
+    private String period;
 
     public String period() {
         return this.period;
     }
 
-    public NotificationRateLimitResponse(String period) {
-        this.period = Objects.requireNonNull(period, "expected parameter 'period' to be non-null");
-    }
+    private NotificationRateLimitResponse() {}
 
-    private NotificationRateLimitResponse() {
-        this.period = null;
+    private NotificationRateLimitResponse(NotificationRateLimitResponse $) {
+        this.period = $.period;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NotificationRateLimitResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String period;
+        private NotificationRateLimitResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NotificationRateLimitResponse();
         }
 
         public Builder(NotificationRateLimitResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.period = defaults.period;
+            $ = new NotificationRateLimitResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder period(String period) {
-            this.period = Objects.requireNonNull(period);
+            $.period = period;
             return this;
-        }        public NotificationRateLimitResponse build() {
-            return new NotificationRateLimitResponse(period);
+        }
+
+        public NotificationRateLimitResponse build() {
+            $.period = Objects.requireNonNull($.period, "expected parameter 'period' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
      * 
      */
     @Import(name="imageDisplayOptions")
-      private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
+    private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
-    public Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions() {
-        return this.imageDisplayOptions == null ? Codegen.empty() : this.imageDisplayOptions;
+    public Optional<Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions>> imageDisplayOptions() {
+        return Optional.ofNullable(this.imageDisplayOptions);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardAr
      * 
      */
     @Import(name="items", required=true)
-      private final Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
+    private Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items() {
         return this.items;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs(
-        @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions,
-        Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
-        this.imageDisplayOptions = imageDisplayOptions;
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs() {
-        this.imageDisplayOptions = Codegen.empty();
-        this.items = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs $) {
+        this.imageDisplayOptions = $.imageDisplayOptions;
+        this.items = $.items;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
-        private Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
+        private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.imageDisplayOptions = defaults.imageDisplayOptions;
-    	      this.items = defaults.items;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder imageDisplayOptions(@Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions) {
-            this.imageDisplayOptions = imageDisplayOptions;
+            $.imageDisplayOptions = imageDisplayOptions;
             return this;
         }
-        public Builder imageDisplayOptions(@Nullable GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions imageDisplayOptions) {
-            this.imageDisplayOptions = Codegen.ofNullable(imageDisplayOptions);
-            return this;
+
+        public Builder imageDisplayOptions(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptions imageDisplayOptions) {
+            return imageDisplayOptions(Output.of(imageDisplayOptions));
         }
+
         public Builder items(Output<List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs> items) {
-            this.items = Output.of(Objects.requireNonNull(items));
-            return this;
+            return items(Output.of(items));
         }
+
         public Builder items(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs... items) {
             return items(List.of(items));
-        }        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs(imageDisplayOptions, items);
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardArgs build() {
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            return $;
         }
     }
+
 }

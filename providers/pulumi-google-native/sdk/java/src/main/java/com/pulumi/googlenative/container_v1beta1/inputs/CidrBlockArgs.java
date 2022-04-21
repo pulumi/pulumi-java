@@ -5,9 +5,9 @@ package com.pulumi.googlenative.container_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CidrBlockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cidrBlock")
-      private final @Nullable Output<String> cidrBlock;
+    private @Nullable Output<String> cidrBlock;
 
-    public Output<String> cidrBlock() {
-        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
+    public Optional<Output<String>> cidrBlock() {
+        return Optional.ofNullable(this.cidrBlock);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class CidrBlockArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="displayName")
-      private final @Nullable Output<String> displayName;
+    private @Nullable Output<String> displayName;
 
-    public Output<String> displayName() {
-        return this.displayName == null ? Codegen.empty() : this.displayName;
+    public Optional<Output<String>> displayName() {
+        return Optional.ofNullable(this.displayName);
     }
 
-    public CidrBlockArgs(
-        @Nullable Output<String> cidrBlock,
-        @Nullable Output<String> displayName) {
-        this.cidrBlock = cidrBlock;
-        this.displayName = displayName;
-    }
+    private CidrBlockArgs() {}
 
-    private CidrBlockArgs() {
-        this.cidrBlock = Codegen.empty();
-        this.displayName = Codegen.empty();
+    private CidrBlockArgs(CidrBlockArgs $) {
+        this.cidrBlock = $.cidrBlock;
+        this.displayName = $.displayName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CidrBlockArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cidrBlock;
-        private @Nullable Output<String> displayName;
+        private CidrBlockArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CidrBlockArgs();
         }
 
         public Builder(CidrBlockArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cidrBlock = defaults.cidrBlock;
-    	      this.displayName = defaults.displayName;
+            $ = new CidrBlockArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cidrBlock(@Nullable Output<String> cidrBlock) {
-            this.cidrBlock = cidrBlock;
+            $.cidrBlock = cidrBlock;
             return this;
         }
-        public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Codegen.ofNullable(cidrBlock);
-            return this;
+
+        public Builder cidrBlock(String cidrBlock) {
+            return cidrBlock(Output.of(cidrBlock));
         }
+
         public Builder displayName(@Nullable Output<String> displayName) {
-            this.displayName = displayName;
+            $.displayName = displayName;
             return this;
         }
-        public Builder displayName(@Nullable String displayName) {
-            this.displayName = Codegen.ofNullable(displayName);
-            return this;
-        }        public CidrBlockArgs build() {
-            return new CidrBlockArgs(cidrBlock, displayName);
+
+        public Builder displayName(String displayName) {
+            return displayName(Output.of(displayName));
+        }
+
+        public CidrBlockArgs build() {
+            return $;
         }
     }
+
 }

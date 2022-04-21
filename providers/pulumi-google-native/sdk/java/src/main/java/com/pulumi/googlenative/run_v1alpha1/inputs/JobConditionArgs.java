@@ -5,9 +5,9 @@ package com.pulumi.googlenative.run_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastTransitionTime")
-      private final @Nullable Output<String> lastTransitionTime;
+    private @Nullable Output<String> lastTransitionTime;
 
-    public Output<String> lastTransitionTime() {
-        return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
+    public Optional<Output<String>> lastTransitionTime() {
+        return Optional.ofNullable(this.lastTransitionTime);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="severity")
-      private final @Nullable Output<String> severity;
+    private @Nullable Output<String> severity;
 
-    public Output<String> severity() {
-        return this.severity == null ? Codegen.empty() : this.severity;
+    public Optional<Output<String>> severity() {
+        return Optional.ofNullable(this.severity);
     }
 
     /**
@@ -68,7 +68,7 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="status", required=true)
-      private final Output<String> status;
+    private Output<String> status;
 
     public Output<String> status() {
         return this.status;
@@ -79,115 +79,100 @@ public final class JobConditionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public JobConditionArgs(
-        @Nullable Output<String> lastTransitionTime,
-        @Nullable Output<String> message,
-        @Nullable Output<String> reason,
-        @Nullable Output<String> severity,
-        Output<String> status,
-        Output<String> type) {
-        this.lastTransitionTime = lastTransitionTime;
-        this.message = message;
-        this.reason = reason;
-        this.severity = severity;
-        this.status = Objects.requireNonNull(status, "expected parameter 'status' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private JobConditionArgs() {}
 
-    private JobConditionArgs() {
-        this.lastTransitionTime = Codegen.empty();
-        this.message = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.severity = Codegen.empty();
-        this.status = Codegen.empty();
-        this.type = Codegen.empty();
+    private JobConditionArgs(JobConditionArgs $) {
+        this.lastTransitionTime = $.lastTransitionTime;
+        this.message = $.message;
+        this.reason = $.reason;
+        this.severity = $.severity;
+        this.status = $.status;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConditionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lastTransitionTime;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> reason;
-        private @Nullable Output<String> severity;
-        private Output<String> status;
-        private Output<String> type;
+        private JobConditionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConditionArgs();
         }
 
         public Builder(JobConditionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastTransitionTime = defaults.lastTransitionTime;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
-    	      this.severity = defaults.severity;
-    	      this.status = defaults.status;
-    	      this.type = defaults.type;
+            $ = new JobConditionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastTransitionTime(@Nullable Output<String> lastTransitionTime) {
-            this.lastTransitionTime = lastTransitionTime;
+            $.lastTransitionTime = lastTransitionTime;
             return this;
         }
-        public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = Codegen.ofNullable(lastTransitionTime);
-            return this;
+
+        public Builder lastTransitionTime(String lastTransitionTime) {
+            return lastTransitionTime(Output.of(lastTransitionTime));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder severity(@Nullable Output<String> severity) {
-            this.severity = severity;
+            $.severity = severity;
             return this;
         }
-        public Builder severity(@Nullable String severity) {
-            this.severity = Codegen.ofNullable(severity);
-            return this;
+
+        public Builder severity(String severity) {
+            return severity(Output.of(severity));
         }
+
         public Builder status(Output<String> status) {
-            this.status = Objects.requireNonNull(status);
+            $.status = status;
             return this;
         }
+
         public Builder status(String status) {
-            this.status = Output.of(Objects.requireNonNull(status));
-            return this;
+            return status(Output.of(status));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public JobConditionArgs build() {
-            return new JobConditionArgs(lastTransitionTime, message, reason, severity, status, type);
+            return type(Output.of(type));
+        }
+
+        public JobConditionArgs build() {
+            $.status = Objects.requireNonNull($.status, "expected parameter 'status' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

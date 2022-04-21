@@ -5,7 +5,6 @@ package com.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class HintArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="humanReadableName", required=true)
-      private final Output<String> humanReadableName;
+    private Output<String> humanReadableName;
 
     public Output<String> humanReadableName() {
         return this.humanReadableName;
     }
 
-    public HintArgs(Output<String> humanReadableName) {
-        this.humanReadableName = Objects.requireNonNull(humanReadableName, "expected parameter 'humanReadableName' to be non-null");
-    }
+    private HintArgs() {}
 
-    private HintArgs() {
-        this.humanReadableName = Codegen.empty();
+    private HintArgs(HintArgs $) {
+        this.humanReadableName = $.humanReadableName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HintArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> humanReadableName;
+        private HintArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HintArgs();
         }
 
         public Builder(HintArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.humanReadableName = defaults.humanReadableName;
+            $ = new HintArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder humanReadableName(Output<String> humanReadableName) {
-            this.humanReadableName = Objects.requireNonNull(humanReadableName);
+            $.humanReadableName = humanReadableName;
             return this;
         }
+
         public Builder humanReadableName(String humanReadableName) {
-            this.humanReadableName = Output.of(Objects.requireNonNull(humanReadableName));
-            return this;
-        }        public HintArgs build() {
-            return new HintArgs(humanReadableName);
+            return humanReadableName(Output.of(humanReadableName));
+        }
+
+        public HintArgs build() {
+            $.humanReadableName = Objects.requireNonNull($.humanReadableName, "expected parameter 'humanReadableName' to be non-null");
+            return $;
         }
     }
+
 }

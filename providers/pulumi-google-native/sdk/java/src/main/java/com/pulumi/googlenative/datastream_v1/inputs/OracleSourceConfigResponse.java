@@ -21,7 +21,7 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="excludeObjects", required=true)
-      private final OracleRdbmsResponse excludeObjects;
+    private OracleRdbmsResponse excludeObjects;
 
     public OracleRdbmsResponse excludeObjects() {
         return this.excludeObjects;
@@ -32,55 +32,52 @@ public final class OracleSourceConfigResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="includeObjects", required=true)
-      private final OracleRdbmsResponse includeObjects;
+    private OracleRdbmsResponse includeObjects;
 
     public OracleRdbmsResponse includeObjects() {
         return this.includeObjects;
     }
 
-    public OracleSourceConfigResponse(
-        OracleRdbmsResponse excludeObjects,
-        OracleRdbmsResponse includeObjects) {
-        this.excludeObjects = Objects.requireNonNull(excludeObjects, "expected parameter 'excludeObjects' to be non-null");
-        this.includeObjects = Objects.requireNonNull(includeObjects, "expected parameter 'includeObjects' to be non-null");
-    }
+    private OracleSourceConfigResponse() {}
 
-    private OracleSourceConfigResponse() {
-        this.excludeObjects = null;
-        this.includeObjects = null;
+    private OracleSourceConfigResponse(OracleSourceConfigResponse $) {
+        this.excludeObjects = $.excludeObjects;
+        this.includeObjects = $.includeObjects;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OracleSourceConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private OracleRdbmsResponse excludeObjects;
-        private OracleRdbmsResponse includeObjects;
+        private OracleSourceConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OracleSourceConfigResponse();
         }
 
         public Builder(OracleSourceConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.excludeObjects = defaults.excludeObjects;
-    	      this.includeObjects = defaults.includeObjects;
+            $ = new OracleSourceConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder excludeObjects(OracleRdbmsResponse excludeObjects) {
-            this.excludeObjects = Objects.requireNonNull(excludeObjects);
+            $.excludeObjects = excludeObjects;
             return this;
         }
+
         public Builder includeObjects(OracleRdbmsResponse includeObjects) {
-            this.includeObjects = Objects.requireNonNull(includeObjects);
+            $.includeObjects = includeObjects;
             return this;
-        }        public OracleSourceConfigResponse build() {
-            return new OracleSourceConfigResponse(excludeObjects, includeObjects);
+        }
+
+        public OracleSourceConfigResponse build() {
+            $.excludeObjects = Objects.requireNonNull($.excludeObjects, "expected parameter 'excludeObjects' to be non-null");
+            $.includeObjects = Objects.requireNonNull($.includeObjects, "expected parameter 'includeObjects' to be non-null");
+            return $;
         }
     }
+
 }

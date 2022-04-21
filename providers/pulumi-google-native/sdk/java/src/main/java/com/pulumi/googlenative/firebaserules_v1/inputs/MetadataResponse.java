@@ -22,48 +22,49 @@ public final class MetadataResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="services", required=true)
-      private final List<String> services;
+    private List<String> services;
 
     public List<String> services() {
         return this.services;
     }
 
-    public MetadataResponse(List<String> services) {
-        this.services = Objects.requireNonNull(services, "expected parameter 'services' to be non-null");
-    }
+    private MetadataResponse() {}
 
-    private MetadataResponse() {
-        this.services = List.of();
+    private MetadataResponse(MetadataResponse $) {
+        this.services = $.services;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetadataResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> services;
+        private MetadataResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetadataResponse();
         }
 
         public Builder(MetadataResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.services = defaults.services;
+            $ = new MetadataResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder services(List<String> services) {
-            this.services = Objects.requireNonNull(services);
+            $.services = services;
             return this;
         }
+
         public Builder services(String... services) {
             return services(List.of(services));
-        }        public MetadataResponse build() {
-            return new MetadataResponse(services);
+        }
+
+        public MetadataResponse build() {
+            $.services = Objects.requireNonNull($.services, "expected parameter 'services' to be non-null");
+            return $;
         }
     }
+
 }

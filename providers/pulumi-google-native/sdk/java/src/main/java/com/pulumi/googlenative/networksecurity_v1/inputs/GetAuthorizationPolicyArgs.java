@@ -15,78 +15,72 @@ public final class GetAuthorizationPolicyArgs extends com.pulumi.resources.Invok
     public static final GetAuthorizationPolicyArgs Empty = new GetAuthorizationPolicyArgs();
 
     @Import(name="authorizationPolicyId", required=true)
-      private final String authorizationPolicyId;
+    private String authorizationPolicyId;
 
     public String authorizationPolicyId() {
         return this.authorizationPolicyId;
     }
 
     @Import(name="location", required=true)
-      private final String location;
+    private String location;
 
     public String location() {
         return this.location;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetAuthorizationPolicyArgs(
-        String authorizationPolicyId,
-        String location,
-        @Nullable String project) {
-        this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId, "expected parameter 'authorizationPolicyId' to be non-null");
-        this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
-        this.project = project;
-    }
+    private GetAuthorizationPolicyArgs() {}
 
-    private GetAuthorizationPolicyArgs() {
-        this.authorizationPolicyId = null;
-        this.location = null;
-        this.project = null;
+    private GetAuthorizationPolicyArgs(GetAuthorizationPolicyArgs $) {
+        this.authorizationPolicyId = $.authorizationPolicyId;
+        this.location = $.location;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetAuthorizationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String authorizationPolicyId;
-        private String location;
-        private @Nullable String project;
+        private GetAuthorizationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetAuthorizationPolicyArgs();
         }
 
         public Builder(GetAuthorizationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.authorizationPolicyId = defaults.authorizationPolicyId;
-    	      this.location = defaults.location;
-    	      this.project = defaults.project;
+            $ = new GetAuthorizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder authorizationPolicyId(String authorizationPolicyId) {
-            this.authorizationPolicyId = Objects.requireNonNull(authorizationPolicyId);
+            $.authorizationPolicyId = authorizationPolicyId;
             return this;
         }
+
         public Builder location(String location) {
-            this.location = Objects.requireNonNull(location);
+            $.location = location;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetAuthorizationPolicyArgs build() {
-            return new GetAuthorizationPolicyArgs(authorizationPolicyId, location, project);
+        }
+
+        public GetAuthorizationPolicyArgs build() {
+            $.authorizationPolicyId = Objects.requireNonNull($.authorizationPolicyId, "expected parameter 'authorizationPolicyId' to be non-null");
+            $.location = Objects.requireNonNull($.location, "expected parameter 'location' to be non-null");
+            return $;
         }
     }
+
 }

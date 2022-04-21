@@ -15,62 +15,58 @@ public final class GetHttpHealthCheckArgs extends com.pulumi.resources.InvokeArg
     public static final GetHttpHealthCheckArgs Empty = new GetHttpHealthCheckArgs();
 
     @Import(name="httpHealthCheck", required=true)
-      private final String httpHealthCheck;
+    private String httpHealthCheck;
 
     public String httpHealthCheck() {
         return this.httpHealthCheck;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetHttpHealthCheckArgs(
-        String httpHealthCheck,
-        @Nullable String project) {
-        this.httpHealthCheck = Objects.requireNonNull(httpHealthCheck, "expected parameter 'httpHealthCheck' to be non-null");
-        this.project = project;
-    }
+    private GetHttpHealthCheckArgs() {}
 
-    private GetHttpHealthCheckArgs() {
-        this.httpHealthCheck = null;
-        this.project = null;
+    private GetHttpHealthCheckArgs(GetHttpHealthCheckArgs $) {
+        this.httpHealthCheck = $.httpHealthCheck;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetHttpHealthCheckArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String httpHealthCheck;
-        private @Nullable String project;
+        private GetHttpHealthCheckArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetHttpHealthCheckArgs();
         }
 
         public Builder(GetHttpHealthCheckArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.httpHealthCheck = defaults.httpHealthCheck;
-    	      this.project = defaults.project;
+            $ = new GetHttpHealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder httpHealthCheck(String httpHealthCheck) {
-            this.httpHealthCheck = Objects.requireNonNull(httpHealthCheck);
+            $.httpHealthCheck = httpHealthCheck;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetHttpHealthCheckArgs build() {
-            return new GetHttpHealthCheckArgs(httpHealthCheck, project);
+        }
+
+        public GetHttpHealthCheckArgs build() {
+            $.httpHealthCheck = Objects.requireNonNull($.httpHealthCheck, "expected parameter 'httpHealthCheck' to be non-null");
+            return $;
         }
     }
+
 }

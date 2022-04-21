@@ -5,10 +5,10 @@ package com.pulumi.googlenative.orgpolicy_v2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,14 +21,14 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -39,76 +39,69 @@ public final class OrganizationPolicyArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="spec")
-      private final @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+    private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
-    public Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec() {
-        return this.spec == null ? Codegen.empty() : this.spec;
+    public Optional<Output<GoogleCloudOrgpolicyV2PolicySpecArgs>> spec() {
+        return Optional.ofNullable(this.spec);
     }
 
-    public OrganizationPolicyArgs(
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.spec = spec;
-    }
+    private OrganizationPolicyArgs() {}
 
-    private OrganizationPolicyArgs() {
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.spec = Codegen.empty();
+    private OrganizationPolicyArgs(OrganizationPolicyArgs $) {
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+        private OrganizationPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationPolicyArgs();
         }
 
         public Builder(OrganizationPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.spec = defaults.spec;
+            $ = new OrganizationPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder spec(@Nullable Output<GoogleCloudOrgpolicyV2PolicySpecArgs> spec) {
-            this.spec = spec;
+            $.spec = spec;
             return this;
         }
-        public Builder spec(@Nullable GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
-            this.spec = Codegen.ofNullable(spec);
-            return this;
-        }        public OrganizationPolicyArgs build() {
-            return new OrganizationPolicyArgs(name, organizationId, spec);
+
+        public Builder spec(GoogleCloudOrgpolicyV2PolicySpecArgs spec) {
+            return spec(Output.of(spec));
+        }
+
+        public OrganizationPolicyArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

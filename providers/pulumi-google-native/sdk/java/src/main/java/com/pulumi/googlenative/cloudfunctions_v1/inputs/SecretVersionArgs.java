@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SecretVersionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public SecretVersionArgs(
-        @Nullable Output<String> path,
-        @Nullable Output<String> version) {
-        this.path = path;
-        this.version = version;
-    }
+    private SecretVersionArgs() {}
 
-    private SecretVersionArgs() {
-        this.path = Codegen.empty();
-        this.version = Codegen.empty();
+    private SecretVersionArgs(SecretVersionArgs $) {
+        this.path = $.path;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretVersionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> version;
+        private SecretVersionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretVersionArgs();
         }
 
         public Builder(SecretVersionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.path = defaults.path;
-    	      this.version = defaults.version;
+            $ = new SecretVersionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public SecretVersionArgs build() {
-            return new SecretVersionArgs(path, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public SecretVersionArgs build() {
+            return $;
         }
     }
+
 }

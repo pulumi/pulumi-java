@@ -22,7 +22,7 @@ public final class DistributionCutResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="distributionFilter", required=true)
-      private final String distributionFilter;
+    private String distributionFilter;
 
     public String distributionFilter() {
         return this.distributionFilter;
@@ -33,55 +33,52 @@ public final class DistributionCutResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="range", required=true)
-      private final GoogleMonitoringV3RangeResponse range;
+    private GoogleMonitoringV3RangeResponse range;
 
     public GoogleMonitoringV3RangeResponse range() {
         return this.range;
     }
 
-    public DistributionCutResponse(
-        String distributionFilter,
-        GoogleMonitoringV3RangeResponse range) {
-        this.distributionFilter = Objects.requireNonNull(distributionFilter, "expected parameter 'distributionFilter' to be non-null");
-        this.range = Objects.requireNonNull(range, "expected parameter 'range' to be non-null");
-    }
+    private DistributionCutResponse() {}
 
-    private DistributionCutResponse() {
-        this.distributionFilter = null;
-        this.range = null;
+    private DistributionCutResponse(DistributionCutResponse $) {
+        this.distributionFilter = $.distributionFilter;
+        this.range = $.range;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DistributionCutResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String distributionFilter;
-        private GoogleMonitoringV3RangeResponse range;
+        private DistributionCutResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DistributionCutResponse();
         }
 
         public Builder(DistributionCutResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.distributionFilter = defaults.distributionFilter;
-    	      this.range = defaults.range;
+            $ = new DistributionCutResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder distributionFilter(String distributionFilter) {
-            this.distributionFilter = Objects.requireNonNull(distributionFilter);
+            $.distributionFilter = distributionFilter;
             return this;
         }
+
         public Builder range(GoogleMonitoringV3RangeResponse range) {
-            this.range = Objects.requireNonNull(range);
+            $.range = range;
             return this;
-        }        public DistributionCutResponse build() {
-            return new DistributionCutResponse(distributionFilter, range);
+        }
+
+        public DistributionCutResponse build() {
+            $.distributionFilter = Objects.requireNonNull($.distributionFilter, "expected parameter 'distributionFilter' to be non-null");
+            $.range = Objects.requireNonNull($.range, "expected parameter 'range' to be non-null");
+            return $;
         }
     }
+
 }

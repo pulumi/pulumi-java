@@ -5,9 +5,9 @@ package com.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BuildArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="image")
-      private final @Nullable Output<String> image;
+    private @Nullable Output<String> image;
 
-    public Output<String> image() {
-        return this.image == null ? Codegen.empty() : this.image;
+    public Optional<Output<String>> image() {
+        return Optional.ofNullable(this.image);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class BuildArtifactArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tag")
-      private final @Nullable Output<String> tag;
+    private @Nullable Output<String> tag;
 
-    public Output<String> tag() {
-        return this.tag == null ? Codegen.empty() : this.tag;
+    public Optional<Output<String>> tag() {
+        return Optional.ofNullable(this.tag);
     }
 
-    public BuildArtifactArgs(
-        @Nullable Output<String> image,
-        @Nullable Output<String> tag) {
-        this.image = image;
-        this.tag = tag;
-    }
+    private BuildArtifactArgs() {}
 
-    private BuildArtifactArgs() {
-        this.image = Codegen.empty();
-        this.tag = Codegen.empty();
+    private BuildArtifactArgs(BuildArtifactArgs $) {
+        this.image = $.image;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BuildArtifactArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> image;
-        private @Nullable Output<String> tag;
+        private BuildArtifactArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BuildArtifactArgs();
         }
 
         public Builder(BuildArtifactArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.image = defaults.image;
-    	      this.tag = defaults.tag;
+            $ = new BuildArtifactArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder image(@Nullable Output<String> image) {
-            this.image = image;
+            $.image = image;
             return this;
         }
-        public Builder image(@Nullable String image) {
-            this.image = Codegen.ofNullable(image);
-            return this;
+
+        public Builder image(String image) {
+            return image(Output.of(image));
         }
+
         public Builder tag(@Nullable Output<String> tag) {
-            this.tag = tag;
+            $.tag = tag;
             return this;
         }
-        public Builder tag(@Nullable String tag) {
-            this.tag = Codegen.ofNullable(tag);
-            return this;
-        }        public BuildArtifactArgs build() {
-            return new BuildArtifactArgs(image, tag);
+
+        public Builder tag(String tag) {
+            return tag(Output.of(tag));
+        }
+
+        public BuildArtifactArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class SoftwareRecipeArtifactRemoteArgs extends com.pulumi.resources
      * 
      */
     @Import(name="checksum")
-      private final @Nullable Output<String> checksum;
+    private @Nullable Output<String> checksum;
 
-    public Output<String> checksum() {
-        return this.checksum == null ? Codegen.empty() : this.checksum;
+    public Optional<Output<String>> checksum() {
+        return Optional.ofNullable(this.checksum);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class SoftwareRecipeArtifactRemoteArgs extends com.pulumi.resources
      * 
      */
     @Import(name="uri")
-      private final @Nullable Output<String> uri;
+    private @Nullable Output<String> uri;
 
-    public Output<String> uri() {
-        return this.uri == null ? Codegen.empty() : this.uri;
+    public Optional<Output<String>> uri() {
+        return Optional.ofNullable(this.uri);
     }
 
-    public SoftwareRecipeArtifactRemoteArgs(
-        @Nullable Output<String> checksum,
-        @Nullable Output<String> uri) {
-        this.checksum = checksum;
-        this.uri = uri;
-    }
+    private SoftwareRecipeArtifactRemoteArgs() {}
 
-    private SoftwareRecipeArtifactRemoteArgs() {
-        this.checksum = Codegen.empty();
-        this.uri = Codegen.empty();
+    private SoftwareRecipeArtifactRemoteArgs(SoftwareRecipeArtifactRemoteArgs $) {
+        this.checksum = $.checksum;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SoftwareRecipeArtifactRemoteArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> checksum;
-        private @Nullable Output<String> uri;
+        private SoftwareRecipeArtifactRemoteArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SoftwareRecipeArtifactRemoteArgs();
         }
 
         public Builder(SoftwareRecipeArtifactRemoteArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.checksum = defaults.checksum;
-    	      this.uri = defaults.uri;
+            $ = new SoftwareRecipeArtifactRemoteArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder checksum(@Nullable Output<String> checksum) {
-            this.checksum = checksum;
+            $.checksum = checksum;
             return this;
         }
-        public Builder checksum(@Nullable String checksum) {
-            this.checksum = Codegen.ofNullable(checksum);
-            return this;
+
+        public Builder checksum(String checksum) {
+            return checksum(Output.of(checksum));
         }
+
         public Builder uri(@Nullable Output<String> uri) {
-            this.uri = uri;
+            $.uri = uri;
             return this;
         }
-        public Builder uri(@Nullable String uri) {
-            this.uri = Codegen.ofNullable(uri);
-            return this;
-        }        public SoftwareRecipeArtifactRemoteArgs build() {
-            return new SoftwareRecipeArtifactRemoteArgs(checksum, uri);
+
+        public Builder uri(String uri) {
+            return uri(Output.of(uri));
+        }
+
+        public SoftwareRecipeArtifactRemoteArgs build() {
+            return $;
         }
     }
+
 }

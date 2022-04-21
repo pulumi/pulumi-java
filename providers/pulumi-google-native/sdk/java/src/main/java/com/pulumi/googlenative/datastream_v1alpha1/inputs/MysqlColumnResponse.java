@@ -23,7 +23,7 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="collation", required=true)
-      private final String collation;
+    private String collation;
 
     public String collation() {
         return this.collation;
@@ -34,7 +34,7 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="columnName", required=true)
-      private final String columnName;
+    private String columnName;
 
     public String columnName() {
         return this.columnName;
@@ -45,7 +45,7 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataType", required=true)
-      private final String dataType;
+    private String dataType;
 
     public String dataType() {
         return this.dataType;
@@ -56,7 +56,7 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="length", required=true)
-      private final Integer length;
+    private Integer length;
 
     public Integer length() {
         return this.length;
@@ -67,7 +67,7 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="nullable", required=true)
-      private final Boolean nullable;
+    private Boolean nullable;
 
     public Boolean nullable() {
         return this.nullable;
@@ -78,7 +78,7 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ordinalPosition", required=true)
-      private final Integer ordinalPosition;
+    private Integer ordinalPosition;
 
     public Integer ordinalPosition() {
         return this.ordinalPosition;
@@ -89,100 +89,87 @@ public final class MysqlColumnResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="primaryKey", required=true)
-      private final Boolean primaryKey;
+    private Boolean primaryKey;
 
     public Boolean primaryKey() {
         return this.primaryKey;
     }
 
-    public MysqlColumnResponse(
-        String collation,
-        String columnName,
-        String dataType,
-        Integer length,
-        Boolean nullable,
-        Integer ordinalPosition,
-        Boolean primaryKey) {
-        this.collation = Objects.requireNonNull(collation, "expected parameter 'collation' to be non-null");
-        this.columnName = Objects.requireNonNull(columnName, "expected parameter 'columnName' to be non-null");
-        this.dataType = Objects.requireNonNull(dataType, "expected parameter 'dataType' to be non-null");
-        this.length = Objects.requireNonNull(length, "expected parameter 'length' to be non-null");
-        this.nullable = Objects.requireNonNull(nullable, "expected parameter 'nullable' to be non-null");
-        this.ordinalPosition = Objects.requireNonNull(ordinalPosition, "expected parameter 'ordinalPosition' to be non-null");
-        this.primaryKey = Objects.requireNonNull(primaryKey, "expected parameter 'primaryKey' to be non-null");
-    }
+    private MysqlColumnResponse() {}
 
-    private MysqlColumnResponse() {
-        this.collation = null;
-        this.columnName = null;
-        this.dataType = null;
-        this.length = null;
-        this.nullable = null;
-        this.ordinalPosition = null;
-        this.primaryKey = null;
+    private MysqlColumnResponse(MysqlColumnResponse $) {
+        this.collation = $.collation;
+        this.columnName = $.columnName;
+        this.dataType = $.dataType;
+        this.length = $.length;
+        this.nullable = $.nullable;
+        this.ordinalPosition = $.ordinalPosition;
+        this.primaryKey = $.primaryKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MysqlColumnResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String collation;
-        private String columnName;
-        private String dataType;
-        private Integer length;
-        private Boolean nullable;
-        private Integer ordinalPosition;
-        private Boolean primaryKey;
+        private MysqlColumnResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MysqlColumnResponse();
         }
 
         public Builder(MysqlColumnResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.collation = defaults.collation;
-    	      this.columnName = defaults.columnName;
-    	      this.dataType = defaults.dataType;
-    	      this.length = defaults.length;
-    	      this.nullable = defaults.nullable;
-    	      this.ordinalPosition = defaults.ordinalPosition;
-    	      this.primaryKey = defaults.primaryKey;
+            $ = new MysqlColumnResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder collation(String collation) {
-            this.collation = Objects.requireNonNull(collation);
+            $.collation = collation;
             return this;
         }
+
         public Builder columnName(String columnName) {
-            this.columnName = Objects.requireNonNull(columnName);
+            $.columnName = columnName;
             return this;
         }
+
         public Builder dataType(String dataType) {
-            this.dataType = Objects.requireNonNull(dataType);
+            $.dataType = dataType;
             return this;
         }
+
         public Builder length(Integer length) {
-            this.length = Objects.requireNonNull(length);
+            $.length = length;
             return this;
         }
+
         public Builder nullable(Boolean nullable) {
-            this.nullable = Objects.requireNonNull(nullable);
+            $.nullable = nullable;
             return this;
         }
+
         public Builder ordinalPosition(Integer ordinalPosition) {
-            this.ordinalPosition = Objects.requireNonNull(ordinalPosition);
+            $.ordinalPosition = ordinalPosition;
             return this;
         }
+
         public Builder primaryKey(Boolean primaryKey) {
-            this.primaryKey = Objects.requireNonNull(primaryKey);
+            $.primaryKey = primaryKey;
             return this;
-        }        public MysqlColumnResponse build() {
-            return new MysqlColumnResponse(collation, columnName, dataType, length, nullable, ordinalPosition, primaryKey);
+        }
+
+        public MysqlColumnResponse build() {
+            $.collation = Objects.requireNonNull($.collation, "expected parameter 'collation' to be non-null");
+            $.columnName = Objects.requireNonNull($.columnName, "expected parameter 'columnName' to be non-null");
+            $.dataType = Objects.requireNonNull($.dataType, "expected parameter 'dataType' to be non-null");
+            $.length = Objects.requireNonNull($.length, "expected parameter 'length' to be non-null");
+            $.nullable = Objects.requireNonNull($.nullable, "expected parameter 'nullable' to be non-null");
+            $.ordinalPosition = Objects.requireNonNull($.ordinalPosition, "expected parameter 'ordinalPosition' to be non-null");
+            $.primaryKey = Objects.requireNonNull($.primaryKey, "expected parameter 'primaryKey' to be non-null");
+            return $;
         }
     }
+
 }

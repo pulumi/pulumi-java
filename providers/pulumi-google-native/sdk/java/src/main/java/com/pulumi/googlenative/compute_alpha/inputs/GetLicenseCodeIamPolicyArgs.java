@@ -15,78 +15,71 @@ public final class GetLicenseCodeIamPolicyArgs extends com.pulumi.resources.Invo
     public static final GetLicenseCodeIamPolicyArgs Empty = new GetLicenseCodeIamPolicyArgs();
 
     @Import(name="optionsRequestedPolicyVersion")
-      private final @Nullable String optionsRequestedPolicyVersion;
+    private @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> optionsRequestedPolicyVersion() {
-        return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
+        return Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="resource", required=true)
-      private final String resource;
+    private String resource;
 
     public String resource() {
         return this.resource;
     }
 
-    public GetLicenseCodeIamPolicyArgs(
-        @Nullable String optionsRequestedPolicyVersion,
-        @Nullable String project,
-        String resource) {
-        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
-        this.project = project;
-        this.resource = Objects.requireNonNull(resource, "expected parameter 'resource' to be non-null");
-    }
+    private GetLicenseCodeIamPolicyArgs() {}
 
-    private GetLicenseCodeIamPolicyArgs() {
-        this.optionsRequestedPolicyVersion = null;
-        this.project = null;
-        this.resource = null;
+    private GetLicenseCodeIamPolicyArgs(GetLicenseCodeIamPolicyArgs $) {
+        this.optionsRequestedPolicyVersion = $.optionsRequestedPolicyVersion;
+        this.project = $.project;
+        this.resource = $.resource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLicenseCodeIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String optionsRequestedPolicyVersion;
-        private @Nullable String project;
-        private String resource;
+        private GetLicenseCodeIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLicenseCodeIamPolicyArgs();
         }
 
         public Builder(GetLicenseCodeIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.optionsRequestedPolicyVersion = defaults.optionsRequestedPolicyVersion;
-    	      this.project = defaults.project;
-    	      this.resource = defaults.resource;
+            $ = new GetLicenseCodeIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
-            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            $.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder resource(String resource) {
-            this.resource = Objects.requireNonNull(resource);
+            $.resource = resource;
             return this;
-        }        public GetLicenseCodeIamPolicyArgs build() {
-            return new GetLicenseCodeIamPolicyArgs(optionsRequestedPolicyVersion, project, resource);
+        }
+
+        public GetLicenseCodeIamPolicyArgs build() {
+            $.resource = Objects.requireNonNull($.resource, "expected parameter 'resource' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceExecResourceExecArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class OSPolicyResourceExecResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="enforce")
-      private final @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
+    private @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
 
-    public Output<OSPolicyResourceExecResourceExecArgs> enforce() {
-        return this.enforce == null ? Codegen.empty() : this.enforce;
+    public Optional<Output<OSPolicyResourceExecResourceExecArgs>> enforce() {
+        return Optional.ofNullable(this.enforce);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class OSPolicyResourceExecResourceArgs extends com.pulumi.resources
      * 
      */
     @Import(name="validate", required=true)
-      private final Output<OSPolicyResourceExecResourceExecArgs> validate;
+    private Output<OSPolicyResourceExecResourceExecArgs> validate;
 
     public Output<OSPolicyResourceExecResourceExecArgs> validate() {
         return this.validate;
     }
 
-    public OSPolicyResourceExecResourceArgs(
-        @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce,
-        Output<OSPolicyResourceExecResourceExecArgs> validate) {
-        this.enforce = enforce;
-        this.validate = Objects.requireNonNull(validate, "expected parameter 'validate' to be non-null");
-    }
+    private OSPolicyResourceExecResourceArgs() {}
 
-    private OSPolicyResourceExecResourceArgs() {
-        this.enforce = Codegen.empty();
-        this.validate = Codegen.empty();
+    private OSPolicyResourceExecResourceArgs(OSPolicyResourceExecResourceArgs $) {
+        this.enforce = $.enforce;
+        this.validate = $.validate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OSPolicyResourceExecResourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
-        private Output<OSPolicyResourceExecResourceExecArgs> validate;
+        private OSPolicyResourceExecResourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OSPolicyResourceExecResourceArgs();
         }
 
         public Builder(OSPolicyResourceExecResourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.enforce = defaults.enforce;
-    	      this.validate = defaults.validate;
+            $ = new OSPolicyResourceExecResourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder enforce(@Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce) {
-            this.enforce = enforce;
+            $.enforce = enforce;
             return this;
         }
-        public Builder enforce(@Nullable OSPolicyResourceExecResourceExecArgs enforce) {
-            this.enforce = Codegen.ofNullable(enforce);
-            return this;
+
+        public Builder enforce(OSPolicyResourceExecResourceExecArgs enforce) {
+            return enforce(Output.of(enforce));
         }
+
         public Builder validate(Output<OSPolicyResourceExecResourceExecArgs> validate) {
-            this.validate = Objects.requireNonNull(validate);
+            $.validate = validate;
             return this;
         }
+
         public Builder validate(OSPolicyResourceExecResourceExecArgs validate) {
-            this.validate = Output.of(Objects.requireNonNull(validate));
-            return this;
-        }        public OSPolicyResourceExecResourceArgs build() {
-            return new OSPolicyResourceExecResourceArgs(enforce, validate);
+            return validate(Output.of(validate));
+        }
+
+        public OSPolicyResourceExecResourceArgs build() {
+            $.validate = Objects.requireNonNull($.validate, "expected parameter 'validate' to be non-null");
+            return $;
         }
     }
+
 }

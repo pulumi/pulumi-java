@@ -23,7 +23,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="autoCreateRoutes", required=true)
-      private final Boolean autoCreateRoutes;
+    private Boolean autoCreateRoutes;
 
     public Boolean autoCreateRoutes() {
         return this.autoCreateRoutes;
@@ -34,7 +34,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exchangeSubnetRoutes", required=true)
-      private final Boolean exchangeSubnetRoutes;
+    private Boolean exchangeSubnetRoutes;
 
     public Boolean exchangeSubnetRoutes() {
         return this.exchangeSubnetRoutes;
@@ -45,7 +45,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exportCustomRoutes", required=true)
-      private final Boolean exportCustomRoutes;
+    private Boolean exportCustomRoutes;
 
     public Boolean exportCustomRoutes() {
         return this.exportCustomRoutes;
@@ -56,7 +56,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="exportSubnetRoutesWithPublicIp", required=true)
-      private final Boolean exportSubnetRoutesWithPublicIp;
+    private Boolean exportSubnetRoutesWithPublicIp;
 
     public Boolean exportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp;
@@ -67,7 +67,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="importCustomRoutes", required=true)
-      private final Boolean importCustomRoutes;
+    private Boolean importCustomRoutes;
 
     public Boolean importCustomRoutes() {
         return this.importCustomRoutes;
@@ -78,7 +78,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="importSubnetRoutesWithPublicIp", required=true)
-      private final Boolean importSubnetRoutesWithPublicIp;
+    private Boolean importSubnetRoutesWithPublicIp;
 
     public Boolean importSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp;
@@ -89,7 +89,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -100,7 +100,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -111,7 +111,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="peerMtu", required=true)
-      private final Integer peerMtu;
+    private Integer peerMtu;
 
     public Integer peerMtu() {
         return this.peerMtu;
@@ -122,7 +122,7 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -133,136 +133,115 @@ public final class NetworkPeeringResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="stateDetails", required=true)
-      private final String stateDetails;
+    private String stateDetails;
 
     public String stateDetails() {
         return this.stateDetails;
     }
 
-    public NetworkPeeringResponse(
-        Boolean autoCreateRoutes,
-        Boolean exchangeSubnetRoutes,
-        Boolean exportCustomRoutes,
-        Boolean exportSubnetRoutesWithPublicIp,
-        Boolean importCustomRoutes,
-        Boolean importSubnetRoutesWithPublicIp,
-        String name,
-        String network,
-        Integer peerMtu,
-        String state,
-        String stateDetails) {
-        this.autoCreateRoutes = Objects.requireNonNull(autoCreateRoutes, "expected parameter 'autoCreateRoutes' to be non-null");
-        this.exchangeSubnetRoutes = Objects.requireNonNull(exchangeSubnetRoutes, "expected parameter 'exchangeSubnetRoutes' to be non-null");
-        this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes, "expected parameter 'exportCustomRoutes' to be non-null");
-        this.exportSubnetRoutesWithPublicIp = Objects.requireNonNull(exportSubnetRoutesWithPublicIp, "expected parameter 'exportSubnetRoutesWithPublicIp' to be non-null");
-        this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes, "expected parameter 'importCustomRoutes' to be non-null");
-        this.importSubnetRoutesWithPublicIp = Objects.requireNonNull(importSubnetRoutesWithPublicIp, "expected parameter 'importSubnetRoutesWithPublicIp' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.peerMtu = Objects.requireNonNull(peerMtu, "expected parameter 'peerMtu' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateDetails = Objects.requireNonNull(stateDetails, "expected parameter 'stateDetails' to be non-null");
-    }
+    private NetworkPeeringResponse() {}
 
-    private NetworkPeeringResponse() {
-        this.autoCreateRoutes = null;
-        this.exchangeSubnetRoutes = null;
-        this.exportCustomRoutes = null;
-        this.exportSubnetRoutesWithPublicIp = null;
-        this.importCustomRoutes = null;
-        this.importSubnetRoutesWithPublicIp = null;
-        this.name = null;
-        this.network = null;
-        this.peerMtu = null;
-        this.state = null;
-        this.stateDetails = null;
+    private NetworkPeeringResponse(NetworkPeeringResponse $) {
+        this.autoCreateRoutes = $.autoCreateRoutes;
+        this.exchangeSubnetRoutes = $.exchangeSubnetRoutes;
+        this.exportCustomRoutes = $.exportCustomRoutes;
+        this.exportSubnetRoutesWithPublicIp = $.exportSubnetRoutesWithPublicIp;
+        this.importCustomRoutes = $.importCustomRoutes;
+        this.importSubnetRoutesWithPublicIp = $.importSubnetRoutesWithPublicIp;
+        this.name = $.name;
+        this.network = $.network;
+        this.peerMtu = $.peerMtu;
+        this.state = $.state;
+        this.stateDetails = $.stateDetails;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPeeringResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean autoCreateRoutes;
-        private Boolean exchangeSubnetRoutes;
-        private Boolean exportCustomRoutes;
-        private Boolean exportSubnetRoutesWithPublicIp;
-        private Boolean importCustomRoutes;
-        private Boolean importSubnetRoutesWithPublicIp;
-        private String name;
-        private String network;
-        private Integer peerMtu;
-        private String state;
-        private String stateDetails;
+        private NetworkPeeringResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPeeringResponse();
         }
 
         public Builder(NetworkPeeringResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoCreateRoutes = defaults.autoCreateRoutes;
-    	      this.exchangeSubnetRoutes = defaults.exchangeSubnetRoutes;
-    	      this.exportCustomRoutes = defaults.exportCustomRoutes;
-    	      this.exportSubnetRoutesWithPublicIp = defaults.exportSubnetRoutesWithPublicIp;
-    	      this.importCustomRoutes = defaults.importCustomRoutes;
-    	      this.importSubnetRoutesWithPublicIp = defaults.importSubnetRoutesWithPublicIp;
-    	      this.name = defaults.name;
-    	      this.network = defaults.network;
-    	      this.peerMtu = defaults.peerMtu;
-    	      this.state = defaults.state;
-    	      this.stateDetails = defaults.stateDetails;
+            $ = new NetworkPeeringResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoCreateRoutes(Boolean autoCreateRoutes) {
-            this.autoCreateRoutes = Objects.requireNonNull(autoCreateRoutes);
+            $.autoCreateRoutes = autoCreateRoutes;
             return this;
         }
+
         public Builder exchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
-            this.exchangeSubnetRoutes = Objects.requireNonNull(exchangeSubnetRoutes);
+            $.exchangeSubnetRoutes = exchangeSubnetRoutes;
             return this;
         }
+
         public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
-            this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes);
+            $.exportCustomRoutes = exportCustomRoutes;
             return this;
         }
+
         public Builder exportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
-            this.exportSubnetRoutesWithPublicIp = Objects.requireNonNull(exportSubnetRoutesWithPublicIp);
+            $.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
             return this;
         }
+
         public Builder importCustomRoutes(Boolean importCustomRoutes) {
-            this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes);
+            $.importCustomRoutes = importCustomRoutes;
             return this;
         }
+
         public Builder importSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
-            this.importSubnetRoutesWithPublicIp = Objects.requireNonNull(importSubnetRoutesWithPublicIp);
+            $.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder peerMtu(Integer peerMtu) {
-            this.peerMtu = Objects.requireNonNull(peerMtu);
+            $.peerMtu = peerMtu;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateDetails(String stateDetails) {
-            this.stateDetails = Objects.requireNonNull(stateDetails);
+            $.stateDetails = stateDetails;
             return this;
-        }        public NetworkPeeringResponse build() {
-            return new NetworkPeeringResponse(autoCreateRoutes, exchangeSubnetRoutes, exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerMtu, state, stateDetails);
+        }
+
+        public NetworkPeeringResponse build() {
+            $.autoCreateRoutes = Objects.requireNonNull($.autoCreateRoutes, "expected parameter 'autoCreateRoutes' to be non-null");
+            $.exchangeSubnetRoutes = Objects.requireNonNull($.exchangeSubnetRoutes, "expected parameter 'exchangeSubnetRoutes' to be non-null");
+            $.exportCustomRoutes = Objects.requireNonNull($.exportCustomRoutes, "expected parameter 'exportCustomRoutes' to be non-null");
+            $.exportSubnetRoutesWithPublicIp = Objects.requireNonNull($.exportSubnetRoutesWithPublicIp, "expected parameter 'exportSubnetRoutesWithPublicIp' to be non-null");
+            $.importCustomRoutes = Objects.requireNonNull($.importCustomRoutes, "expected parameter 'importCustomRoutes' to be non-null");
+            $.importSubnetRoutesWithPublicIp = Objects.requireNonNull($.importSubnetRoutesWithPublicIp, "expected parameter 'importSubnetRoutesWithPublicIp' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.peerMtu = Objects.requireNonNull($.peerMtu, "expected parameter 'peerMtu' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateDetails = Objects.requireNonNull($.stateDetails, "expected parameter 'stateDetails' to be non-null");
+            return $;
         }
     }
+
 }

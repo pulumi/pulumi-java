@@ -23,7 +23,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudFunction", required=true)
-      private final CloudFunctionEndpointResponse cloudFunction;
+    private CloudFunctionEndpointResponse cloudFunction;
 
     public CloudFunctionEndpointResponse cloudFunction() {
         return this.cloudFunction;
@@ -34,7 +34,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cloudSqlInstance", required=true)
-      private final String cloudSqlInstance;
+    private String cloudSqlInstance;
 
     public String cloudSqlInstance() {
         return this.cloudSqlInstance;
@@ -45,7 +45,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="gkeMasterCluster", required=true)
-      private final String gkeMasterCluster;
+    private String gkeMasterCluster;
 
     public String gkeMasterCluster() {
         return this.gkeMasterCluster;
@@ -56,7 +56,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
@@ -67,7 +67,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipAddress", required=true)
-      private final String ipAddress;
+    private String ipAddress;
 
     public String ipAddress() {
         return this.ipAddress;
@@ -78,7 +78,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -89,7 +89,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="networkType", required=true)
-      private final String networkType;
+    private String networkType;
 
     public String networkType() {
         return this.networkType;
@@ -100,7 +100,7 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Integer port;
+    private Integer port;
 
     public Integer port() {
         return this.port;
@@ -111,118 +111,101 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="project", required=true)
-      private final String project;
+    private String project;
 
     public String project() {
         return this.project;
     }
 
-    public EndpointResponse(
-        CloudFunctionEndpointResponse cloudFunction,
-        String cloudSqlInstance,
-        String gkeMasterCluster,
-        String instance,
-        String ipAddress,
-        String network,
-        String networkType,
-        Integer port,
-        String project) {
-        this.cloudFunction = Objects.requireNonNull(cloudFunction, "expected parameter 'cloudFunction' to be non-null");
-        this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance, "expected parameter 'cloudSqlInstance' to be non-null");
-        this.gkeMasterCluster = Objects.requireNonNull(gkeMasterCluster, "expected parameter 'gkeMasterCluster' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.ipAddress = Objects.requireNonNull(ipAddress, "expected parameter 'ipAddress' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.networkType = Objects.requireNonNull(networkType, "expected parameter 'networkType' to be non-null");
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.project = Objects.requireNonNull(project, "expected parameter 'project' to be non-null");
-    }
+    private EndpointResponse() {}
 
-    private EndpointResponse() {
-        this.cloudFunction = null;
-        this.cloudSqlInstance = null;
-        this.gkeMasterCluster = null;
-        this.instance = null;
-        this.ipAddress = null;
-        this.network = null;
-        this.networkType = null;
-        this.port = null;
-        this.project = null;
+    private EndpointResponse(EndpointResponse $) {
+        this.cloudFunction = $.cloudFunction;
+        this.cloudSqlInstance = $.cloudSqlInstance;
+        this.gkeMasterCluster = $.gkeMasterCluster;
+        this.instance = $.instance;
+        this.ipAddress = $.ipAddress;
+        this.network = $.network;
+        this.networkType = $.networkType;
+        this.port = $.port;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CloudFunctionEndpointResponse cloudFunction;
-        private String cloudSqlInstance;
-        private String gkeMasterCluster;
-        private String instance;
-        private String ipAddress;
-        private String network;
-        private String networkType;
-        private Integer port;
-        private String project;
+        private EndpointResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointResponse();
         }
 
         public Builder(EndpointResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.cloudSqlInstance = defaults.cloudSqlInstance;
-    	      this.gkeMasterCluster = defaults.gkeMasterCluster;
-    	      this.instance = defaults.instance;
-    	      this.ipAddress = defaults.ipAddress;
-    	      this.network = defaults.network;
-    	      this.networkType = defaults.networkType;
-    	      this.port = defaults.port;
-    	      this.project = defaults.project;
+            $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFunction(CloudFunctionEndpointResponse cloudFunction) {
-            this.cloudFunction = Objects.requireNonNull(cloudFunction);
+            $.cloudFunction = cloudFunction;
             return this;
         }
+
         public Builder cloudSqlInstance(String cloudSqlInstance) {
-            this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
+            $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
+
         public Builder gkeMasterCluster(String gkeMasterCluster) {
-            this.gkeMasterCluster = Objects.requireNonNull(gkeMasterCluster);
+            $.gkeMasterCluster = gkeMasterCluster;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder ipAddress(String ipAddress) {
-            this.ipAddress = Objects.requireNonNull(ipAddress);
+            $.ipAddress = ipAddress;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder networkType(String networkType) {
-            this.networkType = Objects.requireNonNull(networkType);
+            $.networkType = networkType;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder project(String project) {
-            this.project = Objects.requireNonNull(project);
+            $.project = project;
             return this;
-        }        public EndpointResponse build() {
-            return new EndpointResponse(cloudFunction, cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
+        }
+
+        public EndpointResponse build() {
+            $.cloudFunction = Objects.requireNonNull($.cloudFunction, "expected parameter 'cloudFunction' to be non-null");
+            $.cloudSqlInstance = Objects.requireNonNull($.cloudSqlInstance, "expected parameter 'cloudSqlInstance' to be non-null");
+            $.gkeMasterCluster = Objects.requireNonNull($.gkeMasterCluster, "expected parameter 'gkeMasterCluster' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            $.ipAddress = Objects.requireNonNull($.ipAddress, "expected parameter 'ipAddress' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.networkType = Objects.requireNonNull($.networkType, "expected parameter 'networkType' to be non-null");
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            $.project = Objects.requireNonNull($.project, "expected parameter 'project' to be non-null");
+            return $;
         }
     }
+
 }

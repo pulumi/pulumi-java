@@ -15,62 +15,58 @@ public final class GetExternalVpnGatewayArgs extends com.pulumi.resources.Invoke
     public static final GetExternalVpnGatewayArgs Empty = new GetExternalVpnGatewayArgs();
 
     @Import(name="externalVpnGateway", required=true)
-      private final String externalVpnGateway;
+    private String externalVpnGateway;
 
     public String externalVpnGateway() {
         return this.externalVpnGateway;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetExternalVpnGatewayArgs(
-        String externalVpnGateway,
-        @Nullable String project) {
-        this.externalVpnGateway = Objects.requireNonNull(externalVpnGateway, "expected parameter 'externalVpnGateway' to be non-null");
-        this.project = project;
-    }
+    private GetExternalVpnGatewayArgs() {}
 
-    private GetExternalVpnGatewayArgs() {
-        this.externalVpnGateway = null;
-        this.project = null;
+    private GetExternalVpnGatewayArgs(GetExternalVpnGatewayArgs $) {
+        this.externalVpnGateway = $.externalVpnGateway;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetExternalVpnGatewayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String externalVpnGateway;
-        private @Nullable String project;
+        private GetExternalVpnGatewayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetExternalVpnGatewayArgs();
         }
 
         public Builder(GetExternalVpnGatewayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.externalVpnGateway = defaults.externalVpnGateway;
-    	      this.project = defaults.project;
+            $ = new GetExternalVpnGatewayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder externalVpnGateway(String externalVpnGateway) {
-            this.externalVpnGateway = Objects.requireNonNull(externalVpnGateway);
+            $.externalVpnGateway = externalVpnGateway;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetExternalVpnGatewayArgs build() {
-            return new GetExternalVpnGatewayArgs(externalVpnGateway, project);
+        }
+
+        public GetExternalVpnGatewayArgs build() {
+            $.externalVpnGateway = Objects.requireNonNull($.externalVpnGateway, "expected parameter 'externalVpnGateway' to be non-null");
+            return $;
         }
     }
+
 }

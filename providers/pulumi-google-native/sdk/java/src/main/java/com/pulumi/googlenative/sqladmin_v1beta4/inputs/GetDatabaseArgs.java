@@ -15,78 +15,72 @@ public final class GetDatabaseArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetDatabaseArgs Empty = new GetDatabaseArgs();
 
     @Import(name="database", required=true)
-      private final String database;
+    private String database;
 
     public String database() {
         return this.database;
     }
 
     @Import(name="instance", required=true)
-      private final String instance;
+    private String instance;
 
     public String instance() {
         return this.instance;
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
-    public GetDatabaseArgs(
-        String database,
-        String instance,
-        @Nullable String project) {
-        this.database = Objects.requireNonNull(database, "expected parameter 'database' to be non-null");
-        this.instance = Objects.requireNonNull(instance, "expected parameter 'instance' to be non-null");
-        this.project = project;
-    }
+    private GetDatabaseArgs() {}
 
-    private GetDatabaseArgs() {
-        this.database = null;
-        this.instance = null;
-        this.project = null;
+    private GetDatabaseArgs(GetDatabaseArgs $) {
+        this.database = $.database;
+        this.instance = $.instance;
+        this.project = $.project;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetDatabaseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String database;
-        private String instance;
-        private @Nullable String project;
+        private GetDatabaseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetDatabaseArgs();
         }
 
         public Builder(GetDatabaseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.database = defaults.database;
-    	      this.instance = defaults.instance;
-    	      this.project = defaults.project;
+            $ = new GetDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder database(String database) {
-            this.database = Objects.requireNonNull(database);
+            $.database = database;
             return this;
         }
+
         public Builder instance(String instance) {
-            this.instance = Objects.requireNonNull(instance);
+            $.instance = instance;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
-        }        public GetDatabaseArgs build() {
-            return new GetDatabaseArgs(database, instance, project);
+        }
+
+        public GetDatabaseArgs build() {
+            $.database = Objects.requireNonNull($.database, "expected parameter 'database' to be non-null");
+            $.instance = Objects.requireNonNull($.instance, "expected parameter 'instance' to be non-null");
+            return $;
         }
     }
+
 }

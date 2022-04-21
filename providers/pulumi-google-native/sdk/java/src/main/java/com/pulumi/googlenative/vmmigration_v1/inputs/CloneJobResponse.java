@@ -23,7 +23,7 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="computeEngineTargetDetails", required=true)
-      private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
+    private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
     public ComputeEngineTargetDetailsResponse computeEngineTargetDetails() {
         return this.computeEngineTargetDetails;
@@ -34,7 +34,7 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="createTime", required=true)
-      private final String createTime;
+    private String createTime;
 
     public String createTime() {
         return this.createTime;
@@ -45,7 +45,7 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="error", required=true)
-      private final StatusResponse error;
+    private StatusResponse error;
 
     public StatusResponse error() {
         return this.error;
@@ -56,7 +56,7 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -67,7 +67,7 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="state", required=true)
-      private final String state;
+    private String state;
 
     public String state() {
         return this.state;
@@ -78,91 +78,80 @@ public final class CloneJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="stateTime", required=true)
-      private final String stateTime;
+    private String stateTime;
 
     public String stateTime() {
         return this.stateTime;
     }
 
-    public CloneJobResponse(
-        ComputeEngineTargetDetailsResponse computeEngineTargetDetails,
-        String createTime,
-        StatusResponse error,
-        String name,
-        String state,
-        String stateTime) {
-        this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails, "expected parameter 'computeEngineTargetDetails' to be non-null");
-        this.createTime = Objects.requireNonNull(createTime, "expected parameter 'createTime' to be non-null");
-        this.error = Objects.requireNonNull(error, "expected parameter 'error' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.state = Objects.requireNonNull(state, "expected parameter 'state' to be non-null");
-        this.stateTime = Objects.requireNonNull(stateTime, "expected parameter 'stateTime' to be non-null");
-    }
+    private CloneJobResponse() {}
 
-    private CloneJobResponse() {
-        this.computeEngineTargetDetails = null;
-        this.createTime = null;
-        this.error = null;
-        this.name = null;
-        this.state = null;
-        this.stateTime = null;
+    private CloneJobResponse(CloneJobResponse $) {
+        this.computeEngineTargetDetails = $.computeEngineTargetDetails;
+        this.createTime = $.createTime;
+        this.error = $.error;
+        this.name = $.name;
+        this.state = $.state;
+        this.stateTime = $.stateTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloneJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
-        private String createTime;
-        private StatusResponse error;
-        private String name;
-        private String state;
-        private String stateTime;
+        private CloneJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloneJobResponse();
         }
 
         public Builder(CloneJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.computeEngineTargetDetails = defaults.computeEngineTargetDetails;
-    	      this.createTime = defaults.createTime;
-    	      this.error = defaults.error;
-    	      this.name = defaults.name;
-    	      this.state = defaults.state;
-    	      this.stateTime = defaults.stateTime;
+            $ = new CloneJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder computeEngineTargetDetails(ComputeEngineTargetDetailsResponse computeEngineTargetDetails) {
-            this.computeEngineTargetDetails = Objects.requireNonNull(computeEngineTargetDetails);
+            $.computeEngineTargetDetails = computeEngineTargetDetails;
             return this;
         }
+
         public Builder createTime(String createTime) {
-            this.createTime = Objects.requireNonNull(createTime);
+            $.createTime = createTime;
             return this;
         }
+
         public Builder error(StatusResponse error) {
-            this.error = Objects.requireNonNull(error);
+            $.error = error;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder state(String state) {
-            this.state = Objects.requireNonNull(state);
+            $.state = state;
             return this;
         }
+
         public Builder stateTime(String stateTime) {
-            this.stateTime = Objects.requireNonNull(stateTime);
+            $.stateTime = stateTime;
             return this;
-        }        public CloneJobResponse build() {
-            return new CloneJobResponse(computeEngineTargetDetails, createTime, error, name, state, stateTime);
+        }
+
+        public CloneJobResponse build() {
+            $.computeEngineTargetDetails = Objects.requireNonNull($.computeEngineTargetDetails, "expected parameter 'computeEngineTargetDetails' to be non-null");
+            $.createTime = Objects.requireNonNull($.createTime, "expected parameter 'createTime' to be non-null");
+            $.error = Objects.requireNonNull($.error, "expected parameter 'error' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.state = Objects.requireNonNull($.state, "expected parameter 'state' to be non-null");
+            $.stateTime = Objects.requireNonNull($.stateTime, "expected parameter 'stateTime' to be non-null");
+            return $;
         }
     }
+
 }

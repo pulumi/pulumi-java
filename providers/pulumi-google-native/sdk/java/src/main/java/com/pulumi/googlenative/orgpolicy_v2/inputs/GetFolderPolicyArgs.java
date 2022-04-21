@@ -13,62 +13,59 @@ public final class GetFolderPolicyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFolderPolicyArgs Empty = new GetFolderPolicyArgs();
 
     @Import(name="folderId", required=true)
-      private final String folderId;
+    private String folderId;
 
     public String folderId() {
         return this.folderId;
     }
 
     @Import(name="policyId", required=true)
-      private final String policyId;
+    private String policyId;
 
     public String policyId() {
         return this.policyId;
     }
 
-    public GetFolderPolicyArgs(
-        String folderId,
-        String policyId) {
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-        this.policyId = Objects.requireNonNull(policyId, "expected parameter 'policyId' to be non-null");
-    }
+    private GetFolderPolicyArgs() {}
 
-    private GetFolderPolicyArgs() {
-        this.folderId = null;
-        this.policyId = null;
+    private GetFolderPolicyArgs(GetFolderPolicyArgs $) {
+        this.folderId = $.folderId;
+        this.policyId = $.policyId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetFolderPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String folderId;
-        private String policyId;
+        private GetFolderPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetFolderPolicyArgs();
         }
 
         public Builder(GetFolderPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.folderId = defaults.folderId;
-    	      this.policyId = defaults.policyId;
+            $ = new GetFolderPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder folderId(String folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
         }
+
         public Builder policyId(String policyId) {
-            this.policyId = Objects.requireNonNull(policyId);
+            $.policyId = policyId;
             return this;
-        }        public GetFolderPolicyArgs build() {
-            return new GetFolderPolicyArgs(folderId, policyId);
+        }
+
+        public GetFolderPolicyArgs build() {
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            $.policyId = Objects.requireNonNull($.policyId, "expected parameter 'policyId' to be non-null");
+            return $;
         }
     }
+
 }

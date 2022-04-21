@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
      * 
      */
     @Import(name="parameterId", required=true)
-      private final String parameterId;
+    private String parameterId;
 
     public String parameterId() {
         return this.parameterId;
@@ -32,55 +32,52 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
      * 
      */
     @Import(name="text", required=true)
-      private final String text;
+    private String text;
 
     public String text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(
-        String parameterId,
-        String text) {
-        this.parameterId = Objects.requireNonNull(parameterId, "expected parameter 'parameterId' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse() {}
 
-    private GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse() {
-        this.parameterId = null;
-        this.text = null;
+    private GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse $) {
+        this.parameterId = $.parameterId;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String parameterId;
-        private String text;
+        private GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameterId = defaults.parameterId;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder parameterId(String parameterId) {
-            this.parameterId = Objects.requireNonNull(parameterId);
+            $.parameterId = parameterId;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse build() {
-            return new GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(parameterId, text);
+        }
+
+        public GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse build() {
+            $.parameterId = Objects.requireNonNull($.parameterId, "expected parameter 'parameterId' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

@@ -25,7 +25,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="aggregations", required=true)
-      private final List<AggregationResponse> aggregations;
+    private List<AggregationResponse> aggregations;
 
     public List<AggregationResponse> aggregations() {
         return this.aggregations;
@@ -36,7 +36,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="comparison", required=true)
-      private final String comparison;
+    private String comparison;
 
     public String comparison() {
         return this.comparison;
@@ -47,7 +47,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="denominatorAggregations", required=true)
-      private final List<AggregationResponse> denominatorAggregations;
+    private List<AggregationResponse> denominatorAggregations;
 
     public List<AggregationResponse> denominatorAggregations() {
         return this.denominatorAggregations;
@@ -58,7 +58,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="denominatorFilter", required=true)
-      private final String denominatorFilter;
+    private String denominatorFilter;
 
     public String denominatorFilter() {
         return this.denominatorFilter;
@@ -69,7 +69,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="duration", required=true)
-      private final String duration;
+    private String duration;
 
     public String duration() {
         return this.duration;
@@ -80,7 +80,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -91,7 +91,7 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="thresholdValue", required=true)
-      private final Double thresholdValue;
+    private Double thresholdValue;
 
     public Double thresholdValue() {
         return this.thresholdValue;
@@ -102,115 +102,102 @@ public final class MetricThresholdResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="trigger", required=true)
-      private final TriggerResponse trigger;
+    private TriggerResponse trigger;
 
     public TriggerResponse trigger() {
         return this.trigger;
     }
 
-    public MetricThresholdResponse(
-        List<AggregationResponse> aggregations,
-        String comparison,
-        List<AggregationResponse> denominatorAggregations,
-        String denominatorFilter,
-        String duration,
-        String filter,
-        Double thresholdValue,
-        TriggerResponse trigger) {
-        this.aggregations = Objects.requireNonNull(aggregations, "expected parameter 'aggregations' to be non-null");
-        this.comparison = Objects.requireNonNull(comparison, "expected parameter 'comparison' to be non-null");
-        this.denominatorAggregations = Objects.requireNonNull(denominatorAggregations, "expected parameter 'denominatorAggregations' to be non-null");
-        this.denominatorFilter = Objects.requireNonNull(denominatorFilter, "expected parameter 'denominatorFilter' to be non-null");
-        this.duration = Objects.requireNonNull(duration, "expected parameter 'duration' to be non-null");
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.thresholdValue = Objects.requireNonNull(thresholdValue, "expected parameter 'thresholdValue' to be non-null");
-        this.trigger = Objects.requireNonNull(trigger, "expected parameter 'trigger' to be non-null");
-    }
+    private MetricThresholdResponse() {}
 
-    private MetricThresholdResponse() {
-        this.aggregations = List.of();
-        this.comparison = null;
-        this.denominatorAggregations = List.of();
-        this.denominatorFilter = null;
-        this.duration = null;
-        this.filter = null;
-        this.thresholdValue = null;
-        this.trigger = null;
+    private MetricThresholdResponse(MetricThresholdResponse $) {
+        this.aggregations = $.aggregations;
+        this.comparison = $.comparison;
+        this.denominatorAggregations = $.denominatorAggregations;
+        this.denominatorFilter = $.denominatorFilter;
+        this.duration = $.duration;
+        this.filter = $.filter;
+        this.thresholdValue = $.thresholdValue;
+        this.trigger = $.trigger;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricThresholdResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<AggregationResponse> aggregations;
-        private String comparison;
-        private List<AggregationResponse> denominatorAggregations;
-        private String denominatorFilter;
-        private String duration;
-        private String filter;
-        private Double thresholdValue;
-        private TriggerResponse trigger;
+        private MetricThresholdResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricThresholdResponse();
         }
 
         public Builder(MetricThresholdResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aggregations = defaults.aggregations;
-    	      this.comparison = defaults.comparison;
-    	      this.denominatorAggregations = defaults.denominatorAggregations;
-    	      this.denominatorFilter = defaults.denominatorFilter;
-    	      this.duration = defaults.duration;
-    	      this.filter = defaults.filter;
-    	      this.thresholdValue = defaults.thresholdValue;
-    	      this.trigger = defaults.trigger;
+            $ = new MetricThresholdResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aggregations(List<AggregationResponse> aggregations) {
-            this.aggregations = Objects.requireNonNull(aggregations);
+            $.aggregations = aggregations;
             return this;
         }
+
         public Builder aggregations(AggregationResponse... aggregations) {
             return aggregations(List.of(aggregations));
         }
+
         public Builder comparison(String comparison) {
-            this.comparison = Objects.requireNonNull(comparison);
+            $.comparison = comparison;
             return this;
         }
+
         public Builder denominatorAggregations(List<AggregationResponse> denominatorAggregations) {
-            this.denominatorAggregations = Objects.requireNonNull(denominatorAggregations);
+            $.denominatorAggregations = denominatorAggregations;
             return this;
         }
+
         public Builder denominatorAggregations(AggregationResponse... denominatorAggregations) {
             return denominatorAggregations(List.of(denominatorAggregations));
         }
+
         public Builder denominatorFilter(String denominatorFilter) {
-            this.denominatorFilter = Objects.requireNonNull(denominatorFilter);
+            $.denominatorFilter = denominatorFilter;
             return this;
         }
+
         public Builder duration(String duration) {
-            this.duration = Objects.requireNonNull(duration);
+            $.duration = duration;
             return this;
         }
+
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder thresholdValue(Double thresholdValue) {
-            this.thresholdValue = Objects.requireNonNull(thresholdValue);
+            $.thresholdValue = thresholdValue;
             return this;
         }
+
         public Builder trigger(TriggerResponse trigger) {
-            this.trigger = Objects.requireNonNull(trigger);
+            $.trigger = trigger;
             return this;
-        }        public MetricThresholdResponse build() {
-            return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
+        }
+
+        public MetricThresholdResponse build() {
+            $.aggregations = Objects.requireNonNull($.aggregations, "expected parameter 'aggregations' to be non-null");
+            $.comparison = Objects.requireNonNull($.comparison, "expected parameter 'comparison' to be non-null");
+            $.denominatorAggregations = Objects.requireNonNull($.denominatorAggregations, "expected parameter 'denominatorAggregations' to be non-null");
+            $.denominatorFilter = Objects.requireNonNull($.denominatorFilter, "expected parameter 'denominatorFilter' to be non-null");
+            $.duration = Objects.requireNonNull($.duration, "expected parameter 'duration' to be non-null");
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.thresholdValue = Objects.requireNonNull($.thresholdValue, "expected parameter 'thresholdValue' to be non-null");
+            $.trigger = Objects.requireNonNull($.trigger, "expected parameter 'trigger' to be non-null");
+            return $;
         }
     }
+
 }

@@ -21,7 +21,7 @@ public final class ComponentSourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ComponentSourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="originalTransformOrCollection", required=true)
-      private final String originalTransformOrCollection;
+    private String originalTransformOrCollection;
 
     public String originalTransformOrCollection() {
         return this.originalTransformOrCollection;
@@ -43,64 +43,59 @@ public final class ComponentSourceResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="userName", required=true)
-      private final String userName;
+    private String userName;
 
     public String userName() {
         return this.userName;
     }
 
-    public ComponentSourceResponse(
-        String name,
-        String originalTransformOrCollection,
-        String userName) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection, "expected parameter 'originalTransformOrCollection' to be non-null");
-        this.userName = Objects.requireNonNull(userName, "expected parameter 'userName' to be non-null");
-    }
+    private ComponentSourceResponse() {}
 
-    private ComponentSourceResponse() {
-        this.name = null;
-        this.originalTransformOrCollection = null;
-        this.userName = null;
+    private ComponentSourceResponse(ComponentSourceResponse $) {
+        this.name = $.name;
+        this.originalTransformOrCollection = $.originalTransformOrCollection;
+        this.userName = $.userName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ComponentSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String originalTransformOrCollection;
-        private String userName;
+        private ComponentSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ComponentSourceResponse();
         }
 
         public Builder(ComponentSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.originalTransformOrCollection = defaults.originalTransformOrCollection;
-    	      this.userName = defaults.userName;
+            $ = new ComponentSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder originalTransformOrCollection(String originalTransformOrCollection) {
-            this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
+            $.originalTransformOrCollection = originalTransformOrCollection;
             return this;
         }
+
         public Builder userName(String userName) {
-            this.userName = Objects.requireNonNull(userName);
+            $.userName = userName;
             return this;
-        }        public ComponentSourceResponse build() {
-            return new ComponentSourceResponse(name, originalTransformOrCollection, userName);
+        }
+
+        public ComponentSourceResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.originalTransformOrCollection = Objects.requireNonNull($.originalTransformOrCollection, "expected parameter 'originalTransformOrCollection' to be non-null");
+            $.userName = Objects.requireNonNull($.userName, "expected parameter 'userName' to be non-null");
+            return $;
         }
     }
+
 }

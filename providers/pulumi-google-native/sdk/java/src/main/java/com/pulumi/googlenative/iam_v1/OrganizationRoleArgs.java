@@ -5,12 +5,12 @@ package com.pulumi.googlenative.iam_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.iam_v1.enums.OrganizationRoleStage;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +23,10 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="deleted")
-      private final @Nullable Output<Boolean> deleted;
+    private @Nullable Output<Boolean> deleted;
 
-    public Output<Boolean> deleted() {
-        return this.deleted == null ? Codegen.empty() : this.deleted;
+    public Optional<Output<Boolean>> deleted() {
+        return Optional.ofNullable(this.deleted);
     }
 
     /**
@@ -34,10 +34,10 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="includedPermissions")
-      private final @Nullable Output<List<String>> includedPermissions;
+    private @Nullable Output<List<String>> includedPermissions;
 
-    public Output<List<String>> includedPermissions() {
-        return this.includedPermissions == null ? Codegen.empty() : this.includedPermissions;
+    public Optional<Output<List<String>>> includedPermissions() {
+        return Optional.ofNullable(this.includedPermissions);
     }
 
     /**
@@ -67,14 +67,14 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
@@ -85,10 +85,10 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="roleId")
-      private final @Nullable Output<String> roleId;
+    private @Nullable Output<String> roleId;
 
-    public Output<String> roleId() {
-        return this.roleId == null ? Codegen.empty() : this.roleId;
+    public Optional<Output<String>> roleId() {
+        return Optional.ofNullable(this.roleId);
     }
 
     /**
@@ -96,10 +96,10 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="stage")
-      private final @Nullable Output<OrganizationRoleStage> stage;
+    private @Nullable Output<OrganizationRoleStage> stage;
 
-    public Output<OrganizationRoleStage> stage() {
-        return this.stage == null ? Codegen.empty() : this.stage;
+    public Optional<Output<OrganizationRoleStage>> stage() {
+        return Optional.ofNullable(this.stage);
     }
 
     /**
@@ -107,157 +107,133 @@ public final class OrganizationRoleArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="title")
-      private final @Nullable Output<String> title;
+    private @Nullable Output<String> title;
 
-    public Output<String> title() {
-        return this.title == null ? Codegen.empty() : this.title;
+    public Optional<Output<String>> title() {
+        return Optional.ofNullable(this.title);
     }
 
-    public OrganizationRoleArgs(
-        @Nullable Output<Boolean> deleted,
-        @Nullable Output<String> description,
-        @Nullable Output<String> etag,
-        @Nullable Output<List<String>> includedPermissions,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<String> roleId,
-        @Nullable Output<OrganizationRoleStage> stage,
-        @Nullable Output<String> title) {
-        this.deleted = deleted;
-        this.description = description;
-        this.etag = etag;
-        this.includedPermissions = includedPermissions;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.roleId = roleId;
-        this.stage = stage;
-        this.title = title;
-    }
+    private OrganizationRoleArgs() {}
 
-    private OrganizationRoleArgs() {
-        this.deleted = Codegen.empty();
-        this.description = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.includedPermissions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.roleId = Codegen.empty();
-        this.stage = Codegen.empty();
-        this.title = Codegen.empty();
+    private OrganizationRoleArgs(OrganizationRoleArgs $) {
+        this.deleted = $.deleted;
+        this.description = $.description;
+        this.etag = $.etag;
+        this.includedPermissions = $.includedPermissions;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.roleId = $.roleId;
+        this.stage = $.stage;
+        this.title = $.title;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OrganizationRoleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> deleted;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<List<String>> includedPermissions;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<String> roleId;
-        private @Nullable Output<OrganizationRoleStage> stage;
-        private @Nullable Output<String> title;
+        private OrganizationRoleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OrganizationRoleArgs();
         }
 
         public Builder(OrganizationRoleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deleted = defaults.deleted;
-    	      this.description = defaults.description;
-    	      this.etag = defaults.etag;
-    	      this.includedPermissions = defaults.includedPermissions;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.roleId = defaults.roleId;
-    	      this.stage = defaults.stage;
-    	      this.title = defaults.title;
+            $ = new OrganizationRoleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deleted(@Nullable Output<Boolean> deleted) {
-            this.deleted = deleted;
+            $.deleted = deleted;
             return this;
         }
-        public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Codegen.ofNullable(deleted);
-            return this;
+
+        public Builder deleted(Boolean deleted) {
+            return deleted(Output.of(deleted));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder includedPermissions(@Nullable Output<List<String>> includedPermissions) {
-            this.includedPermissions = includedPermissions;
+            $.includedPermissions = includedPermissions;
             return this;
         }
-        public Builder includedPermissions(@Nullable List<String> includedPermissions) {
-            this.includedPermissions = Codegen.ofNullable(includedPermissions);
-            return this;
+
+        public Builder includedPermissions(List<String> includedPermissions) {
+            return includedPermissions(Output.of(includedPermissions));
         }
+
         public Builder includedPermissions(String... includedPermissions) {
             return includedPermissions(List.of(includedPermissions));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder roleId(@Nullable Output<String> roleId) {
-            this.roleId = roleId;
+            $.roleId = roleId;
             return this;
         }
-        public Builder roleId(@Nullable String roleId) {
-            this.roleId = Codegen.ofNullable(roleId);
-            return this;
+
+        public Builder roleId(String roleId) {
+            return roleId(Output.of(roleId));
         }
+
         public Builder stage(@Nullable Output<OrganizationRoleStage> stage) {
-            this.stage = stage;
+            $.stage = stage;
             return this;
         }
-        public Builder stage(@Nullable OrganizationRoleStage stage) {
-            this.stage = Codegen.ofNullable(stage);
-            return this;
+
+        public Builder stage(OrganizationRoleStage stage) {
+            return stage(Output.of(stage));
         }
+
         public Builder title(@Nullable Output<String> title) {
-            this.title = title;
+            $.title = title;
             return this;
         }
-        public Builder title(@Nullable String title) {
-            this.title = Codegen.ofNullable(title);
-            return this;
-        }        public OrganizationRoleArgs build() {
-            return new OrganizationRoleArgs(deleted, description, etag, includedPermissions, name, organizationId, roleId, stage, title);
+
+        public Builder title(String title) {
+            return title(Output.of(title));
+        }
+
+        public OrganizationRoleArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

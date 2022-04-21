@@ -22,7 +22,7 @@ public final class LogsPanelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="filter", required=true)
-      private final String filter;
+    private String filter;
 
     public String filter() {
         return this.filter;
@@ -33,58 +33,56 @@ public final class LogsPanelResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="resourceNames", required=true)
-      private final List<String> resourceNames;
+    private List<String> resourceNames;
 
     public List<String> resourceNames() {
         return this.resourceNames;
     }
 
-    public LogsPanelResponse(
-        String filter,
-        List<String> resourceNames) {
-        this.filter = Objects.requireNonNull(filter, "expected parameter 'filter' to be non-null");
-        this.resourceNames = Objects.requireNonNull(resourceNames, "expected parameter 'resourceNames' to be non-null");
-    }
+    private LogsPanelResponse() {}
 
-    private LogsPanelResponse() {
-        this.filter = null;
-        this.resourceNames = List.of();
+    private LogsPanelResponse(LogsPanelResponse $) {
+        this.filter = $.filter;
+        this.resourceNames = $.resourceNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LogsPanelResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String filter;
-        private List<String> resourceNames;
+        private LogsPanelResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LogsPanelResponse();
         }
 
         public Builder(LogsPanelResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.filter = defaults.filter;
-    	      this.resourceNames = defaults.resourceNames;
+            $ = new LogsPanelResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder filter(String filter) {
-            this.filter = Objects.requireNonNull(filter);
+            $.filter = filter;
             return this;
         }
+
         public Builder resourceNames(List<String> resourceNames) {
-            this.resourceNames = Objects.requireNonNull(resourceNames);
+            $.resourceNames = resourceNames;
             return this;
         }
+
         public Builder resourceNames(String... resourceNames) {
             return resourceNames(List.of(resourceNames));
-        }        public LogsPanelResponse build() {
-            return new LogsPanelResponse(filter, resourceNames);
+        }
+
+        public LogsPanelResponse build() {
+            $.filter = Objects.requireNonNull($.filter, "expected parameter 'filter' to be non-null");
+            $.resourceNames = Objects.requireNonNull($.resourceNames, "expected parameter 'resourceNames' to be non-null");
+            return $;
         }
     }
+
 }

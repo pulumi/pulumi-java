@@ -21,7 +21,7 @@ public final class AxisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="label", required=true)
-      private final String label;
+    private String label;
 
     public String label() {
         return this.label;
@@ -32,55 +32,52 @@ public final class AxisResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="scale", required=true)
-      private final String scale;
+    private String scale;
 
     public String scale() {
         return this.scale;
     }
 
-    public AxisResponse(
-        String label,
-        String scale) {
-        this.label = Objects.requireNonNull(label, "expected parameter 'label' to be non-null");
-        this.scale = Objects.requireNonNull(scale, "expected parameter 'scale' to be non-null");
-    }
+    private AxisResponse() {}
 
-    private AxisResponse() {
-        this.label = null;
-        this.scale = null;
+    private AxisResponse(AxisResponse $) {
+        this.label = $.label;
+        this.scale = $.scale;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AxisResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String label;
-        private String scale;
+        private AxisResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AxisResponse();
         }
 
         public Builder(AxisResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.label = defaults.label;
-    	      this.scale = defaults.scale;
+            $ = new AxisResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder label(String label) {
-            this.label = Objects.requireNonNull(label);
+            $.label = label;
             return this;
         }
+
         public Builder scale(String scale) {
-            this.scale = Objects.requireNonNull(scale);
+            $.scale = scale;
             return this;
-        }        public AxisResponse build() {
-            return new AxisResponse(label, scale);
+        }
+
+        public AxisResponse build() {
+            $.label = Objects.requireNonNull($.label, "expected parameter 'label' to be non-null");
+            $.scale = Objects.requireNonNull($.scale, "expected parameter 'scale' to be non-null");
+            return $;
         }
     }
+
 }

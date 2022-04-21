@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="bootDiskSizeGb", required=true)
-      private final Integer bootDiskSizeGb;
+    private Integer bootDiskSizeGb;
 
     public Integer bootDiskSizeGb() {
         return this.bootDiskSizeGb;
@@ -33,55 +33,52 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends com.pulumi.resour
      * 
      */
     @Import(name="bootDiskType", required=true)
-      private final String bootDiskType;
+    private String bootDiskType;
 
     public String bootDiskType() {
         return this.bootDiskType;
     }
 
-    public GoogleCloudMlV1__DiskConfigResponse(
-        Integer bootDiskSizeGb,
-        String bootDiskType) {
-        this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb, "expected parameter 'bootDiskSizeGb' to be non-null");
-        this.bootDiskType = Objects.requireNonNull(bootDiskType, "expected parameter 'bootDiskType' to be non-null");
-    }
+    private GoogleCloudMlV1__DiskConfigResponse() {}
 
-    private GoogleCloudMlV1__DiskConfigResponse() {
-        this.bootDiskSizeGb = null;
-        this.bootDiskType = null;
+    private GoogleCloudMlV1__DiskConfigResponse(GoogleCloudMlV1__DiskConfigResponse $) {
+        this.bootDiskSizeGb = $.bootDiskSizeGb;
+        this.bootDiskType = $.bootDiskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudMlV1__DiskConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer bootDiskSizeGb;
-        private String bootDiskType;
+        private GoogleCloudMlV1__DiskConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudMlV1__DiskConfigResponse();
         }
 
         public Builder(GoogleCloudMlV1__DiskConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bootDiskSizeGb = defaults.bootDiskSizeGb;
-    	      this.bootDiskType = defaults.bootDiskType;
+            $ = new GoogleCloudMlV1__DiskConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
+            $.bootDiskSizeGb = bootDiskSizeGb;
             return this;
         }
+
         public Builder bootDiskType(String bootDiskType) {
-            this.bootDiskType = Objects.requireNonNull(bootDiskType);
+            $.bootDiskType = bootDiskType;
             return this;
-        }        public GoogleCloudMlV1__DiskConfigResponse build() {
-            return new GoogleCloudMlV1__DiskConfigResponse(bootDiskSizeGb, bootDiskType);
+        }
+
+        public GoogleCloudMlV1__DiskConfigResponse build() {
+            $.bootDiskSizeGb = Objects.requireNonNull($.bootDiskSizeGb, "expected parameter 'bootDiskSizeGb' to be non-null");
+            $.bootDiskType = Objects.requireNonNull($.bootDiskType, "expected parameter 'bootDiskType' to be non-null");
+            return $;
         }
     }
+
 }

@@ -24,7 +24,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @Import(name="chainName", required=true)
-      private final String chainName;
+    private String chainName;
 
     public String chainName() {
         return this.chainName;
@@ -35,7 +35,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @Import(name="guestFlush", required=true)
-      private final Boolean guestFlush;
+    private Boolean guestFlush;
 
     public Boolean guestFlush() {
         return this.guestFlush;
@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -57,76 +57,70 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @Import(name="storageLocations", required=true)
-      private final List<String> storageLocations;
+    private List<String> storageLocations;
 
     public List<String> storageLocations() {
         return this.storageLocations;
     }
 
-    public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(
-        String chainName,
-        Boolean guestFlush,
-        Map<String,String> labels,
-        List<String> storageLocations) {
-        this.chainName = Objects.requireNonNull(chainName, "expected parameter 'chainName' to be non-null");
-        this.guestFlush = Objects.requireNonNull(guestFlush, "expected parameter 'guestFlush' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.storageLocations = Objects.requireNonNull(storageLocations, "expected parameter 'storageLocations' to be non-null");
-    }
+    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse() {}
 
-    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse() {
-        this.chainName = null;
-        this.guestFlush = null;
-        this.labels = Map.of();
-        this.storageLocations = List.of();
+    private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse $) {
+        this.chainName = $.chainName;
+        this.guestFlush = $.guestFlush;
+        this.labels = $.labels;
+        this.storageLocations = $.storageLocations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String chainName;
-        private Boolean guestFlush;
-        private Map<String,String> labels;
-        private List<String> storageLocations;
+        private ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse();
         }
 
         public Builder(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.chainName = defaults.chainName;
-    	      this.guestFlush = defaults.guestFlush;
-    	      this.labels = defaults.labels;
-    	      this.storageLocations = defaults.storageLocations;
+            $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder chainName(String chainName) {
-            this.chainName = Objects.requireNonNull(chainName);
+            $.chainName = chainName;
             return this;
         }
+
         public Builder guestFlush(Boolean guestFlush) {
-            this.guestFlush = Objects.requireNonNull(guestFlush);
+            $.guestFlush = guestFlush;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder storageLocations(List<String> storageLocations) {
-            this.storageLocations = Objects.requireNonNull(storageLocations);
+            $.storageLocations = storageLocations;
             return this;
         }
+
         public Builder storageLocations(String... storageLocations) {
             return storageLocations(List.of(storageLocations));
-        }        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
-            return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(chainName, guestFlush, labels, storageLocations);
+        }
+
+        public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
+            $.chainName = Objects.requireNonNull($.chainName, "expected parameter 'chainName' to be non-null");
+            $.guestFlush = Objects.requireNonNull($.guestFlush, "expected parameter 'guestFlush' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.storageLocations = Objects.requireNonNull($.storageLocations, "expected parameter 'storageLocations' to be non-null");
+            return $;
         }
     }
+
 }

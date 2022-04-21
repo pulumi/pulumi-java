@@ -23,7 +23,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="caCertificate", required=true)
-      private final String caCertificate;
+    private String caCertificate;
 
     public String caCertificate() {
         return this.caCertificate;
@@ -34,7 +34,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clientCertificate", required=true)
-      private final String clientCertificate;
+    private String clientCertificate;
 
     public String clientCertificate() {
         return this.clientCertificate;
@@ -45,7 +45,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="clientKey", required=true)
-      private final String clientKey;
+    private String clientKey;
 
     public String clientKey() {
         return this.clientKey;
@@ -56,7 +56,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="connectRetryInterval", required=true)
-      private final Integer connectRetryInterval;
+    private Integer connectRetryInterval;
 
     public Integer connectRetryInterval() {
         return this.connectRetryInterval;
@@ -67,7 +67,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="dumpFilePath", required=true)
-      private final String dumpFilePath;
+    private String dumpFilePath;
 
     public String dumpFilePath() {
         return this.dumpFilePath;
@@ -78,7 +78,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -89,7 +89,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="masterHeartbeatPeriod", required=true)
-      private final String masterHeartbeatPeriod;
+    private String masterHeartbeatPeriod;
 
     public String masterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
@@ -100,7 +100,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -111,7 +111,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="sslCipher", required=true)
-      private final String sslCipher;
+    private String sslCipher;
 
     public String sslCipher() {
         return this.sslCipher;
@@ -122,7 +122,7 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
@@ -133,136 +133,115 @@ public final class MySqlReplicaConfigurationResponse extends com.pulumi.resource
      * 
      */
     @Import(name="verifyServerCertificate", required=true)
-      private final Boolean verifyServerCertificate;
+    private Boolean verifyServerCertificate;
 
     public Boolean verifyServerCertificate() {
         return this.verifyServerCertificate;
     }
 
-    public MySqlReplicaConfigurationResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        Integer connectRetryInterval,
-        String dumpFilePath,
-        String kind,
-        String masterHeartbeatPeriod,
-        String password,
-        String sslCipher,
-        String username,
-        Boolean verifyServerCertificate) {
-        this.caCertificate = Objects.requireNonNull(caCertificate, "expected parameter 'caCertificate' to be non-null");
-        this.clientCertificate = Objects.requireNonNull(clientCertificate, "expected parameter 'clientCertificate' to be non-null");
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.connectRetryInterval = Objects.requireNonNull(connectRetryInterval, "expected parameter 'connectRetryInterval' to be non-null");
-        this.dumpFilePath = Objects.requireNonNull(dumpFilePath, "expected parameter 'dumpFilePath' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.masterHeartbeatPeriod = Objects.requireNonNull(masterHeartbeatPeriod, "expected parameter 'masterHeartbeatPeriod' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.sslCipher = Objects.requireNonNull(sslCipher, "expected parameter 'sslCipher' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-        this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate, "expected parameter 'verifyServerCertificate' to be non-null");
-    }
+    private MySqlReplicaConfigurationResponse() {}
 
-    private MySqlReplicaConfigurationResponse() {
-        this.caCertificate = null;
-        this.clientCertificate = null;
-        this.clientKey = null;
-        this.connectRetryInterval = null;
-        this.dumpFilePath = null;
-        this.kind = null;
-        this.masterHeartbeatPeriod = null;
-        this.password = null;
-        this.sslCipher = null;
-        this.username = null;
-        this.verifyServerCertificate = null;
+    private MySqlReplicaConfigurationResponse(MySqlReplicaConfigurationResponse $) {
+        this.caCertificate = $.caCertificate;
+        this.clientCertificate = $.clientCertificate;
+        this.clientKey = $.clientKey;
+        this.connectRetryInterval = $.connectRetryInterval;
+        this.dumpFilePath = $.dumpFilePath;
+        this.kind = $.kind;
+        this.masterHeartbeatPeriod = $.masterHeartbeatPeriod;
+        this.password = $.password;
+        this.sslCipher = $.sslCipher;
+        this.username = $.username;
+        this.verifyServerCertificate = $.verifyServerCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MySqlReplicaConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caCertificate;
-        private String clientCertificate;
-        private String clientKey;
-        private Integer connectRetryInterval;
-        private String dumpFilePath;
-        private String kind;
-        private String masterHeartbeatPeriod;
-        private String password;
-        private String sslCipher;
-        private String username;
-        private Boolean verifyServerCertificate;
+        private MySqlReplicaConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MySqlReplicaConfigurationResponse();
         }
 
         public Builder(MySqlReplicaConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientKey = defaults.clientKey;
-    	      this.connectRetryInterval = defaults.connectRetryInterval;
-    	      this.dumpFilePath = defaults.dumpFilePath;
-    	      this.kind = defaults.kind;
-    	      this.masterHeartbeatPeriod = defaults.masterHeartbeatPeriod;
-    	      this.password = defaults.password;
-    	      this.sslCipher = defaults.sslCipher;
-    	      this.username = defaults.username;
-    	      this.verifyServerCertificate = defaults.verifyServerCertificate;
+            $ = new MySqlReplicaConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(String caCertificate) {
-            this.caCertificate = Objects.requireNonNull(caCertificate);
+            $.caCertificate = caCertificate;
             return this;
         }
+
         public Builder clientCertificate(String clientCertificate) {
-            this.clientCertificate = Objects.requireNonNull(clientCertificate);
+            $.clientCertificate = clientCertificate;
             return this;
         }
+
         public Builder clientKey(String clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder connectRetryInterval(Integer connectRetryInterval) {
-            this.connectRetryInterval = Objects.requireNonNull(connectRetryInterval);
+            $.connectRetryInterval = connectRetryInterval;
             return this;
         }
+
         public Builder dumpFilePath(String dumpFilePath) {
-            this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
+            $.dumpFilePath = dumpFilePath;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder masterHeartbeatPeriod(String masterHeartbeatPeriod) {
-            this.masterHeartbeatPeriod = Objects.requireNonNull(masterHeartbeatPeriod);
+            $.masterHeartbeatPeriod = masterHeartbeatPeriod;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder sslCipher(String sslCipher) {
-            this.sslCipher = Objects.requireNonNull(sslCipher);
+            $.sslCipher = sslCipher;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
         }
+
         public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
-            this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
+            $.verifyServerCertificate = verifyServerCertificate;
             return this;
-        }        public MySqlReplicaConfigurationResponse build() {
-            return new MySqlReplicaConfigurationResponse(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, kind, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
+        }
+
+        public MySqlReplicaConfigurationResponse build() {
+            $.caCertificate = Objects.requireNonNull($.caCertificate, "expected parameter 'caCertificate' to be non-null");
+            $.clientCertificate = Objects.requireNonNull($.clientCertificate, "expected parameter 'clientCertificate' to be non-null");
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.connectRetryInterval = Objects.requireNonNull($.connectRetryInterval, "expected parameter 'connectRetryInterval' to be non-null");
+            $.dumpFilePath = Objects.requireNonNull($.dumpFilePath, "expected parameter 'dumpFilePath' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.masterHeartbeatPeriod = Objects.requireNonNull($.masterHeartbeatPeriod, "expected parameter 'masterHeartbeatPeriod' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.sslCipher = Objects.requireNonNull($.sslCipher, "expected parameter 'sslCipher' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            $.verifyServerCertificate = Objects.requireNonNull($.verifyServerCertificate, "expected parameter 'verifyServerCertificate' to be non-null");
+            return $;
         }
     }
+
 }

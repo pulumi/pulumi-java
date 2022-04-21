@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="bigQueryOptions", required=true)
-      private final GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
+    private GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
 
     public GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions() {
         return this.bigQueryOptions;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="cloudStorageOptions", required=true)
-      private final GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
+    private GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
 
     public GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions() {
         return this.cloudStorageOptions;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="datastoreOptions", required=true)
-      private final GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
+    private GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
 
     public GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions() {
         return this.datastoreOptions;
@@ -58,89 +58,80 @@ public final class GooglePrivacyDlpV2StorageConfigResponse extends com.pulumi.re
      * 
      */
     @Import(name="hybridOptions", required=true)
-      private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
+    private GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
 
     public GooglePrivacyDlpV2HybridOptionsResponse hybridOptions() {
         return this.hybridOptions;
     }
 
     @Import(name="timespanConfig", required=true)
-      private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
+    private GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 
     public GooglePrivacyDlpV2TimespanConfigResponse timespanConfig() {
         return this.timespanConfig;
     }
 
-    public GooglePrivacyDlpV2StorageConfigResponse(
-        GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions,
-        GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions,
-        GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions,
-        GooglePrivacyDlpV2HybridOptionsResponse hybridOptions,
-        GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
-        this.bigQueryOptions = Objects.requireNonNull(bigQueryOptions, "expected parameter 'bigQueryOptions' to be non-null");
-        this.cloudStorageOptions = Objects.requireNonNull(cloudStorageOptions, "expected parameter 'cloudStorageOptions' to be non-null");
-        this.datastoreOptions = Objects.requireNonNull(datastoreOptions, "expected parameter 'datastoreOptions' to be non-null");
-        this.hybridOptions = Objects.requireNonNull(hybridOptions, "expected parameter 'hybridOptions' to be non-null");
-        this.timespanConfig = Objects.requireNonNull(timespanConfig, "expected parameter 'timespanConfig' to be non-null");
-    }
+    private GooglePrivacyDlpV2StorageConfigResponse() {}
 
-    private GooglePrivacyDlpV2StorageConfigResponse() {
-        this.bigQueryOptions = null;
-        this.cloudStorageOptions = null;
-        this.datastoreOptions = null;
-        this.hybridOptions = null;
-        this.timespanConfig = null;
+    private GooglePrivacyDlpV2StorageConfigResponse(GooglePrivacyDlpV2StorageConfigResponse $) {
+        this.bigQueryOptions = $.bigQueryOptions;
+        this.cloudStorageOptions = $.cloudStorageOptions;
+        this.datastoreOptions = $.datastoreOptions;
+        this.hybridOptions = $.hybridOptions;
+        this.timespanConfig = $.timespanConfig;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GooglePrivacyDlpV2StorageConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions;
-        private GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions;
-        private GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions;
-        private GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
-        private GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
+        private GooglePrivacyDlpV2StorageConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GooglePrivacyDlpV2StorageConfigResponse();
         }
 
         public Builder(GooglePrivacyDlpV2StorageConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bigQueryOptions = defaults.bigQueryOptions;
-    	      this.cloudStorageOptions = defaults.cloudStorageOptions;
-    	      this.datastoreOptions = defaults.datastoreOptions;
-    	      this.hybridOptions = defaults.hybridOptions;
-    	      this.timespanConfig = defaults.timespanConfig;
+            $ = new GooglePrivacyDlpV2StorageConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder bigQueryOptions(GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions) {
-            this.bigQueryOptions = Objects.requireNonNull(bigQueryOptions);
+            $.bigQueryOptions = bigQueryOptions;
             return this;
         }
+
         public Builder cloudStorageOptions(GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions) {
-            this.cloudStorageOptions = Objects.requireNonNull(cloudStorageOptions);
+            $.cloudStorageOptions = cloudStorageOptions;
             return this;
         }
+
         public Builder datastoreOptions(GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions) {
-            this.datastoreOptions = Objects.requireNonNull(datastoreOptions);
+            $.datastoreOptions = datastoreOptions;
             return this;
         }
+
         public Builder hybridOptions(GooglePrivacyDlpV2HybridOptionsResponse hybridOptions) {
-            this.hybridOptions = Objects.requireNonNull(hybridOptions);
+            $.hybridOptions = hybridOptions;
             return this;
         }
+
         public Builder timespanConfig(GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
-            this.timespanConfig = Objects.requireNonNull(timespanConfig);
+            $.timespanConfig = timespanConfig;
             return this;
-        }        public GooglePrivacyDlpV2StorageConfigResponse build() {
-            return new GooglePrivacyDlpV2StorageConfigResponse(bigQueryOptions, cloudStorageOptions, datastoreOptions, hybridOptions, timespanConfig);
+        }
+
+        public GooglePrivacyDlpV2StorageConfigResponse build() {
+            $.bigQueryOptions = Objects.requireNonNull($.bigQueryOptions, "expected parameter 'bigQueryOptions' to be non-null");
+            $.cloudStorageOptions = Objects.requireNonNull($.cloudStorageOptions, "expected parameter 'cloudStorageOptions' to be non-null");
+            $.datastoreOptions = Objects.requireNonNull($.datastoreOptions, "expected parameter 'datastoreOptions' to be non-null");
+            $.hybridOptions = Objects.requireNonNull($.hybridOptions, "expected parameter 'hybridOptions' to be non-null");
+            $.timespanConfig = Objects.requireNonNull($.timespanConfig, "expected parameter 'timespanConfig' to be non-null");
+            return $;
         }
     }
+
 }

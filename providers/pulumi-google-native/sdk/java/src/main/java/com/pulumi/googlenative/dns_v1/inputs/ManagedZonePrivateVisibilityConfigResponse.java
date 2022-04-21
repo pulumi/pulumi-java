@@ -15,7 +15,7 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
     public static final ManagedZonePrivateVisibilityConfigResponse Empty = new ManagedZonePrivateVisibilityConfigResponse();
 
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -26,58 +26,56 @@ public final class ManagedZonePrivateVisibilityConfigResponse extends com.pulumi
      * 
      */
     @Import(name="networks", required=true)
-      private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
+    private List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
     public List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks() {
         return this.networks;
     }
 
-    public ManagedZonePrivateVisibilityConfigResponse(
-        String kind,
-        List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.networks = Objects.requireNonNull(networks, "expected parameter 'networks' to be non-null");
-    }
+    private ManagedZonePrivateVisibilityConfigResponse() {}
 
-    private ManagedZonePrivateVisibilityConfigResponse() {
-        this.kind = null;
-        this.networks = List.of();
+    private ManagedZonePrivateVisibilityConfigResponse(ManagedZonePrivateVisibilityConfigResponse $) {
+        this.kind = $.kind;
+        this.networks = $.networks;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedZonePrivateVisibilityConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String kind;
-        private List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
+        private ManagedZonePrivateVisibilityConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedZonePrivateVisibilityConfigResponse();
         }
 
         public Builder(ManagedZonePrivateVisibilityConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kind = defaults.kind;
-    	      this.networks = defaults.networks;
+            $ = new ManagedZonePrivateVisibilityConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
-            this.networks = Objects.requireNonNull(networks);
+            $.networks = networks;
             return this;
         }
+
         public Builder networks(ManagedZonePrivateVisibilityConfigNetworkResponse... networks) {
             return networks(List.of(networks));
-        }        public ManagedZonePrivateVisibilityConfigResponse build() {
-            return new ManagedZonePrivateVisibilityConfigResponse(kind, networks);
+        }
+
+        public ManagedZonePrivateVisibilityConfigResponse build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.networks = Objects.requireNonNull($.networks, "expected parameter 'networks' to be non-null");
+            return $;
         }
     }
+
 }

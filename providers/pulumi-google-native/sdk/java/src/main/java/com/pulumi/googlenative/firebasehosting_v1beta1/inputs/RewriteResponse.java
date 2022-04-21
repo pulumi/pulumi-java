@@ -23,7 +23,7 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dynamicLinks", required=true)
-      private final Boolean dynamicLinks;
+    private Boolean dynamicLinks;
 
     public Boolean dynamicLinks() {
         return this.dynamicLinks;
@@ -34,7 +34,7 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="function", required=true)
-      private final String function;
+    private String function;
 
     public String function() {
         return this.function;
@@ -45,7 +45,7 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="glob", required=true)
-      private final String glob;
+    private String glob;
 
     public String glob() {
         return this.glob;
@@ -56,7 +56,7 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
@@ -67,7 +67,7 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="regex", required=true)
-      private final String regex;
+    private String regex;
 
     public String regex() {
         return this.regex;
@@ -78,91 +78,80 @@ public final class RewriteResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="run", required=true)
-      private final CloudRunRewriteResponse run;
+    private CloudRunRewriteResponse run;
 
     public CloudRunRewriteResponse run() {
         return this.run;
     }
 
-    public RewriteResponse(
-        Boolean dynamicLinks,
-        String function,
-        String glob,
-        String path,
-        String regex,
-        CloudRunRewriteResponse run) {
-        this.dynamicLinks = Objects.requireNonNull(dynamicLinks, "expected parameter 'dynamicLinks' to be non-null");
-        this.function = Objects.requireNonNull(function, "expected parameter 'function' to be non-null");
-        this.glob = Objects.requireNonNull(glob, "expected parameter 'glob' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-        this.regex = Objects.requireNonNull(regex, "expected parameter 'regex' to be non-null");
-        this.run = Objects.requireNonNull(run, "expected parameter 'run' to be non-null");
-    }
+    private RewriteResponse() {}
 
-    private RewriteResponse() {
-        this.dynamicLinks = null;
-        this.function = null;
-        this.glob = null;
-        this.path = null;
-        this.regex = null;
-        this.run = null;
+    private RewriteResponse(RewriteResponse $) {
+        this.dynamicLinks = $.dynamicLinks;
+        this.function = $.function;
+        this.glob = $.glob;
+        this.path = $.path;
+        this.regex = $.regex;
+        this.run = $.run;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RewriteResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean dynamicLinks;
-        private String function;
-        private String glob;
-        private String path;
-        private String regex;
-        private CloudRunRewriteResponse run;
+        private RewriteResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RewriteResponse();
         }
 
         public Builder(RewriteResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dynamicLinks = defaults.dynamicLinks;
-    	      this.function = defaults.function;
-    	      this.glob = defaults.glob;
-    	      this.path = defaults.path;
-    	      this.regex = defaults.regex;
-    	      this.run = defaults.run;
+            $ = new RewriteResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dynamicLinks(Boolean dynamicLinks) {
-            this.dynamicLinks = Objects.requireNonNull(dynamicLinks);
+            $.dynamicLinks = dynamicLinks;
             return this;
         }
+
         public Builder function(String function) {
-            this.function = Objects.requireNonNull(function);
+            $.function = function;
             return this;
         }
+
         public Builder glob(String glob) {
-            this.glob = Objects.requireNonNull(glob);
+            $.glob = glob;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder regex(String regex) {
-            this.regex = Objects.requireNonNull(regex);
+            $.regex = regex;
             return this;
         }
+
         public Builder run(CloudRunRewriteResponse run) {
-            this.run = Objects.requireNonNull(run);
+            $.run = run;
             return this;
-        }        public RewriteResponse build() {
-            return new RewriteResponse(dynamicLinks, function, glob, path, regex, run);
+        }
+
+        public RewriteResponse build() {
+            $.dynamicLinks = Objects.requireNonNull($.dynamicLinks, "expected parameter 'dynamicLinks' to be non-null");
+            $.function = Objects.requireNonNull($.function, "expected parameter 'function' to be non-null");
+            $.glob = Objects.requireNonNull($.glob, "expected parameter 'glob' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            $.regex = Objects.requireNonNull($.regex, "expected parameter 'regex' to be non-null");
+            $.run = Objects.requireNonNull($.run, "expected parameter 'run' to be non-null");
+            return $;
         }
     }
+
 }

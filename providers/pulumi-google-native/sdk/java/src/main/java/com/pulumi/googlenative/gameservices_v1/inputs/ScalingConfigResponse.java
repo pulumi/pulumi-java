@@ -24,7 +24,7 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="fleetAutoscalerSpec", required=true)
-      private final String fleetAutoscalerSpec;
+    private String fleetAutoscalerSpec;
 
     public String fleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
@@ -35,7 +35,7 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -46,7 +46,7 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="schedules", required=true)
-      private final List<ScheduleResponse> schedules;
+    private List<ScheduleResponse> schedules;
 
     public List<ScheduleResponse> schedules() {
         return this.schedules;
@@ -57,79 +57,74 @@ public final class ScalingConfigResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="selectors", required=true)
-      private final List<LabelSelectorResponse> selectors;
+    private List<LabelSelectorResponse> selectors;
 
     public List<LabelSelectorResponse> selectors() {
         return this.selectors;
     }
 
-    public ScalingConfigResponse(
-        String fleetAutoscalerSpec,
-        String name,
-        List<ScheduleResponse> schedules,
-        List<LabelSelectorResponse> selectors) {
-        this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec, "expected parameter 'fleetAutoscalerSpec' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.schedules = Objects.requireNonNull(schedules, "expected parameter 'schedules' to be non-null");
-        this.selectors = Objects.requireNonNull(selectors, "expected parameter 'selectors' to be non-null");
-    }
+    private ScalingConfigResponse() {}
 
-    private ScalingConfigResponse() {
-        this.fleetAutoscalerSpec = null;
-        this.name = null;
-        this.schedules = List.of();
-        this.selectors = List.of();
+    private ScalingConfigResponse(ScalingConfigResponse $) {
+        this.fleetAutoscalerSpec = $.fleetAutoscalerSpec;
+        this.name = $.name;
+        this.schedules = $.schedules;
+        this.selectors = $.selectors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScalingConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fleetAutoscalerSpec;
-        private String name;
-        private List<ScheduleResponse> schedules;
-        private List<LabelSelectorResponse> selectors;
+        private ScalingConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScalingConfigResponse();
         }
 
         public Builder(ScalingConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fleetAutoscalerSpec = defaults.fleetAutoscalerSpec;
-    	      this.name = defaults.name;
-    	      this.schedules = defaults.schedules;
-    	      this.selectors = defaults.selectors;
+            $ = new ScalingConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
-            this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
+            $.fleetAutoscalerSpec = fleetAutoscalerSpec;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder schedules(List<ScheduleResponse> schedules) {
-            this.schedules = Objects.requireNonNull(schedules);
+            $.schedules = schedules;
             return this;
         }
+
         public Builder schedules(ScheduleResponse... schedules) {
             return schedules(List.of(schedules));
         }
+
         public Builder selectors(List<LabelSelectorResponse> selectors) {
-            this.selectors = Objects.requireNonNull(selectors);
+            $.selectors = selectors;
             return this;
         }
+
         public Builder selectors(LabelSelectorResponse... selectors) {
             return selectors(List.of(selectors));
-        }        public ScalingConfigResponse build() {
-            return new ScalingConfigResponse(fleetAutoscalerSpec, name, schedules, selectors);
+        }
+
+        public ScalingConfigResponse build() {
+            $.fleetAutoscalerSpec = Objects.requireNonNull($.fleetAutoscalerSpec, "expected parameter 'fleetAutoscalerSpec' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.schedules = Objects.requireNonNull($.schedules, "expected parameter 'schedules' to be non-null");
+            $.selectors = Objects.requireNonNull($.selectors, "expected parameter 'selectors' to be non-null");
+            return $;
         }
     }
+
 }

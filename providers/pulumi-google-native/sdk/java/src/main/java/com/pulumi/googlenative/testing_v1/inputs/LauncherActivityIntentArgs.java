@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.testing_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class LauncherActivityIntentArgs extends com.pulumi.resources.Resou
 
     public static final LauncherActivityIntentArgs Empty = new LauncherActivityIntentArgs();
 
-    public LauncherActivityIntentArgs() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(LauncherActivityIntentArgs defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private LauncherActivityIntentArgs $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(LauncherActivityIntentArgs defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new LauncherActivityIntentArgs();
         }
         public LauncherActivityIntentArgs build() {
-            return new LauncherActivityIntentArgs();
+            return $;
         }
     }
+
 }

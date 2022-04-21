@@ -21,7 +21,7 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="deployKeyId", required=true)
-      private final String deployKeyId;
+    private String deployKeyId;
 
     public String deployKeyId() {
         return this.deployKeyId;
@@ -32,7 +32,7 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="url", required=true)
-      private final String url;
+    private String url;
 
     public String url() {
         return this.url;
@@ -43,64 +43,59 @@ public final class MirrorConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="webhookId", required=true)
-      private final String webhookId;
+    private String webhookId;
 
     public String webhookId() {
         return this.webhookId;
     }
 
-    public MirrorConfigResponse(
-        String deployKeyId,
-        String url,
-        String webhookId) {
-        this.deployKeyId = Objects.requireNonNull(deployKeyId, "expected parameter 'deployKeyId' to be non-null");
-        this.url = Objects.requireNonNull(url, "expected parameter 'url' to be non-null");
-        this.webhookId = Objects.requireNonNull(webhookId, "expected parameter 'webhookId' to be non-null");
-    }
+    private MirrorConfigResponse() {}
 
-    private MirrorConfigResponse() {
-        this.deployKeyId = null;
-        this.url = null;
-        this.webhookId = null;
+    private MirrorConfigResponse(MirrorConfigResponse $) {
+        this.deployKeyId = $.deployKeyId;
+        this.url = $.url;
+        this.webhookId = $.webhookId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MirrorConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String deployKeyId;
-        private String url;
-        private String webhookId;
+        private MirrorConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MirrorConfigResponse();
         }
 
         public Builder(MirrorConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deployKeyId = defaults.deployKeyId;
-    	      this.url = defaults.url;
-    	      this.webhookId = defaults.webhookId;
+            $ = new MirrorConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder deployKeyId(String deployKeyId) {
-            this.deployKeyId = Objects.requireNonNull(deployKeyId);
+            $.deployKeyId = deployKeyId;
             return this;
         }
+
         public Builder url(String url) {
-            this.url = Objects.requireNonNull(url);
+            $.url = url;
             return this;
         }
+
         public Builder webhookId(String webhookId) {
-            this.webhookId = Objects.requireNonNull(webhookId);
+            $.webhookId = webhookId;
             return this;
-        }        public MirrorConfigResponse build() {
-            return new MirrorConfigResponse(deployKeyId, url, webhookId);
+        }
+
+        public MirrorConfigResponse build() {
+            $.deployKeyId = Objects.requireNonNull($.deployKeyId, "expected parameter 'deployKeyId' to be non-null");
+            $.url = Objects.requireNonNull($.url, "expected parameter 'url' to be non-null");
+            $.webhookId = Objects.requireNonNull($.webhookId, "expected parameter 'webhookId' to be non-null");
+            return $;
         }
     }
+
 }

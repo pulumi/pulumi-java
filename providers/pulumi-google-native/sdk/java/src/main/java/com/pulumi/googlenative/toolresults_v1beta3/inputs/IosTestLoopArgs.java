@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class IosTestLoopArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bundleId")
-      private final @Nullable Output<String> bundleId;
+    private @Nullable Output<String> bundleId;
 
-    public Output<String> bundleId() {
-        return this.bundleId == null ? Codegen.empty() : this.bundleId;
+    public Optional<Output<String>> bundleId() {
+        return Optional.ofNullable(this.bundleId);
     }
 
-    public IosTestLoopArgs(@Nullable Output<String> bundleId) {
-        this.bundleId = bundleId;
-    }
+    private IosTestLoopArgs() {}
 
-    private IosTestLoopArgs() {
-        this.bundleId = Codegen.empty();
+    private IosTestLoopArgs(IosTestLoopArgs $) {
+        this.bundleId = $.bundleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IosTestLoopArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> bundleId;
+        private IosTestLoopArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IosTestLoopArgs();
         }
 
         public Builder(IosTestLoopArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.bundleId = defaults.bundleId;
+            $ = new IosTestLoopArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder bundleId(@Nullable Output<String> bundleId) {
-            this.bundleId = bundleId;
+            $.bundleId = bundleId;
             return this;
         }
-        public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Codegen.ofNullable(bundleId);
-            return this;
-        }        public IosTestLoopArgs build() {
-            return new IosTestLoopArgs(bundleId);
+
+        public Builder bundleId(String bundleId) {
+            return bundleId(Output.of(bundleId));
+        }
+
+        public IosTestLoopArgs build() {
+            return $;
         }
     }
+
 }

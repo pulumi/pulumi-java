@@ -5,10 +5,10 @@ package com.pulumi.googlenative.appengine_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.appengine_v1.enums.VpcAccessConnectorEgressSetting;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class VpcAccessConnectorArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="egressSetting")
-      private final @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
+    private @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
 
-    public Output<VpcAccessConnectorEgressSetting> egressSetting() {
-        return this.egressSetting == null ? Codegen.empty() : this.egressSetting;
+    public Optional<Output<VpcAccessConnectorEgressSetting>> egressSetting() {
+        return Optional.ofNullable(this.egressSetting);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class VpcAccessConnectorArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
-    public VpcAccessConnectorArgs(
-        @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting,
-        @Nullable Output<String> name) {
-        this.egressSetting = egressSetting;
-        this.name = name;
-    }
+    private VpcAccessConnectorArgs() {}
 
-    private VpcAccessConnectorArgs() {
-        this.egressSetting = Codegen.empty();
-        this.name = Codegen.empty();
+    private VpcAccessConnectorArgs(VpcAccessConnectorArgs $) {
+        this.egressSetting = $.egressSetting;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VpcAccessConnectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<VpcAccessConnectorEgressSetting> egressSetting;
-        private @Nullable Output<String> name;
+        private VpcAccessConnectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VpcAccessConnectorArgs();
         }
 
         public Builder(VpcAccessConnectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.egressSetting = defaults.egressSetting;
-    	      this.name = defaults.name;
+            $ = new VpcAccessConnectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder egressSetting(@Nullable Output<VpcAccessConnectorEgressSetting> egressSetting) {
-            this.egressSetting = egressSetting;
+            $.egressSetting = egressSetting;
             return this;
         }
-        public Builder egressSetting(@Nullable VpcAccessConnectorEgressSetting egressSetting) {
-            this.egressSetting = Codegen.ofNullable(egressSetting);
-            return this;
+
+        public Builder egressSetting(VpcAccessConnectorEgressSetting egressSetting) {
+            return egressSetting(Output.of(egressSetting));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
-        }        public VpcAccessConnectorArgs build() {
-            return new VpcAccessConnectorArgs(egressSetting, name);
+
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        public VpcAccessConnectorArgs build() {
+            return $;
         }
     }
+
 }

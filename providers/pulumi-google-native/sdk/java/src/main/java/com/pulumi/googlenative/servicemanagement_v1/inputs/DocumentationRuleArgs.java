@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class DocumentationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="deprecationDescription")
-      private final @Nullable Output<String> deprecationDescription;
+    private @Nullable Output<String> deprecationDescription;
 
-    public Output<String> deprecationDescription() {
-        return this.deprecationDescription == null ? Codegen.empty() : this.deprecationDescription;
+    public Optional<Output<String>> deprecationDescription() {
+        return Optional.ofNullable(this.deprecationDescription);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class DocumentationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class DocumentationRuleArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public DocumentationRuleArgs(
-        @Nullable Output<String> deprecationDescription,
-        @Nullable Output<String> description,
-        @Nullable Output<String> selector) {
-        this.deprecationDescription = deprecationDescription;
-        this.description = description;
-        this.selector = selector;
-    }
+    private DocumentationRuleArgs() {}
 
-    private DocumentationRuleArgs() {
-        this.deprecationDescription = Codegen.empty();
-        this.description = Codegen.empty();
-        this.selector = Codegen.empty();
+    private DocumentationRuleArgs(DocumentationRuleArgs $) {
+        this.deprecationDescription = $.deprecationDescription;
+        this.description = $.description;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DocumentationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> deprecationDescription;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> selector;
+        private DocumentationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DocumentationRuleArgs();
         }
 
         public Builder(DocumentationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.deprecationDescription = defaults.deprecationDescription;
-    	      this.description = defaults.description;
-    	      this.selector = defaults.selector;
+            $ = new DocumentationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder deprecationDescription(@Nullable Output<String> deprecationDescription) {
-            this.deprecationDescription = deprecationDescription;
+            $.deprecationDescription = deprecationDescription;
             return this;
         }
-        public Builder deprecationDescription(@Nullable String deprecationDescription) {
-            this.deprecationDescription = Codegen.ofNullable(deprecationDescription);
-            return this;
+
+        public Builder deprecationDescription(String deprecationDescription) {
+            return deprecationDescription(Output.of(deprecationDescription));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public DocumentationRuleArgs build() {
-            return new DocumentationRuleArgs(deprecationDescription, description, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public DocumentationRuleArgs build() {
+            return $;
         }
     }
+
 }

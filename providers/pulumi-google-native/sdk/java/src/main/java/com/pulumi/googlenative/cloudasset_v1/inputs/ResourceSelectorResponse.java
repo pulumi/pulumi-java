@@ -21,45 +21,45 @@ public final class ResourceSelectorResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="fullResourceName", required=true)
-      private final String fullResourceName;
+    private String fullResourceName;
 
     public String fullResourceName() {
         return this.fullResourceName;
     }
 
-    public ResourceSelectorResponse(String fullResourceName) {
-        this.fullResourceName = Objects.requireNonNull(fullResourceName, "expected parameter 'fullResourceName' to be non-null");
-    }
+    private ResourceSelectorResponse() {}
 
-    private ResourceSelectorResponse() {
-        this.fullResourceName = null;
+    private ResourceSelectorResponse(ResourceSelectorResponse $) {
+        this.fullResourceName = $.fullResourceName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceSelectorResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String fullResourceName;
+        private ResourceSelectorResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceSelectorResponse();
         }
 
         public Builder(ResourceSelectorResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fullResourceName = defaults.fullResourceName;
+            $ = new ResourceSelectorResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder fullResourceName(String fullResourceName) {
-            this.fullResourceName = Objects.requireNonNull(fullResourceName);
+            $.fullResourceName = fullResourceName;
             return this;
-        }        public ResourceSelectorResponse build() {
-            return new ResourceSelectorResponse(fullResourceName);
+        }
+
+        public ResourceSelectorResponse build() {
+            $.fullResourceName = Objects.requireNonNull($.fullResourceName, "expected parameter 'fullResourceName' to be non-null");
+            return $;
         }
     }
+
 }

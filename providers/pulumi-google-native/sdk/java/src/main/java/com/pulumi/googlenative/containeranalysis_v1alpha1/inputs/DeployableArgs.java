@@ -5,10 +5,10 @@ package com.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class DeployableArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="resourceUri")
-      private final @Nullable Output<List<String>> resourceUri;
+    private @Nullable Output<List<String>> resourceUri;
 
-    public Output<List<String>> resourceUri() {
-        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
+    public Optional<Output<List<String>>> resourceUri() {
+        return Optional.ofNullable(this.resourceUri);
     }
 
-    public DeployableArgs(@Nullable Output<List<String>> resourceUri) {
-        this.resourceUri = resourceUri;
-    }
+    private DeployableArgs() {}
 
-    private DeployableArgs() {
-        this.resourceUri = Codegen.empty();
+    private DeployableArgs(DeployableArgs $) {
+        this.resourceUri = $.resourceUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DeployableArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> resourceUri;
+        private DeployableArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DeployableArgs();
         }
 
         public Builder(DeployableArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.resourceUri = defaults.resourceUri;
+            $ = new DeployableArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder resourceUri(@Nullable Output<List<String>> resourceUri) {
-            this.resourceUri = resourceUri;
+            $.resourceUri = resourceUri;
             return this;
         }
-        public Builder resourceUri(@Nullable List<String> resourceUri) {
-            this.resourceUri = Codegen.ofNullable(resourceUri);
-            return this;
+
+        public Builder resourceUri(List<String> resourceUri) {
+            return resourceUri(Output.of(resourceUri));
         }
+
         public Builder resourceUri(String... resourceUri) {
             return resourceUri(List.of(resourceUri));
-        }        public DeployableArgs build() {
-            return new DeployableArgs(resourceUri);
+        }
+
+        public DeployableArgs build() {
+            return $;
         }
     }
+
 }

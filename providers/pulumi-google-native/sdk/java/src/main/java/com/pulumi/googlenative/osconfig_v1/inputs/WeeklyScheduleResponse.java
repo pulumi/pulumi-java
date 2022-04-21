@@ -21,45 +21,45 @@ public final class WeeklyScheduleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="dayOfWeek", required=true)
-      private final String dayOfWeek;
+    private String dayOfWeek;
 
     public String dayOfWeek() {
         return this.dayOfWeek;
     }
 
-    public WeeklyScheduleResponse(String dayOfWeek) {
-        this.dayOfWeek = Objects.requireNonNull(dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
-    }
+    private WeeklyScheduleResponse() {}
 
-    private WeeklyScheduleResponse() {
-        this.dayOfWeek = null;
+    private WeeklyScheduleResponse(WeeklyScheduleResponse $) {
+        this.dayOfWeek = $.dayOfWeek;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WeeklyScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String dayOfWeek;
+        private WeeklyScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WeeklyScheduleResponse();
         }
 
         public Builder(WeeklyScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dayOfWeek = defaults.dayOfWeek;
+            $ = new WeeklyScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dayOfWeek(String dayOfWeek) {
-            this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
+            $.dayOfWeek = dayOfWeek;
             return this;
-        }        public WeeklyScheduleResponse build() {
-            return new WeeklyScheduleResponse(dayOfWeek);
+        }
+
+        public WeeklyScheduleResponse build() {
+            $.dayOfWeek = Objects.requireNonNull($.dayOfWeek, "expected parameter 'dayOfWeek' to be non-null");
+            return $;
         }
     }
+
 }

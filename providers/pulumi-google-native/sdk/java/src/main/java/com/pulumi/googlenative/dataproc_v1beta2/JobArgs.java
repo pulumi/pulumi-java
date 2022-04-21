@@ -5,7 +5,6 @@ package com.pulumi.googlenative.dataproc_v1beta2;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.HadoopJobArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.HiveJobArgs;
 import com.pulumi.googlenative.dataproc_v1beta2.inputs.JobPlacementArgs;
@@ -20,6 +19,7 @@ import com.pulumi.googlenative.dataproc_v1beta2.inputs.SparkSqlJobArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -32,10 +32,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hadoopJob")
-      private final @Nullable Output<HadoopJobArgs> hadoopJob;
+    private @Nullable Output<HadoopJobArgs> hadoopJob;
 
-    public Output<HadoopJobArgs> hadoopJob() {
-        return this.hadoopJob == null ? Codegen.empty() : this.hadoopJob;
+    public Optional<Output<HadoopJobArgs>> hadoopJob() {
+        return Optional.ofNullable(this.hadoopJob);
     }
 
     /**
@@ -43,10 +43,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hiveJob")
-      private final @Nullable Output<HiveJobArgs> hiveJob;
+    private @Nullable Output<HiveJobArgs> hiveJob;
 
-    public Output<HiveJobArgs> hiveJob() {
-        return this.hiveJob == null ? Codegen.empty() : this.hiveJob;
+    public Optional<Output<HiveJobArgs>> hiveJob() {
+        return Optional.ofNullable(this.hiveJob);
     }
 
     /**
@@ -54,10 +54,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -65,10 +65,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pigJob")
-      private final @Nullable Output<PigJobArgs> pigJob;
+    private @Nullable Output<PigJobArgs> pigJob;
 
-    public Output<PigJobArgs> pigJob() {
-        return this.pigJob == null ? Codegen.empty() : this.pigJob;
+    public Optional<Output<PigJobArgs>> pigJob() {
+        return Optional.ofNullable(this.pigJob);
     }
 
     /**
@@ -76,7 +76,7 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="placement", required=true)
-      private final Output<JobPlacementArgs> placement;
+    private Output<JobPlacementArgs> placement;
 
     public Output<JobPlacementArgs> placement() {
         return this.placement;
@@ -87,17 +87,17 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="prestoJob")
-      private final @Nullable Output<PrestoJobArgs> prestoJob;
+    private @Nullable Output<PrestoJobArgs> prestoJob;
 
-    public Output<PrestoJobArgs> prestoJob() {
-        return this.prestoJob == null ? Codegen.empty() : this.prestoJob;
+    public Optional<Output<PrestoJobArgs>> prestoJob() {
+        return Optional.ofNullable(this.prestoJob);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -105,10 +105,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pysparkJob")
-      private final @Nullable Output<PySparkJobArgs> pysparkJob;
+    private @Nullable Output<PySparkJobArgs> pysparkJob;
 
-    public Output<PySparkJobArgs> pysparkJob() {
-        return this.pysparkJob == null ? Codegen.empty() : this.pysparkJob;
+    public Optional<Output<PySparkJobArgs>> pysparkJob() {
+        return Optional.ofNullable(this.pysparkJob);
     }
 
     /**
@@ -116,14 +116,14 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reference")
-      private final @Nullable Output<JobReferenceArgs> reference;
+    private @Nullable Output<JobReferenceArgs> reference;
 
-    public Output<JobReferenceArgs> reference() {
-        return this.reference == null ? Codegen.empty() : this.reference;
+    public Optional<Output<JobReferenceArgs>> reference() {
+        return Optional.ofNullable(this.reference);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
@@ -134,10 +134,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -145,10 +145,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scheduling")
-      private final @Nullable Output<JobSchedulingArgs> scheduling;
+    private @Nullable Output<JobSchedulingArgs> scheduling;
 
-    public Output<JobSchedulingArgs> scheduling() {
-        return this.scheduling == null ? Codegen.empty() : this.scheduling;
+    public Optional<Output<JobSchedulingArgs>> scheduling() {
+        return Optional.ofNullable(this.scheduling);
     }
 
     /**
@@ -156,10 +156,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkJob")
-      private final @Nullable Output<SparkJobArgs> sparkJob;
+    private @Nullable Output<SparkJobArgs> sparkJob;
 
-    public Output<SparkJobArgs> sparkJob() {
-        return this.sparkJob == null ? Codegen.empty() : this.sparkJob;
+    public Optional<Output<SparkJobArgs>> sparkJob() {
+        return Optional.ofNullable(this.sparkJob);
     }
 
     /**
@@ -167,10 +167,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkRJob")
-      private final @Nullable Output<SparkRJobArgs> sparkRJob;
+    private @Nullable Output<SparkRJobArgs> sparkRJob;
 
-    public Output<SparkRJobArgs> sparkRJob() {
-        return this.sparkRJob == null ? Codegen.empty() : this.sparkRJob;
+    public Optional<Output<SparkRJobArgs>> sparkRJob() {
+        return Optional.ofNullable(this.sparkRJob);
     }
 
     /**
@@ -178,232 +178,190 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sparkSqlJob")
-      private final @Nullable Output<SparkSqlJobArgs> sparkSqlJob;
+    private @Nullable Output<SparkSqlJobArgs> sparkSqlJob;
 
-    public Output<SparkSqlJobArgs> sparkSqlJob() {
-        return this.sparkSqlJob == null ? Codegen.empty() : this.sparkSqlJob;
+    public Optional<Output<SparkSqlJobArgs>> sparkSqlJob() {
+        return Optional.ofNullable(this.sparkSqlJob);
     }
 
-    public JobArgs(
-        @Nullable Output<HadoopJobArgs> hadoopJob,
-        @Nullable Output<HiveJobArgs> hiveJob,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<PigJobArgs> pigJob,
-        Output<JobPlacementArgs> placement,
-        @Nullable Output<PrestoJobArgs> prestoJob,
-        @Nullable Output<String> project,
-        @Nullable Output<PySparkJobArgs> pysparkJob,
-        @Nullable Output<JobReferenceArgs> reference,
-        Output<String> region,
-        @Nullable Output<String> requestId,
-        @Nullable Output<JobSchedulingArgs> scheduling,
-        @Nullable Output<SparkJobArgs> sparkJob,
-        @Nullable Output<SparkRJobArgs> sparkRJob,
-        @Nullable Output<SparkSqlJobArgs> sparkSqlJob) {
-        this.hadoopJob = hadoopJob;
-        this.hiveJob = hiveJob;
-        this.labels = labels;
-        this.pigJob = pigJob;
-        this.placement = Objects.requireNonNull(placement, "expected parameter 'placement' to be non-null");
-        this.prestoJob = prestoJob;
-        this.project = project;
-        this.pysparkJob = pysparkJob;
-        this.reference = reference;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-        this.scheduling = scheduling;
-        this.sparkJob = sparkJob;
-        this.sparkRJob = sparkRJob;
-        this.sparkSqlJob = sparkSqlJob;
-    }
+    private JobArgs() {}
 
-    private JobArgs() {
-        this.hadoopJob = Codegen.empty();
-        this.hiveJob = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.pigJob = Codegen.empty();
-        this.placement = Codegen.empty();
-        this.prestoJob = Codegen.empty();
-        this.project = Codegen.empty();
-        this.pysparkJob = Codegen.empty();
-        this.reference = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.scheduling = Codegen.empty();
-        this.sparkJob = Codegen.empty();
-        this.sparkRJob = Codegen.empty();
-        this.sparkSqlJob = Codegen.empty();
+    private JobArgs(JobArgs $) {
+        this.hadoopJob = $.hadoopJob;
+        this.hiveJob = $.hiveJob;
+        this.labels = $.labels;
+        this.pigJob = $.pigJob;
+        this.placement = $.placement;
+        this.prestoJob = $.prestoJob;
+        this.project = $.project;
+        this.pysparkJob = $.pysparkJob;
+        this.reference = $.reference;
+        this.region = $.region;
+        this.requestId = $.requestId;
+        this.scheduling = $.scheduling;
+        this.sparkJob = $.sparkJob;
+        this.sparkRJob = $.sparkRJob;
+        this.sparkSqlJob = $.sparkSqlJob;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<HadoopJobArgs> hadoopJob;
-        private @Nullable Output<HiveJobArgs> hiveJob;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<PigJobArgs> pigJob;
-        private Output<JobPlacementArgs> placement;
-        private @Nullable Output<PrestoJobArgs> prestoJob;
-        private @Nullable Output<String> project;
-        private @Nullable Output<PySparkJobArgs> pysparkJob;
-        private @Nullable Output<JobReferenceArgs> reference;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<JobSchedulingArgs> scheduling;
-        private @Nullable Output<SparkJobArgs> sparkJob;
-        private @Nullable Output<SparkRJobArgs> sparkRJob;
-        private @Nullable Output<SparkSqlJobArgs> sparkSqlJob;
+        private JobArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobArgs();
         }
 
         public Builder(JobArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hadoopJob = defaults.hadoopJob;
-    	      this.hiveJob = defaults.hiveJob;
-    	      this.labels = defaults.labels;
-    	      this.pigJob = defaults.pigJob;
-    	      this.placement = defaults.placement;
-    	      this.prestoJob = defaults.prestoJob;
-    	      this.project = defaults.project;
-    	      this.pysparkJob = defaults.pysparkJob;
-    	      this.reference = defaults.reference;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
-    	      this.scheduling = defaults.scheduling;
-    	      this.sparkJob = defaults.sparkJob;
-    	      this.sparkRJob = defaults.sparkRJob;
-    	      this.sparkSqlJob = defaults.sparkSqlJob;
+            $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hadoopJob(@Nullable Output<HadoopJobArgs> hadoopJob) {
-            this.hadoopJob = hadoopJob;
+            $.hadoopJob = hadoopJob;
             return this;
         }
-        public Builder hadoopJob(@Nullable HadoopJobArgs hadoopJob) {
-            this.hadoopJob = Codegen.ofNullable(hadoopJob);
-            return this;
+
+        public Builder hadoopJob(HadoopJobArgs hadoopJob) {
+            return hadoopJob(Output.of(hadoopJob));
         }
+
         public Builder hiveJob(@Nullable Output<HiveJobArgs> hiveJob) {
-            this.hiveJob = hiveJob;
+            $.hiveJob = hiveJob;
             return this;
         }
-        public Builder hiveJob(@Nullable HiveJobArgs hiveJob) {
-            this.hiveJob = Codegen.ofNullable(hiveJob);
-            return this;
+
+        public Builder hiveJob(HiveJobArgs hiveJob) {
+            return hiveJob(Output.of(hiveJob));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder pigJob(@Nullable Output<PigJobArgs> pigJob) {
-            this.pigJob = pigJob;
+            $.pigJob = pigJob;
             return this;
         }
-        public Builder pigJob(@Nullable PigJobArgs pigJob) {
-            this.pigJob = Codegen.ofNullable(pigJob);
-            return this;
+
+        public Builder pigJob(PigJobArgs pigJob) {
+            return pigJob(Output.of(pigJob));
         }
+
         public Builder placement(Output<JobPlacementArgs> placement) {
-            this.placement = Objects.requireNonNull(placement);
+            $.placement = placement;
             return this;
         }
+
         public Builder placement(JobPlacementArgs placement) {
-            this.placement = Output.of(Objects.requireNonNull(placement));
-            return this;
+            return placement(Output.of(placement));
         }
+
         public Builder prestoJob(@Nullable Output<PrestoJobArgs> prestoJob) {
-            this.prestoJob = prestoJob;
+            $.prestoJob = prestoJob;
             return this;
         }
-        public Builder prestoJob(@Nullable PrestoJobArgs prestoJob) {
-            this.prestoJob = Codegen.ofNullable(prestoJob);
-            return this;
+
+        public Builder prestoJob(PrestoJobArgs prestoJob) {
+            return prestoJob(Output.of(prestoJob));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder pysparkJob(@Nullable Output<PySparkJobArgs> pysparkJob) {
-            this.pysparkJob = pysparkJob;
+            $.pysparkJob = pysparkJob;
             return this;
         }
-        public Builder pysparkJob(@Nullable PySparkJobArgs pysparkJob) {
-            this.pysparkJob = Codegen.ofNullable(pysparkJob);
-            return this;
+
+        public Builder pysparkJob(PySparkJobArgs pysparkJob) {
+            return pysparkJob(Output.of(pysparkJob));
         }
+
         public Builder reference(@Nullable Output<JobReferenceArgs> reference) {
-            this.reference = reference;
+            $.reference = reference;
             return this;
         }
-        public Builder reference(@Nullable JobReferenceArgs reference) {
-            this.reference = Codegen.ofNullable(reference);
-            return this;
+
+        public Builder reference(JobReferenceArgs reference) {
+            return reference(Output.of(reference));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder scheduling(@Nullable Output<JobSchedulingArgs> scheduling) {
-            this.scheduling = scheduling;
+            $.scheduling = scheduling;
             return this;
         }
-        public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
-            this.scheduling = Codegen.ofNullable(scheduling);
-            return this;
+
+        public Builder scheduling(JobSchedulingArgs scheduling) {
+            return scheduling(Output.of(scheduling));
         }
+
         public Builder sparkJob(@Nullable Output<SparkJobArgs> sparkJob) {
-            this.sparkJob = sparkJob;
+            $.sparkJob = sparkJob;
             return this;
         }
-        public Builder sparkJob(@Nullable SparkJobArgs sparkJob) {
-            this.sparkJob = Codegen.ofNullable(sparkJob);
-            return this;
+
+        public Builder sparkJob(SparkJobArgs sparkJob) {
+            return sparkJob(Output.of(sparkJob));
         }
+
         public Builder sparkRJob(@Nullable Output<SparkRJobArgs> sparkRJob) {
-            this.sparkRJob = sparkRJob;
+            $.sparkRJob = sparkRJob;
             return this;
         }
-        public Builder sparkRJob(@Nullable SparkRJobArgs sparkRJob) {
-            this.sparkRJob = Codegen.ofNullable(sparkRJob);
-            return this;
+
+        public Builder sparkRJob(SparkRJobArgs sparkRJob) {
+            return sparkRJob(Output.of(sparkRJob));
         }
+
         public Builder sparkSqlJob(@Nullable Output<SparkSqlJobArgs> sparkSqlJob) {
-            this.sparkSqlJob = sparkSqlJob;
+            $.sparkSqlJob = sparkSqlJob;
             return this;
         }
-        public Builder sparkSqlJob(@Nullable SparkSqlJobArgs sparkSqlJob) {
-            this.sparkSqlJob = Codegen.ofNullable(sparkSqlJob);
-            return this;
-        }        public JobArgs build() {
-            return new JobArgs(hadoopJob, hiveJob, labels, pigJob, placement, prestoJob, project, pysparkJob, reference, region, requestId, scheduling, sparkJob, sparkRJob, sparkSqlJob);
+
+        public Builder sparkSqlJob(SparkSqlJobArgs sparkSqlJob) {
+            return sparkSqlJob(Output.of(sparkSqlJob));
+        }
+
+        public JobArgs build() {
+            $.placement = Objects.requireNonNull($.placement, "expected parameter 'placement' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

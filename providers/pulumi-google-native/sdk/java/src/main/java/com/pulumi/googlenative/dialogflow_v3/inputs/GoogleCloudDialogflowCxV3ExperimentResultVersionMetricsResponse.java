@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      * 
      */
     @Import(name="metrics", required=true)
-      private final List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
+    private List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
 
     public List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics() {
         return this.metrics;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      * 
      */
     @Import(name="sessionCount", required=true)
-      private final Integer sessionCount;
+    private Integer sessionCount;
 
     public Integer sessionCount() {
         return this.sessionCount;
@@ -46,67 +46,63 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      * 
      */
     @Import(name="version", required=true)
-      private final String version;
+    private String version;
 
     public String version() {
         return this.version;
     }
 
-    public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(
-        List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics,
-        Integer sessionCount,
-        String version) {
-        this.metrics = Objects.requireNonNull(metrics, "expected parameter 'metrics' to be non-null");
-        this.sessionCount = Objects.requireNonNull(sessionCount, "expected parameter 'sessionCount' to be non-null");
-        this.version = Objects.requireNonNull(version, "expected parameter 'version' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse() {}
 
-    private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse() {
-        this.metrics = List.of();
-        this.sessionCount = null;
-        this.version = null;
+    private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse $) {
+        this.metrics = $.metrics;
+        this.sessionCount = $.sessionCount;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
-        private Integer sessionCount;
-        private String version;
+        private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metrics = defaults.metrics;
-    	      this.sessionCount = defaults.sessionCount;
-    	      this.version = defaults.version;
+            $ = new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder metrics(List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics) {
-            this.metrics = Objects.requireNonNull(metrics);
+            $.metrics = metrics;
             return this;
         }
+
         public Builder metrics(GoogleCloudDialogflowCxV3ExperimentResultMetricResponse... metrics) {
             return metrics(List.of(metrics));
         }
+
         public Builder sessionCount(Integer sessionCount) {
-            this.sessionCount = Objects.requireNonNull(sessionCount);
+            $.sessionCount = sessionCount;
             return this;
         }
+
         public Builder version(String version) {
-            this.version = Objects.requireNonNull(version);
+            $.version = version;
             return this;
-        }        public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse build() {
-            return new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(metrics, sessionCount, version);
+        }
+
+        public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse build() {
+            $.metrics = Objects.requireNonNull($.metrics, "expected parameter 'metrics' to be non-null");
+            $.sessionCount = Objects.requireNonNull($.sessionCount, "expected parameter 'sessionCount' to be non-null");
+            $.version = Objects.requireNonNull($.version, "expected parameter 'version' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
      * 
      */
     @Import(name="caseSensitive")
-      private final @Nullable Output<Boolean> caseSensitive;
+    private @Nullable Output<Boolean> caseSensitive;
 
-    public Output<Boolean> caseSensitive() {
-        return this.caseSensitive == null ? Codegen.empty() : this.caseSensitive;
+    public Optional<Output<Boolean>> caseSensitive() {
+        return Optional.ofNullable(this.caseSensitive);
     }
 
-    public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(@Nullable Output<Boolean> caseSensitive) {
-        this.caseSensitive = caseSensitive;
-    }
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs() {}
 
-    private GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs() {
-        this.caseSensitive = Codegen.empty();
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs $) {
+        this.caseSensitive = $.caseSensitive;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> caseSensitive;
+        private GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs();
         }
 
         public Builder(GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caseSensitive = defaults.caseSensitive;
+            $ = new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder caseSensitive(@Nullable Output<Boolean> caseSensitive) {
-            this.caseSensitive = caseSensitive;
+            $.caseSensitive = caseSensitive;
             return this;
         }
-        public Builder caseSensitive(@Nullable Boolean caseSensitive) {
-            this.caseSensitive = Codegen.ofNullable(caseSensitive);
-            return this;
-        }        public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {
-            return new GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs(caseSensitive);
+
+        public Builder caseSensitive(Boolean caseSensitive) {
+            return caseSensitive(Output.of(caseSensitive));
+        }
+
+        public GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.storagetransfer_v1.inputs.AwsAccessKeyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsAccessKey")
-      private final @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
+    private @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
 
-    public Output<AwsAccessKeyArgs> awsAccessKey() {
-        return this.awsAccessKey == null ? Codegen.empty() : this.awsAccessKey;
+    public Optional<Output<AwsAccessKeyArgs>> awsAccessKey() {
+        return Optional.ofNullable(this.awsAccessKey);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="bucketName", required=true)
-      private final Output<String> bucketName;
+    private Output<String> bucketName;
 
     public Output<String> bucketName() {
         return this.bucketName;
@@ -47,10 +47,10 @@ public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class AwsS3DataArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="roleArn")
-      private final @Nullable Output<String> roleArn;
+    private @Nullable Output<String> roleArn;
 
-    public Output<String> roleArn() {
-        return this.roleArn == null ? Codegen.empty() : this.roleArn;
+    public Optional<Output<String>> roleArn() {
+        return Optional.ofNullable(this.roleArn);
     }
 
-    public AwsS3DataArgs(
-        @Nullable Output<AwsAccessKeyArgs> awsAccessKey,
-        Output<String> bucketName,
-        @Nullable Output<String> path,
-        @Nullable Output<String> roleArn) {
-        this.awsAccessKey = awsAccessKey;
-        this.bucketName = Objects.requireNonNull(bucketName, "expected parameter 'bucketName' to be non-null");
-        this.path = path;
-        this.roleArn = roleArn;
-    }
+    private AwsS3DataArgs() {}
 
-    private AwsS3DataArgs() {
-        this.awsAccessKey = Codegen.empty();
-        this.bucketName = Codegen.empty();
-        this.path = Codegen.empty();
-        this.roleArn = Codegen.empty();
+    private AwsS3DataArgs(AwsS3DataArgs $) {
+        this.awsAccessKey = $.awsAccessKey;
+        this.bucketName = $.bucketName;
+        this.path = $.path;
+        this.roleArn = $.roleArn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AwsS3DataArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AwsAccessKeyArgs> awsAccessKey;
-        private Output<String> bucketName;
-        private @Nullable Output<String> path;
-        private @Nullable Output<String> roleArn;
+        private AwsS3DataArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AwsS3DataArgs();
         }
 
         public Builder(AwsS3DataArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsAccessKey = defaults.awsAccessKey;
-    	      this.bucketName = defaults.bucketName;
-    	      this.path = defaults.path;
-    	      this.roleArn = defaults.roleArn;
+            $ = new AwsS3DataArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsAccessKey(@Nullable Output<AwsAccessKeyArgs> awsAccessKey) {
-            this.awsAccessKey = awsAccessKey;
+            $.awsAccessKey = awsAccessKey;
             return this;
         }
-        public Builder awsAccessKey(@Nullable AwsAccessKeyArgs awsAccessKey) {
-            this.awsAccessKey = Codegen.ofNullable(awsAccessKey);
-            return this;
+
+        public Builder awsAccessKey(AwsAccessKeyArgs awsAccessKey) {
+            return awsAccessKey(Output.of(awsAccessKey));
         }
+
         public Builder bucketName(Output<String> bucketName) {
-            this.bucketName = Objects.requireNonNull(bucketName);
+            $.bucketName = bucketName;
             return this;
         }
+
         public Builder bucketName(String bucketName) {
-            this.bucketName = Output.of(Objects.requireNonNull(bucketName));
-            return this;
+            return bucketName(Output.of(bucketName));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
+
+        public Builder path(String path) {
+            return path(Output.of(path));
         }
+
         public Builder roleArn(@Nullable Output<String> roleArn) {
-            this.roleArn = roleArn;
+            $.roleArn = roleArn;
             return this;
         }
-        public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Codegen.ofNullable(roleArn);
-            return this;
-        }        public AwsS3DataArgs build() {
-            return new AwsS3DataArgs(awsAccessKey, bucketName, path, roleArn);
+
+        public Builder roleArn(String roleArn) {
+            return roleArn(Output.of(roleArn));
+        }
+
+        public AwsS3DataArgs build() {
+            $.bucketName = Objects.requireNonNull($.bucketName, "expected parameter 'bucketName' to be non-null");
+            return $;
         }
     }
+
 }

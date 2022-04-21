@@ -27,7 +27,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="aiaIssuingCertificateUrls", required=true)
-      private final List<String> aiaIssuingCertificateUrls;
+    private List<String> aiaIssuingCertificateUrls;
 
     public List<String> aiaIssuingCertificateUrls() {
         return this.aiaIssuingCertificateUrls;
@@ -38,7 +38,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="authorityKeyId", required=true)
-      private final KeyIdResponse authorityKeyId;
+    private KeyIdResponse authorityKeyId;
 
     public KeyIdResponse authorityKeyId() {
         return this.authorityKeyId;
@@ -49,7 +49,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="certFingerprint", required=true)
-      private final CertificateFingerprintResponse certFingerprint;
+    private CertificateFingerprintResponse certFingerprint;
 
     public CertificateFingerprintResponse certFingerprint() {
         return this.certFingerprint;
@@ -60,7 +60,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="crlDistributionPoints", required=true)
-      private final List<String> crlDistributionPoints;
+    private List<String> crlDistributionPoints;
 
     public List<String> crlDistributionPoints() {
         return this.crlDistributionPoints;
@@ -71,7 +71,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="publicKey", required=true)
-      private final PublicKeyResponse publicKey;
+    private PublicKeyResponse publicKey;
 
     public PublicKeyResponse publicKey() {
         return this.publicKey;
@@ -82,7 +82,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subjectDescription", required=true)
-      private final SubjectDescriptionResponse subjectDescription;
+    private SubjectDescriptionResponse subjectDescription;
 
     public SubjectDescriptionResponse subjectDescription() {
         return this.subjectDescription;
@@ -93,7 +93,7 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="subjectKeyId", required=true)
-      private final KeyIdResponse subjectKeyId;
+    private KeyIdResponse subjectKeyId;
 
     public KeyIdResponse subjectKeyId() {
         return this.subjectKeyId;
@@ -104,115 +104,102 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
      * 
      */
     @Import(name="x509Description", required=true)
-      private final X509ParametersResponse x509Description;
+    private X509ParametersResponse x509Description;
 
     public X509ParametersResponse x509Description() {
         return this.x509Description;
     }
 
-    public CertificateDescriptionResponse(
-        List<String> aiaIssuingCertificateUrls,
-        KeyIdResponse authorityKeyId,
-        CertificateFingerprintResponse certFingerprint,
-        List<String> crlDistributionPoints,
-        PublicKeyResponse publicKey,
-        SubjectDescriptionResponse subjectDescription,
-        KeyIdResponse subjectKeyId,
-        X509ParametersResponse x509Description) {
-        this.aiaIssuingCertificateUrls = Objects.requireNonNull(aiaIssuingCertificateUrls, "expected parameter 'aiaIssuingCertificateUrls' to be non-null");
-        this.authorityKeyId = Objects.requireNonNull(authorityKeyId, "expected parameter 'authorityKeyId' to be non-null");
-        this.certFingerprint = Objects.requireNonNull(certFingerprint, "expected parameter 'certFingerprint' to be non-null");
-        this.crlDistributionPoints = Objects.requireNonNull(crlDistributionPoints, "expected parameter 'crlDistributionPoints' to be non-null");
-        this.publicKey = Objects.requireNonNull(publicKey, "expected parameter 'publicKey' to be non-null");
-        this.subjectDescription = Objects.requireNonNull(subjectDescription, "expected parameter 'subjectDescription' to be non-null");
-        this.subjectKeyId = Objects.requireNonNull(subjectKeyId, "expected parameter 'subjectKeyId' to be non-null");
-        this.x509Description = Objects.requireNonNull(x509Description, "expected parameter 'x509Description' to be non-null");
-    }
+    private CertificateDescriptionResponse() {}
 
-    private CertificateDescriptionResponse() {
-        this.aiaIssuingCertificateUrls = List.of();
-        this.authorityKeyId = null;
-        this.certFingerprint = null;
-        this.crlDistributionPoints = List.of();
-        this.publicKey = null;
-        this.subjectDescription = null;
-        this.subjectKeyId = null;
-        this.x509Description = null;
+    private CertificateDescriptionResponse(CertificateDescriptionResponse $) {
+        this.aiaIssuingCertificateUrls = $.aiaIssuingCertificateUrls;
+        this.authorityKeyId = $.authorityKeyId;
+        this.certFingerprint = $.certFingerprint;
+        this.crlDistributionPoints = $.crlDistributionPoints;
+        this.publicKey = $.publicKey;
+        this.subjectDescription = $.subjectDescription;
+        this.subjectKeyId = $.subjectKeyId;
+        this.x509Description = $.x509Description;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CertificateDescriptionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> aiaIssuingCertificateUrls;
-        private KeyIdResponse authorityKeyId;
-        private CertificateFingerprintResponse certFingerprint;
-        private List<String> crlDistributionPoints;
-        private PublicKeyResponse publicKey;
-        private SubjectDescriptionResponse subjectDescription;
-        private KeyIdResponse subjectKeyId;
-        private X509ParametersResponse x509Description;
+        private CertificateDescriptionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new CertificateDescriptionResponse();
         }
 
         public Builder(CertificateDescriptionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.aiaIssuingCertificateUrls = defaults.aiaIssuingCertificateUrls;
-    	      this.authorityKeyId = defaults.authorityKeyId;
-    	      this.certFingerprint = defaults.certFingerprint;
-    	      this.crlDistributionPoints = defaults.crlDistributionPoints;
-    	      this.publicKey = defaults.publicKey;
-    	      this.subjectDescription = defaults.subjectDescription;
-    	      this.subjectKeyId = defaults.subjectKeyId;
-    	      this.x509Description = defaults.x509Description;
+            $ = new CertificateDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder aiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
-            this.aiaIssuingCertificateUrls = Objects.requireNonNull(aiaIssuingCertificateUrls);
+            $.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
             return this;
         }
+
         public Builder aiaIssuingCertificateUrls(String... aiaIssuingCertificateUrls) {
             return aiaIssuingCertificateUrls(List.of(aiaIssuingCertificateUrls));
         }
+
         public Builder authorityKeyId(KeyIdResponse authorityKeyId) {
-            this.authorityKeyId = Objects.requireNonNull(authorityKeyId);
+            $.authorityKeyId = authorityKeyId;
             return this;
         }
+
         public Builder certFingerprint(CertificateFingerprintResponse certFingerprint) {
-            this.certFingerprint = Objects.requireNonNull(certFingerprint);
+            $.certFingerprint = certFingerprint;
             return this;
         }
+
         public Builder crlDistributionPoints(List<String> crlDistributionPoints) {
-            this.crlDistributionPoints = Objects.requireNonNull(crlDistributionPoints);
+            $.crlDistributionPoints = crlDistributionPoints;
             return this;
         }
+
         public Builder crlDistributionPoints(String... crlDistributionPoints) {
             return crlDistributionPoints(List.of(crlDistributionPoints));
         }
+
         public Builder publicKey(PublicKeyResponse publicKey) {
-            this.publicKey = Objects.requireNonNull(publicKey);
+            $.publicKey = publicKey;
             return this;
         }
+
         public Builder subjectDescription(SubjectDescriptionResponse subjectDescription) {
-            this.subjectDescription = Objects.requireNonNull(subjectDescription);
+            $.subjectDescription = subjectDescription;
             return this;
         }
+
         public Builder subjectKeyId(KeyIdResponse subjectKeyId) {
-            this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
+            $.subjectKeyId = subjectKeyId;
             return this;
         }
+
         public Builder x509Description(X509ParametersResponse x509Description) {
-            this.x509Description = Objects.requireNonNull(x509Description);
+            $.x509Description = x509Description;
             return this;
-        }        public CertificateDescriptionResponse build() {
-            return new CertificateDescriptionResponse(aiaIssuingCertificateUrls, authorityKeyId, certFingerprint, crlDistributionPoints, publicKey, subjectDescription, subjectKeyId, x509Description);
+        }
+
+        public CertificateDescriptionResponse build() {
+            $.aiaIssuingCertificateUrls = Objects.requireNonNull($.aiaIssuingCertificateUrls, "expected parameter 'aiaIssuingCertificateUrls' to be non-null");
+            $.authorityKeyId = Objects.requireNonNull($.authorityKeyId, "expected parameter 'authorityKeyId' to be non-null");
+            $.certFingerprint = Objects.requireNonNull($.certFingerprint, "expected parameter 'certFingerprint' to be non-null");
+            $.crlDistributionPoints = Objects.requireNonNull($.crlDistributionPoints, "expected parameter 'crlDistributionPoints' to be non-null");
+            $.publicKey = Objects.requireNonNull($.publicKey, "expected parameter 'publicKey' to be non-null");
+            $.subjectDescription = Objects.requireNonNull($.subjectDescription, "expected parameter 'subjectDescription' to be non-null");
+            $.subjectKeyId = Objects.requireNonNull($.subjectKeyId, "expected parameter 'subjectKeyId' to be non-null");
+            $.x509Description = Objects.requireNonNull($.x509Description, "expected parameter 'x509Description' to be non-null");
+            return $;
         }
     }
+
 }

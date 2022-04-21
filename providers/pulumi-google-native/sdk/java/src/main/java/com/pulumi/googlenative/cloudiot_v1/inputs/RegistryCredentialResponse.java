@@ -21,45 +21,45 @@ public final class RegistryCredentialResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="publicKeyCertificate", required=true)
-      private final PublicKeyCertificateResponse publicKeyCertificate;
+    private PublicKeyCertificateResponse publicKeyCertificate;
 
     public PublicKeyCertificateResponse publicKeyCertificate() {
         return this.publicKeyCertificate;
     }
 
-    public RegistryCredentialResponse(PublicKeyCertificateResponse publicKeyCertificate) {
-        this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate, "expected parameter 'publicKeyCertificate' to be non-null");
-    }
+    private RegistryCredentialResponse() {}
 
-    private RegistryCredentialResponse() {
-        this.publicKeyCertificate = null;
+    private RegistryCredentialResponse(RegistryCredentialResponse $) {
+        this.publicKeyCertificate = $.publicKeyCertificate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RegistryCredentialResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private PublicKeyCertificateResponse publicKeyCertificate;
+        private RegistryCredentialResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new RegistryCredentialResponse();
         }
 
         public Builder(RegistryCredentialResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.publicKeyCertificate = defaults.publicKeyCertificate;
+            $ = new RegistryCredentialResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder publicKeyCertificate(PublicKeyCertificateResponse publicKeyCertificate) {
-            this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
+            $.publicKeyCertificate = publicKeyCertificate;
             return this;
-        }        public RegistryCredentialResponse build() {
-            return new RegistryCredentialResponse(publicKeyCertificate);
+        }
+
+        public RegistryCredentialResponse build() {
+            $.publicKeyCertificate = Objects.requireNonNull($.publicKeyCertificate, "expected parameter 'publicKeyCertificate' to be non-null");
+            return $;
         }
     }
+
 }

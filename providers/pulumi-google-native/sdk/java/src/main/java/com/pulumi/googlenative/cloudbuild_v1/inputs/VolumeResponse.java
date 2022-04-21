@@ -21,7 +21,7 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class VolumeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="path", required=true)
-      private final String path;
+    private String path;
 
     public String path() {
         return this.path;
     }
 
-    public VolumeResponse(
-        String name,
-        String path) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private VolumeResponse() {}
 
-    private VolumeResponse() {
-        this.name = null;
-        this.path = null;
+    private VolumeResponse(VolumeResponse $) {
+        this.name = $.name;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String path;
+        private VolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeResponse();
         }
 
         public Builder(VolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.path = defaults.path;
+            $ = new VolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
-        }        public VolumeResponse build() {
-            return new VolumeResponse(name, path);
+        }
+
+        public VolumeResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

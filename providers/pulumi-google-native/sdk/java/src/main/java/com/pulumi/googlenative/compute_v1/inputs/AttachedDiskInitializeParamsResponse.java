@@ -24,7 +24,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -35,7 +35,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskName", required=true)
-      private final String diskName;
+    private String diskName;
 
     public String diskName() {
         return this.diskName;
@@ -46,7 +46,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -57,7 +57,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -68,7 +68,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="labels", required=true)
-      private final Map<String,String> labels;
+    private Map<String,String> labels;
 
     public Map<String,String> labels() {
         return this.labels;
@@ -79,7 +79,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="licenses", required=true)
-      private final List<String> licenses;
+    private List<String> licenses;
 
     public List<String> licenses() {
         return this.licenses;
@@ -90,7 +90,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="onUpdateAction", required=true)
-      private final String onUpdateAction;
+    private String onUpdateAction;
 
     public String onUpdateAction() {
         return this.onUpdateAction;
@@ -101,7 +101,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="provisionedIops", required=true)
-      private final String provisionedIops;
+    private String provisionedIops;
 
     public String provisionedIops() {
         return this.provisionedIops;
@@ -112,7 +112,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="resourcePolicies", required=true)
-      private final List<String> resourcePolicies;
+    private List<String> resourcePolicies;
 
     public List<String> resourcePolicies() {
         return this.resourcePolicies;
@@ -123,7 +123,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceImage", required=true)
-      private final String sourceImage;
+    private String sourceImage;
 
     public String sourceImage() {
         return this.sourceImage;
@@ -134,7 +134,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceImageEncryptionKey", required=true)
-      private final CustomerEncryptionKeyResponse sourceImageEncryptionKey;
+    private CustomerEncryptionKeyResponse sourceImageEncryptionKey;
 
     public CustomerEncryptionKeyResponse sourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey;
@@ -145,7 +145,7 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceSnapshot", required=true)
-      private final String sourceSnapshot;
+    private String sourceSnapshot;
 
     public String sourceSnapshot() {
         return this.sourceSnapshot;
@@ -156,160 +156,137 @@ public final class AttachedDiskInitializeParamsResponse extends com.pulumi.resou
      * 
      */
     @Import(name="sourceSnapshotEncryptionKey", required=true)
-      private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
+    private CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
     public CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey;
     }
 
-    public AttachedDiskInitializeParamsResponse(
-        String description,
-        String diskName,
-        String diskSizeGb,
-        String diskType,
-        Map<String,String> labels,
-        List<String> licenses,
-        String onUpdateAction,
-        String provisionedIops,
-        List<String> resourcePolicies,
-        String sourceImage,
-        CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        String sourceSnapshot,
-        CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.diskName = Objects.requireNonNull(diskName, "expected parameter 'diskName' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.labels = Objects.requireNonNull(labels, "expected parameter 'labels' to be non-null");
-        this.licenses = Objects.requireNonNull(licenses, "expected parameter 'licenses' to be non-null");
-        this.onUpdateAction = Objects.requireNonNull(onUpdateAction, "expected parameter 'onUpdateAction' to be non-null");
-        this.provisionedIops = Objects.requireNonNull(provisionedIops, "expected parameter 'provisionedIops' to be non-null");
-        this.resourcePolicies = Objects.requireNonNull(resourcePolicies, "expected parameter 'resourcePolicies' to be non-null");
-        this.sourceImage = Objects.requireNonNull(sourceImage, "expected parameter 'sourceImage' to be non-null");
-        this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey, "expected parameter 'sourceImageEncryptionKey' to be non-null");
-        this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot, "expected parameter 'sourceSnapshot' to be non-null");
-        this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey, "expected parameter 'sourceSnapshotEncryptionKey' to be non-null");
-    }
+    private AttachedDiskInitializeParamsResponse() {}
 
-    private AttachedDiskInitializeParamsResponse() {
-        this.description = null;
-        this.diskName = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
-        this.labels = Map.of();
-        this.licenses = List.of();
-        this.onUpdateAction = null;
-        this.provisionedIops = null;
-        this.resourcePolicies = List.of();
-        this.sourceImage = null;
-        this.sourceImageEncryptionKey = null;
-        this.sourceSnapshot = null;
-        this.sourceSnapshotEncryptionKey = null;
+    private AttachedDiskInitializeParamsResponse(AttachedDiskInitializeParamsResponse $) {
+        this.description = $.description;
+        this.diskName = $.diskName;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
+        this.labels = $.labels;
+        this.licenses = $.licenses;
+        this.onUpdateAction = $.onUpdateAction;
+        this.provisionedIops = $.provisionedIops;
+        this.resourcePolicies = $.resourcePolicies;
+        this.sourceImage = $.sourceImage;
+        this.sourceImageEncryptionKey = $.sourceImageEncryptionKey;
+        this.sourceSnapshot = $.sourceSnapshot;
+        this.sourceSnapshotEncryptionKey = $.sourceSnapshotEncryptionKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AttachedDiskInitializeParamsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String description;
-        private String diskName;
-        private String diskSizeGb;
-        private String diskType;
-        private Map<String,String> labels;
-        private List<String> licenses;
-        private String onUpdateAction;
-        private String provisionedIops;
-        private List<String> resourcePolicies;
-        private String sourceImage;
-        private CustomerEncryptionKeyResponse sourceImageEncryptionKey;
-        private String sourceSnapshot;
-        private CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
+        private AttachedDiskInitializeParamsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AttachedDiskInitializeParamsResponse();
         }
 
         public Builder(AttachedDiskInitializeParamsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.diskName = defaults.diskName;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
-    	      this.labels = defaults.labels;
-    	      this.licenses = defaults.licenses;
-    	      this.onUpdateAction = defaults.onUpdateAction;
-    	      this.provisionedIops = defaults.provisionedIops;
-    	      this.resourcePolicies = defaults.resourcePolicies;
-    	      this.sourceImage = defaults.sourceImage;
-    	      this.sourceImageEncryptionKey = defaults.sourceImageEncryptionKey;
-    	      this.sourceSnapshot = defaults.sourceSnapshot;
-    	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
+            $ = new AttachedDiskInitializeParamsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder diskName(String diskName) {
-            this.diskName = Objects.requireNonNull(diskName);
+            $.diskName = diskName;
             return this;
         }
+
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder labels(Map<String,String> labels) {
-            this.labels = Objects.requireNonNull(labels);
+            $.labels = labels;
             return this;
         }
+
         public Builder licenses(List<String> licenses) {
-            this.licenses = Objects.requireNonNull(licenses);
+            $.licenses = licenses;
             return this;
         }
+
         public Builder licenses(String... licenses) {
             return licenses(List.of(licenses));
         }
+
         public Builder onUpdateAction(String onUpdateAction) {
-            this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
+            $.onUpdateAction = onUpdateAction;
             return this;
         }
+
         public Builder provisionedIops(String provisionedIops) {
-            this.provisionedIops = Objects.requireNonNull(provisionedIops);
+            $.provisionedIops = provisionedIops;
             return this;
         }
+
         public Builder resourcePolicies(List<String> resourcePolicies) {
-            this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
+            $.resourcePolicies = resourcePolicies;
             return this;
         }
+
         public Builder resourcePolicies(String... resourcePolicies) {
             return resourcePolicies(List.of(resourcePolicies));
         }
+
         public Builder sourceImage(String sourceImage) {
-            this.sourceImage = Objects.requireNonNull(sourceImage);
+            $.sourceImage = sourceImage;
             return this;
         }
+
         public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
+            $.sourceImageEncryptionKey = sourceImageEncryptionKey;
             return this;
         }
+
         public Builder sourceSnapshot(String sourceSnapshot) {
-            this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
+            $.sourceSnapshot = sourceSnapshot;
             return this;
         }
+
         public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
+            $.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
             return this;
-        }        public AttachedDiskInitializeParamsResponse build() {
-            return new AttachedDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, labels, licenses, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);
+        }
+
+        public AttachedDiskInitializeParamsResponse build() {
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.diskName = Objects.requireNonNull($.diskName, "expected parameter 'diskName' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.labels = Objects.requireNonNull($.labels, "expected parameter 'labels' to be non-null");
+            $.licenses = Objects.requireNonNull($.licenses, "expected parameter 'licenses' to be non-null");
+            $.onUpdateAction = Objects.requireNonNull($.onUpdateAction, "expected parameter 'onUpdateAction' to be non-null");
+            $.provisionedIops = Objects.requireNonNull($.provisionedIops, "expected parameter 'provisionedIops' to be non-null");
+            $.resourcePolicies = Objects.requireNonNull($.resourcePolicies, "expected parameter 'resourcePolicies' to be non-null");
+            $.sourceImage = Objects.requireNonNull($.sourceImage, "expected parameter 'sourceImage' to be non-null");
+            $.sourceImageEncryptionKey = Objects.requireNonNull($.sourceImageEncryptionKey, "expected parameter 'sourceImageEncryptionKey' to be non-null");
+            $.sourceSnapshot = Objects.requireNonNull($.sourceSnapshot, "expected parameter 'sourceSnapshot' to be non-null");
+            $.sourceSnapshotEncryptionKey = Objects.requireNonNull($.sourceSnapshotEncryptionKey, "expected parameter 'sourceSnapshotEncryptionKey' to be non-null");
+            return $;
         }
     }
+
 }

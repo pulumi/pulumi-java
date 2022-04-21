@@ -5,10 +5,10 @@ package com.pulumi.googlenative.compute_beta;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_beta.inputs.AutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,10 +21,10 @@ public final class AutoscalerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscalingPolicy")
-      private final @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy;
+    private @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy;
 
-    public Output<AutoscalingPolicyArgs> autoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
+    public Optional<Output<AutoscalingPolicyArgs>> autoscalingPolicy() {
+        return Optional.ofNullable(this.autoscalingPolicy);
     }
 
     /**
@@ -32,10 +32,10 @@ public final class AutoscalerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     /**
@@ -43,24 +43,24 @@ public final class AutoscalerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -68,135 +68,115 @@ public final class AutoscalerArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="target")
-      private final @Nullable Output<String> target;
+    private @Nullable Output<String> target;
 
-    public Output<String> target() {
-        return this.target == null ? Codegen.empty() : this.target;
+    public Optional<Output<String>> target() {
+        return Optional.ofNullable(this.target);
     }
 
     @Import(name="zone")
-      private final @Nullable Output<String> zone;
+    private @Nullable Output<String> zone;
 
-    public Output<String> zone() {
-        return this.zone == null ? Codegen.empty() : this.zone;
+    public Optional<Output<String>> zone() {
+        return Optional.ofNullable(this.zone);
     }
 
-    public AutoscalerArgs(
-        @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy,
-        @Nullable Output<String> description,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<String> target,
-        @Nullable Output<String> zone) {
-        this.autoscalingPolicy = autoscalingPolicy;
-        this.description = description;
-        this.name = name;
-        this.project = project;
-        this.requestId = requestId;
-        this.target = target;
-        this.zone = zone;
-    }
+    private AutoscalerArgs() {}
 
-    private AutoscalerArgs() {
-        this.autoscalingPolicy = Codegen.empty();
-        this.description = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.target = Codegen.empty();
-        this.zone = Codegen.empty();
+    private AutoscalerArgs(AutoscalerArgs $) {
+        this.autoscalingPolicy = $.autoscalingPolicy;
+        this.description = $.description;
+        this.name = $.name;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.target = $.target;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AutoscalerArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<String> target;
-        private @Nullable Output<String> zone;
+        private AutoscalerArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AutoscalerArgs();
         }
 
         public Builder(AutoscalerArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingPolicy = defaults.autoscalingPolicy;
-    	      this.description = defaults.description;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.target = defaults.target;
-    	      this.zone = defaults.zone;
+            $ = new AutoscalerArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingPolicy(@Nullable Output<AutoscalingPolicyArgs> autoscalingPolicy) {
-            this.autoscalingPolicy = autoscalingPolicy;
+            $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
-        public Builder autoscalingPolicy(@Nullable AutoscalingPolicyArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
-            return this;
+
+        public Builder autoscalingPolicy(AutoscalingPolicyArgs autoscalingPolicy) {
+            return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder target(@Nullable Output<String> target) {
-            this.target = target;
+            $.target = target;
             return this;
         }
-        public Builder target(@Nullable String target) {
-            this.target = Codegen.ofNullable(target);
-            return this;
+
+        public Builder target(String target) {
+            return target(Output.of(target));
         }
+
         public Builder zone(@Nullable Output<String> zone) {
-            this.zone = zone;
+            $.zone = zone;
             return this;
         }
-        public Builder zone(@Nullable String zone) {
-            this.zone = Codegen.ofNullable(zone);
-            return this;
-        }        public AutoscalerArgs build() {
-            return new AutoscalerArgs(autoscalingPolicy, description, name, project, requestId, target, zone);
+
+        public Builder zone(String zone) {
+            return zone(Output.of(zone));
+        }
+
+        public AutoscalerArgs build() {
+            return $;
         }
     }
+
 }

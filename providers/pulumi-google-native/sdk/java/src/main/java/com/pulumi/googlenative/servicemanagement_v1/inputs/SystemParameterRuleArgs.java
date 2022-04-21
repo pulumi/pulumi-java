@@ -5,11 +5,11 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class SystemParameterRuleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<List<SystemParameterArgs>> parameters;
+    private @Nullable Output<List<SystemParameterArgs>> parameters;
 
-    public Output<List<SystemParameterArgs>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<List<SystemParameterArgs>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class SystemParameterRuleArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<String> selector;
+    private @Nullable Output<String> selector;
 
-    public Output<String> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<String>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public SystemParameterRuleArgs(
-        @Nullable Output<List<SystemParameterArgs>> parameters,
-        @Nullable Output<String> selector) {
-        this.parameters = parameters;
-        this.selector = selector;
-    }
+    private SystemParameterRuleArgs() {}
 
-    private SystemParameterRuleArgs() {
-        this.parameters = Codegen.empty();
-        this.selector = Codegen.empty();
+    private SystemParameterRuleArgs(SystemParameterRuleArgs $) {
+        this.parameters = $.parameters;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SystemParameterRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<SystemParameterArgs>> parameters;
-        private @Nullable Output<String> selector;
+        private SystemParameterRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SystemParameterRuleArgs();
         }
 
         public Builder(SystemParameterRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.parameters = defaults.parameters;
-    	      this.selector = defaults.selector;
+            $ = new SystemParameterRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder parameters(@Nullable Output<List<SystemParameterArgs>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable List<SystemParameterArgs> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(List<SystemParameterArgs> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder parameters(SystemParameterArgs... parameters) {
             return parameters(List.of(parameters));
         }
+
         public Builder selector(@Nullable Output<String> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable String selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public SystemParameterRuleArgs build() {
-            return new SystemParameterRuleArgs(parameters, selector);
+
+        public Builder selector(String selector) {
+            return selector(Output.of(selector));
+        }
+
+        public SystemParameterRuleArgs build() {
+            return $;
         }
     }
+
 }

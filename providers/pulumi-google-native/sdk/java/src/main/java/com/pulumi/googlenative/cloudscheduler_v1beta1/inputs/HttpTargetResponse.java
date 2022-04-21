@@ -24,7 +24,7 @@ public final class HttpTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="body", required=true)
-      private final String body;
+    private String body;
 
     public String body() {
         return this.body;
@@ -35,7 +35,7 @@ public final class HttpTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="headers", required=true)
-      private final Map<String,String> headers;
+    private Map<String,String> headers;
 
     public Map<String,String> headers() {
         return this.headers;
@@ -46,7 +46,7 @@ public final class HttpTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="httpMethod", required=true)
-      private final String httpMethod;
+    private String httpMethod;
 
     public String httpMethod() {
         return this.httpMethod;
@@ -57,7 +57,7 @@ public final class HttpTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oauthToken", required=true)
-      private final OAuthTokenResponse oauthToken;
+    private OAuthTokenResponse oauthToken;
 
     public OAuthTokenResponse oauthToken() {
         return this.oauthToken;
@@ -68,7 +68,7 @@ public final class HttpTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="oidcToken", required=true)
-      private final OidcTokenResponse oidcToken;
+    private OidcTokenResponse oidcToken;
 
     public OidcTokenResponse oidcToken() {
         return this.oidcToken;
@@ -79,91 +79,80 @@ public final class HttpTargetResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="uri", required=true)
-      private final String uri;
+    private String uri;
 
     public String uri() {
         return this.uri;
     }
 
-    public HttpTargetResponse(
-        String body,
-        Map<String,String> headers,
-        String httpMethod,
-        OAuthTokenResponse oauthToken,
-        OidcTokenResponse oidcToken,
-        String uri) {
-        this.body = Objects.requireNonNull(body, "expected parameter 'body' to be non-null");
-        this.headers = Objects.requireNonNull(headers, "expected parameter 'headers' to be non-null");
-        this.httpMethod = Objects.requireNonNull(httpMethod, "expected parameter 'httpMethod' to be non-null");
-        this.oauthToken = Objects.requireNonNull(oauthToken, "expected parameter 'oauthToken' to be non-null");
-        this.oidcToken = Objects.requireNonNull(oidcToken, "expected parameter 'oidcToken' to be non-null");
-        this.uri = Objects.requireNonNull(uri, "expected parameter 'uri' to be non-null");
-    }
+    private HttpTargetResponse() {}
 
-    private HttpTargetResponse() {
-        this.body = null;
-        this.headers = Map.of();
-        this.httpMethod = null;
-        this.oauthToken = null;
-        this.oidcToken = null;
-        this.uri = null;
+    private HttpTargetResponse(HttpTargetResponse $) {
+        this.body = $.body;
+        this.headers = $.headers;
+        this.httpMethod = $.httpMethod;
+        this.oauthToken = $.oauthToken;
+        this.oidcToken = $.oidcToken;
+        this.uri = $.uri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HttpTargetResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String body;
-        private Map<String,String> headers;
-        private String httpMethod;
-        private OAuthTokenResponse oauthToken;
-        private OidcTokenResponse oidcToken;
-        private String uri;
+        private HttpTargetResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new HttpTargetResponse();
         }
 
         public Builder(HttpTargetResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.body = defaults.body;
-    	      this.headers = defaults.headers;
-    	      this.httpMethod = defaults.httpMethod;
-    	      this.oauthToken = defaults.oauthToken;
-    	      this.oidcToken = defaults.oidcToken;
-    	      this.uri = defaults.uri;
+            $ = new HttpTargetResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder body(String body) {
-            this.body = Objects.requireNonNull(body);
+            $.body = body;
             return this;
         }
+
         public Builder headers(Map<String,String> headers) {
-            this.headers = Objects.requireNonNull(headers);
+            $.headers = headers;
             return this;
         }
+
         public Builder httpMethod(String httpMethod) {
-            this.httpMethod = Objects.requireNonNull(httpMethod);
+            $.httpMethod = httpMethod;
             return this;
         }
+
         public Builder oauthToken(OAuthTokenResponse oauthToken) {
-            this.oauthToken = Objects.requireNonNull(oauthToken);
+            $.oauthToken = oauthToken;
             return this;
         }
+
         public Builder oidcToken(OidcTokenResponse oidcToken) {
-            this.oidcToken = Objects.requireNonNull(oidcToken);
+            $.oidcToken = oidcToken;
             return this;
         }
+
         public Builder uri(String uri) {
-            this.uri = Objects.requireNonNull(uri);
+            $.uri = uri;
             return this;
-        }        public HttpTargetResponse build() {
-            return new HttpTargetResponse(body, headers, httpMethod, oauthToken, oidcToken, uri);
+        }
+
+        public HttpTargetResponse build() {
+            $.body = Objects.requireNonNull($.body, "expected parameter 'body' to be non-null");
+            $.headers = Objects.requireNonNull($.headers, "expected parameter 'headers' to be non-null");
+            $.httpMethod = Objects.requireNonNull($.httpMethod, "expected parameter 'httpMethod' to be non-null");
+            $.oauthToken = Objects.requireNonNull($.oauthToken, "expected parameter 'oauthToken' to be non-null");
+            $.oidcToken = Objects.requireNonNull($.oidcToken, "expected parameter 'oidcToken' to be non-null");
+            $.uri = Objects.requireNonNull($.uri, "expected parameter 'uri' to be non-null");
+            return $;
         }
     }
+
 }

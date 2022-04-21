@@ -13,94 +13,87 @@ public final class GetKeyArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetKeyArgs Empty = new GetKeyArgs();
 
     @Import(name="appId", required=true)
-      private final String appId;
+    private String appId;
 
     public String appId() {
         return this.appId;
     }
 
     @Import(name="developerId", required=true)
-      private final String developerId;
+    private String developerId;
 
     public String developerId() {
         return this.developerId;
     }
 
     @Import(name="keyId", required=true)
-      private final String keyId;
+    private String keyId;
 
     public String keyId() {
         return this.keyId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
-    public GetKeyArgs(
-        String appId,
-        String developerId,
-        String keyId,
-        String organizationId) {
-        this.appId = Objects.requireNonNull(appId, "expected parameter 'appId' to be non-null");
-        this.developerId = Objects.requireNonNull(developerId, "expected parameter 'developerId' to be non-null");
-        this.keyId = Objects.requireNonNull(keyId, "expected parameter 'keyId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-    }
+    private GetKeyArgs() {}
 
-    private GetKeyArgs() {
-        this.appId = null;
-        this.developerId = null;
-        this.keyId = null;
-        this.organizationId = null;
+    private GetKeyArgs(GetKeyArgs $) {
+        this.appId = $.appId;
+        this.developerId = $.developerId;
+        this.keyId = $.keyId;
+        this.organizationId = $.organizationId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetKeyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String appId;
-        private String developerId;
-        private String keyId;
-        private String organizationId;
+        private GetKeyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetKeyArgs();
         }
 
         public Builder(GetKeyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appId = defaults.appId;
-    	      this.developerId = defaults.developerId;
-    	      this.keyId = defaults.keyId;
-    	      this.organizationId = defaults.organizationId;
+            $ = new GetKeyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder appId(String appId) {
-            this.appId = Objects.requireNonNull(appId);
+            $.appId = appId;
             return this;
         }
+
         public Builder developerId(String developerId) {
-            this.developerId = Objects.requireNonNull(developerId);
+            $.developerId = developerId;
             return this;
         }
+
         public Builder keyId(String keyId) {
-            this.keyId = Objects.requireNonNull(keyId);
+            $.keyId = keyId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
-        }        public GetKeyArgs build() {
-            return new GetKeyArgs(appId, developerId, keyId, organizationId);
+        }
+
+        public GetKeyArgs build() {
+            $.appId = Objects.requireNonNull($.appId, "expected parameter 'appId' to be non-null");
+            $.developerId = Objects.requireNonNull($.developerId, "expected parameter 'developerId' to be non-null");
+            $.keyId = Objects.requireNonNull($.keyId, "expected parameter 'keyId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

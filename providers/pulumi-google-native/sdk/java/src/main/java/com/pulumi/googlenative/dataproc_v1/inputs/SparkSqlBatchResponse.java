@@ -23,7 +23,7 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="jarFileUris", required=true)
-      private final List<String> jarFileUris;
+    private List<String> jarFileUris;
 
     public List<String> jarFileUris() {
         return this.jarFileUris;
@@ -34,7 +34,7 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="queryFileUri", required=true)
-      private final String queryFileUri;
+    private String queryFileUri;
 
     public String queryFileUri() {
         return this.queryFileUri;
@@ -45,67 +45,63 @@ public final class SparkSqlBatchResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="queryVariables", required=true)
-      private final Map<String,String> queryVariables;
+    private Map<String,String> queryVariables;
 
     public Map<String,String> queryVariables() {
         return this.queryVariables;
     }
 
-    public SparkSqlBatchResponse(
-        List<String> jarFileUris,
-        String queryFileUri,
-        Map<String,String> queryVariables) {
-        this.jarFileUris = Objects.requireNonNull(jarFileUris, "expected parameter 'jarFileUris' to be non-null");
-        this.queryFileUri = Objects.requireNonNull(queryFileUri, "expected parameter 'queryFileUri' to be non-null");
-        this.queryVariables = Objects.requireNonNull(queryVariables, "expected parameter 'queryVariables' to be non-null");
-    }
+    private SparkSqlBatchResponse() {}
 
-    private SparkSqlBatchResponse() {
-        this.jarFileUris = List.of();
-        this.queryFileUri = null;
-        this.queryVariables = Map.of();
+    private SparkSqlBatchResponse(SparkSqlBatchResponse $) {
+        this.jarFileUris = $.jarFileUris;
+        this.queryFileUri = $.queryFileUri;
+        this.queryVariables = $.queryVariables;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkSqlBatchResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> jarFileUris;
-        private String queryFileUri;
-        private Map<String,String> queryVariables;
+        private SparkSqlBatchResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkSqlBatchResponse();
         }
 
         public Builder(SparkSqlBatchResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.jarFileUris = defaults.jarFileUris;
-    	      this.queryFileUri = defaults.queryFileUri;
-    	      this.queryVariables = defaults.queryVariables;
+            $ = new SparkSqlBatchResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder jarFileUris(List<String> jarFileUris) {
-            this.jarFileUris = Objects.requireNonNull(jarFileUris);
+            $.jarFileUris = jarFileUris;
             return this;
         }
+
         public Builder jarFileUris(String... jarFileUris) {
             return jarFileUris(List.of(jarFileUris));
         }
+
         public Builder queryFileUri(String queryFileUri) {
-            this.queryFileUri = Objects.requireNonNull(queryFileUri);
+            $.queryFileUri = queryFileUri;
             return this;
         }
+
         public Builder queryVariables(Map<String,String> queryVariables) {
-            this.queryVariables = Objects.requireNonNull(queryVariables);
+            $.queryVariables = queryVariables;
             return this;
-        }        public SparkSqlBatchResponse build() {
-            return new SparkSqlBatchResponse(jarFileUris, queryFileUri, queryVariables);
+        }
+
+        public SparkSqlBatchResponse build() {
+            $.jarFileUris = Objects.requireNonNull($.jarFileUris, "expected parameter 'jarFileUris' to be non-null");
+            $.queryFileUri = Objects.requireNonNull($.queryFileUri, "expected parameter 'queryFileUri' to be non-null");
+            $.queryVariables = Objects.requireNonNull($.queryVariables, "expected parameter 'queryVariables' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,9 +5,9 @@ package com.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="create")
-      private final @Nullable Output<String> create;
+    private @Nullable Output<String> create;
 
-    public Output<String> create() {
-        return this.create == null ? Codegen.empty() : this.create;
+    public Optional<Output<String>> create() {
+        return Optional.ofNullable(this.create);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="delete")
-      private final @Nullable Output<String> delete;
+    private @Nullable Output<String> delete;
 
-    public Output<String> delete() {
-        return this.delete == null ? Codegen.empty() : this.delete;
+    public Optional<Output<String>> delete() {
+        return Optional.ofNullable(this.delete);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="get")
-      private final @Nullable Output<String> get;
+    private @Nullable Output<String> get;
 
-    public Output<String> get() {
-        return this.get == null ? Codegen.empty() : this.get;
+    public Optional<Output<String>> get() {
+        return Optional.ofNullable(this.get);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="setIamPolicy")
-      private final @Nullable Output<String> setIamPolicy;
+    private @Nullable Output<String> setIamPolicy;
 
-    public Output<String> setIamPolicy() {
-        return this.setIamPolicy == null ? Codegen.empty() : this.setIamPolicy;
+    public Optional<Output<String>> setIamPolicy() {
+        return Optional.ofNullable(this.setIamPolicy);
     }
 
     /**
@@ -68,102 +68,88 @@ public final class MethodMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="update")
-      private final @Nullable Output<String> update;
+    private @Nullable Output<String> update;
 
-    public Output<String> update() {
-        return this.update == null ? Codegen.empty() : this.update;
+    public Optional<Output<String>> update() {
+        return Optional.ofNullable(this.update);
     }
 
-    public MethodMapArgs(
-        @Nullable Output<String> create,
-        @Nullable Output<String> delete,
-        @Nullable Output<String> get,
-        @Nullable Output<String> setIamPolicy,
-        @Nullable Output<String> update) {
-        this.create = create;
-        this.delete = delete;
-        this.get = get;
-        this.setIamPolicy = setIamPolicy;
-        this.update = update;
-    }
+    private MethodMapArgs() {}
 
-    private MethodMapArgs() {
-        this.create = Codegen.empty();
-        this.delete = Codegen.empty();
-        this.get = Codegen.empty();
-        this.setIamPolicy = Codegen.empty();
-        this.update = Codegen.empty();
+    private MethodMapArgs(MethodMapArgs $) {
+        this.create = $.create;
+        this.delete = $.delete;
+        this.get = $.get;
+        this.setIamPolicy = $.setIamPolicy;
+        this.update = $.update;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MethodMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> create;
-        private @Nullable Output<String> delete;
-        private @Nullable Output<String> get;
-        private @Nullable Output<String> setIamPolicy;
-        private @Nullable Output<String> update;
+        private MethodMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MethodMapArgs();
         }
 
         public Builder(MethodMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.create = defaults.create;
-    	      this.delete = defaults.delete;
-    	      this.get = defaults.get;
-    	      this.setIamPolicy = defaults.setIamPolicy;
-    	      this.update = defaults.update;
+            $ = new MethodMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder create(@Nullable Output<String> create) {
-            this.create = create;
+            $.create = create;
             return this;
         }
-        public Builder create(@Nullable String create) {
-            this.create = Codegen.ofNullable(create);
-            return this;
+
+        public Builder create(String create) {
+            return create(Output.of(create));
         }
+
         public Builder delete(@Nullable Output<String> delete) {
-            this.delete = delete;
+            $.delete = delete;
             return this;
         }
-        public Builder delete(@Nullable String delete) {
-            this.delete = Codegen.ofNullable(delete);
-            return this;
+
+        public Builder delete(String delete) {
+            return delete(Output.of(delete));
         }
+
         public Builder get(@Nullable Output<String> get) {
-            this.get = get;
+            $.get = get;
             return this;
         }
-        public Builder get(@Nullable String get) {
-            this.get = Codegen.ofNullable(get);
-            return this;
+
+        public Builder get(String get) {
+            return get(Output.of(get));
         }
+
         public Builder setIamPolicy(@Nullable Output<String> setIamPolicy) {
-            this.setIamPolicy = setIamPolicy;
+            $.setIamPolicy = setIamPolicy;
             return this;
         }
-        public Builder setIamPolicy(@Nullable String setIamPolicy) {
-            this.setIamPolicy = Codegen.ofNullable(setIamPolicy);
-            return this;
+
+        public Builder setIamPolicy(String setIamPolicy) {
+            return setIamPolicy(Output.of(setIamPolicy));
         }
+
         public Builder update(@Nullable Output<String> update) {
-            this.update = update;
+            $.update = update;
             return this;
         }
-        public Builder update(@Nullable String update) {
-            this.update = Codegen.ofNullable(update);
-            return this;
-        }        public MethodMapArgs build() {
-            return new MethodMapArgs(create, delete, get, setIamPolicy, update);
+
+        public Builder update(String update) {
+            return update(Output.of(update));
+        }
+
+        public MethodMapArgs build() {
+            return $;
         }
     }
+
 }

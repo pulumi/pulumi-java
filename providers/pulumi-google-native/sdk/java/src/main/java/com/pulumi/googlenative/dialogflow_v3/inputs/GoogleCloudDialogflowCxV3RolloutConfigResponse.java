@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse extends com.pu
      * 
      */
     @Import(name="failureCondition", required=true)
-      private final String failureCondition;
+    private String failureCondition;
 
     public String failureCondition() {
         return this.failureCondition;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse extends com.pu
      * 
      */
     @Import(name="rolloutCondition", required=true)
-      private final String rolloutCondition;
+    private String rolloutCondition;
 
     public String rolloutCondition() {
         return this.rolloutCondition;
@@ -45,67 +45,63 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse extends com.pu
      * 
      */
     @Import(name="rolloutSteps", required=true)
-      private final List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
+    private List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
 
     public List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps() {
         return this.rolloutSteps;
     }
 
-    public GoogleCloudDialogflowCxV3RolloutConfigResponse(
-        String failureCondition,
-        String rolloutCondition,
-        List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
-        this.failureCondition = Objects.requireNonNull(failureCondition, "expected parameter 'failureCondition' to be non-null");
-        this.rolloutCondition = Objects.requireNonNull(rolloutCondition, "expected parameter 'rolloutCondition' to be non-null");
-        this.rolloutSteps = Objects.requireNonNull(rolloutSteps, "expected parameter 'rolloutSteps' to be non-null");
-    }
+    private GoogleCloudDialogflowCxV3RolloutConfigResponse() {}
 
-    private GoogleCloudDialogflowCxV3RolloutConfigResponse() {
-        this.failureCondition = null;
-        this.rolloutCondition = null;
-        this.rolloutSteps = List.of();
+    private GoogleCloudDialogflowCxV3RolloutConfigResponse(GoogleCloudDialogflowCxV3RolloutConfigResponse $) {
+        this.failureCondition = $.failureCondition;
+        this.rolloutCondition = $.rolloutCondition;
+        this.rolloutSteps = $.rolloutSteps;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3RolloutConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String failureCondition;
-        private String rolloutCondition;
-        private List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
+        private GoogleCloudDialogflowCxV3RolloutConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3RolloutConfigResponse();
         }
 
         public Builder(GoogleCloudDialogflowCxV3RolloutConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failureCondition = defaults.failureCondition;
-    	      this.rolloutCondition = defaults.rolloutCondition;
-    	      this.rolloutSteps = defaults.rolloutSteps;
+            $ = new GoogleCloudDialogflowCxV3RolloutConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder failureCondition(String failureCondition) {
-            this.failureCondition = Objects.requireNonNull(failureCondition);
+            $.failureCondition = failureCondition;
             return this;
         }
+
         public Builder rolloutCondition(String rolloutCondition) {
-            this.rolloutCondition = Objects.requireNonNull(rolloutCondition);
+            $.rolloutCondition = rolloutCondition;
             return this;
         }
+
         public Builder rolloutSteps(List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
-            this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
+            $.rolloutSteps = rolloutSteps;
             return this;
         }
+
         public Builder rolloutSteps(GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse... rolloutSteps) {
             return rolloutSteps(List.of(rolloutSteps));
-        }        public GoogleCloudDialogflowCxV3RolloutConfigResponse build() {
-            return new GoogleCloudDialogflowCxV3RolloutConfigResponse(failureCondition, rolloutCondition, rolloutSteps);
+        }
+
+        public GoogleCloudDialogflowCxV3RolloutConfigResponse build() {
+            $.failureCondition = Objects.requireNonNull($.failureCondition, "expected parameter 'failureCondition' to be non-null");
+            $.rolloutCondition = Objects.requireNonNull($.rolloutCondition, "expected parameter 'rolloutCondition' to be non-null");
+            $.rolloutSteps = Objects.requireNonNull($.rolloutSteps, "expected parameter 'rolloutSteps' to be non-null");
+            return $;
         }
     }
+
 }

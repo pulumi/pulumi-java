@@ -22,7 +22,7 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowedRequestExtensions", required=true)
-      private final List<String> allowedRequestExtensions;
+    private List<String> allowedRequestExtensions;
 
     public List<String> allowedRequestExtensions() {
         return this.allowedRequestExtensions;
@@ -33,7 +33,7 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="allowedResponseExtensions", required=true)
-      private final List<String> allowedResponseExtensions;
+    private List<String> allowedResponseExtensions;
 
     public List<String> allowedResponseExtensions() {
         return this.allowedResponseExtensions;
@@ -44,7 +44,7 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="provided", required=true)
-      private final List<String> provided;
+    private List<String> provided;
 
     public List<String> provided() {
         return this.provided;
@@ -55,7 +55,7 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="requested", required=true)
-      private final List<String> requested;
+    private List<String> requested;
 
     public List<String> requested() {
         return this.requested;
@@ -66,94 +66,89 @@ public final class ContextRuleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="selector", required=true)
-      private final String selector;
+    private String selector;
 
     public String selector() {
         return this.selector;
     }
 
-    public ContextRuleResponse(
-        List<String> allowedRequestExtensions,
-        List<String> allowedResponseExtensions,
-        List<String> provided,
-        List<String> requested,
-        String selector) {
-        this.allowedRequestExtensions = Objects.requireNonNull(allowedRequestExtensions, "expected parameter 'allowedRequestExtensions' to be non-null");
-        this.allowedResponseExtensions = Objects.requireNonNull(allowedResponseExtensions, "expected parameter 'allowedResponseExtensions' to be non-null");
-        this.provided = Objects.requireNonNull(provided, "expected parameter 'provided' to be non-null");
-        this.requested = Objects.requireNonNull(requested, "expected parameter 'requested' to be non-null");
-        this.selector = Objects.requireNonNull(selector, "expected parameter 'selector' to be non-null");
-    }
+    private ContextRuleResponse() {}
 
-    private ContextRuleResponse() {
-        this.allowedRequestExtensions = List.of();
-        this.allowedResponseExtensions = List.of();
-        this.provided = List.of();
-        this.requested = List.of();
-        this.selector = null;
+    private ContextRuleResponse(ContextRuleResponse $) {
+        this.allowedRequestExtensions = $.allowedRequestExtensions;
+        this.allowedResponseExtensions = $.allowedResponseExtensions;
+        this.provided = $.provided;
+        this.requested = $.requested;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContextRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> allowedRequestExtensions;
-        private List<String> allowedResponseExtensions;
-        private List<String> provided;
-        private List<String> requested;
-        private String selector;
+        private ContextRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContextRuleResponse();
         }
 
         public Builder(ContextRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedRequestExtensions = defaults.allowedRequestExtensions;
-    	      this.allowedResponseExtensions = defaults.allowedResponseExtensions;
-    	      this.provided = defaults.provided;
-    	      this.requested = defaults.requested;
-    	      this.selector = defaults.selector;
+            $ = new ContextRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedRequestExtensions(List<String> allowedRequestExtensions) {
-            this.allowedRequestExtensions = Objects.requireNonNull(allowedRequestExtensions);
+            $.allowedRequestExtensions = allowedRequestExtensions;
             return this;
         }
+
         public Builder allowedRequestExtensions(String... allowedRequestExtensions) {
             return allowedRequestExtensions(List.of(allowedRequestExtensions));
         }
+
         public Builder allowedResponseExtensions(List<String> allowedResponseExtensions) {
-            this.allowedResponseExtensions = Objects.requireNonNull(allowedResponseExtensions);
+            $.allowedResponseExtensions = allowedResponseExtensions;
             return this;
         }
+
         public Builder allowedResponseExtensions(String... allowedResponseExtensions) {
             return allowedResponseExtensions(List.of(allowedResponseExtensions));
         }
+
         public Builder provided(List<String> provided) {
-            this.provided = Objects.requireNonNull(provided);
+            $.provided = provided;
             return this;
         }
+
         public Builder provided(String... provided) {
             return provided(List.of(provided));
         }
+
         public Builder requested(List<String> requested) {
-            this.requested = Objects.requireNonNull(requested);
+            $.requested = requested;
             return this;
         }
+
         public Builder requested(String... requested) {
             return requested(List.of(requested));
         }
+
         public Builder selector(String selector) {
-            this.selector = Objects.requireNonNull(selector);
+            $.selector = selector;
             return this;
-        }        public ContextRuleResponse build() {
-            return new ContextRuleResponse(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);
+        }
+
+        public ContextRuleResponse build() {
+            $.allowedRequestExtensions = Objects.requireNonNull($.allowedRequestExtensions, "expected parameter 'allowedRequestExtensions' to be non-null");
+            $.allowedResponseExtensions = Objects.requireNonNull($.allowedResponseExtensions, "expected parameter 'allowedResponseExtensions' to be non-null");
+            $.provided = Objects.requireNonNull($.provided, "expected parameter 'provided' to be non-null");
+            $.requested = Objects.requireNonNull($.requested, "expected parameter 'requested' to be non-null");
+            $.selector = Objects.requireNonNull($.selector, "expected parameter 'selector' to be non-null");
+            return $;
         }
     }
+
 }

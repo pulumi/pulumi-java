@@ -5,9 +5,9 @@ package com.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class FileReferenceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fileUri")
-      private final @Nullable Output<String> fileUri;
+    private @Nullable Output<String> fileUri;
 
-    public Output<String> fileUri() {
-        return this.fileUri == null ? Codegen.empty() : this.fileUri;
+    public Optional<Output<String>> fileUri() {
+        return Optional.ofNullable(this.fileUri);
     }
 
-    public FileReferenceArgs(@Nullable Output<String> fileUri) {
-        this.fileUri = fileUri;
-    }
+    private FileReferenceArgs() {}
 
-    private FileReferenceArgs() {
-        this.fileUri = Codegen.empty();
+    private FileReferenceArgs(FileReferenceArgs $) {
+        this.fileUri = $.fileUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FileReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fileUri;
+        private FileReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FileReferenceArgs();
         }
 
         public Builder(FileReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fileUri = defaults.fileUri;
+            $ = new FileReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fileUri(@Nullable Output<String> fileUri) {
-            this.fileUri = fileUri;
+            $.fileUri = fileUri;
             return this;
         }
-        public Builder fileUri(@Nullable String fileUri) {
-            this.fileUri = Codegen.ofNullable(fileUri);
-            return this;
-        }        public FileReferenceArgs build() {
-            return new FileReferenceArgs(fileUri);
+
+        public Builder fileUri(String fileUri) {
+            return fileUri(Output.of(fileUri));
+        }
+
+        public FileReferenceArgs build() {
+            return $;
         }
     }
+
 }

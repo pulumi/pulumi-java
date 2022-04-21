@@ -5,9 +5,9 @@ package com.pulumi.googlenative.monitoring_v3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class CloudEndpointsArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public CloudEndpointsArgs(@Nullable Output<String> service) {
-        this.service = service;
-    }
+    private CloudEndpointsArgs() {}
 
-    private CloudEndpointsArgs() {
-        this.service = Codegen.empty();
+    private CloudEndpointsArgs(CloudEndpointsArgs $) {
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CloudEndpointsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> service;
+        private CloudEndpointsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CloudEndpointsArgs();
         }
 
         public Builder(CloudEndpointsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.service = defaults.service;
+            $ = new CloudEndpointsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public CloudEndpointsArgs build() {
-            return new CloudEndpointsArgs(service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public CloudEndpointsArgs build() {
+            return $;
         }
     }
+
 }

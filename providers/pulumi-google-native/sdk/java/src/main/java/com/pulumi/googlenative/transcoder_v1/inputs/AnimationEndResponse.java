@@ -21,45 +21,45 @@ public final class AnimationEndResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="startTimeOffset", required=true)
-      private final String startTimeOffset;
+    private String startTimeOffset;
 
     public String startTimeOffset() {
         return this.startTimeOffset;
     }
 
-    public AnimationEndResponse(String startTimeOffset) {
-        this.startTimeOffset = Objects.requireNonNull(startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
-    }
+    private AnimationEndResponse() {}
 
-    private AnimationEndResponse() {
-        this.startTimeOffset = null;
+    private AnimationEndResponse(AnimationEndResponse $) {
+        this.startTimeOffset = $.startTimeOffset;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AnimationEndResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String startTimeOffset;
+        private AnimationEndResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AnimationEndResponse();
         }
 
         public Builder(AnimationEndResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.startTimeOffset = defaults.startTimeOffset;
+            $ = new AnimationEndResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder startTimeOffset(String startTimeOffset) {
-            this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
+            $.startTimeOffset = startTimeOffset;
             return this;
-        }        public AnimationEndResponse build() {
-            return new AnimationEndResponse(startTimeOffset);
+        }
+
+        public AnimationEndResponse build() {
+            $.startTimeOffset = Objects.requireNonNull($.startTimeOffset, "expected parameter 'startTimeOffset' to be non-null");
+            return $;
         }
     }
+
 }

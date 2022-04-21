@@ -5,9 +5,9 @@ package com.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,49 +24,48 @@ public final class GoogleCloudChannelV1AssociationInfoArgs extends com.pulumi.re
      * 
      */
     @Import(name="baseEntitlement")
-      private final @Nullable Output<String> baseEntitlement;
+    private @Nullable Output<String> baseEntitlement;
 
-    public Output<String> baseEntitlement() {
-        return this.baseEntitlement == null ? Codegen.empty() : this.baseEntitlement;
+    public Optional<Output<String>> baseEntitlement() {
+        return Optional.ofNullable(this.baseEntitlement);
     }
 
-    public GoogleCloudChannelV1AssociationInfoArgs(@Nullable Output<String> baseEntitlement) {
-        this.baseEntitlement = baseEntitlement;
-    }
+    private GoogleCloudChannelV1AssociationInfoArgs() {}
 
-    private GoogleCloudChannelV1AssociationInfoArgs() {
-        this.baseEntitlement = Codegen.empty();
+    private GoogleCloudChannelV1AssociationInfoArgs(GoogleCloudChannelV1AssociationInfoArgs $) {
+        this.baseEntitlement = $.baseEntitlement;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudChannelV1AssociationInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> baseEntitlement;
+        private GoogleCloudChannelV1AssociationInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudChannelV1AssociationInfoArgs();
         }
 
         public Builder(GoogleCloudChannelV1AssociationInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseEntitlement = defaults.baseEntitlement;
+            $ = new GoogleCloudChannelV1AssociationInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder baseEntitlement(@Nullable Output<String> baseEntitlement) {
-            this.baseEntitlement = baseEntitlement;
+            $.baseEntitlement = baseEntitlement;
             return this;
         }
-        public Builder baseEntitlement(@Nullable String baseEntitlement) {
-            this.baseEntitlement = Codegen.ofNullable(baseEntitlement);
-            return this;
-        }        public GoogleCloudChannelV1AssociationInfoArgs build() {
-            return new GoogleCloudChannelV1AssociationInfoArgs(baseEntitlement);
+
+        public Builder baseEntitlement(String baseEntitlement) {
+            return baseEntitlement(Output.of(baseEntitlement));
+        }
+
+        public GoogleCloudChannelV1AssociationInfoArgs build() {
+            return $;
         }
     }
+
 }

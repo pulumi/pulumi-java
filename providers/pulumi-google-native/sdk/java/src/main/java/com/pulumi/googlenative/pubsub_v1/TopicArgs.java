@@ -5,13 +5,13 @@ package com.pulumi.googlenative.pubsub_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.pubsub_v1.inputs.MessageStoragePolicyArgs;
 import com.pulumi.googlenative.pubsub_v1.inputs.SchemaSettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kmsKeyName")
-      private final @Nullable Output<String> kmsKeyName;
+    private @Nullable Output<String> kmsKeyName;
 
-    public Output<String> kmsKeyName() {
-        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
+    public Optional<Output<String>> kmsKeyName() {
+        return Optional.ofNullable(this.kmsKeyName);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageRetentionDuration")
-      private final @Nullable Output<String> messageRetentionDuration;
+    private @Nullable Output<String> messageRetentionDuration;
 
-    public Output<String> messageRetentionDuration() {
-        return this.messageRetentionDuration == null ? Codegen.empty() : this.messageRetentionDuration;
+    public Optional<Output<String>> messageRetentionDuration() {
+        return Optional.ofNullable(this.messageRetentionDuration);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="messageStoragePolicy")
-      private final @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
+    private @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
 
-    public Output<MessageStoragePolicyArgs> messageStoragePolicy() {
-        return this.messageStoragePolicy == null ? Codegen.empty() : this.messageStoragePolicy;
+    public Optional<Output<MessageStoragePolicyArgs>> messageStoragePolicy() {
+        return Optional.ofNullable(this.messageStoragePolicy);
     }
 
     /**
@@ -68,17 +68,17 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="satisfiesPzs")
-      private final @Nullable Output<Boolean> satisfiesPzs;
+    private @Nullable Output<Boolean> satisfiesPzs;
 
-    public Output<Boolean> satisfiesPzs() {
-        return this.satisfiesPzs == null ? Codegen.empty() : this.satisfiesPzs;
+    public Optional<Output<Boolean>> satisfiesPzs() {
+        return Optional.ofNullable(this.satisfiesPzs);
     }
 
     /**
@@ -97,161 +97,136 @@ public final class TopicArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="schemaSettings")
-      private final @Nullable Output<SchemaSettingsArgs> schemaSettings;
+    private @Nullable Output<SchemaSettingsArgs> schemaSettings;
 
-    public Output<SchemaSettingsArgs> schemaSettings() {
-        return this.schemaSettings == null ? Codegen.empty() : this.schemaSettings;
+    public Optional<Output<SchemaSettingsArgs>> schemaSettings() {
+        return Optional.ofNullable(this.schemaSettings);
     }
 
     @Import(name="topicId", required=true)
-      private final Output<String> topicId;
+    private Output<String> topicId;
 
     public Output<String> topicId() {
         return this.topicId;
     }
 
-    public TopicArgs(
-        @Nullable Output<String> kmsKeyName,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> messageRetentionDuration,
-        @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy,
-        @Nullable Output<String> name,
-        @Nullable Output<String> project,
-        @Nullable Output<Boolean> satisfiesPzs,
-        @Nullable Output<SchemaSettingsArgs> schemaSettings,
-        Output<String> topicId) {
-        this.kmsKeyName = kmsKeyName;
-        this.labels = labels;
-        this.messageRetentionDuration = messageRetentionDuration;
-        this.messageStoragePolicy = messageStoragePolicy;
-        this.name = name;
-        this.project = project;
-        this.satisfiesPzs = satisfiesPzs;
-        this.schemaSettings = schemaSettings;
-        this.topicId = Objects.requireNonNull(topicId, "expected parameter 'topicId' to be non-null");
-    }
+    private TopicArgs() {}
 
-    private TopicArgs() {
-        this.kmsKeyName = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.messageRetentionDuration = Codegen.empty();
-        this.messageStoragePolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.project = Codegen.empty();
-        this.satisfiesPzs = Codegen.empty();
-        this.schemaSettings = Codegen.empty();
-        this.topicId = Codegen.empty();
+    private TopicArgs(TopicArgs $) {
+        this.kmsKeyName = $.kmsKeyName;
+        this.labels = $.labels;
+        this.messageRetentionDuration = $.messageRetentionDuration;
+        this.messageStoragePolicy = $.messageStoragePolicy;
+        this.name = $.name;
+        this.project = $.project;
+        this.satisfiesPzs = $.satisfiesPzs;
+        this.schemaSettings = $.schemaSettings;
+        this.topicId = $.topicId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopicArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> kmsKeyName;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> messageRetentionDuration;
-        private @Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> project;
-        private @Nullable Output<Boolean> satisfiesPzs;
-        private @Nullable Output<SchemaSettingsArgs> schemaSettings;
-        private Output<String> topicId;
+        private TopicArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopicArgs();
         }
 
         public Builder(TopicArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.kmsKeyName = defaults.kmsKeyName;
-    	      this.labels = defaults.labels;
-    	      this.messageRetentionDuration = defaults.messageRetentionDuration;
-    	      this.messageStoragePolicy = defaults.messageStoragePolicy;
-    	      this.name = defaults.name;
-    	      this.project = defaults.project;
-    	      this.satisfiesPzs = defaults.satisfiesPzs;
-    	      this.schemaSettings = defaults.schemaSettings;
-    	      this.topicId = defaults.topicId;
+            $ = new TopicArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
-            this.kmsKeyName = kmsKeyName;
+            $.kmsKeyName = kmsKeyName;
             return this;
         }
-        public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
-            return this;
+
+        public Builder kmsKeyName(String kmsKeyName) {
+            return kmsKeyName(Output.of(kmsKeyName));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
-            this.messageRetentionDuration = messageRetentionDuration;
+            $.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
-        public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
-            this.messageRetentionDuration = Codegen.ofNullable(messageRetentionDuration);
-            return this;
+
+        public Builder messageRetentionDuration(String messageRetentionDuration) {
+            return messageRetentionDuration(Output.of(messageRetentionDuration));
         }
+
         public Builder messageStoragePolicy(@Nullable Output<MessageStoragePolicyArgs> messageStoragePolicy) {
-            this.messageStoragePolicy = messageStoragePolicy;
+            $.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
-        public Builder messageStoragePolicy(@Nullable MessageStoragePolicyArgs messageStoragePolicy) {
-            this.messageStoragePolicy = Codegen.ofNullable(messageStoragePolicy);
-            return this;
+
+        public Builder messageStoragePolicy(MessageStoragePolicyArgs messageStoragePolicy) {
+            return messageStoragePolicy(Output.of(messageStoragePolicy));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder satisfiesPzs(@Nullable Output<Boolean> satisfiesPzs) {
-            this.satisfiesPzs = satisfiesPzs;
+            $.satisfiesPzs = satisfiesPzs;
             return this;
         }
-        public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
-            this.satisfiesPzs = Codegen.ofNullable(satisfiesPzs);
-            return this;
+
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
+            return satisfiesPzs(Output.of(satisfiesPzs));
         }
+
         public Builder schemaSettings(@Nullable Output<SchemaSettingsArgs> schemaSettings) {
-            this.schemaSettings = schemaSettings;
+            $.schemaSettings = schemaSettings;
             return this;
         }
-        public Builder schemaSettings(@Nullable SchemaSettingsArgs schemaSettings) {
-            this.schemaSettings = Codegen.ofNullable(schemaSettings);
-            return this;
+
+        public Builder schemaSettings(SchemaSettingsArgs schemaSettings) {
+            return schemaSettings(Output.of(schemaSettings));
         }
+
         public Builder topicId(Output<String> topicId) {
-            this.topicId = Objects.requireNonNull(topicId);
+            $.topicId = topicId;
             return this;
         }
+
         public Builder topicId(String topicId) {
-            this.topicId = Output.of(Objects.requireNonNull(topicId));
-            return this;
-        }        public TopicArgs build() {
-            return new TopicArgs(kmsKeyName, labels, messageRetentionDuration, messageStoragePolicy, name, project, satisfiesPzs, schemaSettings, topicId);
+            return topicId(Output.of(topicId));
+        }
+
+        public TopicArgs build() {
+            $.topicId = Objects.requireNonNull($.topicId, "expected parameter 'topicId' to be non-null");
+            return $;
         }
     }
+
 }

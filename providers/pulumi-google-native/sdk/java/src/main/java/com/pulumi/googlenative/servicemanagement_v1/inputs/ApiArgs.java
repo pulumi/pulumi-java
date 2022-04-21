@@ -5,7 +5,6 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.servicemanagement_v1.enums.ApiSyntax;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.MethodArgs;
 import com.pulumi.googlenative.servicemanagement_v1.inputs.MixinArgs;
@@ -14,6 +13,7 @@ import com.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -30,10 +30,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="methods")
-      private final @Nullable Output<List<MethodArgs>> methods;
+    private @Nullable Output<List<MethodArgs>> methods;
 
-    public Output<List<MethodArgs>> methods() {
-        return this.methods == null ? Codegen.empty() : this.methods;
+    public Optional<Output<List<MethodArgs>>> methods() {
+        return Optional.ofNullable(this.methods);
     }
 
     /**
@@ -41,10 +41,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mixins")
-      private final @Nullable Output<List<MixinArgs>> mixins;
+    private @Nullable Output<List<MixinArgs>> mixins;
 
-    public Output<List<MixinArgs>> mixins() {
-        return this.mixins == null ? Codegen.empty() : this.mixins;
+    public Optional<Output<List<MixinArgs>>> mixins() {
+        return Optional.ofNullable(this.mixins);
     }
 
     /**
@@ -52,10 +52,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -63,10 +63,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="options")
-      private final @Nullable Output<List<OptionArgs>> options;
+    private @Nullable Output<List<OptionArgs>> options;
 
-    public Output<List<OptionArgs>> options() {
-        return this.options == null ? Codegen.empty() : this.options;
+    public Optional<Output<List<OptionArgs>>> options() {
+        return Optional.ofNullable(this.options);
     }
 
     /**
@@ -74,10 +74,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="sourceContext")
-      private final @Nullable Output<SourceContextArgs> sourceContext;
+    private @Nullable Output<SourceContextArgs> sourceContext;
 
-    public Output<SourceContextArgs> sourceContext() {
-        return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
+    public Optional<Output<SourceContextArgs>> sourceContext() {
+        return Optional.ofNullable(this.sourceContext);
     }
 
     /**
@@ -85,10 +85,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="syntax")
-      private final @Nullable Output<ApiSyntax> syntax;
+    private @Nullable Output<ApiSyntax> syntax;
 
-    public Output<ApiSyntax> syntax() {
-        return this.syntax == null ? Codegen.empty() : this.syntax;
+    public Optional<Output<ApiSyntax>> syntax() {
+        return Optional.ofNullable(this.syntax);
     }
 
     /**
@@ -96,137 +96,120 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<String> version;
+    private @Nullable Output<String> version;
 
-    public Output<String> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<String>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ApiArgs(
-        @Nullable Output<List<MethodArgs>> methods,
-        @Nullable Output<List<MixinArgs>> mixins,
-        @Nullable Output<String> name,
-        @Nullable Output<List<OptionArgs>> options,
-        @Nullable Output<SourceContextArgs> sourceContext,
-        @Nullable Output<ApiSyntax> syntax,
-        @Nullable Output<String> version) {
-        this.methods = methods;
-        this.mixins = mixins;
-        this.name = name;
-        this.options = options;
-        this.sourceContext = sourceContext;
-        this.syntax = syntax;
-        this.version = version;
-    }
+    private ApiArgs() {}
 
-    private ApiArgs() {
-        this.methods = Codegen.empty();
-        this.mixins = Codegen.empty();
-        this.name = Codegen.empty();
-        this.options = Codegen.empty();
-        this.sourceContext = Codegen.empty();
-        this.syntax = Codegen.empty();
-        this.version = Codegen.empty();
+    private ApiArgs(ApiArgs $) {
+        this.methods = $.methods;
+        this.mixins = $.mixins;
+        this.name = $.name;
+        this.options = $.options;
+        this.sourceContext = $.sourceContext;
+        this.syntax = $.syntax;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<MethodArgs>> methods;
-        private @Nullable Output<List<MixinArgs>> mixins;
-        private @Nullable Output<String> name;
-        private @Nullable Output<List<OptionArgs>> options;
-        private @Nullable Output<SourceContextArgs> sourceContext;
-        private @Nullable Output<ApiSyntax> syntax;
-        private @Nullable Output<String> version;
+        private ApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiArgs();
         }
 
         public Builder(ApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.methods = defaults.methods;
-    	      this.mixins = defaults.mixins;
-    	      this.name = defaults.name;
-    	      this.options = defaults.options;
-    	      this.sourceContext = defaults.sourceContext;
-    	      this.syntax = defaults.syntax;
-    	      this.version = defaults.version;
+            $ = new ApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder methods(@Nullable Output<List<MethodArgs>> methods) {
-            this.methods = methods;
+            $.methods = methods;
             return this;
         }
-        public Builder methods(@Nullable List<MethodArgs> methods) {
-            this.methods = Codegen.ofNullable(methods);
-            return this;
+
+        public Builder methods(List<MethodArgs> methods) {
+            return methods(Output.of(methods));
         }
+
         public Builder methods(MethodArgs... methods) {
             return methods(List.of(methods));
         }
+
         public Builder mixins(@Nullable Output<List<MixinArgs>> mixins) {
-            this.mixins = mixins;
+            $.mixins = mixins;
             return this;
         }
-        public Builder mixins(@Nullable List<MixinArgs> mixins) {
-            this.mixins = Codegen.ofNullable(mixins);
-            return this;
+
+        public Builder mixins(List<MixinArgs> mixins) {
+            return mixins(Output.of(mixins));
         }
+
         public Builder mixins(MixinArgs... mixins) {
             return mixins(List.of(mixins));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
-            this.options = options;
+            $.options = options;
             return this;
         }
-        public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Codegen.ofNullable(options);
-            return this;
+
+        public Builder options(List<OptionArgs> options) {
+            return options(Output.of(options));
         }
+
         public Builder options(OptionArgs... options) {
             return options(List.of(options));
         }
+
         public Builder sourceContext(@Nullable Output<SourceContextArgs> sourceContext) {
-            this.sourceContext = sourceContext;
+            $.sourceContext = sourceContext;
             return this;
         }
-        public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Codegen.ofNullable(sourceContext);
-            return this;
+
+        public Builder sourceContext(SourceContextArgs sourceContext) {
+            return sourceContext(Output.of(sourceContext));
         }
+
         public Builder syntax(@Nullable Output<ApiSyntax> syntax) {
-            this.syntax = syntax;
+            $.syntax = syntax;
             return this;
         }
-        public Builder syntax(@Nullable ApiSyntax syntax) {
-            this.syntax = Codegen.ofNullable(syntax);
-            return this;
+
+        public Builder syntax(ApiSyntax syntax) {
+            return syntax(Output.of(syntax));
         }
+
         public Builder version(@Nullable Output<String> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable String version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ApiArgs build() {
-            return new ApiArgs(methods, mixins, name, options, sourceContext, syntax, version);
+
+        public Builder version(String version) {
+            return version(Output.of(version));
+        }
+
+        public ApiArgs build() {
+            return $;
         }
     }
+
 }

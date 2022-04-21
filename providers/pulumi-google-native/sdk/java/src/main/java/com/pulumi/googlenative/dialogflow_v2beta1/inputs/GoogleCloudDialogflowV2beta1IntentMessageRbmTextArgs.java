@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
      * 
      */
     @Import(name="rbmSuggestion")
-      private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
+    private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
 
-    public Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion() {
-        return this.rbmSuggestion == null ? Codegen.empty() : this.rbmSuggestion;
+    public Optional<Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>>> rbmSuggestion() {
+        return Optional.ofNullable(this.rbmSuggestion);
     }
 
     /**
@@ -37,66 +37,63 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs extends 
      * 
      */
     @Import(name="text", required=true)
-      private final Output<String> text;
+    private Output<String> text;
 
     public Output<String> text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(
-        @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion,
-        Output<String> text) {
-        this.rbmSuggestion = rbmSuggestion;
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs() {}
 
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs() {
-        this.rbmSuggestion = Codegen.empty();
-        this.text = Codegen.empty();
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs $) {
+        this.rbmSuggestion = $.rbmSuggestion;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion;
-        private Output<String> text;
+        private GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs();
         }
 
         public Builder(GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rbmSuggestion = defaults.rbmSuggestion;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rbmSuggestion(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs>> rbmSuggestion) {
-            this.rbmSuggestion = rbmSuggestion;
+            $.rbmSuggestion = rbmSuggestion;
             return this;
         }
-        public Builder rbmSuggestion(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
-            this.rbmSuggestion = Codegen.ofNullable(rbmSuggestion);
-            return this;
+
+        public Builder rbmSuggestion(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs> rbmSuggestion) {
+            return rbmSuggestion(Output.of(rbmSuggestion));
         }
+
         public Builder rbmSuggestion(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionArgs... rbmSuggestion) {
             return rbmSuggestion(List.of(rbmSuggestion));
         }
+
         public Builder text(Output<String> text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
         }
+
         public Builder text(String text) {
-            this.text = Output.of(Objects.requireNonNull(text));
-            return this;
-        }        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs build() {
-            return new GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs(rbmSuggestion, text);
+            return text(Output.of(text));
+        }
+
+        public GoogleCloudDialogflowV2beta1IntentMessageRbmTextArgs build() {
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

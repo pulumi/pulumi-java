@@ -21,7 +21,7 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="day", required=true)
-      private final Integer day;
+    private Integer day;
 
     public Integer day() {
         return this.day;
@@ -32,7 +32,7 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="month", required=true)
-      private final Integer month;
+    private Integer month;
 
     public Integer month() {
         return this.month;
@@ -43,64 +43,59 @@ public final class DateResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="year", required=true)
-      private final Integer year;
+    private Integer year;
 
     public Integer year() {
         return this.year;
     }
 
-    public DateResponse(
-        Integer day,
-        Integer month,
-        Integer year) {
-        this.day = Objects.requireNonNull(day, "expected parameter 'day' to be non-null");
-        this.month = Objects.requireNonNull(month, "expected parameter 'month' to be non-null");
-        this.year = Objects.requireNonNull(year, "expected parameter 'year' to be non-null");
-    }
+    private DateResponse() {}
 
-    private DateResponse() {
-        this.day = null;
-        this.month = null;
-        this.year = null;
+    private DateResponse(DateResponse $) {
+        this.day = $.day;
+        this.month = $.month;
+        this.year = $.year;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer day;
-        private Integer month;
-        private Integer year;
+        private DateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new DateResponse();
         }
 
         public Builder(DateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.day = defaults.day;
-    	      this.month = defaults.month;
-    	      this.year = defaults.year;
+            $ = new DateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder day(Integer day) {
-            this.day = Objects.requireNonNull(day);
+            $.day = day;
             return this;
         }
+
         public Builder month(Integer month) {
-            this.month = Objects.requireNonNull(month);
+            $.month = month;
             return this;
         }
+
         public Builder year(Integer year) {
-            this.year = Objects.requireNonNull(year);
+            $.year = year;
             return this;
-        }        public DateResponse build() {
-            return new DateResponse(day, month, year);
+        }
+
+        public DateResponse build() {
+            $.day = Objects.requireNonNull($.day, "expected parameter 'day' to be non-null");
+            $.month = Objects.requireNonNull($.month, "expected parameter 'month' to be non-null");
+            $.year = Objects.requireNonNull($.year, "expected parameter 'year' to be non-null");
+            return $;
         }
     }
+
 }

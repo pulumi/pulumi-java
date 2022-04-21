@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="basicCard", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
+    private GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
 
     public GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard() {
         return this.basicCard;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="browseCarouselCard", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
+    private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
     public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard() {
         return this.browseCarouselCard;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="card", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageCardResponse card;
+    private GoogleCloudDialogflowV2IntentMessageCardResponse card;
 
     public GoogleCloudDialogflowV2IntentMessageCardResponse card() {
         return this.card;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="carouselSelect", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
+    private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
 
     public GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect() {
         return this.carouselSelect;
@@ -79,7 +79,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="image", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+    private GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse image() {
         return this.image;
@@ -90,7 +90,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="linkOutSuggestion", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
+    private GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
     public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion() {
         return this.linkOutSuggestion;
@@ -101,7 +101,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="listSelect", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
+    private GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
 
     public GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect() {
         return this.listSelect;
@@ -112,7 +112,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="mediaContent", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
+    private GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
 
     public GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent() {
         return this.mediaContent;
@@ -123,7 +123,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="payload", required=true)
-      private final Map<String,String> payload;
+    private Map<String,String> payload;
 
     public Map<String,String> payload() {
         return this.payload;
@@ -134,7 +134,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="platform", required=true)
-      private final String platform;
+    private String platform;
 
     public String platform() {
         return this.platform;
@@ -145,7 +145,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="quickReplies", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
+    private GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
 
     public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies() {
         return this.quickReplies;
@@ -156,7 +156,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="simpleResponses", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
+    private GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
 
     public GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses() {
         return this.simpleResponses;
@@ -167,7 +167,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="suggestions", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
+    private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
 
     public GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions() {
         return this.suggestions;
@@ -178,7 +178,7 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="tableCard", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
+    private GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
 
     public GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard() {
         return this.tableCard;
@@ -189,172 +189,143 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse extends com.pulu
      * 
      */
     @Import(name="text", required=true)
-      private final GoogleCloudDialogflowV2IntentMessageTextResponse text;
+    private GoogleCloudDialogflowV2IntentMessageTextResponse text;
 
     public GoogleCloudDialogflowV2IntentMessageTextResponse text() {
         return this.text;
     }
 
-    public GoogleCloudDialogflowV2IntentMessageResponse(
-        GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard,
-        GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard,
-        GoogleCloudDialogflowV2IntentMessageCardResponse card,
-        GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
-        GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect,
-        GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent,
-        Map<String,String> payload,
-        String platform,
-        GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies,
-        GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses,
-        GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions,
-        GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard,
-        GoogleCloudDialogflowV2IntentMessageTextResponse text) {
-        this.basicCard = Objects.requireNonNull(basicCard, "expected parameter 'basicCard' to be non-null");
-        this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard, "expected parameter 'browseCarouselCard' to be non-null");
-        this.card = Objects.requireNonNull(card, "expected parameter 'card' to be non-null");
-        this.carouselSelect = Objects.requireNonNull(carouselSelect, "expected parameter 'carouselSelect' to be non-null");
-        this.image = Objects.requireNonNull(image, "expected parameter 'image' to be non-null");
-        this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion, "expected parameter 'linkOutSuggestion' to be non-null");
-        this.listSelect = Objects.requireNonNull(listSelect, "expected parameter 'listSelect' to be non-null");
-        this.mediaContent = Objects.requireNonNull(mediaContent, "expected parameter 'mediaContent' to be non-null");
-        this.payload = Objects.requireNonNull(payload, "expected parameter 'payload' to be non-null");
-        this.platform = Objects.requireNonNull(platform, "expected parameter 'platform' to be non-null");
-        this.quickReplies = Objects.requireNonNull(quickReplies, "expected parameter 'quickReplies' to be non-null");
-        this.simpleResponses = Objects.requireNonNull(simpleResponses, "expected parameter 'simpleResponses' to be non-null");
-        this.suggestions = Objects.requireNonNull(suggestions, "expected parameter 'suggestions' to be non-null");
-        this.tableCard = Objects.requireNonNull(tableCard, "expected parameter 'tableCard' to be non-null");
-        this.text = Objects.requireNonNull(text, "expected parameter 'text' to be non-null");
-    }
+    private GoogleCloudDialogflowV2IntentMessageResponse() {}
 
-    private GoogleCloudDialogflowV2IntentMessageResponse() {
-        this.basicCard = null;
-        this.browseCarouselCard = null;
-        this.card = null;
-        this.carouselSelect = null;
-        this.image = null;
-        this.linkOutSuggestion = null;
-        this.listSelect = null;
-        this.mediaContent = null;
-        this.payload = Map.of();
-        this.platform = null;
-        this.quickReplies = null;
-        this.simpleResponses = null;
-        this.suggestions = null;
-        this.tableCard = null;
-        this.text = null;
+    private GoogleCloudDialogflowV2IntentMessageResponse(GoogleCloudDialogflowV2IntentMessageResponse $) {
+        this.basicCard = $.basicCard;
+        this.browseCarouselCard = $.browseCarouselCard;
+        this.card = $.card;
+        this.carouselSelect = $.carouselSelect;
+        this.image = $.image;
+        this.linkOutSuggestion = $.linkOutSuggestion;
+        this.listSelect = $.listSelect;
+        this.mediaContent = $.mediaContent;
+        this.payload = $.payload;
+        this.platform = $.platform;
+        this.quickReplies = $.quickReplies;
+        this.simpleResponses = $.simpleResponses;
+        this.suggestions = $.suggestions;
+        this.tableCard = $.tableCard;
+        this.text = $.text;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowV2IntentMessageResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard;
-        private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard;
-        private GoogleCloudDialogflowV2IntentMessageCardResponse card;
-        private GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect;
-        private GoogleCloudDialogflowV2IntentMessageImageResponse image;
-        private GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
-        private GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect;
-        private GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent;
-        private Map<String,String> payload;
-        private String platform;
-        private GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies;
-        private GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses;
-        private GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions;
-        private GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard;
-        private GoogleCloudDialogflowV2IntentMessageTextResponse text;
+        private GoogleCloudDialogflowV2IntentMessageResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowV2IntentMessageResponse();
         }
 
         public Builder(GoogleCloudDialogflowV2IntentMessageResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.basicCard = defaults.basicCard;
-    	      this.browseCarouselCard = defaults.browseCarouselCard;
-    	      this.card = defaults.card;
-    	      this.carouselSelect = defaults.carouselSelect;
-    	      this.image = defaults.image;
-    	      this.linkOutSuggestion = defaults.linkOutSuggestion;
-    	      this.listSelect = defaults.listSelect;
-    	      this.mediaContent = defaults.mediaContent;
-    	      this.payload = defaults.payload;
-    	      this.platform = defaults.platform;
-    	      this.quickReplies = defaults.quickReplies;
-    	      this.simpleResponses = defaults.simpleResponses;
-    	      this.suggestions = defaults.suggestions;
-    	      this.tableCard = defaults.tableCard;
-    	      this.text = defaults.text;
+            $ = new GoogleCloudDialogflowV2IntentMessageResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder basicCard(GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard) {
-            this.basicCard = Objects.requireNonNull(basicCard);
+            $.basicCard = basicCard;
             return this;
         }
+
         public Builder browseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
-            this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
+            $.browseCarouselCard = browseCarouselCard;
             return this;
         }
+
         public Builder card(GoogleCloudDialogflowV2IntentMessageCardResponse card) {
-            this.card = Objects.requireNonNull(card);
+            $.card = card;
             return this;
         }
+
         public Builder carouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect) {
-            this.carouselSelect = Objects.requireNonNull(carouselSelect);
+            $.carouselSelect = carouselSelect;
             return this;
         }
+
         public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
-            this.image = Objects.requireNonNull(image);
+            $.image = image;
             return this;
         }
+
         public Builder linkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
-            this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
+            $.linkOutSuggestion = linkOutSuggestion;
             return this;
         }
+
         public Builder listSelect(GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect) {
-            this.listSelect = Objects.requireNonNull(listSelect);
+            $.listSelect = listSelect;
             return this;
         }
+
         public Builder mediaContent(GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent) {
-            this.mediaContent = Objects.requireNonNull(mediaContent);
+            $.mediaContent = mediaContent;
             return this;
         }
+
         public Builder payload(Map<String,String> payload) {
-            this.payload = Objects.requireNonNull(payload);
+            $.payload = payload;
             return this;
         }
+
         public Builder platform(String platform) {
-            this.platform = Objects.requireNonNull(platform);
+            $.platform = platform;
             return this;
         }
+
         public Builder quickReplies(GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies) {
-            this.quickReplies = Objects.requireNonNull(quickReplies);
+            $.quickReplies = quickReplies;
             return this;
         }
+
         public Builder simpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses) {
-            this.simpleResponses = Objects.requireNonNull(simpleResponses);
+            $.simpleResponses = simpleResponses;
             return this;
         }
+
         public Builder suggestions(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions) {
-            this.suggestions = Objects.requireNonNull(suggestions);
+            $.suggestions = suggestions;
             return this;
         }
+
         public Builder tableCard(GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard) {
-            this.tableCard = Objects.requireNonNull(tableCard);
+            $.tableCard = tableCard;
             return this;
         }
+
         public Builder text(GoogleCloudDialogflowV2IntentMessageTextResponse text) {
-            this.text = Objects.requireNonNull(text);
+            $.text = text;
             return this;
-        }        public GoogleCloudDialogflowV2IntentMessageResponse build() {
-            return new GoogleCloudDialogflowV2IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, simpleResponses, suggestions, tableCard, text);
+        }
+
+        public GoogleCloudDialogflowV2IntentMessageResponse build() {
+            $.basicCard = Objects.requireNonNull($.basicCard, "expected parameter 'basicCard' to be non-null");
+            $.browseCarouselCard = Objects.requireNonNull($.browseCarouselCard, "expected parameter 'browseCarouselCard' to be non-null");
+            $.card = Objects.requireNonNull($.card, "expected parameter 'card' to be non-null");
+            $.carouselSelect = Objects.requireNonNull($.carouselSelect, "expected parameter 'carouselSelect' to be non-null");
+            $.image = Objects.requireNonNull($.image, "expected parameter 'image' to be non-null");
+            $.linkOutSuggestion = Objects.requireNonNull($.linkOutSuggestion, "expected parameter 'linkOutSuggestion' to be non-null");
+            $.listSelect = Objects.requireNonNull($.listSelect, "expected parameter 'listSelect' to be non-null");
+            $.mediaContent = Objects.requireNonNull($.mediaContent, "expected parameter 'mediaContent' to be non-null");
+            $.payload = Objects.requireNonNull($.payload, "expected parameter 'payload' to be non-null");
+            $.platform = Objects.requireNonNull($.platform, "expected parameter 'platform' to be non-null");
+            $.quickReplies = Objects.requireNonNull($.quickReplies, "expected parameter 'quickReplies' to be non-null");
+            $.simpleResponses = Objects.requireNonNull($.simpleResponses, "expected parameter 'simpleResponses' to be non-null");
+            $.suggestions = Objects.requireNonNull($.suggestions, "expected parameter 'suggestions' to be non-null");
+            $.tableCard = Objects.requireNonNull($.tableCard, "expected parameter 'tableCard' to be non-null");
+            $.text = Objects.requireNonNull($.text, "expected parameter 'text' to be non-null");
+            return $;
         }
     }
+
 }

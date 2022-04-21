@@ -15,94 +15,85 @@ public final class GetResponsePolicyRuleArgs extends com.pulumi.resources.Invoke
     public static final GetResponsePolicyRuleArgs Empty = new GetResponsePolicyRuleArgs();
 
     @Import(name="clientOperationId")
-      private final @Nullable String clientOperationId;
+    private @Nullable String clientOperationId;
 
     public Optional<String> clientOperationId() {
-        return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
+        return Optional.ofNullable(this.clientOperationId);
     }
 
     @Import(name="project")
-      private final @Nullable String project;
+    private @Nullable String project;
 
     public Optional<String> project() {
-        return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="responsePolicy", required=true)
-      private final String responsePolicy;
+    private String responsePolicy;
 
     public String responsePolicy() {
         return this.responsePolicy;
     }
 
     @Import(name="responsePolicyRule", required=true)
-      private final String responsePolicyRule;
+    private String responsePolicyRule;
 
     public String responsePolicyRule() {
         return this.responsePolicyRule;
     }
 
-    public GetResponsePolicyRuleArgs(
-        @Nullable String clientOperationId,
-        @Nullable String project,
-        String responsePolicy,
-        String responsePolicyRule) {
-        this.clientOperationId = clientOperationId;
-        this.project = project;
-        this.responsePolicy = Objects.requireNonNull(responsePolicy, "expected parameter 'responsePolicy' to be non-null");
-        this.responsePolicyRule = Objects.requireNonNull(responsePolicyRule, "expected parameter 'responsePolicyRule' to be non-null");
-    }
+    private GetResponsePolicyRuleArgs() {}
 
-    private GetResponsePolicyRuleArgs() {
-        this.clientOperationId = null;
-        this.project = null;
-        this.responsePolicy = null;
-        this.responsePolicyRule = null;
+    private GetResponsePolicyRuleArgs(GetResponsePolicyRuleArgs $) {
+        this.clientOperationId = $.clientOperationId;
+        this.project = $.project;
+        this.responsePolicy = $.responsePolicy;
+        this.responsePolicyRule = $.responsePolicyRule;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetResponsePolicyRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable String clientOperationId;
-        private @Nullable String project;
-        private String responsePolicy;
-        private String responsePolicyRule;
+        private GetResponsePolicyRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetResponsePolicyRuleArgs();
         }
 
         public Builder(GetResponsePolicyRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clientOperationId = defaults.clientOperationId;
-    	      this.project = defaults.project;
-    	      this.responsePolicy = defaults.responsePolicy;
-    	      this.responsePolicyRule = defaults.responsePolicyRule;
+            $ = new GetResponsePolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = clientOperationId;
+            $.clientOperationId = clientOperationId;
             return this;
         }
+
         public Builder project(@Nullable String project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
+
         public Builder responsePolicy(String responsePolicy) {
-            this.responsePolicy = Objects.requireNonNull(responsePolicy);
+            $.responsePolicy = responsePolicy;
             return this;
         }
+
         public Builder responsePolicyRule(String responsePolicyRule) {
-            this.responsePolicyRule = Objects.requireNonNull(responsePolicyRule);
+            $.responsePolicyRule = responsePolicyRule;
             return this;
-        }        public GetResponsePolicyRuleArgs build() {
-            return new GetResponsePolicyRuleArgs(clientOperationId, project, responsePolicy, responsePolicyRule);
+        }
+
+        public GetResponsePolicyRuleArgs build() {
+            $.responsePolicy = Objects.requireNonNull($.responsePolicy, "expected parameter 'responsePolicy' to be non-null");
+            $.responsePolicyRule = Objects.requireNonNull($.responsePolicyRule, "expected parameter 'responsePolicyRule' to be non-null");
+            return $;
         }
     }
+
 }

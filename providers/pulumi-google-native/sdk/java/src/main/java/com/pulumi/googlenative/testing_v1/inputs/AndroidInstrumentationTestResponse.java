@@ -25,7 +25,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="appApk", required=true)
-      private final FileReferenceResponse appApk;
+    private FileReferenceResponse appApk;
 
     public FileReferenceResponse appApk() {
         return this.appApk;
@@ -36,7 +36,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="appBundle", required=true)
-      private final AppBundleResponse appBundle;
+    private AppBundleResponse appBundle;
 
     public AppBundleResponse appBundle() {
         return this.appBundle;
@@ -47,7 +47,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="appPackageId", required=true)
-      private final String appPackageId;
+    private String appPackageId;
 
     public String appPackageId() {
         return this.appPackageId;
@@ -58,7 +58,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="orchestratorOption", required=true)
-      private final String orchestratorOption;
+    private String orchestratorOption;
 
     public String orchestratorOption() {
         return this.orchestratorOption;
@@ -69,7 +69,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="shardingOption", required=true)
-      private final ShardingOptionResponse shardingOption;
+    private ShardingOptionResponse shardingOption;
 
     public ShardingOptionResponse shardingOption() {
         return this.shardingOption;
@@ -80,7 +80,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testApk", required=true)
-      private final FileReferenceResponse testApk;
+    private FileReferenceResponse testApk;
 
     public FileReferenceResponse testApk() {
         return this.testApk;
@@ -91,7 +91,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testPackageId", required=true)
-      private final String testPackageId;
+    private String testPackageId;
 
     public String testPackageId() {
         return this.testPackageId;
@@ -102,7 +102,7 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testRunnerClass", required=true)
-      private final String testRunnerClass;
+    private String testRunnerClass;
 
     public String testRunnerClass() {
         return this.testRunnerClass;
@@ -113,121 +113,105 @@ public final class AndroidInstrumentationTestResponse extends com.pulumi.resourc
      * 
      */
     @Import(name="testTargets", required=true)
-      private final List<String> testTargets;
+    private List<String> testTargets;
 
     public List<String> testTargets() {
         return this.testTargets;
     }
 
-    public AndroidInstrumentationTestResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appPackageId,
-        String orchestratorOption,
-        ShardingOptionResponse shardingOption,
-        FileReferenceResponse testApk,
-        String testPackageId,
-        String testRunnerClass,
-        List<String> testTargets) {
-        this.appApk = Objects.requireNonNull(appApk, "expected parameter 'appApk' to be non-null");
-        this.appBundle = Objects.requireNonNull(appBundle, "expected parameter 'appBundle' to be non-null");
-        this.appPackageId = Objects.requireNonNull(appPackageId, "expected parameter 'appPackageId' to be non-null");
-        this.orchestratorOption = Objects.requireNonNull(orchestratorOption, "expected parameter 'orchestratorOption' to be non-null");
-        this.shardingOption = Objects.requireNonNull(shardingOption, "expected parameter 'shardingOption' to be non-null");
-        this.testApk = Objects.requireNonNull(testApk, "expected parameter 'testApk' to be non-null");
-        this.testPackageId = Objects.requireNonNull(testPackageId, "expected parameter 'testPackageId' to be non-null");
-        this.testRunnerClass = Objects.requireNonNull(testRunnerClass, "expected parameter 'testRunnerClass' to be non-null");
-        this.testTargets = Objects.requireNonNull(testTargets, "expected parameter 'testTargets' to be non-null");
-    }
+    private AndroidInstrumentationTestResponse() {}
 
-    private AndroidInstrumentationTestResponse() {
-        this.appApk = null;
-        this.appBundle = null;
-        this.appPackageId = null;
-        this.orchestratorOption = null;
-        this.shardingOption = null;
-        this.testApk = null;
-        this.testPackageId = null;
-        this.testRunnerClass = null;
-        this.testTargets = List.of();
+    private AndroidInstrumentationTestResponse(AndroidInstrumentationTestResponse $) {
+        this.appApk = $.appApk;
+        this.appBundle = $.appBundle;
+        this.appPackageId = $.appPackageId;
+        this.orchestratorOption = $.orchestratorOption;
+        this.shardingOption = $.shardingOption;
+        this.testApk = $.testApk;
+        this.testPackageId = $.testPackageId;
+        this.testRunnerClass = $.testRunnerClass;
+        this.testTargets = $.testTargets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AndroidInstrumentationTestResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private FileReferenceResponse appApk;
-        private AppBundleResponse appBundle;
-        private String appPackageId;
-        private String orchestratorOption;
-        private ShardingOptionResponse shardingOption;
-        private FileReferenceResponse testApk;
-        private String testPackageId;
-        private String testRunnerClass;
-        private List<String> testTargets;
+        private AndroidInstrumentationTestResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new AndroidInstrumentationTestResponse();
         }
 
         public Builder(AndroidInstrumentationTestResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.appApk = defaults.appApk;
-    	      this.appBundle = defaults.appBundle;
-    	      this.appPackageId = defaults.appPackageId;
-    	      this.orchestratorOption = defaults.orchestratorOption;
-    	      this.shardingOption = defaults.shardingOption;
-    	      this.testApk = defaults.testApk;
-    	      this.testPackageId = defaults.testPackageId;
-    	      this.testRunnerClass = defaults.testRunnerClass;
-    	      this.testTargets = defaults.testTargets;
+            $ = new AndroidInstrumentationTestResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder appApk(FileReferenceResponse appApk) {
-            this.appApk = Objects.requireNonNull(appApk);
+            $.appApk = appApk;
             return this;
         }
+
         public Builder appBundle(AppBundleResponse appBundle) {
-            this.appBundle = Objects.requireNonNull(appBundle);
+            $.appBundle = appBundle;
             return this;
         }
+
         public Builder appPackageId(String appPackageId) {
-            this.appPackageId = Objects.requireNonNull(appPackageId);
+            $.appPackageId = appPackageId;
             return this;
         }
+
         public Builder orchestratorOption(String orchestratorOption) {
-            this.orchestratorOption = Objects.requireNonNull(orchestratorOption);
+            $.orchestratorOption = orchestratorOption;
             return this;
         }
+
         public Builder shardingOption(ShardingOptionResponse shardingOption) {
-            this.shardingOption = Objects.requireNonNull(shardingOption);
+            $.shardingOption = shardingOption;
             return this;
         }
+
         public Builder testApk(FileReferenceResponse testApk) {
-            this.testApk = Objects.requireNonNull(testApk);
+            $.testApk = testApk;
             return this;
         }
+
         public Builder testPackageId(String testPackageId) {
-            this.testPackageId = Objects.requireNonNull(testPackageId);
+            $.testPackageId = testPackageId;
             return this;
         }
+
         public Builder testRunnerClass(String testRunnerClass) {
-            this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
+            $.testRunnerClass = testRunnerClass;
             return this;
         }
+
         public Builder testTargets(List<String> testTargets) {
-            this.testTargets = Objects.requireNonNull(testTargets);
+            $.testTargets = testTargets;
             return this;
         }
+
         public Builder testTargets(String... testTargets) {
             return testTargets(List.of(testTargets));
-        }        public AndroidInstrumentationTestResponse build() {
-            return new AndroidInstrumentationTestResponse(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
+        }
+
+        public AndroidInstrumentationTestResponse build() {
+            $.appApk = Objects.requireNonNull($.appApk, "expected parameter 'appApk' to be non-null");
+            $.appBundle = Objects.requireNonNull($.appBundle, "expected parameter 'appBundle' to be non-null");
+            $.appPackageId = Objects.requireNonNull($.appPackageId, "expected parameter 'appPackageId' to be non-null");
+            $.orchestratorOption = Objects.requireNonNull($.orchestratorOption, "expected parameter 'orchestratorOption' to be non-null");
+            $.shardingOption = Objects.requireNonNull($.shardingOption, "expected parameter 'shardingOption' to be non-null");
+            $.testApk = Objects.requireNonNull($.testApk, "expected parameter 'testApk' to be non-null");
+            $.testPackageId = Objects.requireNonNull($.testPackageId, "expected parameter 'testPackageId' to be non-null");
+            $.testRunnerClass = Objects.requireNonNull($.testRunnerClass, "expected parameter 'testRunnerClass' to be non-null");
+            $.testTargets = Objects.requireNonNull($.testTargets, "expected parameter 'testTargets' to be non-null");
+            return $;
         }
     }
+
 }

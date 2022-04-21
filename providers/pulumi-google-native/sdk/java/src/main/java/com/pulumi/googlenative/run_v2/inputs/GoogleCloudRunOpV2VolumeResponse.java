@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="cloudSqlInstance", required=true)
-      private final GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
+    private GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
 
     public GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance() {
         return this.cloudSqlInstance;
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class GoogleCloudRunOpV2VolumeResponse extends com.pulumi.resources
      * 
      */
     @Import(name="secret", required=true)
-      private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
+    private GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
     public GoogleCloudRunOpV2SecretVolumeSourceResponse secret() {
         return this.secret;
     }
 
-    public GoogleCloudRunOpV2VolumeResponse(
-        GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
-        String name,
-        GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
-        this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance, "expected parameter 'cloudSqlInstance' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.secret = Objects.requireNonNull(secret, "expected parameter 'secret' to be non-null");
-    }
+    private GoogleCloudRunOpV2VolumeResponse() {}
 
-    private GoogleCloudRunOpV2VolumeResponse() {
-        this.cloudSqlInstance = null;
-        this.name = null;
-        this.secret = null;
+    private GoogleCloudRunOpV2VolumeResponse(GoogleCloudRunOpV2VolumeResponse $) {
+        this.cloudSqlInstance = $.cloudSqlInstance;
+        this.name = $.name;
+        this.secret = $.secret;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRunOpV2VolumeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance;
-        private String name;
-        private GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
+        private GoogleCloudRunOpV2VolumeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRunOpV2VolumeResponse();
         }
 
         public Builder(GoogleCloudRunOpV2VolumeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudSqlInstance = defaults.cloudSqlInstance;
-    	      this.name = defaults.name;
-    	      this.secret = defaults.secret;
+            $ = new GoogleCloudRunOpV2VolumeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance) {
-            this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
+            $.cloudSqlInstance = cloudSqlInstance;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
-            this.secret = Objects.requireNonNull(secret);
+            $.secret = secret;
             return this;
-        }        public GoogleCloudRunOpV2VolumeResponse build() {
-            return new GoogleCloudRunOpV2VolumeResponse(cloudSqlInstance, name, secret);
+        }
+
+        public GoogleCloudRunOpV2VolumeResponse build() {
+            $.cloudSqlInstance = Objects.requireNonNull($.cloudSqlInstance, "expected parameter 'cloudSqlInstance' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.secret = Objects.requireNonNull($.secret, "expected parameter 'secret' to be non-null");
+            return $;
         }
     }
+
 }

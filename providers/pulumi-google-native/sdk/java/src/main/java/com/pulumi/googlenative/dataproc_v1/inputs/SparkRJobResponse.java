@@ -24,7 +24,7 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="archiveUris", required=true)
-      private final List<String> archiveUris;
+    private List<String> archiveUris;
 
     public List<String> archiveUris() {
         return this.archiveUris;
@@ -35,7 +35,7 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="args", required=true)
-      private final List<String> args;
+    private List<String> args;
 
     public List<String> args() {
         return this.args;
@@ -46,7 +46,7 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="fileUris", required=true)
-      private final List<String> fileUris;
+    private List<String> fileUris;
 
     public List<String> fileUris() {
         return this.fileUris;
@@ -57,7 +57,7 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="loggingConfig", required=true)
-      private final LoggingConfigResponse loggingConfig;
+    private LoggingConfigResponse loggingConfig;
 
     public LoggingConfigResponse loggingConfig() {
         return this.loggingConfig;
@@ -68,7 +68,7 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="mainRFileUri", required=true)
-      private final String mainRFileUri;
+    private String mainRFileUri;
 
     public String mainRFileUri() {
         return this.mainRFileUri;
@@ -79,100 +79,92 @@ public final class SparkRJobResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="properties", required=true)
-      private final Map<String,String> properties;
+    private Map<String,String> properties;
 
     public Map<String,String> properties() {
         return this.properties;
     }
 
-    public SparkRJobResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        LoggingConfigResponse loggingConfig,
-        String mainRFileUri,
-        Map<String,String> properties) {
-        this.archiveUris = Objects.requireNonNull(archiveUris, "expected parameter 'archiveUris' to be non-null");
-        this.args = Objects.requireNonNull(args, "expected parameter 'args' to be non-null");
-        this.fileUris = Objects.requireNonNull(fileUris, "expected parameter 'fileUris' to be non-null");
-        this.loggingConfig = Objects.requireNonNull(loggingConfig, "expected parameter 'loggingConfig' to be non-null");
-        this.mainRFileUri = Objects.requireNonNull(mainRFileUri, "expected parameter 'mainRFileUri' to be non-null");
-        this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
-    }
+    private SparkRJobResponse() {}
 
-    private SparkRJobResponse() {
-        this.archiveUris = List.of();
-        this.args = List.of();
-        this.fileUris = List.of();
-        this.loggingConfig = null;
-        this.mainRFileUri = null;
-        this.properties = Map.of();
+    private SparkRJobResponse(SparkRJobResponse $) {
+        this.archiveUris = $.archiveUris;
+        this.args = $.args;
+        this.fileUris = $.fileUris;
+        this.loggingConfig = $.loggingConfig;
+        this.mainRFileUri = $.mainRFileUri;
+        this.properties = $.properties;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SparkRJobResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<String> archiveUris;
-        private List<String> args;
-        private List<String> fileUris;
-        private LoggingConfigResponse loggingConfig;
-        private String mainRFileUri;
-        private Map<String,String> properties;
+        private SparkRJobResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SparkRJobResponse();
         }
 
         public Builder(SparkRJobResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.archiveUris = defaults.archiveUris;
-    	      this.args = defaults.args;
-    	      this.fileUris = defaults.fileUris;
-    	      this.loggingConfig = defaults.loggingConfig;
-    	      this.mainRFileUri = defaults.mainRFileUri;
-    	      this.properties = defaults.properties;
+            $ = new SparkRJobResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder archiveUris(List<String> archiveUris) {
-            this.archiveUris = Objects.requireNonNull(archiveUris);
+            $.archiveUris = archiveUris;
             return this;
         }
+
         public Builder archiveUris(String... archiveUris) {
             return archiveUris(List.of(archiveUris));
         }
+
         public Builder args(List<String> args) {
-            this.args = Objects.requireNonNull(args);
+            $.args = args;
             return this;
         }
+
         public Builder args(String... args) {
             return args(List.of(args));
         }
+
         public Builder fileUris(List<String> fileUris) {
-            this.fileUris = Objects.requireNonNull(fileUris);
+            $.fileUris = fileUris;
             return this;
         }
+
         public Builder fileUris(String... fileUris) {
             return fileUris(List.of(fileUris));
         }
+
         public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
-            this.loggingConfig = Objects.requireNonNull(loggingConfig);
+            $.loggingConfig = loggingConfig;
             return this;
         }
+
         public Builder mainRFileUri(String mainRFileUri) {
-            this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
+            $.mainRFileUri = mainRFileUri;
             return this;
         }
+
         public Builder properties(Map<String,String> properties) {
-            this.properties = Objects.requireNonNull(properties);
+            $.properties = properties;
             return this;
-        }        public SparkRJobResponse build() {
-            return new SparkRJobResponse(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
+        }
+
+        public SparkRJobResponse build() {
+            $.archiveUris = Objects.requireNonNull($.archiveUris, "expected parameter 'archiveUris' to be non-null");
+            $.args = Objects.requireNonNull($.args, "expected parameter 'args' to be non-null");
+            $.fileUris = Objects.requireNonNull($.fileUris, "expected parameter 'fileUris' to be non-null");
+            $.loggingConfig = Objects.requireNonNull($.loggingConfig, "expected parameter 'loggingConfig' to be non-null");
+            $.mainRFileUri = Objects.requireNonNull($.mainRFileUri, "expected parameter 'mainRFileUri' to be non-null");
+            $.properties = Objects.requireNonNull($.properties, "expected parameter 'properties' to be non-null");
+            return $;
         }
     }
+
 }

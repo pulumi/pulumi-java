@@ -5,7 +5,6 @@ package com.pulumi.googlenative.networkservices_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
      * 
      */
     @Import(name="labelName", required=true)
-      private final Output<String> labelName;
+    private Output<String> labelName;
 
     public Output<String> labelName() {
         return this.labelName;
@@ -34,63 +33,60 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
      * 
      */
     @Import(name="labelValue", required=true)
-      private final Output<String> labelValue;
+    private Output<String> labelValue;
 
     public Output<String> labelValue() {
         return this.labelValue;
     }
 
-    public EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs(
-        Output<String> labelName,
-        Output<String> labelValue) {
-        this.labelName = Objects.requireNonNull(labelName, "expected parameter 'labelName' to be non-null");
-        this.labelValue = Objects.requireNonNull(labelValue, "expected parameter 'labelValue' to be non-null");
-    }
+    private EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs() {}
 
-    private EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs() {
-        this.labelName = Codegen.empty();
-        this.labelValue = Codegen.empty();
+    private EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs(EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs $) {
+        this.labelName = $.labelName;
+        this.labelValue = $.labelValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> labelName;
-        private Output<String> labelValue;
+        private EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs();
         }
 
         public Builder(EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelName = defaults.labelName;
-    	      this.labelValue = defaults.labelValue;
+            $ = new EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelName(Output<String> labelName) {
-            this.labelName = Objects.requireNonNull(labelName);
+            $.labelName = labelName;
             return this;
         }
+
         public Builder labelName(String labelName) {
-            this.labelName = Output.of(Objects.requireNonNull(labelName));
-            return this;
+            return labelName(Output.of(labelName));
         }
+
         public Builder labelValue(Output<String> labelValue) {
-            this.labelValue = Objects.requireNonNull(labelValue);
+            $.labelValue = labelValue;
             return this;
         }
+
         public Builder labelValue(String labelValue) {
-            this.labelValue = Output.of(Objects.requireNonNull(labelValue));
-            return this;
-        }        public EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs build() {
-            return new EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs(labelName, labelValue);
+            return labelValue(Output.of(labelValue));
+        }
+
+        public EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs build() {
+            $.labelName = Objects.requireNonNull($.labelName, "expected parameter 'labelName' to be non-null");
+            $.labelValue = Objects.requireNonNull($.labelValue, "expected parameter 'labelValue' to be non-null");
+            return $;
         }
     }
+
 }

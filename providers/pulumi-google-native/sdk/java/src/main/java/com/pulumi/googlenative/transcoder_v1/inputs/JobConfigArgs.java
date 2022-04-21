@@ -5,7 +5,6 @@ package com.pulumi.googlenative.transcoder_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.transcoder_v1.inputs.AdBreakArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.EditAtomArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.ElementaryStreamArgs;
@@ -18,6 +17,7 @@ import com.pulumi.googlenative.transcoder_v1.inputs.PubsubDestinationArgs;
 import com.pulumi.googlenative.transcoder_v1.inputs.SpriteSheetArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -34,10 +34,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="adBreaks")
-      private final @Nullable Output<List<AdBreakArgs>> adBreaks;
+    private @Nullable Output<List<AdBreakArgs>> adBreaks;
 
-    public Output<List<AdBreakArgs>> adBreaks() {
-        return this.adBreaks == null ? Codegen.empty() : this.adBreaks;
+    public Optional<Output<List<AdBreakArgs>>> adBreaks() {
+        return Optional.ofNullable(this.adBreaks);
     }
 
     /**
@@ -45,10 +45,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="editList")
-      private final @Nullable Output<List<EditAtomArgs>> editList;
+    private @Nullable Output<List<EditAtomArgs>> editList;
 
-    public Output<List<EditAtomArgs>> editList() {
-        return this.editList == null ? Codegen.empty() : this.editList;
+    public Optional<Output<List<EditAtomArgs>>> editList() {
+        return Optional.ofNullable(this.editList);
     }
 
     /**
@@ -56,10 +56,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="elementaryStreams")
-      private final @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
+    private @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
 
-    public Output<List<ElementaryStreamArgs>> elementaryStreams() {
-        return this.elementaryStreams == null ? Codegen.empty() : this.elementaryStreams;
+    public Optional<Output<List<ElementaryStreamArgs>>> elementaryStreams() {
+        return Optional.ofNullable(this.elementaryStreams);
     }
 
     /**
@@ -67,10 +67,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="inputs")
-      private final @Nullable Output<List<InputArgs>> inputs;
+    private @Nullable Output<List<InputArgs>> inputs;
 
-    public Output<List<InputArgs>> inputs() {
-        return this.inputs == null ? Codegen.empty() : this.inputs;
+    public Optional<Output<List<InputArgs>>> inputs() {
+        return Optional.ofNullable(this.inputs);
     }
 
     /**
@@ -78,10 +78,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="manifests")
-      private final @Nullable Output<List<ManifestArgs>> manifests;
+    private @Nullable Output<List<ManifestArgs>> manifests;
 
-    public Output<List<ManifestArgs>> manifests() {
-        return this.manifests == null ? Codegen.empty() : this.manifests;
+    public Optional<Output<List<ManifestArgs>>> manifests() {
+        return Optional.ofNullable(this.manifests);
     }
 
     /**
@@ -89,10 +89,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="muxStreams")
-      private final @Nullable Output<List<MuxStreamArgs>> muxStreams;
+    private @Nullable Output<List<MuxStreamArgs>> muxStreams;
 
-    public Output<List<MuxStreamArgs>> muxStreams() {
-        return this.muxStreams == null ? Codegen.empty() : this.muxStreams;
+    public Optional<Output<List<MuxStreamArgs>>> muxStreams() {
+        return Optional.ofNullable(this.muxStreams);
     }
 
     /**
@@ -100,10 +100,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="output")
-      private final @Nullable Output<OutputArgs> output;
+    private @Nullable Output<OutputArgs> output;
 
-    public Output<OutputArgs> output() {
-        return this.output == null ? Codegen.empty() : this.output;
+    public Optional<Output<OutputArgs>> output() {
+        return Optional.ofNullable(this.output);
     }
 
     /**
@@ -111,10 +111,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="overlays")
-      private final @Nullable Output<List<OverlayArgs>> overlays;
+    private @Nullable Output<List<OverlayArgs>> overlays;
 
-    public Output<List<OverlayArgs>> overlays() {
-        return this.overlays == null ? Codegen.empty() : this.overlays;
+    public Optional<Output<List<OverlayArgs>>> overlays() {
+        return Optional.ofNullable(this.overlays);
     }
 
     /**
@@ -122,10 +122,10 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="pubsubDestination")
-      private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
+    private @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
-    public Output<PubsubDestinationArgs> pubsubDestination() {
-        return this.pubsubDestination == null ? Codegen.empty() : this.pubsubDestination;
+    public Optional<Output<PubsubDestinationArgs>> pubsubDestination() {
+        return Optional.ofNullable(this.pubsubDestination);
     }
 
     /**
@@ -133,191 +133,170 @@ public final class JobConfigArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="spriteSheets")
-      private final @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
+    private @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
 
-    public Output<List<SpriteSheetArgs>> spriteSheets() {
-        return this.spriteSheets == null ? Codegen.empty() : this.spriteSheets;
+    public Optional<Output<List<SpriteSheetArgs>>> spriteSheets() {
+        return Optional.ofNullable(this.spriteSheets);
     }
 
-    public JobConfigArgs(
-        @Nullable Output<List<AdBreakArgs>> adBreaks,
-        @Nullable Output<List<EditAtomArgs>> editList,
-        @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams,
-        @Nullable Output<List<InputArgs>> inputs,
-        @Nullable Output<List<ManifestArgs>> manifests,
-        @Nullable Output<List<MuxStreamArgs>> muxStreams,
-        @Nullable Output<OutputArgs> output,
-        @Nullable Output<List<OverlayArgs>> overlays,
-        @Nullable Output<PubsubDestinationArgs> pubsubDestination,
-        @Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
-        this.adBreaks = adBreaks;
-        this.editList = editList;
-        this.elementaryStreams = elementaryStreams;
-        this.inputs = inputs;
-        this.manifests = manifests;
-        this.muxStreams = muxStreams;
-        this.output = output;
-        this.overlays = overlays;
-        this.pubsubDestination = pubsubDestination;
-        this.spriteSheets = spriteSheets;
-    }
+    private JobConfigArgs() {}
 
-    private JobConfigArgs() {
-        this.adBreaks = Codegen.empty();
-        this.editList = Codegen.empty();
-        this.elementaryStreams = Codegen.empty();
-        this.inputs = Codegen.empty();
-        this.manifests = Codegen.empty();
-        this.muxStreams = Codegen.empty();
-        this.output = Codegen.empty();
-        this.overlays = Codegen.empty();
-        this.pubsubDestination = Codegen.empty();
-        this.spriteSheets = Codegen.empty();
+    private JobConfigArgs(JobConfigArgs $) {
+        this.adBreaks = $.adBreaks;
+        this.editList = $.editList;
+        this.elementaryStreams = $.elementaryStreams;
+        this.inputs = $.inputs;
+        this.manifests = $.manifests;
+        this.muxStreams = $.muxStreams;
+        this.output = $.output;
+        this.overlays = $.overlays;
+        this.pubsubDestination = $.pubsubDestination;
+        this.spriteSheets = $.spriteSheets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JobConfigArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AdBreakArgs>> adBreaks;
-        private @Nullable Output<List<EditAtomArgs>> editList;
-        private @Nullable Output<List<ElementaryStreamArgs>> elementaryStreams;
-        private @Nullable Output<List<InputArgs>> inputs;
-        private @Nullable Output<List<ManifestArgs>> manifests;
-        private @Nullable Output<List<MuxStreamArgs>> muxStreams;
-        private @Nullable Output<OutputArgs> output;
-        private @Nullable Output<List<OverlayArgs>> overlays;
-        private @Nullable Output<PubsubDestinationArgs> pubsubDestination;
-        private @Nullable Output<List<SpriteSheetArgs>> spriteSheets;
+        private JobConfigArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JobConfigArgs();
         }
 
         public Builder(JobConfigArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.adBreaks = defaults.adBreaks;
-    	      this.editList = defaults.editList;
-    	      this.elementaryStreams = defaults.elementaryStreams;
-    	      this.inputs = defaults.inputs;
-    	      this.manifests = defaults.manifests;
-    	      this.muxStreams = defaults.muxStreams;
-    	      this.output = defaults.output;
-    	      this.overlays = defaults.overlays;
-    	      this.pubsubDestination = defaults.pubsubDestination;
-    	      this.spriteSheets = defaults.spriteSheets;
+            $ = new JobConfigArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder adBreaks(@Nullable Output<List<AdBreakArgs>> adBreaks) {
-            this.adBreaks = adBreaks;
+            $.adBreaks = adBreaks;
             return this;
         }
-        public Builder adBreaks(@Nullable List<AdBreakArgs> adBreaks) {
-            this.adBreaks = Codegen.ofNullable(adBreaks);
-            return this;
+
+        public Builder adBreaks(List<AdBreakArgs> adBreaks) {
+            return adBreaks(Output.of(adBreaks));
         }
+
         public Builder adBreaks(AdBreakArgs... adBreaks) {
             return adBreaks(List.of(adBreaks));
         }
+
         public Builder editList(@Nullable Output<List<EditAtomArgs>> editList) {
-            this.editList = editList;
+            $.editList = editList;
             return this;
         }
-        public Builder editList(@Nullable List<EditAtomArgs> editList) {
-            this.editList = Codegen.ofNullable(editList);
-            return this;
+
+        public Builder editList(List<EditAtomArgs> editList) {
+            return editList(Output.of(editList));
         }
+
         public Builder editList(EditAtomArgs... editList) {
             return editList(List.of(editList));
         }
+
         public Builder elementaryStreams(@Nullable Output<List<ElementaryStreamArgs>> elementaryStreams) {
-            this.elementaryStreams = elementaryStreams;
+            $.elementaryStreams = elementaryStreams;
             return this;
         }
-        public Builder elementaryStreams(@Nullable List<ElementaryStreamArgs> elementaryStreams) {
-            this.elementaryStreams = Codegen.ofNullable(elementaryStreams);
-            return this;
+
+        public Builder elementaryStreams(List<ElementaryStreamArgs> elementaryStreams) {
+            return elementaryStreams(Output.of(elementaryStreams));
         }
+
         public Builder elementaryStreams(ElementaryStreamArgs... elementaryStreams) {
             return elementaryStreams(List.of(elementaryStreams));
         }
+
         public Builder inputs(@Nullable Output<List<InputArgs>> inputs) {
-            this.inputs = inputs;
+            $.inputs = inputs;
             return this;
         }
-        public Builder inputs(@Nullable List<InputArgs> inputs) {
-            this.inputs = Codegen.ofNullable(inputs);
-            return this;
+
+        public Builder inputs(List<InputArgs> inputs) {
+            return inputs(Output.of(inputs));
         }
+
         public Builder inputs(InputArgs... inputs) {
             return inputs(List.of(inputs));
         }
+
         public Builder manifests(@Nullable Output<List<ManifestArgs>> manifests) {
-            this.manifests = manifests;
+            $.manifests = manifests;
             return this;
         }
-        public Builder manifests(@Nullable List<ManifestArgs> manifests) {
-            this.manifests = Codegen.ofNullable(manifests);
-            return this;
+
+        public Builder manifests(List<ManifestArgs> manifests) {
+            return manifests(Output.of(manifests));
         }
+
         public Builder manifests(ManifestArgs... manifests) {
             return manifests(List.of(manifests));
         }
+
         public Builder muxStreams(@Nullable Output<List<MuxStreamArgs>> muxStreams) {
-            this.muxStreams = muxStreams;
+            $.muxStreams = muxStreams;
             return this;
         }
-        public Builder muxStreams(@Nullable List<MuxStreamArgs> muxStreams) {
-            this.muxStreams = Codegen.ofNullable(muxStreams);
-            return this;
+
+        public Builder muxStreams(List<MuxStreamArgs> muxStreams) {
+            return muxStreams(Output.of(muxStreams));
         }
+
         public Builder muxStreams(MuxStreamArgs... muxStreams) {
             return muxStreams(List.of(muxStreams));
         }
+
         public Builder output(@Nullable Output<OutputArgs> output) {
-            this.output = output;
+            $.output = output;
             return this;
         }
-        public Builder output(@Nullable OutputArgs output) {
-            this.output = Codegen.ofNullable(output);
-            return this;
+
+        public Builder output(OutputArgs output) {
+            return output(Output.of(output));
         }
+
         public Builder overlays(@Nullable Output<List<OverlayArgs>> overlays) {
-            this.overlays = overlays;
+            $.overlays = overlays;
             return this;
         }
-        public Builder overlays(@Nullable List<OverlayArgs> overlays) {
-            this.overlays = Codegen.ofNullable(overlays);
-            return this;
+
+        public Builder overlays(List<OverlayArgs> overlays) {
+            return overlays(Output.of(overlays));
         }
+
         public Builder overlays(OverlayArgs... overlays) {
             return overlays(List.of(overlays));
         }
+
         public Builder pubsubDestination(@Nullable Output<PubsubDestinationArgs> pubsubDestination) {
-            this.pubsubDestination = pubsubDestination;
+            $.pubsubDestination = pubsubDestination;
             return this;
         }
-        public Builder pubsubDestination(@Nullable PubsubDestinationArgs pubsubDestination) {
-            this.pubsubDestination = Codegen.ofNullable(pubsubDestination);
-            return this;
+
+        public Builder pubsubDestination(PubsubDestinationArgs pubsubDestination) {
+            return pubsubDestination(Output.of(pubsubDestination));
         }
+
         public Builder spriteSheets(@Nullable Output<List<SpriteSheetArgs>> spriteSheets) {
-            this.spriteSheets = spriteSheets;
+            $.spriteSheets = spriteSheets;
             return this;
         }
-        public Builder spriteSheets(@Nullable List<SpriteSheetArgs> spriteSheets) {
-            this.spriteSheets = Codegen.ofNullable(spriteSheets);
-            return this;
+
+        public Builder spriteSheets(List<SpriteSheetArgs> spriteSheets) {
+            return spriteSheets(Output.of(spriteSheets));
         }
+
         public Builder spriteSheets(SpriteSheetArgs... spriteSheets) {
             return spriteSheets(List.of(spriteSheets));
-        }        public JobConfigArgs build() {
-            return new JobConfigArgs(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
+        }
+
+        public JobConfigArgs build() {
+            return $;
         }
     }
+
 }

@@ -23,7 +23,7 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="critical", required=true)
-      private final Boolean critical;
+    private Boolean critical;
 
     public Boolean critical() {
         return this.critical;
@@ -34,7 +34,7 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="objectId", required=true)
-      private final ObjectIdResponse objectId;
+    private ObjectIdResponse objectId;
 
     public ObjectIdResponse objectId() {
         return this.objectId;
@@ -45,64 +45,59 @@ public final class X509ExtensionResponse extends com.pulumi.resources.InvokeArgs
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public X509ExtensionResponse(
-        Boolean critical,
-        ObjectIdResponse objectId,
-        String value) {
-        this.critical = Objects.requireNonNull(critical, "expected parameter 'critical' to be non-null");
-        this.objectId = Objects.requireNonNull(objectId, "expected parameter 'objectId' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private X509ExtensionResponse() {}
 
-    private X509ExtensionResponse() {
-        this.critical = null;
-        this.objectId = null;
-        this.value = null;
+    private X509ExtensionResponse(X509ExtensionResponse $) {
+        this.critical = $.critical;
+        this.objectId = $.objectId;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(X509ExtensionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Boolean critical;
-        private ObjectIdResponse objectId;
-        private String value;
+        private X509ExtensionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new X509ExtensionResponse();
         }
 
         public Builder(X509ExtensionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.critical = defaults.critical;
-    	      this.objectId = defaults.objectId;
-    	      this.value = defaults.value;
+            $ = new X509ExtensionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder critical(Boolean critical) {
-            this.critical = Objects.requireNonNull(critical);
+            $.critical = critical;
             return this;
         }
+
         public Builder objectId(ObjectIdResponse objectId) {
-            this.objectId = Objects.requireNonNull(objectId);
+            $.objectId = objectId;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public X509ExtensionResponse build() {
-            return new X509ExtensionResponse(critical, objectId, value);
+        }
+
+        public X509ExtensionResponse build() {
+            $.critical = Objects.requireNonNull($.critical, "expected parameter 'critical' to be non-null");
+            $.objectId = Objects.requireNonNull($.objectId, "expected parameter 'objectId' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

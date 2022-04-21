@@ -18,7 +18,7 @@ public final class SnapshotDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="baseTableReference", required=true)
-      private final TableReferenceResponse baseTableReference;
+    private TableReferenceResponse baseTableReference;
 
     public TableReferenceResponse baseTableReference() {
         return this.baseTableReference;
@@ -29,55 +29,52 @@ public final class SnapshotDefinitionResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="snapshotTime", required=true)
-      private final String snapshotTime;
+    private String snapshotTime;
 
     public String snapshotTime() {
         return this.snapshotTime;
     }
 
-    public SnapshotDefinitionResponse(
-        TableReferenceResponse baseTableReference,
-        String snapshotTime) {
-        this.baseTableReference = Objects.requireNonNull(baseTableReference, "expected parameter 'baseTableReference' to be non-null");
-        this.snapshotTime = Objects.requireNonNull(snapshotTime, "expected parameter 'snapshotTime' to be non-null");
-    }
+    private SnapshotDefinitionResponse() {}
 
-    private SnapshotDefinitionResponse() {
-        this.baseTableReference = null;
-        this.snapshotTime = null;
+    private SnapshotDefinitionResponse(SnapshotDefinitionResponse $) {
+        this.baseTableReference = $.baseTableReference;
+        this.snapshotTime = $.snapshotTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SnapshotDefinitionResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private TableReferenceResponse baseTableReference;
-        private String snapshotTime;
+        private SnapshotDefinitionResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SnapshotDefinitionResponse();
         }
 
         public Builder(SnapshotDefinitionResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.baseTableReference = defaults.baseTableReference;
-    	      this.snapshotTime = defaults.snapshotTime;
+            $ = new SnapshotDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder baseTableReference(TableReferenceResponse baseTableReference) {
-            this.baseTableReference = Objects.requireNonNull(baseTableReference);
+            $.baseTableReference = baseTableReference;
             return this;
         }
+
         public Builder snapshotTime(String snapshotTime) {
-            this.snapshotTime = Objects.requireNonNull(snapshotTime);
+            $.snapshotTime = snapshotTime;
             return this;
-        }        public SnapshotDefinitionResponse build() {
-            return new SnapshotDefinitionResponse(baseTableReference, snapshotTime);
+        }
+
+        public SnapshotDefinitionResponse build() {
+            $.baseTableReference = Objects.requireNonNull($.baseTableReference, "expected parameter 'baseTableReference' to be non-null");
+            $.snapshotTime = Objects.requireNonNull($.snapshotTime, "expected parameter 'snapshotTime' to be non-null");
+            return $;
         }
     }
+
 }

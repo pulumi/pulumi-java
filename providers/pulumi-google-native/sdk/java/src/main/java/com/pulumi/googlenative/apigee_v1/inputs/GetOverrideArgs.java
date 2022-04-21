@@ -13,78 +13,73 @@ public final class GetOverrideArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetOverrideArgs Empty = new GetOverrideArgs();
 
     @Import(name="environmentId", required=true)
-      private final String environmentId;
+    private String environmentId;
 
     public String environmentId() {
         return this.environmentId;
     }
 
     @Import(name="organizationId", required=true)
-      private final String organizationId;
+    private String organizationId;
 
     public String organizationId() {
         return this.organizationId;
     }
 
     @Import(name="overrideId", required=true)
-      private final String overrideId;
+    private String overrideId;
 
     public String overrideId() {
         return this.overrideId;
     }
 
-    public GetOverrideArgs(
-        String environmentId,
-        String organizationId,
-        String overrideId) {
-        this.environmentId = Objects.requireNonNull(environmentId, "expected parameter 'environmentId' to be non-null");
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.overrideId = Objects.requireNonNull(overrideId, "expected parameter 'overrideId' to be non-null");
-    }
+    private GetOverrideArgs() {}
 
-    private GetOverrideArgs() {
-        this.environmentId = null;
-        this.organizationId = null;
-        this.overrideId = null;
+    private GetOverrideArgs(GetOverrideArgs $) {
+        this.environmentId = $.environmentId;
+        this.organizationId = $.organizationId;
+        this.overrideId = $.overrideId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetOverrideArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String environmentId;
-        private String organizationId;
-        private String overrideId;
+        private GetOverrideArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetOverrideArgs();
         }
 
         public Builder(GetOverrideArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.environmentId = defaults.environmentId;
-    	      this.organizationId = defaults.organizationId;
-    	      this.overrideId = defaults.overrideId;
+            $ = new GetOverrideArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder environmentId(String environmentId) {
-            this.environmentId = Objects.requireNonNull(environmentId);
+            $.environmentId = environmentId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder overrideId(String overrideId) {
-            this.overrideId = Objects.requireNonNull(overrideId);
+            $.overrideId = overrideId;
             return this;
-        }        public GetOverrideArgs build() {
-            return new GetOverrideArgs(environmentId, organizationId, overrideId);
+        }
+
+        public GetOverrideArgs build() {
+            $.environmentId = Objects.requireNonNull($.environmentId, "expected parameter 'environmentId' to be non-null");
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            $.overrideId = Objects.requireNonNull($.overrideId, "expected parameter 'overrideId' to be non-null");
+            return $;
         }
     }
+
 }

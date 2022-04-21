@@ -23,7 +23,7 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dsRecords", required=true)
-      private final List<DsRecordResponse> dsRecords;
+    private List<DsRecordResponse> dsRecords;
 
     public List<DsRecordResponse> dsRecords() {
         return this.dsRecords;
@@ -34,7 +34,7 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="dsState", required=true)
-      private final String dsState;
+    private String dsState;
 
     public String dsState() {
         return this.dsState;
@@ -45,70 +45,67 @@ public final class GoogleDomainsDnsResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nameServers", required=true)
-      private final List<String> nameServers;
+    private List<String> nameServers;
 
     public List<String> nameServers() {
         return this.nameServers;
     }
 
-    public GoogleDomainsDnsResponse(
-        List<DsRecordResponse> dsRecords,
-        String dsState,
-        List<String> nameServers) {
-        this.dsRecords = Objects.requireNonNull(dsRecords, "expected parameter 'dsRecords' to be non-null");
-        this.dsState = Objects.requireNonNull(dsState, "expected parameter 'dsState' to be non-null");
-        this.nameServers = Objects.requireNonNull(nameServers, "expected parameter 'nameServers' to be non-null");
-    }
+    private GoogleDomainsDnsResponse() {}
 
-    private GoogleDomainsDnsResponse() {
-        this.dsRecords = List.of();
-        this.dsState = null;
-        this.nameServers = List.of();
+    private GoogleDomainsDnsResponse(GoogleDomainsDnsResponse $) {
+        this.dsRecords = $.dsRecords;
+        this.dsState = $.dsState;
+        this.nameServers = $.nameServers;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleDomainsDnsResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private List<DsRecordResponse> dsRecords;
-        private String dsState;
-        private List<String> nameServers;
+        private GoogleDomainsDnsResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleDomainsDnsResponse();
         }
 
         public Builder(GoogleDomainsDnsResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.dsRecords = defaults.dsRecords;
-    	      this.dsState = defaults.dsState;
-    	      this.nameServers = defaults.nameServers;
+            $ = new GoogleDomainsDnsResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder dsRecords(List<DsRecordResponse> dsRecords) {
-            this.dsRecords = Objects.requireNonNull(dsRecords);
+            $.dsRecords = dsRecords;
             return this;
         }
+
         public Builder dsRecords(DsRecordResponse... dsRecords) {
             return dsRecords(List.of(dsRecords));
         }
+
         public Builder dsState(String dsState) {
-            this.dsState = Objects.requireNonNull(dsState);
+            $.dsState = dsState;
             return this;
         }
+
         public Builder nameServers(List<String> nameServers) {
-            this.nameServers = Objects.requireNonNull(nameServers);
+            $.nameServers = nameServers;
             return this;
         }
+
         public Builder nameServers(String... nameServers) {
             return nameServers(List.of(nameServers));
-        }        public GoogleDomainsDnsResponse build() {
-            return new GoogleDomainsDnsResponse(dsRecords, dsState, nameServers);
+        }
+
+        public GoogleDomainsDnsResponse build() {
+            $.dsRecords = Objects.requireNonNull($.dsRecords, "expected parameter 'dsRecords' to be non-null");
+            $.dsState = Objects.requireNonNull($.dsState, "expected parameter 'dsState' to be non-null");
+            $.nameServers = Objects.requireNonNull($.nameServers, "expected parameter 'nameServers' to be non-null");
+            return $;
         }
     }
+
 }

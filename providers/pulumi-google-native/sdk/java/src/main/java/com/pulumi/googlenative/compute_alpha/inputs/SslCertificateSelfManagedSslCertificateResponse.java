@@ -21,7 +21,7 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends com.p
      * 
      */
     @Import(name="certificate", required=true)
-      private final String certificate;
+    private String certificate;
 
     public String certificate() {
         return this.certificate;
@@ -32,55 +32,52 @@ public final class SslCertificateSelfManagedSslCertificateResponse extends com.p
      * 
      */
     @Import(name="privateKey", required=true)
-      private final String privateKey;
+    private String privateKey;
 
     public String privateKey() {
         return this.privateKey;
     }
 
-    public SslCertificateSelfManagedSslCertificateResponse(
-        String certificate,
-        String privateKey) {
-        this.certificate = Objects.requireNonNull(certificate, "expected parameter 'certificate' to be non-null");
-        this.privateKey = Objects.requireNonNull(privateKey, "expected parameter 'privateKey' to be non-null");
-    }
+    private SslCertificateSelfManagedSslCertificateResponse() {}
 
-    private SslCertificateSelfManagedSslCertificateResponse() {
-        this.certificate = null;
-        this.privateKey = null;
+    private SslCertificateSelfManagedSslCertificateResponse(SslCertificateSelfManagedSslCertificateResponse $) {
+        this.certificate = $.certificate;
+        this.privateKey = $.privateKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SslCertificateSelfManagedSslCertificateResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String certificate;
-        private String privateKey;
+        private SslCertificateSelfManagedSslCertificateResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SslCertificateSelfManagedSslCertificateResponse();
         }
 
         public Builder(SslCertificateSelfManagedSslCertificateResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.certificate = defaults.certificate;
-    	      this.privateKey = defaults.privateKey;
+            $ = new SslCertificateSelfManagedSslCertificateResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder certificate(String certificate) {
-            this.certificate = Objects.requireNonNull(certificate);
+            $.certificate = certificate;
             return this;
         }
+
         public Builder privateKey(String privateKey) {
-            this.privateKey = Objects.requireNonNull(privateKey);
+            $.privateKey = privateKey;
             return this;
-        }        public SslCertificateSelfManagedSslCertificateResponse build() {
-            return new SslCertificateSelfManagedSslCertificateResponse(certificate, privateKey);
+        }
+
+        public SslCertificateSelfManagedSslCertificateResponse build() {
+            $.certificate = Objects.requireNonNull($.certificate, "expected parameter 'certificate' to be non-null");
+            $.privateKey = Objects.requireNonNull($.privateKey, "expected parameter 'privateKey' to be non-null");
+            return $;
         }
     }
+
 }

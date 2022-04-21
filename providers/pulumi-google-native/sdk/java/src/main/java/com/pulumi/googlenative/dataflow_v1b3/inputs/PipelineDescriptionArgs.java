@@ -5,12 +5,12 @@ package com.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageSummaryArgs;
 import com.pulumi.googlenative.dataflow_v1b3.inputs.TransformSummaryArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="displayData")
-      private final @Nullable Output<List<DisplayDataArgs>> displayData;
+    private @Nullable Output<List<DisplayDataArgs>> displayData;
 
-    public Output<List<DisplayDataArgs>> displayData() {
-        return this.displayData == null ? Codegen.empty() : this.displayData;
+    public Optional<Output<List<DisplayDataArgs>>> displayData() {
+        return Optional.ofNullable(this.displayData);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="executionPipelineStage")
-      private final @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
+    private @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
-    public Output<List<ExecutionStageSummaryArgs>> executionPipelineStage() {
-        return this.executionPipelineStage == null ? Codegen.empty() : this.executionPipelineStage;
+    public Optional<Output<List<ExecutionStageSummaryArgs>>> executionPipelineStage() {
+        return Optional.ofNullable(this.executionPipelineStage);
     }
 
     /**
@@ -49,85 +49,80 @@ public final class PipelineDescriptionArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="originalPipelineTransform")
-      private final @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
+    private @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
-    public Output<List<TransformSummaryArgs>> originalPipelineTransform() {
-        return this.originalPipelineTransform == null ? Codegen.empty() : this.originalPipelineTransform;
+    public Optional<Output<List<TransformSummaryArgs>>> originalPipelineTransform() {
+        return Optional.ofNullable(this.originalPipelineTransform);
     }
 
-    public PipelineDescriptionArgs(
-        @Nullable Output<List<DisplayDataArgs>> displayData,
-        @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage,
-        @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform) {
-        this.displayData = displayData;
-        this.executionPipelineStage = executionPipelineStage;
-        this.originalPipelineTransform = originalPipelineTransform;
-    }
+    private PipelineDescriptionArgs() {}
 
-    private PipelineDescriptionArgs() {
-        this.displayData = Codegen.empty();
-        this.executionPipelineStage = Codegen.empty();
-        this.originalPipelineTransform = Codegen.empty();
+    private PipelineDescriptionArgs(PipelineDescriptionArgs $) {
+        this.displayData = $.displayData;
+        this.executionPipelineStage = $.executionPipelineStage;
+        this.originalPipelineTransform = $.originalPipelineTransform;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PipelineDescriptionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<DisplayDataArgs>> displayData;
-        private @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
-        private @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
+        private PipelineDescriptionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PipelineDescriptionArgs();
         }
 
         public Builder(PipelineDescriptionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.displayData = defaults.displayData;
-    	      this.executionPipelineStage = defaults.executionPipelineStage;
-    	      this.originalPipelineTransform = defaults.originalPipelineTransform;
+            $ = new PipelineDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder displayData(@Nullable Output<List<DisplayDataArgs>> displayData) {
-            this.displayData = displayData;
+            $.displayData = displayData;
             return this;
         }
-        public Builder displayData(@Nullable List<DisplayDataArgs> displayData) {
-            this.displayData = Codegen.ofNullable(displayData);
-            return this;
+
+        public Builder displayData(List<DisplayDataArgs> displayData) {
+            return displayData(Output.of(displayData));
         }
+
         public Builder displayData(DisplayDataArgs... displayData) {
             return displayData(List.of(displayData));
         }
+
         public Builder executionPipelineStage(@Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage) {
-            this.executionPipelineStage = executionPipelineStage;
+            $.executionPipelineStage = executionPipelineStage;
             return this;
         }
-        public Builder executionPipelineStage(@Nullable List<ExecutionStageSummaryArgs> executionPipelineStage) {
-            this.executionPipelineStage = Codegen.ofNullable(executionPipelineStage);
-            return this;
+
+        public Builder executionPipelineStage(List<ExecutionStageSummaryArgs> executionPipelineStage) {
+            return executionPipelineStage(Output.of(executionPipelineStage));
         }
+
         public Builder executionPipelineStage(ExecutionStageSummaryArgs... executionPipelineStage) {
             return executionPipelineStage(List.of(executionPipelineStage));
         }
+
         public Builder originalPipelineTransform(@Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform) {
-            this.originalPipelineTransform = originalPipelineTransform;
+            $.originalPipelineTransform = originalPipelineTransform;
             return this;
         }
-        public Builder originalPipelineTransform(@Nullable List<TransformSummaryArgs> originalPipelineTransform) {
-            this.originalPipelineTransform = Codegen.ofNullable(originalPipelineTransform);
-            return this;
+
+        public Builder originalPipelineTransform(List<TransformSummaryArgs> originalPipelineTransform) {
+            return originalPipelineTransform(Output.of(originalPipelineTransform));
         }
+
         public Builder originalPipelineTransform(TransformSummaryArgs... originalPipelineTransform) {
             return originalPipelineTransform(List.of(originalPipelineTransform));
-        }        public PipelineDescriptionArgs build() {
-            return new PipelineDescriptionArgs(displayData, executionPipelineStage, originalPipelineTransform);
+        }
+
+        public PipelineDescriptionArgs build() {
+            return $;
         }
     }
+
 }

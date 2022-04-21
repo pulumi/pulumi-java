@@ -5,10 +5,10 @@ package com.pulumi.googlenative.policysimulator_v1beta1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.policysimulator_v1beta1.inputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,90 +21,84 @@ public final class FolderReplayArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config", required=true)
-      private final Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
+    private Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
     public Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config() {
         return this.config;
     }
 
     @Import(name="folderId", required=true)
-      private final Output<String> folderId;
+    private Output<String> folderId;
 
     public Output<String> folderId() {
         return this.folderId;
     }
 
     @Import(name="location")
-      private final @Nullable Output<String> location;
+    private @Nullable Output<String> location;
 
-    public Output<String> location() {
-        return this.location == null ? Codegen.empty() : this.location;
+    public Optional<Output<String>> location() {
+        return Optional.ofNullable(this.location);
     }
 
-    public FolderReplayArgs(
-        Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config,
-        Output<String> folderId,
-        @Nullable Output<String> location) {
-        this.config = Objects.requireNonNull(config, "expected parameter 'config' to be non-null");
-        this.folderId = Objects.requireNonNull(folderId, "expected parameter 'folderId' to be non-null");
-        this.location = location;
-    }
+    private FolderReplayArgs() {}
 
-    private FolderReplayArgs() {
-        this.config = Codegen.empty();
-        this.folderId = Codegen.empty();
-        this.location = Codegen.empty();
+    private FolderReplayArgs(FolderReplayArgs $) {
+        this.config = $.config;
+        this.folderId = $.folderId;
+        this.location = $.location;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FolderReplayArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
-        private Output<String> folderId;
-        private @Nullable Output<String> location;
+        private FolderReplayArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FolderReplayArgs();
         }
 
         public Builder(FolderReplayArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.config = defaults.config;
-    	      this.folderId = defaults.folderId;
-    	      this.location = defaults.location;
+            $ = new FolderReplayArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder config(Output<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config) {
-            this.config = Objects.requireNonNull(config);
+            $.config = config;
             return this;
         }
+
         public Builder config(GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs config) {
-            this.config = Output.of(Objects.requireNonNull(config));
-            return this;
+            return config(Output.of(config));
         }
+
         public Builder folderId(Output<String> folderId) {
-            this.folderId = Objects.requireNonNull(folderId);
+            $.folderId = folderId;
             return this;
         }
+
         public Builder folderId(String folderId) {
-            this.folderId = Output.of(Objects.requireNonNull(folderId));
-            return this;
+            return folderId(Output.of(folderId));
         }
+
         public Builder location(@Nullable Output<String> location) {
-            this.location = location;
+            $.location = location;
             return this;
         }
-        public Builder location(@Nullable String location) {
-            this.location = Codegen.ofNullable(location);
-            return this;
-        }        public FolderReplayArgs build() {
-            return new FolderReplayArgs(config, folderId, location);
+
+        public Builder location(String location) {
+            return location(Output.of(location));
+        }
+
+        public FolderReplayArgs build() {
+            $.config = Objects.requireNonNull($.config, "expected parameter 'config' to be non-null");
+            $.folderId = Objects.requireNonNull($.folderId, "expected parameter 'folderId' to be non-null");
+            return $;
         }
     }
+
 }

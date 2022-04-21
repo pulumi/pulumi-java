@@ -28,7 +28,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="confidentialInstanceConfig", required=true)
-      private final ConfidentialInstanceConfigResponse confidentialInstanceConfig;
+    private ConfidentialInstanceConfigResponse confidentialInstanceConfig;
 
     public ConfidentialInstanceConfigResponse confidentialInstanceConfig() {
         return this.confidentialInstanceConfig;
@@ -39,7 +39,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="internalIpOnly", required=true)
-      private final Boolean internalIpOnly;
+    private Boolean internalIpOnly;
 
     public Boolean internalIpOnly() {
         return this.internalIpOnly;
@@ -50,7 +50,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -61,7 +61,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="networkUri", required=true)
-      private final String networkUri;
+    private String networkUri;
 
     public String networkUri() {
         return this.networkUri;
@@ -72,7 +72,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="nodeGroupAffinity", required=true)
-      private final NodeGroupAffinityResponse nodeGroupAffinity;
+    private NodeGroupAffinityResponse nodeGroupAffinity;
 
     public NodeGroupAffinityResponse nodeGroupAffinity() {
         return this.nodeGroupAffinity;
@@ -83,7 +83,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="privateIpv6GoogleAccess", required=true)
-      private final String privateIpv6GoogleAccess;
+    private String privateIpv6GoogleAccess;
 
     public String privateIpv6GoogleAccess() {
         return this.privateIpv6GoogleAccess;
@@ -94,7 +94,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="reservationAffinity", required=true)
-      private final ReservationAffinityResponse reservationAffinity;
+    private ReservationAffinityResponse reservationAffinity;
 
     public ReservationAffinityResponse reservationAffinity() {
         return this.reservationAffinity;
@@ -105,7 +105,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serviceAccount", required=true)
-      private final String serviceAccount;
+    private String serviceAccount;
 
     public String serviceAccount() {
         return this.serviceAccount;
@@ -116,7 +116,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="serviceAccountScopes", required=true)
-      private final List<String> serviceAccountScopes;
+    private List<String> serviceAccountScopes;
 
     public List<String> serviceAccountScopes() {
         return this.serviceAccountScopes;
@@ -127,7 +127,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="shieldedInstanceConfig", required=true)
-      private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
+    private ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse shieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -138,7 +138,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="subnetworkUri", required=true)
-      private final String subnetworkUri;
+    private String subnetworkUri;
 
     public String subnetworkUri() {
         return this.subnetworkUri;
@@ -149,7 +149,7 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="tags", required=true)
-      private final List<String> tags;
+    private List<String> tags;
 
     public List<String> tags() {
         return this.tags;
@@ -160,160 +160,137 @@ public final class GceClusterConfigResponse extends com.pulumi.resources.InvokeA
      * 
      */
     @Import(name="zoneUri", required=true)
-      private final String zoneUri;
+    private String zoneUri;
 
     public String zoneUri() {
         return this.zoneUri;
     }
 
-    public GceClusterConfigResponse(
-        ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        Boolean internalIpOnly,
-        Map<String,String> metadata,
-        String networkUri,
-        NodeGroupAffinityResponse nodeGroupAffinity,
-        String privateIpv6GoogleAccess,
-        ReservationAffinityResponse reservationAffinity,
-        String serviceAccount,
-        List<String> serviceAccountScopes,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        String subnetworkUri,
-        List<String> tags,
-        String zoneUri) {
-        this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig, "expected parameter 'confidentialInstanceConfig' to be non-null");
-        this.internalIpOnly = Objects.requireNonNull(internalIpOnly, "expected parameter 'internalIpOnly' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.networkUri = Objects.requireNonNull(networkUri, "expected parameter 'networkUri' to be non-null");
-        this.nodeGroupAffinity = Objects.requireNonNull(nodeGroupAffinity, "expected parameter 'nodeGroupAffinity' to be non-null");
-        this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess, "expected parameter 'privateIpv6GoogleAccess' to be non-null");
-        this.reservationAffinity = Objects.requireNonNull(reservationAffinity, "expected parameter 'reservationAffinity' to be non-null");
-        this.serviceAccount = Objects.requireNonNull(serviceAccount, "expected parameter 'serviceAccount' to be non-null");
-        this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes, "expected parameter 'serviceAccountScopes' to be non-null");
-        this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig, "expected parameter 'shieldedInstanceConfig' to be non-null");
-        this.subnetworkUri = Objects.requireNonNull(subnetworkUri, "expected parameter 'subnetworkUri' to be non-null");
-        this.tags = Objects.requireNonNull(tags, "expected parameter 'tags' to be non-null");
-        this.zoneUri = Objects.requireNonNull(zoneUri, "expected parameter 'zoneUri' to be non-null");
-    }
+    private GceClusterConfigResponse() {}
 
-    private GceClusterConfigResponse() {
-        this.confidentialInstanceConfig = null;
-        this.internalIpOnly = null;
-        this.metadata = Map.of();
-        this.networkUri = null;
-        this.nodeGroupAffinity = null;
-        this.privateIpv6GoogleAccess = null;
-        this.reservationAffinity = null;
-        this.serviceAccount = null;
-        this.serviceAccountScopes = List.of();
-        this.shieldedInstanceConfig = null;
-        this.subnetworkUri = null;
-        this.tags = List.of();
-        this.zoneUri = null;
+    private GceClusterConfigResponse(GceClusterConfigResponse $) {
+        this.confidentialInstanceConfig = $.confidentialInstanceConfig;
+        this.internalIpOnly = $.internalIpOnly;
+        this.metadata = $.metadata;
+        this.networkUri = $.networkUri;
+        this.nodeGroupAffinity = $.nodeGroupAffinity;
+        this.privateIpv6GoogleAccess = $.privateIpv6GoogleAccess;
+        this.reservationAffinity = $.reservationAffinity;
+        this.serviceAccount = $.serviceAccount;
+        this.serviceAccountScopes = $.serviceAccountScopes;
+        this.shieldedInstanceConfig = $.shieldedInstanceConfig;
+        this.subnetworkUri = $.subnetworkUri;
+        this.tags = $.tags;
+        this.zoneUri = $.zoneUri;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GceClusterConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ConfidentialInstanceConfigResponse confidentialInstanceConfig;
-        private Boolean internalIpOnly;
-        private Map<String,String> metadata;
-        private String networkUri;
-        private NodeGroupAffinityResponse nodeGroupAffinity;
-        private String privateIpv6GoogleAccess;
-        private ReservationAffinityResponse reservationAffinity;
-        private String serviceAccount;
-        private List<String> serviceAccountScopes;
-        private ShieldedInstanceConfigResponse shieldedInstanceConfig;
-        private String subnetworkUri;
-        private List<String> tags;
-        private String zoneUri;
+        private GceClusterConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GceClusterConfigResponse();
         }
 
         public Builder(GceClusterConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.confidentialInstanceConfig = defaults.confidentialInstanceConfig;
-    	      this.internalIpOnly = defaults.internalIpOnly;
-    	      this.metadata = defaults.metadata;
-    	      this.networkUri = defaults.networkUri;
-    	      this.nodeGroupAffinity = defaults.nodeGroupAffinity;
-    	      this.privateIpv6GoogleAccess = defaults.privateIpv6GoogleAccess;
-    	      this.reservationAffinity = defaults.reservationAffinity;
-    	      this.serviceAccount = defaults.serviceAccount;
-    	      this.serviceAccountScopes = defaults.serviceAccountScopes;
-    	      this.shieldedInstanceConfig = defaults.shieldedInstanceConfig;
-    	      this.subnetworkUri = defaults.subnetworkUri;
-    	      this.tags = defaults.tags;
-    	      this.zoneUri = defaults.zoneUri;
+            $ = new GceClusterConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder confidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
+            $.confidentialInstanceConfig = confidentialInstanceConfig;
             return this;
         }
+
         public Builder internalIpOnly(Boolean internalIpOnly) {
-            this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
+            $.internalIpOnly = internalIpOnly;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder networkUri(String networkUri) {
-            this.networkUri = Objects.requireNonNull(networkUri);
+            $.networkUri = networkUri;
             return this;
         }
+
         public Builder nodeGroupAffinity(NodeGroupAffinityResponse nodeGroupAffinity) {
-            this.nodeGroupAffinity = Objects.requireNonNull(nodeGroupAffinity);
+            $.nodeGroupAffinity = nodeGroupAffinity;
             return this;
         }
+
         public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
+            $.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
+
         public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
-            this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
+            $.reservationAffinity = reservationAffinity;
             return this;
         }
+
         public Builder serviceAccount(String serviceAccount) {
-            this.serviceAccount = Objects.requireNonNull(serviceAccount);
+            $.serviceAccount = serviceAccount;
             return this;
         }
+
         public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
+            $.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
+
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
             return serviceAccountScopes(List.of(serviceAccountScopes));
         }
+
         public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
+            $.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
+
         public Builder subnetworkUri(String subnetworkUri) {
-            this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
+            $.subnetworkUri = subnetworkUri;
             return this;
         }
+
         public Builder tags(List<String> tags) {
-            this.tags = Objects.requireNonNull(tags);
+            $.tags = tags;
             return this;
         }
+
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+
         public Builder zoneUri(String zoneUri) {
-            this.zoneUri = Objects.requireNonNull(zoneUri);
+            $.zoneUri = zoneUri;
             return this;
-        }        public GceClusterConfigResponse build() {
-            return new GceClusterConfigResponse(confidentialInstanceConfig, internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
+        }
+
+        public GceClusterConfigResponse build() {
+            $.confidentialInstanceConfig = Objects.requireNonNull($.confidentialInstanceConfig, "expected parameter 'confidentialInstanceConfig' to be non-null");
+            $.internalIpOnly = Objects.requireNonNull($.internalIpOnly, "expected parameter 'internalIpOnly' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.networkUri = Objects.requireNonNull($.networkUri, "expected parameter 'networkUri' to be non-null");
+            $.nodeGroupAffinity = Objects.requireNonNull($.nodeGroupAffinity, "expected parameter 'nodeGroupAffinity' to be non-null");
+            $.privateIpv6GoogleAccess = Objects.requireNonNull($.privateIpv6GoogleAccess, "expected parameter 'privateIpv6GoogleAccess' to be non-null");
+            $.reservationAffinity = Objects.requireNonNull($.reservationAffinity, "expected parameter 'reservationAffinity' to be non-null");
+            $.serviceAccount = Objects.requireNonNull($.serviceAccount, "expected parameter 'serviceAccount' to be non-null");
+            $.serviceAccountScopes = Objects.requireNonNull($.serviceAccountScopes, "expected parameter 'serviceAccountScopes' to be non-null");
+            $.shieldedInstanceConfig = Objects.requireNonNull($.shieldedInstanceConfig, "expected parameter 'shieldedInstanceConfig' to be non-null");
+            $.subnetworkUri = Objects.requireNonNull($.subnetworkUri, "expected parameter 'subnetworkUri' to be non-null");
+            $.tags = Objects.requireNonNull($.tags, "expected parameter 'tags' to be non-null");
+            $.zoneUri = Objects.requireNonNull($.zoneUri, "expected parameter 'zoneUri' to be non-null");
+            return $;
         }
     }
+
 }

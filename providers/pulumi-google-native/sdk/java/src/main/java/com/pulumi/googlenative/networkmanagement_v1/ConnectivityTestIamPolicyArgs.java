@@ -5,13 +5,13 @@ package com.pulumi.googlenative.networkmanagement_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.networkmanagement_v1.inputs.AuditConfigArgs;
 import com.pulumi.googlenative.networkmanagement_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ConnectivityTestIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="auditConfigs")
-      private final @Nullable Output<List<AuditConfigArgs>> auditConfigs;
+    private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
 
-    public Output<List<AuditConfigArgs>> auditConfigs() {
-        return this.auditConfigs == null ? Codegen.empty() : this.auditConfigs;
+    public Optional<Output<List<AuditConfigArgs>>> auditConfigs() {
+        return Optional.ofNullable(this.auditConfigs);
     }
 
     /**
@@ -35,14 +35,14 @@ public final class ConnectivityTestIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="bindings")
-      private final @Nullable Output<List<BindingArgs>> bindings;
+    private @Nullable Output<List<BindingArgs>> bindings;
 
-    public Output<List<BindingArgs>> bindings() {
-        return this.bindings == null ? Codegen.empty() : this.bindings;
+    public Optional<Output<List<BindingArgs>>> bindings() {
+        return Optional.ofNullable(this.bindings);
     }
 
     @Import(name="connectivityTestId", required=true)
-      private final Output<String> connectivityTestId;
+    private Output<String> connectivityTestId;
 
     public Output<String> connectivityTestId() {
         return this.connectivityTestId;
@@ -53,17 +53,17 @@ public final class ConnectivityTestIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="etag")
-      private final @Nullable Output<String> etag;
+    private @Nullable Output<String> etag;
 
-    public Output<String> etag() {
-        return this.etag == null ? Codegen.empty() : this.etag;
+    public Optional<Output<String>> etag() {
+        return Optional.ofNullable(this.etag);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class ConnectivityTestIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="updateMask")
-      private final @Nullable Output<String> updateMask;
+    private @Nullable Output<String> updateMask;
 
-    public Output<String> updateMask() {
-        return this.updateMask == null ? Codegen.empty() : this.updateMask;
+    public Optional<Output<String>> updateMask() {
+        return Optional.ofNullable(this.updateMask);
     }
 
     /**
@@ -82,134 +82,117 @@ public final class ConnectivityTestIamPolicyArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="version")
-      private final @Nullable Output<Integer> version;
+    private @Nullable Output<Integer> version;
 
-    public Output<Integer> version() {
-        return this.version == null ? Codegen.empty() : this.version;
+    public Optional<Output<Integer>> version() {
+        return Optional.ofNullable(this.version);
     }
 
-    public ConnectivityTestIamPolicyArgs(
-        @Nullable Output<List<AuditConfigArgs>> auditConfigs,
-        @Nullable Output<List<BindingArgs>> bindings,
-        Output<String> connectivityTestId,
-        @Nullable Output<String> etag,
-        @Nullable Output<String> project,
-        @Nullable Output<String> updateMask,
-        @Nullable Output<Integer> version) {
-        this.auditConfigs = auditConfigs;
-        this.bindings = bindings;
-        this.connectivityTestId = Objects.requireNonNull(connectivityTestId, "expected parameter 'connectivityTestId' to be non-null");
-        this.etag = etag;
-        this.project = project;
-        this.updateMask = updateMask;
-        this.version = version;
-    }
+    private ConnectivityTestIamPolicyArgs() {}
 
-    private ConnectivityTestIamPolicyArgs() {
-        this.auditConfigs = Codegen.empty();
-        this.bindings = Codegen.empty();
-        this.connectivityTestId = Codegen.empty();
-        this.etag = Codegen.empty();
-        this.project = Codegen.empty();
-        this.updateMask = Codegen.empty();
-        this.version = Codegen.empty();
+    private ConnectivityTestIamPolicyArgs(ConnectivityTestIamPolicyArgs $) {
+        this.auditConfigs = $.auditConfigs;
+        this.bindings = $.bindings;
+        this.connectivityTestId = $.connectivityTestId;
+        this.etag = $.etag;
+        this.project = $.project;
+        this.updateMask = $.updateMask;
+        this.version = $.version;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConnectivityTestIamPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<AuditConfigArgs>> auditConfigs;
-        private @Nullable Output<List<BindingArgs>> bindings;
-        private Output<String> connectivityTestId;
-        private @Nullable Output<String> etag;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> updateMask;
-        private @Nullable Output<Integer> version;
+        private ConnectivityTestIamPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConnectivityTestIamPolicyArgs();
         }
 
         public Builder(ConnectivityTestIamPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.auditConfigs = defaults.auditConfigs;
-    	      this.bindings = defaults.bindings;
-    	      this.connectivityTestId = defaults.connectivityTestId;
-    	      this.etag = defaults.etag;
-    	      this.project = defaults.project;
-    	      this.updateMask = defaults.updateMask;
-    	      this.version = defaults.version;
+            $ = new ConnectivityTestIamPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder auditConfigs(@Nullable Output<List<AuditConfigArgs>> auditConfigs) {
-            this.auditConfigs = auditConfigs;
+            $.auditConfigs = auditConfigs;
             return this;
         }
-        public Builder auditConfigs(@Nullable List<AuditConfigArgs> auditConfigs) {
-            this.auditConfigs = Codegen.ofNullable(auditConfigs);
-            return this;
+
+        public Builder auditConfigs(List<AuditConfigArgs> auditConfigs) {
+            return auditConfigs(Output.of(auditConfigs));
         }
+
         public Builder auditConfigs(AuditConfigArgs... auditConfigs) {
             return auditConfigs(List.of(auditConfigs));
         }
+
         public Builder bindings(@Nullable Output<List<BindingArgs>> bindings) {
-            this.bindings = bindings;
+            $.bindings = bindings;
             return this;
         }
-        public Builder bindings(@Nullable List<BindingArgs> bindings) {
-            this.bindings = Codegen.ofNullable(bindings);
-            return this;
+
+        public Builder bindings(List<BindingArgs> bindings) {
+            return bindings(Output.of(bindings));
         }
+
         public Builder bindings(BindingArgs... bindings) {
             return bindings(List.of(bindings));
         }
+
         public Builder connectivityTestId(Output<String> connectivityTestId) {
-            this.connectivityTestId = Objects.requireNonNull(connectivityTestId);
+            $.connectivityTestId = connectivityTestId;
             return this;
         }
+
         public Builder connectivityTestId(String connectivityTestId) {
-            this.connectivityTestId = Output.of(Objects.requireNonNull(connectivityTestId));
-            return this;
+            return connectivityTestId(Output.of(connectivityTestId));
         }
+
         public Builder etag(@Nullable Output<String> etag) {
-            this.etag = etag;
+            $.etag = etag;
             return this;
         }
-        public Builder etag(@Nullable String etag) {
-            this.etag = Codegen.ofNullable(etag);
-            return this;
+
+        public Builder etag(String etag) {
+            return etag(Output.of(etag));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder updateMask(@Nullable Output<String> updateMask) {
-            this.updateMask = updateMask;
+            $.updateMask = updateMask;
             return this;
         }
-        public Builder updateMask(@Nullable String updateMask) {
-            this.updateMask = Codegen.ofNullable(updateMask);
-            return this;
+
+        public Builder updateMask(String updateMask) {
+            return updateMask(Output.of(updateMask));
         }
+
         public Builder version(@Nullable Output<Integer> version) {
-            this.version = version;
+            $.version = version;
             return this;
         }
-        public Builder version(@Nullable Integer version) {
-            this.version = Codegen.ofNullable(version);
-            return this;
-        }        public ConnectivityTestIamPolicyArgs build() {
-            return new ConnectivityTestIamPolicyArgs(auditConfigs, bindings, connectivityTestId, etag, project, updateMask, version);
+
+        public Builder version(Integer version) {
+            return version(Output.of(version));
+        }
+
+        public ConnectivityTestIamPolicyArgs build() {
+            $.connectivityTestId = Objects.requireNonNull($.connectivityTestId, "expected parameter 'connectivityTestId' to be non-null");
+            return $;
         }
     }
+
 }

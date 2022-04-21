@@ -29,7 +29,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="autoscalingSettings", required=true)
-      private final AutoscalingSettingsResponse autoscalingSettings;
+    private AutoscalingSettingsResponse autoscalingSettings;
 
     public AutoscalingSettingsResponse autoscalingSettings() {
         return this.autoscalingSettings;
@@ -40,7 +40,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="dataDisks", required=true)
-      private final List<DiskResponse> dataDisks;
+    private List<DiskResponse> dataDisks;
 
     public List<DiskResponse> dataDisks() {
         return this.dataDisks;
@@ -51,7 +51,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="defaultPackageSet", required=true)
-      private final String defaultPackageSet;
+    private String defaultPackageSet;
 
     public String defaultPackageSet() {
         return this.defaultPackageSet;
@@ -62,7 +62,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Integer diskSizeGb;
+    private Integer diskSizeGb;
 
     public Integer diskSizeGb() {
         return this.diskSizeGb;
@@ -73,7 +73,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSourceImage", required=true)
-      private final String diskSourceImage;
+    private String diskSourceImage;
 
     public String diskSourceImage() {
         return this.diskSourceImage;
@@ -84,7 +84,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
@@ -95,7 +95,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="ipConfiguration", required=true)
-      private final String ipConfiguration;
+    private String ipConfiguration;
 
     public String ipConfiguration() {
         return this.ipConfiguration;
@@ -106,7 +106,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -117,7 +117,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -128,7 +128,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="metadata", required=true)
-      private final Map<String,String> metadata;
+    private Map<String,String> metadata;
 
     public Map<String,String> metadata() {
         return this.metadata;
@@ -139,7 +139,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="network", required=true)
-      private final String network;
+    private String network;
 
     public String network() {
         return this.network;
@@ -150,7 +150,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numThreadsPerWorker", required=true)
-      private final Integer numThreadsPerWorker;
+    private Integer numThreadsPerWorker;
 
     public Integer numThreadsPerWorker() {
         return this.numThreadsPerWorker;
@@ -161,7 +161,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="numWorkers", required=true)
-      private final Integer numWorkers;
+    private Integer numWorkers;
 
     public Integer numWorkers() {
         return this.numWorkers;
@@ -172,7 +172,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="onHostMaintenance", required=true)
-      private final String onHostMaintenance;
+    private String onHostMaintenance;
 
     public String onHostMaintenance() {
         return this.onHostMaintenance;
@@ -183,7 +183,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="packages", required=true)
-      private final List<PackageResponse> packages;
+    private List<PackageResponse> packages;
 
     public List<PackageResponse> packages() {
         return this.packages;
@@ -194,7 +194,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="poolArgs", required=true)
-      private final Map<String,String> poolArgs;
+    private Map<String,String> poolArgs;
 
     public Map<String,String> poolArgs() {
         return this.poolArgs;
@@ -205,7 +205,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="sdkHarnessContainerImages", required=true)
-      private final List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
+    private List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
 
     public List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages() {
         return this.sdkHarnessContainerImages;
@@ -216,7 +216,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="subnetwork", required=true)
-      private final String subnetwork;
+    private String subnetwork;
 
     public String subnetwork() {
         return this.subnetwork;
@@ -227,7 +227,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="taskrunnerSettings", required=true)
-      private final TaskRunnerSettingsResponse taskrunnerSettings;
+    private TaskRunnerSettingsResponse taskrunnerSettings;
 
     public TaskRunnerSettingsResponse taskrunnerSettings() {
         return this.taskrunnerSettings;
@@ -238,7 +238,7 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="teardownPolicy", required=true)
-      private final String teardownPolicy;
+    private String teardownPolicy;
 
     public String teardownPolicy() {
         return this.teardownPolicy;
@@ -249,235 +249,197 @@ public final class WorkerPoolResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="zone", required=true)
-      private final String zone;
+    private String zone;
 
     public String zone() {
         return this.zone;
     }
 
-    public WorkerPoolResponse(
-        AutoscalingSettingsResponse autoscalingSettings,
-        List<DiskResponse> dataDisks,
-        String defaultPackageSet,
-        Integer diskSizeGb,
-        String diskSourceImage,
-        String diskType,
-        String ipConfiguration,
-        String kind,
-        String machineType,
-        Map<String,String> metadata,
-        String network,
-        Integer numThreadsPerWorker,
-        Integer numWorkers,
-        String onHostMaintenance,
-        List<PackageResponse> packages,
-        Map<String,String> poolArgs,
-        List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
-        String subnetwork,
-        TaskRunnerSettingsResponse taskrunnerSettings,
-        String teardownPolicy,
-        String zone) {
-        this.autoscalingSettings = Objects.requireNonNull(autoscalingSettings, "expected parameter 'autoscalingSettings' to be non-null");
-        this.dataDisks = Objects.requireNonNull(dataDisks, "expected parameter 'dataDisks' to be non-null");
-        this.defaultPackageSet = Objects.requireNonNull(defaultPackageSet, "expected parameter 'defaultPackageSet' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskSourceImage = Objects.requireNonNull(diskSourceImage, "expected parameter 'diskSourceImage' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-        this.ipConfiguration = Objects.requireNonNull(ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.metadata = Objects.requireNonNull(metadata, "expected parameter 'metadata' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.numThreadsPerWorker = Objects.requireNonNull(numThreadsPerWorker, "expected parameter 'numThreadsPerWorker' to be non-null");
-        this.numWorkers = Objects.requireNonNull(numWorkers, "expected parameter 'numWorkers' to be non-null");
-        this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
-        this.packages = Objects.requireNonNull(packages, "expected parameter 'packages' to be non-null");
-        this.poolArgs = Objects.requireNonNull(poolArgs, "expected parameter 'poolArgs' to be non-null");
-        this.sdkHarnessContainerImages = Objects.requireNonNull(sdkHarnessContainerImages, "expected parameter 'sdkHarnessContainerImages' to be non-null");
-        this.subnetwork = Objects.requireNonNull(subnetwork, "expected parameter 'subnetwork' to be non-null");
-        this.taskrunnerSettings = Objects.requireNonNull(taskrunnerSettings, "expected parameter 'taskrunnerSettings' to be non-null");
-        this.teardownPolicy = Objects.requireNonNull(teardownPolicy, "expected parameter 'teardownPolicy' to be non-null");
-        this.zone = Objects.requireNonNull(zone, "expected parameter 'zone' to be non-null");
-    }
+    private WorkerPoolResponse() {}
 
-    private WorkerPoolResponse() {
-        this.autoscalingSettings = null;
-        this.dataDisks = List.of();
-        this.defaultPackageSet = null;
-        this.diskSizeGb = null;
-        this.diskSourceImage = null;
-        this.diskType = null;
-        this.ipConfiguration = null;
-        this.kind = null;
-        this.machineType = null;
-        this.metadata = Map.of();
-        this.network = null;
-        this.numThreadsPerWorker = null;
-        this.numWorkers = null;
-        this.onHostMaintenance = null;
-        this.packages = List.of();
-        this.poolArgs = Map.of();
-        this.sdkHarnessContainerImages = List.of();
-        this.subnetwork = null;
-        this.taskrunnerSettings = null;
-        this.teardownPolicy = null;
-        this.zone = null;
+    private WorkerPoolResponse(WorkerPoolResponse $) {
+        this.autoscalingSettings = $.autoscalingSettings;
+        this.dataDisks = $.dataDisks;
+        this.defaultPackageSet = $.defaultPackageSet;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskSourceImage = $.diskSourceImage;
+        this.diskType = $.diskType;
+        this.ipConfiguration = $.ipConfiguration;
+        this.kind = $.kind;
+        this.machineType = $.machineType;
+        this.metadata = $.metadata;
+        this.network = $.network;
+        this.numThreadsPerWorker = $.numThreadsPerWorker;
+        this.numWorkers = $.numWorkers;
+        this.onHostMaintenance = $.onHostMaintenance;
+        this.packages = $.packages;
+        this.poolArgs = $.poolArgs;
+        this.sdkHarnessContainerImages = $.sdkHarnessContainerImages;
+        this.subnetwork = $.subnetwork;
+        this.taskrunnerSettings = $.taskrunnerSettings;
+        this.teardownPolicy = $.teardownPolicy;
+        this.zone = $.zone;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private AutoscalingSettingsResponse autoscalingSettings;
-        private List<DiskResponse> dataDisks;
-        private String defaultPackageSet;
-        private Integer diskSizeGb;
-        private String diskSourceImage;
-        private String diskType;
-        private String ipConfiguration;
-        private String kind;
-        private String machineType;
-        private Map<String,String> metadata;
-        private String network;
-        private Integer numThreadsPerWorker;
-        private Integer numWorkers;
-        private String onHostMaintenance;
-        private List<PackageResponse> packages;
-        private Map<String,String> poolArgs;
-        private List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages;
-        private String subnetwork;
-        private TaskRunnerSettingsResponse taskrunnerSettings;
-        private String teardownPolicy;
-        private String zone;
+        private WorkerPoolResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolResponse();
         }
 
         public Builder(WorkerPoolResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscalingSettings = defaults.autoscalingSettings;
-    	      this.dataDisks = defaults.dataDisks;
-    	      this.defaultPackageSet = defaults.defaultPackageSet;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskSourceImage = defaults.diskSourceImage;
-    	      this.diskType = defaults.diskType;
-    	      this.ipConfiguration = defaults.ipConfiguration;
-    	      this.kind = defaults.kind;
-    	      this.machineType = defaults.machineType;
-    	      this.metadata = defaults.metadata;
-    	      this.network = defaults.network;
-    	      this.numThreadsPerWorker = defaults.numThreadsPerWorker;
-    	      this.numWorkers = defaults.numWorkers;
-    	      this.onHostMaintenance = defaults.onHostMaintenance;
-    	      this.packages = defaults.packages;
-    	      this.poolArgs = defaults.poolArgs;
-    	      this.sdkHarnessContainerImages = defaults.sdkHarnessContainerImages;
-    	      this.subnetwork = defaults.subnetwork;
-    	      this.taskrunnerSettings = defaults.taskrunnerSettings;
-    	      this.teardownPolicy = defaults.teardownPolicy;
-    	      this.zone = defaults.zone;
+            $ = new WorkerPoolResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscalingSettings(AutoscalingSettingsResponse autoscalingSettings) {
-            this.autoscalingSettings = Objects.requireNonNull(autoscalingSettings);
+            $.autoscalingSettings = autoscalingSettings;
             return this;
         }
+
         public Builder dataDisks(List<DiskResponse> dataDisks) {
-            this.dataDisks = Objects.requireNonNull(dataDisks);
+            $.dataDisks = dataDisks;
             return this;
         }
+
         public Builder dataDisks(DiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
+
         public Builder defaultPackageSet(String defaultPackageSet) {
-            this.defaultPackageSet = Objects.requireNonNull(defaultPackageSet);
+            $.defaultPackageSet = defaultPackageSet;
             return this;
         }
+
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskSourceImage(String diskSourceImage) {
-            this.diskSourceImage = Objects.requireNonNull(diskSourceImage);
+            $.diskSourceImage = diskSourceImage;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
         }
+
         public Builder ipConfiguration(String ipConfiguration) {
-            this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
+            $.ipConfiguration = ipConfiguration;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder metadata(Map<String,String> metadata) {
-            this.metadata = Objects.requireNonNull(metadata);
+            $.metadata = metadata;
             return this;
         }
+
         public Builder network(String network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder numThreadsPerWorker(Integer numThreadsPerWorker) {
-            this.numThreadsPerWorker = Objects.requireNonNull(numThreadsPerWorker);
+            $.numThreadsPerWorker = numThreadsPerWorker;
             return this;
         }
+
         public Builder numWorkers(Integer numWorkers) {
-            this.numWorkers = Objects.requireNonNull(numWorkers);
+            $.numWorkers = numWorkers;
             return this;
         }
+
         public Builder onHostMaintenance(String onHostMaintenance) {
-            this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
+            $.onHostMaintenance = onHostMaintenance;
             return this;
         }
+
         public Builder packages(List<PackageResponse> packages) {
-            this.packages = Objects.requireNonNull(packages);
+            $.packages = packages;
             return this;
         }
+
         public Builder packages(PackageResponse... packages) {
             return packages(List.of(packages));
         }
+
         public Builder poolArgs(Map<String,String> poolArgs) {
-            this.poolArgs = Objects.requireNonNull(poolArgs);
+            $.poolArgs = poolArgs;
             return this;
         }
+
         public Builder sdkHarnessContainerImages(List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages) {
-            this.sdkHarnessContainerImages = Objects.requireNonNull(sdkHarnessContainerImages);
+            $.sdkHarnessContainerImages = sdkHarnessContainerImages;
             return this;
         }
+
         public Builder sdkHarnessContainerImages(SdkHarnessContainerImageResponse... sdkHarnessContainerImages) {
             return sdkHarnessContainerImages(List.of(sdkHarnessContainerImages));
         }
+
         public Builder subnetwork(String subnetwork) {
-            this.subnetwork = Objects.requireNonNull(subnetwork);
+            $.subnetwork = subnetwork;
             return this;
         }
+
         public Builder taskrunnerSettings(TaskRunnerSettingsResponse taskrunnerSettings) {
-            this.taskrunnerSettings = Objects.requireNonNull(taskrunnerSettings);
+            $.taskrunnerSettings = taskrunnerSettings;
             return this;
         }
+
         public Builder teardownPolicy(String teardownPolicy) {
-            this.teardownPolicy = Objects.requireNonNull(teardownPolicy);
+            $.teardownPolicy = teardownPolicy;
             return this;
         }
+
         public Builder zone(String zone) {
-            this.zone = Objects.requireNonNull(zone);
+            $.zone = zone;
             return this;
-        }        public WorkerPoolResponse build() {
-            return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
+        }
+
+        public WorkerPoolResponse build() {
+            $.autoscalingSettings = Objects.requireNonNull($.autoscalingSettings, "expected parameter 'autoscalingSettings' to be non-null");
+            $.dataDisks = Objects.requireNonNull($.dataDisks, "expected parameter 'dataDisks' to be non-null");
+            $.defaultPackageSet = Objects.requireNonNull($.defaultPackageSet, "expected parameter 'defaultPackageSet' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskSourceImage = Objects.requireNonNull($.diskSourceImage, "expected parameter 'diskSourceImage' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            $.ipConfiguration = Objects.requireNonNull($.ipConfiguration, "expected parameter 'ipConfiguration' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.metadata = Objects.requireNonNull($.metadata, "expected parameter 'metadata' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.numThreadsPerWorker = Objects.requireNonNull($.numThreadsPerWorker, "expected parameter 'numThreadsPerWorker' to be non-null");
+            $.numWorkers = Objects.requireNonNull($.numWorkers, "expected parameter 'numWorkers' to be non-null");
+            $.onHostMaintenance = Objects.requireNonNull($.onHostMaintenance, "expected parameter 'onHostMaintenance' to be non-null");
+            $.packages = Objects.requireNonNull($.packages, "expected parameter 'packages' to be non-null");
+            $.poolArgs = Objects.requireNonNull($.poolArgs, "expected parameter 'poolArgs' to be non-null");
+            $.sdkHarnessContainerImages = Objects.requireNonNull($.sdkHarnessContainerImages, "expected parameter 'sdkHarnessContainerImages' to be non-null");
+            $.subnetwork = Objects.requireNonNull($.subnetwork, "expected parameter 'subnetwork' to be non-null");
+            $.taskrunnerSettings = Objects.requireNonNull($.taskrunnerSettings, "expected parameter 'taskrunnerSettings' to be non-null");
+            $.teardownPolicy = Objects.requireNonNull($.teardownPolicy, "expected parameter 'teardownPolicy' to be non-null");
+            $.zone = Objects.requireNonNull($.zone, "expected parameter 'zone' to be non-null");
+            return $;
         }
     }
+
 }

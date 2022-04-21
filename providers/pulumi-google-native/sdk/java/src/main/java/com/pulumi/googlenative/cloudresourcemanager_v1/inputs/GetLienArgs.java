@@ -13,45 +13,45 @@ public final class GetLienArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetLienArgs Empty = new GetLienArgs();
 
     @Import(name="lienId", required=true)
-      private final String lienId;
+    private String lienId;
 
     public String lienId() {
         return this.lienId;
     }
 
-    public GetLienArgs(String lienId) {
-        this.lienId = Objects.requireNonNull(lienId, "expected parameter 'lienId' to be non-null");
-    }
+    private GetLienArgs() {}
 
-    private GetLienArgs() {
-        this.lienId = null;
+    private GetLienArgs(GetLienArgs $) {
+        this.lienId = $.lienId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GetLienArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String lienId;
+        private GetLienArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GetLienArgs();
         }
 
         public Builder(GetLienArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lienId = defaults.lienId;
+            $ = new GetLienArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lienId(String lienId) {
-            this.lienId = Objects.requireNonNull(lienId);
+            $.lienId = lienId;
             return this;
-        }        public GetLienArgs build() {
-            return new GetLienArgs(lienId);
+        }
+
+        public GetLienArgs build() {
+            $.lienId = Objects.requireNonNull($.lienId, "expected parameter 'lienId' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,11 +5,11 @@ package com.pulumi.googlenative.monitoring_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="columns")
-      private final @Nullable Output<String> columns;
+    private @Nullable Output<String> columns;
 
-    public Output<String> columns() {
-        return this.columns == null ? Codegen.empty() : this.columns;
+    public Optional<Output<String>> columns() {
+        return Optional.ofNullable(this.columns);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GridLayoutArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="widgets")
-      private final @Nullable Output<List<WidgetArgs>> widgets;
+    private @Nullable Output<List<WidgetArgs>> widgets;
 
-    public Output<List<WidgetArgs>> widgets() {
-        return this.widgets == null ? Codegen.empty() : this.widgets;
+    public Optional<Output<List<WidgetArgs>>> widgets() {
+        return Optional.ofNullable(this.widgets);
     }
 
-    public GridLayoutArgs(
-        @Nullable Output<String> columns,
-        @Nullable Output<List<WidgetArgs>> widgets) {
-        this.columns = columns;
-        this.widgets = widgets;
-    }
+    private GridLayoutArgs() {}
 
-    private GridLayoutArgs() {
-        this.columns = Codegen.empty();
-        this.widgets = Codegen.empty();
+    private GridLayoutArgs(GridLayoutArgs $) {
+        this.columns = $.columns;
+        this.widgets = $.widgets;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GridLayoutArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> columns;
-        private @Nullable Output<List<WidgetArgs>> widgets;
+        private GridLayoutArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GridLayoutArgs();
         }
 
         public Builder(GridLayoutArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.columns = defaults.columns;
-    	      this.widgets = defaults.widgets;
+            $ = new GridLayoutArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder columns(@Nullable Output<String> columns) {
-            this.columns = columns;
+            $.columns = columns;
             return this;
         }
-        public Builder columns(@Nullable String columns) {
-            this.columns = Codegen.ofNullable(columns);
-            return this;
+
+        public Builder columns(String columns) {
+            return columns(Output.of(columns));
         }
+
         public Builder widgets(@Nullable Output<List<WidgetArgs>> widgets) {
-            this.widgets = widgets;
+            $.widgets = widgets;
             return this;
         }
-        public Builder widgets(@Nullable List<WidgetArgs> widgets) {
-            this.widgets = Codegen.ofNullable(widgets);
-            return this;
+
+        public Builder widgets(List<WidgetArgs> widgets) {
+            return widgets(Output.of(widgets));
         }
+
         public Builder widgets(WidgetArgs... widgets) {
             return widgets(List.of(widgets));
-        }        public GridLayoutArgs build() {
-            return new GridLayoutArgs(columns, widgets);
+        }
+
+        public GridLayoutArgs build() {
+            return $;
         }
     }
+
 }

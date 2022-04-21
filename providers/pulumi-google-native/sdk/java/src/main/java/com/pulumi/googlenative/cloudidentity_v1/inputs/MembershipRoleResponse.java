@@ -23,7 +23,7 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="expiryDetail", required=true)
-      private final ExpiryDetailResponse expiryDetail;
+    private ExpiryDetailResponse expiryDetail;
 
     public ExpiryDetailResponse expiryDetail() {
         return this.expiryDetail;
@@ -34,7 +34,7 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -45,64 +45,59 @@ public final class MembershipRoleResponse extends com.pulumi.resources.InvokeArg
      * 
      */
     @Import(name="restrictionEvaluations", required=true)
-      private final RestrictionEvaluationsResponse restrictionEvaluations;
+    private RestrictionEvaluationsResponse restrictionEvaluations;
 
     public RestrictionEvaluationsResponse restrictionEvaluations() {
         return this.restrictionEvaluations;
     }
 
-    public MembershipRoleResponse(
-        ExpiryDetailResponse expiryDetail,
-        String name,
-        RestrictionEvaluationsResponse restrictionEvaluations) {
-        this.expiryDetail = Objects.requireNonNull(expiryDetail, "expected parameter 'expiryDetail' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations, "expected parameter 'restrictionEvaluations' to be non-null");
-    }
+    private MembershipRoleResponse() {}
 
-    private MembershipRoleResponse() {
-        this.expiryDetail = null;
-        this.name = null;
-        this.restrictionEvaluations = null;
+    private MembershipRoleResponse(MembershipRoleResponse $) {
+        this.expiryDetail = $.expiryDetail;
+        this.name = $.name;
+        this.restrictionEvaluations = $.restrictionEvaluations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MembershipRoleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private ExpiryDetailResponse expiryDetail;
-        private String name;
-        private RestrictionEvaluationsResponse restrictionEvaluations;
+        private MembershipRoleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new MembershipRoleResponse();
         }
 
         public Builder(MembershipRoleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.expiryDetail = defaults.expiryDetail;
-    	      this.name = defaults.name;
-    	      this.restrictionEvaluations = defaults.restrictionEvaluations;
+            $ = new MembershipRoleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder expiryDetail(ExpiryDetailResponse expiryDetail) {
-            this.expiryDetail = Objects.requireNonNull(expiryDetail);
+            $.expiryDetail = expiryDetail;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder restrictionEvaluations(RestrictionEvaluationsResponse restrictionEvaluations) {
-            this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
+            $.restrictionEvaluations = restrictionEvaluations;
             return this;
-        }        public MembershipRoleResponse build() {
-            return new MembershipRoleResponse(expiryDetail, name, restrictionEvaluations);
+        }
+
+        public MembershipRoleResponse build() {
+            $.expiryDetail = Objects.requireNonNull($.expiryDetail, "expected parameter 'expiryDetail' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.restrictionEvaluations = Objects.requireNonNull($.restrictionEvaluations, "expected parameter 'restrictionEvaluations' to be non-null");
+            return $;
         }
     }
+
 }

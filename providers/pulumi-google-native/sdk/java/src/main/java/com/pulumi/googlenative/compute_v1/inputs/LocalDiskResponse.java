@@ -18,7 +18,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskCount", required=true)
-      private final Integer diskCount;
+    private Integer diskCount;
 
     public Integer diskCount() {
         return this.diskCount;
@@ -29,7 +29,7 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final Integer diskSizeGb;
+    private Integer diskSizeGb;
 
     public Integer diskSizeGb() {
         return this.diskSizeGb;
@@ -40,64 +40,59 @@ public final class LocalDiskResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="diskType", required=true)
-      private final String diskType;
+    private String diskType;
 
     public String diskType() {
         return this.diskType;
     }
 
-    public LocalDiskResponse(
-        Integer diskCount,
-        Integer diskSizeGb,
-        String diskType) {
-        this.diskCount = Objects.requireNonNull(diskCount, "expected parameter 'diskCount' to be non-null");
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.diskType = Objects.requireNonNull(diskType, "expected parameter 'diskType' to be non-null");
-    }
+    private LocalDiskResponse() {}
 
-    private LocalDiskResponse() {
-        this.diskCount = null;
-        this.diskSizeGb = null;
-        this.diskType = null;
+    private LocalDiskResponse(LocalDiskResponse $) {
+        this.diskCount = $.diskCount;
+        this.diskSizeGb = $.diskSizeGb;
+        this.diskType = $.diskType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LocalDiskResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer diskCount;
-        private Integer diskSizeGb;
-        private String diskType;
+        private LocalDiskResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new LocalDiskResponse();
         }
 
         public Builder(LocalDiskResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskCount = defaults.diskCount;
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.diskType = defaults.diskType;
+            $ = new LocalDiskResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskCount(Integer diskCount) {
-            this.diskCount = Objects.requireNonNull(diskCount);
+            $.diskCount = diskCount;
             return this;
         }
+
         public Builder diskSizeGb(Integer diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder diskType(String diskType) {
-            this.diskType = Objects.requireNonNull(diskType);
+            $.diskType = diskType;
             return this;
-        }        public LocalDiskResponse build() {
-            return new LocalDiskResponse(diskCount, diskSizeGb, diskType);
+        }
+
+        public LocalDiskResponse build() {
+            $.diskCount = Objects.requireNonNull($.diskCount, "expected parameter 'diskCount' to be non-null");
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.diskType = Objects.requireNonNull($.diskType, "expected parameter 'diskType' to be non-null");
+            return $;
         }
     }
+
 }

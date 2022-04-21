@@ -22,7 +22,7 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="category", required=true)
-      private final String category;
+    private String category;
 
     public String category() {
         return this.category;
@@ -33,7 +33,7 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="errorMessage", required=true)
-      private final String errorMessage;
+    private String errorMessage;
 
     public String errorMessage() {
         return this.errorMessage;
@@ -44,7 +44,7 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="severity", required=true)
-      private final String severity;
+    private String severity;
 
     public String severity() {
         return this.severity;
@@ -55,7 +55,7 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
@@ -66,82 +66,73 @@ public final class TestIssueResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="warning", required=true)
-      private final AnyResponse warning;
+    private AnyResponse warning;
 
     public AnyResponse warning() {
         return this.warning;
     }
 
-    public TestIssueResponse(
-        String category,
-        String errorMessage,
-        String severity,
-        String type,
-        AnyResponse warning) {
-        this.category = Objects.requireNonNull(category, "expected parameter 'category' to be non-null");
-        this.errorMessage = Objects.requireNonNull(errorMessage, "expected parameter 'errorMessage' to be non-null");
-        this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.warning = Objects.requireNonNull(warning, "expected parameter 'warning' to be non-null");
-    }
+    private TestIssueResponse() {}
 
-    private TestIssueResponse() {
-        this.category = null;
-        this.errorMessage = null;
-        this.severity = null;
-        this.type = null;
-        this.warning = null;
+    private TestIssueResponse(TestIssueResponse $) {
+        this.category = $.category;
+        this.errorMessage = $.errorMessage;
+        this.severity = $.severity;
+        this.type = $.type;
+        this.warning = $.warning;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TestIssueResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String category;
-        private String errorMessage;
-        private String severity;
-        private String type;
-        private AnyResponse warning;
+        private TestIssueResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new TestIssueResponse();
         }
 
         public Builder(TestIssueResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.category = defaults.category;
-    	      this.errorMessage = defaults.errorMessage;
-    	      this.severity = defaults.severity;
-    	      this.type = defaults.type;
-    	      this.warning = defaults.warning;
+            $ = new TestIssueResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder category(String category) {
-            this.category = Objects.requireNonNull(category);
+            $.category = category;
             return this;
         }
+
         public Builder errorMessage(String errorMessage) {
-            this.errorMessage = Objects.requireNonNull(errorMessage);
+            $.errorMessage = errorMessage;
             return this;
         }
+
         public Builder severity(String severity) {
-            this.severity = Objects.requireNonNull(severity);
+            $.severity = severity;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder warning(AnyResponse warning) {
-            this.warning = Objects.requireNonNull(warning);
+            $.warning = warning;
             return this;
-        }        public TestIssueResponse build() {
-            return new TestIssueResponse(category, errorMessage, severity, type, warning);
+        }
+
+        public TestIssueResponse build() {
+            $.category = Objects.requireNonNull($.category, "expected parameter 'category' to be non-null");
+            $.errorMessage = Objects.requireNonNull($.errorMessage, "expected parameter 'errorMessage' to be non-null");
+            $.severity = Objects.requireNonNull($.severity, "expected parameter 'severity' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            $.warning = Objects.requireNonNull($.warning, "expected parameter 'warning' to be non-null");
+            return $;
         }
     }
+
 }

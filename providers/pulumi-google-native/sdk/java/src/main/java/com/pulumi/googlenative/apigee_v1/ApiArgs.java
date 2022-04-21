@@ -5,11 +5,11 @@ package com.pulumi.googlenative.apigee_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
     public static final ApiArgs Empty = new ApiArgs();
 
     @Import(name="action")
-      private final @Nullable Output<String> action;
+    private @Nullable Output<String> action;
 
-    public Output<String> action() {
-        return this.action == null ? Codegen.empty() : this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
@@ -29,10 +29,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="contentType")
-      private final @Nullable Output<String> contentType;
+    private @Nullable Output<String> contentType;
 
-    public Output<String> contentType() {
-        return this.contentType == null ? Codegen.empty() : this.contentType;
+    public Optional<Output<String>> contentType() {
+        return Optional.ofNullable(this.contentType);
     }
 
     /**
@@ -40,10 +40,10 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<String> data;
+    private @Nullable Output<String> data;
 
-    public Output<String> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<String>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -51,149 +51,134 @@ public final class ApiArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="extensions")
-      private final @Nullable Output<List<Map<String,String>>> extensions;
+    private @Nullable Output<List<Map<String,String>>> extensions;
 
-    public Output<List<Map<String,String>>> extensions() {
-        return this.extensions == null ? Codegen.empty() : this.extensions;
+    public Optional<Output<List<Map<String,String>>>> extensions() {
+        return Optional.ofNullable(this.extensions);
     }
 
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     @Import(name="organizationId", required=true)
-      private final Output<String> organizationId;
+    private Output<String> organizationId;
 
     public Output<String> organizationId() {
         return this.organizationId;
     }
 
     @Import(name="validate")
-      private final @Nullable Output<String> validate;
+    private @Nullable Output<String> validate;
 
-    public Output<String> validate() {
-        return this.validate == null ? Codegen.empty() : this.validate;
+    public Optional<Output<String>> validate() {
+        return Optional.ofNullable(this.validate);
     }
 
-    public ApiArgs(
-        @Nullable Output<String> action,
-        @Nullable Output<String> contentType,
-        @Nullable Output<String> data,
-        @Nullable Output<List<Map<String,String>>> extensions,
-        @Nullable Output<String> name,
-        Output<String> organizationId,
-        @Nullable Output<String> validate) {
-        this.action = action;
-        this.contentType = contentType;
-        this.data = data;
-        this.extensions = extensions;
-        this.name = name;
-        this.organizationId = Objects.requireNonNull(organizationId, "expected parameter 'organizationId' to be non-null");
-        this.validate = validate;
-    }
+    private ApiArgs() {}
 
-    private ApiArgs() {
-        this.action = Codegen.empty();
-        this.contentType = Codegen.empty();
-        this.data = Codegen.empty();
-        this.extensions = Codegen.empty();
-        this.name = Codegen.empty();
-        this.organizationId = Codegen.empty();
-        this.validate = Codegen.empty();
+    private ApiArgs(ApiArgs $) {
+        this.action = $.action;
+        this.contentType = $.contentType;
+        this.data = $.data;
+        this.extensions = $.extensions;
+        this.name = $.name;
+        this.organizationId = $.organizationId;
+        this.validate = $.validate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ApiArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> action;
-        private @Nullable Output<String> contentType;
-        private @Nullable Output<String> data;
-        private @Nullable Output<List<Map<String,String>>> extensions;
-        private @Nullable Output<String> name;
-        private Output<String> organizationId;
-        private @Nullable Output<String> validate;
+        private ApiArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ApiArgs();
         }
 
         public Builder(ApiArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.contentType = defaults.contentType;
-    	      this.data = defaults.data;
-    	      this.extensions = defaults.extensions;
-    	      this.name = defaults.name;
-    	      this.organizationId = defaults.organizationId;
-    	      this.validate = defaults.validate;
+            $ = new ApiArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder action(@Nullable Output<String> action) {
-            this.action = action;
+            $.action = action;
             return this;
         }
-        public Builder action(@Nullable String action) {
-            this.action = Codegen.ofNullable(action);
-            return this;
+
+        public Builder action(String action) {
+            return action(Output.of(action));
         }
+
         public Builder contentType(@Nullable Output<String> contentType) {
-            this.contentType = contentType;
+            $.contentType = contentType;
             return this;
         }
-        public Builder contentType(@Nullable String contentType) {
-            this.contentType = Codegen.ofNullable(contentType);
-            return this;
+
+        public Builder contentType(String contentType) {
+            return contentType(Output.of(contentType));
         }
+
         public Builder data(@Nullable Output<String> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable String data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(String data) {
+            return data(Output.of(data));
         }
+
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
-            this.extensions = extensions;
+            $.extensions = extensions;
             return this;
         }
-        public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Codegen.ofNullable(extensions);
-            return this;
+
+        public Builder extensions(List<Map<String,String>> extensions) {
+            return extensions(Output.of(extensions));
         }
+
+        public Builder extensions(Map<String,String>... extensions) {
+            return extensions(List.of(extensions));
+        }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder organizationId(Output<String> organizationId) {
-            this.organizationId = Objects.requireNonNull(organizationId);
+            $.organizationId = organizationId;
             return this;
         }
+
         public Builder organizationId(String organizationId) {
-            this.organizationId = Output.of(Objects.requireNonNull(organizationId));
-            return this;
+            return organizationId(Output.of(organizationId));
         }
+
         public Builder validate(@Nullable Output<String> validate) {
-            this.validate = validate;
+            $.validate = validate;
             return this;
         }
-        public Builder validate(@Nullable String validate) {
-            this.validate = Codegen.ofNullable(validate);
-            return this;
-        }        public ApiArgs build() {
-            return new ApiArgs(action, contentType, data, extensions, name, organizationId, validate);
+
+        public Builder validate(String validate) {
+            return validate(Output.of(validate));
+        }
+
+        public ApiArgs build() {
+            $.organizationId = Objects.requireNonNull($.organizationId, "expected parameter 'organizationId' to be non-null");
+            return $;
         }
     }
+
 }

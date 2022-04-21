@@ -3,7 +3,7 @@
 
 package com.pulumi.googlenative.testing_v1.inputs;
 
-import java.util.Objects;
+
 
 
 /**
@@ -14,28 +14,19 @@ public final class GoogleAutoResponse extends com.pulumi.resources.InvokeArgs {
 
     public static final GoogleAutoResponse Empty = new GoogleAutoResponse();
 
-    public GoogleAutoResponse() {
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
-    public static Builder builder(GoogleAutoResponse defaults) {
-        return new Builder(defaults);
-    }
-
     public static final class Builder {
+        private GoogleAutoResponse $;
 
         public Builder() {
-    	      // Empty
-        }
-
-        public Builder(GoogleAutoResponse defaults) {
-    	      Objects.requireNonNull(defaults);
+            $ = new GoogleAutoResponse();
         }
         public GoogleAutoResponse build() {
-            return new GoogleAutoResponse();
+            return $;
         }
     }
+
 }

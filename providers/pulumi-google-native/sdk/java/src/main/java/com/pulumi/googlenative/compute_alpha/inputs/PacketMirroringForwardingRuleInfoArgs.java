@@ -5,9 +5,9 @@ package com.pulumi.googlenative.compute_alpha.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,49 +20,48 @@ public final class PacketMirroringForwardingRuleInfoArgs extends com.pulumi.reso
      * 
      */
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public PacketMirroringForwardingRuleInfoArgs(@Nullable Output<String> url) {
-        this.url = url;
-    }
+    private PacketMirroringForwardingRuleInfoArgs() {}
 
-    private PacketMirroringForwardingRuleInfoArgs() {
-        this.url = Codegen.empty();
+    private PacketMirroringForwardingRuleInfoArgs(PacketMirroringForwardingRuleInfoArgs $) {
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PacketMirroringForwardingRuleInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> url;
+        private PacketMirroringForwardingRuleInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PacketMirroringForwardingRuleInfoArgs();
         }
 
         public Builder(PacketMirroringForwardingRuleInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.url = defaults.url;
+            $ = new PacketMirroringForwardingRuleInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public PacketMirroringForwardingRuleInfoArgs build() {
-            return new PacketMirroringForwardingRuleInfoArgs(url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public PacketMirroringForwardingRuleInfoArgs build() {
+            return $;
         }
     }
+
 }

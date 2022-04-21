@@ -5,10 +5,10 @@ package com.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.cloudsearch_v1.enums.SourcePredefinedSource;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class SourceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="predefinedSource")
-      private final @Nullable Output<SourcePredefinedSource> predefinedSource;
+    private @Nullable Output<SourcePredefinedSource> predefinedSource;
 
-    public Output<SourcePredefinedSource> predefinedSource() {
-        return this.predefinedSource == null ? Codegen.empty() : this.predefinedSource;
+    public Optional<Output<SourcePredefinedSource>> predefinedSource() {
+        return Optional.ofNullable(this.predefinedSource);
     }
 
-    public SourceArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<SourcePredefinedSource> predefinedSource) {
-        this.name = name;
-        this.predefinedSource = predefinedSource;
-    }
+    private SourceArgs() {}
 
-    private SourceArgs() {
-        this.name = Codegen.empty();
-        this.predefinedSource = Codegen.empty();
+    private SourceArgs(SourceArgs $) {
+        this.name = $.name;
+        this.predefinedSource = $.predefinedSource;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<SourcePredefinedSource> predefinedSource;
+        private SourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SourceArgs();
         }
 
         public Builder(SourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.predefinedSource = defaults.predefinedSource;
+            $ = new SourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder predefinedSource(@Nullable Output<SourcePredefinedSource> predefinedSource) {
-            this.predefinedSource = predefinedSource;
+            $.predefinedSource = predefinedSource;
             return this;
         }
-        public Builder predefinedSource(@Nullable SourcePredefinedSource predefinedSource) {
-            this.predefinedSource = Codegen.ofNullable(predefinedSource);
-            return this;
-        }        public SourceArgs build() {
-            return new SourceArgs(name, predefinedSource);
+
+        public Builder predefinedSource(SourcePredefinedSource predefinedSource) {
+            return predefinedSource(Output.of(predefinedSource));
+        }
+
+        public SourceArgs build() {
+            return $;
         }
     }
+
 }

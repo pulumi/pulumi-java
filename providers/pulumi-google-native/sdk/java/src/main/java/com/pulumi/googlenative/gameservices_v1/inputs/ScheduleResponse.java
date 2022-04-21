@@ -21,7 +21,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cronJobDuration", required=true)
-      private final String cronJobDuration;
+    private String cronJobDuration;
 
     public String cronJobDuration() {
         return this.cronJobDuration;
@@ -32,7 +32,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="cronSpec", required=true)
-      private final String cronSpec;
+    private String cronSpec;
 
     public String cronSpec() {
         return this.cronSpec;
@@ -43,7 +43,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="endTime", required=true)
-      private final String endTime;
+    private String endTime;
 
     public String endTime() {
         return this.endTime;
@@ -54,73 +54,66 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="startTime", required=true)
-      private final String startTime;
+    private String startTime;
 
     public String startTime() {
         return this.startTime;
     }
 
-    public ScheduleResponse(
-        String cronJobDuration,
-        String cronSpec,
-        String endTime,
-        String startTime) {
-        this.cronJobDuration = Objects.requireNonNull(cronJobDuration, "expected parameter 'cronJobDuration' to be non-null");
-        this.cronSpec = Objects.requireNonNull(cronSpec, "expected parameter 'cronSpec' to be non-null");
-        this.endTime = Objects.requireNonNull(endTime, "expected parameter 'endTime' to be non-null");
-        this.startTime = Objects.requireNonNull(startTime, "expected parameter 'startTime' to be non-null");
-    }
+    private ScheduleResponse() {}
 
-    private ScheduleResponse() {
-        this.cronJobDuration = null;
-        this.cronSpec = null;
-        this.endTime = null;
-        this.startTime = null;
+    private ScheduleResponse(ScheduleResponse $) {
+        this.cronJobDuration = $.cronJobDuration;
+        this.cronSpec = $.cronSpec;
+        this.endTime = $.endTime;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String cronJobDuration;
-        private String cronSpec;
-        private String endTime;
-        private String startTime;
+        private ScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleResponse();
         }
 
         public Builder(ScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cronJobDuration = defaults.cronJobDuration;
-    	      this.cronSpec = defaults.cronSpec;
-    	      this.endTime = defaults.endTime;
-    	      this.startTime = defaults.startTime;
+            $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder cronJobDuration(String cronJobDuration) {
-            this.cronJobDuration = Objects.requireNonNull(cronJobDuration);
+            $.cronJobDuration = cronJobDuration;
             return this;
         }
+
         public Builder cronSpec(String cronSpec) {
-            this.cronSpec = Objects.requireNonNull(cronSpec);
+            $.cronSpec = cronSpec;
             return this;
         }
+
         public Builder endTime(String endTime) {
-            this.endTime = Objects.requireNonNull(endTime);
+            $.endTime = endTime;
             return this;
         }
+
         public Builder startTime(String startTime) {
-            this.startTime = Objects.requireNonNull(startTime);
+            $.startTime = startTime;
             return this;
-        }        public ScheduleResponse build() {
-            return new ScheduleResponse(cronJobDuration, cronSpec, endTime, startTime);
+        }
+
+        public ScheduleResponse build() {
+            $.cronJobDuration = Objects.requireNonNull($.cronJobDuration, "expected parameter 'cronJobDuration' to be non-null");
+            $.cronSpec = Objects.requireNonNull($.cronSpec, "expected parameter 'cronSpec' to be non-null");
+            $.endTime = Objects.requireNonNull($.endTime, "expected parameter 'endTime' to be non-null");
+            $.startTime = Objects.requireNonNull($.startTime, "expected parameter 'startTime' to be non-null");
+            return $;
         }
     }
+
 }

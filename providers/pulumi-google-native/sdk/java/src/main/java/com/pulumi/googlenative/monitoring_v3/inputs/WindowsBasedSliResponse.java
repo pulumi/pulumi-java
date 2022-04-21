@@ -23,7 +23,7 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="goodBadMetricFilter", required=true)
-      private final String goodBadMetricFilter;
+    private String goodBadMetricFilter;
 
     public String goodBadMetricFilter() {
         return this.goodBadMetricFilter;
@@ -34,7 +34,7 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="goodTotalRatioThreshold", required=true)
-      private final PerformanceThresholdResponse goodTotalRatioThreshold;
+    private PerformanceThresholdResponse goodTotalRatioThreshold;
 
     public PerformanceThresholdResponse goodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold;
@@ -45,7 +45,7 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metricMeanInRange", required=true)
-      private final MetricRangeResponse metricMeanInRange;
+    private MetricRangeResponse metricMeanInRange;
 
     public MetricRangeResponse metricMeanInRange() {
         return this.metricMeanInRange;
@@ -56,7 +56,7 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="metricSumInRange", required=true)
-      private final MetricRangeResponse metricSumInRange;
+    private MetricRangeResponse metricSumInRange;
 
     public MetricRangeResponse metricSumInRange() {
         return this.metricSumInRange;
@@ -67,82 +67,73 @@ public final class WindowsBasedSliResponse extends com.pulumi.resources.InvokeAr
      * 
      */
     @Import(name="windowPeriod", required=true)
-      private final String windowPeriod;
+    private String windowPeriod;
 
     public String windowPeriod() {
         return this.windowPeriod;
     }
 
-    public WindowsBasedSliResponse(
-        String goodBadMetricFilter,
-        PerformanceThresholdResponse goodTotalRatioThreshold,
-        MetricRangeResponse metricMeanInRange,
-        MetricRangeResponse metricSumInRange,
-        String windowPeriod) {
-        this.goodBadMetricFilter = Objects.requireNonNull(goodBadMetricFilter, "expected parameter 'goodBadMetricFilter' to be non-null");
-        this.goodTotalRatioThreshold = Objects.requireNonNull(goodTotalRatioThreshold, "expected parameter 'goodTotalRatioThreshold' to be non-null");
-        this.metricMeanInRange = Objects.requireNonNull(metricMeanInRange, "expected parameter 'metricMeanInRange' to be non-null");
-        this.metricSumInRange = Objects.requireNonNull(metricSumInRange, "expected parameter 'metricSumInRange' to be non-null");
-        this.windowPeriod = Objects.requireNonNull(windowPeriod, "expected parameter 'windowPeriod' to be non-null");
-    }
+    private WindowsBasedSliResponse() {}
 
-    private WindowsBasedSliResponse() {
-        this.goodBadMetricFilter = null;
-        this.goodTotalRatioThreshold = null;
-        this.metricMeanInRange = null;
-        this.metricSumInRange = null;
-        this.windowPeriod = null;
+    private WindowsBasedSliResponse(WindowsBasedSliResponse $) {
+        this.goodBadMetricFilter = $.goodBadMetricFilter;
+        this.goodTotalRatioThreshold = $.goodTotalRatioThreshold;
+        this.metricMeanInRange = $.metricMeanInRange;
+        this.metricSumInRange = $.metricSumInRange;
+        this.windowPeriod = $.windowPeriod;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsBasedSliResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String goodBadMetricFilter;
-        private PerformanceThresholdResponse goodTotalRatioThreshold;
-        private MetricRangeResponse metricMeanInRange;
-        private MetricRangeResponse metricSumInRange;
-        private String windowPeriod;
+        private WindowsBasedSliResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsBasedSliResponse();
         }
 
         public Builder(WindowsBasedSliResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.goodBadMetricFilter = defaults.goodBadMetricFilter;
-    	      this.goodTotalRatioThreshold = defaults.goodTotalRatioThreshold;
-    	      this.metricMeanInRange = defaults.metricMeanInRange;
-    	      this.metricSumInRange = defaults.metricSumInRange;
-    	      this.windowPeriod = defaults.windowPeriod;
+            $ = new WindowsBasedSliResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder goodBadMetricFilter(String goodBadMetricFilter) {
-            this.goodBadMetricFilter = Objects.requireNonNull(goodBadMetricFilter);
+            $.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
+
         public Builder goodTotalRatioThreshold(PerformanceThresholdResponse goodTotalRatioThreshold) {
-            this.goodTotalRatioThreshold = Objects.requireNonNull(goodTotalRatioThreshold);
+            $.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
+
         public Builder metricMeanInRange(MetricRangeResponse metricMeanInRange) {
-            this.metricMeanInRange = Objects.requireNonNull(metricMeanInRange);
+            $.metricMeanInRange = metricMeanInRange;
             return this;
         }
+
         public Builder metricSumInRange(MetricRangeResponse metricSumInRange) {
-            this.metricSumInRange = Objects.requireNonNull(metricSumInRange);
+            $.metricSumInRange = metricSumInRange;
             return this;
         }
+
         public Builder windowPeriod(String windowPeriod) {
-            this.windowPeriod = Objects.requireNonNull(windowPeriod);
+            $.windowPeriod = windowPeriod;
             return this;
-        }        public WindowsBasedSliResponse build() {
-            return new WindowsBasedSliResponse(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
+        }
+
+        public WindowsBasedSliResponse build() {
+            $.goodBadMetricFilter = Objects.requireNonNull($.goodBadMetricFilter, "expected parameter 'goodBadMetricFilter' to be non-null");
+            $.goodTotalRatioThreshold = Objects.requireNonNull($.goodTotalRatioThreshold, "expected parameter 'goodTotalRatioThreshold' to be non-null");
+            $.metricMeanInRange = Objects.requireNonNull($.metricMeanInRange, "expected parameter 'metricMeanInRange' to be non-null");
+            $.metricSumInRange = Objects.requireNonNull($.metricSumInRange, "expected parameter 'metricSumInRange' to be non-null");
+            $.windowPeriod = Objects.requireNonNull($.windowPeriod, "expected parameter 'windowPeriod' to be non-null");
+            return $;
         }
     }
+
 }

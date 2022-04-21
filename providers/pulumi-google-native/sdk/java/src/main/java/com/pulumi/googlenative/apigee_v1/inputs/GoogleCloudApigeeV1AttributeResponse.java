@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1AttributeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -32,55 +32,52 @@ public final class GoogleCloudApigeeV1AttributeResponse extends com.pulumi.resou
      * 
      */
     @Import(name="value", required=true)
-      private final String value;
+    private String value;
 
     public String value() {
         return this.value;
     }
 
-    public GoogleCloudApigeeV1AttributeResponse(
-        String name,
-        String value) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = Objects.requireNonNull(value, "expected parameter 'value' to be non-null");
-    }
+    private GoogleCloudApigeeV1AttributeResponse() {}
 
-    private GoogleCloudApigeeV1AttributeResponse() {
-        this.name = null;
-        this.value = null;
+    private GoogleCloudApigeeV1AttributeResponse(GoogleCloudApigeeV1AttributeResponse $) {
+        this.name = $.name;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudApigeeV1AttributeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String name;
-        private String value;
+        private GoogleCloudApigeeV1AttributeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudApigeeV1AttributeResponse();
         }
 
         public Builder(GoogleCloudApigeeV1AttributeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
+            $ = new GoogleCloudApigeeV1AttributeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder value(String value) {
-            this.value = Objects.requireNonNull(value);
+            $.value = value;
             return this;
-        }        public GoogleCloudApigeeV1AttributeResponse build() {
-            return new GoogleCloudApigeeV1AttributeResponse(name, value);
+        }
+
+        public GoogleCloudApigeeV1AttributeResponse build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.value = Objects.requireNonNull($.value, "expected parameter 'value' to be non-null");
+            return $;
         }
     }
+
 }

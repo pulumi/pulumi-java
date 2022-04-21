@@ -22,7 +22,7 @@ public final class SlsaRecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="arguments", required=true)
-      private final Map<String,String> arguments;
+    private Map<String,String> arguments;
 
     public Map<String,String> arguments() {
         return this.arguments;
@@ -33,7 +33,7 @@ public final class SlsaRecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="definedInMaterial", required=true)
-      private final String definedInMaterial;
+    private String definedInMaterial;
 
     public String definedInMaterial() {
         return this.definedInMaterial;
@@ -44,7 +44,7 @@ public final class SlsaRecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="entryPoint", required=true)
-      private final String entryPoint;
+    private String entryPoint;
 
     public String entryPoint() {
         return this.entryPoint;
@@ -55,7 +55,7 @@ public final class SlsaRecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="environment", required=true)
-      private final Map<String,String> environment;
+    private Map<String,String> environment;
 
     public Map<String,String> environment() {
         return this.environment;
@@ -66,82 +66,73 @@ public final class SlsaRecipeResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final String type;
+    private String type;
 
     public String type() {
         return this.type;
     }
 
-    public SlsaRecipeResponse(
-        Map<String,String> arguments,
-        String definedInMaterial,
-        String entryPoint,
-        Map<String,String> environment,
-        String type) {
-        this.arguments = Objects.requireNonNull(arguments, "expected parameter 'arguments' to be non-null");
-        this.definedInMaterial = Objects.requireNonNull(definedInMaterial, "expected parameter 'definedInMaterial' to be non-null");
-        this.entryPoint = Objects.requireNonNull(entryPoint, "expected parameter 'entryPoint' to be non-null");
-        this.environment = Objects.requireNonNull(environment, "expected parameter 'environment' to be non-null");
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private SlsaRecipeResponse() {}
 
-    private SlsaRecipeResponse() {
-        this.arguments = Map.of();
-        this.definedInMaterial = null;
-        this.entryPoint = null;
-        this.environment = Map.of();
-        this.type = null;
+    private SlsaRecipeResponse(SlsaRecipeResponse $) {
+        this.arguments = $.arguments;
+        this.definedInMaterial = $.definedInMaterial;
+        this.entryPoint = $.entryPoint;
+        this.environment = $.environment;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SlsaRecipeResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Map<String,String> arguments;
-        private String definedInMaterial;
-        private String entryPoint;
-        private Map<String,String> environment;
-        private String type;
+        private SlsaRecipeResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SlsaRecipeResponse();
         }
 
         public Builder(SlsaRecipeResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.arguments = defaults.arguments;
-    	      this.definedInMaterial = defaults.definedInMaterial;
-    	      this.entryPoint = defaults.entryPoint;
-    	      this.environment = defaults.environment;
-    	      this.type = defaults.type;
+            $ = new SlsaRecipeResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder arguments(Map<String,String> arguments) {
-            this.arguments = Objects.requireNonNull(arguments);
+            $.arguments = arguments;
             return this;
         }
+
         public Builder definedInMaterial(String definedInMaterial) {
-            this.definedInMaterial = Objects.requireNonNull(definedInMaterial);
+            $.definedInMaterial = definedInMaterial;
             return this;
         }
+
         public Builder entryPoint(String entryPoint) {
-            this.entryPoint = Objects.requireNonNull(entryPoint);
+            $.entryPoint = entryPoint;
             return this;
         }
+
         public Builder environment(Map<String,String> environment) {
-            this.environment = Objects.requireNonNull(environment);
+            $.environment = environment;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
-        }        public SlsaRecipeResponse build() {
-            return new SlsaRecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
+        }
+
+        public SlsaRecipeResponse build() {
+            $.arguments = Objects.requireNonNull($.arguments, "expected parameter 'arguments' to be non-null");
+            $.definedInMaterial = Objects.requireNonNull($.definedInMaterial, "expected parameter 'definedInMaterial' to be non-null");
+            $.entryPoint = Objects.requireNonNull($.entryPoint, "expected parameter 'entryPoint' to be non-null");
+            $.environment = Objects.requireNonNull($.environment, "expected parameter 'environment' to be non-null");
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

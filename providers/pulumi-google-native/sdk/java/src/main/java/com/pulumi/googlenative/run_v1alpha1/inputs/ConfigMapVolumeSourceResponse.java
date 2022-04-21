@@ -25,7 +25,7 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="defaultMode", required=true)
-      private final Integer defaultMode;
+    private Integer defaultMode;
 
     public Integer defaultMode() {
         return this.defaultMode;
@@ -36,7 +36,7 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="items", required=true)
-      private final List<KeyToPathResponse> items;
+    private List<KeyToPathResponse> items;
 
     public List<KeyToPathResponse> items() {
         return this.items;
@@ -47,7 +47,7 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="name", required=true)
-      private final String name;
+    private String name;
 
     public String name() {
         return this.name;
@@ -58,76 +58,70 @@ public final class ConfigMapVolumeSourceResponse extends com.pulumi.resources.In
      * 
      */
     @Import(name="optional", required=true)
-      private final Boolean optional;
+    private Boolean optional;
 
     public Boolean optional() {
         return this.optional;
     }
 
-    public ConfigMapVolumeSourceResponse(
-        Integer defaultMode,
-        List<KeyToPathResponse> items,
-        String name,
-        Boolean optional) {
-        this.defaultMode = Objects.requireNonNull(defaultMode, "expected parameter 'defaultMode' to be non-null");
-        this.items = Objects.requireNonNull(items, "expected parameter 'items' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.optional = Objects.requireNonNull(optional, "expected parameter 'optional' to be non-null");
-    }
+    private ConfigMapVolumeSourceResponse() {}
 
-    private ConfigMapVolumeSourceResponse() {
-        this.defaultMode = null;
-        this.items = List.of();
-        this.name = null;
-        this.optional = null;
+    private ConfigMapVolumeSourceResponse(ConfigMapVolumeSourceResponse $) {
+        this.defaultMode = $.defaultMode;
+        this.items = $.items;
+        this.name = $.name;
+        this.optional = $.optional;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapVolumeSourceResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Integer defaultMode;
-        private List<KeyToPathResponse> items;
-        private String name;
-        private Boolean optional;
+        private ConfigMapVolumeSourceResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapVolumeSourceResponse();
         }
 
         public Builder(ConfigMapVolumeSourceResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.defaultMode = defaults.defaultMode;
-    	      this.items = defaults.items;
-    	      this.name = defaults.name;
-    	      this.optional = defaults.optional;
+            $ = new ConfigMapVolumeSourceResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder defaultMode(Integer defaultMode) {
-            this.defaultMode = Objects.requireNonNull(defaultMode);
+            $.defaultMode = defaultMode;
             return this;
         }
+
         public Builder items(List<KeyToPathResponse> items) {
-            this.items = Objects.requireNonNull(items);
+            $.items = items;
             return this;
         }
+
         public Builder items(KeyToPathResponse... items) {
             return items(List.of(items));
         }
+
         public Builder name(String name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder optional(Boolean optional) {
-            this.optional = Objects.requireNonNull(optional);
+            $.optional = optional;
             return this;
-        }        public ConfigMapVolumeSourceResponse build() {
-            return new ConfigMapVolumeSourceResponse(defaultMode, items, name, optional);
+        }
+
+        public ConfigMapVolumeSourceResponse build() {
+            $.defaultMode = Objects.requireNonNull($.defaultMode, "expected parameter 'defaultMode' to be non-null");
+            $.items = Objects.requireNonNull($.items, "expected parameter 'items' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.optional = Objects.requireNonNull($.optional, "expected parameter 'optional' to be non-null");
+            return $;
         }
     }
+
 }

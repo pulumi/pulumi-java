@@ -5,11 +5,11 @@ package com.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs;
 import com.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -22,10 +22,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="autoscale")
-      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
+    private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale() {
-        return this.autoscale == null ? Codegen.empty() : this.autoscale;
+    public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs>> autoscale() {
+        return Optional.ofNullable(this.autoscale);
     }
 
     /**
@@ -33,14 +33,14 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="channel")
-      private final @Nullable Output<String> channel;
+    private @Nullable Output<String> channel;
 
-    public Output<String> channel() {
-        return this.channel == null ? Codegen.empty() : this.channel;
+    public Optional<Output<String>> channel() {
+        return Optional.ofNullable(this.channel);
     }
 
     @Import(name="instanceId", required=true)
-      private final Output<String> instanceId;
+    private Output<String> instanceId;
 
     public Output<String> instanceId() {
         return this.instanceId;
@@ -51,10 +51,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -62,10 +62,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parent")
-      private final @Nullable Output<String> parent;
+    private @Nullable Output<String> parent;
 
-    public Output<String> parent() {
-        return this.parent == null ? Codegen.empty() : this.parent;
+    public Optional<Output<String>> parent() {
+        return Optional.ofNullable(this.parent);
     }
 
     /**
@@ -73,17 +73,17 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="poolId")
-      private final @Nullable Output<String> poolId;
+    private @Nullable Output<String> poolId;
 
-    public Output<String> poolId() {
-        return this.poolId == null ? Codegen.empty() : this.poolId;
+    public Optional<Output<String>> poolId() {
+        return Optional.ofNullable(this.poolId);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     /**
@@ -91,10 +91,10 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerConfig")
-      private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
+    private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
 
-    public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig() {
-        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
+    public Optional<Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs>> workerConfig() {
+        return Optional.ofNullable(this.workerConfig);
     }
 
     /**
@@ -102,154 +102,129 @@ public final class WorkerPoolArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="workerCount")
-      private final @Nullable Output<String> workerCount;
+    private @Nullable Output<String> workerCount;
 
-    public Output<String> workerCount() {
-        return this.workerCount == null ? Codegen.empty() : this.workerCount;
+    public Optional<Output<String>> workerCount() {
+        return Optional.ofNullable(this.workerCount);
     }
 
-    public WorkerPoolArgs(
-        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale,
-        @Nullable Output<String> channel,
-        Output<String> instanceId,
-        @Nullable Output<String> name,
-        @Nullable Output<String> parent,
-        @Nullable Output<String> poolId,
-        @Nullable Output<String> project,
-        @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig,
-        @Nullable Output<String> workerCount) {
-        this.autoscale = autoscale;
-        this.channel = channel;
-        this.instanceId = Objects.requireNonNull(instanceId, "expected parameter 'instanceId' to be non-null");
-        this.name = name;
-        this.parent = parent;
-        this.poolId = poolId;
-        this.project = project;
-        this.workerConfig = workerConfig;
-        this.workerCount = workerCount;
-    }
+    private WorkerPoolArgs() {}
 
-    private WorkerPoolArgs() {
-        this.autoscale = Codegen.empty();
-        this.channel = Codegen.empty();
-        this.instanceId = Codegen.empty();
-        this.name = Codegen.empty();
-        this.parent = Codegen.empty();
-        this.poolId = Codegen.empty();
-        this.project = Codegen.empty();
-        this.workerConfig = Codegen.empty();
-        this.workerCount = Codegen.empty();
+    private WorkerPoolArgs(WorkerPoolArgs $) {
+        this.autoscale = $.autoscale;
+        this.channel = $.channel;
+        this.instanceId = $.instanceId;
+        this.name = $.name;
+        this.parent = $.parent;
+        this.poolId = $.poolId;
+        this.project = $.project;
+        this.workerConfig = $.workerConfig;
+        this.workerCount = $.workerCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerPoolArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale;
-        private @Nullable Output<String> channel;
-        private Output<String> instanceId;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> parent;
-        private @Nullable Output<String> poolId;
-        private @Nullable Output<String> project;
-        private @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig;
-        private @Nullable Output<String> workerCount;
+        private WorkerPoolArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerPoolArgs();
         }
 
         public Builder(WorkerPoolArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.autoscale = defaults.autoscale;
-    	      this.channel = defaults.channel;
-    	      this.instanceId = defaults.instanceId;
-    	      this.name = defaults.name;
-    	      this.parent = defaults.parent;
-    	      this.poolId = defaults.poolId;
-    	      this.project = defaults.project;
-    	      this.workerConfig = defaults.workerConfig;
-    	      this.workerCount = defaults.workerCount;
+            $ = new WorkerPoolArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder autoscale(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale) {
-            this.autoscale = autoscale;
+            $.autoscale = autoscale;
             return this;
         }
-        public Builder autoscale(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
-            this.autoscale = Codegen.ofNullable(autoscale);
-            return this;
+
+        public Builder autoscale(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
+            return autoscale(Output.of(autoscale));
         }
+
         public Builder channel(@Nullable Output<String> channel) {
-            this.channel = channel;
+            $.channel = channel;
             return this;
         }
-        public Builder channel(@Nullable String channel) {
-            this.channel = Codegen.ofNullable(channel);
-            return this;
+
+        public Builder channel(String channel) {
+            return channel(Output.of(channel));
         }
+
         public Builder instanceId(Output<String> instanceId) {
-            this.instanceId = Objects.requireNonNull(instanceId);
+            $.instanceId = instanceId;
             return this;
         }
+
         public Builder instanceId(String instanceId) {
-            this.instanceId = Output.of(Objects.requireNonNull(instanceId));
-            return this;
+            return instanceId(Output.of(instanceId));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder parent(@Nullable Output<String> parent) {
-            this.parent = parent;
+            $.parent = parent;
             return this;
         }
-        public Builder parent(@Nullable String parent) {
-            this.parent = Codegen.ofNullable(parent);
-            return this;
+
+        public Builder parent(String parent) {
+            return parent(Output.of(parent));
         }
+
         public Builder poolId(@Nullable Output<String> poolId) {
-            this.poolId = poolId;
+            $.poolId = poolId;
             return this;
         }
-        public Builder poolId(@Nullable String poolId) {
-            this.poolId = Codegen.ofNullable(poolId);
-            return this;
+
+        public Builder poolId(String poolId) {
+            return poolId(Output.of(poolId));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder workerConfig(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
-            this.workerConfig = workerConfig;
+            $.workerConfig = workerConfig;
             return this;
         }
-        public Builder workerConfig(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
-            this.workerConfig = Codegen.ofNullable(workerConfig);
-            return this;
+
+        public Builder workerConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
+            return workerConfig(Output.of(workerConfig));
         }
+
         public Builder workerCount(@Nullable Output<String> workerCount) {
-            this.workerCount = workerCount;
+            $.workerCount = workerCount;
             return this;
         }
-        public Builder workerCount(@Nullable String workerCount) {
-            this.workerCount = Codegen.ofNullable(workerCount);
-            return this;
-        }        public WorkerPoolArgs build() {
-            return new WorkerPoolArgs(autoscale, channel, instanceId, name, parent, poolId, project, workerConfig, workerCount);
+
+        public Builder workerCount(String workerCount) {
+            return workerCount(Output.of(workerCount));
+        }
+
+        public WorkerPoolArgs build() {
+            $.instanceId = Objects.requireNonNull($.instanceId, "expected parameter 'instanceId' to be non-null");
+            return $;
         }
     }
+
 }

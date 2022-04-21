@@ -22,7 +22,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="crontabSpec", required=true)
-      private final String crontabSpec;
+    private String crontabSpec;
 
     public String crontabSpec() {
         return this.crontabSpec;
@@ -33,7 +33,7 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="prefix", required=true)
-      private final String prefix;
+    private String prefix;
 
     public String prefix() {
         return this.prefix;
@@ -44,64 +44,59 @@ public final class ScheduleResponse extends com.pulumi.resources.InvokeArgs {
      * 
      */
     @Import(name="retentionCount", required=true)
-      private final Integer retentionCount;
+    private Integer retentionCount;
 
     public Integer retentionCount() {
         return this.retentionCount;
     }
 
-    public ScheduleResponse(
-        String crontabSpec,
-        String prefix,
-        Integer retentionCount) {
-        this.crontabSpec = Objects.requireNonNull(crontabSpec, "expected parameter 'crontabSpec' to be non-null");
-        this.prefix = Objects.requireNonNull(prefix, "expected parameter 'prefix' to be non-null");
-        this.retentionCount = Objects.requireNonNull(retentionCount, "expected parameter 'retentionCount' to be non-null");
-    }
+    private ScheduleResponse() {}
 
-    private ScheduleResponse() {
-        this.crontabSpec = null;
-        this.prefix = null;
-        this.retentionCount = null;
+    private ScheduleResponse(ScheduleResponse $) {
+        this.crontabSpec = $.crontabSpec;
+        this.prefix = $.prefix;
+        this.retentionCount = $.retentionCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ScheduleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String crontabSpec;
-        private String prefix;
-        private Integer retentionCount;
+        private ScheduleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new ScheduleResponse();
         }
 
         public Builder(ScheduleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.crontabSpec = defaults.crontabSpec;
-    	      this.prefix = defaults.prefix;
-    	      this.retentionCount = defaults.retentionCount;
+            $ = new ScheduleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder crontabSpec(String crontabSpec) {
-            this.crontabSpec = Objects.requireNonNull(crontabSpec);
+            $.crontabSpec = crontabSpec;
             return this;
         }
+
         public Builder prefix(String prefix) {
-            this.prefix = Objects.requireNonNull(prefix);
+            $.prefix = prefix;
             return this;
         }
+
         public Builder retentionCount(Integer retentionCount) {
-            this.retentionCount = Objects.requireNonNull(retentionCount);
+            $.retentionCount = retentionCount;
             return this;
-        }        public ScheduleResponse build() {
-            return new ScheduleResponse(crontabSpec, prefix, retentionCount);
+        }
+
+        public ScheduleResponse build() {
+            $.crontabSpec = Objects.requireNonNull($.crontabSpec, "expected parameter 'crontabSpec' to be non-null");
+            $.prefix = Objects.requireNonNull($.prefix, "expected parameter 'prefix' to be non-null");
+            $.retentionCount = Objects.requireNonNull($.retentionCount, "expected parameter 'retentionCount' to be non-null");
+            return $;
         }
     }
+
 }

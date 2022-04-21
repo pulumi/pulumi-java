@@ -22,7 +22,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="caCertificate", required=true)
-      private final String caCertificate;
+    private String caCertificate;
 
     public String caCertificate() {
         return this.caCertificate;
@@ -33,7 +33,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientCertificate", required=true)
-      private final String clientCertificate;
+    private String clientCertificate;
 
     public String clientCertificate() {
         return this.clientCertificate;
@@ -44,7 +44,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="clientKey", required=true)
-      private final String clientKey;
+    private String clientKey;
 
     public String clientKey() {
         return this.clientKey;
@@ -55,7 +55,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="dumpFilePath", required=true)
-      private final String dumpFilePath;
+    private String dumpFilePath;
 
     public String dumpFilePath() {
         return this.dumpFilePath;
@@ -66,7 +66,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="hostPort", required=true)
-      private final String hostPort;
+    private String hostPort;
 
     public String hostPort() {
         return this.hostPort;
@@ -77,7 +77,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -88,7 +88,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="password", required=true)
-      private final String password;
+    private String password;
 
     public String password() {
         return this.password;
@@ -99,7 +99,7 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="sourceInstance", required=true)
-      private final InstanceReferenceResponse sourceInstance;
+    private InstanceReferenceResponse sourceInstance;
 
     public InstanceReferenceResponse sourceInstance() {
         return this.sourceInstance;
@@ -110,118 +110,101 @@ public final class OnPremisesConfigurationResponse extends com.pulumi.resources.
      * 
      */
     @Import(name="username", required=true)
-      private final String username;
+    private String username;
 
     public String username() {
         return this.username;
     }
 
-    public OnPremisesConfigurationResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        String dumpFilePath,
-        String hostPort,
-        String kind,
-        String password,
-        InstanceReferenceResponse sourceInstance,
-        String username) {
-        this.caCertificate = Objects.requireNonNull(caCertificate, "expected parameter 'caCertificate' to be non-null");
-        this.clientCertificate = Objects.requireNonNull(clientCertificate, "expected parameter 'clientCertificate' to be non-null");
-        this.clientKey = Objects.requireNonNull(clientKey, "expected parameter 'clientKey' to be non-null");
-        this.dumpFilePath = Objects.requireNonNull(dumpFilePath, "expected parameter 'dumpFilePath' to be non-null");
-        this.hostPort = Objects.requireNonNull(hostPort, "expected parameter 'hostPort' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.password = Objects.requireNonNull(password, "expected parameter 'password' to be non-null");
-        this.sourceInstance = Objects.requireNonNull(sourceInstance, "expected parameter 'sourceInstance' to be non-null");
-        this.username = Objects.requireNonNull(username, "expected parameter 'username' to be non-null");
-    }
+    private OnPremisesConfigurationResponse() {}
 
-    private OnPremisesConfigurationResponse() {
-        this.caCertificate = null;
-        this.clientCertificate = null;
-        this.clientKey = null;
-        this.dumpFilePath = null;
-        this.hostPort = null;
-        this.kind = null;
-        this.password = null;
-        this.sourceInstance = null;
-        this.username = null;
+    private OnPremisesConfigurationResponse(OnPremisesConfigurationResponse $) {
+        this.caCertificate = $.caCertificate;
+        this.clientCertificate = $.clientCertificate;
+        this.clientKey = $.clientKey;
+        this.dumpFilePath = $.dumpFilePath;
+        this.hostPort = $.hostPort;
+        this.kind = $.kind;
+        this.password = $.password;
+        this.sourceInstance = $.sourceInstance;
+        this.username = $.username;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OnPremisesConfigurationResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String caCertificate;
-        private String clientCertificate;
-        private String clientKey;
-        private String dumpFilePath;
-        private String hostPort;
-        private String kind;
-        private String password;
-        private InstanceReferenceResponse sourceInstance;
-        private String username;
+        private OnPremisesConfigurationResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new OnPremisesConfigurationResponse();
         }
 
         public Builder(OnPremisesConfigurationResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.caCertificate = defaults.caCertificate;
-    	      this.clientCertificate = defaults.clientCertificate;
-    	      this.clientKey = defaults.clientKey;
-    	      this.dumpFilePath = defaults.dumpFilePath;
-    	      this.hostPort = defaults.hostPort;
-    	      this.kind = defaults.kind;
-    	      this.password = defaults.password;
-    	      this.sourceInstance = defaults.sourceInstance;
-    	      this.username = defaults.username;
+            $ = new OnPremisesConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder caCertificate(String caCertificate) {
-            this.caCertificate = Objects.requireNonNull(caCertificate);
+            $.caCertificate = caCertificate;
             return this;
         }
+
         public Builder clientCertificate(String clientCertificate) {
-            this.clientCertificate = Objects.requireNonNull(clientCertificate);
+            $.clientCertificate = clientCertificate;
             return this;
         }
+
         public Builder clientKey(String clientKey) {
-            this.clientKey = Objects.requireNonNull(clientKey);
+            $.clientKey = clientKey;
             return this;
         }
+
         public Builder dumpFilePath(String dumpFilePath) {
-            this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
+            $.dumpFilePath = dumpFilePath;
             return this;
         }
+
         public Builder hostPort(String hostPort) {
-            this.hostPort = Objects.requireNonNull(hostPort);
+            $.hostPort = hostPort;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder password(String password) {
-            this.password = Objects.requireNonNull(password);
+            $.password = password;
             return this;
         }
+
         public Builder sourceInstance(InstanceReferenceResponse sourceInstance) {
-            this.sourceInstance = Objects.requireNonNull(sourceInstance);
+            $.sourceInstance = sourceInstance;
             return this;
         }
+
         public Builder username(String username) {
-            this.username = Objects.requireNonNull(username);
+            $.username = username;
             return this;
-        }        public OnPremisesConfigurationResponse build() {
-            return new OnPremisesConfigurationResponse(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
+        }
+
+        public OnPremisesConfigurationResponse build() {
+            $.caCertificate = Objects.requireNonNull($.caCertificate, "expected parameter 'caCertificate' to be non-null");
+            $.clientCertificate = Objects.requireNonNull($.clientCertificate, "expected parameter 'clientCertificate' to be non-null");
+            $.clientKey = Objects.requireNonNull($.clientKey, "expected parameter 'clientKey' to be non-null");
+            $.dumpFilePath = Objects.requireNonNull($.dumpFilePath, "expected parameter 'dumpFilePath' to be non-null");
+            $.hostPort = Objects.requireNonNull($.hostPort, "expected parameter 'hostPort' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.password = Objects.requireNonNull($.password, "expected parameter 'password' to be non-null");
+            $.sourceInstance = Objects.requireNonNull($.sourceInstance, "expected parameter 'sourceInstance' to be non-null");
+            $.username = Objects.requireNonNull($.username, "expected parameter 'username' to be non-null");
+            return $;
         }
     }
+
 }

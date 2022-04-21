@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="action", required=true)
-      private final String action;
+    private String action;
 
     public String action() {
         return this.action;
@@ -39,7 +39,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="description", required=true)
-      private final String description;
+    private String description;
 
     public String description() {
         return this.description;
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="direction", required=true)
-      private final String direction;
+    private String direction;
 
     public String direction() {
         return this.direction;
@@ -61,7 +61,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="enableLogging", required=true)
-      private final Boolean enableLogging;
+    private Boolean enableLogging;
 
     public Boolean enableLogging() {
         return this.enableLogging;
@@ -72,7 +72,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="headerAction", required=true)
-      private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
+    private SecurityPolicyRuleHttpHeaderActionResponse headerAction;
 
     public SecurityPolicyRuleHttpHeaderActionResponse headerAction() {
         return this.headerAction;
@@ -83,7 +83,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="kind", required=true)
-      private final String kind;
+    private String kind;
 
     public String kind() {
         return this.kind;
@@ -94,7 +94,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="match", required=true)
-      private final SecurityPolicyRuleMatcherResponse match;
+    private SecurityPolicyRuleMatcherResponse match;
 
     public SecurityPolicyRuleMatcherResponse match() {
         return this.match;
@@ -105,7 +105,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="preview", required=true)
-      private final Boolean preview;
+    private Boolean preview;
 
     public Boolean preview() {
         return this.preview;
@@ -116,7 +116,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="priority", required=true)
-      private final Integer priority;
+    private Integer priority;
 
     public Integer priority() {
         return this.priority;
@@ -127,7 +127,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="rateLimitOptions", required=true)
-      private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
+    private SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
 
     public SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions() {
         return this.rateLimitOptions;
@@ -138,7 +138,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="redirectOptions", required=true)
-      private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
+    private SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse redirectOptions() {
         return this.redirectOptions;
@@ -149,7 +149,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ruleNumber", required=true)
-      private final String ruleNumber;
+    private String ruleNumber;
 
     public String ruleNumber() {
         return this.ruleNumber;
@@ -160,7 +160,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="ruleTupleCount", required=true)
-      private final Integer ruleTupleCount;
+    private Integer ruleTupleCount;
 
     public Integer ruleTupleCount() {
         return this.ruleTupleCount;
@@ -171,7 +171,7 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetResources", required=true)
-      private final List<String> targetResources;
+    private List<String> targetResources;
 
     public List<String> targetResources() {
         return this.targetResources;
@@ -182,178 +182,151 @@ public final class SecurityPolicyRuleResponse extends com.pulumi.resources.Invok
      * 
      */
     @Import(name="targetServiceAccounts", required=true)
-      private final List<String> targetServiceAccounts;
+    private List<String> targetServiceAccounts;
 
     public List<String> targetServiceAccounts() {
         return this.targetServiceAccounts;
     }
 
-    public SecurityPolicyRuleResponse(
-        String action,
-        String description,
-        String direction,
-        Boolean enableLogging,
-        SecurityPolicyRuleHttpHeaderActionResponse headerAction,
-        String kind,
-        SecurityPolicyRuleMatcherResponse match,
-        Boolean preview,
-        Integer priority,
-        SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
-        SecurityPolicyRuleRedirectOptionsResponse redirectOptions,
-        String ruleNumber,
-        Integer ruleTupleCount,
-        List<String> targetResources,
-        List<String> targetServiceAccounts) {
-        this.action = Objects.requireNonNull(action, "expected parameter 'action' to be non-null");
-        this.description = Objects.requireNonNull(description, "expected parameter 'description' to be non-null");
-        this.direction = Objects.requireNonNull(direction, "expected parameter 'direction' to be non-null");
-        this.enableLogging = Objects.requireNonNull(enableLogging, "expected parameter 'enableLogging' to be non-null");
-        this.headerAction = Objects.requireNonNull(headerAction, "expected parameter 'headerAction' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.match = Objects.requireNonNull(match, "expected parameter 'match' to be non-null");
-        this.preview = Objects.requireNonNull(preview, "expected parameter 'preview' to be non-null");
-        this.priority = Objects.requireNonNull(priority, "expected parameter 'priority' to be non-null");
-        this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions, "expected parameter 'rateLimitOptions' to be non-null");
-        this.redirectOptions = Objects.requireNonNull(redirectOptions, "expected parameter 'redirectOptions' to be non-null");
-        this.ruleNumber = Objects.requireNonNull(ruleNumber, "expected parameter 'ruleNumber' to be non-null");
-        this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount, "expected parameter 'ruleTupleCount' to be non-null");
-        this.targetResources = Objects.requireNonNull(targetResources, "expected parameter 'targetResources' to be non-null");
-        this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts, "expected parameter 'targetServiceAccounts' to be non-null");
-    }
+    private SecurityPolicyRuleResponse() {}
 
-    private SecurityPolicyRuleResponse() {
-        this.action = null;
-        this.description = null;
-        this.direction = null;
-        this.enableLogging = null;
-        this.headerAction = null;
-        this.kind = null;
-        this.match = null;
-        this.preview = null;
-        this.priority = null;
-        this.rateLimitOptions = null;
-        this.redirectOptions = null;
-        this.ruleNumber = null;
-        this.ruleTupleCount = null;
-        this.targetResources = List.of();
-        this.targetServiceAccounts = List.of();
+    private SecurityPolicyRuleResponse(SecurityPolicyRuleResponse $) {
+        this.action = $.action;
+        this.description = $.description;
+        this.direction = $.direction;
+        this.enableLogging = $.enableLogging;
+        this.headerAction = $.headerAction;
+        this.kind = $.kind;
+        this.match = $.match;
+        this.preview = $.preview;
+        this.priority = $.priority;
+        this.rateLimitOptions = $.rateLimitOptions;
+        this.redirectOptions = $.redirectOptions;
+        this.ruleNumber = $.ruleNumber;
+        this.ruleTupleCount = $.ruleTupleCount;
+        this.targetResources = $.targetResources;
+        this.targetServiceAccounts = $.targetServiceAccounts;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecurityPolicyRuleResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String action;
-        private String description;
-        private String direction;
-        private Boolean enableLogging;
-        private SecurityPolicyRuleHttpHeaderActionResponse headerAction;
-        private String kind;
-        private SecurityPolicyRuleMatcherResponse match;
-        private Boolean preview;
-        private Integer priority;
-        private SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
-        private SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
-        private String ruleNumber;
-        private Integer ruleTupleCount;
-        private List<String> targetResources;
-        private List<String> targetServiceAccounts;
+        private SecurityPolicyRuleResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecurityPolicyRuleResponse();
         }
 
         public Builder(SecurityPolicyRuleResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.action = defaults.action;
-    	      this.description = defaults.description;
-    	      this.direction = defaults.direction;
-    	      this.enableLogging = defaults.enableLogging;
-    	      this.headerAction = defaults.headerAction;
-    	      this.kind = defaults.kind;
-    	      this.match = defaults.match;
-    	      this.preview = defaults.preview;
-    	      this.priority = defaults.priority;
-    	      this.rateLimitOptions = defaults.rateLimitOptions;
-    	      this.redirectOptions = defaults.redirectOptions;
-    	      this.ruleNumber = defaults.ruleNumber;
-    	      this.ruleTupleCount = defaults.ruleTupleCount;
-    	      this.targetResources = defaults.targetResources;
-    	      this.targetServiceAccounts = defaults.targetServiceAccounts;
+            $ = new SecurityPolicyRuleResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder action(String action) {
-            this.action = Objects.requireNonNull(action);
+            $.action = action;
             return this;
         }
+
         public Builder description(String description) {
-            this.description = Objects.requireNonNull(description);
+            $.description = description;
             return this;
         }
+
         public Builder direction(String direction) {
-            this.direction = Objects.requireNonNull(direction);
+            $.direction = direction;
             return this;
         }
+
         public Builder enableLogging(Boolean enableLogging) {
-            this.enableLogging = Objects.requireNonNull(enableLogging);
+            $.enableLogging = enableLogging;
             return this;
         }
+
         public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
-            this.headerAction = Objects.requireNonNull(headerAction);
+            $.headerAction = headerAction;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder match(SecurityPolicyRuleMatcherResponse match) {
-            this.match = Objects.requireNonNull(match);
+            $.match = match;
             return this;
         }
+
         public Builder preview(Boolean preview) {
-            this.preview = Objects.requireNonNull(preview);
+            $.preview = preview;
             return this;
         }
+
         public Builder priority(Integer priority) {
-            this.priority = Objects.requireNonNull(priority);
+            $.priority = priority;
             return this;
         }
+
         public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
-            this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
+            $.rateLimitOptions = rateLimitOptions;
             return this;
         }
+
         public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
-            this.redirectOptions = Objects.requireNonNull(redirectOptions);
+            $.redirectOptions = redirectOptions;
             return this;
         }
+
         public Builder ruleNumber(String ruleNumber) {
-            this.ruleNumber = Objects.requireNonNull(ruleNumber);
+            $.ruleNumber = ruleNumber;
             return this;
         }
+
         public Builder ruleTupleCount(Integer ruleTupleCount) {
-            this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
+            $.ruleTupleCount = ruleTupleCount;
             return this;
         }
+
         public Builder targetResources(List<String> targetResources) {
-            this.targetResources = Objects.requireNonNull(targetResources);
+            $.targetResources = targetResources;
             return this;
         }
+
         public Builder targetResources(String... targetResources) {
             return targetResources(List.of(targetResources));
         }
+
         public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
-            this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
+            $.targetServiceAccounts = targetServiceAccounts;
             return this;
         }
+
         public Builder targetServiceAccounts(String... targetServiceAccounts) {
             return targetServiceAccounts(List.of(targetServiceAccounts));
-        }        public SecurityPolicyRuleResponse build() {
-            return new SecurityPolicyRuleResponse(action, description, direction, enableLogging, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions, ruleNumber, ruleTupleCount, targetResources, targetServiceAccounts);
+        }
+
+        public SecurityPolicyRuleResponse build() {
+            $.action = Objects.requireNonNull($.action, "expected parameter 'action' to be non-null");
+            $.description = Objects.requireNonNull($.description, "expected parameter 'description' to be non-null");
+            $.direction = Objects.requireNonNull($.direction, "expected parameter 'direction' to be non-null");
+            $.enableLogging = Objects.requireNonNull($.enableLogging, "expected parameter 'enableLogging' to be non-null");
+            $.headerAction = Objects.requireNonNull($.headerAction, "expected parameter 'headerAction' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.match = Objects.requireNonNull($.match, "expected parameter 'match' to be non-null");
+            $.preview = Objects.requireNonNull($.preview, "expected parameter 'preview' to be non-null");
+            $.priority = Objects.requireNonNull($.priority, "expected parameter 'priority' to be non-null");
+            $.rateLimitOptions = Objects.requireNonNull($.rateLimitOptions, "expected parameter 'rateLimitOptions' to be non-null");
+            $.redirectOptions = Objects.requireNonNull($.redirectOptions, "expected parameter 'redirectOptions' to be non-null");
+            $.ruleNumber = Objects.requireNonNull($.ruleNumber, "expected parameter 'ruleNumber' to be non-null");
+            $.ruleTupleCount = Objects.requireNonNull($.ruleTupleCount, "expected parameter 'ruleTupleCount' to be non-null");
+            $.targetResources = Objects.requireNonNull($.targetResources, "expected parameter 'targetResources' to be non-null");
+            $.targetServiceAccounts = Objects.requireNonNull($.targetServiceAccounts, "expected parameter 'targetServiceAccounts' to be non-null");
+            return $;
         }
     }
+
 }

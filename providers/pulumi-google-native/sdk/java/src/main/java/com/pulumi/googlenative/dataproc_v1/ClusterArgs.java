@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dataproc_v1;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dataproc_v1.inputs.ClusterConfigArgs;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -18,10 +18,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     public static final ClusterArgs Empty = new ClusterArgs();
 
     @Import(name="actionOnFailedPrimaryWorkers")
-      private final @Nullable Output<String> actionOnFailedPrimaryWorkers;
+    private @Nullable Output<String> actionOnFailedPrimaryWorkers;
 
-    public Output<String> actionOnFailedPrimaryWorkers() {
-        return this.actionOnFailedPrimaryWorkers == null ? Codegen.empty() : this.actionOnFailedPrimaryWorkers;
+    public Optional<Output<String>> actionOnFailedPrimaryWorkers() {
+        return Optional.ofNullable(this.actionOnFailedPrimaryWorkers);
     }
 
     /**
@@ -29,7 +29,7 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="clusterName", required=true)
-      private final Output<String> clusterName;
+    private Output<String> clusterName;
 
     public Output<String> clusterName() {
         return this.clusterName;
@@ -40,10 +40,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="config")
-      private final @Nullable Output<ClusterConfigArgs> config;
+    private @Nullable Output<ClusterConfigArgs> config;
 
-    public Output<ClusterConfigArgs> config() {
-        return this.config == null ? Codegen.empty() : this.config;
+    public Optional<Output<ClusterConfigArgs>> config() {
+        return Optional.ofNullable(this.config);
     }
 
     /**
@@ -51,10 +51,10 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="labels")
-      private final @Nullable Output<Map<String,String>> labels;
+    private @Nullable Output<Map<String,String>> labels;
 
-    public Output<Map<String,String>> labels() {
-        return this.labels == null ? Codegen.empty() : this.labels;
+    public Optional<Output<Map<String,String>>> labels() {
+        return Optional.ofNullable(this.labels);
     }
 
     /**
@@ -62,142 +62,124 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="region", required=true)
-      private final Output<String> region;
+    private Output<String> region;
 
     public Output<String> region() {
         return this.region;
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
-    public ClusterArgs(
-        @Nullable Output<String> actionOnFailedPrimaryWorkers,
-        Output<String> clusterName,
-        @Nullable Output<ClusterConfigArgs> config,
-        @Nullable Output<Map<String,String>> labels,
-        @Nullable Output<String> project,
-        Output<String> region,
-        @Nullable Output<String> requestId) {
-        this.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
-        this.clusterName = Objects.requireNonNull(clusterName, "expected parameter 'clusterName' to be non-null");
-        this.config = config;
-        this.labels = labels;
-        this.project = project;
-        this.region = Objects.requireNonNull(region, "expected parameter 'region' to be non-null");
-        this.requestId = requestId;
-    }
+    private ClusterArgs() {}
 
-    private ClusterArgs() {
-        this.actionOnFailedPrimaryWorkers = Codegen.empty();
-        this.clusterName = Codegen.empty();
-        this.config = Codegen.empty();
-        this.labels = Codegen.empty();
-        this.project = Codegen.empty();
-        this.region = Codegen.empty();
-        this.requestId = Codegen.empty();
+    private ClusterArgs(ClusterArgs $) {
+        this.actionOnFailedPrimaryWorkers = $.actionOnFailedPrimaryWorkers;
+        this.clusterName = $.clusterName;
+        this.config = $.config;
+        this.labels = $.labels;
+        this.project = $.project;
+        this.region = $.region;
+        this.requestId = $.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ClusterArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> actionOnFailedPrimaryWorkers;
-        private Output<String> clusterName;
-        private @Nullable Output<ClusterConfigArgs> config;
-        private @Nullable Output<Map<String,String>> labels;
-        private @Nullable Output<String> project;
-        private Output<String> region;
-        private @Nullable Output<String> requestId;
+        private ClusterArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ClusterArgs();
         }
 
         public Builder(ClusterArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.actionOnFailedPrimaryWorkers = defaults.actionOnFailedPrimaryWorkers;
-    	      this.clusterName = defaults.clusterName;
-    	      this.config = defaults.config;
-    	      this.labels = defaults.labels;
-    	      this.project = defaults.project;
-    	      this.region = defaults.region;
-    	      this.requestId = defaults.requestId;
+            $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder actionOnFailedPrimaryWorkers(@Nullable Output<String> actionOnFailedPrimaryWorkers) {
-            this.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
+            $.actionOnFailedPrimaryWorkers = actionOnFailedPrimaryWorkers;
             return this;
         }
-        public Builder actionOnFailedPrimaryWorkers(@Nullable String actionOnFailedPrimaryWorkers) {
-            this.actionOnFailedPrimaryWorkers = Codegen.ofNullable(actionOnFailedPrimaryWorkers);
-            return this;
+
+        public Builder actionOnFailedPrimaryWorkers(String actionOnFailedPrimaryWorkers) {
+            return actionOnFailedPrimaryWorkers(Output.of(actionOnFailedPrimaryWorkers));
         }
+
         public Builder clusterName(Output<String> clusterName) {
-            this.clusterName = Objects.requireNonNull(clusterName);
+            $.clusterName = clusterName;
             return this;
         }
+
         public Builder clusterName(String clusterName) {
-            this.clusterName = Output.of(Objects.requireNonNull(clusterName));
-            return this;
+            return clusterName(Output.of(clusterName));
         }
+
         public Builder config(@Nullable Output<ClusterConfigArgs> config) {
-            this.config = config;
+            $.config = config;
             return this;
         }
-        public Builder config(@Nullable ClusterConfigArgs config) {
-            this.config = Codegen.ofNullable(config);
-            return this;
+
+        public Builder config(ClusterConfigArgs config) {
+            return config(Output.of(config));
         }
+
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
-            this.labels = labels;
+            $.labels = labels;
             return this;
         }
-        public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Codegen.ofNullable(labels);
-            return this;
+
+        public Builder labels(Map<String,String> labels) {
+            return labels(Output.of(labels));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder region(Output<String> region) {
-            this.region = Objects.requireNonNull(region);
+            $.region = region;
             return this;
         }
+
         public Builder region(String region) {
-            this.region = Output.of(Objects.requireNonNull(region));
-            return this;
+            return region(Output.of(region));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
-        }        public ClusterArgs build() {
-            return new ClusterArgs(actionOnFailedPrimaryWorkers, clusterName, config, labels, project, region, requestId);
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
+        }
+
+        public ClusterArgs build() {
+            $.clusterName = Objects.requireNonNull($.clusterName, "expected parameter 'clusterName' to be non-null");
+            $.region = Objects.requireNonNull($.region, "expected parameter 'region' to be non-null");
+            return $;
         }
     }
+
 }

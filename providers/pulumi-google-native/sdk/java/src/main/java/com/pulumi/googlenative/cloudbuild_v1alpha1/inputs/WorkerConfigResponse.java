@@ -22,7 +22,7 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="diskSizeGb", required=true)
-      private final String diskSizeGb;
+    private String diskSizeGb;
 
     public String diskSizeGb() {
         return this.diskSizeGb;
@@ -33,7 +33,7 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="machineType", required=true)
-      private final String machineType;
+    private String machineType;
 
     public String machineType() {
         return this.machineType;
@@ -44,7 +44,7 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="network", required=true)
-      private final NetworkResponse network;
+    private NetworkResponse network;
 
     public NetworkResponse network() {
         return this.network;
@@ -55,73 +55,66 @@ public final class WorkerConfigResponse extends com.pulumi.resources.InvokeArgs 
      * 
      */
     @Import(name="tag", required=true)
-      private final String tag;
+    private String tag;
 
     public String tag() {
         return this.tag;
     }
 
-    public WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType,
-        NetworkResponse network,
-        String tag) {
-        this.diskSizeGb = Objects.requireNonNull(diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
-        this.machineType = Objects.requireNonNull(machineType, "expected parameter 'machineType' to be non-null");
-        this.network = Objects.requireNonNull(network, "expected parameter 'network' to be non-null");
-        this.tag = Objects.requireNonNull(tag, "expected parameter 'tag' to be non-null");
-    }
+    private WorkerConfigResponse() {}
 
-    private WorkerConfigResponse() {
-        this.diskSizeGb = null;
-        this.machineType = null;
-        this.network = null;
-        this.tag = null;
+    private WorkerConfigResponse(WorkerConfigResponse $) {
+        this.diskSizeGb = $.diskSizeGb;
+        this.machineType = $.machineType;
+        this.network = $.network;
+        this.tag = $.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WorkerConfigResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private String diskSizeGb;
-        private String machineType;
-        private NetworkResponse network;
-        private String tag;
+        private WorkerConfigResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new WorkerConfigResponse();
         }
 
         public Builder(WorkerConfigResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.diskSizeGb = defaults.diskSizeGb;
-    	      this.machineType = defaults.machineType;
-    	      this.network = defaults.network;
-    	      this.tag = defaults.tag;
+            $ = new WorkerConfigResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder diskSizeGb(String diskSizeGb) {
-            this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
+            $.diskSizeGb = diskSizeGb;
             return this;
         }
+
         public Builder machineType(String machineType) {
-            this.machineType = Objects.requireNonNull(machineType);
+            $.machineType = machineType;
             return this;
         }
+
         public Builder network(NetworkResponse network) {
-            this.network = Objects.requireNonNull(network);
+            $.network = network;
             return this;
         }
+
         public Builder tag(String tag) {
-            this.tag = Objects.requireNonNull(tag);
+            $.tag = tag;
             return this;
-        }        public WorkerConfigResponse build() {
-            return new WorkerConfigResponse(diskSizeGb, machineType, network, tag);
+        }
+
+        public WorkerConfigResponse build() {
+            $.diskSizeGb = Objects.requireNonNull($.diskSizeGb, "expected parameter 'diskSizeGb' to be non-null");
+            $.machineType = Objects.requireNonNull($.machineType, "expected parameter 'machineType' to be non-null");
+            $.network = Objects.requireNonNull($.network, "expected parameter 'network' to be non-null");
+            $.tag = Objects.requireNonNull($.tag, "expected parameter 'tag' to be non-null");
+            return $;
         }
     }
+
 }

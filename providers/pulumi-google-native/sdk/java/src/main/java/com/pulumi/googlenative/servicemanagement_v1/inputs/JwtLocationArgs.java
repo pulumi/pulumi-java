@@ -5,9 +5,9 @@ package com.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="header")
-      private final @Nullable Output<String> header;
+    private @Nullable Output<String> header;
 
-    public Output<String> header() {
-        return this.header == null ? Codegen.empty() : this.header;
+    public Optional<Output<String>> header() {
+        return Optional.ofNullable(this.header);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="query")
-      private final @Nullable Output<String> query;
+    private @Nullable Output<String> query;
 
-    public Output<String> query() {
-        return this.query == null ? Codegen.empty() : this.query;
+    public Optional<Output<String>> query() {
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -46,76 +46,68 @@ public final class JwtLocationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valuePrefix")
-      private final @Nullable Output<String> valuePrefix;
+    private @Nullable Output<String> valuePrefix;
 
-    public Output<String> valuePrefix() {
-        return this.valuePrefix == null ? Codegen.empty() : this.valuePrefix;
+    public Optional<Output<String>> valuePrefix() {
+        return Optional.ofNullable(this.valuePrefix);
     }
 
-    public JwtLocationArgs(
-        @Nullable Output<String> header,
-        @Nullable Output<String> query,
-        @Nullable Output<String> valuePrefix) {
-        this.header = header;
-        this.query = query;
-        this.valuePrefix = valuePrefix;
-    }
+    private JwtLocationArgs() {}
 
-    private JwtLocationArgs() {
-        this.header = Codegen.empty();
-        this.query = Codegen.empty();
-        this.valuePrefix = Codegen.empty();
+    private JwtLocationArgs(JwtLocationArgs $) {
+        this.header = $.header;
+        this.query = $.query;
+        this.valuePrefix = $.valuePrefix;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(JwtLocationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> header;
-        private @Nullable Output<String> query;
-        private @Nullable Output<String> valuePrefix;
+        private JwtLocationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new JwtLocationArgs();
         }
 
         public Builder(JwtLocationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.header = defaults.header;
-    	      this.query = defaults.query;
-    	      this.valuePrefix = defaults.valuePrefix;
+            $ = new JwtLocationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder header(@Nullable Output<String> header) {
-            this.header = header;
+            $.header = header;
             return this;
         }
-        public Builder header(@Nullable String header) {
-            this.header = Codegen.ofNullable(header);
-            return this;
+
+        public Builder header(String header) {
+            return header(Output.of(header));
         }
+
         public Builder query(@Nullable Output<String> query) {
-            this.query = query;
+            $.query = query;
             return this;
         }
-        public Builder query(@Nullable String query) {
-            this.query = Codegen.ofNullable(query);
-            return this;
+
+        public Builder query(String query) {
+            return query(Output.of(query));
         }
+
         public Builder valuePrefix(@Nullable Output<String> valuePrefix) {
-            this.valuePrefix = valuePrefix;
+            $.valuePrefix = valuePrefix;
             return this;
         }
-        public Builder valuePrefix(@Nullable String valuePrefix) {
-            this.valuePrefix = Codegen.ofNullable(valuePrefix);
-            return this;
-        }        public JwtLocationArgs build() {
-            return new JwtLocationArgs(header, query, valuePrefix);
+
+        public Builder valuePrefix(String valuePrefix) {
+            return valuePrefix(Output.of(valuePrefix));
+        }
+
+        public JwtLocationArgs build() {
+            return $;
         }
     }
+
 }

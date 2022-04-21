@@ -5,7 +5,6 @@ package com.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.privateca_v1beta1.enums.KeyVersionSpecAlgorithm;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +23,7 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="algorithm", required=true)
-      private final Output<KeyVersionSpecAlgorithm> algorithm;
+    private Output<KeyVersionSpecAlgorithm> algorithm;
 
     public Output<KeyVersionSpecAlgorithm> algorithm() {
         return this.algorithm;
@@ -35,63 +34,60 @@ public final class KeyVersionSpecArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="cloudKmsKeyVersion", required=true)
-      private final Output<String> cloudKmsKeyVersion;
+    private Output<String> cloudKmsKeyVersion;
 
     public Output<String> cloudKmsKeyVersion() {
         return this.cloudKmsKeyVersion;
     }
 
-    public KeyVersionSpecArgs(
-        Output<KeyVersionSpecAlgorithm> algorithm,
-        Output<String> cloudKmsKeyVersion) {
-        this.algorithm = Objects.requireNonNull(algorithm, "expected parameter 'algorithm' to be non-null");
-        this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion, "expected parameter 'cloudKmsKeyVersion' to be non-null");
-    }
+    private KeyVersionSpecArgs() {}
 
-    private KeyVersionSpecArgs() {
-        this.algorithm = Codegen.empty();
-        this.cloudKmsKeyVersion = Codegen.empty();
+    private KeyVersionSpecArgs(KeyVersionSpecArgs $) {
+        this.algorithm = $.algorithm;
+        this.cloudKmsKeyVersion = $.cloudKmsKeyVersion;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyVersionSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<KeyVersionSpecAlgorithm> algorithm;
-        private Output<String> cloudKmsKeyVersion;
+        private KeyVersionSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyVersionSpecArgs();
         }
 
         public Builder(KeyVersionSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.algorithm = defaults.algorithm;
-    	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
+            $ = new KeyVersionSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder algorithm(Output<KeyVersionSpecAlgorithm> algorithm) {
-            this.algorithm = Objects.requireNonNull(algorithm);
+            $.algorithm = algorithm;
             return this;
         }
+
         public Builder algorithm(KeyVersionSpecAlgorithm algorithm) {
-            this.algorithm = Output.of(Objects.requireNonNull(algorithm));
-            return this;
+            return algorithm(Output.of(algorithm));
         }
+
         public Builder cloudKmsKeyVersion(Output<String> cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
+            $.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }
+
         public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
-            this.cloudKmsKeyVersion = Output.of(Objects.requireNonNull(cloudKmsKeyVersion));
-            return this;
-        }        public KeyVersionSpecArgs build() {
-            return new KeyVersionSpecArgs(algorithm, cloudKmsKeyVersion);
+            return cloudKmsKeyVersion(Output.of(cloudKmsKeyVersion));
+        }
+
+        public KeyVersionSpecArgs build() {
+            $.algorithm = Objects.requireNonNull($.algorithm, "expected parameter 'algorithm' to be non-null");
+            $.cloudKmsKeyVersion = Objects.requireNonNull($.cloudKmsKeyVersion, "expected parameter 'cloudKmsKeyVersion' to be non-null");
+            return $;
         }
     }
+
 }

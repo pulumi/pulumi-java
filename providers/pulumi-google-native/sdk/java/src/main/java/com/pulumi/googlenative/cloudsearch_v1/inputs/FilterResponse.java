@@ -18,62 +18,59 @@ public final class FilterResponse extends com.pulumi.resources.InvokeArgs {
     public static final FilterResponse Empty = new FilterResponse();
 
     @Import(name="compositeFilter", required=true)
-      private final CompositeFilterResponse compositeFilter;
+    private CompositeFilterResponse compositeFilter;
 
     public CompositeFilterResponse compositeFilter() {
         return this.compositeFilter;
     }
 
     @Import(name="valueFilter", required=true)
-      private final ValueFilterResponse valueFilter;
+    private ValueFilterResponse valueFilter;
 
     public ValueFilterResponse valueFilter() {
         return this.valueFilter;
     }
 
-    public FilterResponse(
-        CompositeFilterResponse compositeFilter,
-        ValueFilterResponse valueFilter) {
-        this.compositeFilter = Objects.requireNonNull(compositeFilter, "expected parameter 'compositeFilter' to be non-null");
-        this.valueFilter = Objects.requireNonNull(valueFilter, "expected parameter 'valueFilter' to be non-null");
-    }
+    private FilterResponse() {}
 
-    private FilterResponse() {
-        this.compositeFilter = null;
-        this.valueFilter = null;
+    private FilterResponse(FilterResponse $) {
+        this.compositeFilter = $.compositeFilter;
+        this.valueFilter = $.valueFilter;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FilterResponse defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private CompositeFilterResponse compositeFilter;
-        private ValueFilterResponse valueFilter;
+        private FilterResponse $;
 
         public Builder() {
-    	      // Empty
+            $ = new FilterResponse();
         }
 
         public Builder(FilterResponse defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.compositeFilter = defaults.compositeFilter;
-    	      this.valueFilter = defaults.valueFilter;
+            $ = new FilterResponse(Objects.requireNonNull(defaults));
         }
 
         public Builder compositeFilter(CompositeFilterResponse compositeFilter) {
-            this.compositeFilter = Objects.requireNonNull(compositeFilter);
+            $.compositeFilter = compositeFilter;
             return this;
         }
+
         public Builder valueFilter(ValueFilterResponse valueFilter) {
-            this.valueFilter = Objects.requireNonNull(valueFilter);
+            $.valueFilter = valueFilter;
             return this;
-        }        public FilterResponse build() {
-            return new FilterResponse(compositeFilter, valueFilter);
+        }
+
+        public FilterResponse build() {
+            $.compositeFilter = Objects.requireNonNull($.compositeFilter, "expected parameter 'compositeFilter' to be non-null");
+            $.valueFilter = Objects.requireNonNull($.valueFilter, "expected parameter 'valueFilter' to be non-null");
+            return $;
         }
     }
+
 }

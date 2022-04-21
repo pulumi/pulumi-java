@@ -5,11 +5,11 @@ package com.pulumi.googlenative.eventarc_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.eventarc_v1.inputs.CloudRunArgs;
 import com.pulumi.googlenative.eventarc_v1.inputs.GKEArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudFunction")
-      private final @Nullable Output<String> cloudFunction;
+    private @Nullable Output<String> cloudFunction;
 
-    public Output<String> cloudFunction() {
-        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
+    public Optional<Output<String>> cloudFunction() {
+        return Optional.ofNullable(this.cloudFunction);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cloudRun")
-      private final @Nullable Output<CloudRunArgs> cloudRun;
+    private @Nullable Output<CloudRunArgs> cloudRun;
 
-    public Output<CloudRunArgs> cloudRun() {
-        return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
+    public Optional<Output<CloudRunArgs>> cloudRun() {
+        return Optional.ofNullable(this.cloudRun);
     }
 
     /**
@@ -48,76 +48,68 @@ public final class DestinationArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gke")
-      private final @Nullable Output<GKEArgs> gke;
+    private @Nullable Output<GKEArgs> gke;
 
-    public Output<GKEArgs> gke() {
-        return this.gke == null ? Codegen.empty() : this.gke;
+    public Optional<Output<GKEArgs>> gke() {
+        return Optional.ofNullable(this.gke);
     }
 
-    public DestinationArgs(
-        @Nullable Output<String> cloudFunction,
-        @Nullable Output<CloudRunArgs> cloudRun,
-        @Nullable Output<GKEArgs> gke) {
-        this.cloudFunction = cloudFunction;
-        this.cloudRun = cloudRun;
-        this.gke = gke;
-    }
+    private DestinationArgs() {}
 
-    private DestinationArgs() {
-        this.cloudFunction = Codegen.empty();
-        this.cloudRun = Codegen.empty();
-        this.gke = Codegen.empty();
+    private DestinationArgs(DestinationArgs $) {
+        this.cloudFunction = $.cloudFunction;
+        this.cloudRun = $.cloudRun;
+        this.gke = $.gke;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DestinationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> cloudFunction;
-        private @Nullable Output<CloudRunArgs> cloudRun;
-        private @Nullable Output<GKEArgs> gke;
+        private DestinationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DestinationArgs();
         }
 
         public Builder(DestinationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.cloudFunction = defaults.cloudFunction;
-    	      this.cloudRun = defaults.cloudRun;
-    	      this.gke = defaults.gke;
+            $ = new DestinationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder cloudFunction(@Nullable Output<String> cloudFunction) {
-            this.cloudFunction = cloudFunction;
+            $.cloudFunction = cloudFunction;
             return this;
         }
-        public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Codegen.ofNullable(cloudFunction);
-            return this;
+
+        public Builder cloudFunction(String cloudFunction) {
+            return cloudFunction(Output.of(cloudFunction));
         }
+
         public Builder cloudRun(@Nullable Output<CloudRunArgs> cloudRun) {
-            this.cloudRun = cloudRun;
+            $.cloudRun = cloudRun;
             return this;
         }
-        public Builder cloudRun(@Nullable CloudRunArgs cloudRun) {
-            this.cloudRun = Codegen.ofNullable(cloudRun);
-            return this;
+
+        public Builder cloudRun(CloudRunArgs cloudRun) {
+            return cloudRun(Output.of(cloudRun));
         }
+
         public Builder gke(@Nullable Output<GKEArgs> gke) {
-            this.gke = gke;
+            $.gke = gke;
             return this;
         }
-        public Builder gke(@Nullable GKEArgs gke) {
-            this.gke = Codegen.ofNullable(gke);
-            return this;
-        }        public DestinationArgs build() {
-            return new DestinationArgs(cloudFunction, cloudRun, gke);
+
+        public Builder gke(GKEArgs gke) {
+            return gke(Output.of(gke));
+        }
+
+        public DestinationArgs build() {
+            return $;
         }
     }
+
 }

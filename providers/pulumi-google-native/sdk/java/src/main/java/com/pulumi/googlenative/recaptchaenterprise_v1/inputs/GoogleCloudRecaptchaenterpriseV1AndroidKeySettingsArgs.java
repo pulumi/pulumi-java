@@ -5,11 +5,11 @@ package com.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
      * 
      */
     @Import(name="allowAllPackageNames")
-      private final @Nullable Output<Boolean> allowAllPackageNames;
+    private @Nullable Output<Boolean> allowAllPackageNames;
 
-    public Output<Boolean> allowAllPackageNames() {
-        return this.allowAllPackageNames == null ? Codegen.empty() : this.allowAllPackageNames;
+    public Optional<Output<Boolean>> allowAllPackageNames() {
+        return Optional.ofNullable(this.allowAllPackageNames);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs extend
      * 
      */
     @Import(name="allowedPackageNames")
-      private final @Nullable Output<List<String>> allowedPackageNames;
+    private @Nullable Output<List<String>> allowedPackageNames;
 
-    public Output<List<String>> allowedPackageNames() {
-        return this.allowedPackageNames == null ? Codegen.empty() : this.allowedPackageNames;
+    public Optional<Output<List<String>>> allowedPackageNames() {
+        return Optional.ofNullable(this.allowedPackageNames);
     }
 
-    public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs(
-        @Nullable Output<Boolean> allowAllPackageNames,
-        @Nullable Output<List<String>> allowedPackageNames) {
-        this.allowAllPackageNames = allowAllPackageNames;
-        this.allowedPackageNames = allowedPackageNames;
-    }
+    private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs() {}
 
-    private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs() {
-        this.allowAllPackageNames = Codegen.empty();
-        this.allowedPackageNames = Codegen.empty();
+    private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs $) {
+        this.allowAllPackageNames = $.allowAllPackageNames;
+        this.allowedPackageNames = $.allowedPackageNames;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowAllPackageNames;
-        private @Nullable Output<List<String>> allowedPackageNames;
+        private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs();
         }
 
         public Builder(GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowAllPackageNames = defaults.allowAllPackageNames;
-    	      this.allowedPackageNames = defaults.allowedPackageNames;
+            $ = new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowAllPackageNames(@Nullable Output<Boolean> allowAllPackageNames) {
-            this.allowAllPackageNames = allowAllPackageNames;
+            $.allowAllPackageNames = allowAllPackageNames;
             return this;
         }
-        public Builder allowAllPackageNames(@Nullable Boolean allowAllPackageNames) {
-            this.allowAllPackageNames = Codegen.ofNullable(allowAllPackageNames);
-            return this;
+
+        public Builder allowAllPackageNames(Boolean allowAllPackageNames) {
+            return allowAllPackageNames(Output.of(allowAllPackageNames));
         }
+
         public Builder allowedPackageNames(@Nullable Output<List<String>> allowedPackageNames) {
-            this.allowedPackageNames = allowedPackageNames;
+            $.allowedPackageNames = allowedPackageNames;
             return this;
         }
-        public Builder allowedPackageNames(@Nullable List<String> allowedPackageNames) {
-            this.allowedPackageNames = Codegen.ofNullable(allowedPackageNames);
-            return this;
+
+        public Builder allowedPackageNames(List<String> allowedPackageNames) {
+            return allowedPackageNames(Output.of(allowedPackageNames));
         }
+
         public Builder allowedPackageNames(String... allowedPackageNames) {
             return allowedPackageNames(List.of(allowedPackageNames));
-        }        public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs build() {
-            return new GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs(allowAllPackageNames, allowedPackageNames);
+        }
+
+        public GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs build() {
+            return $;
         }
     }
+
 }

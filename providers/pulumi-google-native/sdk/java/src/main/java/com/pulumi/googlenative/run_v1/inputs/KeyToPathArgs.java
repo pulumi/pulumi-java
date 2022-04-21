@@ -5,10 +5,10 @@ package com.pulumi.googlenative.run_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="key")
-      private final @Nullable Output<String> key;
+    private @Nullable Output<String> key;
 
-    public Output<String> key() {
-        return this.key == null ? Codegen.empty() : this.key;
+    public Optional<Output<String>> key() {
+        return Optional.ofNullable(this.key);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mode")
-      private final @Nullable Output<Integer> mode;
+    private @Nullable Output<Integer> mode;
 
-    public Output<Integer> mode() {
-        return this.mode == null ? Codegen.empty() : this.mode;
+    public Optional<Output<Integer>> mode() {
+        return Optional.ofNullable(this.mode);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class KeyToPathArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="path")
-      private final @Nullable Output<String> path;
+    private @Nullable Output<String> path;
 
-    public Output<String> path() {
-        return this.path == null ? Codegen.empty() : this.path;
+    public Optional<Output<String>> path() {
+        return Optional.ofNullable(this.path);
     }
 
-    public KeyToPathArgs(
-        @Nullable Output<String> key,
-        @Nullable Output<Integer> mode,
-        @Nullable Output<String> path) {
-        this.key = key;
-        this.mode = mode;
-        this.path = path;
-    }
+    private KeyToPathArgs() {}
 
-    private KeyToPathArgs() {
-        this.key = Codegen.empty();
-        this.mode = Codegen.empty();
-        this.path = Codegen.empty();
+    private KeyToPathArgs(KeyToPathArgs $) {
+        this.key = $.key;
+        this.mode = $.mode;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(KeyToPathArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> key;
-        private @Nullable Output<Integer> mode;
-        private @Nullable Output<String> path;
+        private KeyToPathArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new KeyToPathArgs();
         }
 
         public Builder(KeyToPathArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.key = defaults.key;
-    	      this.mode = defaults.mode;
-    	      this.path = defaults.path;
+            $ = new KeyToPathArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder key(@Nullable Output<String> key) {
-            this.key = key;
+            $.key = key;
             return this;
         }
-        public Builder key(@Nullable String key) {
-            this.key = Codegen.ofNullable(key);
-            return this;
+
+        public Builder key(String key) {
+            return key(Output.of(key));
         }
+
         public Builder mode(@Nullable Output<Integer> mode) {
-            this.mode = mode;
+            $.mode = mode;
             return this;
         }
-        public Builder mode(@Nullable Integer mode) {
-            this.mode = Codegen.ofNullable(mode);
-            return this;
+
+        public Builder mode(Integer mode) {
+            return mode(Output.of(mode));
         }
+
         public Builder path(@Nullable Output<String> path) {
-            this.path = path;
+            $.path = path;
             return this;
         }
-        public Builder path(@Nullable String path) {
-            this.path = Codegen.ofNullable(path);
-            return this;
-        }        public KeyToPathArgs build() {
-            return new KeyToPathArgs(key, mode, path);
+
+        public Builder path(String path) {
+            return path(Output.of(path));
+        }
+
+        public KeyToPathArgs build() {
+            return $;
         }
     }
+
 }

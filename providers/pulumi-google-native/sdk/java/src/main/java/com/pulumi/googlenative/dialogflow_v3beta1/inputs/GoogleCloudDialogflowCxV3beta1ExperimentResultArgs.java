@@ -5,11 +5,11 @@ package com.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends co
      * 
      */
     @Import(name="lastUpdateTime")
-      private final @Nullable Output<String> lastUpdateTime;
+    private @Nullable Output<String> lastUpdateTime;
 
-    public Output<String> lastUpdateTime() {
-        return this.lastUpdateTime == null ? Codegen.empty() : this.lastUpdateTime;
+    public Optional<Output<String>> lastUpdateTime() {
+        return Optional.ofNullable(this.lastUpdateTime);
     }
 
     /**
@@ -37,66 +37,62 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultArgs extends co
      * 
      */
     @Import(name="versionMetrics")
-      private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics;
+    private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics;
 
-    public Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics() {
-        return this.versionMetrics == null ? Codegen.empty() : this.versionMetrics;
+    public Optional<Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>>> versionMetrics() {
+        return Optional.ofNullable(this.versionMetrics);
     }
 
-    public GoogleCloudDialogflowCxV3beta1ExperimentResultArgs(
-        @Nullable Output<String> lastUpdateTime,
-        @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics) {
-        this.lastUpdateTime = lastUpdateTime;
-        this.versionMetrics = versionMetrics;
-    }
+    private GoogleCloudDialogflowCxV3beta1ExperimentResultArgs() {}
 
-    private GoogleCloudDialogflowCxV3beta1ExperimentResultArgs() {
-        this.lastUpdateTime = Codegen.empty();
-        this.versionMetrics = Codegen.empty();
+    private GoogleCloudDialogflowCxV3beta1ExperimentResultArgs(GoogleCloudDialogflowCxV3beta1ExperimentResultArgs $) {
+        this.lastUpdateTime = $.lastUpdateTime;
+        this.versionMetrics = $.versionMetrics;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GoogleCloudDialogflowCxV3beta1ExperimentResultArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> lastUpdateTime;
-        private @Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics;
+        private GoogleCloudDialogflowCxV3beta1ExperimentResultArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultArgs();
         }
 
         public Builder(GoogleCloudDialogflowCxV3beta1ExperimentResultArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.lastUpdateTime = defaults.lastUpdateTime;
-    	      this.versionMetrics = defaults.versionMetrics;
+            $ = new GoogleCloudDialogflowCxV3beta1ExperimentResultArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
-            this.lastUpdateTime = lastUpdateTime;
+            $.lastUpdateTime = lastUpdateTime;
             return this;
         }
-        public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
-            this.lastUpdateTime = Codegen.ofNullable(lastUpdateTime);
-            return this;
+
+        public Builder lastUpdateTime(String lastUpdateTime) {
+            return lastUpdateTime(Output.of(lastUpdateTime));
         }
+
         public Builder versionMetrics(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs>> versionMetrics) {
-            this.versionMetrics = versionMetrics;
+            $.versionMetrics = versionMetrics;
             return this;
         }
-        public Builder versionMetrics(@Nullable List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs> versionMetrics) {
-            this.versionMetrics = Codegen.ofNullable(versionMetrics);
-            return this;
+
+        public Builder versionMetrics(List<GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs> versionMetrics) {
+            return versionMetrics(Output.of(versionMetrics));
         }
+
         public Builder versionMetrics(GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsArgs... versionMetrics) {
             return versionMetrics(List.of(versionMetrics));
-        }        public GoogleCloudDialogflowCxV3beta1ExperimentResultArgs build() {
-            return new GoogleCloudDialogflowCxV3beta1ExperimentResultArgs(lastUpdateTime, versionMetrics);
+        }
+
+        public GoogleCloudDialogflowCxV3beta1ExperimentResultArgs build() {
+            return $;
         }
     }
+
 }

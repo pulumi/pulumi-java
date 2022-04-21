@@ -5,13 +5,13 @@ package com.pulumi.googlenative.compute_alpha;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.compute_alpha.enums.NetworkFirewallPolicyVpcNetworkScope;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyAssociationArgs;
 import com.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class NetworkFirewallPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="associations")
-      private final @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
+    private @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
 
-    public Output<List<FirewallPolicyAssociationArgs>> associations() {
-        return this.associations == null ? Codegen.empty() : this.associations;
+    public Optional<Output<List<FirewallPolicyAssociationArgs>>> associations() {
+        return Optional.ofNullable(this.associations);
     }
 
     /**
@@ -35,24 +35,24 @@ public final class NetworkFirewallPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="project")
-      private final @Nullable Output<String> project;
+    private @Nullable Output<String> project;
 
-    public Output<String> project() {
-        return this.project == null ? Codegen.empty() : this.project;
+    public Optional<Output<String>> project() {
+        return Optional.ofNullable(this.project);
     }
 
     @Import(name="requestId")
-      private final @Nullable Output<String> requestId;
+    private @Nullable Output<String> requestId;
 
-    public Output<String> requestId() {
-        return this.requestId == null ? Codegen.empty() : this.requestId;
+    public Optional<Output<String>> requestId() {
+        return Optional.ofNullable(this.requestId);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class NetworkFirewallPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
+    private @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
 
-    public Output<List<FirewallPolicyRuleArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<FirewallPolicyRuleArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -71,10 +71,10 @@ public final class NetworkFirewallPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="shortName")
-      private final @Nullable Output<String> shortName;
+    private @Nullable Output<String> shortName;
 
-    public Output<String> shortName() {
-        return this.shortName == null ? Codegen.empty() : this.shortName;
+    public Optional<Output<String>> shortName() {
+        return Optional.ofNullable(this.shortName);
     }
 
     /**
@@ -82,134 +82,116 @@ public final class NetworkFirewallPolicyArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="vpcNetworkScope")
-      private final @Nullable Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
+    private @Nullable Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
 
-    public Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope() {
-        return this.vpcNetworkScope == null ? Codegen.empty() : this.vpcNetworkScope;
+    public Optional<Output<NetworkFirewallPolicyVpcNetworkScope>> vpcNetworkScope() {
+        return Optional.ofNullable(this.vpcNetworkScope);
     }
 
-    public NetworkFirewallPolicyArgs(
-        @Nullable Output<List<FirewallPolicyAssociationArgs>> associations,
-        @Nullable Output<String> description,
-        @Nullable Output<String> project,
-        @Nullable Output<String> requestId,
-        @Nullable Output<List<FirewallPolicyRuleArgs>> rules,
-        @Nullable Output<String> shortName,
-        @Nullable Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope) {
-        this.associations = associations;
-        this.description = description;
-        this.project = project;
-        this.requestId = requestId;
-        this.rules = rules;
-        this.shortName = shortName;
-        this.vpcNetworkScope = vpcNetworkScope;
-    }
+    private NetworkFirewallPolicyArgs() {}
 
-    private NetworkFirewallPolicyArgs() {
-        this.associations = Codegen.empty();
-        this.description = Codegen.empty();
-        this.project = Codegen.empty();
-        this.requestId = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.shortName = Codegen.empty();
-        this.vpcNetworkScope = Codegen.empty();
+    private NetworkFirewallPolicyArgs(NetworkFirewallPolicyArgs $) {
+        this.associations = $.associations;
+        this.description = $.description;
+        this.project = $.project;
+        this.requestId = $.requestId;
+        this.rules = $.rules;
+        this.shortName = $.shortName;
+        this.vpcNetworkScope = $.vpcNetworkScope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkFirewallPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<FirewallPolicyAssociationArgs>> associations;
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> project;
-        private @Nullable Output<String> requestId;
-        private @Nullable Output<List<FirewallPolicyRuleArgs>> rules;
-        private @Nullable Output<String> shortName;
-        private @Nullable Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
+        private NetworkFirewallPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkFirewallPolicyArgs();
         }
 
         public Builder(NetworkFirewallPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.associations = defaults.associations;
-    	      this.description = defaults.description;
-    	      this.project = defaults.project;
-    	      this.requestId = defaults.requestId;
-    	      this.rules = defaults.rules;
-    	      this.shortName = defaults.shortName;
-    	      this.vpcNetworkScope = defaults.vpcNetworkScope;
+            $ = new NetworkFirewallPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder associations(@Nullable Output<List<FirewallPolicyAssociationArgs>> associations) {
-            this.associations = associations;
+            $.associations = associations;
             return this;
         }
-        public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
-            this.associations = Codegen.ofNullable(associations);
-            return this;
+
+        public Builder associations(List<FirewallPolicyAssociationArgs> associations) {
+            return associations(Output.of(associations));
         }
+
         public Builder associations(FirewallPolicyAssociationArgs... associations) {
             return associations(List.of(associations));
         }
+
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder project(@Nullable Output<String> project) {
-            this.project = project;
+            $.project = project;
             return this;
         }
-        public Builder project(@Nullable String project) {
-            this.project = Codegen.ofNullable(project);
-            return this;
+
+        public Builder project(String project) {
+            return project(Output.of(project));
         }
+
         public Builder requestId(@Nullable Output<String> requestId) {
-            this.requestId = requestId;
+            $.requestId = requestId;
             return this;
         }
-        public Builder requestId(@Nullable String requestId) {
-            this.requestId = Codegen.ofNullable(requestId);
-            return this;
+
+        public Builder requestId(String requestId) {
+            return requestId(Output.of(requestId));
         }
+
         public Builder rules(@Nullable Output<List<FirewallPolicyRuleArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<FirewallPolicyRuleArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(FirewallPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder shortName(@Nullable Output<String> shortName) {
-            this.shortName = shortName;
+            $.shortName = shortName;
             return this;
         }
-        public Builder shortName(@Nullable String shortName) {
-            this.shortName = Codegen.ofNullable(shortName);
-            return this;
+
+        public Builder shortName(String shortName) {
+            return shortName(Output.of(shortName));
         }
+
         public Builder vpcNetworkScope(@Nullable Output<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope) {
-            this.vpcNetworkScope = vpcNetworkScope;
+            $.vpcNetworkScope = vpcNetworkScope;
             return this;
         }
-        public Builder vpcNetworkScope(@Nullable NetworkFirewallPolicyVpcNetworkScope vpcNetworkScope) {
-            this.vpcNetworkScope = Codegen.ofNullable(vpcNetworkScope);
-            return this;
-        }        public NetworkFirewallPolicyArgs build() {
-            return new NetworkFirewallPolicyArgs(associations, description, project, requestId, rules, shortName, vpcNetworkScope);
+
+        public Builder vpcNetworkScope(NetworkFirewallPolicyVpcNetworkScope vpcNetworkScope) {
+            return vpcNetworkScope(Output.of(vpcNetworkScope));
+        }
+
+        public NetworkFirewallPolicyArgs build() {
+            return $;
         }
     }
+
 }
