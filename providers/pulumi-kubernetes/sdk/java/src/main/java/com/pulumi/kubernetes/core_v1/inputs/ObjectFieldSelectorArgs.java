@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class ObjectFieldSelectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -35,63 +35,59 @@ public final class ObjectFieldSelectorArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="fieldPath", required=true)
-      private final Output<String> fieldPath;
+    private Output<String> fieldPath;
 
     public Output<String> fieldPath() {
         return this.fieldPath;
     }
 
-    public ObjectFieldSelectorArgs(
-        @Nullable Output<String> apiVersion,
-        Output<String> fieldPath) {
-        this.apiVersion = apiVersion;
-        this.fieldPath = Objects.requireNonNull(fieldPath, "expected parameter 'fieldPath' to be non-null");
-    }
+    private ObjectFieldSelectorArgs() {}
 
-    private ObjectFieldSelectorArgs() {
-        this.apiVersion = Codegen.empty();
-        this.fieldPath = Codegen.empty();
+    private ObjectFieldSelectorArgs(ObjectFieldSelectorArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.fieldPath = $.fieldPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectFieldSelectorArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private Output<String> fieldPath;
+        private ObjectFieldSelectorArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectFieldSelectorArgs();
         }
 
         public Builder(ObjectFieldSelectorArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.fieldPath = defaults.fieldPath;
+            $ = new ObjectFieldSelectorArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder fieldPath(Output<String> fieldPath) {
-            this.fieldPath = Objects.requireNonNull(fieldPath);
+            $.fieldPath = fieldPath;
             return this;
         }
+
         public Builder fieldPath(String fieldPath) {
-            this.fieldPath = Output.of(Objects.requireNonNull(fieldPath));
-            return this;
-        }        public ObjectFieldSelectorArgs build() {
-            return new ObjectFieldSelectorArgs(apiVersion, fieldPath);
+            return fieldPath(Output.of(fieldPath));
+        }
+
+        public ObjectFieldSelectorArgs build() {
+            $.fieldPath = Objects.requireNonNull($.fieldPath, "expected parameter 'fieldPath' to be non-null");
+            return $;
         }
     }
+
 }

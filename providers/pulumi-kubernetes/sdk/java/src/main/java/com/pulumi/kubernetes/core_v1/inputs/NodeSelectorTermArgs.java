@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NodeSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="matchExpressions")
-      private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
+    private @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
 
-    public Output<List<NodeSelectorRequirementArgs>> matchExpressions() {
-        return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
+    public Optional<Output<List<NodeSelectorRequirementArgs>>> matchExpressions() {
+        return Optional.ofNullable(this.matchExpressions);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class NodeSelectorTermArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="matchFields")
-      private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
+    private @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
 
-    public Output<List<NodeSelectorRequirementArgs>> matchFields() {
-        return this.matchFields == null ? Codegen.empty() : this.matchFields;
+    public Optional<Output<List<NodeSelectorRequirementArgs>>> matchFields() {
+        return Optional.ofNullable(this.matchFields);
     }
 
-    public NodeSelectorTermArgs(
-        @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions,
-        @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields) {
-        this.matchExpressions = matchExpressions;
-        this.matchFields = matchFields;
-    }
+    private NodeSelectorTermArgs() {}
 
-    private NodeSelectorTermArgs() {
-        this.matchExpressions = Codegen.empty();
-        this.matchFields = Codegen.empty();
+    private NodeSelectorTermArgs(NodeSelectorTermArgs $) {
+        this.matchExpressions = $.matchExpressions;
+        this.matchFields = $.matchFields;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeSelectorTermArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
-        private @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
+        private NodeSelectorTermArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeSelectorTermArgs();
         }
 
         public Builder(NodeSelectorTermArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchExpressions = defaults.matchExpressions;
-    	      this.matchFields = defaults.matchFields;
+            $ = new NodeSelectorTermArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchExpressions(@Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions) {
-            this.matchExpressions = matchExpressions;
+            $.matchExpressions = matchExpressions;
             return this;
         }
-        public Builder matchExpressions(@Nullable List<NodeSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Codegen.ofNullable(matchExpressions);
-            return this;
+
+        public Builder matchExpressions(List<NodeSelectorRequirementArgs> matchExpressions) {
+            return matchExpressions(Output.of(matchExpressions));
         }
+
         public Builder matchExpressions(NodeSelectorRequirementArgs... matchExpressions) {
             return matchExpressions(List.of(matchExpressions));
         }
+
         public Builder matchFields(@Nullable Output<List<NodeSelectorRequirementArgs>> matchFields) {
-            this.matchFields = matchFields;
+            $.matchFields = matchFields;
             return this;
         }
-        public Builder matchFields(@Nullable List<NodeSelectorRequirementArgs> matchFields) {
-            this.matchFields = Codegen.ofNullable(matchFields);
-            return this;
+
+        public Builder matchFields(List<NodeSelectorRequirementArgs> matchFields) {
+            return matchFields(Output.of(matchFields));
         }
+
         public Builder matchFields(NodeSelectorRequirementArgs... matchFields) {
             return matchFields(List.of(matchFields));
-        }        public NodeSelectorTermArgs build() {
-            return new NodeSelectorTermArgs(matchExpressions, matchFields);
+        }
+
+        public NodeSelectorTermArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="currentAverageValue")
-      private final @Nullable Output<String> currentAverageValue;
+    private @Nullable Output<String> currentAverageValue;
 
-    public Output<String> currentAverageValue() {
-        return this.currentAverageValue == null ? Codegen.empty() : this.currentAverageValue;
+    public Optional<Output<String>> currentAverageValue() {
+        return Optional.ofNullable(this.currentAverageValue);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="currentValue", required=true)
-      private final Output<String> currentValue;
+    private Output<String> currentValue;
 
     public Output<String> currentValue() {
         return this.currentValue;
@@ -47,7 +47,7 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -58,89 +58,80 @@ public final class ExternalMetricStatusArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricSelector")
-      private final @Nullable Output<LabelSelectorArgs> metricSelector;
+    private @Nullable Output<LabelSelectorArgs> metricSelector;
 
-    public Output<LabelSelectorArgs> metricSelector() {
-        return this.metricSelector == null ? Codegen.empty() : this.metricSelector;
+    public Optional<Output<LabelSelectorArgs>> metricSelector() {
+        return Optional.ofNullable(this.metricSelector);
     }
 
-    public ExternalMetricStatusArgs(
-        @Nullable Output<String> currentAverageValue,
-        Output<String> currentValue,
-        Output<String> metricName,
-        @Nullable Output<LabelSelectorArgs> metricSelector) {
-        this.currentAverageValue = currentAverageValue;
-        this.currentValue = Objects.requireNonNull(currentValue, "expected parameter 'currentValue' to be non-null");
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.metricSelector = metricSelector;
-    }
+    private ExternalMetricStatusArgs() {}
 
-    private ExternalMetricStatusArgs() {
-        this.currentAverageValue = Codegen.empty();
-        this.currentValue = Codegen.empty();
-        this.metricName = Codegen.empty();
-        this.metricSelector = Codegen.empty();
+    private ExternalMetricStatusArgs(ExternalMetricStatusArgs $) {
+        this.currentAverageValue = $.currentAverageValue;
+        this.currentValue = $.currentValue;
+        this.metricName = $.metricName;
+        this.metricSelector = $.metricSelector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalMetricStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> currentAverageValue;
-        private Output<String> currentValue;
-        private Output<String> metricName;
-        private @Nullable Output<LabelSelectorArgs> metricSelector;
+        private ExternalMetricStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalMetricStatusArgs();
         }
 
         public Builder(ExternalMetricStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.currentAverageValue = defaults.currentAverageValue;
-    	      this.currentValue = defaults.currentValue;
-    	      this.metricName = defaults.metricName;
-    	      this.metricSelector = defaults.metricSelector;
+            $ = new ExternalMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder currentAverageValue(@Nullable Output<String> currentAverageValue) {
-            this.currentAverageValue = currentAverageValue;
+            $.currentAverageValue = currentAverageValue;
             return this;
         }
-        public Builder currentAverageValue(@Nullable String currentAverageValue) {
-            this.currentAverageValue = Codegen.ofNullable(currentAverageValue);
-            return this;
+
+        public Builder currentAverageValue(String currentAverageValue) {
+            return currentAverageValue(Output.of(currentAverageValue));
         }
+
         public Builder currentValue(Output<String> currentValue) {
-            this.currentValue = Objects.requireNonNull(currentValue);
+            $.currentValue = currentValue;
             return this;
         }
+
         public Builder currentValue(String currentValue) {
-            this.currentValue = Output.of(Objects.requireNonNull(currentValue));
-            return this;
+            return currentValue(Output.of(currentValue));
         }
+
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
-            this.metricSelector = metricSelector;
+            $.metricSelector = metricSelector;
             return this;
         }
-        public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
-            this.metricSelector = Codegen.ofNullable(metricSelector);
-            return this;
-        }        public ExternalMetricStatusArgs build() {
-            return new ExternalMetricStatusArgs(currentAverageValue, currentValue, metricName, metricSelector);
+
+        public Builder metricSelector(LabelSelectorArgs metricSelector) {
+            return metricSelector(Output.of(metricSelector));
+        }
+
+        public ExternalMetricStatusArgs build() {
+            $.currentValue = Objects.requireNonNull($.currentValue, "expected parameter 'currentValue' to be non-null");
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

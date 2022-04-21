@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class ServiceAccountSubjectArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -34,63 +33,60 @@ public final class ServiceAccountSubjectArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="namespace", required=true)
-      private final Output<String> namespace;
+    private Output<String> namespace;
 
     public Output<String> namespace() {
         return this.namespace;
     }
 
-    public ServiceAccountSubjectArgs(
-        Output<String> name,
-        Output<String> namespace) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = Objects.requireNonNull(namespace, "expected parameter 'namespace' to be non-null");
-    }
+    private ServiceAccountSubjectArgs() {}
 
-    private ServiceAccountSubjectArgs() {
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
+    private ServiceAccountSubjectArgs(ServiceAccountSubjectArgs $) {
+        this.name = $.name;
+        this.namespace = $.namespace;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountSubjectArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private Output<String> namespace;
+        private ServiceAccountSubjectArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountSubjectArgs();
         }
 
         public Builder(ServiceAccountSubjectArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
+            $ = new ServiceAccountSubjectArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespace(Output<String> namespace) {
-            this.namespace = Objects.requireNonNull(namespace);
+            $.namespace = namespace;
             return this;
         }
+
         public Builder namespace(String namespace) {
-            this.namespace = Output.of(Objects.requireNonNull(namespace));
-            return this;
-        }        public ServiceAccountSubjectArgs build() {
-            return new ServiceAccountSubjectArgs(name, namespace);
+            return namespace(Output.of(namespace));
+        }
+
+        public ServiceAccountSubjectArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.namespace = Objects.requireNonNull($.namespace, "expected parameter 'namespace' to be non-null");
+            return $;
         }
     }
+
 }

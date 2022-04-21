@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="level", required=true)
-      private final Output<String> level;
+    private Output<String> level;
 
     public Output<String> level() {
         return this.level;
@@ -36,66 +36,63 @@ public final class PolicyArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stages")
-      private final @Nullable Output<List<String>> stages;
+    private @Nullable Output<List<String>> stages;
 
-    public Output<List<String>> stages() {
-        return this.stages == null ? Codegen.empty() : this.stages;
+    public Optional<Output<List<String>>> stages() {
+        return Optional.ofNullable(this.stages);
     }
 
-    public PolicyArgs(
-        Output<String> level,
-        @Nullable Output<List<String>> stages) {
-        this.level = Objects.requireNonNull(level, "expected parameter 'level' to be non-null");
-        this.stages = stages;
-    }
+    private PolicyArgs() {}
 
-    private PolicyArgs() {
-        this.level = Codegen.empty();
-        this.stages = Codegen.empty();
+    private PolicyArgs(PolicyArgs $) {
+        this.level = $.level;
+        this.stages = $.stages;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> level;
-        private @Nullable Output<List<String>> stages;
+        private PolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PolicyArgs();
         }
 
         public Builder(PolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.level = defaults.level;
-    	      this.stages = defaults.stages;
+            $ = new PolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder level(Output<String> level) {
-            this.level = Objects.requireNonNull(level);
+            $.level = level;
             return this;
         }
+
         public Builder level(String level) {
-            this.level = Output.of(Objects.requireNonNull(level));
-            return this;
+            return level(Output.of(level));
         }
+
         public Builder stages(@Nullable Output<List<String>> stages) {
-            this.stages = stages;
+            $.stages = stages;
             return this;
         }
-        public Builder stages(@Nullable List<String> stages) {
-            this.stages = Codegen.ofNullable(stages);
-            return this;
+
+        public Builder stages(List<String> stages) {
+            return stages(Output.of(stages));
         }
+
         public Builder stages(String... stages) {
             return stages(List.of(stages));
-        }        public PolicyArgs build() {
-            return new PolicyArgs(level, stages);
+        }
+
+        public PolicyArgs build() {
+            $.level = Objects.requireNonNull($.level, "expected parameter 'level' to be non-null");
+            return $;
         }
     }
+
 }

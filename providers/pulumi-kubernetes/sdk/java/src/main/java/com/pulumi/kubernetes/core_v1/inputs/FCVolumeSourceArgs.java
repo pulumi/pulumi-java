@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="fsType")
-      private final @Nullable Output<String> fsType;
+    private @Nullable Output<String> fsType;
 
-    public Output<String> fsType() {
-        return this.fsType == null ? Codegen.empty() : this.fsType;
+    public Optional<Output<String>> fsType() {
+        return Optional.ofNullable(this.fsType);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="lun")
-      private final @Nullable Output<Integer> lun;
+    private @Nullable Output<Integer> lun;
 
-    public Output<Integer> lun() {
-        return this.lun == null ? Codegen.empty() : this.lun;
+    public Optional<Output<Integer>> lun() {
+        return Optional.ofNullable(this.lun);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -60,10 +60,10 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="targetWWNs")
-      private final @Nullable Output<List<String>> targetWWNs;
+    private @Nullable Output<List<String>> targetWWNs;
 
-    public Output<List<String>> targetWWNs() {
-        return this.targetWWNs == null ? Codegen.empty() : this.targetWWNs;
+    public Optional<Output<List<String>>> targetWWNs() {
+        return Optional.ofNullable(this.targetWWNs);
     }
 
     /**
@@ -71,108 +71,96 @@ public final class FCVolumeSourceArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="wwids")
-      private final @Nullable Output<List<String>> wwids;
+    private @Nullable Output<List<String>> wwids;
 
-    public Output<List<String>> wwids() {
-        return this.wwids == null ? Codegen.empty() : this.wwids;
+    public Optional<Output<List<String>>> wwids() {
+        return Optional.ofNullable(this.wwids);
     }
 
-    public FCVolumeSourceArgs(
-        @Nullable Output<String> fsType,
-        @Nullable Output<Integer> lun,
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<List<String>> targetWWNs,
-        @Nullable Output<List<String>> wwids) {
-        this.fsType = fsType;
-        this.lun = lun;
-        this.readOnly = readOnly;
-        this.targetWWNs = targetWWNs;
-        this.wwids = wwids;
-    }
+    private FCVolumeSourceArgs() {}
 
-    private FCVolumeSourceArgs() {
-        this.fsType = Codegen.empty();
-        this.lun = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.targetWWNs = Codegen.empty();
-        this.wwids = Codegen.empty();
+    private FCVolumeSourceArgs(FCVolumeSourceArgs $) {
+        this.fsType = $.fsType;
+        this.lun = $.lun;
+        this.readOnly = $.readOnly;
+        this.targetWWNs = $.targetWWNs;
+        this.wwids = $.wwids;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(FCVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> fsType;
-        private @Nullable Output<Integer> lun;
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<List<String>> targetWWNs;
-        private @Nullable Output<List<String>> wwids;
+        private FCVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new FCVolumeSourceArgs();
         }
 
         public Builder(FCVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsType = defaults.fsType;
-    	      this.lun = defaults.lun;
-    	      this.readOnly = defaults.readOnly;
-    	      this.targetWWNs = defaults.targetWWNs;
-    	      this.wwids = defaults.wwids;
+            $ = new FCVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsType(@Nullable Output<String> fsType) {
-            this.fsType = fsType;
+            $.fsType = fsType;
             return this;
         }
-        public Builder fsType(@Nullable String fsType) {
-            this.fsType = Codegen.ofNullable(fsType);
-            return this;
+
+        public Builder fsType(String fsType) {
+            return fsType(Output.of(fsType));
         }
+
         public Builder lun(@Nullable Output<Integer> lun) {
-            this.lun = lun;
+            $.lun = lun;
             return this;
         }
-        public Builder lun(@Nullable Integer lun) {
-            this.lun = Codegen.ofNullable(lun);
-            return this;
+
+        public Builder lun(Integer lun) {
+            return lun(Output.of(lun));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder targetWWNs(@Nullable Output<List<String>> targetWWNs) {
-            this.targetWWNs = targetWWNs;
+            $.targetWWNs = targetWWNs;
             return this;
         }
-        public Builder targetWWNs(@Nullable List<String> targetWWNs) {
-            this.targetWWNs = Codegen.ofNullable(targetWWNs);
-            return this;
+
+        public Builder targetWWNs(List<String> targetWWNs) {
+            return targetWWNs(Output.of(targetWWNs));
         }
+
         public Builder targetWWNs(String... targetWWNs) {
             return targetWWNs(List.of(targetWWNs));
         }
+
         public Builder wwids(@Nullable Output<List<String>> wwids) {
-            this.wwids = wwids;
+            $.wwids = wwids;
             return this;
         }
-        public Builder wwids(@Nullable List<String> wwids) {
-            this.wwids = Codegen.ofNullable(wwids);
-            return this;
+
+        public Builder wwids(List<String> wwids) {
+            return wwids(Output.of(wwids));
         }
+
         public Builder wwids(String... wwids) {
             return wwids(List.of(wwids));
-        }        public FCVolumeSourceArgs build() {
-            return new FCVolumeSourceArgs(fsType, lun, readOnly, targetWWNs, wwids);
+        }
+
+        public FCVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

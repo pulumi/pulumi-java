@@ -6,11 +6,11 @@ package com.pulumi.kubernetes.policy_v1.inputs;
 import com.pulumi.core.Either;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class PodDisruptionBudgetSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="maxUnavailable")
-      private final @Nullable Output<Either<Integer,String>> maxUnavailable;
+    private @Nullable Output<Either<Integer,String>> maxUnavailable;
 
-    public Output<Either<Integer,String>> maxUnavailable() {
-        return this.maxUnavailable == null ? Codegen.empty() : this.maxUnavailable;
+    public Optional<Output<Either<Integer,String>>> maxUnavailable() {
+        return Optional.ofNullable(this.maxUnavailable);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class PodDisruptionBudgetSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="minAvailable")
-      private final @Nullable Output<Either<Integer,String>> minAvailable;
+    private @Nullable Output<Either<Integer,String>> minAvailable;
 
-    public Output<Either<Integer,String>> minAvailable() {
-        return this.minAvailable == null ? Codegen.empty() : this.minAvailable;
+    public Optional<Output<Either<Integer,String>>> minAvailable() {
+        return Optional.ofNullable(this.minAvailable);
     }
 
     /**
@@ -49,76 +49,68 @@ public final class PodDisruptionBudgetSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<LabelSelectorArgs> selector;
+    private @Nullable Output<LabelSelectorArgs> selector;
 
-    public Output<LabelSelectorArgs> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<LabelSelectorArgs>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
-    public PodDisruptionBudgetSpecArgs(
-        @Nullable Output<Either<Integer,String>> maxUnavailable,
-        @Nullable Output<Either<Integer,String>> minAvailable,
-        @Nullable Output<LabelSelectorArgs> selector) {
-        this.maxUnavailable = maxUnavailable;
-        this.minAvailable = minAvailable;
-        this.selector = selector;
-    }
+    private PodDisruptionBudgetSpecArgs() {}
 
-    private PodDisruptionBudgetSpecArgs() {
-        this.maxUnavailable = Codegen.empty();
-        this.minAvailable = Codegen.empty();
-        this.selector = Codegen.empty();
+    private PodDisruptionBudgetSpecArgs(PodDisruptionBudgetSpecArgs $) {
+        this.maxUnavailable = $.maxUnavailable;
+        this.minAvailable = $.minAvailable;
+        this.selector = $.selector;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodDisruptionBudgetSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Either<Integer,String>> maxUnavailable;
-        private @Nullable Output<Either<Integer,String>> minAvailable;
-        private @Nullable Output<LabelSelectorArgs> selector;
+        private PodDisruptionBudgetSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodDisruptionBudgetSpecArgs();
         }
 
         public Builder(PodDisruptionBudgetSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.maxUnavailable = defaults.maxUnavailable;
-    	      this.minAvailable = defaults.minAvailable;
-    	      this.selector = defaults.selector;
+            $ = new PodDisruptionBudgetSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder maxUnavailable(@Nullable Output<Either<Integer,String>> maxUnavailable) {
-            this.maxUnavailable = maxUnavailable;
+            $.maxUnavailable = maxUnavailable;
             return this;
         }
-        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
-            this.maxUnavailable = Codegen.ofNullable(maxUnavailable);
-            return this;
+
+        public Builder maxUnavailable(Either<Integer,String> maxUnavailable) {
+            return maxUnavailable(Output.of(maxUnavailable));
         }
+
         public Builder minAvailable(@Nullable Output<Either<Integer,String>> minAvailable) {
-            this.minAvailable = minAvailable;
+            $.minAvailable = minAvailable;
             return this;
         }
-        public Builder minAvailable(@Nullable Either<Integer,String> minAvailable) {
-            this.minAvailable = Codegen.ofNullable(minAvailable);
-            return this;
+
+        public Builder minAvailable(Either<Integer,String> minAvailable) {
+            return minAvailable(Output.of(minAvailable));
         }
+
         public Builder selector(@Nullable Output<LabelSelectorArgs> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable LabelSelectorArgs selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
-        }        public PodDisruptionBudgetSpecArgs build() {
-            return new PodDisruptionBudgetSpecArgs(maxUnavailable, minAvailable, selector);
+
+        public Builder selector(LabelSelectorArgs selector) {
+            return selector(Output.of(selector));
+        }
+
+        public PodDisruptionBudgetSpecArgs build() {
+            return $;
         }
     }
+
 }

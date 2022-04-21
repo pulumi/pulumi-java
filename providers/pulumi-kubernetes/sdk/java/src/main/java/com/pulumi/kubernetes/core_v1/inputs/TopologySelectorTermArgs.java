@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.TopologySelectorLabelRequirementArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class TopologySelectorTermArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="matchLabelExpressions")
-      private final @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
+    private @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
-    public Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions() {
-        return this.matchLabelExpressions == null ? Codegen.empty() : this.matchLabelExpressions;
+    public Optional<Output<List<TopologySelectorLabelRequirementArgs>>> matchLabelExpressions() {
+        return Optional.ofNullable(this.matchLabelExpressions);
     }
 
-    public TopologySelectorTermArgs(@Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
-        this.matchLabelExpressions = matchLabelExpressions;
-    }
+    private TopologySelectorTermArgs() {}
 
-    private TopologySelectorTermArgs() {
-        this.matchLabelExpressions = Codegen.empty();
+    private TopologySelectorTermArgs(TopologySelectorTermArgs $) {
+        this.matchLabelExpressions = $.matchLabelExpressions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(TopologySelectorTermArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
+        private TopologySelectorTermArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new TopologySelectorTermArgs();
         }
 
         public Builder(TopologySelectorTermArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.matchLabelExpressions = defaults.matchLabelExpressions;
+            $ = new TopologySelectorTermArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder matchLabelExpressions(@Nullable Output<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions) {
-            this.matchLabelExpressions = matchLabelExpressions;
+            $.matchLabelExpressions = matchLabelExpressions;
             return this;
         }
-        public Builder matchLabelExpressions(@Nullable List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
-            this.matchLabelExpressions = Codegen.ofNullable(matchLabelExpressions);
-            return this;
+
+        public Builder matchLabelExpressions(List<TopologySelectorLabelRequirementArgs> matchLabelExpressions) {
+            return matchLabelExpressions(Output.of(matchLabelExpressions));
         }
+
         public Builder matchLabelExpressions(TopologySelectorLabelRequirementArgs... matchLabelExpressions) {
             return matchLabelExpressions(List.of(matchLabelExpressions));
-        }        public TopologySelectorTermArgs build() {
-            return new TopologySelectorTermArgs(matchLabelExpressions);
+        }
+
+        public TopologySelectorTermArgs build() {
+            return $;
         }
     }
+
 }

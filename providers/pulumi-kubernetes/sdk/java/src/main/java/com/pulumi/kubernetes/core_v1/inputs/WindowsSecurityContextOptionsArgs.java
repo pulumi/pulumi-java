@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class WindowsSecurityContextOptionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="gmsaCredentialSpec")
-      private final @Nullable Output<String> gmsaCredentialSpec;
+    private @Nullable Output<String> gmsaCredentialSpec;
 
-    public Output<String> gmsaCredentialSpec() {
-        return this.gmsaCredentialSpec == null ? Codegen.empty() : this.gmsaCredentialSpec;
+    public Optional<Output<String>> gmsaCredentialSpec() {
+        return Optional.ofNullable(this.gmsaCredentialSpec);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class WindowsSecurityContextOptionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="gmsaCredentialSpecName")
-      private final @Nullable Output<String> gmsaCredentialSpecName;
+    private @Nullable Output<String> gmsaCredentialSpecName;
 
-    public Output<String> gmsaCredentialSpecName() {
-        return this.gmsaCredentialSpecName == null ? Codegen.empty() : this.gmsaCredentialSpecName;
+    public Optional<Output<String>> gmsaCredentialSpecName() {
+        return Optional.ofNullable(this.gmsaCredentialSpecName);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class WindowsSecurityContextOptionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="hostProcess")
-      private final @Nullable Output<Boolean> hostProcess;
+    private @Nullable Output<Boolean> hostProcess;
 
-    public Output<Boolean> hostProcess() {
-        return this.hostProcess == null ? Codegen.empty() : this.hostProcess;
+    public Optional<Output<Boolean>> hostProcess() {
+        return Optional.ofNullable(this.hostProcess);
     }
 
     /**
@@ -58,89 +58,78 @@ public final class WindowsSecurityContextOptionsArgs extends com.pulumi.resource
      * 
      */
     @Import(name="runAsUserName")
-      private final @Nullable Output<String> runAsUserName;
+    private @Nullable Output<String> runAsUserName;
 
-    public Output<String> runAsUserName() {
-        return this.runAsUserName == null ? Codegen.empty() : this.runAsUserName;
+    public Optional<Output<String>> runAsUserName() {
+        return Optional.ofNullable(this.runAsUserName);
     }
 
-    public WindowsSecurityContextOptionsArgs(
-        @Nullable Output<String> gmsaCredentialSpec,
-        @Nullable Output<String> gmsaCredentialSpecName,
-        @Nullable Output<Boolean> hostProcess,
-        @Nullable Output<String> runAsUserName) {
-        this.gmsaCredentialSpec = gmsaCredentialSpec;
-        this.gmsaCredentialSpecName = gmsaCredentialSpecName;
-        this.hostProcess = hostProcess;
-        this.runAsUserName = runAsUserName;
-    }
+    private WindowsSecurityContextOptionsArgs() {}
 
-    private WindowsSecurityContextOptionsArgs() {
-        this.gmsaCredentialSpec = Codegen.empty();
-        this.gmsaCredentialSpecName = Codegen.empty();
-        this.hostProcess = Codegen.empty();
-        this.runAsUserName = Codegen.empty();
+    private WindowsSecurityContextOptionsArgs(WindowsSecurityContextOptionsArgs $) {
+        this.gmsaCredentialSpec = $.gmsaCredentialSpec;
+        this.gmsaCredentialSpecName = $.gmsaCredentialSpecName;
+        this.hostProcess = $.hostProcess;
+        this.runAsUserName = $.runAsUserName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(WindowsSecurityContextOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> gmsaCredentialSpec;
-        private @Nullable Output<String> gmsaCredentialSpecName;
-        private @Nullable Output<Boolean> hostProcess;
-        private @Nullable Output<String> runAsUserName;
+        private WindowsSecurityContextOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new WindowsSecurityContextOptionsArgs();
         }
 
         public Builder(WindowsSecurityContextOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.gmsaCredentialSpec = defaults.gmsaCredentialSpec;
-    	      this.gmsaCredentialSpecName = defaults.gmsaCredentialSpecName;
-    	      this.hostProcess = defaults.hostProcess;
-    	      this.runAsUserName = defaults.runAsUserName;
+            $ = new WindowsSecurityContextOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder gmsaCredentialSpec(@Nullable Output<String> gmsaCredentialSpec) {
-            this.gmsaCredentialSpec = gmsaCredentialSpec;
+            $.gmsaCredentialSpec = gmsaCredentialSpec;
             return this;
         }
-        public Builder gmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
-            this.gmsaCredentialSpec = Codegen.ofNullable(gmsaCredentialSpec);
-            return this;
+
+        public Builder gmsaCredentialSpec(String gmsaCredentialSpec) {
+            return gmsaCredentialSpec(Output.of(gmsaCredentialSpec));
         }
+
         public Builder gmsaCredentialSpecName(@Nullable Output<String> gmsaCredentialSpecName) {
-            this.gmsaCredentialSpecName = gmsaCredentialSpecName;
+            $.gmsaCredentialSpecName = gmsaCredentialSpecName;
             return this;
         }
-        public Builder gmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
-            this.gmsaCredentialSpecName = Codegen.ofNullable(gmsaCredentialSpecName);
-            return this;
+
+        public Builder gmsaCredentialSpecName(String gmsaCredentialSpecName) {
+            return gmsaCredentialSpecName(Output.of(gmsaCredentialSpecName));
         }
+
         public Builder hostProcess(@Nullable Output<Boolean> hostProcess) {
-            this.hostProcess = hostProcess;
+            $.hostProcess = hostProcess;
             return this;
         }
-        public Builder hostProcess(@Nullable Boolean hostProcess) {
-            this.hostProcess = Codegen.ofNullable(hostProcess);
-            return this;
+
+        public Builder hostProcess(Boolean hostProcess) {
+            return hostProcess(Output.of(hostProcess));
         }
+
         public Builder runAsUserName(@Nullable Output<String> runAsUserName) {
-            this.runAsUserName = runAsUserName;
+            $.runAsUserName = runAsUserName;
             return this;
         }
-        public Builder runAsUserName(@Nullable String runAsUserName) {
-            this.runAsUserName = Codegen.ofNullable(runAsUserName);
-            return this;
-        }        public WindowsSecurityContextOptionsArgs build() {
-            return new WindowsSecurityContextOptionsArgs(gmsaCredentialSpec, gmsaCredentialSpecName, hostProcess, runAsUserName);
+
+        public Builder runAsUserName(String runAsUserName) {
+            return runAsUserName(Output.of(runAsUserName));
+        }
+
+        public WindowsSecurityContextOptionsArgs build() {
+            return $;
         }
     }
+
 }

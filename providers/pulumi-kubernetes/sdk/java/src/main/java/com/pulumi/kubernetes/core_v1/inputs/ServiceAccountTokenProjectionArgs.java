@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="audience")
-      private final @Nullable Output<String> audience;
+    private @Nullable Output<String> audience;
 
-    public Output<String> audience() {
-        return this.audience == null ? Codegen.empty() : this.audience;
+    public Optional<Output<String>> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="expirationSeconds")
-      private final @Nullable Output<Integer> expirationSeconds;
+    private @Nullable Output<Integer> expirationSeconds;
 
-    public Output<Integer> expirationSeconds() {
-        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
+    public Optional<Output<Integer>> expirationSeconds() {
+        return Optional.ofNullable(this.expirationSeconds);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class ServiceAccountTokenProjectionArgs extends com.pulumi.resource
      * 
      */
     @Import(name="path", required=true)
-      private final Output<String> path;
+    private Output<String> path;
 
     public Output<String> path() {
         return this.path;
     }
 
-    public ServiceAccountTokenProjectionArgs(
-        @Nullable Output<String> audience,
-        @Nullable Output<Integer> expirationSeconds,
-        Output<String> path) {
-        this.audience = audience;
-        this.expirationSeconds = expirationSeconds;
-        this.path = Objects.requireNonNull(path, "expected parameter 'path' to be non-null");
-    }
+    private ServiceAccountTokenProjectionArgs() {}
 
-    private ServiceAccountTokenProjectionArgs() {
-        this.audience = Codegen.empty();
-        this.expirationSeconds = Codegen.empty();
-        this.path = Codegen.empty();
+    private ServiceAccountTokenProjectionArgs(ServiceAccountTokenProjectionArgs $) {
+        this.audience = $.audience;
+        this.expirationSeconds = $.expirationSeconds;
+        this.path = $.path;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceAccountTokenProjectionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> audience;
-        private @Nullable Output<Integer> expirationSeconds;
-        private Output<String> path;
+        private ServiceAccountTokenProjectionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceAccountTokenProjectionArgs();
         }
 
         public Builder(ServiceAccountTokenProjectionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.audience = defaults.audience;
-    	      this.expirationSeconds = defaults.expirationSeconds;
-    	      this.path = defaults.path;
+            $ = new ServiceAccountTokenProjectionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder audience(@Nullable Output<String> audience) {
-            this.audience = audience;
+            $.audience = audience;
             return this;
         }
-        public Builder audience(@Nullable String audience) {
-            this.audience = Codegen.ofNullable(audience);
-            return this;
+
+        public Builder audience(String audience) {
+            return audience(Output.of(audience));
         }
+
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
-            this.expirationSeconds = expirationSeconds;
+            $.expirationSeconds = expirationSeconds;
             return this;
         }
-        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
-            return this;
+
+        public Builder expirationSeconds(Integer expirationSeconds) {
+            return expirationSeconds(Output.of(expirationSeconds));
         }
+
         public Builder path(Output<String> path) {
-            this.path = Objects.requireNonNull(path);
+            $.path = path;
             return this;
         }
+
         public Builder path(String path) {
-            this.path = Output.of(Objects.requireNonNull(path));
-            return this;
-        }        public ServiceAccountTokenProjectionArgs build() {
-            return new ServiceAccountTokenProjectionArgs(audience, expirationSeconds, path);
+            return path(Output.of(path));
+        }
+
+        public ServiceAccountTokenProjectionArgs build() {
+            $.path = Objects.requireNonNull($.path, "expected parameter 'path' to be non-null");
+            return $;
         }
     }
+
 }

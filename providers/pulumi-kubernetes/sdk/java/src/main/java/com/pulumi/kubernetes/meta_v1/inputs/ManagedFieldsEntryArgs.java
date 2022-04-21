@@ -6,9 +6,9 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 import com.google.gson.JsonElement;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fieldsType")
-      private final @Nullable Output<String> fieldsType;
+    private @Nullable Output<String> fieldsType;
 
-    public Output<String> fieldsType() {
-        return this.fieldsType == null ? Codegen.empty() : this.fieldsType;
+    public Optional<Output<String>> fieldsType() {
+        return Optional.ofNullable(this.fieldsType);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fieldsV1")
-      private final @Nullable Output<JsonElement> fieldsV1;
+    private @Nullable Output<JsonElement> fieldsV1;
 
-    public Output<JsonElement> fieldsV1() {
-        return this.fieldsV1 == null ? Codegen.empty() : this.fieldsV1;
+    public Optional<Output<JsonElement>> fieldsV1() {
+        return Optional.ofNullable(this.fieldsV1);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="manager")
-      private final @Nullable Output<String> manager;
+    private @Nullable Output<String> manager;
 
-    public Output<String> manager() {
-        return this.manager == null ? Codegen.empty() : this.manager;
+    public Optional<Output<String>> manager() {
+        return Optional.ofNullable(this.manager);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="operation")
-      private final @Nullable Output<String> operation;
+    private @Nullable Output<String> operation;
 
-    public Output<String> operation() {
-        return this.operation == null ? Codegen.empty() : this.operation;
+    public Optional<Output<String>> operation() {
+        return Optional.ofNullable(this.operation);
     }
 
     /**
@@ -80,10 +80,10 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="subresource")
-      private final @Nullable Output<String> subresource;
+    private @Nullable Output<String> subresource;
 
-    public Output<String> subresource() {
-        return this.subresource == null ? Codegen.empty() : this.subresource;
+    public Optional<Output<String>> subresource() {
+        return Optional.ofNullable(this.subresource);
     }
 
     /**
@@ -91,128 +91,108 @@ public final class ManagedFieldsEntryArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="time")
-      private final @Nullable Output<String> time;
+    private @Nullable Output<String> time;
 
-    public Output<String> time() {
-        return this.time == null ? Codegen.empty() : this.time;
+    public Optional<Output<String>> time() {
+        return Optional.ofNullable(this.time);
     }
 
-    public ManagedFieldsEntryArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> fieldsType,
-        @Nullable Output<JsonElement> fieldsV1,
-        @Nullable Output<String> manager,
-        @Nullable Output<String> operation,
-        @Nullable Output<String> subresource,
-        @Nullable Output<String> time) {
-        this.apiVersion = apiVersion;
-        this.fieldsType = fieldsType;
-        this.fieldsV1 = fieldsV1;
-        this.manager = manager;
-        this.operation = operation;
-        this.subresource = subresource;
-        this.time = time;
-    }
+    private ManagedFieldsEntryArgs() {}
 
-    private ManagedFieldsEntryArgs() {
-        this.apiVersion = Codegen.empty();
-        this.fieldsType = Codegen.empty();
-        this.fieldsV1 = Codegen.empty();
-        this.manager = Codegen.empty();
-        this.operation = Codegen.empty();
-        this.subresource = Codegen.empty();
-        this.time = Codegen.empty();
+    private ManagedFieldsEntryArgs(ManagedFieldsEntryArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.fieldsType = $.fieldsType;
+        this.fieldsV1 = $.fieldsV1;
+        this.manager = $.manager;
+        this.operation = $.operation;
+        this.subresource = $.subresource;
+        this.time = $.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ManagedFieldsEntryArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> fieldsType;
-        private @Nullable Output<JsonElement> fieldsV1;
-        private @Nullable Output<String> manager;
-        private @Nullable Output<String> operation;
-        private @Nullable Output<String> subresource;
-        private @Nullable Output<String> time;
+        private ManagedFieldsEntryArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ManagedFieldsEntryArgs();
         }
 
         public Builder(ManagedFieldsEntryArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.fieldsType = defaults.fieldsType;
-    	      this.fieldsV1 = defaults.fieldsV1;
-    	      this.manager = defaults.manager;
-    	      this.operation = defaults.operation;
-    	      this.subresource = defaults.subresource;
-    	      this.time = defaults.time;
+            $ = new ManagedFieldsEntryArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder fieldsType(@Nullable Output<String> fieldsType) {
-            this.fieldsType = fieldsType;
+            $.fieldsType = fieldsType;
             return this;
         }
-        public Builder fieldsType(@Nullable String fieldsType) {
-            this.fieldsType = Codegen.ofNullable(fieldsType);
-            return this;
+
+        public Builder fieldsType(String fieldsType) {
+            return fieldsType(Output.of(fieldsType));
         }
+
         public Builder fieldsV1(@Nullable Output<JsonElement> fieldsV1) {
-            this.fieldsV1 = fieldsV1;
+            $.fieldsV1 = fieldsV1;
             return this;
         }
-        public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
-            this.fieldsV1 = Codegen.ofNullable(fieldsV1);
-            return this;
+
+        public Builder fieldsV1(JsonElement fieldsV1) {
+            return fieldsV1(Output.of(fieldsV1));
         }
+
         public Builder manager(@Nullable Output<String> manager) {
-            this.manager = manager;
+            $.manager = manager;
             return this;
         }
-        public Builder manager(@Nullable String manager) {
-            this.manager = Codegen.ofNullable(manager);
-            return this;
+
+        public Builder manager(String manager) {
+            return manager(Output.of(manager));
         }
+
         public Builder operation(@Nullable Output<String> operation) {
-            this.operation = operation;
+            $.operation = operation;
             return this;
         }
-        public Builder operation(@Nullable String operation) {
-            this.operation = Codegen.ofNullable(operation);
-            return this;
+
+        public Builder operation(String operation) {
+            return operation(Output.of(operation));
         }
+
         public Builder subresource(@Nullable Output<String> subresource) {
-            this.subresource = subresource;
+            $.subresource = subresource;
             return this;
         }
-        public Builder subresource(@Nullable String subresource) {
-            this.subresource = Codegen.ofNullable(subresource);
-            return this;
+
+        public Builder subresource(String subresource) {
+            return subresource(Output.of(subresource));
         }
+
         public Builder time(@Nullable Output<String> time) {
-            this.time = time;
+            $.time = time;
             return this;
         }
-        public Builder time(@Nullable String time) {
-            this.time = Codegen.ofNullable(time);
-            return this;
-        }        public ManagedFieldsEntryArgs build() {
-            return new ManagedFieldsEntryArgs(apiVersion, fieldsType, fieldsV1, manager, operation, subresource, time);
+
+        public Builder time(String time) {
+            return time(Output.of(time));
+        }
+
+        public ManagedFieldsEntryArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -21,7 +21,7 @@ public final class GRPCActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="port", required=true)
-      private final Output<Integer> port;
+    private Output<Integer> port;
 
     public Output<Integer> port() {
         return this.port;
@@ -34,63 +34,59 @@ public final class GRPCActionArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="service")
-      private final @Nullable Output<String> service;
+    private @Nullable Output<String> service;
 
-    public Output<String> service() {
-        return this.service == null ? Codegen.empty() : this.service;
+    public Optional<Output<String>> service() {
+        return Optional.ofNullable(this.service);
     }
 
-    public GRPCActionArgs(
-        Output<Integer> port,
-        @Nullable Output<String> service) {
-        this.port = Objects.requireNonNull(port, "expected parameter 'port' to be non-null");
-        this.service = service;
-    }
+    private GRPCActionArgs() {}
 
-    private GRPCActionArgs() {
-        this.port = Codegen.empty();
-        this.service = Codegen.empty();
+    private GRPCActionArgs(GRPCActionArgs $) {
+        this.port = $.port;
+        this.service = $.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(GRPCActionArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> port;
-        private @Nullable Output<String> service;
+        private GRPCActionArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new GRPCActionArgs();
         }
 
         public Builder(GRPCActionArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.port = defaults.port;
-    	      this.service = defaults.service;
+            $ = new GRPCActionArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder port(Output<Integer> port) {
-            this.port = Objects.requireNonNull(port);
+            $.port = port;
             return this;
         }
+
         public Builder port(Integer port) {
-            this.port = Output.of(Objects.requireNonNull(port));
-            return this;
+            return port(Output.of(port));
         }
+
         public Builder service(@Nullable Output<String> service) {
-            this.service = service;
+            $.service = service;
             return this;
         }
-        public Builder service(@Nullable String service) {
-            this.service = Codegen.ofNullable(service);
-            return this;
-        }        public GRPCActionArgs build() {
-            return new GRPCActionArgs(port, service);
+
+        public Builder service(String service) {
+            return service(Output.of(service));
+        }
+
+        public GRPCActionArgs build() {
+            $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
+            return $;
         }
     }
+
 }

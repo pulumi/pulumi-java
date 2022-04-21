@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apps_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends c
      * 
      */
     @Import(name="whenDeleted")
-      private final @Nullable Output<String> whenDeleted;
+    private @Nullable Output<String> whenDeleted;
 
-    public Output<String> whenDeleted() {
-        return this.whenDeleted == null ? Codegen.empty() : this.whenDeleted;
+    public Optional<Output<String>> whenDeleted() {
+        return Optional.ofNullable(this.whenDeleted);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicyArgs extends c
      * 
      */
     @Import(name="whenScaled")
-      private final @Nullable Output<String> whenScaled;
+    private @Nullable Output<String> whenScaled;
 
-    public Output<String> whenScaled() {
-        return this.whenScaled == null ? Codegen.empty() : this.whenScaled;
+    public Optional<Output<String>> whenScaled() {
+        return Optional.ofNullable(this.whenScaled);
     }
 
-    public StatefulSetPersistentVolumeClaimRetentionPolicyArgs(
-        @Nullable Output<String> whenDeleted,
-        @Nullable Output<String> whenScaled) {
-        this.whenDeleted = whenDeleted;
-        this.whenScaled = whenScaled;
-    }
+    private StatefulSetPersistentVolumeClaimRetentionPolicyArgs() {}
 
-    private StatefulSetPersistentVolumeClaimRetentionPolicyArgs() {
-        this.whenDeleted = Codegen.empty();
-        this.whenScaled = Codegen.empty();
+    private StatefulSetPersistentVolumeClaimRetentionPolicyArgs(StatefulSetPersistentVolumeClaimRetentionPolicyArgs $) {
+        this.whenDeleted = $.whenDeleted;
+        this.whenScaled = $.whenScaled;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatefulSetPersistentVolumeClaimRetentionPolicyArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> whenDeleted;
-        private @Nullable Output<String> whenScaled;
+        private StatefulSetPersistentVolumeClaimRetentionPolicyArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatefulSetPersistentVolumeClaimRetentionPolicyArgs();
         }
 
         public Builder(StatefulSetPersistentVolumeClaimRetentionPolicyArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.whenDeleted = defaults.whenDeleted;
-    	      this.whenScaled = defaults.whenScaled;
+            $ = new StatefulSetPersistentVolumeClaimRetentionPolicyArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder whenDeleted(@Nullable Output<String> whenDeleted) {
-            this.whenDeleted = whenDeleted;
+            $.whenDeleted = whenDeleted;
             return this;
         }
-        public Builder whenDeleted(@Nullable String whenDeleted) {
-            this.whenDeleted = Codegen.ofNullable(whenDeleted);
-            return this;
+
+        public Builder whenDeleted(String whenDeleted) {
+            return whenDeleted(Output.of(whenDeleted));
         }
+
         public Builder whenScaled(@Nullable Output<String> whenScaled) {
-            this.whenScaled = whenScaled;
+            $.whenScaled = whenScaled;
             return this;
         }
-        public Builder whenScaled(@Nullable String whenScaled) {
-            this.whenScaled = Codegen.ofNullable(whenScaled);
-            return this;
-        }        public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {
-            return new StatefulSetPersistentVolumeClaimRetentionPolicyArgs(whenDeleted, whenScaled);
+
+        public Builder whenScaled(String whenScaled) {
+            return whenScaled(Output.of(whenScaled));
+        }
+
+        public StatefulSetPersistentVolumeClaimRetentionPolicyArgs build() {
+            return $;
         }
     }
+
 }

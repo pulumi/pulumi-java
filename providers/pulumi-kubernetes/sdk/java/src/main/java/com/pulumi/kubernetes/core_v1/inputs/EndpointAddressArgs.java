@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="hostname")
-      private final @Nullable Output<String> hostname;
+    private @Nullable Output<String> hostname;
 
-    public Output<String> hostname() {
-        return this.hostname == null ? Codegen.empty() : this.hostname;
+    public Optional<Output<String>> hostname() {
+        return Optional.ofNullable(this.hostname);
     }
 
     /**
@@ -36,7 +36,7 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="ip", required=true)
-      private final Output<String> ip;
+    private Output<String> ip;
 
     public Output<String> ip() {
         return this.ip;
@@ -47,10 +47,10 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="nodeName")
-      private final @Nullable Output<String> nodeName;
+    private @Nullable Output<String> nodeName;
 
-    public Output<String> nodeName() {
-        return this.nodeName == null ? Codegen.empty() : this.nodeName;
+    public Optional<Output<String>> nodeName() {
+        return Optional.ofNullable(this.nodeName);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class EndpointAddressArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="targetRef")
-      private final @Nullable Output<ObjectReferenceArgs> targetRef;
+    private @Nullable Output<ObjectReferenceArgs> targetRef;
 
-    public Output<ObjectReferenceArgs> targetRef() {
-        return this.targetRef == null ? Codegen.empty() : this.targetRef;
+    public Optional<Output<ObjectReferenceArgs>> targetRef() {
+        return Optional.ofNullable(this.targetRef);
     }
 
-    public EndpointAddressArgs(
-        @Nullable Output<String> hostname,
-        Output<String> ip,
-        @Nullable Output<String> nodeName,
-        @Nullable Output<ObjectReferenceArgs> targetRef) {
-        this.hostname = hostname;
-        this.ip = Objects.requireNonNull(ip, "expected parameter 'ip' to be non-null");
-        this.nodeName = nodeName;
-        this.targetRef = targetRef;
-    }
+    private EndpointAddressArgs() {}
 
-    private EndpointAddressArgs() {
-        this.hostname = Codegen.empty();
-        this.ip = Codegen.empty();
-        this.nodeName = Codegen.empty();
-        this.targetRef = Codegen.empty();
+    private EndpointAddressArgs(EndpointAddressArgs $) {
+        this.hostname = $.hostname;
+        this.ip = $.ip;
+        this.nodeName = $.nodeName;
+        this.targetRef = $.targetRef;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointAddressArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> hostname;
-        private Output<String> ip;
-        private @Nullable Output<String> nodeName;
-        private @Nullable Output<ObjectReferenceArgs> targetRef;
+        private EndpointAddressArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointAddressArgs();
         }
 
         public Builder(EndpointAddressArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hostname = defaults.hostname;
-    	      this.ip = defaults.ip;
-    	      this.nodeName = defaults.nodeName;
-    	      this.targetRef = defaults.targetRef;
+            $ = new EndpointAddressArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hostname(@Nullable Output<String> hostname) {
-            this.hostname = hostname;
+            $.hostname = hostname;
             return this;
         }
-        public Builder hostname(@Nullable String hostname) {
-            this.hostname = Codegen.ofNullable(hostname);
-            return this;
+
+        public Builder hostname(String hostname) {
+            return hostname(Output.of(hostname));
         }
+
         public Builder ip(Output<String> ip) {
-            this.ip = Objects.requireNonNull(ip);
+            $.ip = ip;
             return this;
         }
+
         public Builder ip(String ip) {
-            this.ip = Output.of(Objects.requireNonNull(ip));
-            return this;
+            return ip(Output.of(ip));
         }
+
         public Builder nodeName(@Nullable Output<String> nodeName) {
-            this.nodeName = nodeName;
+            $.nodeName = nodeName;
             return this;
         }
-        public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Codegen.ofNullable(nodeName);
-            return this;
+
+        public Builder nodeName(String nodeName) {
+            return nodeName(Output.of(nodeName));
         }
+
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
-            this.targetRef = targetRef;
+            $.targetRef = targetRef;
             return this;
         }
-        public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
-            this.targetRef = Codegen.ofNullable(targetRef);
-            return this;
-        }        public EndpointAddressArgs build() {
-            return new EndpointAddressArgs(hostname, ip, nodeName, targetRef);
+
+        public Builder targetRef(ObjectReferenceArgs targetRef) {
+            return targetRef(Output.of(targetRef));
+        }
+
+        public EndpointAddressArgs build() {
+            $.ip = Objects.requireNonNull($.ip, "expected parameter 'ip' to be non-null");
+            return $;
         }
     }
+
 }

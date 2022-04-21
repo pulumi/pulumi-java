@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricName", required=true)
-      private final Output<String> metricName;
+    private Output<String> metricName;
 
     public Output<String> metricName() {
         return this.metricName;
@@ -36,10 +36,10 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="metricSelector")
-      private final @Nullable Output<LabelSelectorArgs> metricSelector;
+    private @Nullable Output<LabelSelectorArgs> metricSelector;
 
-    public Output<LabelSelectorArgs> metricSelector() {
-        return this.metricSelector == null ? Codegen.empty() : this.metricSelector;
+    public Optional<Output<LabelSelectorArgs>> metricSelector() {
+        return Optional.ofNullable(this.metricSelector);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="targetAverageValue")
-      private final @Nullable Output<String> targetAverageValue;
+    private @Nullable Output<String> targetAverageValue;
 
-    public Output<String> targetAverageValue() {
-        return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
+    public Optional<Output<String>> targetAverageValue() {
+        return Optional.ofNullable(this.targetAverageValue);
     }
 
     /**
@@ -58,89 +58,79 @@ public final class ExternalMetricSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="targetValue")
-      private final @Nullable Output<String> targetValue;
+    private @Nullable Output<String> targetValue;
 
-    public Output<String> targetValue() {
-        return this.targetValue == null ? Codegen.empty() : this.targetValue;
+    public Optional<Output<String>> targetValue() {
+        return Optional.ofNullable(this.targetValue);
     }
 
-    public ExternalMetricSourceArgs(
-        Output<String> metricName,
-        @Nullable Output<LabelSelectorArgs> metricSelector,
-        @Nullable Output<String> targetAverageValue,
-        @Nullable Output<String> targetValue) {
-        this.metricName = Objects.requireNonNull(metricName, "expected parameter 'metricName' to be non-null");
-        this.metricSelector = metricSelector;
-        this.targetAverageValue = targetAverageValue;
-        this.targetValue = targetValue;
-    }
+    private ExternalMetricSourceArgs() {}
 
-    private ExternalMetricSourceArgs() {
-        this.metricName = Codegen.empty();
-        this.metricSelector = Codegen.empty();
-        this.targetAverageValue = Codegen.empty();
-        this.targetValue = Codegen.empty();
+    private ExternalMetricSourceArgs(ExternalMetricSourceArgs $) {
+        this.metricName = $.metricName;
+        this.metricSelector = $.metricSelector;
+        this.targetAverageValue = $.targetAverageValue;
+        this.targetValue = $.targetValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalMetricSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> metricName;
-        private @Nullable Output<LabelSelectorArgs> metricSelector;
-        private @Nullable Output<String> targetAverageValue;
-        private @Nullable Output<String> targetValue;
+        private ExternalMetricSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalMetricSourceArgs();
         }
 
         public Builder(ExternalMetricSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metricName = defaults.metricName;
-    	      this.metricSelector = defaults.metricSelector;
-    	      this.targetAverageValue = defaults.targetAverageValue;
-    	      this.targetValue = defaults.targetValue;
+            $ = new ExternalMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metricName(Output<String> metricName) {
-            this.metricName = Objects.requireNonNull(metricName);
+            $.metricName = metricName;
             return this;
         }
+
         public Builder metricName(String metricName) {
-            this.metricName = Output.of(Objects.requireNonNull(metricName));
-            return this;
+            return metricName(Output.of(metricName));
         }
+
         public Builder metricSelector(@Nullable Output<LabelSelectorArgs> metricSelector) {
-            this.metricSelector = metricSelector;
+            $.metricSelector = metricSelector;
             return this;
         }
-        public Builder metricSelector(@Nullable LabelSelectorArgs metricSelector) {
-            this.metricSelector = Codegen.ofNullable(metricSelector);
-            return this;
+
+        public Builder metricSelector(LabelSelectorArgs metricSelector) {
+            return metricSelector(Output.of(metricSelector));
         }
+
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
-            this.targetAverageValue = targetAverageValue;
+            $.targetAverageValue = targetAverageValue;
             return this;
         }
-        public Builder targetAverageValue(@Nullable String targetAverageValue) {
-            this.targetAverageValue = Codegen.ofNullable(targetAverageValue);
-            return this;
+
+        public Builder targetAverageValue(String targetAverageValue) {
+            return targetAverageValue(Output.of(targetAverageValue));
         }
+
         public Builder targetValue(@Nullable Output<String> targetValue) {
-            this.targetValue = targetValue;
+            $.targetValue = targetValue;
             return this;
         }
-        public Builder targetValue(@Nullable String targetValue) {
-            this.targetValue = Codegen.ofNullable(targetValue);
-            return this;
-        }        public ExternalMetricSourceArgs build() {
-            return new ExternalMetricSourceArgs(metricName, metricSelector, targetAverageValue, targetValue);
+
+        public Builder targetValue(String targetValue) {
+            return targetValue(Output.of(targetValue));
+        }
+
+        public ExternalMetricSourceArgs build() {
+            $.metricName = Objects.requireNonNull($.metricName, "expected parameter 'metricName' to be non-null");
+            return $;
         }
     }
+
 }

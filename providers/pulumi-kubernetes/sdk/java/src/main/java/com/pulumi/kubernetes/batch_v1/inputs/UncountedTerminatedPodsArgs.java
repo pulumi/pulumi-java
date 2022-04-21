@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.batch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="failed")
-      private final @Nullable Output<List<String>> failed;
+    private @Nullable Output<List<String>> failed;
 
-    public Output<List<String>> failed() {
-        return this.failed == null ? Codegen.empty() : this.failed;
+    public Optional<Output<List<String>>> failed() {
+        return Optional.ofNullable(this.failed);
     }
 
     /**
@@ -36,69 +36,66 @@ public final class UncountedTerminatedPodsArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="succeeded")
-      private final @Nullable Output<List<String>> succeeded;
+    private @Nullable Output<List<String>> succeeded;
 
-    public Output<List<String>> succeeded() {
-        return this.succeeded == null ? Codegen.empty() : this.succeeded;
+    public Optional<Output<List<String>>> succeeded() {
+        return Optional.ofNullable(this.succeeded);
     }
 
-    public UncountedTerminatedPodsArgs(
-        @Nullable Output<List<String>> failed,
-        @Nullable Output<List<String>> succeeded) {
-        this.failed = failed;
-        this.succeeded = succeeded;
-    }
+    private UncountedTerminatedPodsArgs() {}
 
-    private UncountedTerminatedPodsArgs() {
-        this.failed = Codegen.empty();
-        this.succeeded = Codegen.empty();
+    private UncountedTerminatedPodsArgs(UncountedTerminatedPodsArgs $) {
+        this.failed = $.failed;
+        this.succeeded = $.succeeded;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(UncountedTerminatedPodsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> failed;
-        private @Nullable Output<List<String>> succeeded;
+        private UncountedTerminatedPodsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new UncountedTerminatedPodsArgs();
         }
 
         public Builder(UncountedTerminatedPodsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.failed = defaults.failed;
-    	      this.succeeded = defaults.succeeded;
+            $ = new UncountedTerminatedPodsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder failed(@Nullable Output<List<String>> failed) {
-            this.failed = failed;
+            $.failed = failed;
             return this;
         }
-        public Builder failed(@Nullable List<String> failed) {
-            this.failed = Codegen.ofNullable(failed);
-            return this;
+
+        public Builder failed(List<String> failed) {
+            return failed(Output.of(failed));
         }
+
         public Builder failed(String... failed) {
             return failed(List.of(failed));
         }
+
         public Builder succeeded(@Nullable Output<List<String>> succeeded) {
-            this.succeeded = succeeded;
+            $.succeeded = succeeded;
             return this;
         }
-        public Builder succeeded(@Nullable List<String> succeeded) {
-            this.succeeded = Codegen.ofNullable(succeeded);
-            return this;
+
+        public Builder succeeded(List<String> succeeded) {
+            return succeeded(Output.of(succeeded));
         }
+
         public Builder succeeded(String... succeeded) {
             return succeeded(List.of(succeeded));
-        }        public UncountedTerminatedPodsArgs build() {
-            return new UncountedTerminatedPodsArgs(failed, succeeded);
+        }
+
+        public UncountedTerminatedPodsArgs build() {
+            return $;
         }
     }
+
 }

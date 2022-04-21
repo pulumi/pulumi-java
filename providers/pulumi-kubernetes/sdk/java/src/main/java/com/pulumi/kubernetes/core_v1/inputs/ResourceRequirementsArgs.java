@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="limits")
-      private final @Nullable Output<Map<String,String>> limits;
+    private @Nullable Output<Map<String,String>> limits;
 
-    public Output<Map<String,String>> limits() {
-        return this.limits == null ? Codegen.empty() : this.limits;
+    public Optional<Output<Map<String,String>>> limits() {
+        return Optional.ofNullable(this.limits);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="requests")
-      private final @Nullable Output<Map<String,String>> requests;
+    private @Nullable Output<Map<String,String>> requests;
 
-    public Output<Map<String,String>> requests() {
-        return this.requests == null ? Codegen.empty() : this.requests;
+    public Optional<Output<Map<String,String>>> requests() {
+        return Optional.ofNullable(this.requests);
     }
 
-    public ResourceRequirementsArgs(
-        @Nullable Output<Map<String,String>> limits,
-        @Nullable Output<Map<String,String>> requests) {
-        this.limits = limits;
-        this.requests = requests;
-    }
+    private ResourceRequirementsArgs() {}
 
-    private ResourceRequirementsArgs() {
-        this.limits = Codegen.empty();
-        this.requests = Codegen.empty();
+    private ResourceRequirementsArgs(ResourceRequirementsArgs $) {
+        this.limits = $.limits;
+        this.requests = $.requests;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ResourceRequirementsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> limits;
-        private @Nullable Output<Map<String,String>> requests;
+        private ResourceRequirementsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ResourceRequirementsArgs();
         }
 
         public Builder(ResourceRequirementsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.limits = defaults.limits;
-    	      this.requests = defaults.requests;
+            $ = new ResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
-            this.limits = limits;
+            $.limits = limits;
             return this;
         }
-        public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Codegen.ofNullable(limits);
-            return this;
+
+        public Builder limits(Map<String,String> limits) {
+            return limits(Output.of(limits));
         }
+
         public Builder requests(@Nullable Output<Map<String,String>> requests) {
-            this.requests = requests;
+            $.requests = requests;
             return this;
         }
-        public Builder requests(@Nullable Map<String,String> requests) {
-            this.requests = Codegen.ofNullable(requests);
-            return this;
-        }        public ResourceRequirementsArgs build() {
-            return new ResourceRequirementsArgs(limits, requests);
+
+        public Builder requests(Map<String,String> requests) {
+            return requests(Output.of(requests));
+        }
+
+        public ResourceRequirementsArgs build() {
+            return $;
         }
     }
+
 }

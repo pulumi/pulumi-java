@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="averageUtilization")
-      private final @Nullable Output<Integer> averageUtilization;
+    private @Nullable Output<Integer> averageUtilization;
 
-    public Output<Integer> averageUtilization() {
-        return this.averageUtilization == null ? Codegen.empty() : this.averageUtilization;
+    public Optional<Output<Integer>> averageUtilization() {
+        return Optional.ofNullable(this.averageUtilization);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="averageValue")
-      private final @Nullable Output<String> averageValue;
+    private @Nullable Output<String> averageValue;
 
-    public Output<String> averageValue() {
-        return this.averageValue == null ? Codegen.empty() : this.averageValue;
+    public Optional<Output<String>> averageValue() {
+        return Optional.ofNullable(this.averageValue);
     }
 
     /**
@@ -47,76 +47,68 @@ public final class MetricValueStatusArgs extends com.pulumi.resources.ResourceAr
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public MetricValueStatusArgs(
-        @Nullable Output<Integer> averageUtilization,
-        @Nullable Output<String> averageValue,
-        @Nullable Output<String> value) {
-        this.averageUtilization = averageUtilization;
-        this.averageValue = averageValue;
-        this.value = value;
-    }
+    private MetricValueStatusArgs() {}
 
-    private MetricValueStatusArgs() {
-        this.averageUtilization = Codegen.empty();
-        this.averageValue = Codegen.empty();
-        this.value = Codegen.empty();
+    private MetricValueStatusArgs(MetricValueStatusArgs $) {
+        this.averageUtilization = $.averageUtilization;
+        this.averageValue = $.averageValue;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricValueStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> averageUtilization;
-        private @Nullable Output<String> averageValue;
-        private @Nullable Output<String> value;
+        private MetricValueStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricValueStatusArgs();
         }
 
         public Builder(MetricValueStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.averageUtilization = defaults.averageUtilization;
-    	      this.averageValue = defaults.averageValue;
-    	      this.value = defaults.value;
+            $ = new MetricValueStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder averageUtilization(@Nullable Output<Integer> averageUtilization) {
-            this.averageUtilization = averageUtilization;
+            $.averageUtilization = averageUtilization;
             return this;
         }
-        public Builder averageUtilization(@Nullable Integer averageUtilization) {
-            this.averageUtilization = Codegen.ofNullable(averageUtilization);
-            return this;
+
+        public Builder averageUtilization(Integer averageUtilization) {
+            return averageUtilization(Output.of(averageUtilization));
         }
+
         public Builder averageValue(@Nullable Output<String> averageValue) {
-            this.averageValue = averageValue;
+            $.averageValue = averageValue;
             return this;
         }
-        public Builder averageValue(@Nullable String averageValue) {
-            this.averageValue = Codegen.ofNullable(averageValue);
-            return this;
+
+        public Builder averageValue(String averageValue) {
+            return averageValue(Output.of(averageValue));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public MetricValueStatusArgs build() {
-            return new MetricValueStatusArgs(averageUtilization, averageValue, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public MetricValueStatusArgs build() {
+            return $;
         }
     }
+
 }

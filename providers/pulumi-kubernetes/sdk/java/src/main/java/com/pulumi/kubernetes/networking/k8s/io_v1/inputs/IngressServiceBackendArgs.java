@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.ServiceBackendPortArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class IngressServiceBackendArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,63 +36,59 @@ public final class IngressServiceBackendArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="port")
-      private final @Nullable Output<ServiceBackendPortArgs> port;
+    private @Nullable Output<ServiceBackendPortArgs> port;
 
-    public Output<ServiceBackendPortArgs> port() {
-        return this.port == null ? Codegen.empty() : this.port;
+    public Optional<Output<ServiceBackendPortArgs>> port() {
+        return Optional.ofNullable(this.port);
     }
 
-    public IngressServiceBackendArgs(
-        Output<String> name,
-        @Nullable Output<ServiceBackendPortArgs> port) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.port = port;
-    }
+    private IngressServiceBackendArgs() {}
 
-    private IngressServiceBackendArgs() {
-        this.name = Codegen.empty();
-        this.port = Codegen.empty();
+    private IngressServiceBackendArgs(IngressServiceBackendArgs $) {
+        this.name = $.name;
+        this.port = $.port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressServiceBackendArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<ServiceBackendPortArgs> port;
+        private IngressServiceBackendArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressServiceBackendArgs();
         }
 
         public Builder(IngressServiceBackendArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.port = defaults.port;
+            $ = new IngressServiceBackendArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder port(@Nullable Output<ServiceBackendPortArgs> port) {
-            this.port = port;
+            $.port = port;
             return this;
         }
-        public Builder port(@Nullable ServiceBackendPortArgs port) {
-            this.port = Codegen.ofNullable(port);
-            return this;
-        }        public IngressServiceBackendArgs build() {
-            return new IngressServiceBackendArgs(name, port);
+
+        public Builder port(ServiceBackendPortArgs port) {
+            return port(Output.of(port));
+        }
+
+        public IngressServiceBackendArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

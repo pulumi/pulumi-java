@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPeerArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPortArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
+    private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
-    public Output<List<NetworkPolicyPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<NetworkPolicyPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class NetworkPolicyEgressRuleArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="to")
-      private final @Nullable Output<List<NetworkPolicyPeerArgs>> to;
+    private @Nullable Output<List<NetworkPolicyPeerArgs>> to;
 
-    public Output<List<NetworkPolicyPeerArgs>> to() {
-        return this.to == null ? Codegen.empty() : this.to;
+    public Optional<Output<List<NetworkPolicyPeerArgs>>> to() {
+        return Optional.ofNullable(this.to);
     }
 
-    public NetworkPolicyEgressRuleArgs(
-        @Nullable Output<List<NetworkPolicyPortArgs>> ports,
-        @Nullable Output<List<NetworkPolicyPeerArgs>> to) {
-        this.ports = ports;
-        this.to = to;
-    }
+    private NetworkPolicyEgressRuleArgs() {}
 
-    private NetworkPolicyEgressRuleArgs() {
-        this.ports = Codegen.empty();
-        this.to = Codegen.empty();
+    private NetworkPolicyEgressRuleArgs(NetworkPolicyEgressRuleArgs $) {
+        this.ports = $.ports;
+        this.to = $.to;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicyEgressRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
-        private @Nullable Output<List<NetworkPolicyPeerArgs>> to;
+        private NetworkPolicyEgressRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicyEgressRuleArgs();
         }
 
         public Builder(NetworkPolicyEgressRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ports = defaults.ports;
-    	      this.to = defaults.to;
+            $ = new NetworkPolicyEgressRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ports(@Nullable Output<List<NetworkPolicyPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<NetworkPolicyPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(NetworkPolicyPortArgs... ports) {
             return ports(List.of(ports));
         }
+
         public Builder to(@Nullable Output<List<NetworkPolicyPeerArgs>> to) {
-            this.to = to;
+            $.to = to;
             return this;
         }
-        public Builder to(@Nullable List<NetworkPolicyPeerArgs> to) {
-            this.to = Codegen.ofNullable(to);
-            return this;
+
+        public Builder to(List<NetworkPolicyPeerArgs> to) {
+            return to(Output.of(to));
         }
+
         public Builder to(NetworkPolicyPeerArgs... to) {
             return to(List.of(to));
-        }        public NetworkPolicyEgressRuleArgs build() {
-            return new NetworkPolicyEgressRuleArgs(ports, to);
+        }
+
+        public NetworkPolicyEgressRuleArgs build() {
+            return $;
         }
     }
+
 }

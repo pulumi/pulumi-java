@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.meta_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="field")
-      private final @Nullable Output<String> field;
+    private @Nullable Output<String> field;
 
-    public Output<String> field() {
-        return this.field == null ? Codegen.empty() : this.field;
+    public Optional<Output<String>> field() {
+        return Optional.ofNullable(this.field);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -50,76 +50,68 @@ public final class StatusCauseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
-    public StatusCauseArgs(
-        @Nullable Output<String> field,
-        @Nullable Output<String> message,
-        @Nullable Output<String> reason) {
-        this.field = field;
-        this.message = message;
-        this.reason = reason;
-    }
+    private StatusCauseArgs() {}
 
-    private StatusCauseArgs() {
-        this.field = Codegen.empty();
-        this.message = Codegen.empty();
-        this.reason = Codegen.empty();
+    private StatusCauseArgs(StatusCauseArgs $) {
+        this.field = $.field;
+        this.message = $.message;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StatusCauseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> field;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> reason;
+        private StatusCauseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StatusCauseArgs();
         }
 
         public Builder(StatusCauseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.field = defaults.field;
-    	      this.message = defaults.message;
-    	      this.reason = defaults.reason;
+            $ = new StatusCauseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder field(@Nullable Output<String> field) {
-            this.field = field;
+            $.field = field;
             return this;
         }
-        public Builder field(@Nullable String field) {
-            this.field = Codegen.ofNullable(field);
-            return this;
+
+        public Builder field(String field) {
+            return field(Output.of(field));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
-        }        public StatusCauseArgs build() {
-            return new StatusCauseArgs(field, message, reason);
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
+        }
+
+        public StatusCauseArgs build() {
+            return $;
         }
     }
+
 }

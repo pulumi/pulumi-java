@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class PersistentVolumeClaimTemplateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class PersistentVolumeClaimTemplateArgs extends com.pulumi.resource
      * 
      */
     @Import(name="spec", required=true)
-      private final Output<PersistentVolumeClaimSpecArgs> spec;
+    private Output<PersistentVolumeClaimSpecArgs> spec;
 
     public Output<PersistentVolumeClaimSpecArgs> spec() {
         return this.spec;
     }
 
-    public PersistentVolumeClaimTemplateArgs(
-        @Nullable Output<ObjectMetaArgs> metadata,
-        Output<PersistentVolumeClaimSpecArgs> spec) {
-        this.metadata = metadata;
-        this.spec = Objects.requireNonNull(spec, "expected parameter 'spec' to be non-null");
-    }
+    private PersistentVolumeClaimTemplateArgs() {}
 
-    private PersistentVolumeClaimTemplateArgs() {
-        this.metadata = Codegen.empty();
-        this.spec = Codegen.empty();
+    private PersistentVolumeClaimTemplateArgs(PersistentVolumeClaimTemplateArgs $) {
+        this.metadata = $.metadata;
+        this.spec = $.spec;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentVolumeClaimTemplateArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private Output<PersistentVolumeClaimSpecArgs> spec;
+        private PersistentVolumeClaimTemplateArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentVolumeClaimTemplateArgs();
         }
 
         public Builder(PersistentVolumeClaimTemplateArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.metadata = defaults.metadata;
-    	      this.spec = defaults.spec;
+            $ = new PersistentVolumeClaimTemplateArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder spec(Output<PersistentVolumeClaimSpecArgs> spec) {
-            this.spec = Objects.requireNonNull(spec);
+            $.spec = spec;
             return this;
         }
+
         public Builder spec(PersistentVolumeClaimSpecArgs spec) {
-            this.spec = Output.of(Objects.requireNonNull(spec));
-            return this;
-        }        public PersistentVolumeClaimTemplateArgs build() {
-            return new PersistentVolumeClaimTemplateArgs(metadata, spec);
+            return spec(Output.of(spec));
+        }
+
+        public PersistentVolumeClaimTemplateArgs build() {
+            $.spec = Objects.requireNonNull($.spec, "expected parameter 'spec' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerPort", required=true)
-      private final Output<Integer> containerPort;
+    private Output<Integer> containerPort;
 
     public Output<Integer> containerPort() {
         return this.containerPort;
@@ -36,10 +36,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostIP")
-      private final @Nullable Output<String> hostIP;
+    private @Nullable Output<String> hostIP;
 
-    public Output<String> hostIP() {
-        return this.hostIP == null ? Codegen.empty() : this.hostIP;
+    public Optional<Output<String>> hostIP() {
+        return Optional.ofNullable(this.hostIP);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostPort")
-      private final @Nullable Output<Integer> hostPort;
+    private @Nullable Output<Integer> hostPort;
 
-    public Output<Integer> hostPort() {
-        return this.hostPort == null ? Codegen.empty() : this.hostPort;
+    public Optional<Output<Integer>> hostPort() {
+        return Optional.ofNullable(this.hostPort);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -74,102 +74,89 @@ public final class ContainerPortArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="protocol")
-      private final @Nullable Output<String> protocol;
+    private @Nullable Output<String> protocol;
 
-    public Output<String> protocol() {
-        return this.protocol == null ? Codegen.empty() : this.protocol;
+    public Optional<Output<String>> protocol() {
+        return Optional.ofNullable(this.protocol);
     }
 
-    public ContainerPortArgs(
-        Output<Integer> containerPort,
-        @Nullable Output<String> hostIP,
-        @Nullable Output<Integer> hostPort,
-        @Nullable Output<String> name,
-        @Nullable Output<String> protocol) {
-        this.containerPort = Objects.requireNonNull(containerPort, "expected parameter 'containerPort' to be non-null");
-        this.hostIP = hostIP;
-        this.hostPort = hostPort;
-        this.name = name;
-        this.protocol = protocol;
-    }
+    private ContainerPortArgs() {}
 
-    private ContainerPortArgs() {
-        this.containerPort = Codegen.empty();
-        this.hostIP = Codegen.empty();
-        this.hostPort = Codegen.empty();
-        this.name = Codegen.empty();
-        this.protocol = Codegen.empty();
+    private ContainerPortArgs(ContainerPortArgs $) {
+        this.containerPort = $.containerPort;
+        this.hostIP = $.hostIP;
+        this.hostPort = $.hostPort;
+        this.name = $.name;
+        this.protocol = $.protocol;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> containerPort;
-        private @Nullable Output<String> hostIP;
-        private @Nullable Output<Integer> hostPort;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> protocol;
+        private ContainerPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerPortArgs();
         }
 
         public Builder(ContainerPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.containerPort = defaults.containerPort;
-    	      this.hostIP = defaults.hostIP;
-    	      this.hostPort = defaults.hostPort;
-    	      this.name = defaults.name;
-    	      this.protocol = defaults.protocol;
+            $ = new ContainerPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder containerPort(Output<Integer> containerPort) {
-            this.containerPort = Objects.requireNonNull(containerPort);
+            $.containerPort = containerPort;
             return this;
         }
+
         public Builder containerPort(Integer containerPort) {
-            this.containerPort = Output.of(Objects.requireNonNull(containerPort));
-            return this;
+            return containerPort(Output.of(containerPort));
         }
+
         public Builder hostIP(@Nullable Output<String> hostIP) {
-            this.hostIP = hostIP;
+            $.hostIP = hostIP;
             return this;
         }
-        public Builder hostIP(@Nullable String hostIP) {
-            this.hostIP = Codegen.ofNullable(hostIP);
-            return this;
+
+        public Builder hostIP(String hostIP) {
+            return hostIP(Output.of(hostIP));
         }
+
         public Builder hostPort(@Nullable Output<Integer> hostPort) {
-            this.hostPort = hostPort;
+            $.hostPort = hostPort;
             return this;
         }
-        public Builder hostPort(@Nullable Integer hostPort) {
-            this.hostPort = Codegen.ofNullable(hostPort);
-            return this;
+
+        public Builder hostPort(Integer hostPort) {
+            return hostPort(Output.of(hostPort));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder protocol(@Nullable Output<String> protocol) {
-            this.protocol = protocol;
+            $.protocol = protocol;
             return this;
         }
-        public Builder protocol(@Nullable String protocol) {
-            this.protocol = Codegen.ofNullable(protocol);
-            return this;
-        }        public ContainerPortArgs build() {
-            return new ContainerPortArgs(containerPort, hostIP, hostPort, name, protocol);
+
+        public Builder protocol(String protocol) {
+            return protocol(Output.of(protocol));
+        }
+
+        public ContainerPortArgs build() {
+            $.containerPort = Objects.requireNonNull($.containerPort, "expected parameter 'containerPort' to be non-null");
+            return $;
         }
     }
+
 }

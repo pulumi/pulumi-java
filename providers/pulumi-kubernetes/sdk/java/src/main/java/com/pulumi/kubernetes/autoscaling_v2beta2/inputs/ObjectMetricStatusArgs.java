@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.CrossVersionObjectReferenceArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
 import com.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
@@ -25,14 +24,14 @@ public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="current", required=true)
-      private final Output<MetricValueStatusArgs> current;
+    private Output<MetricValueStatusArgs> current;
 
     public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
 
     @Import(name="describedObject", required=true)
-      private final Output<CrossVersionObjectReferenceArgs> describedObject;
+    private Output<CrossVersionObjectReferenceArgs> describedObject;
 
     public Output<CrossVersionObjectReferenceArgs> describedObject() {
         return this.describedObject;
@@ -43,76 +42,71 @@ public final class ObjectMetricStatusArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="metric", required=true)
-      private final Output<MetricIdentifierArgs> metric;
+    private Output<MetricIdentifierArgs> metric;
 
     public Output<MetricIdentifierArgs> metric() {
         return this.metric;
     }
 
-    public ObjectMetricStatusArgs(
-        Output<MetricValueStatusArgs> current,
-        Output<CrossVersionObjectReferenceArgs> describedObject,
-        Output<MetricIdentifierArgs> metric) {
-        this.current = Objects.requireNonNull(current, "expected parameter 'current' to be non-null");
-        this.describedObject = Objects.requireNonNull(describedObject, "expected parameter 'describedObject' to be non-null");
-        this.metric = Objects.requireNonNull(metric, "expected parameter 'metric' to be non-null");
-    }
+    private ObjectMetricStatusArgs() {}
 
-    private ObjectMetricStatusArgs() {
-        this.current = Codegen.empty();
-        this.describedObject = Codegen.empty();
-        this.metric = Codegen.empty();
+    private ObjectMetricStatusArgs(ObjectMetricStatusArgs $) {
+        this.current = $.current;
+        this.describedObject = $.describedObject;
+        this.metric = $.metric;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ObjectMetricStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<MetricValueStatusArgs> current;
-        private Output<CrossVersionObjectReferenceArgs> describedObject;
-        private Output<MetricIdentifierArgs> metric;
+        private ObjectMetricStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ObjectMetricStatusArgs();
         }
 
         public Builder(ObjectMetricStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.current = defaults.current;
-    	      this.describedObject = defaults.describedObject;
-    	      this.metric = defaults.metric;
+            $ = new ObjectMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder current(Output<MetricValueStatusArgs> current) {
-            this.current = Objects.requireNonNull(current);
+            $.current = current;
             return this;
         }
+
         public Builder current(MetricValueStatusArgs current) {
-            this.current = Output.of(Objects.requireNonNull(current));
-            return this;
+            return current(Output.of(current));
         }
+
         public Builder describedObject(Output<CrossVersionObjectReferenceArgs> describedObject) {
-            this.describedObject = Objects.requireNonNull(describedObject);
+            $.describedObject = describedObject;
             return this;
         }
+
         public Builder describedObject(CrossVersionObjectReferenceArgs describedObject) {
-            this.describedObject = Output.of(Objects.requireNonNull(describedObject));
-            return this;
+            return describedObject(Output.of(describedObject));
         }
+
         public Builder metric(Output<MetricIdentifierArgs> metric) {
-            this.metric = Objects.requireNonNull(metric);
+            $.metric = metric;
             return this;
         }
+
         public Builder metric(MetricIdentifierArgs metric) {
-            this.metric = Output.of(Objects.requireNonNull(metric));
-            return this;
-        }        public ObjectMetricStatusArgs build() {
-            return new ObjectMetricStatusArgs(current, describedObject, metric);
+            return metric(Output.of(metric));
+        }
+
+        public ObjectMetricStatusArgs build() {
+            $.current = Objects.requireNonNull($.current, "expected parameter 'current' to be non-null");
+            $.describedObject = Objects.requireNonNull($.describedObject, "expected parameter 'describedObject' to be non-null");
+            $.metric = Objects.requireNonNull($.metric, "expected parameter 'metric' to be non-null");
+            return $;
         }
     }
+
 }

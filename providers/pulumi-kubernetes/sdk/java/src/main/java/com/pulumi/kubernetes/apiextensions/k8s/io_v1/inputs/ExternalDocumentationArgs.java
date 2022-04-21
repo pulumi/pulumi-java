@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -20,70 +20,65 @@ public final class ExternalDocumentationArgs extends com.pulumi.resources.Resour
     public static final ExternalDocumentationArgs Empty = new ExternalDocumentationArgs();
 
     @Import(name="description")
-      private final @Nullable Output<String> description;
+    private @Nullable Output<String> description;
 
-    public Output<String> description() {
-        return this.description == null ? Codegen.empty() : this.description;
+    public Optional<Output<String>> description() {
+        return Optional.ofNullable(this.description);
     }
 
     @Import(name="url")
-      private final @Nullable Output<String> url;
+    private @Nullable Output<String> url;
 
-    public Output<String> url() {
-        return this.url == null ? Codegen.empty() : this.url;
+    public Optional<Output<String>> url() {
+        return Optional.ofNullable(this.url);
     }
 
-    public ExternalDocumentationArgs(
-        @Nullable Output<String> description,
-        @Nullable Output<String> url) {
-        this.description = description;
-        this.url = url;
-    }
+    private ExternalDocumentationArgs() {}
 
-    private ExternalDocumentationArgs() {
-        this.description = Codegen.empty();
-        this.url = Codegen.empty();
+    private ExternalDocumentationArgs(ExternalDocumentationArgs $) {
+        this.description = $.description;
+        this.url = $.url;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ExternalDocumentationArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> description;
-        private @Nullable Output<String> url;
+        private ExternalDocumentationArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ExternalDocumentationArgs();
         }
 
         public Builder(ExternalDocumentationArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.description = defaults.description;
-    	      this.url = defaults.url;
+            $ = new ExternalDocumentationArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder description(@Nullable Output<String> description) {
-            this.description = description;
+            $.description = description;
             return this;
         }
-        public Builder description(@Nullable String description) {
-            this.description = Codegen.ofNullable(description);
-            return this;
+
+        public Builder description(String description) {
+            return description(Output.of(description));
         }
+
         public Builder url(@Nullable Output<String> url) {
-            this.url = url;
+            $.url = url;
             return this;
         }
-        public Builder url(@Nullable String url) {
-            this.url = Codegen.ofNullable(url);
-            return this;
-        }        public ExternalDocumentationArgs build() {
-            return new ExternalDocumentationArgs(description, url);
+
+        public Builder url(String url) {
+            return url(Output.of(url));
+        }
+
+        public ExternalDocumentationArgs build() {
+            return $;
         }
     }
+
 }

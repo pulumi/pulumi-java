@@ -12,6 +12,7 @@ import com.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -33,7 +34,7 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="addressType", required=true)
-      private final Output<String> addressType;
+    private Output<String> addressType;
 
     public Output<String> addressType() {
         return this.addressType;
@@ -44,10 +45,10 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="endpoints", required=true)
-      private final Output<List<EndpointArgs>> endpoints;
+    private Output<List<EndpointArgs>> endpoints;
 
     public Output<List<EndpointArgs>> endpoints() {
         return this.endpoints;
@@ -66,10 +67,10 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -77,10 +78,10 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -88,121 +89,110 @@ public final class EndpointSliceArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<EndpointPortArgs>> ports;
+    private @Nullable Output<List<EndpointPortArgs>> ports;
 
-    public Output<List<EndpointPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<EndpointPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public EndpointSliceArgs(
-        Output<String> addressType,
-        @Nullable Output<String> apiVersion,
-        Output<List<EndpointArgs>> endpoints,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<List<EndpointPortArgs>> ports) {
-        this.addressType = Objects.requireNonNull(addressType, "expected parameter 'addressType' to be non-null");
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.endpoints = Objects.requireNonNull(endpoints, "expected parameter 'endpoints' to be non-null");
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.ports = ports;
-    }
+    private EndpointSliceArgs() {}
 
-    private EndpointSliceArgs() {
-        this.addressType = Codegen.empty();
-        this.apiVersion = Codegen.empty();
-        this.endpoints = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.ports = Codegen.empty();
+    private EndpointSliceArgs(EndpointSliceArgs $) {
+        this.addressType = $.addressType;
+        this.apiVersion = $.apiVersion;
+        this.endpoints = $.endpoints;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EndpointSliceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> addressType;
-        private @Nullable Output<String> apiVersion;
-        private Output<List<EndpointArgs>> endpoints;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<List<EndpointPortArgs>> ports;
+        private EndpointSliceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EndpointSliceArgs();
         }
 
         public Builder(EndpointSliceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.addressType = defaults.addressType;
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.endpoints = defaults.endpoints;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.ports = defaults.ports;
+            $ = new EndpointSliceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder addressType(Output<String> addressType) {
-            this.addressType = Objects.requireNonNull(addressType);
+            $.addressType = addressType;
             return this;
         }
+
         public Builder addressType(String addressType) {
-            this.addressType = Output.of(Objects.requireNonNull(addressType));
-            return this;
+            return addressType(Output.of(addressType));
         }
+
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder endpoints(Output<List<EndpointArgs>> endpoints) {
-            this.endpoints = Objects.requireNonNull(endpoints);
+            $.endpoints = endpoints;
             return this;
         }
+
         public Builder endpoints(List<EndpointArgs> endpoints) {
-            this.endpoints = Output.of(Objects.requireNonNull(endpoints));
-            return this;
+            return endpoints(Output.of(endpoints));
         }
+
         public Builder endpoints(EndpointArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<EndpointPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<EndpointPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(EndpointPortArgs... ports) {
             return ports(List.of(ports));
-        }        public EndpointSliceArgs build() {
-            return new EndpointSliceArgs(addressType, apiVersion, endpoints, kind, metadata, ports);
+        }
+
+        public EndpointSliceArgs build() {
+            $.addressType = Objects.requireNonNull($.addressType, "expected parameter 'addressType' to be non-null");
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.endpoints = Objects.requireNonNull($.endpoints, "expected parameter 'endpoints' to be non-null");
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

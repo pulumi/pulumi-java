@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.RuleWithOperationsArgs;
 import com.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -13,6 +12,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -29,7 +29,7 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="admissionReviewVersions", required=true)
-      private final Output<List<String>> admissionReviewVersions;
+    private Output<List<String>> admissionReviewVersions;
 
     public Output<List<String>> admissionReviewVersions() {
         return this.admissionReviewVersions;
@@ -40,7 +40,7 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clientConfig", required=true)
-      private final Output<WebhookClientConfigArgs> clientConfig;
+    private Output<WebhookClientConfigArgs> clientConfig;
 
     public Output<WebhookClientConfigArgs> clientConfig() {
         return this.clientConfig;
@@ -51,10 +51,10 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="failurePolicy")
-      private final @Nullable Output<String> failurePolicy;
+    private @Nullable Output<String> failurePolicy;
 
-    public Output<String> failurePolicy() {
-        return this.failurePolicy == null ? Codegen.empty() : this.failurePolicy;
+    public Optional<Output<String>> failurePolicy() {
+        return Optional.ofNullable(this.failurePolicy);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="matchPolicy")
-      private final @Nullable Output<String> matchPolicy;
+    private @Nullable Output<String> matchPolicy;
 
-    public Output<String> matchPolicy() {
-        return this.matchPolicy == null ? Codegen.empty() : this.matchPolicy;
+    public Optional<Output<String>> matchPolicy() {
+        return Optional.ofNullable(this.matchPolicy);
     }
 
     /**
@@ -79,7 +79,7 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -120,10 +120,10 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="namespaceSelector")
-      private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
+    private @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
-    public Output<LabelSelectorArgs> namespaceSelector() {
-        return this.namespaceSelector == null ? Codegen.empty() : this.namespaceSelector;
+    public Optional<Output<LabelSelectorArgs>> namespaceSelector() {
+        return Optional.ofNullable(this.namespaceSelector);
     }
 
     /**
@@ -131,10 +131,10 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="objectSelector")
-      private final @Nullable Output<LabelSelectorArgs> objectSelector;
+    private @Nullable Output<LabelSelectorArgs> objectSelector;
 
-    public Output<LabelSelectorArgs> objectSelector() {
-        return this.objectSelector == null ? Codegen.empty() : this.objectSelector;
+    public Optional<Output<LabelSelectorArgs>> objectSelector() {
+        return Optional.ofNullable(this.objectSelector);
     }
 
     /**
@@ -148,10 +148,10 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="reinvocationPolicy")
-      private final @Nullable Output<String> reinvocationPolicy;
+    private @Nullable Output<String> reinvocationPolicy;
 
-    public Output<String> reinvocationPolicy() {
-        return this.reinvocationPolicy == null ? Codegen.empty() : this.reinvocationPolicy;
+    public Optional<Output<String>> reinvocationPolicy() {
+        return Optional.ofNullable(this.reinvocationPolicy);
     }
 
     /**
@@ -159,10 +159,10 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="rules")
-      private final @Nullable Output<List<RuleWithOperationsArgs>> rules;
+    private @Nullable Output<List<RuleWithOperationsArgs>> rules;
 
-    public Output<List<RuleWithOperationsArgs>> rules() {
-        return this.rules == null ? Codegen.empty() : this.rules;
+    public Optional<Output<List<RuleWithOperationsArgs>>> rules() {
+        return Optional.ofNullable(this.rules);
     }
 
     /**
@@ -170,7 +170,7 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="sideEffects", required=true)
-      private final Output<String> sideEffects;
+    private Output<String> sideEffects;
 
     public Output<String> sideEffects() {
         return this.sideEffects;
@@ -181,186 +181,160 @@ public final class MutatingWebhookArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="timeoutSeconds")
-      private final @Nullable Output<Integer> timeoutSeconds;
+    private @Nullable Output<Integer> timeoutSeconds;
 
-    public Output<Integer> timeoutSeconds() {
-        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
+    public Optional<Output<Integer>> timeoutSeconds() {
+        return Optional.ofNullable(this.timeoutSeconds);
     }
 
-    public MutatingWebhookArgs(
-        Output<List<String>> admissionReviewVersions,
-        Output<WebhookClientConfigArgs> clientConfig,
-        @Nullable Output<String> failurePolicy,
-        @Nullable Output<String> matchPolicy,
-        Output<String> name,
-        @Nullable Output<LabelSelectorArgs> namespaceSelector,
-        @Nullable Output<LabelSelectorArgs> objectSelector,
-        @Nullable Output<String> reinvocationPolicy,
-        @Nullable Output<List<RuleWithOperationsArgs>> rules,
-        Output<String> sideEffects,
-        @Nullable Output<Integer> timeoutSeconds) {
-        this.admissionReviewVersions = Objects.requireNonNull(admissionReviewVersions, "expected parameter 'admissionReviewVersions' to be non-null");
-        this.clientConfig = Objects.requireNonNull(clientConfig, "expected parameter 'clientConfig' to be non-null");
-        this.failurePolicy = failurePolicy;
-        this.matchPolicy = matchPolicy;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespaceSelector = namespaceSelector;
-        this.objectSelector = objectSelector;
-        this.reinvocationPolicy = reinvocationPolicy;
-        this.rules = rules;
-        this.sideEffects = Objects.requireNonNull(sideEffects, "expected parameter 'sideEffects' to be non-null");
-        this.timeoutSeconds = timeoutSeconds;
-    }
+    private MutatingWebhookArgs() {}
 
-    private MutatingWebhookArgs() {
-        this.admissionReviewVersions = Codegen.empty();
-        this.clientConfig = Codegen.empty();
-        this.failurePolicy = Codegen.empty();
-        this.matchPolicy = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespaceSelector = Codegen.empty();
-        this.objectSelector = Codegen.empty();
-        this.reinvocationPolicy = Codegen.empty();
-        this.rules = Codegen.empty();
-        this.sideEffects = Codegen.empty();
-        this.timeoutSeconds = Codegen.empty();
+    private MutatingWebhookArgs(MutatingWebhookArgs $) {
+        this.admissionReviewVersions = $.admissionReviewVersions;
+        this.clientConfig = $.clientConfig;
+        this.failurePolicy = $.failurePolicy;
+        this.matchPolicy = $.matchPolicy;
+        this.name = $.name;
+        this.namespaceSelector = $.namespaceSelector;
+        this.objectSelector = $.objectSelector;
+        this.reinvocationPolicy = $.reinvocationPolicy;
+        this.rules = $.rules;
+        this.sideEffects = $.sideEffects;
+        this.timeoutSeconds = $.timeoutSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MutatingWebhookArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> admissionReviewVersions;
-        private Output<WebhookClientConfigArgs> clientConfig;
-        private @Nullable Output<String> failurePolicy;
-        private @Nullable Output<String> matchPolicy;
-        private Output<String> name;
-        private @Nullable Output<LabelSelectorArgs> namespaceSelector;
-        private @Nullable Output<LabelSelectorArgs> objectSelector;
-        private @Nullable Output<String> reinvocationPolicy;
-        private @Nullable Output<List<RuleWithOperationsArgs>> rules;
-        private Output<String> sideEffects;
-        private @Nullable Output<Integer> timeoutSeconds;
+        private MutatingWebhookArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MutatingWebhookArgs();
         }
 
         public Builder(MutatingWebhookArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.admissionReviewVersions = defaults.admissionReviewVersions;
-    	      this.clientConfig = defaults.clientConfig;
-    	      this.failurePolicy = defaults.failurePolicy;
-    	      this.matchPolicy = defaults.matchPolicy;
-    	      this.name = defaults.name;
-    	      this.namespaceSelector = defaults.namespaceSelector;
-    	      this.objectSelector = defaults.objectSelector;
-    	      this.reinvocationPolicy = defaults.reinvocationPolicy;
-    	      this.rules = defaults.rules;
-    	      this.sideEffects = defaults.sideEffects;
-    	      this.timeoutSeconds = defaults.timeoutSeconds;
+            $ = new MutatingWebhookArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder admissionReviewVersions(Output<List<String>> admissionReviewVersions) {
-            this.admissionReviewVersions = Objects.requireNonNull(admissionReviewVersions);
+            $.admissionReviewVersions = admissionReviewVersions;
             return this;
         }
+
         public Builder admissionReviewVersions(List<String> admissionReviewVersions) {
-            this.admissionReviewVersions = Output.of(Objects.requireNonNull(admissionReviewVersions));
-            return this;
+            return admissionReviewVersions(Output.of(admissionReviewVersions));
         }
+
         public Builder admissionReviewVersions(String... admissionReviewVersions) {
             return admissionReviewVersions(List.of(admissionReviewVersions));
         }
+
         public Builder clientConfig(Output<WebhookClientConfigArgs> clientConfig) {
-            this.clientConfig = Objects.requireNonNull(clientConfig);
+            $.clientConfig = clientConfig;
             return this;
         }
+
         public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
-            this.clientConfig = Output.of(Objects.requireNonNull(clientConfig));
-            return this;
+            return clientConfig(Output.of(clientConfig));
         }
+
         public Builder failurePolicy(@Nullable Output<String> failurePolicy) {
-            this.failurePolicy = failurePolicy;
+            $.failurePolicy = failurePolicy;
             return this;
         }
-        public Builder failurePolicy(@Nullable String failurePolicy) {
-            this.failurePolicy = Codegen.ofNullable(failurePolicy);
-            return this;
+
+        public Builder failurePolicy(String failurePolicy) {
+            return failurePolicy(Output.of(failurePolicy));
         }
+
         public Builder matchPolicy(@Nullable Output<String> matchPolicy) {
-            this.matchPolicy = matchPolicy;
+            $.matchPolicy = matchPolicy;
             return this;
         }
-        public Builder matchPolicy(@Nullable String matchPolicy) {
-            this.matchPolicy = Codegen.ofNullable(matchPolicy);
-            return this;
+
+        public Builder matchPolicy(String matchPolicy) {
+            return matchPolicy(Output.of(matchPolicy));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespaceSelector(@Nullable Output<LabelSelectorArgs> namespaceSelector) {
-            this.namespaceSelector = namespaceSelector;
+            $.namespaceSelector = namespaceSelector;
             return this;
         }
-        public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
-            this.namespaceSelector = Codegen.ofNullable(namespaceSelector);
-            return this;
+
+        public Builder namespaceSelector(LabelSelectorArgs namespaceSelector) {
+            return namespaceSelector(Output.of(namespaceSelector));
         }
+
         public Builder objectSelector(@Nullable Output<LabelSelectorArgs> objectSelector) {
-            this.objectSelector = objectSelector;
+            $.objectSelector = objectSelector;
             return this;
         }
-        public Builder objectSelector(@Nullable LabelSelectorArgs objectSelector) {
-            this.objectSelector = Codegen.ofNullable(objectSelector);
-            return this;
+
+        public Builder objectSelector(LabelSelectorArgs objectSelector) {
+            return objectSelector(Output.of(objectSelector));
         }
+
         public Builder reinvocationPolicy(@Nullable Output<String> reinvocationPolicy) {
-            this.reinvocationPolicy = reinvocationPolicy;
+            $.reinvocationPolicy = reinvocationPolicy;
             return this;
         }
-        public Builder reinvocationPolicy(@Nullable String reinvocationPolicy) {
-            this.reinvocationPolicy = Codegen.ofNullable(reinvocationPolicy);
-            return this;
+
+        public Builder reinvocationPolicy(String reinvocationPolicy) {
+            return reinvocationPolicy(Output.of(reinvocationPolicy));
         }
+
         public Builder rules(@Nullable Output<List<RuleWithOperationsArgs>> rules) {
-            this.rules = rules;
+            $.rules = rules;
             return this;
         }
-        public Builder rules(@Nullable List<RuleWithOperationsArgs> rules) {
-            this.rules = Codegen.ofNullable(rules);
-            return this;
+
+        public Builder rules(List<RuleWithOperationsArgs> rules) {
+            return rules(Output.of(rules));
         }
+
         public Builder rules(RuleWithOperationsArgs... rules) {
             return rules(List.of(rules));
         }
+
         public Builder sideEffects(Output<String> sideEffects) {
-            this.sideEffects = Objects.requireNonNull(sideEffects);
+            $.sideEffects = sideEffects;
             return this;
         }
+
         public Builder sideEffects(String sideEffects) {
-            this.sideEffects = Output.of(Objects.requireNonNull(sideEffects));
-            return this;
+            return sideEffects(Output.of(sideEffects));
         }
+
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
-            this.timeoutSeconds = timeoutSeconds;
+            $.timeoutSeconds = timeoutSeconds;
             return this;
         }
-        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
-            return this;
-        }        public MutatingWebhookArgs build() {
-            return new MutatingWebhookArgs(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, reinvocationPolicy, rules, sideEffects, timeoutSeconds);
+
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
+            return timeoutSeconds(Output.of(timeoutSeconds));
+        }
+
+        public MutatingWebhookArgs build() {
+            $.admissionReviewVersions = Objects.requireNonNull($.admissionReviewVersions, "expected parameter 'admissionReviewVersions' to be non-null");
+            $.clientConfig = Objects.requireNonNull($.clientConfig, "expected parameter 'clientConfig' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            $.sideEffects = Objects.requireNonNull($.sideEffects, "expected parameter 'sideEffects' to be non-null");
+            return $;
         }
     }
+
 }

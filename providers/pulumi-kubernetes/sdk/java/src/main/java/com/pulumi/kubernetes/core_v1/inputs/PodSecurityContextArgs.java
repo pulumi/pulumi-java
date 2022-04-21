@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SeccompProfileArgs;
 import com.pulumi.kubernetes.core_v1.inputs.SysctlArgs;
@@ -15,6 +14,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -35,10 +35,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fsGroup")
-      private final @Nullable Output<Integer> fsGroup;
+    private @Nullable Output<Integer> fsGroup;
 
-    public Output<Integer> fsGroup() {
-        return this.fsGroup == null ? Codegen.empty() : this.fsGroup;
+    public Optional<Output<Integer>> fsGroup() {
+        return Optional.ofNullable(this.fsGroup);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="fsGroupChangePolicy")
-      private final @Nullable Output<String> fsGroupChangePolicy;
+    private @Nullable Output<String> fsGroupChangePolicy;
 
-    public Output<String> fsGroupChangePolicy() {
-        return this.fsGroupChangePolicy == null ? Codegen.empty() : this.fsGroupChangePolicy;
+    public Optional<Output<String>> fsGroupChangePolicy() {
+        return Optional.ofNullable(this.fsGroupChangePolicy);
     }
 
     /**
@@ -57,10 +57,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="runAsGroup")
-      private final @Nullable Output<Integer> runAsGroup;
+    private @Nullable Output<Integer> runAsGroup;
 
-    public Output<Integer> runAsGroup() {
-        return this.runAsGroup == null ? Codegen.empty() : this.runAsGroup;
+    public Optional<Output<Integer>> runAsGroup() {
+        return Optional.ofNullable(this.runAsGroup);
     }
 
     /**
@@ -68,10 +68,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="runAsNonRoot")
-      private final @Nullable Output<Boolean> runAsNonRoot;
+    private @Nullable Output<Boolean> runAsNonRoot;
 
-    public Output<Boolean> runAsNonRoot() {
-        return this.runAsNonRoot == null ? Codegen.empty() : this.runAsNonRoot;
+    public Optional<Output<Boolean>> runAsNonRoot() {
+        return Optional.ofNullable(this.runAsNonRoot);
     }
 
     /**
@@ -79,10 +79,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="runAsUser")
-      private final @Nullable Output<Integer> runAsUser;
+    private @Nullable Output<Integer> runAsUser;
 
-    public Output<Integer> runAsUser() {
-        return this.runAsUser == null ? Codegen.empty() : this.runAsUser;
+    public Optional<Output<Integer>> runAsUser() {
+        return Optional.ofNullable(this.runAsUser);
     }
 
     /**
@@ -90,10 +90,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="seLinuxOptions")
-      private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
+    private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Output<SELinuxOptionsArgs> seLinuxOptions() {
-        return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
+    public Optional<Output<SELinuxOptionsArgs>> seLinuxOptions() {
+        return Optional.ofNullable(this.seLinuxOptions);
     }
 
     /**
@@ -101,10 +101,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="seccompProfile")
-      private final @Nullable Output<SeccompProfileArgs> seccompProfile;
+    private @Nullable Output<SeccompProfileArgs> seccompProfile;
 
-    public Output<SeccompProfileArgs> seccompProfile() {
-        return this.seccompProfile == null ? Codegen.empty() : this.seccompProfile;
+    public Optional<Output<SeccompProfileArgs>> seccompProfile() {
+        return Optional.ofNullable(this.seccompProfile);
     }
 
     /**
@@ -112,10 +112,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="supplementalGroups")
-      private final @Nullable Output<List<Integer>> supplementalGroups;
+    private @Nullable Output<List<Integer>> supplementalGroups;
 
-    public Output<List<Integer>> supplementalGroups() {
-        return this.supplementalGroups == null ? Codegen.empty() : this.supplementalGroups;
+    public Optional<Output<List<Integer>>> supplementalGroups() {
+        return Optional.ofNullable(this.supplementalGroups);
     }
 
     /**
@@ -123,10 +123,10 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="sysctls")
-      private final @Nullable Output<List<SysctlArgs>> sysctls;
+    private @Nullable Output<List<SysctlArgs>> sysctls;
 
-    public Output<List<SysctlArgs>> sysctls() {
-        return this.sysctls == null ? Codegen.empty() : this.sysctls;
+    public Optional<Output<List<SysctlArgs>>> sysctls() {
+        return Optional.ofNullable(this.sysctls);
     }
 
     /**
@@ -134,173 +134,146 @@ public final class PodSecurityContextArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="windowsOptions")
-      private final @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
+    private @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
 
-    public Output<WindowsSecurityContextOptionsArgs> windowsOptions() {
-        return this.windowsOptions == null ? Codegen.empty() : this.windowsOptions;
+    public Optional<Output<WindowsSecurityContextOptionsArgs>> windowsOptions() {
+        return Optional.ofNullable(this.windowsOptions);
     }
 
-    public PodSecurityContextArgs(
-        @Nullable Output<Integer> fsGroup,
-        @Nullable Output<String> fsGroupChangePolicy,
-        @Nullable Output<Integer> runAsGroup,
-        @Nullable Output<Boolean> runAsNonRoot,
-        @Nullable Output<Integer> runAsUser,
-        @Nullable Output<SELinuxOptionsArgs> seLinuxOptions,
-        @Nullable Output<SeccompProfileArgs> seccompProfile,
-        @Nullable Output<List<Integer>> supplementalGroups,
-        @Nullable Output<List<SysctlArgs>> sysctls,
-        @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
-        this.fsGroup = fsGroup;
-        this.fsGroupChangePolicy = fsGroupChangePolicy;
-        this.runAsGroup = runAsGroup;
-        this.runAsNonRoot = runAsNonRoot;
-        this.runAsUser = runAsUser;
-        this.seLinuxOptions = seLinuxOptions;
-        this.seccompProfile = seccompProfile;
-        this.supplementalGroups = supplementalGroups;
-        this.sysctls = sysctls;
-        this.windowsOptions = windowsOptions;
-    }
+    private PodSecurityContextArgs() {}
 
-    private PodSecurityContextArgs() {
-        this.fsGroup = Codegen.empty();
-        this.fsGroupChangePolicy = Codegen.empty();
-        this.runAsGroup = Codegen.empty();
-        this.runAsNonRoot = Codegen.empty();
-        this.runAsUser = Codegen.empty();
-        this.seLinuxOptions = Codegen.empty();
-        this.seccompProfile = Codegen.empty();
-        this.supplementalGroups = Codegen.empty();
-        this.sysctls = Codegen.empty();
-        this.windowsOptions = Codegen.empty();
+    private PodSecurityContextArgs(PodSecurityContextArgs $) {
+        this.fsGroup = $.fsGroup;
+        this.fsGroupChangePolicy = $.fsGroupChangePolicy;
+        this.runAsGroup = $.runAsGroup;
+        this.runAsNonRoot = $.runAsNonRoot;
+        this.runAsUser = $.runAsUser;
+        this.seLinuxOptions = $.seLinuxOptions;
+        this.seccompProfile = $.seccompProfile;
+        this.supplementalGroups = $.supplementalGroups;
+        this.sysctls = $.sysctls;
+        this.windowsOptions = $.windowsOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodSecurityContextArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> fsGroup;
-        private @Nullable Output<String> fsGroupChangePolicy;
-        private @Nullable Output<Integer> runAsGroup;
-        private @Nullable Output<Boolean> runAsNonRoot;
-        private @Nullable Output<Integer> runAsUser;
-        private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
-        private @Nullable Output<SeccompProfileArgs> seccompProfile;
-        private @Nullable Output<List<Integer>> supplementalGroups;
-        private @Nullable Output<List<SysctlArgs>> sysctls;
-        private @Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions;
+        private PodSecurityContextArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodSecurityContextArgs();
         }
 
         public Builder(PodSecurityContextArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.fsGroup = defaults.fsGroup;
-    	      this.fsGroupChangePolicy = defaults.fsGroupChangePolicy;
-    	      this.runAsGroup = defaults.runAsGroup;
-    	      this.runAsNonRoot = defaults.runAsNonRoot;
-    	      this.runAsUser = defaults.runAsUser;
-    	      this.seLinuxOptions = defaults.seLinuxOptions;
-    	      this.seccompProfile = defaults.seccompProfile;
-    	      this.supplementalGroups = defaults.supplementalGroups;
-    	      this.sysctls = defaults.sysctls;
-    	      this.windowsOptions = defaults.windowsOptions;
+            $ = new PodSecurityContextArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder fsGroup(@Nullable Output<Integer> fsGroup) {
-            this.fsGroup = fsGroup;
+            $.fsGroup = fsGroup;
             return this;
         }
-        public Builder fsGroup(@Nullable Integer fsGroup) {
-            this.fsGroup = Codegen.ofNullable(fsGroup);
-            return this;
+
+        public Builder fsGroup(Integer fsGroup) {
+            return fsGroup(Output.of(fsGroup));
         }
+
         public Builder fsGroupChangePolicy(@Nullable Output<String> fsGroupChangePolicy) {
-            this.fsGroupChangePolicy = fsGroupChangePolicy;
+            $.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
-        public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
-            this.fsGroupChangePolicy = Codegen.ofNullable(fsGroupChangePolicy);
-            return this;
+
+        public Builder fsGroupChangePolicy(String fsGroupChangePolicy) {
+            return fsGroupChangePolicy(Output.of(fsGroupChangePolicy));
         }
+
         public Builder runAsGroup(@Nullable Output<Integer> runAsGroup) {
-            this.runAsGroup = runAsGroup;
+            $.runAsGroup = runAsGroup;
             return this;
         }
-        public Builder runAsGroup(@Nullable Integer runAsGroup) {
-            this.runAsGroup = Codegen.ofNullable(runAsGroup);
-            return this;
+
+        public Builder runAsGroup(Integer runAsGroup) {
+            return runAsGroup(Output.of(runAsGroup));
         }
+
         public Builder runAsNonRoot(@Nullable Output<Boolean> runAsNonRoot) {
-            this.runAsNonRoot = runAsNonRoot;
+            $.runAsNonRoot = runAsNonRoot;
             return this;
         }
-        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
-            this.runAsNonRoot = Codegen.ofNullable(runAsNonRoot);
-            return this;
+
+        public Builder runAsNonRoot(Boolean runAsNonRoot) {
+            return runAsNonRoot(Output.of(runAsNonRoot));
         }
+
         public Builder runAsUser(@Nullable Output<Integer> runAsUser) {
-            this.runAsUser = runAsUser;
+            $.runAsUser = runAsUser;
             return this;
         }
-        public Builder runAsUser(@Nullable Integer runAsUser) {
-            this.runAsUser = Codegen.ofNullable(runAsUser);
-            return this;
+
+        public Builder runAsUser(Integer runAsUser) {
+            return runAsUser(Output.of(runAsUser));
         }
+
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
-            this.seLinuxOptions = seLinuxOptions;
+            $.seLinuxOptions = seLinuxOptions;
             return this;
         }
-        public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Codegen.ofNullable(seLinuxOptions);
-            return this;
+
+        public Builder seLinuxOptions(SELinuxOptionsArgs seLinuxOptions) {
+            return seLinuxOptions(Output.of(seLinuxOptions));
         }
+
         public Builder seccompProfile(@Nullable Output<SeccompProfileArgs> seccompProfile) {
-            this.seccompProfile = seccompProfile;
+            $.seccompProfile = seccompProfile;
             return this;
         }
-        public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
-            this.seccompProfile = Codegen.ofNullable(seccompProfile);
-            return this;
+
+        public Builder seccompProfile(SeccompProfileArgs seccompProfile) {
+            return seccompProfile(Output.of(seccompProfile));
         }
+
         public Builder supplementalGroups(@Nullable Output<List<Integer>> supplementalGroups) {
-            this.supplementalGroups = supplementalGroups;
+            $.supplementalGroups = supplementalGroups;
             return this;
         }
-        public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
-            this.supplementalGroups = Codegen.ofNullable(supplementalGroups);
-            return this;
+
+        public Builder supplementalGroups(List<Integer> supplementalGroups) {
+            return supplementalGroups(Output.of(supplementalGroups));
         }
+
         public Builder supplementalGroups(Integer... supplementalGroups) {
             return supplementalGroups(List.of(supplementalGroups));
         }
+
         public Builder sysctls(@Nullable Output<List<SysctlArgs>> sysctls) {
-            this.sysctls = sysctls;
+            $.sysctls = sysctls;
             return this;
         }
-        public Builder sysctls(@Nullable List<SysctlArgs> sysctls) {
-            this.sysctls = Codegen.ofNullable(sysctls);
-            return this;
+
+        public Builder sysctls(List<SysctlArgs> sysctls) {
+            return sysctls(Output.of(sysctls));
         }
+
         public Builder sysctls(SysctlArgs... sysctls) {
             return sysctls(List.of(sysctls));
         }
+
         public Builder windowsOptions(@Nullable Output<WindowsSecurityContextOptionsArgs> windowsOptions) {
-            this.windowsOptions = windowsOptions;
+            $.windowsOptions = windowsOptions;
             return this;
         }
-        public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
-            this.windowsOptions = Codegen.ofNullable(windowsOptions);
-            return this;
-        }        public PodSecurityContextArgs build() {
-            return new PodSecurityContextArgs(fsGroup, fsGroupChangePolicy, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, supplementalGroups, sysctls, windowsOptions);
+
+        public Builder windowsOptions(WindowsSecurityContextOptionsArgs windowsOptions) {
+            return windowsOptions(Output.of(windowsOptions));
+        }
+
+        public PodSecurityContextArgs build() {
+            return $;
         }
     }
+
 }

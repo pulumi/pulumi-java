@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,49 +22,49 @@ public final class DaemonEndpointArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="Port", required=true)
-      private final Output<Integer> Port;
+    private Output<Integer> Port;
 
     public Output<Integer> Port() {
         return this.Port;
     }
 
-    public DaemonEndpointArgs(Output<Integer> Port) {
-        this.Port = Objects.requireNonNull(Port, "expected parameter 'Port' to be non-null");
-    }
+    private DaemonEndpointArgs() {}
 
-    private DaemonEndpointArgs() {
-        this.Port = Codegen.empty();
+    private DaemonEndpointArgs(DaemonEndpointArgs $) {
+        this.Port = $.Port;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(DaemonEndpointArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<Integer> Port;
+        private DaemonEndpointArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new DaemonEndpointArgs();
         }
 
         public Builder(DaemonEndpointArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.Port = defaults.Port;
+            $ = new DaemonEndpointArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder Port(Output<Integer> Port) {
-            this.Port = Objects.requireNonNull(Port);
+            $.Port = Port;
             return this;
         }
+
         public Builder Port(Integer Port) {
-            this.Port = Output.of(Objects.requireNonNull(Port));
-            return this;
-        }        public DaemonEndpointArgs build() {
-            return new DaemonEndpointArgs(Port);
+            return Port(Output.of(Port));
+        }
+
+        public DaemonEndpointArgs build() {
+            $.Port = Objects.requireNonNull($.Port, "expected parameter 'Port' to be non-null");
+            return $;
         }
     }
+
 }

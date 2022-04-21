@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class SELinuxStrategyOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="rule", required=true)
-      private final Output<String> rule;
+    private Output<String> rule;
 
     public Output<String> rule() {
         return this.rule;
@@ -36,63 +36,59 @@ public final class SELinuxStrategyOptionsArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="seLinuxOptions")
-      private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
+    private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
-    public Output<SELinuxOptionsArgs> seLinuxOptions() {
-        return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
+    public Optional<Output<SELinuxOptionsArgs>> seLinuxOptions() {
+        return Optional.ofNullable(this.seLinuxOptions);
     }
 
-    public SELinuxStrategyOptionsArgs(
-        Output<String> rule,
-        @Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
-        this.rule = Objects.requireNonNull(rule, "expected parameter 'rule' to be non-null");
-        this.seLinuxOptions = seLinuxOptions;
-    }
+    private SELinuxStrategyOptionsArgs() {}
 
-    private SELinuxStrategyOptionsArgs() {
-        this.rule = Codegen.empty();
-        this.seLinuxOptions = Codegen.empty();
+    private SELinuxStrategyOptionsArgs(SELinuxStrategyOptionsArgs $) {
+        this.rule = $.rule;
+        this.seLinuxOptions = $.seLinuxOptions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SELinuxStrategyOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> rule;
-        private @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
+        private SELinuxStrategyOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SELinuxStrategyOptionsArgs();
         }
 
         public Builder(SELinuxStrategyOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.rule = defaults.rule;
-    	      this.seLinuxOptions = defaults.seLinuxOptions;
+            $ = new SELinuxStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder rule(Output<String> rule) {
-            this.rule = Objects.requireNonNull(rule);
+            $.rule = rule;
             return this;
         }
+
         public Builder rule(String rule) {
-            this.rule = Output.of(Objects.requireNonNull(rule));
-            return this;
+            return rule(Output.of(rule));
         }
+
         public Builder seLinuxOptions(@Nullable Output<SELinuxOptionsArgs> seLinuxOptions) {
-            this.seLinuxOptions = seLinuxOptions;
+            $.seLinuxOptions = seLinuxOptions;
             return this;
         }
-        public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Codegen.ofNullable(seLinuxOptions);
-            return this;
-        }        public SELinuxStrategyOptionsArgs build() {
-            return new SELinuxStrategyOptionsArgs(rule, seLinuxOptions);
+
+        public Builder seLinuxOptions(SELinuxOptionsArgs seLinuxOptions) {
+            return seLinuxOptions(Output.of(seLinuxOptions));
+        }
+
+        public SELinuxStrategyOptionsArgs build() {
+            $.rule = Objects.requireNonNull($.rule, "expected parameter 'rule' to be non-null");
+            return $;
         }
     }
+
 }

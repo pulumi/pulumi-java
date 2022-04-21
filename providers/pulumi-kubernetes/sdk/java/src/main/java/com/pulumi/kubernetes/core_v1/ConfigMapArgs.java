@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -23,10 +24,10 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -34,10 +35,10 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="binaryData")
-      private final @Nullable Output<Map<String,String>> binaryData;
+    private @Nullable Output<Map<String,String>> binaryData;
 
-    public Output<Map<String,String>> binaryData() {
-        return this.binaryData == null ? Codegen.empty() : this.binaryData;
+    public Optional<Output<Map<String,String>>> binaryData() {
+        return Optional.ofNullable(this.binaryData);
     }
 
     /**
@@ -45,10 +46,10 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<Map<String,String>> data;
+    private @Nullable Output<Map<String,String>> data;
 
-    public Output<Map<String,String>> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<Map<String,String>>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -56,10 +57,10 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="immutable")
-      private final @Nullable Output<Boolean> immutable;
+    private @Nullable Output<Boolean> immutable;
 
-    public Output<Boolean> immutable() {
-        return this.immutable == null ? Codegen.empty() : this.immutable;
+    public Optional<Output<Boolean>> immutable() {
+        return Optional.ofNullable(this.immutable);
     }
 
     /**
@@ -67,10 +68,10 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -78,115 +79,100 @@ public final class ConfigMapArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
-    public ConfigMapArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<Map<String,String>> binaryData,
-        @Nullable Output<Map<String,String>> data,
-        @Nullable Output<Boolean> immutable,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.binaryData = binaryData;
-        this.data = data;
-        this.immutable = immutable;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-    }
+    private ConfigMapArgs() {}
 
-    private ConfigMapArgs() {
-        this.apiVersion = Codegen.empty();
-        this.binaryData = Codegen.empty();
-        this.data = Codegen.empty();
-        this.immutable = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
+    private ConfigMapArgs(ConfigMapArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.binaryData = $.binaryData;
+        this.data = $.data;
+        this.immutable = $.immutable;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ConfigMapArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<Map<String,String>> binaryData;
-        private @Nullable Output<Map<String,String>> data;
-        private @Nullable Output<Boolean> immutable;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
+        private ConfigMapArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ConfigMapArgs();
         }
 
         public Builder(ConfigMapArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.binaryData = defaults.binaryData;
-    	      this.data = defaults.data;
-    	      this.immutable = defaults.immutable;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
+            $ = new ConfigMapArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder binaryData(@Nullable Output<Map<String,String>> binaryData) {
-            this.binaryData = binaryData;
+            $.binaryData = binaryData;
             return this;
         }
-        public Builder binaryData(@Nullable Map<String,String> binaryData) {
-            this.binaryData = Codegen.ofNullable(binaryData);
-            return this;
+
+        public Builder binaryData(Map<String,String> binaryData) {
+            return binaryData(Output.of(binaryData));
         }
+
         public Builder data(@Nullable Output<Map<String,String>> data) {
-            this.data = data;
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable Map<String,String> data) {
-            this.data = Codegen.ofNullable(data);
-            return this;
+
+        public Builder data(Map<String,String> data) {
+            return data(Output.of(data));
         }
+
         public Builder immutable(@Nullable Output<Boolean> immutable) {
-            this.immutable = immutable;
+            $.immutable = immutable;
             return this;
         }
-        public Builder immutable(@Nullable Boolean immutable) {
-            this.immutable = Codegen.ofNullable(immutable);
-            return this;
+
+        public Builder immutable(Boolean immutable) {
+            return immutable(Output.of(immutable));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
-        }        public ConfigMapArgs build() {
-            return new ConfigMapArgs(apiVersion, binaryData, data, immutable, kind, metadata);
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
+        }
+
+        public ConfigMapArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

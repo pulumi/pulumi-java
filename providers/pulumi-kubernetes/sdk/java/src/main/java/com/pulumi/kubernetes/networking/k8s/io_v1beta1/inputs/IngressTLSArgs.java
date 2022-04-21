@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class IngressTLSArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hosts")
-      private final @Nullable Output<List<String>> hosts;
+    private @Nullable Output<List<String>> hosts;
 
-    public Output<List<String>> hosts() {
-        return this.hosts == null ? Codegen.empty() : this.hosts;
+    public Optional<Output<List<String>>> hosts() {
+        return Optional.ofNullable(this.hosts);
     }
 
     /**
@@ -36,66 +36,62 @@ public final class IngressTLSArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secretName")
-      private final @Nullable Output<String> secretName;
+    private @Nullable Output<String> secretName;
 
-    public Output<String> secretName() {
-        return this.secretName == null ? Codegen.empty() : this.secretName;
+    public Optional<Output<String>> secretName() {
+        return Optional.ofNullable(this.secretName);
     }
 
-    public IngressTLSArgs(
-        @Nullable Output<List<String>> hosts,
-        @Nullable Output<String> secretName) {
-        this.hosts = hosts;
-        this.secretName = secretName;
-    }
+    private IngressTLSArgs() {}
 
-    private IngressTLSArgs() {
-        this.hosts = Codegen.empty();
-        this.secretName = Codegen.empty();
+    private IngressTLSArgs(IngressTLSArgs $) {
+        this.hosts = $.hosts;
+        this.secretName = $.secretName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressTLSArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<String>> hosts;
-        private @Nullable Output<String> secretName;
+        private IngressTLSArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressTLSArgs();
         }
 
         public Builder(IngressTLSArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.hosts = defaults.hosts;
-    	      this.secretName = defaults.secretName;
+            $ = new IngressTLSArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder hosts(@Nullable Output<List<String>> hosts) {
-            this.hosts = hosts;
+            $.hosts = hosts;
             return this;
         }
-        public Builder hosts(@Nullable List<String> hosts) {
-            this.hosts = Codegen.ofNullable(hosts);
-            return this;
+
+        public Builder hosts(List<String> hosts) {
+            return hosts(Output.of(hosts));
         }
+
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
+
         public Builder secretName(@Nullable Output<String> secretName) {
-            this.secretName = secretName;
+            $.secretName = secretName;
             return this;
         }
-        public Builder secretName(@Nullable String secretName) {
-            this.secretName = Codegen.ofNullable(secretName);
-            return this;
-        }        public IngressTLSArgs build() {
-            return new IngressTLSArgs(hosts, secretName);
+
+        public Builder secretName(String secretName) {
+            return secretName(Output.of(secretName));
+        }
+
+        public IngressTLSArgs build() {
+            return $;
         }
     }
+
 }

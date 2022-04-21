@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.autoscaling_v2.inputs.HPAScalingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="policies")
-      private final @Nullable Output<List<HPAScalingPolicyArgs>> policies;
+    private @Nullable Output<List<HPAScalingPolicyArgs>> policies;
 
-    public Output<List<HPAScalingPolicyArgs>> policies() {
-        return this.policies == null ? Codegen.empty() : this.policies;
+    public Optional<Output<List<HPAScalingPolicyArgs>>> policies() {
+        return Optional.ofNullable(this.policies);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="selectPolicy")
-      private final @Nullable Output<String> selectPolicy;
+    private @Nullable Output<String> selectPolicy;
 
-    public Output<String> selectPolicy() {
-        return this.selectPolicy == null ? Codegen.empty() : this.selectPolicy;
+    public Optional<Output<String>> selectPolicy() {
+        return Optional.ofNullable(this.selectPolicy);
     }
 
     /**
@@ -49,79 +49,72 @@ public final class HPAScalingRulesArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="stabilizationWindowSeconds")
-      private final @Nullable Output<Integer> stabilizationWindowSeconds;
+    private @Nullable Output<Integer> stabilizationWindowSeconds;
 
-    public Output<Integer> stabilizationWindowSeconds() {
-        return this.stabilizationWindowSeconds == null ? Codegen.empty() : this.stabilizationWindowSeconds;
+    public Optional<Output<Integer>> stabilizationWindowSeconds() {
+        return Optional.ofNullable(this.stabilizationWindowSeconds);
     }
 
-    public HPAScalingRulesArgs(
-        @Nullable Output<List<HPAScalingPolicyArgs>> policies,
-        @Nullable Output<String> selectPolicy,
-        @Nullable Output<Integer> stabilizationWindowSeconds) {
-        this.policies = policies;
-        this.selectPolicy = selectPolicy;
-        this.stabilizationWindowSeconds = stabilizationWindowSeconds;
-    }
+    private HPAScalingRulesArgs() {}
 
-    private HPAScalingRulesArgs() {
-        this.policies = Codegen.empty();
-        this.selectPolicy = Codegen.empty();
-        this.stabilizationWindowSeconds = Codegen.empty();
+    private HPAScalingRulesArgs(HPAScalingRulesArgs $) {
+        this.policies = $.policies;
+        this.selectPolicy = $.selectPolicy;
+        this.stabilizationWindowSeconds = $.stabilizationWindowSeconds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HPAScalingRulesArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<HPAScalingPolicyArgs>> policies;
-        private @Nullable Output<String> selectPolicy;
-        private @Nullable Output<Integer> stabilizationWindowSeconds;
+        private HPAScalingRulesArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HPAScalingRulesArgs();
         }
 
         public Builder(HPAScalingRulesArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.policies = defaults.policies;
-    	      this.selectPolicy = defaults.selectPolicy;
-    	      this.stabilizationWindowSeconds = defaults.stabilizationWindowSeconds;
+            $ = new HPAScalingRulesArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder policies(@Nullable Output<List<HPAScalingPolicyArgs>> policies) {
-            this.policies = policies;
+            $.policies = policies;
             return this;
         }
-        public Builder policies(@Nullable List<HPAScalingPolicyArgs> policies) {
-            this.policies = Codegen.ofNullable(policies);
-            return this;
+
+        public Builder policies(List<HPAScalingPolicyArgs> policies) {
+            return policies(Output.of(policies));
         }
+
         public Builder policies(HPAScalingPolicyArgs... policies) {
             return policies(List.of(policies));
         }
+
         public Builder selectPolicy(@Nullable Output<String> selectPolicy) {
-            this.selectPolicy = selectPolicy;
+            $.selectPolicy = selectPolicy;
             return this;
         }
-        public Builder selectPolicy(@Nullable String selectPolicy) {
-            this.selectPolicy = Codegen.ofNullable(selectPolicy);
-            return this;
+
+        public Builder selectPolicy(String selectPolicy) {
+            return selectPolicy(Output.of(selectPolicy));
         }
+
         public Builder stabilizationWindowSeconds(@Nullable Output<Integer> stabilizationWindowSeconds) {
-            this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+            $.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }
-        public Builder stabilizationWindowSeconds(@Nullable Integer stabilizationWindowSeconds) {
-            this.stabilizationWindowSeconds = Codegen.ofNullable(stabilizationWindowSeconds);
-            return this;
-        }        public HPAScalingRulesArgs build() {
-            return new HPAScalingRulesArgs(policies, selectPolicy, stabilizationWindowSeconds);
+
+        public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+            return stabilizationWindowSeconds(Output.of(stabilizationWindowSeconds));
+        }
+
+        public HPAScalingRulesArgs build() {
+            return $;
         }
     }
+
 }

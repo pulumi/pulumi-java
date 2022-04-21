@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class EmptyDirVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="medium")
-      private final @Nullable Output<String> medium;
+    private @Nullable Output<String> medium;
 
-    public Output<String> medium() {
-        return this.medium == null ? Codegen.empty() : this.medium;
+    public Optional<Output<String>> medium() {
+        return Optional.ofNullable(this.medium);
     }
 
     /**
@@ -35,63 +35,58 @@ public final class EmptyDirVolumeSourceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="sizeLimit")
-      private final @Nullable Output<String> sizeLimit;
+    private @Nullable Output<String> sizeLimit;
 
-    public Output<String> sizeLimit() {
-        return this.sizeLimit == null ? Codegen.empty() : this.sizeLimit;
+    public Optional<Output<String>> sizeLimit() {
+        return Optional.ofNullable(this.sizeLimit);
     }
 
-    public EmptyDirVolumeSourceArgs(
-        @Nullable Output<String> medium,
-        @Nullable Output<String> sizeLimit) {
-        this.medium = medium;
-        this.sizeLimit = sizeLimit;
-    }
+    private EmptyDirVolumeSourceArgs() {}
 
-    private EmptyDirVolumeSourceArgs() {
-        this.medium = Codegen.empty();
-        this.sizeLimit = Codegen.empty();
+    private EmptyDirVolumeSourceArgs(EmptyDirVolumeSourceArgs $) {
+        this.medium = $.medium;
+        this.sizeLimit = $.sizeLimit;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EmptyDirVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> medium;
-        private @Nullable Output<String> sizeLimit;
+        private EmptyDirVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EmptyDirVolumeSourceArgs();
         }
 
         public Builder(EmptyDirVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.medium = defaults.medium;
-    	      this.sizeLimit = defaults.sizeLimit;
+            $ = new EmptyDirVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder medium(@Nullable Output<String> medium) {
-            this.medium = medium;
+            $.medium = medium;
             return this;
         }
-        public Builder medium(@Nullable String medium) {
-            this.medium = Codegen.ofNullable(medium);
-            return this;
+
+        public Builder medium(String medium) {
+            return medium(Output.of(medium));
         }
+
         public Builder sizeLimit(@Nullable Output<String> sizeLimit) {
-            this.sizeLimit = sizeLimit;
+            $.sizeLimit = sizeLimit;
             return this;
         }
-        public Builder sizeLimit(@Nullable String sizeLimit) {
-            this.sizeLimit = Codegen.ofNullable(sizeLimit);
-            return this;
-        }        public EmptyDirVolumeSourceArgs build() {
-            return new EmptyDirVolumeSourceArgs(medium, sizeLimit);
+
+        public Builder sizeLimit(String sizeLimit) {
+            return sizeLimit(Output.of(sizeLimit));
+        }
+
+        public EmptyDirVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

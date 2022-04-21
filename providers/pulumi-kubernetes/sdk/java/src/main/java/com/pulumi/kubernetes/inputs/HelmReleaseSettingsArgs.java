@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +25,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="driver")
-      private final @Nullable Output<String> driver;
+    private @Nullable Output<String> driver;
 
-    public Output<String> driver() {
-        return this.driver == null ? Codegen.empty() : this.driver;
+    public Optional<Output<String>> driver() {
+        return Optional.ofNullable(this.driver);
     }
 
     /**
@@ -35,10 +36,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="pluginsPath")
-      private final @Nullable Output<String> pluginsPath;
+    private @Nullable Output<String> pluginsPath;
 
-    public Output<String> pluginsPath() {
-        return this.pluginsPath == null ? Codegen.empty() : this.pluginsPath;
+    public Optional<Output<String>> pluginsPath() {
+        return Optional.ofNullable(this.pluginsPath);
     }
 
     /**
@@ -46,10 +47,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="registryConfigPath")
-      private final @Nullable Output<String> registryConfigPath;
+    private @Nullable Output<String> registryConfigPath;
 
-    public Output<String> registryConfigPath() {
-        return this.registryConfigPath == null ? Codegen.empty() : this.registryConfigPath;
+    public Optional<Output<String>> registryConfigPath() {
+        return Optional.ofNullable(this.registryConfigPath);
     }
 
     /**
@@ -57,10 +58,10 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="repositoryCache")
-      private final @Nullable Output<String> repositoryCache;
+    private @Nullable Output<String> repositoryCache;
 
-    public Output<String> repositoryCache() {
-        return this.repositoryCache == null ? Codegen.empty() : this.repositoryCache;
+    public Optional<Output<String>> repositoryCache() {
+        return Optional.ofNullable(this.repositoryCache);
     }
 
     /**
@@ -68,102 +69,93 @@ public final class HelmReleaseSettingsArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="repositoryConfigPath")
-      private final @Nullable Output<String> repositoryConfigPath;
+    private @Nullable Output<String> repositoryConfigPath;
 
-    public Output<String> repositoryConfigPath() {
-        return this.repositoryConfigPath == null ? Codegen.empty() : this.repositoryConfigPath;
+    public Optional<Output<String>> repositoryConfigPath() {
+        return Optional.ofNullable(this.repositoryConfigPath);
     }
 
-    public HelmReleaseSettingsArgs(
-        @Nullable Output<String> driver,
-        @Nullable Output<String> pluginsPath,
-        @Nullable Output<String> registryConfigPath,
-        @Nullable Output<String> repositoryCache,
-        @Nullable Output<String> repositoryConfigPath) {
-        this.driver = Codegen.stringProp("driver").output().arg(driver).env("PULUMI_K8S_HELM_DRIVER").getNullable();
-        this.pluginsPath = Codegen.stringProp("pluginsPath").output().arg(pluginsPath).env("PULUMI_K8S_HELM_PLUGINS_PATH").getNullable();
-        this.registryConfigPath = Codegen.stringProp("registryConfigPath").output().arg(registryConfigPath).env("PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH").getNullable();
-        this.repositoryCache = Codegen.stringProp("repositoryCache").output().arg(repositoryCache).env("PULUMI_K8S_HELM_REPOSITORY_CACHE").getNullable();
-        this.repositoryConfigPath = Codegen.stringProp("repositoryConfigPath").output().arg(repositoryConfigPath).env("PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH").getNullable();
-    }
+    private HelmReleaseSettingsArgs() {}
 
-    private HelmReleaseSettingsArgs() {
-        this.driver = Codegen.empty();
-        this.pluginsPath = Codegen.empty();
-        this.registryConfigPath = Codegen.empty();
-        this.repositoryCache = Codegen.empty();
-        this.repositoryConfigPath = Codegen.empty();
+    private HelmReleaseSettingsArgs(HelmReleaseSettingsArgs $) {
+        this.driver = $.driver;
+        this.pluginsPath = $.pluginsPath;
+        this.registryConfigPath = $.registryConfigPath;
+        this.repositoryCache = $.repositoryCache;
+        this.repositoryConfigPath = $.repositoryConfigPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(HelmReleaseSettingsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> driver;
-        private @Nullable Output<String> pluginsPath;
-        private @Nullable Output<String> registryConfigPath;
-        private @Nullable Output<String> repositoryCache;
-        private @Nullable Output<String> repositoryConfigPath;
+        private HelmReleaseSettingsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new HelmReleaseSettingsArgs();
         }
 
         public Builder(HelmReleaseSettingsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.driver = defaults.driver;
-    	      this.pluginsPath = defaults.pluginsPath;
-    	      this.registryConfigPath = defaults.registryConfigPath;
-    	      this.repositoryCache = defaults.repositoryCache;
-    	      this.repositoryConfigPath = defaults.repositoryConfigPath;
+            $ = new HelmReleaseSettingsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder driver(@Nullable Output<String> driver) {
-            this.driver = driver;
+            $.driver = driver;
             return this;
         }
-        public Builder driver(@Nullable String driver) {
-            this.driver = Codegen.ofNullable(driver);
-            return this;
+
+        public Builder driver(String driver) {
+            return driver(Output.of(driver));
         }
+
         public Builder pluginsPath(@Nullable Output<String> pluginsPath) {
-            this.pluginsPath = pluginsPath;
+            $.pluginsPath = pluginsPath;
             return this;
         }
-        public Builder pluginsPath(@Nullable String pluginsPath) {
-            this.pluginsPath = Codegen.ofNullable(pluginsPath);
-            return this;
+
+        public Builder pluginsPath(String pluginsPath) {
+            return pluginsPath(Output.of(pluginsPath));
         }
+
         public Builder registryConfigPath(@Nullable Output<String> registryConfigPath) {
-            this.registryConfigPath = registryConfigPath;
+            $.registryConfigPath = registryConfigPath;
             return this;
         }
-        public Builder registryConfigPath(@Nullable String registryConfigPath) {
-            this.registryConfigPath = Codegen.ofNullable(registryConfigPath);
-            return this;
+
+        public Builder registryConfigPath(String registryConfigPath) {
+            return registryConfigPath(Output.of(registryConfigPath));
         }
+
         public Builder repositoryCache(@Nullable Output<String> repositoryCache) {
-            this.repositoryCache = repositoryCache;
+            $.repositoryCache = repositoryCache;
             return this;
         }
-        public Builder repositoryCache(@Nullable String repositoryCache) {
-            this.repositoryCache = Codegen.ofNullable(repositoryCache);
-            return this;
+
+        public Builder repositoryCache(String repositoryCache) {
+            return repositoryCache(Output.of(repositoryCache));
         }
+
         public Builder repositoryConfigPath(@Nullable Output<String> repositoryConfigPath) {
-            this.repositoryConfigPath = repositoryConfigPath;
+            $.repositoryConfigPath = repositoryConfigPath;
             return this;
         }
-        public Builder repositoryConfigPath(@Nullable String repositoryConfigPath) {
-            this.repositoryConfigPath = Codegen.ofNullable(repositoryConfigPath);
-            return this;
-        }        public HelmReleaseSettingsArgs build() {
-            return new HelmReleaseSettingsArgs(driver, pluginsPath, registryConfigPath, repositoryCache, repositoryConfigPath);
+
+        public Builder repositoryConfigPath(String repositoryConfigPath) {
+            return repositoryConfigPath(Output.of(repositoryConfigPath));
+        }
+
+        public HelmReleaseSettingsArgs build() {
+            $.driver = Codegen.stringProp("driver").output().arg($.driver).env("PULUMI_K8S_HELM_DRIVER").getNullable();
+            $.pluginsPath = Codegen.stringProp("pluginsPath").output().arg($.pluginsPath).env("PULUMI_K8S_HELM_PLUGINS_PATH").getNullable();
+            $.registryConfigPath = Codegen.stringProp("registryConfigPath").output().arg($.registryConfigPath).env("PULUMI_K8S_HELM_REGISTRY_CONFIG_PATH").getNullable();
+            $.repositoryCache = Codegen.stringProp("repositoryCache").output().arg($.repositoryCache).env("PULUMI_K8S_HELM_REPOSITORY_CACHE").getNullable();
+            $.repositoryConfigPath = Codegen.stringProp("repositoryConfigPath").output().arg($.repositoryConfigPath).env("PULUMI_K8S_HELM_REPOSITORY_CONFIG_PATH").getNullable();
+            return $;
         }
     }
+
 }

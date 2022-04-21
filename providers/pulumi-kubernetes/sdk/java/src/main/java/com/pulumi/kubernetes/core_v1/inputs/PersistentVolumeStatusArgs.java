@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -42,10 +42,10 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="phase")
-      private final @Nullable Output<String> phase;
+    private @Nullable Output<String> phase;
 
-    public Output<String> phase() {
-        return this.phase == null ? Codegen.empty() : this.phase;
+    public Optional<Output<String>> phase() {
+        return Optional.ofNullable(this.phase);
     }
 
     /**
@@ -53,76 +53,68 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
-    public PersistentVolumeStatusArgs(
-        @Nullable Output<String> message,
-        @Nullable Output<String> phase,
-        @Nullable Output<String> reason) {
-        this.message = message;
-        this.phase = phase;
-        this.reason = reason;
-    }
+    private PersistentVolumeStatusArgs() {}
 
-    private PersistentVolumeStatusArgs() {
-        this.message = Codegen.empty();
-        this.phase = Codegen.empty();
-        this.reason = Codegen.empty();
+    private PersistentVolumeStatusArgs(PersistentVolumeStatusArgs $) {
+        this.message = $.message;
+        this.phase = $.phase;
+        this.reason = $.reason;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentVolumeStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> phase;
-        private @Nullable Output<String> reason;
+        private PersistentVolumeStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentVolumeStatusArgs();
         }
 
         public Builder(PersistentVolumeStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.message = defaults.message;
-    	      this.phase = defaults.phase;
-    	      this.reason = defaults.reason;
+            $ = new PersistentVolumeStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder phase(@Nullable Output<String> phase) {
-            this.phase = phase;
+            $.phase = phase;
             return this;
         }
-        public Builder phase(@Nullable String phase) {
-            this.phase = Codegen.ofNullable(phase);
-            return this;
+
+        public Builder phase(String phase) {
+            return phase(Output.of(phase));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
-        }        public PersistentVolumeStatusArgs build() {
-            return new PersistentVolumeStatusArgs(message, phase, reason);
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
+        }
+
+        public PersistentVolumeStatusArgs build() {
+            return $;
         }
     }
+
 }

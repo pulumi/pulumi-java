@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.QueuingConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="queuing")
-      private final @Nullable Output<QueuingConfigurationArgs> queuing;
+    private @Nullable Output<QueuingConfigurationArgs> queuing;
 
-    public Output<QueuingConfigurationArgs> queuing() {
-        return this.queuing == null ? Codegen.empty() : this.queuing;
+    public Optional<Output<QueuingConfigurationArgs>> queuing() {
+        return Optional.ofNullable(this.queuing);
     }
 
     /**
@@ -36,63 +36,59 @@ public final class LimitResponseArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public LimitResponseArgs(
-        @Nullable Output<QueuingConfigurationArgs> queuing,
-        Output<String> type) {
-        this.queuing = queuing;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LimitResponseArgs() {}
 
-    private LimitResponseArgs() {
-        this.queuing = Codegen.empty();
-        this.type = Codegen.empty();
+    private LimitResponseArgs(LimitResponseArgs $) {
+        this.queuing = $.queuing;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LimitResponseArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<QueuingConfigurationArgs> queuing;
-        private Output<String> type;
+        private LimitResponseArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LimitResponseArgs();
         }
 
         public Builder(LimitResponseArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.queuing = defaults.queuing;
-    	      this.type = defaults.type;
+            $ = new LimitResponseArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder queuing(@Nullable Output<QueuingConfigurationArgs> queuing) {
-            this.queuing = queuing;
+            $.queuing = queuing;
             return this;
         }
-        public Builder queuing(@Nullable QueuingConfigurationArgs queuing) {
-            this.queuing = Codegen.ofNullable(queuing);
-            return this;
+
+        public Builder queuing(QueuingConfigurationArgs queuing) {
+            return queuing(Output.of(queuing));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public LimitResponseArgs build() {
-            return new LimitResponseArgs(queuing, type);
+            return type(Output.of(type));
+        }
+
+        public LimitResponseArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

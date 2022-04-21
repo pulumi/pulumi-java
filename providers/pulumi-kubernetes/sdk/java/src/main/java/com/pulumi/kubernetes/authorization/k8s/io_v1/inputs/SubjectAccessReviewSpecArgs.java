@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import com.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="extra")
-      private final @Nullable Output<Map<String,List<String>>> extra;
+    private @Nullable Output<Map<String,List<String>>> extra;
 
-    public Output<Map<String,List<String>>> extra() {
-        return this.extra == null ? Codegen.empty() : this.extra;
+    public Optional<Output<Map<String,List<String>>>> extra() {
+        return Optional.ofNullable(this.extra);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="groups")
-      private final @Nullable Output<List<String>> groups;
+    private @Nullable Output<List<String>> groups;
 
-    public Output<List<String>> groups() {
-        return this.groups == null ? Codegen.empty() : this.groups;
+    public Optional<Output<List<String>>> groups() {
+        return Optional.ofNullable(this.groups);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="nonResourceAttributes")
-      private final @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
+    private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
 
-    public Output<NonResourceAttributesArgs> nonResourceAttributes() {
-        return this.nonResourceAttributes == null ? Codegen.empty() : this.nonResourceAttributes;
+    public Optional<Output<NonResourceAttributesArgs>> nonResourceAttributes() {
+        return Optional.ofNullable(this.nonResourceAttributes);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="resourceAttributes")
-      private final @Nullable Output<ResourceAttributesArgs> resourceAttributes;
+    private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
 
-    public Output<ResourceAttributesArgs> resourceAttributes() {
-        return this.resourceAttributes == null ? Codegen.empty() : this.resourceAttributes;
+    public Optional<Output<ResourceAttributesArgs>> resourceAttributes() {
+        return Optional.ofNullable(this.resourceAttributes);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
     /**
@@ -83,118 +83,102 @@ public final class SubjectAccessReviewSpecArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
-    public SubjectAccessReviewSpecArgs(
-        @Nullable Output<Map<String,List<String>>> extra,
-        @Nullable Output<List<String>> groups,
-        @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes,
-        @Nullable Output<ResourceAttributesArgs> resourceAttributes,
-        @Nullable Output<String> uid,
-        @Nullable Output<String> user) {
-        this.extra = extra;
-        this.groups = groups;
-        this.nonResourceAttributes = nonResourceAttributes;
-        this.resourceAttributes = resourceAttributes;
-        this.uid = uid;
-        this.user = user;
-    }
+    private SubjectAccessReviewSpecArgs() {}
 
-    private SubjectAccessReviewSpecArgs() {
-        this.extra = Codegen.empty();
-        this.groups = Codegen.empty();
-        this.nonResourceAttributes = Codegen.empty();
-        this.resourceAttributes = Codegen.empty();
-        this.uid = Codegen.empty();
-        this.user = Codegen.empty();
+    private SubjectAccessReviewSpecArgs(SubjectAccessReviewSpecArgs $) {
+        this.extra = $.extra;
+        this.groups = $.groups;
+        this.nonResourceAttributes = $.nonResourceAttributes;
+        this.resourceAttributes = $.resourceAttributes;
+        this.uid = $.uid;
+        this.user = $.user;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SubjectAccessReviewSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,List<String>>> extra;
-        private @Nullable Output<List<String>> groups;
-        private @Nullable Output<NonResourceAttributesArgs> nonResourceAttributes;
-        private @Nullable Output<ResourceAttributesArgs> resourceAttributes;
-        private @Nullable Output<String> uid;
-        private @Nullable Output<String> user;
+        private SubjectAccessReviewSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SubjectAccessReviewSpecArgs();
         }
 
         public Builder(SubjectAccessReviewSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.extra = defaults.extra;
-    	      this.groups = defaults.groups;
-    	      this.nonResourceAttributes = defaults.nonResourceAttributes;
-    	      this.resourceAttributes = defaults.resourceAttributes;
-    	      this.uid = defaults.uid;
-    	      this.user = defaults.user;
+            $ = new SubjectAccessReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
-            this.extra = extra;
+            $.extra = extra;
             return this;
         }
-        public Builder extra(@Nullable Map<String,List<String>> extra) {
-            this.extra = Codegen.ofNullable(extra);
-            return this;
+
+        public Builder extra(Map<String,List<String>> extra) {
+            return extra(Output.of(extra));
         }
+
         public Builder groups(@Nullable Output<List<String>> groups) {
-            this.groups = groups;
+            $.groups = groups;
             return this;
         }
-        public Builder groups(@Nullable List<String> groups) {
-            this.groups = Codegen.ofNullable(groups);
-            return this;
+
+        public Builder groups(List<String> groups) {
+            return groups(Output.of(groups));
         }
+
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
+
         public Builder nonResourceAttributes(@Nullable Output<NonResourceAttributesArgs> nonResourceAttributes) {
-            this.nonResourceAttributes = nonResourceAttributes;
+            $.nonResourceAttributes = nonResourceAttributes;
             return this;
         }
-        public Builder nonResourceAttributes(@Nullable NonResourceAttributesArgs nonResourceAttributes) {
-            this.nonResourceAttributes = Codegen.ofNullable(nonResourceAttributes);
-            return this;
+
+        public Builder nonResourceAttributes(NonResourceAttributesArgs nonResourceAttributes) {
+            return nonResourceAttributes(Output.of(nonResourceAttributes));
         }
+
         public Builder resourceAttributes(@Nullable Output<ResourceAttributesArgs> resourceAttributes) {
-            this.resourceAttributes = resourceAttributes;
+            $.resourceAttributes = resourceAttributes;
             return this;
         }
-        public Builder resourceAttributes(@Nullable ResourceAttributesArgs resourceAttributes) {
-            this.resourceAttributes = Codegen.ofNullable(resourceAttributes);
-            return this;
+
+        public Builder resourceAttributes(ResourceAttributesArgs resourceAttributes) {
+            return resourceAttributes(Output.of(resourceAttributes));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
-        }        public SubjectAccessReviewSpecArgs build() {
-            return new SubjectAccessReviewSpecArgs(extra, groups, nonResourceAttributes, resourceAttributes, uid, user);
+
+        public Builder user(String user) {
+            return user(Output.of(user));
+        }
+
+        public SubjectAccessReviewSpecArgs build() {
+            return $;
         }
     }
+
 }

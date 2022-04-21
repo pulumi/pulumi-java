@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class CustomResourceSubresourceScaleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="labelSelectorPath")
-      private final @Nullable Output<String> labelSelectorPath;
+    private @Nullable Output<String> labelSelectorPath;
 
-    public Output<String> labelSelectorPath() {
-        return this.labelSelectorPath == null ? Codegen.empty() : this.labelSelectorPath;
+    public Optional<Output<String>> labelSelectorPath() {
+        return Optional.ofNullable(this.labelSelectorPath);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class CustomResourceSubresourceScaleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="specReplicasPath", required=true)
-      private final Output<String> specReplicasPath;
+    private Output<String> specReplicasPath;
 
     public Output<String> specReplicasPath() {
         return this.specReplicasPath;
@@ -46,76 +46,70 @@ public final class CustomResourceSubresourceScaleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="statusReplicasPath", required=true)
-      private final Output<String> statusReplicasPath;
+    private Output<String> statusReplicasPath;
 
     public Output<String> statusReplicasPath() {
         return this.statusReplicasPath;
     }
 
-    public CustomResourceSubresourceScaleArgs(
-        @Nullable Output<String> labelSelectorPath,
-        Output<String> specReplicasPath,
-        Output<String> statusReplicasPath) {
-        this.labelSelectorPath = labelSelectorPath;
-        this.specReplicasPath = Objects.requireNonNull(specReplicasPath, "expected parameter 'specReplicasPath' to be non-null");
-        this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath, "expected parameter 'statusReplicasPath' to be non-null");
-    }
+    private CustomResourceSubresourceScaleArgs() {}
 
-    private CustomResourceSubresourceScaleArgs() {
-        this.labelSelectorPath = Codegen.empty();
-        this.specReplicasPath = Codegen.empty();
-        this.statusReplicasPath = Codegen.empty();
+    private CustomResourceSubresourceScaleArgs(CustomResourceSubresourceScaleArgs $) {
+        this.labelSelectorPath = $.labelSelectorPath;
+        this.specReplicasPath = $.specReplicasPath;
+        this.statusReplicasPath = $.statusReplicasPath;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CustomResourceSubresourceScaleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> labelSelectorPath;
-        private Output<String> specReplicasPath;
-        private Output<String> statusReplicasPath;
+        private CustomResourceSubresourceScaleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CustomResourceSubresourceScaleArgs();
         }
 
         public Builder(CustomResourceSubresourceScaleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.labelSelectorPath = defaults.labelSelectorPath;
-    	      this.specReplicasPath = defaults.specReplicasPath;
-    	      this.statusReplicasPath = defaults.statusReplicasPath;
+            $ = new CustomResourceSubresourceScaleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder labelSelectorPath(@Nullable Output<String> labelSelectorPath) {
-            this.labelSelectorPath = labelSelectorPath;
+            $.labelSelectorPath = labelSelectorPath;
             return this;
         }
-        public Builder labelSelectorPath(@Nullable String labelSelectorPath) {
-            this.labelSelectorPath = Codegen.ofNullable(labelSelectorPath);
-            return this;
+
+        public Builder labelSelectorPath(String labelSelectorPath) {
+            return labelSelectorPath(Output.of(labelSelectorPath));
         }
+
         public Builder specReplicasPath(Output<String> specReplicasPath) {
-            this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
+            $.specReplicasPath = specReplicasPath;
             return this;
         }
+
         public Builder specReplicasPath(String specReplicasPath) {
-            this.specReplicasPath = Output.of(Objects.requireNonNull(specReplicasPath));
-            return this;
+            return specReplicasPath(Output.of(specReplicasPath));
         }
+
         public Builder statusReplicasPath(Output<String> statusReplicasPath) {
-            this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
+            $.statusReplicasPath = statusReplicasPath;
             return this;
         }
+
         public Builder statusReplicasPath(String statusReplicasPath) {
-            this.statusReplicasPath = Output.of(Objects.requireNonNull(statusReplicasPath));
-            return this;
-        }        public CustomResourceSubresourceScaleArgs build() {
-            return new CustomResourceSubresourceScaleArgs(labelSelectorPath, specReplicasPath, statusReplicasPath);
+            return statusReplicasPath(Output.of(statusReplicasPath));
+        }
+
+        public CustomResourceSubresourceScaleArgs build() {
+            $.specReplicasPath = Objects.requireNonNull($.specReplicasPath, "expected parameter 'specReplicasPath' to be non-null");
+            $.statusReplicasPath = Objects.requireNonNull($.statusReplicasPath, "expected parameter 'statusReplicasPath' to be non-null");
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="container", required=true)
-      private final Output<String> container;
+    private Output<String> container;
 
     public Output<String> container() {
         return this.container;
@@ -36,7 +36,7 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -47,10 +47,10 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetAverageUtilization")
-      private final @Nullable Output<Integer> targetAverageUtilization;
+    private @Nullable Output<Integer> targetAverageUtilization;
 
-    public Output<Integer> targetAverageUtilization() {
-        return this.targetAverageUtilization == null ? Codegen.empty() : this.targetAverageUtilization;
+    public Optional<Output<Integer>> targetAverageUtilization() {
+        return Optional.ofNullable(this.targetAverageUtilization);
     }
 
     /**
@@ -58,89 +58,80 @@ public final class ContainerResourceMetricSourceArgs extends com.pulumi.resource
      * 
      */
     @Import(name="targetAverageValue")
-      private final @Nullable Output<String> targetAverageValue;
+    private @Nullable Output<String> targetAverageValue;
 
-    public Output<String> targetAverageValue() {
-        return this.targetAverageValue == null ? Codegen.empty() : this.targetAverageValue;
+    public Optional<Output<String>> targetAverageValue() {
+        return Optional.ofNullable(this.targetAverageValue);
     }
 
-    public ContainerResourceMetricSourceArgs(
-        Output<String> container,
-        Output<String> name,
-        @Nullable Output<Integer> targetAverageUtilization,
-        @Nullable Output<String> targetAverageValue) {
-        this.container = Objects.requireNonNull(container, "expected parameter 'container' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.targetAverageUtilization = targetAverageUtilization;
-        this.targetAverageValue = targetAverageValue;
-    }
+    private ContainerResourceMetricSourceArgs() {}
 
-    private ContainerResourceMetricSourceArgs() {
-        this.container = Codegen.empty();
-        this.name = Codegen.empty();
-        this.targetAverageUtilization = Codegen.empty();
-        this.targetAverageValue = Codegen.empty();
+    private ContainerResourceMetricSourceArgs(ContainerResourceMetricSourceArgs $) {
+        this.container = $.container;
+        this.name = $.name;
+        this.targetAverageUtilization = $.targetAverageUtilization;
+        this.targetAverageValue = $.targetAverageValue;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ContainerResourceMetricSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> container;
-        private Output<String> name;
-        private @Nullable Output<Integer> targetAverageUtilization;
-        private @Nullable Output<String> targetAverageValue;
+        private ContainerResourceMetricSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ContainerResourceMetricSourceArgs();
         }
 
         public Builder(ContainerResourceMetricSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.container = defaults.container;
-    	      this.name = defaults.name;
-    	      this.targetAverageUtilization = defaults.targetAverageUtilization;
-    	      this.targetAverageValue = defaults.targetAverageValue;
+            $ = new ContainerResourceMetricSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder container(Output<String> container) {
-            this.container = Objects.requireNonNull(container);
+            $.container = container;
             return this;
         }
+
         public Builder container(String container) {
-            this.container = Output.of(Objects.requireNonNull(container));
-            return this;
+            return container(Output.of(container));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder targetAverageUtilization(@Nullable Output<Integer> targetAverageUtilization) {
-            this.targetAverageUtilization = targetAverageUtilization;
+            $.targetAverageUtilization = targetAverageUtilization;
             return this;
         }
-        public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
-            this.targetAverageUtilization = Codegen.ofNullable(targetAverageUtilization);
-            return this;
+
+        public Builder targetAverageUtilization(Integer targetAverageUtilization) {
+            return targetAverageUtilization(Output.of(targetAverageUtilization));
         }
+
         public Builder targetAverageValue(@Nullable Output<String> targetAverageValue) {
-            this.targetAverageValue = targetAverageValue;
+            $.targetAverageValue = targetAverageValue;
             return this;
         }
-        public Builder targetAverageValue(@Nullable String targetAverageValue) {
-            this.targetAverageValue = Codegen.ofNullable(targetAverageValue);
-            return this;
-        }        public ContainerResourceMetricSourceArgs build() {
-            return new ContainerResourceMetricSourceArgs(container, name, targetAverageUtilization, targetAverageValue);
+
+        public Builder targetAverageValue(String targetAverageValue) {
+            return targetAverageValue(Output.of(targetAverageValue));
+        }
+
+        public ContainerResourceMetricSourceArgs build() {
+            $.container = Objects.requireNonNull($.container, "expected parameter 'container' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

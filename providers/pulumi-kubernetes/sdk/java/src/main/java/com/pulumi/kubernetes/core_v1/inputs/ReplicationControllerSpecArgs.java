@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class ReplicationControllerSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="minReadySeconds")
-      private final @Nullable Output<Integer> minReadySeconds;
+    private @Nullable Output<Integer> minReadySeconds;
 
-    public Output<Integer> minReadySeconds() {
-        return this.minReadySeconds == null ? Codegen.empty() : this.minReadySeconds;
+    public Optional<Output<Integer>> minReadySeconds() {
+        return Optional.ofNullable(this.minReadySeconds);
     }
 
     /**
@@ -38,10 +38,10 @@ public final class ReplicationControllerSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="replicas")
-      private final @Nullable Output<Integer> replicas;
+    private @Nullable Output<Integer> replicas;
 
-    public Output<Integer> replicas() {
-        return this.replicas == null ? Codegen.empty() : this.replicas;
+    public Optional<Output<Integer>> replicas() {
+        return Optional.ofNullable(this.replicas);
     }
 
     /**
@@ -49,10 +49,10 @@ public final class ReplicationControllerSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="selector")
-      private final @Nullable Output<Map<String,String>> selector;
+    private @Nullable Output<Map<String,String>> selector;
 
-    public Output<Map<String,String>> selector() {
-        return this.selector == null ? Codegen.empty() : this.selector;
+    public Optional<Output<Map<String,String>>> selector() {
+        return Optional.ofNullable(this.selector);
     }
 
     /**
@@ -60,89 +60,78 @@ public final class ReplicationControllerSpecArgs extends com.pulumi.resources.Re
      * 
      */
     @Import(name="template")
-      private final @Nullable Output<PodTemplateSpecArgs> template;
+    private @Nullable Output<PodTemplateSpecArgs> template;
 
-    public Output<PodTemplateSpecArgs> template() {
-        return this.template == null ? Codegen.empty() : this.template;
+    public Optional<Output<PodTemplateSpecArgs>> template() {
+        return Optional.ofNullable(this.template);
     }
 
-    public ReplicationControllerSpecArgs(
-        @Nullable Output<Integer> minReadySeconds,
-        @Nullable Output<Integer> replicas,
-        @Nullable Output<Map<String,String>> selector,
-        @Nullable Output<PodTemplateSpecArgs> template) {
-        this.minReadySeconds = minReadySeconds;
-        this.replicas = replicas;
-        this.selector = selector;
-        this.template = template;
-    }
+    private ReplicationControllerSpecArgs() {}
 
-    private ReplicationControllerSpecArgs() {
-        this.minReadySeconds = Codegen.empty();
-        this.replicas = Codegen.empty();
-        this.selector = Codegen.empty();
-        this.template = Codegen.empty();
+    private ReplicationControllerSpecArgs(ReplicationControllerSpecArgs $) {
+        this.minReadySeconds = $.minReadySeconds;
+        this.replicas = $.replicas;
+        this.selector = $.selector;
+        this.template = $.template;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicationControllerSpecArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> minReadySeconds;
-        private @Nullable Output<Integer> replicas;
-        private @Nullable Output<Map<String,String>> selector;
-        private @Nullable Output<PodTemplateSpecArgs> template;
+        private ReplicationControllerSpecArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicationControllerSpecArgs();
         }
 
         public Builder(ReplicationControllerSpecArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.minReadySeconds = defaults.minReadySeconds;
-    	      this.replicas = defaults.replicas;
-    	      this.selector = defaults.selector;
-    	      this.template = defaults.template;
+            $ = new ReplicationControllerSpecArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder minReadySeconds(@Nullable Output<Integer> minReadySeconds) {
-            this.minReadySeconds = minReadySeconds;
+            $.minReadySeconds = minReadySeconds;
             return this;
         }
-        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
-            this.minReadySeconds = Codegen.ofNullable(minReadySeconds);
-            return this;
+
+        public Builder minReadySeconds(Integer minReadySeconds) {
+            return minReadySeconds(Output.of(minReadySeconds));
         }
+
         public Builder replicas(@Nullable Output<Integer> replicas) {
-            this.replicas = replicas;
+            $.replicas = replicas;
             return this;
         }
-        public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Codegen.ofNullable(replicas);
-            return this;
+
+        public Builder replicas(Integer replicas) {
+            return replicas(Output.of(replicas));
         }
+
         public Builder selector(@Nullable Output<Map<String,String>> selector) {
-            this.selector = selector;
+            $.selector = selector;
             return this;
         }
-        public Builder selector(@Nullable Map<String,String> selector) {
-            this.selector = Codegen.ofNullable(selector);
-            return this;
+
+        public Builder selector(Map<String,String> selector) {
+            return selector(Output.of(selector));
         }
+
         public Builder template(@Nullable Output<PodTemplateSpecArgs> template) {
-            this.template = template;
+            $.template = template;
             return this;
         }
-        public Builder template(@Nullable PodTemplateSpecArgs template) {
-            this.template = Codegen.ofNullable(template);
-            return this;
-        }        public ReplicationControllerSpecArgs build() {
-            return new ReplicationControllerSpecArgs(minReadySeconds, replicas, selector, template);
+
+        public Builder template(PodTemplateSpecArgs template) {
+            return template(Output.of(template));
+        }
+
+        public ReplicationControllerSpecArgs build() {
+            return $;
         }
     }
+
 }

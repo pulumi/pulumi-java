@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class RuntimeClassStrategyOptionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="allowedRuntimeClassNames", required=true)
-      private final Output<List<String>> allowedRuntimeClassNames;
+    private Output<List<String>> allowedRuntimeClassNames;
 
     public Output<List<String>> allowedRuntimeClassNames() {
         return this.allowedRuntimeClassNames;
@@ -36,66 +36,63 @@ public final class RuntimeClassStrategyOptionsArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="defaultRuntimeClassName")
-      private final @Nullable Output<String> defaultRuntimeClassName;
+    private @Nullable Output<String> defaultRuntimeClassName;
 
-    public Output<String> defaultRuntimeClassName() {
-        return this.defaultRuntimeClassName == null ? Codegen.empty() : this.defaultRuntimeClassName;
+    public Optional<Output<String>> defaultRuntimeClassName() {
+        return Optional.ofNullable(this.defaultRuntimeClassName);
     }
 
-    public RuntimeClassStrategyOptionsArgs(
-        Output<List<String>> allowedRuntimeClassNames,
-        @Nullable Output<String> defaultRuntimeClassName) {
-        this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames, "expected parameter 'allowedRuntimeClassNames' to be non-null");
-        this.defaultRuntimeClassName = defaultRuntimeClassName;
-    }
+    private RuntimeClassStrategyOptionsArgs() {}
 
-    private RuntimeClassStrategyOptionsArgs() {
-        this.allowedRuntimeClassNames = Codegen.empty();
-        this.defaultRuntimeClassName = Codegen.empty();
+    private RuntimeClassStrategyOptionsArgs(RuntimeClassStrategyOptionsArgs $) {
+        this.allowedRuntimeClassNames = $.allowedRuntimeClassNames;
+        this.defaultRuntimeClassName = $.defaultRuntimeClassName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RuntimeClassStrategyOptionsArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<List<String>> allowedRuntimeClassNames;
-        private @Nullable Output<String> defaultRuntimeClassName;
+        private RuntimeClassStrategyOptionsArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RuntimeClassStrategyOptionsArgs();
         }
 
         public Builder(RuntimeClassStrategyOptionsArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowedRuntimeClassNames = defaults.allowedRuntimeClassNames;
-    	      this.defaultRuntimeClassName = defaults.defaultRuntimeClassName;
+            $ = new RuntimeClassStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowedRuntimeClassNames(Output<List<String>> allowedRuntimeClassNames) {
-            this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames);
+            $.allowedRuntimeClassNames = allowedRuntimeClassNames;
             return this;
         }
+
         public Builder allowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
-            this.allowedRuntimeClassNames = Output.of(Objects.requireNonNull(allowedRuntimeClassNames));
-            return this;
+            return allowedRuntimeClassNames(Output.of(allowedRuntimeClassNames));
         }
+
         public Builder allowedRuntimeClassNames(String... allowedRuntimeClassNames) {
             return allowedRuntimeClassNames(List.of(allowedRuntimeClassNames));
         }
+
         public Builder defaultRuntimeClassName(@Nullable Output<String> defaultRuntimeClassName) {
-            this.defaultRuntimeClassName = defaultRuntimeClassName;
+            $.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }
-        public Builder defaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
-            this.defaultRuntimeClassName = Codegen.ofNullable(defaultRuntimeClassName);
-            return this;
-        }        public RuntimeClassStrategyOptionsArgs build() {
-            return new RuntimeClassStrategyOptionsArgs(allowedRuntimeClassNames, defaultRuntimeClassName);
+
+        public Builder defaultRuntimeClassName(String defaultRuntimeClassName) {
+            return defaultRuntimeClassName(Output.of(defaultRuntimeClassName));
+        }
+
+        public RuntimeClassStrategyOptionsArgs build() {
+            $.allowedRuntimeClassNames = Objects.requireNonNull($.allowedRuntimeClassNames, "expected parameter 'allowedRuntimeClassNames' to be non-null");
+            return $;
         }
     }
+
 }

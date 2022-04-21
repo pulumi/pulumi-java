@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class AggregationRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="clusterRoleSelectors")
-      private final @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
+    private @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
 
-    public Output<List<LabelSelectorArgs>> clusterRoleSelectors() {
-        return this.clusterRoleSelectors == null ? Codegen.empty() : this.clusterRoleSelectors;
+    public Optional<Output<List<LabelSelectorArgs>>> clusterRoleSelectors() {
+        return Optional.ofNullable(this.clusterRoleSelectors);
     }
 
-    public AggregationRuleArgs(@Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors) {
-        this.clusterRoleSelectors = clusterRoleSelectors;
-    }
+    private AggregationRuleArgs() {}
 
-    private AggregationRuleArgs() {
-        this.clusterRoleSelectors = Codegen.empty();
+    private AggregationRuleArgs(AggregationRuleArgs $) {
+        this.clusterRoleSelectors = $.clusterRoleSelectors;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(AggregationRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
+        private AggregationRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new AggregationRuleArgs();
         }
 
         public Builder(AggregationRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.clusterRoleSelectors = defaults.clusterRoleSelectors;
+            $ = new AggregationRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder clusterRoleSelectors(@Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors) {
-            this.clusterRoleSelectors = clusterRoleSelectors;
+            $.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }
-        public Builder clusterRoleSelectors(@Nullable List<LabelSelectorArgs> clusterRoleSelectors) {
-            this.clusterRoleSelectors = Codegen.ofNullable(clusterRoleSelectors);
-            return this;
+
+        public Builder clusterRoleSelectors(List<LabelSelectorArgs> clusterRoleSelectors) {
+            return clusterRoleSelectors(Output.of(clusterRoleSelectors));
         }
+
         public Builder clusterRoleSelectors(LabelSelectorArgs... clusterRoleSelectors) {
             return clusterRoleSelectors(List.of(clusterRoleSelectors));
-        }        public AggregationRuleArgs build() {
-            return new AggregationRuleArgs(clusterRoleSelectors);
+        }
+
+        public AggregationRuleArgs build() {
+            return $;
         }
     }
+
 }

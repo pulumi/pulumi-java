@@ -5,12 +5,12 @@ package com.pulumi.kubernetes.node.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -27,10 +27,10 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nodeSelector")
-      private final @Nullable Output<Map<String,String>> nodeSelector;
+    private @Nullable Output<Map<String,String>> nodeSelector;
 
-    public Output<Map<String,String>> nodeSelector() {
-        return this.nodeSelector == null ? Codegen.empty() : this.nodeSelector;
+    public Optional<Output<Map<String,String>>> nodeSelector() {
+        return Optional.ofNullable(this.nodeSelector);
     }
 
     /**
@@ -38,66 +38,62 @@ public final class SchedulingArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="tolerations")
-      private final @Nullable Output<List<TolerationArgs>> tolerations;
+    private @Nullable Output<List<TolerationArgs>> tolerations;
 
-    public Output<List<TolerationArgs>> tolerations() {
-        return this.tolerations == null ? Codegen.empty() : this.tolerations;
+    public Optional<Output<List<TolerationArgs>>> tolerations() {
+        return Optional.ofNullable(this.tolerations);
     }
 
-    public SchedulingArgs(
-        @Nullable Output<Map<String,String>> nodeSelector,
-        @Nullable Output<List<TolerationArgs>> tolerations) {
-        this.nodeSelector = nodeSelector;
-        this.tolerations = tolerations;
-    }
+    private SchedulingArgs() {}
 
-    private SchedulingArgs() {
-        this.nodeSelector = Codegen.empty();
-        this.tolerations = Codegen.empty();
+    private SchedulingArgs(SchedulingArgs $) {
+        this.nodeSelector = $.nodeSelector;
+        this.tolerations = $.tolerations;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SchedulingArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> nodeSelector;
-        private @Nullable Output<List<TolerationArgs>> tolerations;
+        private SchedulingArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SchedulingArgs();
         }
 
         public Builder(SchedulingArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.nodeSelector = defaults.nodeSelector;
-    	      this.tolerations = defaults.tolerations;
+            $ = new SchedulingArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder nodeSelector(@Nullable Output<Map<String,String>> nodeSelector) {
-            this.nodeSelector = nodeSelector;
+            $.nodeSelector = nodeSelector;
             return this;
         }
-        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
-            this.nodeSelector = Codegen.ofNullable(nodeSelector);
-            return this;
+
+        public Builder nodeSelector(Map<String,String> nodeSelector) {
+            return nodeSelector(Output.of(nodeSelector));
         }
+
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
-            this.tolerations = tolerations;
+            $.tolerations = tolerations;
             return this;
         }
-        public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
-            this.tolerations = Codegen.ofNullable(tolerations);
-            return this;
+
+        public Builder tolerations(List<TolerationArgs> tolerations) {
+            return tolerations(Output.of(tolerations));
         }
+
         public Builder tolerations(TolerationArgs... tolerations) {
             return tolerations(List.of(tolerations));
-        }        public SchedulingArgs build() {
-            return new SchedulingArgs(nodeSelector, tolerations);
+        }
+
+        public SchedulingArgs build() {
+            return $;
         }
     }
+
 }

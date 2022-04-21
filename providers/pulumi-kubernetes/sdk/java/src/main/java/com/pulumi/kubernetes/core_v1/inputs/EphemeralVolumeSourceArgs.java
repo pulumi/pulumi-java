@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimTemplateArgs;
 import java.lang.Boolean;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class EphemeralVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -42,63 +42,58 @@ public final class EphemeralVolumeSourceArgs extends com.pulumi.resources.Resour
      * 
      */
     @Import(name="volumeClaimTemplate")
-      private final @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
+    private @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
 
-    public Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate() {
-        return this.volumeClaimTemplate == null ? Codegen.empty() : this.volumeClaimTemplate;
+    public Optional<Output<PersistentVolumeClaimTemplateArgs>> volumeClaimTemplate() {
+        return Optional.ofNullable(this.volumeClaimTemplate);
     }
 
-    public EphemeralVolumeSourceArgs(
-        @Nullable Output<Boolean> readOnly,
-        @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
-        this.readOnly = readOnly;
-        this.volumeClaimTemplate = volumeClaimTemplate;
-    }
+    private EphemeralVolumeSourceArgs() {}
 
-    private EphemeralVolumeSourceArgs() {
-        this.readOnly = Codegen.empty();
-        this.volumeClaimTemplate = Codegen.empty();
+    private EphemeralVolumeSourceArgs(EphemeralVolumeSourceArgs $) {
+        this.readOnly = $.readOnly;
+        this.volumeClaimTemplate = $.volumeClaimTemplate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EphemeralVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> readOnly;
-        private @Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate;
+        private EphemeralVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EphemeralVolumeSourceArgs();
         }
 
         public Builder(EphemeralVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.readOnly = defaults.readOnly;
-    	      this.volumeClaimTemplate = defaults.volumeClaimTemplate;
+            $ = new EphemeralVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder volumeClaimTemplate(@Nullable Output<PersistentVolumeClaimTemplateArgs> volumeClaimTemplate) {
-            this.volumeClaimTemplate = volumeClaimTemplate;
+            $.volumeClaimTemplate = volumeClaimTemplate;
             return this;
         }
-        public Builder volumeClaimTemplate(@Nullable PersistentVolumeClaimTemplateArgs volumeClaimTemplate) {
-            this.volumeClaimTemplate = Codegen.ofNullable(volumeClaimTemplate);
-            return this;
-        }        public EphemeralVolumeSourceArgs build() {
-            return new EphemeralVolumeSourceArgs(readOnly, volumeClaimTemplate);
+
+        public Builder volumeClaimTemplate(PersistentVolumeClaimTemplateArgs volumeClaimTemplate) {
+            return volumeClaimTemplate(Output.of(volumeClaimTemplate));
+        }
+
+        public EphemeralVolumeSourceArgs build() {
+            return $;
         }
     }
+
 }

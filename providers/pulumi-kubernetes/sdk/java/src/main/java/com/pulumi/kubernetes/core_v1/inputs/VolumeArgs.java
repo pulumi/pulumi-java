@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.AWSElasticBlockStoreVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.AzureDiskVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.AzureFileVolumeSourceArgs;
@@ -37,6 +36,7 @@ import com.pulumi.kubernetes.core_v1.inputs.StorageOSVolumeSourceArgs;
 import com.pulumi.kubernetes.core_v1.inputs.VsphereVirtualDiskVolumeSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -53,10 +53,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="awsElasticBlockStore")
-      private final @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
+    private @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
 
-    public Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore() {
-        return this.awsElasticBlockStore == null ? Codegen.empty() : this.awsElasticBlockStore;
+    public Optional<Output<AWSElasticBlockStoreVolumeSourceArgs>> awsElasticBlockStore() {
+        return Optional.ofNullable(this.awsElasticBlockStore);
     }
 
     /**
@@ -64,10 +64,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureDisk")
-      private final @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk;
+    private @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk;
 
-    public Output<AzureDiskVolumeSourceArgs> azureDisk() {
-        return this.azureDisk == null ? Codegen.empty() : this.azureDisk;
+    public Optional<Output<AzureDiskVolumeSourceArgs>> azureDisk() {
+        return Optional.ofNullable(this.azureDisk);
     }
 
     /**
@@ -75,10 +75,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="azureFile")
-      private final @Nullable Output<AzureFileVolumeSourceArgs> azureFile;
+    private @Nullable Output<AzureFileVolumeSourceArgs> azureFile;
 
-    public Output<AzureFileVolumeSourceArgs> azureFile() {
-        return this.azureFile == null ? Codegen.empty() : this.azureFile;
+    public Optional<Output<AzureFileVolumeSourceArgs>> azureFile() {
+        return Optional.ofNullable(this.azureFile);
     }
 
     /**
@@ -86,10 +86,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cephfs")
-      private final @Nullable Output<CephFSVolumeSourceArgs> cephfs;
+    private @Nullable Output<CephFSVolumeSourceArgs> cephfs;
 
-    public Output<CephFSVolumeSourceArgs> cephfs() {
-        return this.cephfs == null ? Codegen.empty() : this.cephfs;
+    public Optional<Output<CephFSVolumeSourceArgs>> cephfs() {
+        return Optional.ofNullable(this.cephfs);
     }
 
     /**
@@ -97,10 +97,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="cinder")
-      private final @Nullable Output<CinderVolumeSourceArgs> cinder;
+    private @Nullable Output<CinderVolumeSourceArgs> cinder;
 
-    public Output<CinderVolumeSourceArgs> cinder() {
-        return this.cinder == null ? Codegen.empty() : this.cinder;
+    public Optional<Output<CinderVolumeSourceArgs>> cinder() {
+        return Optional.ofNullable(this.cinder);
     }
 
     /**
@@ -108,10 +108,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="configMap")
-      private final @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
+    private @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
 
-    public Output<ConfigMapVolumeSourceArgs> configMap() {
-        return this.configMap == null ? Codegen.empty() : this.configMap;
+    public Optional<Output<ConfigMapVolumeSourceArgs>> configMap() {
+        return Optional.ofNullable(this.configMap);
     }
 
     /**
@@ -119,10 +119,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="csi")
-      private final @Nullable Output<CSIVolumeSourceArgs> csi;
+    private @Nullable Output<CSIVolumeSourceArgs> csi;
 
-    public Output<CSIVolumeSourceArgs> csi() {
-        return this.csi == null ? Codegen.empty() : this.csi;
+    public Optional<Output<CSIVolumeSourceArgs>> csi() {
+        return Optional.ofNullable(this.csi);
     }
 
     /**
@@ -130,10 +130,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="downwardAPI")
-      private final @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI;
+    private @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI;
 
-    public Output<DownwardAPIVolumeSourceArgs> downwardAPI() {
-        return this.downwardAPI == null ? Codegen.empty() : this.downwardAPI;
+    public Optional<Output<DownwardAPIVolumeSourceArgs>> downwardAPI() {
+        return Optional.ofNullable(this.downwardAPI);
     }
 
     /**
@@ -141,10 +141,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="emptyDir")
-      private final @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir;
+    private @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir;
 
-    public Output<EmptyDirVolumeSourceArgs> emptyDir() {
-        return this.emptyDir == null ? Codegen.empty() : this.emptyDir;
+    public Optional<Output<EmptyDirVolumeSourceArgs>> emptyDir() {
+        return Optional.ofNullable(this.emptyDir);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeral")
-      private final @Nullable Output<EphemeralVolumeSourceArgs> ephemeral;
+    private @Nullable Output<EphemeralVolumeSourceArgs> ephemeral;
 
-    public Output<EphemeralVolumeSourceArgs> ephemeral() {
-        return this.ephemeral == null ? Codegen.empty() : this.ephemeral;
+    public Optional<Output<EphemeralVolumeSourceArgs>> ephemeral() {
+        return Optional.ofNullable(this.ephemeral);
     }
 
     /**
@@ -176,10 +176,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="fc")
-      private final @Nullable Output<FCVolumeSourceArgs> fc;
+    private @Nullable Output<FCVolumeSourceArgs> fc;
 
-    public Output<FCVolumeSourceArgs> fc() {
-        return this.fc == null ? Codegen.empty() : this.fc;
+    public Optional<Output<FCVolumeSourceArgs>> fc() {
+        return Optional.ofNullable(this.fc);
     }
 
     /**
@@ -187,10 +187,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flexVolume")
-      private final @Nullable Output<FlexVolumeSourceArgs> flexVolume;
+    private @Nullable Output<FlexVolumeSourceArgs> flexVolume;
 
-    public Output<FlexVolumeSourceArgs> flexVolume() {
-        return this.flexVolume == null ? Codegen.empty() : this.flexVolume;
+    public Optional<Output<FlexVolumeSourceArgs>> flexVolume() {
+        return Optional.ofNullable(this.flexVolume);
     }
 
     /**
@@ -198,10 +198,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="flocker")
-      private final @Nullable Output<FlockerVolumeSourceArgs> flocker;
+    private @Nullable Output<FlockerVolumeSourceArgs> flocker;
 
-    public Output<FlockerVolumeSourceArgs> flocker() {
-        return this.flocker == null ? Codegen.empty() : this.flocker;
+    public Optional<Output<FlockerVolumeSourceArgs>> flocker() {
+        return Optional.ofNullable(this.flocker);
     }
 
     /**
@@ -209,10 +209,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gcePersistentDisk")
-      private final @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
+    private @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
 
-    public Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk() {
-        return this.gcePersistentDisk == null ? Codegen.empty() : this.gcePersistentDisk;
+    public Optional<Output<GCEPersistentDiskVolumeSourceArgs>> gcePersistentDisk() {
+        return Optional.ofNullable(this.gcePersistentDisk);
     }
 
     /**
@@ -220,10 +220,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="gitRepo")
-      private final @Nullable Output<GitRepoVolumeSourceArgs> gitRepo;
+    private @Nullable Output<GitRepoVolumeSourceArgs> gitRepo;
 
-    public Output<GitRepoVolumeSourceArgs> gitRepo() {
-        return this.gitRepo == null ? Codegen.empty() : this.gitRepo;
+    public Optional<Output<GitRepoVolumeSourceArgs>> gitRepo() {
+        return Optional.ofNullable(this.gitRepo);
     }
 
     /**
@@ -231,10 +231,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="glusterfs")
-      private final @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs;
+    private @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs;
 
-    public Output<GlusterfsVolumeSourceArgs> glusterfs() {
-        return this.glusterfs == null ? Codegen.empty() : this.glusterfs;
+    public Optional<Output<GlusterfsVolumeSourceArgs>> glusterfs() {
+        return Optional.ofNullable(this.glusterfs);
     }
 
     /**
@@ -242,10 +242,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostPath")
-      private final @Nullable Output<HostPathVolumeSourceArgs> hostPath;
+    private @Nullable Output<HostPathVolumeSourceArgs> hostPath;
 
-    public Output<HostPathVolumeSourceArgs> hostPath() {
-        return this.hostPath == null ? Codegen.empty() : this.hostPath;
+    public Optional<Output<HostPathVolumeSourceArgs>> hostPath() {
+        return Optional.ofNullable(this.hostPath);
     }
 
     /**
@@ -253,10 +253,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="iscsi")
-      private final @Nullable Output<ISCSIVolumeSourceArgs> iscsi;
+    private @Nullable Output<ISCSIVolumeSourceArgs> iscsi;
 
-    public Output<ISCSIVolumeSourceArgs> iscsi() {
-        return this.iscsi == null ? Codegen.empty() : this.iscsi;
+    public Optional<Output<ISCSIVolumeSourceArgs>> iscsi() {
+        return Optional.ofNullable(this.iscsi);
     }
 
     /**
@@ -264,7 +264,7 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -275,10 +275,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nfs")
-      private final @Nullable Output<NFSVolumeSourceArgs> nfs;
+    private @Nullable Output<NFSVolumeSourceArgs> nfs;
 
-    public Output<NFSVolumeSourceArgs> nfs() {
-        return this.nfs == null ? Codegen.empty() : this.nfs;
+    public Optional<Output<NFSVolumeSourceArgs>> nfs() {
+        return Optional.ofNullable(this.nfs);
     }
 
     /**
@@ -286,10 +286,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="persistentVolumeClaim")
-      private final @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
+    private @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
 
-    public Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim() {
-        return this.persistentVolumeClaim == null ? Codegen.empty() : this.persistentVolumeClaim;
+    public Optional<Output<PersistentVolumeClaimVolumeSourceArgs>> persistentVolumeClaim() {
+        return Optional.ofNullable(this.persistentVolumeClaim);
     }
 
     /**
@@ -297,10 +297,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="photonPersistentDisk")
-      private final @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
+    private @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
 
-    public Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk() {
-        return this.photonPersistentDisk == null ? Codegen.empty() : this.photonPersistentDisk;
+    public Optional<Output<PhotonPersistentDiskVolumeSourceArgs>> photonPersistentDisk() {
+        return Optional.ofNullable(this.photonPersistentDisk);
     }
 
     /**
@@ -308,10 +308,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="portworxVolume")
-      private final @Nullable Output<PortworxVolumeSourceArgs> portworxVolume;
+    private @Nullable Output<PortworxVolumeSourceArgs> portworxVolume;
 
-    public Output<PortworxVolumeSourceArgs> portworxVolume() {
-        return this.portworxVolume == null ? Codegen.empty() : this.portworxVolume;
+    public Optional<Output<PortworxVolumeSourceArgs>> portworxVolume() {
+        return Optional.ofNullable(this.portworxVolume);
     }
 
     /**
@@ -319,10 +319,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="projected")
-      private final @Nullable Output<ProjectedVolumeSourceArgs> projected;
+    private @Nullable Output<ProjectedVolumeSourceArgs> projected;
 
-    public Output<ProjectedVolumeSourceArgs> projected() {
-        return this.projected == null ? Codegen.empty() : this.projected;
+    public Optional<Output<ProjectedVolumeSourceArgs>> projected() {
+        return Optional.ofNullable(this.projected);
     }
 
     /**
@@ -330,10 +330,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="quobyte")
-      private final @Nullable Output<QuobyteVolumeSourceArgs> quobyte;
+    private @Nullable Output<QuobyteVolumeSourceArgs> quobyte;
 
-    public Output<QuobyteVolumeSourceArgs> quobyte() {
-        return this.quobyte == null ? Codegen.empty() : this.quobyte;
+    public Optional<Output<QuobyteVolumeSourceArgs>> quobyte() {
+        return Optional.ofNullable(this.quobyte);
     }
 
     /**
@@ -341,10 +341,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="rbd")
-      private final @Nullable Output<RBDVolumeSourceArgs> rbd;
+    private @Nullable Output<RBDVolumeSourceArgs> rbd;
 
-    public Output<RBDVolumeSourceArgs> rbd() {
-        return this.rbd == null ? Codegen.empty() : this.rbd;
+    public Optional<Output<RBDVolumeSourceArgs>> rbd() {
+        return Optional.ofNullable(this.rbd);
     }
 
     /**
@@ -352,10 +352,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="scaleIO")
-      private final @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO;
+    private @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO;
 
-    public Output<ScaleIOVolumeSourceArgs> scaleIO() {
-        return this.scaleIO == null ? Codegen.empty() : this.scaleIO;
+    public Optional<Output<ScaleIOVolumeSourceArgs>> scaleIO() {
+        return Optional.ofNullable(this.scaleIO);
     }
 
     /**
@@ -363,10 +363,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="secret")
-      private final @Nullable Output<SecretVolumeSourceArgs> secret;
+    private @Nullable Output<SecretVolumeSourceArgs> secret;
 
-    public Output<SecretVolumeSourceArgs> secret() {
-        return this.secret == null ? Codegen.empty() : this.secret;
+    public Optional<Output<SecretVolumeSourceArgs>> secret() {
+        return Optional.ofNullable(this.secret);
     }
 
     /**
@@ -374,10 +374,10 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="storageos")
-      private final @Nullable Output<StorageOSVolumeSourceArgs> storageos;
+    private @Nullable Output<StorageOSVolumeSourceArgs> storageos;
 
-    public Output<StorageOSVolumeSourceArgs> storageos() {
-        return this.storageos == null ? Codegen.empty() : this.storageos;
+    public Optional<Output<StorageOSVolumeSourceArgs>> storageos() {
+        return Optional.ofNullable(this.storageos);
     }
 
     /**
@@ -385,427 +385,339 @@ public final class VolumeArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="vsphereVolume")
-      private final @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
+    private @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
 
-    public Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume() {
-        return this.vsphereVolume == null ? Codegen.empty() : this.vsphereVolume;
+    public Optional<Output<VsphereVirtualDiskVolumeSourceArgs>> vsphereVolume() {
+        return Optional.ofNullable(this.vsphereVolume);
     }
 
-    public VolumeArgs(
-        @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore,
-        @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk,
-        @Nullable Output<AzureFileVolumeSourceArgs> azureFile,
-        @Nullable Output<CephFSVolumeSourceArgs> cephfs,
-        @Nullable Output<CinderVolumeSourceArgs> cinder,
-        @Nullable Output<ConfigMapVolumeSourceArgs> configMap,
-        @Nullable Output<CSIVolumeSourceArgs> csi,
-        @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI,
-        @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir,
-        @Nullable Output<EphemeralVolumeSourceArgs> ephemeral,
-        @Nullable Output<FCVolumeSourceArgs> fc,
-        @Nullable Output<FlexVolumeSourceArgs> flexVolume,
-        @Nullable Output<FlockerVolumeSourceArgs> flocker,
-        @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk,
-        @Nullable Output<GitRepoVolumeSourceArgs> gitRepo,
-        @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs,
-        @Nullable Output<HostPathVolumeSourceArgs> hostPath,
-        @Nullable Output<ISCSIVolumeSourceArgs> iscsi,
-        Output<String> name,
-        @Nullable Output<NFSVolumeSourceArgs> nfs,
-        @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim,
-        @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk,
-        @Nullable Output<PortworxVolumeSourceArgs> portworxVolume,
-        @Nullable Output<ProjectedVolumeSourceArgs> projected,
-        @Nullable Output<QuobyteVolumeSourceArgs> quobyte,
-        @Nullable Output<RBDVolumeSourceArgs> rbd,
-        @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO,
-        @Nullable Output<SecretVolumeSourceArgs> secret,
-        @Nullable Output<StorageOSVolumeSourceArgs> storageos,
-        @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
-        this.awsElasticBlockStore = awsElasticBlockStore;
-        this.azureDisk = azureDisk;
-        this.azureFile = azureFile;
-        this.cephfs = cephfs;
-        this.cinder = cinder;
-        this.configMap = configMap;
-        this.csi = csi;
-        this.downwardAPI = downwardAPI;
-        this.emptyDir = emptyDir;
-        this.ephemeral = ephemeral;
-        this.fc = fc;
-        this.flexVolume = flexVolume;
-        this.flocker = flocker;
-        this.gcePersistentDisk = gcePersistentDisk;
-        this.gitRepo = gitRepo;
-        this.glusterfs = glusterfs;
-        this.hostPath = hostPath;
-        this.iscsi = iscsi;
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.nfs = nfs;
-        this.persistentVolumeClaim = persistentVolumeClaim;
-        this.photonPersistentDisk = photonPersistentDisk;
-        this.portworxVolume = portworxVolume;
-        this.projected = projected;
-        this.quobyte = quobyte;
-        this.rbd = rbd;
-        this.scaleIO = scaleIO;
-        this.secret = secret;
-        this.storageos = storageos;
-        this.vsphereVolume = vsphereVolume;
-    }
+    private VolumeArgs() {}
 
-    private VolumeArgs() {
-        this.awsElasticBlockStore = Codegen.empty();
-        this.azureDisk = Codegen.empty();
-        this.azureFile = Codegen.empty();
-        this.cephfs = Codegen.empty();
-        this.cinder = Codegen.empty();
-        this.configMap = Codegen.empty();
-        this.csi = Codegen.empty();
-        this.downwardAPI = Codegen.empty();
-        this.emptyDir = Codegen.empty();
-        this.ephemeral = Codegen.empty();
-        this.fc = Codegen.empty();
-        this.flexVolume = Codegen.empty();
-        this.flocker = Codegen.empty();
-        this.gcePersistentDisk = Codegen.empty();
-        this.gitRepo = Codegen.empty();
-        this.glusterfs = Codegen.empty();
-        this.hostPath = Codegen.empty();
-        this.iscsi = Codegen.empty();
-        this.name = Codegen.empty();
-        this.nfs = Codegen.empty();
-        this.persistentVolumeClaim = Codegen.empty();
-        this.photonPersistentDisk = Codegen.empty();
-        this.portworxVolume = Codegen.empty();
-        this.projected = Codegen.empty();
-        this.quobyte = Codegen.empty();
-        this.rbd = Codegen.empty();
-        this.scaleIO = Codegen.empty();
-        this.secret = Codegen.empty();
-        this.storageos = Codegen.empty();
-        this.vsphereVolume = Codegen.empty();
+    private VolumeArgs(VolumeArgs $) {
+        this.awsElasticBlockStore = $.awsElasticBlockStore;
+        this.azureDisk = $.azureDisk;
+        this.azureFile = $.azureFile;
+        this.cephfs = $.cephfs;
+        this.cinder = $.cinder;
+        this.configMap = $.configMap;
+        this.csi = $.csi;
+        this.downwardAPI = $.downwardAPI;
+        this.emptyDir = $.emptyDir;
+        this.ephemeral = $.ephemeral;
+        this.fc = $.fc;
+        this.flexVolume = $.flexVolume;
+        this.flocker = $.flocker;
+        this.gcePersistentDisk = $.gcePersistentDisk;
+        this.gitRepo = $.gitRepo;
+        this.glusterfs = $.glusterfs;
+        this.hostPath = $.hostPath;
+        this.iscsi = $.iscsi;
+        this.name = $.name;
+        this.nfs = $.nfs;
+        this.persistentVolumeClaim = $.persistentVolumeClaim;
+        this.photonPersistentDisk = $.photonPersistentDisk;
+        this.portworxVolume = $.portworxVolume;
+        this.projected = $.projected;
+        this.quobyte = $.quobyte;
+        this.rbd = $.rbd;
+        this.scaleIO = $.scaleIO;
+        this.secret = $.secret;
+        this.storageos = $.storageos;
+        this.vsphereVolume = $.vsphereVolume;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(VolumeArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore;
-        private @Nullable Output<AzureDiskVolumeSourceArgs> azureDisk;
-        private @Nullable Output<AzureFileVolumeSourceArgs> azureFile;
-        private @Nullable Output<CephFSVolumeSourceArgs> cephfs;
-        private @Nullable Output<CinderVolumeSourceArgs> cinder;
-        private @Nullable Output<ConfigMapVolumeSourceArgs> configMap;
-        private @Nullable Output<CSIVolumeSourceArgs> csi;
-        private @Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI;
-        private @Nullable Output<EmptyDirVolumeSourceArgs> emptyDir;
-        private @Nullable Output<EphemeralVolumeSourceArgs> ephemeral;
-        private @Nullable Output<FCVolumeSourceArgs> fc;
-        private @Nullable Output<FlexVolumeSourceArgs> flexVolume;
-        private @Nullable Output<FlockerVolumeSourceArgs> flocker;
-        private @Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk;
-        private @Nullable Output<GitRepoVolumeSourceArgs> gitRepo;
-        private @Nullable Output<GlusterfsVolumeSourceArgs> glusterfs;
-        private @Nullable Output<HostPathVolumeSourceArgs> hostPath;
-        private @Nullable Output<ISCSIVolumeSourceArgs> iscsi;
-        private Output<String> name;
-        private @Nullable Output<NFSVolumeSourceArgs> nfs;
-        private @Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim;
-        private @Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk;
-        private @Nullable Output<PortworxVolumeSourceArgs> portworxVolume;
-        private @Nullable Output<ProjectedVolumeSourceArgs> projected;
-        private @Nullable Output<QuobyteVolumeSourceArgs> quobyte;
-        private @Nullable Output<RBDVolumeSourceArgs> rbd;
-        private @Nullable Output<ScaleIOVolumeSourceArgs> scaleIO;
-        private @Nullable Output<SecretVolumeSourceArgs> secret;
-        private @Nullable Output<StorageOSVolumeSourceArgs> storageos;
-        private @Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume;
+        private VolumeArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new VolumeArgs();
         }
 
         public Builder(VolumeArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.awsElasticBlockStore = defaults.awsElasticBlockStore;
-    	      this.azureDisk = defaults.azureDisk;
-    	      this.azureFile = defaults.azureFile;
-    	      this.cephfs = defaults.cephfs;
-    	      this.cinder = defaults.cinder;
-    	      this.configMap = defaults.configMap;
-    	      this.csi = defaults.csi;
-    	      this.downwardAPI = defaults.downwardAPI;
-    	      this.emptyDir = defaults.emptyDir;
-    	      this.ephemeral = defaults.ephemeral;
-    	      this.fc = defaults.fc;
-    	      this.flexVolume = defaults.flexVolume;
-    	      this.flocker = defaults.flocker;
-    	      this.gcePersistentDisk = defaults.gcePersistentDisk;
-    	      this.gitRepo = defaults.gitRepo;
-    	      this.glusterfs = defaults.glusterfs;
-    	      this.hostPath = defaults.hostPath;
-    	      this.iscsi = defaults.iscsi;
-    	      this.name = defaults.name;
-    	      this.nfs = defaults.nfs;
-    	      this.persistentVolumeClaim = defaults.persistentVolumeClaim;
-    	      this.photonPersistentDisk = defaults.photonPersistentDisk;
-    	      this.portworxVolume = defaults.portworxVolume;
-    	      this.projected = defaults.projected;
-    	      this.quobyte = defaults.quobyte;
-    	      this.rbd = defaults.rbd;
-    	      this.scaleIO = defaults.scaleIO;
-    	      this.secret = defaults.secret;
-    	      this.storageos = defaults.storageos;
-    	      this.vsphereVolume = defaults.vsphereVolume;
+            $ = new VolumeArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder awsElasticBlockStore(@Nullable Output<AWSElasticBlockStoreVolumeSourceArgs> awsElasticBlockStore) {
-            this.awsElasticBlockStore = awsElasticBlockStore;
+            $.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
-        public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
-            this.awsElasticBlockStore = Codegen.ofNullable(awsElasticBlockStore);
-            return this;
+
+        public Builder awsElasticBlockStore(AWSElasticBlockStoreVolumeSourceArgs awsElasticBlockStore) {
+            return awsElasticBlockStore(Output.of(awsElasticBlockStore));
         }
+
         public Builder azureDisk(@Nullable Output<AzureDiskVolumeSourceArgs> azureDisk) {
-            this.azureDisk = azureDisk;
+            $.azureDisk = azureDisk;
             return this;
         }
-        public Builder azureDisk(@Nullable AzureDiskVolumeSourceArgs azureDisk) {
-            this.azureDisk = Codegen.ofNullable(azureDisk);
-            return this;
+
+        public Builder azureDisk(AzureDiskVolumeSourceArgs azureDisk) {
+            return azureDisk(Output.of(azureDisk));
         }
+
         public Builder azureFile(@Nullable Output<AzureFileVolumeSourceArgs> azureFile) {
-            this.azureFile = azureFile;
+            $.azureFile = azureFile;
             return this;
         }
-        public Builder azureFile(@Nullable AzureFileVolumeSourceArgs azureFile) {
-            this.azureFile = Codegen.ofNullable(azureFile);
-            return this;
+
+        public Builder azureFile(AzureFileVolumeSourceArgs azureFile) {
+            return azureFile(Output.of(azureFile));
         }
+
         public Builder cephfs(@Nullable Output<CephFSVolumeSourceArgs> cephfs) {
-            this.cephfs = cephfs;
+            $.cephfs = cephfs;
             return this;
         }
-        public Builder cephfs(@Nullable CephFSVolumeSourceArgs cephfs) {
-            this.cephfs = Codegen.ofNullable(cephfs);
-            return this;
+
+        public Builder cephfs(CephFSVolumeSourceArgs cephfs) {
+            return cephfs(Output.of(cephfs));
         }
+
         public Builder cinder(@Nullable Output<CinderVolumeSourceArgs> cinder) {
-            this.cinder = cinder;
+            $.cinder = cinder;
             return this;
         }
-        public Builder cinder(@Nullable CinderVolumeSourceArgs cinder) {
-            this.cinder = Codegen.ofNullable(cinder);
-            return this;
+
+        public Builder cinder(CinderVolumeSourceArgs cinder) {
+            return cinder(Output.of(cinder));
         }
+
         public Builder configMap(@Nullable Output<ConfigMapVolumeSourceArgs> configMap) {
-            this.configMap = configMap;
+            $.configMap = configMap;
             return this;
         }
-        public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
-            this.configMap = Codegen.ofNullable(configMap);
-            return this;
+
+        public Builder configMap(ConfigMapVolumeSourceArgs configMap) {
+            return configMap(Output.of(configMap));
         }
+
         public Builder csi(@Nullable Output<CSIVolumeSourceArgs> csi) {
-            this.csi = csi;
+            $.csi = csi;
             return this;
         }
-        public Builder csi(@Nullable CSIVolumeSourceArgs csi) {
-            this.csi = Codegen.ofNullable(csi);
-            return this;
+
+        public Builder csi(CSIVolumeSourceArgs csi) {
+            return csi(Output.of(csi));
         }
+
         public Builder downwardAPI(@Nullable Output<DownwardAPIVolumeSourceArgs> downwardAPI) {
-            this.downwardAPI = downwardAPI;
+            $.downwardAPI = downwardAPI;
             return this;
         }
-        public Builder downwardAPI(@Nullable DownwardAPIVolumeSourceArgs downwardAPI) {
-            this.downwardAPI = Codegen.ofNullable(downwardAPI);
-            return this;
+
+        public Builder downwardAPI(DownwardAPIVolumeSourceArgs downwardAPI) {
+            return downwardAPI(Output.of(downwardAPI));
         }
+
         public Builder emptyDir(@Nullable Output<EmptyDirVolumeSourceArgs> emptyDir) {
-            this.emptyDir = emptyDir;
+            $.emptyDir = emptyDir;
             return this;
         }
-        public Builder emptyDir(@Nullable EmptyDirVolumeSourceArgs emptyDir) {
-            this.emptyDir = Codegen.ofNullable(emptyDir);
-            return this;
+
+        public Builder emptyDir(EmptyDirVolumeSourceArgs emptyDir) {
+            return emptyDir(Output.of(emptyDir));
         }
+
         public Builder ephemeral(@Nullable Output<EphemeralVolumeSourceArgs> ephemeral) {
-            this.ephemeral = ephemeral;
+            $.ephemeral = ephemeral;
             return this;
         }
-        public Builder ephemeral(@Nullable EphemeralVolumeSourceArgs ephemeral) {
-            this.ephemeral = Codegen.ofNullable(ephemeral);
-            return this;
+
+        public Builder ephemeral(EphemeralVolumeSourceArgs ephemeral) {
+            return ephemeral(Output.of(ephemeral));
         }
+
         public Builder fc(@Nullable Output<FCVolumeSourceArgs> fc) {
-            this.fc = fc;
+            $.fc = fc;
             return this;
         }
-        public Builder fc(@Nullable FCVolumeSourceArgs fc) {
-            this.fc = Codegen.ofNullable(fc);
-            return this;
+
+        public Builder fc(FCVolumeSourceArgs fc) {
+            return fc(Output.of(fc));
         }
+
         public Builder flexVolume(@Nullable Output<FlexVolumeSourceArgs> flexVolume) {
-            this.flexVolume = flexVolume;
+            $.flexVolume = flexVolume;
             return this;
         }
-        public Builder flexVolume(@Nullable FlexVolumeSourceArgs flexVolume) {
-            this.flexVolume = Codegen.ofNullable(flexVolume);
-            return this;
+
+        public Builder flexVolume(FlexVolumeSourceArgs flexVolume) {
+            return flexVolume(Output.of(flexVolume));
         }
+
         public Builder flocker(@Nullable Output<FlockerVolumeSourceArgs> flocker) {
-            this.flocker = flocker;
+            $.flocker = flocker;
             return this;
         }
-        public Builder flocker(@Nullable FlockerVolumeSourceArgs flocker) {
-            this.flocker = Codegen.ofNullable(flocker);
-            return this;
+
+        public Builder flocker(FlockerVolumeSourceArgs flocker) {
+            return flocker(Output.of(flocker));
         }
+
         public Builder gcePersistentDisk(@Nullable Output<GCEPersistentDiskVolumeSourceArgs> gcePersistentDisk) {
-            this.gcePersistentDisk = gcePersistentDisk;
+            $.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
-        public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
-            this.gcePersistentDisk = Codegen.ofNullable(gcePersistentDisk);
-            return this;
+
+        public Builder gcePersistentDisk(GCEPersistentDiskVolumeSourceArgs gcePersistentDisk) {
+            return gcePersistentDisk(Output.of(gcePersistentDisk));
         }
+
         public Builder gitRepo(@Nullable Output<GitRepoVolumeSourceArgs> gitRepo) {
-            this.gitRepo = gitRepo;
+            $.gitRepo = gitRepo;
             return this;
         }
-        public Builder gitRepo(@Nullable GitRepoVolumeSourceArgs gitRepo) {
-            this.gitRepo = Codegen.ofNullable(gitRepo);
-            return this;
+
+        public Builder gitRepo(GitRepoVolumeSourceArgs gitRepo) {
+            return gitRepo(Output.of(gitRepo));
         }
+
         public Builder glusterfs(@Nullable Output<GlusterfsVolumeSourceArgs> glusterfs) {
-            this.glusterfs = glusterfs;
+            $.glusterfs = glusterfs;
             return this;
         }
-        public Builder glusterfs(@Nullable GlusterfsVolumeSourceArgs glusterfs) {
-            this.glusterfs = Codegen.ofNullable(glusterfs);
-            return this;
+
+        public Builder glusterfs(GlusterfsVolumeSourceArgs glusterfs) {
+            return glusterfs(Output.of(glusterfs));
         }
+
         public Builder hostPath(@Nullable Output<HostPathVolumeSourceArgs> hostPath) {
-            this.hostPath = hostPath;
+            $.hostPath = hostPath;
             return this;
         }
-        public Builder hostPath(@Nullable HostPathVolumeSourceArgs hostPath) {
-            this.hostPath = Codegen.ofNullable(hostPath);
-            return this;
+
+        public Builder hostPath(HostPathVolumeSourceArgs hostPath) {
+            return hostPath(Output.of(hostPath));
         }
+
         public Builder iscsi(@Nullable Output<ISCSIVolumeSourceArgs> iscsi) {
-            this.iscsi = iscsi;
+            $.iscsi = iscsi;
             return this;
         }
-        public Builder iscsi(@Nullable ISCSIVolumeSourceArgs iscsi) {
-            this.iscsi = Codegen.ofNullable(iscsi);
-            return this;
+
+        public Builder iscsi(ISCSIVolumeSourceArgs iscsi) {
+            return iscsi(Output.of(iscsi));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder nfs(@Nullable Output<NFSVolumeSourceArgs> nfs) {
-            this.nfs = nfs;
+            $.nfs = nfs;
             return this;
         }
-        public Builder nfs(@Nullable NFSVolumeSourceArgs nfs) {
-            this.nfs = Codegen.ofNullable(nfs);
-            return this;
+
+        public Builder nfs(NFSVolumeSourceArgs nfs) {
+            return nfs(Output.of(nfs));
         }
+
         public Builder persistentVolumeClaim(@Nullable Output<PersistentVolumeClaimVolumeSourceArgs> persistentVolumeClaim) {
-            this.persistentVolumeClaim = persistentVolumeClaim;
+            $.persistentVolumeClaim = persistentVolumeClaim;
             return this;
         }
-        public Builder persistentVolumeClaim(@Nullable PersistentVolumeClaimVolumeSourceArgs persistentVolumeClaim) {
-            this.persistentVolumeClaim = Codegen.ofNullable(persistentVolumeClaim);
-            return this;
+
+        public Builder persistentVolumeClaim(PersistentVolumeClaimVolumeSourceArgs persistentVolumeClaim) {
+            return persistentVolumeClaim(Output.of(persistentVolumeClaim));
         }
+
         public Builder photonPersistentDisk(@Nullable Output<PhotonPersistentDiskVolumeSourceArgs> photonPersistentDisk) {
-            this.photonPersistentDisk = photonPersistentDisk;
+            $.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
-        public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
-            this.photonPersistentDisk = Codegen.ofNullable(photonPersistentDisk);
-            return this;
+
+        public Builder photonPersistentDisk(PhotonPersistentDiskVolumeSourceArgs photonPersistentDisk) {
+            return photonPersistentDisk(Output.of(photonPersistentDisk));
         }
+
         public Builder portworxVolume(@Nullable Output<PortworxVolumeSourceArgs> portworxVolume) {
-            this.portworxVolume = portworxVolume;
+            $.portworxVolume = portworxVolume;
             return this;
         }
-        public Builder portworxVolume(@Nullable PortworxVolumeSourceArgs portworxVolume) {
-            this.portworxVolume = Codegen.ofNullable(portworxVolume);
-            return this;
+
+        public Builder portworxVolume(PortworxVolumeSourceArgs portworxVolume) {
+            return portworxVolume(Output.of(portworxVolume));
         }
+
         public Builder projected(@Nullable Output<ProjectedVolumeSourceArgs> projected) {
-            this.projected = projected;
+            $.projected = projected;
             return this;
         }
-        public Builder projected(@Nullable ProjectedVolumeSourceArgs projected) {
-            this.projected = Codegen.ofNullable(projected);
-            return this;
+
+        public Builder projected(ProjectedVolumeSourceArgs projected) {
+            return projected(Output.of(projected));
         }
+
         public Builder quobyte(@Nullable Output<QuobyteVolumeSourceArgs> quobyte) {
-            this.quobyte = quobyte;
+            $.quobyte = quobyte;
             return this;
         }
-        public Builder quobyte(@Nullable QuobyteVolumeSourceArgs quobyte) {
-            this.quobyte = Codegen.ofNullable(quobyte);
-            return this;
+
+        public Builder quobyte(QuobyteVolumeSourceArgs quobyte) {
+            return quobyte(Output.of(quobyte));
         }
+
         public Builder rbd(@Nullable Output<RBDVolumeSourceArgs> rbd) {
-            this.rbd = rbd;
+            $.rbd = rbd;
             return this;
         }
-        public Builder rbd(@Nullable RBDVolumeSourceArgs rbd) {
-            this.rbd = Codegen.ofNullable(rbd);
-            return this;
+
+        public Builder rbd(RBDVolumeSourceArgs rbd) {
+            return rbd(Output.of(rbd));
         }
+
         public Builder scaleIO(@Nullable Output<ScaleIOVolumeSourceArgs> scaleIO) {
-            this.scaleIO = scaleIO;
+            $.scaleIO = scaleIO;
             return this;
         }
-        public Builder scaleIO(@Nullable ScaleIOVolumeSourceArgs scaleIO) {
-            this.scaleIO = Codegen.ofNullable(scaleIO);
-            return this;
+
+        public Builder scaleIO(ScaleIOVolumeSourceArgs scaleIO) {
+            return scaleIO(Output.of(scaleIO));
         }
+
         public Builder secret(@Nullable Output<SecretVolumeSourceArgs> secret) {
-            this.secret = secret;
+            $.secret = secret;
             return this;
         }
-        public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
-            this.secret = Codegen.ofNullable(secret);
-            return this;
+
+        public Builder secret(SecretVolumeSourceArgs secret) {
+            return secret(Output.of(secret));
         }
+
         public Builder storageos(@Nullable Output<StorageOSVolumeSourceArgs> storageos) {
-            this.storageos = storageos;
+            $.storageos = storageos;
             return this;
         }
-        public Builder storageos(@Nullable StorageOSVolumeSourceArgs storageos) {
-            this.storageos = Codegen.ofNullable(storageos);
-            return this;
+
+        public Builder storageos(StorageOSVolumeSourceArgs storageos) {
+            return storageos(Output.of(storageos));
         }
+
         public Builder vsphereVolume(@Nullable Output<VsphereVirtualDiskVolumeSourceArgs> vsphereVolume) {
-            this.vsphereVolume = vsphereVolume;
+            $.vsphereVolume = vsphereVolume;
             return this;
         }
-        public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
-            this.vsphereVolume = Codegen.ofNullable(vsphereVolume);
-            return this;
-        }        public VolumeArgs build() {
-            return new VolumeArgs(awsElasticBlockStore, azureDisk, azureFile, cephfs, cinder, configMap, csi, downwardAPI, emptyDir, ephemeral, fc, flexVolume, flocker, gcePersistentDisk, gitRepo, glusterfs, hostPath, iscsi, name, nfs, persistentVolumeClaim, photonPersistentDisk, portworxVolume, projected, quobyte, rbd, scaleIO, secret, storageos, vsphereVolume);
+
+        public Builder vsphereVolume(VsphereVirtualDiskVolumeSourceArgs vsphereVolume) {
+            return vsphereVolume(Output.of(vsphereVolume));
+        }
+
+        public VolumeArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

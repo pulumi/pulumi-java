@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.NamespaceConditionArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<NamespaceConditionArgs>> conditions;
+    private @Nullable Output<List<NamespaceConditionArgs>> conditions;
 
-    public Output<List<NamespaceConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<NamespaceConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -41,66 +41,62 @@ public final class NamespaceStatusArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="phase")
-      private final @Nullable Output<String> phase;
+    private @Nullable Output<String> phase;
 
-    public Output<String> phase() {
-        return this.phase == null ? Codegen.empty() : this.phase;
+    public Optional<Output<String>> phase() {
+        return Optional.ofNullable(this.phase);
     }
 
-    public NamespaceStatusArgs(
-        @Nullable Output<List<NamespaceConditionArgs>> conditions,
-        @Nullable Output<String> phase) {
-        this.conditions = conditions;
-        this.phase = phase;
-    }
+    private NamespaceStatusArgs() {}
 
-    private NamespaceStatusArgs() {
-        this.conditions = Codegen.empty();
-        this.phase = Codegen.empty();
+    private NamespaceStatusArgs(NamespaceStatusArgs $) {
+        this.conditions = $.conditions;
+        this.phase = $.phase;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NamespaceStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NamespaceConditionArgs>> conditions;
-        private @Nullable Output<String> phase;
+        private NamespaceStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NamespaceStatusArgs();
         }
 
         public Builder(NamespaceStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.phase = defaults.phase;
+            $ = new NamespaceStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<NamespaceConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<NamespaceConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<NamespaceConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(NamespaceConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder phase(@Nullable Output<String> phase) {
-            this.phase = phase;
+            $.phase = phase;
             return this;
         }
-        public Builder phase(@Nullable String phase) {
-            this.phase = Codegen.ofNullable(phase);
-            return this;
-        }        public NamespaceStatusArgs build() {
-            return new NamespaceStatusArgs(conditions, phase);
+
+        public Builder phase(String phase) {
+            return phase(Output.of(phase));
+        }
+
+        public NamespaceStatusArgs build() {
+            return $;
         }
     }
+
 }

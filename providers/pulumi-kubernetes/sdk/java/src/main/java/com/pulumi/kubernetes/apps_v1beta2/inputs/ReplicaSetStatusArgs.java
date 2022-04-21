@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.apps_v1beta2.inputs.ReplicaSetConditionArgs;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="availableReplicas")
-      private final @Nullable Output<Integer> availableReplicas;
+    private @Nullable Output<Integer> availableReplicas;
 
-    public Output<Integer> availableReplicas() {
-        return this.availableReplicas == null ? Codegen.empty() : this.availableReplicas;
+    public Optional<Output<Integer>> availableReplicas() {
+        return Optional.ofNullable(this.availableReplicas);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
+    private @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
 
-    public Output<List<ReplicaSetConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<ReplicaSetConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -48,10 +48,10 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="fullyLabeledReplicas")
-      private final @Nullable Output<Integer> fullyLabeledReplicas;
+    private @Nullable Output<Integer> fullyLabeledReplicas;
 
-    public Output<Integer> fullyLabeledReplicas() {
-        return this.fullyLabeledReplicas == null ? Codegen.empty() : this.fullyLabeledReplicas;
+    public Optional<Output<Integer>> fullyLabeledReplicas() {
+        return Optional.ofNullable(this.fullyLabeledReplicas);
     }
 
     /**
@@ -59,10 +59,10 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="observedGeneration")
-      private final @Nullable Output<Integer> observedGeneration;
+    private @Nullable Output<Integer> observedGeneration;
 
-    public Output<Integer> observedGeneration() {
-        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
+    public Optional<Output<Integer>> observedGeneration() {
+        return Optional.ofNullable(this.observedGeneration);
     }
 
     /**
@@ -70,10 +70,10 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="readyReplicas")
-      private final @Nullable Output<Integer> readyReplicas;
+    private @Nullable Output<Integer> readyReplicas;
 
-    public Output<Integer> readyReplicas() {
-        return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
+    public Optional<Output<Integer>> readyReplicas() {
+        return Optional.ofNullable(this.readyReplicas);
     }
 
     /**
@@ -81,118 +81,103 @@ public final class ReplicaSetStatusArgs extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="replicas", required=true)
-      private final Output<Integer> replicas;
+    private Output<Integer> replicas;
 
     public Output<Integer> replicas() {
         return this.replicas;
     }
 
-    public ReplicaSetStatusArgs(
-        @Nullable Output<Integer> availableReplicas,
-        @Nullable Output<List<ReplicaSetConditionArgs>> conditions,
-        @Nullable Output<Integer> fullyLabeledReplicas,
-        @Nullable Output<Integer> observedGeneration,
-        @Nullable Output<Integer> readyReplicas,
-        Output<Integer> replicas) {
-        this.availableReplicas = availableReplicas;
-        this.conditions = conditions;
-        this.fullyLabeledReplicas = fullyLabeledReplicas;
-        this.observedGeneration = observedGeneration;
-        this.readyReplicas = readyReplicas;
-        this.replicas = Objects.requireNonNull(replicas, "expected parameter 'replicas' to be non-null");
-    }
+    private ReplicaSetStatusArgs() {}
 
-    private ReplicaSetStatusArgs() {
-        this.availableReplicas = Codegen.empty();
-        this.conditions = Codegen.empty();
-        this.fullyLabeledReplicas = Codegen.empty();
-        this.observedGeneration = Codegen.empty();
-        this.readyReplicas = Codegen.empty();
-        this.replicas = Codegen.empty();
+    private ReplicaSetStatusArgs(ReplicaSetStatusArgs $) {
+        this.availableReplicas = $.availableReplicas;
+        this.conditions = $.conditions;
+        this.fullyLabeledReplicas = $.fullyLabeledReplicas;
+        this.observedGeneration = $.observedGeneration;
+        this.readyReplicas = $.readyReplicas;
+        this.replicas = $.replicas;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ReplicaSetStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> availableReplicas;
-        private @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
-        private @Nullable Output<Integer> fullyLabeledReplicas;
-        private @Nullable Output<Integer> observedGeneration;
-        private @Nullable Output<Integer> readyReplicas;
-        private Output<Integer> replicas;
+        private ReplicaSetStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ReplicaSetStatusArgs();
         }
 
         public Builder(ReplicaSetStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.availableReplicas = defaults.availableReplicas;
-    	      this.conditions = defaults.conditions;
-    	      this.fullyLabeledReplicas = defaults.fullyLabeledReplicas;
-    	      this.observedGeneration = defaults.observedGeneration;
-    	      this.readyReplicas = defaults.readyReplicas;
-    	      this.replicas = defaults.replicas;
+            $ = new ReplicaSetStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder availableReplicas(@Nullable Output<Integer> availableReplicas) {
-            this.availableReplicas = availableReplicas;
+            $.availableReplicas = availableReplicas;
             return this;
         }
-        public Builder availableReplicas(@Nullable Integer availableReplicas) {
-            this.availableReplicas = Codegen.ofNullable(availableReplicas);
-            return this;
+
+        public Builder availableReplicas(Integer availableReplicas) {
+            return availableReplicas(Output.of(availableReplicas));
         }
+
         public Builder conditions(@Nullable Output<List<ReplicaSetConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<ReplicaSetConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<ReplicaSetConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(ReplicaSetConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder fullyLabeledReplicas(@Nullable Output<Integer> fullyLabeledReplicas) {
-            this.fullyLabeledReplicas = fullyLabeledReplicas;
+            $.fullyLabeledReplicas = fullyLabeledReplicas;
             return this;
         }
-        public Builder fullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
-            this.fullyLabeledReplicas = Codegen.ofNullable(fullyLabeledReplicas);
-            return this;
+
+        public Builder fullyLabeledReplicas(Integer fullyLabeledReplicas) {
+            return fullyLabeledReplicas(Output.of(fullyLabeledReplicas));
         }
+
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
-            this.observedGeneration = observedGeneration;
+            $.observedGeneration = observedGeneration;
             return this;
         }
-        public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Codegen.ofNullable(observedGeneration);
-            return this;
+
+        public Builder observedGeneration(Integer observedGeneration) {
+            return observedGeneration(Output.of(observedGeneration));
         }
+
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
-            this.readyReplicas = readyReplicas;
+            $.readyReplicas = readyReplicas;
             return this;
         }
-        public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Codegen.ofNullable(readyReplicas);
-            return this;
+
+        public Builder readyReplicas(Integer readyReplicas) {
+            return readyReplicas(Output.of(readyReplicas));
         }
+
         public Builder replicas(Output<Integer> replicas) {
-            this.replicas = Objects.requireNonNull(replicas);
+            $.replicas = replicas;
             return this;
         }
+
         public Builder replicas(Integer replicas) {
-            this.replicas = Output.of(Objects.requireNonNull(replicas));
-            return this;
-        }        public ReplicaSetStatusArgs build() {
-            return new ReplicaSetStatusArgs(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
+            return replicas(Output.of(replicas));
+        }
+
+        public ReplicaSetStatusArgs build() {
+            $.replicas = Objects.requireNonNull($.replicas, "expected parameter 'replicas' to be non-null");
+            return $;
         }
     }
+
 }

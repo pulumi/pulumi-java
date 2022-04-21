@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -36,63 +36,58 @@ public final class ServiceBackendPortArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="number")
-      private final @Nullable Output<Integer> number;
+    private @Nullable Output<Integer> number;
 
-    public Output<Integer> number() {
-        return this.number == null ? Codegen.empty() : this.number;
+    public Optional<Output<Integer>> number() {
+        return Optional.ofNullable(this.number);
     }
 
-    public ServiceBackendPortArgs(
-        @Nullable Output<String> name,
-        @Nullable Output<Integer> number) {
-        this.name = name;
-        this.number = number;
-    }
+    private ServiceBackendPortArgs() {}
 
-    private ServiceBackendPortArgs() {
-        this.name = Codegen.empty();
-        this.number = Codegen.empty();
+    private ServiceBackendPortArgs(ServiceBackendPortArgs $) {
+        this.name = $.name;
+        this.number = $.number;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(ServiceBackendPortArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> name;
-        private @Nullable Output<Integer> number;
+        private ServiceBackendPortArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new ServiceBackendPortArgs();
         }
 
         public Builder(ServiceBackendPortArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.number = defaults.number;
+            $ = new ServiceBackendPortArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder number(@Nullable Output<Integer> number) {
-            this.number = number;
+            $.number = number;
             return this;
         }
-        public Builder number(@Nullable Integer number) {
-            this.number = Codegen.ofNullable(number);
-            return this;
-        }        public ServiceBackendPortArgs build() {
-            return new ServiceBackendPortArgs(name, number);
+
+        public Builder number(Integer number) {
+            return number(Output.of(number));
+        }
+
+        public ServiceBackendPortArgs build() {
+            return $;
         }
     }
+
 }

@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="averageUtilization")
-      private final @Nullable Output<Integer> averageUtilization;
+    private @Nullable Output<Integer> averageUtilization;
 
-    public Output<Integer> averageUtilization() {
-        return this.averageUtilization == null ? Codegen.empty() : this.averageUtilization;
+    public Optional<Output<Integer>> averageUtilization() {
+        return Optional.ofNullable(this.averageUtilization);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="averageValue")
-      private final @Nullable Output<String> averageValue;
+    private @Nullable Output<String> averageValue;
 
-    public Output<String> averageValue() {
-        return this.averageValue == null ? Codegen.empty() : this.averageValue;
+    public Optional<Output<String>> averageValue() {
+        return Optional.ofNullable(this.averageValue);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
@@ -58,89 +58,79 @@ public final class MetricTargetArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
-    public MetricTargetArgs(
-        @Nullable Output<Integer> averageUtilization,
-        @Nullable Output<String> averageValue,
-        Output<String> type,
-        @Nullable Output<String> value) {
-        this.averageUtilization = averageUtilization;
-        this.averageValue = averageValue;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-        this.value = value;
-    }
+    private MetricTargetArgs() {}
 
-    private MetricTargetArgs() {
-        this.averageUtilization = Codegen.empty();
-        this.averageValue = Codegen.empty();
-        this.type = Codegen.empty();
-        this.value = Codegen.empty();
+    private MetricTargetArgs(MetricTargetArgs $) {
+        this.averageUtilization = $.averageUtilization;
+        this.averageValue = $.averageValue;
+        this.type = $.type;
+        this.value = $.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(MetricTargetArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Integer> averageUtilization;
-        private @Nullable Output<String> averageValue;
-        private Output<String> type;
-        private @Nullable Output<String> value;
+        private MetricTargetArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new MetricTargetArgs();
         }
 
         public Builder(MetricTargetArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.averageUtilization = defaults.averageUtilization;
-    	      this.averageValue = defaults.averageValue;
-    	      this.type = defaults.type;
-    	      this.value = defaults.value;
+            $ = new MetricTargetArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder averageUtilization(@Nullable Output<Integer> averageUtilization) {
-            this.averageUtilization = averageUtilization;
+            $.averageUtilization = averageUtilization;
             return this;
         }
-        public Builder averageUtilization(@Nullable Integer averageUtilization) {
-            this.averageUtilization = Codegen.ofNullable(averageUtilization);
-            return this;
+
+        public Builder averageUtilization(Integer averageUtilization) {
+            return averageUtilization(Output.of(averageUtilization));
         }
+
         public Builder averageValue(@Nullable Output<String> averageValue) {
-            this.averageValue = averageValue;
+            $.averageValue = averageValue;
             return this;
         }
-        public Builder averageValue(@Nullable String averageValue) {
-            this.averageValue = Codegen.ofNullable(averageValue);
-            return this;
+
+        public Builder averageValue(String averageValue) {
+            return averageValue(Output.of(averageValue));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
+            return type(Output.of(type));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
-        }        public MetricTargetArgs build() {
-            return new MetricTargetArgs(averageUtilization, averageValue, type, value);
+
+        public Builder value(String value) {
+            return value(Output.of(value));
+        }
+
+        public MetricTargetArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

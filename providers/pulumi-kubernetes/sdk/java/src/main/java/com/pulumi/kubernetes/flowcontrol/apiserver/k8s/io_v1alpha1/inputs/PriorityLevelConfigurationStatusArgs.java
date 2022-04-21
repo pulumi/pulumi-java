@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.PriorityLevelConfigurationConditionArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,52 +25,52 @@ public final class PriorityLevelConfigurationStatusArgs extends com.pulumi.resou
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
+    private @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
-    public Output<List<PriorityLevelConfigurationConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<PriorityLevelConfigurationConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
-    public PriorityLevelConfigurationStatusArgs(@Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions) {
-        this.conditions = conditions;
-    }
+    private PriorityLevelConfigurationStatusArgs() {}
 
-    private PriorityLevelConfigurationStatusArgs() {
-        this.conditions = Codegen.empty();
+    private PriorityLevelConfigurationStatusArgs(PriorityLevelConfigurationStatusArgs $) {
+        this.conditions = $.conditions;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PriorityLevelConfigurationStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
+        private PriorityLevelConfigurationStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PriorityLevelConfigurationStatusArgs();
         }
 
         public Builder(PriorityLevelConfigurationStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
+            $ = new PriorityLevelConfigurationStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<PriorityLevelConfigurationConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<PriorityLevelConfigurationConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(PriorityLevelConfigurationConditionArgs... conditions) {
             return conditions(List.of(conditions));
-        }        public PriorityLevelConfigurationStatusArgs build() {
-            return new PriorityLevelConfigurationStatusArgs(conditions);
+        }
+
+        public PriorityLevelConfigurationStatusArgs build() {
+            return $;
         }
     }
+
 }

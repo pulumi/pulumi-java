@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.EnvVarSourceArgs;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -36,10 +36,10 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="value")
-      private final @Nullable Output<String> value;
+    private @Nullable Output<String> value;
 
-    public Output<String> value() {
-        return this.value == null ? Codegen.empty() : this.value;
+    public Optional<Output<String>> value() {
+        return Optional.ofNullable(this.value);
     }
 
     /**
@@ -47,76 +47,69 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="valueFrom")
-      private final @Nullable Output<EnvVarSourceArgs> valueFrom;
+    private @Nullable Output<EnvVarSourceArgs> valueFrom;
 
-    public Output<EnvVarSourceArgs> valueFrom() {
-        return this.valueFrom == null ? Codegen.empty() : this.valueFrom;
+    public Optional<Output<EnvVarSourceArgs>> valueFrom() {
+        return Optional.ofNullable(this.valueFrom);
     }
 
-    public EnvVarArgs(
-        Output<String> name,
-        @Nullable Output<String> value,
-        @Nullable Output<EnvVarSourceArgs> valueFrom) {
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.value = value;
-        this.valueFrom = valueFrom;
-    }
+    private EnvVarArgs() {}
 
-    private EnvVarArgs() {
-        this.name = Codegen.empty();
-        this.value = Codegen.empty();
-        this.valueFrom = Codegen.empty();
+    private EnvVarArgs(EnvVarArgs $) {
+        this.name = $.name;
+        this.value = $.value;
+        this.valueFrom = $.valueFrom;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(EnvVarArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> name;
-        private @Nullable Output<String> value;
-        private @Nullable Output<EnvVarSourceArgs> valueFrom;
+        private EnvVarArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new EnvVarArgs();
         }
 
         public Builder(EnvVarArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.name = defaults.name;
-    	      this.value = defaults.value;
-    	      this.valueFrom = defaults.valueFrom;
+            $ = new EnvVarArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder value(@Nullable Output<String> value) {
-            this.value = value;
+            $.value = value;
             return this;
         }
-        public Builder value(@Nullable String value) {
-            this.value = Codegen.ofNullable(value);
-            return this;
+
+        public Builder value(String value) {
+            return value(Output.of(value));
         }
+
         public Builder valueFrom(@Nullable Output<EnvVarSourceArgs> valueFrom) {
-            this.valueFrom = valueFrom;
+            $.valueFrom = valueFrom;
             return this;
         }
-        public Builder valueFrom(@Nullable EnvVarSourceArgs valueFrom) {
-            this.valueFrom = Codegen.ofNullable(valueFrom);
-            return this;
-        }        public EnvVarArgs build() {
-            return new EnvVarArgs(name, value, valueFrom);
+
+        public Builder valueFrom(EnvVarSourceArgs valueFrom) {
+            return valueFrom(Output.of(valueFrom));
+        }
+
+        public EnvVarArgs build() {
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

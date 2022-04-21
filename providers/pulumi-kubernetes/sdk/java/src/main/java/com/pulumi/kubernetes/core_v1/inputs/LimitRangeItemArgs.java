@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="default")
-      private final @Nullable Output<Map<String,String>> default_;
+    private @Nullable Output<Map<String,String>> default_;
 
-    public Output<Map<String,String>> default_() {
-        return this.default_ == null ? Codegen.empty() : this.default_;
+    public Optional<Output<Map<String,String>>> default_() {
+        return Optional.ofNullable(this.default_);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="defaultRequest")
-      private final @Nullable Output<Map<String,String>> defaultRequest;
+    private @Nullable Output<Map<String,String>> defaultRequest;
 
-    public Output<Map<String,String>> defaultRequest() {
-        return this.defaultRequest == null ? Codegen.empty() : this.defaultRequest;
+    public Optional<Output<Map<String,String>>> defaultRequest() {
+        return Optional.ofNullable(this.defaultRequest);
     }
 
     /**
@@ -47,10 +47,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="max")
-      private final @Nullable Output<Map<String,String>> max;
+    private @Nullable Output<Map<String,String>> max;
 
-    public Output<Map<String,String>> max() {
-        return this.max == null ? Codegen.empty() : this.max;
+    public Optional<Output<Map<String,String>>> max() {
+        return Optional.ofNullable(this.max);
     }
 
     /**
@@ -58,10 +58,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="maxLimitRequestRatio")
-      private final @Nullable Output<Map<String,String>> maxLimitRequestRatio;
+    private @Nullable Output<Map<String,String>> maxLimitRequestRatio;
 
-    public Output<Map<String,String>> maxLimitRequestRatio() {
-        return this.maxLimitRequestRatio == null ? Codegen.empty() : this.maxLimitRequestRatio;
+    public Optional<Output<Map<String,String>>> maxLimitRequestRatio() {
+        return Optional.ofNullable(this.maxLimitRequestRatio);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="min")
-      private final @Nullable Output<Map<String,String>> min;
+    private @Nullable Output<Map<String,String>> min;
 
-    public Output<Map<String,String>> min() {
-        return this.min == null ? Codegen.empty() : this.min;
+    public Optional<Output<Map<String,String>>> min() {
+        return Optional.ofNullable(this.min);
     }
 
     /**
@@ -85,115 +85,99 @@ public final class LimitRangeItemArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="type", required=true)
-      private final Output<String> type;
+    private Output<String> type;
 
     public Output<String> type() {
         return this.type;
     }
 
-    public LimitRangeItemArgs(
-        @Nullable Output<Map<String,String>> default_,
-        @Nullable Output<Map<String,String>> defaultRequest,
-        @Nullable Output<Map<String,String>> max,
-        @Nullable Output<Map<String,String>> maxLimitRequestRatio,
-        @Nullable Output<Map<String,String>> min,
-        Output<String> type) {
-        this.default_ = default_;
-        this.defaultRequest = defaultRequest;
-        this.max = max;
-        this.maxLimitRequestRatio = maxLimitRequestRatio;
-        this.min = min;
-        this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
-    }
+    private LimitRangeItemArgs() {}
 
-    private LimitRangeItemArgs() {
-        this.default_ = Codegen.empty();
-        this.defaultRequest = Codegen.empty();
-        this.max = Codegen.empty();
-        this.maxLimitRequestRatio = Codegen.empty();
-        this.min = Codegen.empty();
-        this.type = Codegen.empty();
+    private LimitRangeItemArgs(LimitRangeItemArgs $) {
+        this.default_ = $.default_;
+        this.defaultRequest = $.defaultRequest;
+        this.max = $.max;
+        this.maxLimitRequestRatio = $.maxLimitRequestRatio;
+        this.min = $.min;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(LimitRangeItemArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> default_;
-        private @Nullable Output<Map<String,String>> defaultRequest;
-        private @Nullable Output<Map<String,String>> max;
-        private @Nullable Output<Map<String,String>> maxLimitRequestRatio;
-        private @Nullable Output<Map<String,String>> min;
-        private Output<String> type;
+        private LimitRangeItemArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new LimitRangeItemArgs();
         }
 
         public Builder(LimitRangeItemArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.default_ = defaults.default_;
-    	      this.defaultRequest = defaults.defaultRequest;
-    	      this.max = defaults.max;
-    	      this.maxLimitRequestRatio = defaults.maxLimitRequestRatio;
-    	      this.min = defaults.min;
-    	      this.type = defaults.type;
+            $ = new LimitRangeItemArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder default_(@Nullable Output<Map<String,String>> default_) {
-            this.default_ = default_;
+            $.default_ = default_;
             return this;
         }
-        public Builder default_(@Nullable Map<String,String> default_) {
-            this.default_ = Codegen.ofNullable(default_);
-            return this;
+
+        public Builder default_(Map<String,String> default_) {
+            return default_(Output.of(default_));
         }
+
         public Builder defaultRequest(@Nullable Output<Map<String,String>> defaultRequest) {
-            this.defaultRequest = defaultRequest;
+            $.defaultRequest = defaultRequest;
             return this;
         }
-        public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
-            this.defaultRequest = Codegen.ofNullable(defaultRequest);
-            return this;
+
+        public Builder defaultRequest(Map<String,String> defaultRequest) {
+            return defaultRequest(Output.of(defaultRequest));
         }
+
         public Builder max(@Nullable Output<Map<String,String>> max) {
-            this.max = max;
+            $.max = max;
             return this;
         }
-        public Builder max(@Nullable Map<String,String> max) {
-            this.max = Codegen.ofNullable(max);
-            return this;
+
+        public Builder max(Map<String,String> max) {
+            return max(Output.of(max));
         }
+
         public Builder maxLimitRequestRatio(@Nullable Output<Map<String,String>> maxLimitRequestRatio) {
-            this.maxLimitRequestRatio = maxLimitRequestRatio;
+            $.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
-        public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
-            this.maxLimitRequestRatio = Codegen.ofNullable(maxLimitRequestRatio);
-            return this;
+
+        public Builder maxLimitRequestRatio(Map<String,String> maxLimitRequestRatio) {
+            return maxLimitRequestRatio(Output.of(maxLimitRequestRatio));
         }
+
         public Builder min(@Nullable Output<Map<String,String>> min) {
-            this.min = min;
+            $.min = min;
             return this;
         }
-        public Builder min(@Nullable Map<String,String> min) {
-            this.min = Codegen.ofNullable(min);
-            return this;
+
+        public Builder min(Map<String,String> min) {
+            return min(Output.of(min));
         }
+
         public Builder type(Output<String> type) {
-            this.type = Objects.requireNonNull(type);
+            $.type = type;
             return this;
         }
+
         public Builder type(String type) {
-            this.type = Output.of(Objects.requireNonNull(type));
-            return this;
-        }        public LimitRangeItemArgs build() {
-            return new LimitRangeItemArgs(default_, defaultRequest, max, maxLimitRequestRatio, min, type);
+            return type(Output.of(type));
+        }
+
+        public LimitRangeItemArgs build() {
+            $.type = Objects.requireNonNull($.type, "expected parameter 'type' to be non-null");
+            return $;
         }
     }
+
 }

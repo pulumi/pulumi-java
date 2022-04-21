@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="architecture", required=true)
-      private final Output<String> architecture;
+    private Output<String> architecture;
 
     public Output<String> architecture() {
         return this.architecture;
@@ -34,7 +33,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="bootID", required=true)
-      private final Output<String> bootID;
+    private Output<String> bootID;
 
     public Output<String> bootID() {
         return this.bootID;
@@ -45,7 +44,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="containerRuntimeVersion", required=true)
-      private final Output<String> containerRuntimeVersion;
+    private Output<String> containerRuntimeVersion;
 
     public Output<String> containerRuntimeVersion() {
         return this.containerRuntimeVersion;
@@ -56,7 +55,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kernelVersion", required=true)
-      private final Output<String> kernelVersion;
+    private Output<String> kernelVersion;
 
     public Output<String> kernelVersion() {
         return this.kernelVersion;
@@ -67,7 +66,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kubeProxyVersion", required=true)
-      private final Output<String> kubeProxyVersion;
+    private Output<String> kubeProxyVersion;
 
     public Output<String> kubeProxyVersion() {
         return this.kubeProxyVersion;
@@ -78,7 +77,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="kubeletVersion", required=true)
-      private final Output<String> kubeletVersion;
+    private Output<String> kubeletVersion;
 
     public Output<String> kubeletVersion() {
         return this.kubeletVersion;
@@ -89,7 +88,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="machineID", required=true)
-      private final Output<String> machineID;
+    private Output<String> machineID;
 
     public Output<String> machineID() {
         return this.machineID;
@@ -100,7 +99,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="operatingSystem", required=true)
-      private final Output<String> operatingSystem;
+    private Output<String> operatingSystem;
 
     public Output<String> operatingSystem() {
         return this.operatingSystem;
@@ -111,7 +110,7 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="osImage", required=true)
-      private final Output<String> osImage;
+    private Output<String> osImage;
 
     public Output<String> osImage() {
         return this.osImage;
@@ -122,167 +121,148 @@ public final class NodeSystemInfoArgs extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="systemUUID", required=true)
-      private final Output<String> systemUUID;
+    private Output<String> systemUUID;
 
     public Output<String> systemUUID() {
         return this.systemUUID;
     }
 
-    public NodeSystemInfoArgs(
-        Output<String> architecture,
-        Output<String> bootID,
-        Output<String> containerRuntimeVersion,
-        Output<String> kernelVersion,
-        Output<String> kubeProxyVersion,
-        Output<String> kubeletVersion,
-        Output<String> machineID,
-        Output<String> operatingSystem,
-        Output<String> osImage,
-        Output<String> systemUUID) {
-        this.architecture = Objects.requireNonNull(architecture, "expected parameter 'architecture' to be non-null");
-        this.bootID = Objects.requireNonNull(bootID, "expected parameter 'bootID' to be non-null");
-        this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion, "expected parameter 'containerRuntimeVersion' to be non-null");
-        this.kernelVersion = Objects.requireNonNull(kernelVersion, "expected parameter 'kernelVersion' to be non-null");
-        this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion, "expected parameter 'kubeProxyVersion' to be non-null");
-        this.kubeletVersion = Objects.requireNonNull(kubeletVersion, "expected parameter 'kubeletVersion' to be non-null");
-        this.machineID = Objects.requireNonNull(machineID, "expected parameter 'machineID' to be non-null");
-        this.operatingSystem = Objects.requireNonNull(operatingSystem, "expected parameter 'operatingSystem' to be non-null");
-        this.osImage = Objects.requireNonNull(osImage, "expected parameter 'osImage' to be non-null");
-        this.systemUUID = Objects.requireNonNull(systemUUID, "expected parameter 'systemUUID' to be non-null");
-    }
+    private NodeSystemInfoArgs() {}
 
-    private NodeSystemInfoArgs() {
-        this.architecture = Codegen.empty();
-        this.bootID = Codegen.empty();
-        this.containerRuntimeVersion = Codegen.empty();
-        this.kernelVersion = Codegen.empty();
-        this.kubeProxyVersion = Codegen.empty();
-        this.kubeletVersion = Codegen.empty();
-        this.machineID = Codegen.empty();
-        this.operatingSystem = Codegen.empty();
-        this.osImage = Codegen.empty();
-        this.systemUUID = Codegen.empty();
+    private NodeSystemInfoArgs(NodeSystemInfoArgs $) {
+        this.architecture = $.architecture;
+        this.bootID = $.bootID;
+        this.containerRuntimeVersion = $.containerRuntimeVersion;
+        this.kernelVersion = $.kernelVersion;
+        this.kubeProxyVersion = $.kubeProxyVersion;
+        this.kubeletVersion = $.kubeletVersion;
+        this.machineID = $.machineID;
+        this.operatingSystem = $.operatingSystem;
+        this.osImage = $.osImage;
+        this.systemUUID = $.systemUUID;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NodeSystemInfoArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> architecture;
-        private Output<String> bootID;
-        private Output<String> containerRuntimeVersion;
-        private Output<String> kernelVersion;
-        private Output<String> kubeProxyVersion;
-        private Output<String> kubeletVersion;
-        private Output<String> machineID;
-        private Output<String> operatingSystem;
-        private Output<String> osImage;
-        private Output<String> systemUUID;
+        private NodeSystemInfoArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NodeSystemInfoArgs();
         }
 
         public Builder(NodeSystemInfoArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.architecture = defaults.architecture;
-    	      this.bootID = defaults.bootID;
-    	      this.containerRuntimeVersion = defaults.containerRuntimeVersion;
-    	      this.kernelVersion = defaults.kernelVersion;
-    	      this.kubeProxyVersion = defaults.kubeProxyVersion;
-    	      this.kubeletVersion = defaults.kubeletVersion;
-    	      this.machineID = defaults.machineID;
-    	      this.operatingSystem = defaults.operatingSystem;
-    	      this.osImage = defaults.osImage;
-    	      this.systemUUID = defaults.systemUUID;
+            $ = new NodeSystemInfoArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder architecture(Output<String> architecture) {
-            this.architecture = Objects.requireNonNull(architecture);
+            $.architecture = architecture;
             return this;
         }
+
         public Builder architecture(String architecture) {
-            this.architecture = Output.of(Objects.requireNonNull(architecture));
-            return this;
+            return architecture(Output.of(architecture));
         }
+
         public Builder bootID(Output<String> bootID) {
-            this.bootID = Objects.requireNonNull(bootID);
+            $.bootID = bootID;
             return this;
         }
+
         public Builder bootID(String bootID) {
-            this.bootID = Output.of(Objects.requireNonNull(bootID));
-            return this;
+            return bootID(Output.of(bootID));
         }
+
         public Builder containerRuntimeVersion(Output<String> containerRuntimeVersion) {
-            this.containerRuntimeVersion = Objects.requireNonNull(containerRuntimeVersion);
+            $.containerRuntimeVersion = containerRuntimeVersion;
             return this;
         }
+
         public Builder containerRuntimeVersion(String containerRuntimeVersion) {
-            this.containerRuntimeVersion = Output.of(Objects.requireNonNull(containerRuntimeVersion));
-            return this;
+            return containerRuntimeVersion(Output.of(containerRuntimeVersion));
         }
+
         public Builder kernelVersion(Output<String> kernelVersion) {
-            this.kernelVersion = Objects.requireNonNull(kernelVersion);
+            $.kernelVersion = kernelVersion;
             return this;
         }
+
         public Builder kernelVersion(String kernelVersion) {
-            this.kernelVersion = Output.of(Objects.requireNonNull(kernelVersion));
-            return this;
+            return kernelVersion(Output.of(kernelVersion));
         }
+
         public Builder kubeProxyVersion(Output<String> kubeProxyVersion) {
-            this.kubeProxyVersion = Objects.requireNonNull(kubeProxyVersion);
+            $.kubeProxyVersion = kubeProxyVersion;
             return this;
         }
+
         public Builder kubeProxyVersion(String kubeProxyVersion) {
-            this.kubeProxyVersion = Output.of(Objects.requireNonNull(kubeProxyVersion));
-            return this;
+            return kubeProxyVersion(Output.of(kubeProxyVersion));
         }
+
         public Builder kubeletVersion(Output<String> kubeletVersion) {
-            this.kubeletVersion = Objects.requireNonNull(kubeletVersion);
+            $.kubeletVersion = kubeletVersion;
             return this;
         }
+
         public Builder kubeletVersion(String kubeletVersion) {
-            this.kubeletVersion = Output.of(Objects.requireNonNull(kubeletVersion));
-            return this;
+            return kubeletVersion(Output.of(kubeletVersion));
         }
+
         public Builder machineID(Output<String> machineID) {
-            this.machineID = Objects.requireNonNull(machineID);
+            $.machineID = machineID;
             return this;
         }
+
         public Builder machineID(String machineID) {
-            this.machineID = Output.of(Objects.requireNonNull(machineID));
-            return this;
+            return machineID(Output.of(machineID));
         }
+
         public Builder operatingSystem(Output<String> operatingSystem) {
-            this.operatingSystem = Objects.requireNonNull(operatingSystem);
+            $.operatingSystem = operatingSystem;
             return this;
         }
+
         public Builder operatingSystem(String operatingSystem) {
-            this.operatingSystem = Output.of(Objects.requireNonNull(operatingSystem));
-            return this;
+            return operatingSystem(Output.of(operatingSystem));
         }
+
         public Builder osImage(Output<String> osImage) {
-            this.osImage = Objects.requireNonNull(osImage);
+            $.osImage = osImage;
             return this;
         }
+
         public Builder osImage(String osImage) {
-            this.osImage = Output.of(Objects.requireNonNull(osImage));
-            return this;
+            return osImage(Output.of(osImage));
         }
+
         public Builder systemUUID(Output<String> systemUUID) {
-            this.systemUUID = Objects.requireNonNull(systemUUID);
+            $.systemUUID = systemUUID;
             return this;
         }
+
         public Builder systemUUID(String systemUUID) {
-            this.systemUUID = Output.of(Objects.requireNonNull(systemUUID));
-            return this;
-        }        public NodeSystemInfoArgs build() {
-            return new NodeSystemInfoArgs(architecture, bootID, containerRuntimeVersion, kernelVersion, kubeProxyVersion, kubeletVersion, machineID, operatingSystem, osImage, systemUUID);
+            return systemUUID(Output.of(systemUUID));
+        }
+
+        public NodeSystemInfoArgs build() {
+            $.architecture = Objects.requireNonNull($.architecture, "expected parameter 'architecture' to be non-null");
+            $.bootID = Objects.requireNonNull($.bootID, "expected parameter 'bootID' to be non-null");
+            $.containerRuntimeVersion = Objects.requireNonNull($.containerRuntimeVersion, "expected parameter 'containerRuntimeVersion' to be non-null");
+            $.kernelVersion = Objects.requireNonNull($.kernelVersion, "expected parameter 'kernelVersion' to be non-null");
+            $.kubeProxyVersion = Objects.requireNonNull($.kubeProxyVersion, "expected parameter 'kubeProxyVersion' to be non-null");
+            $.kubeletVersion = Objects.requireNonNull($.kubeletVersion, "expected parameter 'kubeletVersion' to be non-null");
+            $.machineID = Objects.requireNonNull($.machineID, "expected parameter 'machineID' to be non-null");
+            $.operatingSystem = Objects.requireNonNull($.operatingSystem, "expected parameter 'operatingSystem' to be non-null");
+            $.osImage = Objects.requireNonNull($.osImage, "expected parameter 'osImage' to be non-null");
+            $.systemUUID = Objects.requireNonNull($.systemUUID, "expected parameter 'systemUUID' to be non-null");
+            return $;
         }
     }
+
 }

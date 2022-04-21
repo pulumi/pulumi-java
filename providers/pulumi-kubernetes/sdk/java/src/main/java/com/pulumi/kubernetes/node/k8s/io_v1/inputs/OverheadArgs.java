@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.node.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class OverheadArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podFixed")
-      private final @Nullable Output<Map<String,String>> podFixed;
+    private @Nullable Output<Map<String,String>> podFixed;
 
-    public Output<Map<String,String>> podFixed() {
-        return this.podFixed == null ? Codegen.empty() : this.podFixed;
+    public Optional<Output<Map<String,String>>> podFixed() {
+        return Optional.ofNullable(this.podFixed);
     }
 
-    public OverheadArgs(@Nullable Output<Map<String,String>> podFixed) {
-        this.podFixed = podFixed;
-    }
+    private OverheadArgs() {}
 
-    private OverheadArgs() {
-        this.podFixed = Codegen.empty();
+    private OverheadArgs(OverheadArgs $) {
+        this.podFixed = $.podFixed;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(OverheadArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Map<String,String>> podFixed;
+        private OverheadArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new OverheadArgs();
         }
 
         public Builder(OverheadArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.podFixed = defaults.podFixed;
+            $ = new OverheadArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder podFixed(@Nullable Output<Map<String,String>> podFixed) {
-            this.podFixed = podFixed;
+            $.podFixed = podFixed;
             return this;
         }
-        public Builder podFixed(@Nullable Map<String,String> podFixed) {
-            this.podFixed = Codegen.ofNullable(podFixed);
-            return this;
-        }        public OverheadArgs build() {
-            return new OverheadArgs(podFixed);
+
+        public Builder podFixed(Map<String,String> podFixed) {
+            return podFixed(Output.of(podFixed));
+        }
+
+        public OverheadArgs build() {
+            return $;
         }
     }
+
 }

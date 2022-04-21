@@ -5,7 +5,6 @@ package com.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +22,7 @@ public final class RoleRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiGroup", required=true)
-      private final Output<String> apiGroup;
+    private Output<String> apiGroup;
 
     public Output<String> apiGroup() {
         return this.apiGroup;
@@ -34,7 +33,7 @@ public final class RoleRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -45,76 +44,71 @@ public final class RoleRefArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
     }
 
-    public RoleRefArgs(
-        Output<String> apiGroup,
-        Output<String> kind,
-        Output<String> name) {
-        this.apiGroup = Objects.requireNonNull(apiGroup, "expected parameter 'apiGroup' to be non-null");
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-    }
+    private RoleRefArgs() {}
 
-    private RoleRefArgs() {
-        this.apiGroup = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
+    private RoleRefArgs(RoleRefArgs $) {
+        this.apiGroup = $.apiGroup;
+        this.kind = $.kind;
+        this.name = $.name;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(RoleRefArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> apiGroup;
-        private Output<String> kind;
-        private Output<String> name;
+        private RoleRefArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new RoleRefArgs();
         }
 
         public Builder(RoleRefArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiGroup = defaults.apiGroup;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
+            $ = new RoleRefArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiGroup(Output<String> apiGroup) {
-            this.apiGroup = Objects.requireNonNull(apiGroup);
+            $.apiGroup = apiGroup;
             return this;
         }
+
         public Builder apiGroup(String apiGroup) {
-            this.apiGroup = Output.of(Objects.requireNonNull(apiGroup));
-            return this;
+            return apiGroup(Output.of(apiGroup));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
-        }        public RoleRefArgs build() {
-            return new RoleRefArgs(apiGroup, kind, name);
+            return name(Output.of(name));
+        }
+
+        public RoleRefArgs build() {
+            $.apiGroup = Objects.requireNonNull($.apiGroup, "expected parameter 'apiGroup' to be non-null");
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

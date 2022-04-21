@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -35,10 +35,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -46,10 +46,10 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="name")
-      private final @Nullable Output<String> name;
+    private @Nullable Output<String> name;
 
-    public Output<String> name() {
-        return this.name == null ? Codegen.empty() : this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -57,89 +57,78 @@ public final class BoundObjectReferenceArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="uid")
-      private final @Nullable Output<String> uid;
+    private @Nullable Output<String> uid;
 
-    public Output<String> uid() {
-        return this.uid == null ? Codegen.empty() : this.uid;
+    public Optional<Output<String>> uid() {
+        return Optional.ofNullable(this.uid);
     }
 
-    public BoundObjectReferenceArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> kind,
-        @Nullable Output<String> name,
-        @Nullable Output<String> uid) {
-        this.apiVersion = apiVersion;
-        this.kind = kind;
-        this.name = name;
-        this.uid = uid;
-    }
+    private BoundObjectReferenceArgs() {}
 
-    private BoundObjectReferenceArgs() {
-        this.apiVersion = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.uid = Codegen.empty();
+    private BoundObjectReferenceArgs(BoundObjectReferenceArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.uid = $.uid;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(BoundObjectReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<String> name;
-        private @Nullable Output<String> uid;
+        private BoundObjectReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new BoundObjectReferenceArgs();
         }
 
         public Builder(BoundObjectReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.uid = defaults.uid;
+            $ = new BoundObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder name(@Nullable Output<String> name) {
-            this.name = name;
+            $.name = name;
             return this;
         }
-        public Builder name(@Nullable String name) {
-            this.name = Codegen.ofNullable(name);
-            return this;
+
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
+
         public Builder uid(@Nullable Output<String> uid) {
-            this.uid = uid;
+            $.uid = uid;
             return this;
         }
-        public Builder uid(@Nullable String uid) {
-            this.uid = Codegen.ofNullable(uid);
-            return this;
-        }        public BoundObjectReferenceArgs build() {
-            return new BoundObjectReferenceArgs(apiVersion, kind, name, uid);
+
+        public Builder uid(String uid) {
+            return uid(Output.of(uid));
+        }
+
+        public BoundObjectReferenceArgs build() {
+            return $;
         }
     }
+
 }

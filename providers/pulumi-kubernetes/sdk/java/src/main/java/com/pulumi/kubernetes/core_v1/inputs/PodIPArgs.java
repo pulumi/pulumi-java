@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,49 +25,48 @@ public final class PodIPArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ip")
-      private final @Nullable Output<String> ip;
+    private @Nullable Output<String> ip;
 
-    public Output<String> ip() {
-        return this.ip == null ? Codegen.empty() : this.ip;
+    public Optional<Output<String>> ip() {
+        return Optional.ofNullable(this.ip);
     }
 
-    public PodIPArgs(@Nullable Output<String> ip) {
-        this.ip = ip;
-    }
+    private PodIPArgs() {}
 
-    private PodIPArgs() {
-        this.ip = Codegen.empty();
+    private PodIPArgs(PodIPArgs $) {
+        this.ip = $.ip;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodIPArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> ip;
+        private PodIPArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodIPArgs();
         }
 
         public Builder(PodIPArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.ip = defaults.ip;
+            $ = new PodIPArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder ip(@Nullable Output<String> ip) {
-            this.ip = ip;
+            $.ip = ip;
             return this;
         }
-        public Builder ip(@Nullable String ip) {
-            this.ip = Codegen.ofNullable(ip);
-            return this;
-        }        public PodIPArgs build() {
-            return new PodIPArgs(ip);
+
+        public Builder ip(String ip) {
+            return ip(Output.of(ip));
+        }
+
+        public PodIPArgs build() {
+            return $;
         }
     }
+
 }

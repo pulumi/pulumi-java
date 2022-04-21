@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,7 +25,7 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="claimName", required=true)
-      private final Output<String> claimName;
+    private Output<String> claimName;
 
     public Output<String> claimName() {
         return this.claimName;
@@ -36,63 +36,59 @@ public final class PersistentVolumeClaimVolumeSourceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
-    public PersistentVolumeClaimVolumeSourceArgs(
-        Output<String> claimName,
-        @Nullable Output<Boolean> readOnly) {
-        this.claimName = Objects.requireNonNull(claimName, "expected parameter 'claimName' to be non-null");
-        this.readOnly = readOnly;
-    }
+    private PersistentVolumeClaimVolumeSourceArgs() {}
 
-    private PersistentVolumeClaimVolumeSourceArgs() {
-        this.claimName = Codegen.empty();
-        this.readOnly = Codegen.empty();
+    private PersistentVolumeClaimVolumeSourceArgs(PersistentVolumeClaimVolumeSourceArgs $) {
+        this.claimName = $.claimName;
+        this.readOnly = $.readOnly;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PersistentVolumeClaimVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private Output<String> claimName;
-        private @Nullable Output<Boolean> readOnly;
+        private PersistentVolumeClaimVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PersistentVolumeClaimVolumeSourceArgs();
         }
 
         public Builder(PersistentVolumeClaimVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.claimName = defaults.claimName;
-    	      this.readOnly = defaults.readOnly;
+            $ = new PersistentVolumeClaimVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder claimName(Output<String> claimName) {
-            this.claimName = Objects.requireNonNull(claimName);
+            $.claimName = claimName;
             return this;
         }
+
         public Builder claimName(String claimName) {
-            this.claimName = Output.of(Objects.requireNonNull(claimName));
-            return this;
+            return claimName(Output.of(claimName));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
-        }        public PersistentVolumeClaimVolumeSourceArgs build() {
-            return new PersistentVolumeClaimVolumeSourceArgs(claimName, readOnly);
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
+        }
+
+        public PersistentVolumeClaimVolumeSourceArgs build() {
+            $.claimName = Objects.requireNonNull($.claimName, "expected parameter 'claimName' to be non-null");
+            return $;
         }
     }
+
 }

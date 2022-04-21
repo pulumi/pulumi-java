@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPeerArgs;
 import com.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyPortArgs;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class NetworkPolicyIngressRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="from")
-      private final @Nullable Output<List<NetworkPolicyPeerArgs>> from;
+    private @Nullable Output<List<NetworkPolicyPeerArgs>> from;
 
-    public Output<List<NetworkPolicyPeerArgs>> from() {
-        return this.from == null ? Codegen.empty() : this.from;
+    public Optional<Output<List<NetworkPolicyPeerArgs>>> from() {
+        return Optional.ofNullable(this.from);
     }
 
     /**
@@ -37,69 +37,66 @@ public final class NetworkPolicyIngressRuleArgs extends com.pulumi.resources.Res
      * 
      */
     @Import(name="ports")
-      private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
+    private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
-    public Output<List<NetworkPolicyPortArgs>> ports() {
-        return this.ports == null ? Codegen.empty() : this.ports;
+    public Optional<Output<List<NetworkPolicyPortArgs>>> ports() {
+        return Optional.ofNullable(this.ports);
     }
 
-    public NetworkPolicyIngressRuleArgs(
-        @Nullable Output<List<NetworkPolicyPeerArgs>> from,
-        @Nullable Output<List<NetworkPolicyPortArgs>> ports) {
-        this.from = from;
-        this.ports = ports;
-    }
+    private NetworkPolicyIngressRuleArgs() {}
 
-    private NetworkPolicyIngressRuleArgs() {
-        this.from = Codegen.empty();
-        this.ports = Codegen.empty();
+    private NetworkPolicyIngressRuleArgs(NetworkPolicyIngressRuleArgs $) {
+        this.from = $.from;
+        this.ports = $.ports;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(NetworkPolicyIngressRuleArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<NetworkPolicyPeerArgs>> from;
-        private @Nullable Output<List<NetworkPolicyPortArgs>> ports;
+        private NetworkPolicyIngressRuleArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new NetworkPolicyIngressRuleArgs();
         }
 
         public Builder(NetworkPolicyIngressRuleArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.from = defaults.from;
-    	      this.ports = defaults.ports;
+            $ = new NetworkPolicyIngressRuleArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder from(@Nullable Output<List<NetworkPolicyPeerArgs>> from) {
-            this.from = from;
+            $.from = from;
             return this;
         }
-        public Builder from(@Nullable List<NetworkPolicyPeerArgs> from) {
-            this.from = Codegen.ofNullable(from);
-            return this;
+
+        public Builder from(List<NetworkPolicyPeerArgs> from) {
+            return from(Output.of(from));
         }
+
         public Builder from(NetworkPolicyPeerArgs... from) {
             return from(List.of(from));
         }
+
         public Builder ports(@Nullable Output<List<NetworkPolicyPortArgs>> ports) {
-            this.ports = ports;
+            $.ports = ports;
             return this;
         }
-        public Builder ports(@Nullable List<NetworkPolicyPortArgs> ports) {
-            this.ports = Codegen.ofNullable(ports);
-            return this;
+
+        public Builder ports(List<NetworkPolicyPortArgs> ports) {
+            return ports(Output.of(ports));
         }
+
         public Builder ports(NetworkPolicyPortArgs... ports) {
             return ports(List.of(ports));
-        }        public NetworkPolicyIngressRuleArgs build() {
-            return new NetworkPolicyIngressRuleArgs(from, ports);
+        }
+
+        public NetworkPolicyIngressRuleArgs build() {
+            return $;
         }
     }
+
 }

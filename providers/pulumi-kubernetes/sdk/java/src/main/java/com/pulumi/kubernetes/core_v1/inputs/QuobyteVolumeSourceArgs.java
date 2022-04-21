@@ -5,10 +5,10 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +25,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="group")
-      private final @Nullable Output<String> group;
+    private @Nullable Output<String> group;
 
-    public Output<String> group() {
-        return this.group == null ? Codegen.empty() : this.group;
+    public Optional<Output<String>> group() {
+        return Optional.ofNullable(this.group);
     }
 
     /**
@@ -36,10 +36,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="readOnly")
-      private final @Nullable Output<Boolean> readOnly;
+    private @Nullable Output<Boolean> readOnly;
 
-    public Output<Boolean> readOnly() {
-        return this.readOnly == null ? Codegen.empty() : this.readOnly;
+    public Optional<Output<Boolean>> readOnly() {
+        return Optional.ofNullable(this.readOnly);
     }
 
     /**
@@ -47,7 +47,7 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="registry", required=true)
-      private final Output<String> registry;
+    private Output<String> registry;
 
     public Output<String> registry() {
         return this.registry;
@@ -58,10 +58,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="tenant")
-      private final @Nullable Output<String> tenant;
+    private @Nullable Output<String> tenant;
 
-    public Output<String> tenant() {
-        return this.tenant == null ? Codegen.empty() : this.tenant;
+    public Optional<Output<String>> tenant() {
+        return Optional.ofNullable(this.tenant);
     }
 
     /**
@@ -69,10 +69,10 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="user")
-      private final @Nullable Output<String> user;
+    private @Nullable Output<String> user;
 
-    public Output<String> user() {
-        return this.user == null ? Codegen.empty() : this.user;
+    public Optional<Output<String>> user() {
+        return Optional.ofNullable(this.user);
     }
 
     /**
@@ -80,115 +80,100 @@ public final class QuobyteVolumeSourceArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="volume", required=true)
-      private final Output<String> volume;
+    private Output<String> volume;
 
     public Output<String> volume() {
         return this.volume;
     }
 
-    public QuobyteVolumeSourceArgs(
-        @Nullable Output<String> group,
-        @Nullable Output<Boolean> readOnly,
-        Output<String> registry,
-        @Nullable Output<String> tenant,
-        @Nullable Output<String> user,
-        Output<String> volume) {
-        this.group = group;
-        this.readOnly = readOnly;
-        this.registry = Objects.requireNonNull(registry, "expected parameter 'registry' to be non-null");
-        this.tenant = tenant;
-        this.user = user;
-        this.volume = Objects.requireNonNull(volume, "expected parameter 'volume' to be non-null");
-    }
+    private QuobyteVolumeSourceArgs() {}
 
-    private QuobyteVolumeSourceArgs() {
-        this.group = Codegen.empty();
-        this.readOnly = Codegen.empty();
-        this.registry = Codegen.empty();
-        this.tenant = Codegen.empty();
-        this.user = Codegen.empty();
-        this.volume = Codegen.empty();
+    private QuobyteVolumeSourceArgs(QuobyteVolumeSourceArgs $) {
+        this.group = $.group;
+        this.readOnly = $.readOnly;
+        this.registry = $.registry;
+        this.tenant = $.tenant;
+        this.user = $.user;
+        this.volume = $.volume;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(QuobyteVolumeSourceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> group;
-        private @Nullable Output<Boolean> readOnly;
-        private Output<String> registry;
-        private @Nullable Output<String> tenant;
-        private @Nullable Output<String> user;
-        private Output<String> volume;
+        private QuobyteVolumeSourceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new QuobyteVolumeSourceArgs();
         }
 
         public Builder(QuobyteVolumeSourceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.group = defaults.group;
-    	      this.readOnly = defaults.readOnly;
-    	      this.registry = defaults.registry;
-    	      this.tenant = defaults.tenant;
-    	      this.user = defaults.user;
-    	      this.volume = defaults.volume;
+            $ = new QuobyteVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder group(@Nullable Output<String> group) {
-            this.group = group;
+            $.group = group;
             return this;
         }
-        public Builder group(@Nullable String group) {
-            this.group = Codegen.ofNullable(group);
-            return this;
+
+        public Builder group(String group) {
+            return group(Output.of(group));
         }
+
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
-            this.readOnly = readOnly;
+            $.readOnly = readOnly;
             return this;
         }
-        public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Codegen.ofNullable(readOnly);
-            return this;
+
+        public Builder readOnly(Boolean readOnly) {
+            return readOnly(Output.of(readOnly));
         }
+
         public Builder registry(Output<String> registry) {
-            this.registry = Objects.requireNonNull(registry);
+            $.registry = registry;
             return this;
         }
+
         public Builder registry(String registry) {
-            this.registry = Output.of(Objects.requireNonNull(registry));
-            return this;
+            return registry(Output.of(registry));
         }
+
         public Builder tenant(@Nullable Output<String> tenant) {
-            this.tenant = tenant;
+            $.tenant = tenant;
             return this;
         }
-        public Builder tenant(@Nullable String tenant) {
-            this.tenant = Codegen.ofNullable(tenant);
-            return this;
+
+        public Builder tenant(String tenant) {
+            return tenant(Output.of(tenant));
         }
+
         public Builder user(@Nullable Output<String> user) {
-            this.user = user;
+            $.user = user;
             return this;
         }
-        public Builder user(@Nullable String user) {
-            this.user = Codegen.ofNullable(user);
-            return this;
+
+        public Builder user(String user) {
+            return user(Output.of(user));
         }
+
         public Builder volume(Output<String> volume) {
-            this.volume = Objects.requireNonNull(volume);
+            $.volume = volume;
             return this;
         }
+
         public Builder volume(String volume) {
-            this.volume = Output.of(Objects.requireNonNull(volume));
-            return this;
-        }        public QuobyteVolumeSourceArgs build() {
-            return new QuobyteVolumeSourceArgs(group, readOnly, registry, tenant, user, volume);
+            return volume(Output.of(volume));
+        }
+
+        public QuobyteVolumeSourceArgs build() {
+            $.registry = Objects.requireNonNull($.registry, "expected parameter 'registry' to be non-null");
+            $.volume = Objects.requireNonNull($.volume, "expected parameter 'volume' to be non-null");
+            return $;
         }
     }
+
 }

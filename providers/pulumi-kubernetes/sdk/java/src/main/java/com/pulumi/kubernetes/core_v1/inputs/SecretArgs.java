@@ -11,6 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -37,10 +38,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -48,10 +49,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="data")
-      private final @Nullable Output<Map<String,String>> data;
+    private @Nullable Output<Map<String,String>> data;
 
-    public Output<Map<String,String>> data() {
-        return this.data == null ? Codegen.empty() : this.data;
+    public Optional<Output<Map<String,String>>> data() {
+        return Optional.ofNullable(this.data);
     }
 
     /**
@@ -59,10 +60,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="immutable")
-      private final @Nullable Output<Boolean> immutable;
+    private @Nullable Output<Boolean> immutable;
 
-    public Output<Boolean> immutable() {
-        return this.immutable == null ? Codegen.empty() : this.immutable;
+    public Optional<Output<Boolean>> immutable() {
+        return Optional.ofNullable(this.immutable);
     }
 
     /**
@@ -70,10 +71,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -81,10 +82,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -92,10 +93,10 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="stringData")
-      private final @Nullable Output<Map<String,String>> stringData;
+    private @Nullable Output<Map<String,String>> stringData;
 
-    public Output<Map<String,String>> stringData() {
-        return this.stringData == null ? Codegen.empty() : this.stringData;
+    public Optional<Output<Map<String,String>>> stringData() {
+        return Optional.ofNullable(this.stringData);
     }
 
     /**
@@ -103,128 +104,110 @@ public final class SecretArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="type")
-      private final @Nullable Output<String> type;
+    private @Nullable Output<String> type;
 
-    public Output<String> type() {
-        return this.type == null ? Codegen.empty() : this.type;
+    public Optional<Output<String>> type() {
+        return Optional.ofNullable(this.type);
     }
 
-    public SecretArgs(
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<Map<String,String>> data,
-        @Nullable Output<Boolean> immutable,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<Map<String,String>> stringData,
-        @Nullable Output<String> type) {
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.data = data;
-        this.immutable = immutable;
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.stringData = stringData;
-        this.type = type;
-    }
+    private SecretArgs() {}
 
-    private SecretArgs() {
-        this.apiVersion = Codegen.empty();
-        this.data = Codegen.empty();
-        this.immutable = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.stringData = Codegen.empty();
-        this.type = Codegen.empty();
+    private SecretArgs(SecretArgs $) {
+        this.apiVersion = $.apiVersion;
+        this.data = $.data;
+        this.immutable = $.immutable;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.stringData = $.stringData;
+        this.type = $.type;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(SecretArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<Map<String,String>> data;
-        private @Nullable Output<Boolean> immutable;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<Map<String,String>> stringData;
-        private @Nullable Output<String> type;
+        private SecretArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new SecretArgs();
         }
 
         public Builder(SecretArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.data = defaults.data;
-    	      this.immutable = defaults.immutable;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.stringData = defaults.stringData;
-    	      this.type = defaults.type;
+            $ = new SecretArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder data(@Nullable Output<Map<String,String>> data) {
-            this.data = Codegen.secret(data);
+            $.data = data;
             return this;
         }
-        public Builder data(@Nullable Map<String,String> data) {
-            this.data = Codegen.secret(data);
-            return this;
+
+        public Builder data(Map<String,String> data) {
+            return data(Output.of(data));
         }
+
         public Builder immutable(@Nullable Output<Boolean> immutable) {
-            this.immutable = immutable;
+            $.immutable = immutable;
             return this;
         }
-        public Builder immutable(@Nullable Boolean immutable) {
-            this.immutable = Codegen.ofNullable(immutable);
-            return this;
+
+        public Builder immutable(Boolean immutable) {
+            return immutable(Output.of(immutable));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder stringData(@Nullable Output<Map<String,String>> stringData) {
-            this.stringData = Codegen.secret(stringData);
+            $.stringData = stringData;
             return this;
         }
-        public Builder stringData(@Nullable Map<String,String> stringData) {
-            this.stringData = Codegen.secret(stringData);
-            return this;
+
+        public Builder stringData(Map<String,String> stringData) {
+            return stringData(Output.of(stringData));
         }
+
         public Builder type(@Nullable Output<String> type) {
-            this.type = type;
+            $.type = type;
             return this;
         }
-        public Builder type(@Nullable String type) {
-            this.type = Codegen.ofNullable(type);
-            return this;
-        }        public SecretArgs build() {
-            return new SecretArgs(apiVersion, data, immutable, kind, metadata, stringData, type);
+
+        public Builder type(String type) {
+            return type(Output.of(type));
+        }
+
+        public SecretArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            return $;
         }
     }
+
 }

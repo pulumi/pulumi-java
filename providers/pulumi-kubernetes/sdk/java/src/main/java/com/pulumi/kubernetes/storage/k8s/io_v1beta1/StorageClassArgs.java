@@ -13,6 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -25,10 +26,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowVolumeExpansion")
-      private final @Nullable Output<Boolean> allowVolumeExpansion;
+    private @Nullable Output<Boolean> allowVolumeExpansion;
 
-    public Output<Boolean> allowVolumeExpansion() {
-        return this.allowVolumeExpansion == null ? Codegen.empty() : this.allowVolumeExpansion;
+    public Optional<Output<Boolean>> allowVolumeExpansion() {
+        return Optional.ofNullable(this.allowVolumeExpansion);
     }
 
     /**
@@ -36,10 +37,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="allowedTopologies")
-      private final @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
+    private @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
 
-    public Output<List<TopologySelectorTermArgs>> allowedTopologies() {
-        return this.allowedTopologies == null ? Codegen.empty() : this.allowedTopologies;
+    public Optional<Output<List<TopologySelectorTermArgs>>> allowedTopologies() {
+        return Optional.ofNullable(this.allowedTopologies);
     }
 
     /**
@@ -47,10 +48,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="apiVersion")
-      private final @Nullable Output<String> apiVersion;
+    private @Nullable Output<String> apiVersion;
 
-    public Output<String> apiVersion() {
-        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
+    public Optional<Output<String>> apiVersion() {
+        return Optional.ofNullable(this.apiVersion);
     }
 
     /**
@@ -58,10 +59,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="kind")
-      private final @Nullable Output<String> kind;
+    private @Nullable Output<String> kind;
 
-    public Output<String> kind() {
-        return this.kind == null ? Codegen.empty() : this.kind;
+    public Optional<Output<String>> kind() {
+        return Optional.ofNullable(this.kind);
     }
 
     /**
@@ -69,10 +70,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="metadata")
-      private final @Nullable Output<ObjectMetaArgs> metadata;
+    private @Nullable Output<ObjectMetaArgs> metadata;
 
-    public Output<ObjectMetaArgs> metadata() {
-        return this.metadata == null ? Codegen.empty() : this.metadata;
+    public Optional<Output<ObjectMetaArgs>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     /**
@@ -80,10 +81,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="mountOptions")
-      private final @Nullable Output<List<String>> mountOptions;
+    private @Nullable Output<List<String>> mountOptions;
 
-    public Output<List<String>> mountOptions() {
-        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
+    public Optional<Output<List<String>>> mountOptions() {
+        return Optional.ofNullable(this.mountOptions);
     }
 
     /**
@@ -91,10 +92,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="parameters")
-      private final @Nullable Output<Map<String,String>> parameters;
+    private @Nullable Output<Map<String,String>> parameters;
 
-    public Output<Map<String,String>> parameters() {
-        return this.parameters == null ? Codegen.empty() : this.parameters;
+    public Optional<Output<Map<String,String>>> parameters() {
+        return Optional.ofNullable(this.parameters);
     }
 
     /**
@@ -102,7 +103,7 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="provisioner", required=true)
-      private final Output<String> provisioner;
+    private Output<String> provisioner;
 
     public Output<String> provisioner() {
         return this.provisioner;
@@ -113,10 +114,10 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reclaimPolicy")
-      private final @Nullable Output<String> reclaimPolicy;
+    private @Nullable Output<String> reclaimPolicy;
 
-    public Output<String> reclaimPolicy() {
-        return this.reclaimPolicy == null ? Codegen.empty() : this.reclaimPolicy;
+    public Optional<Output<String>> reclaimPolicy() {
+        return Optional.ofNullable(this.reclaimPolicy);
     }
 
     /**
@@ -124,173 +125,149 @@ public final class StorageClassArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="volumeBindingMode")
-      private final @Nullable Output<String> volumeBindingMode;
+    private @Nullable Output<String> volumeBindingMode;
 
-    public Output<String> volumeBindingMode() {
-        return this.volumeBindingMode == null ? Codegen.empty() : this.volumeBindingMode;
+    public Optional<Output<String>> volumeBindingMode() {
+        return Optional.ofNullable(this.volumeBindingMode);
     }
 
-    public StorageClassArgs(
-        @Nullable Output<Boolean> allowVolumeExpansion,
-        @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies,
-        @Nullable Output<String> apiVersion,
-        @Nullable Output<String> kind,
-        @Nullable Output<ObjectMetaArgs> metadata,
-        @Nullable Output<List<String>> mountOptions,
-        @Nullable Output<Map<String,String>> parameters,
-        Output<String> provisioner,
-        @Nullable Output<String> reclaimPolicy,
-        @Nullable Output<String> volumeBindingMode) {
-        this.allowVolumeExpansion = allowVolumeExpansion;
-        this.allowedTopologies = allowedTopologies;
-        this.apiVersion = Codegen.stringProp("apiVersion").output().arg(apiVersion).getNullable();
-        this.kind = Codegen.stringProp("kind").output().arg(kind).getNullable();
-        this.metadata = metadata;
-        this.mountOptions = mountOptions;
-        this.parameters = parameters;
-        this.provisioner = Objects.requireNonNull(provisioner, "expected parameter 'provisioner' to be non-null");
-        this.reclaimPolicy = reclaimPolicy;
-        this.volumeBindingMode = volumeBindingMode;
-    }
+    private StorageClassArgs() {}
 
-    private StorageClassArgs() {
-        this.allowVolumeExpansion = Codegen.empty();
-        this.allowedTopologies = Codegen.empty();
-        this.apiVersion = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.metadata = Codegen.empty();
-        this.mountOptions = Codegen.empty();
-        this.parameters = Codegen.empty();
-        this.provisioner = Codegen.empty();
-        this.reclaimPolicy = Codegen.empty();
-        this.volumeBindingMode = Codegen.empty();
+    private StorageClassArgs(StorageClassArgs $) {
+        this.allowVolumeExpansion = $.allowVolumeExpansion;
+        this.allowedTopologies = $.allowedTopologies;
+        this.apiVersion = $.apiVersion;
+        this.kind = $.kind;
+        this.metadata = $.metadata;
+        this.mountOptions = $.mountOptions;
+        this.parameters = $.parameters;
+        this.provisioner = $.provisioner;
+        this.reclaimPolicy = $.reclaimPolicy;
+        this.volumeBindingMode = $.volumeBindingMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(StorageClassArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<Boolean> allowVolumeExpansion;
-        private @Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies;
-        private @Nullable Output<String> apiVersion;
-        private @Nullable Output<String> kind;
-        private @Nullable Output<ObjectMetaArgs> metadata;
-        private @Nullable Output<List<String>> mountOptions;
-        private @Nullable Output<Map<String,String>> parameters;
-        private Output<String> provisioner;
-        private @Nullable Output<String> reclaimPolicy;
-        private @Nullable Output<String> volumeBindingMode;
+        private StorageClassArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new StorageClassArgs();
         }
 
         public Builder(StorageClassArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.allowVolumeExpansion = defaults.allowVolumeExpansion;
-    	      this.allowedTopologies = defaults.allowedTopologies;
-    	      this.apiVersion = defaults.apiVersion;
-    	      this.kind = defaults.kind;
-    	      this.metadata = defaults.metadata;
-    	      this.mountOptions = defaults.mountOptions;
-    	      this.parameters = defaults.parameters;
-    	      this.provisioner = defaults.provisioner;
-    	      this.reclaimPolicy = defaults.reclaimPolicy;
-    	      this.volumeBindingMode = defaults.volumeBindingMode;
+            $ = new StorageClassArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder allowVolumeExpansion(@Nullable Output<Boolean> allowVolumeExpansion) {
-            this.allowVolumeExpansion = allowVolumeExpansion;
+            $.allowVolumeExpansion = allowVolumeExpansion;
             return this;
         }
-        public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
-            this.allowVolumeExpansion = Codegen.ofNullable(allowVolumeExpansion);
-            return this;
+
+        public Builder allowVolumeExpansion(Boolean allowVolumeExpansion) {
+            return allowVolumeExpansion(Output.of(allowVolumeExpansion));
         }
+
         public Builder allowedTopologies(@Nullable Output<List<TopologySelectorTermArgs>> allowedTopologies) {
-            this.allowedTopologies = allowedTopologies;
+            $.allowedTopologies = allowedTopologies;
             return this;
         }
-        public Builder allowedTopologies(@Nullable List<TopologySelectorTermArgs> allowedTopologies) {
-            this.allowedTopologies = Codegen.ofNullable(allowedTopologies);
-            return this;
+
+        public Builder allowedTopologies(List<TopologySelectorTermArgs> allowedTopologies) {
+            return allowedTopologies(Output.of(allowedTopologies));
         }
+
         public Builder allowedTopologies(TopologySelectorTermArgs... allowedTopologies) {
             return allowedTopologies(List.of(allowedTopologies));
         }
+
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
-            this.apiVersion = apiVersion;
+            $.apiVersion = apiVersion;
             return this;
         }
-        public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Codegen.ofNullable(apiVersion);
-            return this;
+
+        public Builder apiVersion(String apiVersion) {
+            return apiVersion(Output.of(apiVersion));
         }
+
         public Builder kind(@Nullable Output<String> kind) {
-            this.kind = kind;
+            $.kind = kind;
             return this;
         }
-        public Builder kind(@Nullable String kind) {
-            this.kind = Codegen.ofNullable(kind);
-            return this;
+
+        public Builder kind(String kind) {
+            return kind(Output.of(kind));
         }
+
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
-            this.metadata = metadata;
+            $.metadata = metadata;
             return this;
         }
-        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Codegen.ofNullable(metadata);
-            return this;
+
+        public Builder metadata(ObjectMetaArgs metadata) {
+            return metadata(Output.of(metadata));
         }
+
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
-            this.mountOptions = mountOptions;
+            $.mountOptions = mountOptions;
             return this;
         }
-        public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Codegen.ofNullable(mountOptions);
-            return this;
+
+        public Builder mountOptions(List<String> mountOptions) {
+            return mountOptions(Output.of(mountOptions));
         }
+
         public Builder mountOptions(String... mountOptions) {
             return mountOptions(List.of(mountOptions));
         }
+
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
-            this.parameters = parameters;
+            $.parameters = parameters;
             return this;
         }
-        public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Codegen.ofNullable(parameters);
-            return this;
+
+        public Builder parameters(Map<String,String> parameters) {
+            return parameters(Output.of(parameters));
         }
+
         public Builder provisioner(Output<String> provisioner) {
-            this.provisioner = Objects.requireNonNull(provisioner);
+            $.provisioner = provisioner;
             return this;
         }
+
         public Builder provisioner(String provisioner) {
-            this.provisioner = Output.of(Objects.requireNonNull(provisioner));
-            return this;
+            return provisioner(Output.of(provisioner));
         }
+
         public Builder reclaimPolicy(@Nullable Output<String> reclaimPolicy) {
-            this.reclaimPolicy = reclaimPolicy;
+            $.reclaimPolicy = reclaimPolicy;
             return this;
         }
-        public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
-            this.reclaimPolicy = Codegen.ofNullable(reclaimPolicy);
-            return this;
+
+        public Builder reclaimPolicy(String reclaimPolicy) {
+            return reclaimPolicy(Output.of(reclaimPolicy));
         }
+
         public Builder volumeBindingMode(@Nullable Output<String> volumeBindingMode) {
-            this.volumeBindingMode = volumeBindingMode;
+            $.volumeBindingMode = volumeBindingMode;
             return this;
         }
-        public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
-            this.volumeBindingMode = Codegen.ofNullable(volumeBindingMode);
-            return this;
-        }        public StorageClassArgs build() {
-            return new StorageClassArgs(allowVolumeExpansion, allowedTopologies, apiVersion, kind, metadata, mountOptions, parameters, provisioner, reclaimPolicy, volumeBindingMode);
+
+        public Builder volumeBindingMode(String volumeBindingMode) {
+            return volumeBindingMode(Output.of(volumeBindingMode));
+        }
+
+        public StorageClassArgs build() {
+            $.apiVersion = Codegen.stringProp("apiVersion").output().arg($.apiVersion).getNullable();
+            $.kind = Codegen.stringProp("kind").output().arg($.kind).getNullable();
+            $.provisioner = Objects.requireNonNull($.provisioner, "expected parameter 'provisioner' to be non-null");
+            return $;
         }
     }
+
 }

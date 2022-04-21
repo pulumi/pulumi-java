@@ -5,13 +5,13 @@ package com.pulumi.kubernetes.core_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ContainerStatusArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodConditionArgs;
 import com.pulumi.kubernetes.core_v1.inputs.PodIPArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -28,10 +28,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="conditions")
-      private final @Nullable Output<List<PodConditionArgs>> conditions;
+    private @Nullable Output<List<PodConditionArgs>> conditions;
 
-    public Output<List<PodConditionArgs>> conditions() {
-        return this.conditions == null ? Codegen.empty() : this.conditions;
+    public Optional<Output<List<PodConditionArgs>>> conditions() {
+        return Optional.ofNullable(this.conditions);
     }
 
     /**
@@ -39,10 +39,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="containerStatuses")
-      private final @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
+    private @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
 
-    public Output<List<ContainerStatusArgs>> containerStatuses() {
-        return this.containerStatuses == null ? Codegen.empty() : this.containerStatuses;
+    public Optional<Output<List<ContainerStatusArgs>>> containerStatuses() {
+        return Optional.ofNullable(this.containerStatuses);
     }
 
     /**
@@ -50,10 +50,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="ephemeralContainerStatuses")
-      private final @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
+    private @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
 
-    public Output<List<ContainerStatusArgs>> ephemeralContainerStatuses() {
-        return this.ephemeralContainerStatuses == null ? Codegen.empty() : this.ephemeralContainerStatuses;
+    public Optional<Output<List<ContainerStatusArgs>>> ephemeralContainerStatuses() {
+        return Optional.ofNullable(this.ephemeralContainerStatuses);
     }
 
     /**
@@ -61,10 +61,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="hostIP")
-      private final @Nullable Output<String> hostIP;
+    private @Nullable Output<String> hostIP;
 
-    public Output<String> hostIP() {
-        return this.hostIP == null ? Codegen.empty() : this.hostIP;
+    public Optional<Output<String>> hostIP() {
+        return Optional.ofNullable(this.hostIP);
     }
 
     /**
@@ -72,10 +72,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="initContainerStatuses")
-      private final @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
+    private @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
 
-    public Output<List<ContainerStatusArgs>> initContainerStatuses() {
-        return this.initContainerStatuses == null ? Codegen.empty() : this.initContainerStatuses;
+    public Optional<Output<List<ContainerStatusArgs>>> initContainerStatuses() {
+        return Optional.ofNullable(this.initContainerStatuses);
     }
 
     /**
@@ -83,10 +83,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="message")
-      private final @Nullable Output<String> message;
+    private @Nullable Output<String> message;
 
-    public Output<String> message() {
-        return this.message == null ? Codegen.empty() : this.message;
+    public Optional<Output<String>> message() {
+        return Optional.ofNullable(this.message);
     }
 
     /**
@@ -94,10 +94,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="nominatedNodeName")
-      private final @Nullable Output<String> nominatedNodeName;
+    private @Nullable Output<String> nominatedNodeName;
 
-    public Output<String> nominatedNodeName() {
-        return this.nominatedNodeName == null ? Codegen.empty() : this.nominatedNodeName;
+    public Optional<Output<String>> nominatedNodeName() {
+        return Optional.ofNullable(this.nominatedNodeName);
     }
 
     /**
@@ -116,10 +116,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="phase")
-      private final @Nullable Output<String> phase;
+    private @Nullable Output<String> phase;
 
-    public Output<String> phase() {
-        return this.phase == null ? Codegen.empty() : this.phase;
+    public Optional<Output<String>> phase() {
+        return Optional.ofNullable(this.phase);
     }
 
     /**
@@ -127,10 +127,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podIP")
-      private final @Nullable Output<String> podIP;
+    private @Nullable Output<String> podIP;
 
-    public Output<String> podIP() {
-        return this.podIP == null ? Codegen.empty() : this.podIP;
+    public Optional<Output<String>> podIP() {
+        return Optional.ofNullable(this.podIP);
     }
 
     /**
@@ -138,10 +138,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="podIPs")
-      private final @Nullable Output<List<PodIPArgs>> podIPs;
+    private @Nullable Output<List<PodIPArgs>> podIPs;
 
-    public Output<List<PodIPArgs>> podIPs() {
-        return this.podIPs == null ? Codegen.empty() : this.podIPs;
+    public Optional<Output<List<PodIPArgs>>> podIPs() {
+        return Optional.ofNullable(this.podIPs);
     }
 
     /**
@@ -154,10 +154,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="qosClass")
-      private final @Nullable Output<String> qosClass;
+    private @Nullable Output<String> qosClass;
 
-    public Output<String> qosClass() {
-        return this.qosClass == null ? Codegen.empty() : this.qosClass;
+    public Optional<Output<String>> qosClass() {
+        return Optional.ofNullable(this.qosClass);
     }
 
     /**
@@ -165,10 +165,10 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="reason")
-      private final @Nullable Output<String> reason;
+    private @Nullable Output<String> reason;
 
-    public Output<String> reason() {
-        return this.reason == null ? Codegen.empty() : this.reason;
+    public Optional<Output<String>> reason() {
+        return Optional.ofNullable(this.reason);
     }
 
     /**
@@ -176,221 +176,188 @@ public final class PodStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="startTime")
-      private final @Nullable Output<String> startTime;
+    private @Nullable Output<String> startTime;
 
-    public Output<String> startTime() {
-        return this.startTime == null ? Codegen.empty() : this.startTime;
+    public Optional<Output<String>> startTime() {
+        return Optional.ofNullable(this.startTime);
     }
 
-    public PodStatusArgs(
-        @Nullable Output<List<PodConditionArgs>> conditions,
-        @Nullable Output<List<ContainerStatusArgs>> containerStatuses,
-        @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses,
-        @Nullable Output<String> hostIP,
-        @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses,
-        @Nullable Output<String> message,
-        @Nullable Output<String> nominatedNodeName,
-        @Nullable Output<String> phase,
-        @Nullable Output<String> podIP,
-        @Nullable Output<List<PodIPArgs>> podIPs,
-        @Nullable Output<String> qosClass,
-        @Nullable Output<String> reason,
-        @Nullable Output<String> startTime) {
-        this.conditions = conditions;
-        this.containerStatuses = containerStatuses;
-        this.ephemeralContainerStatuses = ephemeralContainerStatuses;
-        this.hostIP = hostIP;
-        this.initContainerStatuses = initContainerStatuses;
-        this.message = message;
-        this.nominatedNodeName = nominatedNodeName;
-        this.phase = phase;
-        this.podIP = podIP;
-        this.podIPs = podIPs;
-        this.qosClass = qosClass;
-        this.reason = reason;
-        this.startTime = startTime;
-    }
+    private PodStatusArgs() {}
 
-    private PodStatusArgs() {
-        this.conditions = Codegen.empty();
-        this.containerStatuses = Codegen.empty();
-        this.ephemeralContainerStatuses = Codegen.empty();
-        this.hostIP = Codegen.empty();
-        this.initContainerStatuses = Codegen.empty();
-        this.message = Codegen.empty();
-        this.nominatedNodeName = Codegen.empty();
-        this.phase = Codegen.empty();
-        this.podIP = Codegen.empty();
-        this.podIPs = Codegen.empty();
-        this.qosClass = Codegen.empty();
-        this.reason = Codegen.empty();
-        this.startTime = Codegen.empty();
+    private PodStatusArgs(PodStatusArgs $) {
+        this.conditions = $.conditions;
+        this.containerStatuses = $.containerStatuses;
+        this.ephemeralContainerStatuses = $.ephemeralContainerStatuses;
+        this.hostIP = $.hostIP;
+        this.initContainerStatuses = $.initContainerStatuses;
+        this.message = $.message;
+        this.nominatedNodeName = $.nominatedNodeName;
+        this.phase = $.phase;
+        this.podIP = $.podIP;
+        this.podIPs = $.podIPs;
+        this.qosClass = $.qosClass;
+        this.reason = $.reason;
+        this.startTime = $.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(PodStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<PodConditionArgs>> conditions;
-        private @Nullable Output<List<ContainerStatusArgs>> containerStatuses;
-        private @Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses;
-        private @Nullable Output<String> hostIP;
-        private @Nullable Output<List<ContainerStatusArgs>> initContainerStatuses;
-        private @Nullable Output<String> message;
-        private @Nullable Output<String> nominatedNodeName;
-        private @Nullable Output<String> phase;
-        private @Nullable Output<String> podIP;
-        private @Nullable Output<List<PodIPArgs>> podIPs;
-        private @Nullable Output<String> qosClass;
-        private @Nullable Output<String> reason;
-        private @Nullable Output<String> startTime;
+        private PodStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new PodStatusArgs();
         }
 
         public Builder(PodStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.conditions = defaults.conditions;
-    	      this.containerStatuses = defaults.containerStatuses;
-    	      this.ephemeralContainerStatuses = defaults.ephemeralContainerStatuses;
-    	      this.hostIP = defaults.hostIP;
-    	      this.initContainerStatuses = defaults.initContainerStatuses;
-    	      this.message = defaults.message;
-    	      this.nominatedNodeName = defaults.nominatedNodeName;
-    	      this.phase = defaults.phase;
-    	      this.podIP = defaults.podIP;
-    	      this.podIPs = defaults.podIPs;
-    	      this.qosClass = defaults.qosClass;
-    	      this.reason = defaults.reason;
-    	      this.startTime = defaults.startTime;
+            $ = new PodStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder conditions(@Nullable Output<List<PodConditionArgs>> conditions) {
-            this.conditions = conditions;
+            $.conditions = conditions;
             return this;
         }
-        public Builder conditions(@Nullable List<PodConditionArgs> conditions) {
-            this.conditions = Codegen.ofNullable(conditions);
-            return this;
+
+        public Builder conditions(List<PodConditionArgs> conditions) {
+            return conditions(Output.of(conditions));
         }
+
         public Builder conditions(PodConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
+
         public Builder containerStatuses(@Nullable Output<List<ContainerStatusArgs>> containerStatuses) {
-            this.containerStatuses = containerStatuses;
+            $.containerStatuses = containerStatuses;
             return this;
         }
-        public Builder containerStatuses(@Nullable List<ContainerStatusArgs> containerStatuses) {
-            this.containerStatuses = Codegen.ofNullable(containerStatuses);
-            return this;
+
+        public Builder containerStatuses(List<ContainerStatusArgs> containerStatuses) {
+            return containerStatuses(Output.of(containerStatuses));
         }
+
         public Builder containerStatuses(ContainerStatusArgs... containerStatuses) {
             return containerStatuses(List.of(containerStatuses));
         }
+
         public Builder ephemeralContainerStatuses(@Nullable Output<List<ContainerStatusArgs>> ephemeralContainerStatuses) {
-            this.ephemeralContainerStatuses = ephemeralContainerStatuses;
+            $.ephemeralContainerStatuses = ephemeralContainerStatuses;
             return this;
         }
-        public Builder ephemeralContainerStatuses(@Nullable List<ContainerStatusArgs> ephemeralContainerStatuses) {
-            this.ephemeralContainerStatuses = Codegen.ofNullable(ephemeralContainerStatuses);
-            return this;
+
+        public Builder ephemeralContainerStatuses(List<ContainerStatusArgs> ephemeralContainerStatuses) {
+            return ephemeralContainerStatuses(Output.of(ephemeralContainerStatuses));
         }
+
         public Builder ephemeralContainerStatuses(ContainerStatusArgs... ephemeralContainerStatuses) {
             return ephemeralContainerStatuses(List.of(ephemeralContainerStatuses));
         }
+
         public Builder hostIP(@Nullable Output<String> hostIP) {
-            this.hostIP = hostIP;
+            $.hostIP = hostIP;
             return this;
         }
-        public Builder hostIP(@Nullable String hostIP) {
-            this.hostIP = Codegen.ofNullable(hostIP);
-            return this;
+
+        public Builder hostIP(String hostIP) {
+            return hostIP(Output.of(hostIP));
         }
+
         public Builder initContainerStatuses(@Nullable Output<List<ContainerStatusArgs>> initContainerStatuses) {
-            this.initContainerStatuses = initContainerStatuses;
+            $.initContainerStatuses = initContainerStatuses;
             return this;
         }
-        public Builder initContainerStatuses(@Nullable List<ContainerStatusArgs> initContainerStatuses) {
-            this.initContainerStatuses = Codegen.ofNullable(initContainerStatuses);
-            return this;
+
+        public Builder initContainerStatuses(List<ContainerStatusArgs> initContainerStatuses) {
+            return initContainerStatuses(Output.of(initContainerStatuses));
         }
+
         public Builder initContainerStatuses(ContainerStatusArgs... initContainerStatuses) {
             return initContainerStatuses(List.of(initContainerStatuses));
         }
+
         public Builder message(@Nullable Output<String> message) {
-            this.message = message;
+            $.message = message;
             return this;
         }
-        public Builder message(@Nullable String message) {
-            this.message = Codegen.ofNullable(message);
-            return this;
+
+        public Builder message(String message) {
+            return message(Output.of(message));
         }
+
         public Builder nominatedNodeName(@Nullable Output<String> nominatedNodeName) {
-            this.nominatedNodeName = nominatedNodeName;
+            $.nominatedNodeName = nominatedNodeName;
             return this;
         }
-        public Builder nominatedNodeName(@Nullable String nominatedNodeName) {
-            this.nominatedNodeName = Codegen.ofNullable(nominatedNodeName);
-            return this;
+
+        public Builder nominatedNodeName(String nominatedNodeName) {
+            return nominatedNodeName(Output.of(nominatedNodeName));
         }
+
         public Builder phase(@Nullable Output<String> phase) {
-            this.phase = phase;
+            $.phase = phase;
             return this;
         }
-        public Builder phase(@Nullable String phase) {
-            this.phase = Codegen.ofNullable(phase);
-            return this;
+
+        public Builder phase(String phase) {
+            return phase(Output.of(phase));
         }
+
         public Builder podIP(@Nullable Output<String> podIP) {
-            this.podIP = podIP;
+            $.podIP = podIP;
             return this;
         }
-        public Builder podIP(@Nullable String podIP) {
-            this.podIP = Codegen.ofNullable(podIP);
-            return this;
+
+        public Builder podIP(String podIP) {
+            return podIP(Output.of(podIP));
         }
+
         public Builder podIPs(@Nullable Output<List<PodIPArgs>> podIPs) {
-            this.podIPs = podIPs;
+            $.podIPs = podIPs;
             return this;
         }
-        public Builder podIPs(@Nullable List<PodIPArgs> podIPs) {
-            this.podIPs = Codegen.ofNullable(podIPs);
-            return this;
+
+        public Builder podIPs(List<PodIPArgs> podIPs) {
+            return podIPs(Output.of(podIPs));
         }
+
         public Builder podIPs(PodIPArgs... podIPs) {
             return podIPs(List.of(podIPs));
         }
+
         public Builder qosClass(@Nullable Output<String> qosClass) {
-            this.qosClass = qosClass;
+            $.qosClass = qosClass;
             return this;
         }
-        public Builder qosClass(@Nullable String qosClass) {
-            this.qosClass = Codegen.ofNullable(qosClass);
-            return this;
+
+        public Builder qosClass(String qosClass) {
+            return qosClass(Output.of(qosClass));
         }
+
         public Builder reason(@Nullable Output<String> reason) {
-            this.reason = reason;
+            $.reason = reason;
             return this;
         }
-        public Builder reason(@Nullable String reason) {
-            this.reason = Codegen.ofNullable(reason);
-            return this;
+
+        public Builder reason(String reason) {
+            return reason(Output.of(reason));
         }
+
         public Builder startTime(@Nullable Output<String> startTime) {
-            this.startTime = startTime;
+            $.startTime = startTime;
             return this;
         }
-        public Builder startTime(@Nullable String startTime) {
-            this.startTime = Codegen.ofNullable(startTime);
-            return this;
-        }        public PodStatusArgs build() {
-            return new PodStatusArgs(conditions, containerStatuses, ephemeralContainerStatuses, hostIP, initContainerStatuses, message, nominatedNodeName, phase, podIP, podIPs, qosClass, reason, startTime);
+
+        public Builder startTime(String startTime) {
+            return startTime(Output.of(startTime));
+        }
+
+        public PodStatusArgs build() {
+            return $;
         }
     }
+
 }

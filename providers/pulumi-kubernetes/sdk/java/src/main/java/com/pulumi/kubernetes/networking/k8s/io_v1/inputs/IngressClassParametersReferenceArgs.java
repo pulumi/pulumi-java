@@ -5,9 +5,9 @@ package com.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -24,10 +24,10 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="apiGroup")
-      private final @Nullable Output<String> apiGroup;
+    private @Nullable Output<String> apiGroup;
 
-    public Output<String> apiGroup() {
-        return this.apiGroup == null ? Codegen.empty() : this.apiGroup;
+    public Optional<Output<String>> apiGroup() {
+        return Optional.ofNullable(this.apiGroup);
     }
 
     /**
@@ -35,7 +35,7 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="kind", required=true)
-      private final Output<String> kind;
+    private Output<String> kind;
 
     public Output<String> kind() {
         return this.kind;
@@ -46,7 +46,7 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="name", required=true)
-      private final Output<String> name;
+    private Output<String> name;
 
     public Output<String> name() {
         return this.name;
@@ -57,10 +57,10 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="namespace")
-      private final @Nullable Output<String> namespace;
+    private @Nullable Output<String> namespace;
 
-    public Output<String> namespace() {
-        return this.namespace == null ? Codegen.empty() : this.namespace;
+    public Optional<Output<String>> namespace() {
+        return Optional.ofNullable(this.namespace);
     }
 
     /**
@@ -68,102 +68,90 @@ public final class IngressClassParametersReferenceArgs extends com.pulumi.resour
      * 
      */
     @Import(name="scope")
-      private final @Nullable Output<String> scope;
+    private @Nullable Output<String> scope;
 
-    public Output<String> scope() {
-        return this.scope == null ? Codegen.empty() : this.scope;
+    public Optional<Output<String>> scope() {
+        return Optional.ofNullable(this.scope);
     }
 
-    public IngressClassParametersReferenceArgs(
-        @Nullable Output<String> apiGroup,
-        Output<String> kind,
-        Output<String> name,
-        @Nullable Output<String> namespace,
-        @Nullable Output<String> scope) {
-        this.apiGroup = apiGroup;
-        this.kind = Objects.requireNonNull(kind, "expected parameter 'kind' to be non-null");
-        this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
-        this.namespace = namespace;
-        this.scope = scope;
-    }
+    private IngressClassParametersReferenceArgs() {}
 
-    private IngressClassParametersReferenceArgs() {
-        this.apiGroup = Codegen.empty();
-        this.kind = Codegen.empty();
-        this.name = Codegen.empty();
-        this.namespace = Codegen.empty();
-        this.scope = Codegen.empty();
+    private IngressClassParametersReferenceArgs(IngressClassParametersReferenceArgs $) {
+        this.apiGroup = $.apiGroup;
+        this.kind = $.kind;
+        this.name = $.name;
+        this.namespace = $.namespace;
+        this.scope = $.scope;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(IngressClassParametersReferenceArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<String> apiGroup;
-        private Output<String> kind;
-        private Output<String> name;
-        private @Nullable Output<String> namespace;
-        private @Nullable Output<String> scope;
+        private IngressClassParametersReferenceArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new IngressClassParametersReferenceArgs();
         }
 
         public Builder(IngressClassParametersReferenceArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.apiGroup = defaults.apiGroup;
-    	      this.kind = defaults.kind;
-    	      this.name = defaults.name;
-    	      this.namespace = defaults.namespace;
-    	      this.scope = defaults.scope;
+            $ = new IngressClassParametersReferenceArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder apiGroup(@Nullable Output<String> apiGroup) {
-            this.apiGroup = apiGroup;
+            $.apiGroup = apiGroup;
             return this;
         }
-        public Builder apiGroup(@Nullable String apiGroup) {
-            this.apiGroup = Codegen.ofNullable(apiGroup);
-            return this;
+
+        public Builder apiGroup(String apiGroup) {
+            return apiGroup(Output.of(apiGroup));
         }
+
         public Builder kind(Output<String> kind) {
-            this.kind = Objects.requireNonNull(kind);
+            $.kind = kind;
             return this;
         }
+
         public Builder kind(String kind) {
-            this.kind = Output.of(Objects.requireNonNull(kind));
-            return this;
+            return kind(Output.of(kind));
         }
+
         public Builder name(Output<String> name) {
-            this.name = Objects.requireNonNull(name);
+            $.name = name;
             return this;
         }
+
         public Builder name(String name) {
-            this.name = Output.of(Objects.requireNonNull(name));
-            return this;
+            return name(Output.of(name));
         }
+
         public Builder namespace(@Nullable Output<String> namespace) {
-            this.namespace = namespace;
+            $.namespace = namespace;
             return this;
         }
-        public Builder namespace(@Nullable String namespace) {
-            this.namespace = Codegen.ofNullable(namespace);
-            return this;
+
+        public Builder namespace(String namespace) {
+            return namespace(Output.of(namespace));
         }
+
         public Builder scope(@Nullable Output<String> scope) {
-            this.scope = scope;
+            $.scope = scope;
             return this;
         }
-        public Builder scope(@Nullable String scope) {
-            this.scope = Codegen.ofNullable(scope);
-            return this;
-        }        public IngressClassParametersReferenceArgs build() {
-            return new IngressClassParametersReferenceArgs(apiGroup, kind, name, namespace, scope);
+
+        public Builder scope(String scope) {
+            return scope(Output.of(scope));
+        }
+
+        public IngressClassParametersReferenceArgs build() {
+            $.kind = Objects.requireNonNull($.kind, "expected parameter 'kind' to be non-null");
+            $.name = Objects.requireNonNull($.name, "expected parameter 'name' to be non-null");
+            return $;
         }
     }
+
 }

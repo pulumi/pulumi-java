@@ -5,11 +5,11 @@ package com.pulumi.kubernetes.batch_v1.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.core.internal.Codegen;
 import com.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 
@@ -26,10 +26,10 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="active")
-      private final @Nullable Output<List<ObjectReferenceArgs>> active;
+    private @Nullable Output<List<ObjectReferenceArgs>> active;
 
-    public Output<List<ObjectReferenceArgs>> active() {
-        return this.active == null ? Codegen.empty() : this.active;
+    public Optional<Output<List<ObjectReferenceArgs>>> active() {
+        return Optional.ofNullable(this.active);
     }
 
     /**
@@ -37,10 +37,10 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastScheduleTime")
-      private final @Nullable Output<String> lastScheduleTime;
+    private @Nullable Output<String> lastScheduleTime;
 
-    public Output<String> lastScheduleTime() {
-        return this.lastScheduleTime == null ? Codegen.empty() : this.lastScheduleTime;
+    public Optional<Output<String>> lastScheduleTime() {
+        return Optional.ofNullable(this.lastScheduleTime);
     }
 
     /**
@@ -48,79 +48,72 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
      * 
      */
     @Import(name="lastSuccessfulTime")
-      private final @Nullable Output<String> lastSuccessfulTime;
+    private @Nullable Output<String> lastSuccessfulTime;
 
-    public Output<String> lastSuccessfulTime() {
-        return this.lastSuccessfulTime == null ? Codegen.empty() : this.lastSuccessfulTime;
+    public Optional<Output<String>> lastSuccessfulTime() {
+        return Optional.ofNullable(this.lastSuccessfulTime);
     }
 
-    public CronJobStatusArgs(
-        @Nullable Output<List<ObjectReferenceArgs>> active,
-        @Nullable Output<String> lastScheduleTime,
-        @Nullable Output<String> lastSuccessfulTime) {
-        this.active = active;
-        this.lastScheduleTime = lastScheduleTime;
-        this.lastSuccessfulTime = lastSuccessfulTime;
-    }
+    private CronJobStatusArgs() {}
 
-    private CronJobStatusArgs() {
-        this.active = Codegen.empty();
-        this.lastScheduleTime = Codegen.empty();
-        this.lastSuccessfulTime = Codegen.empty();
+    private CronJobStatusArgs(CronJobStatusArgs $) {
+        this.active = $.active;
+        this.lastScheduleTime = $.lastScheduleTime;
+        this.lastSuccessfulTime = $.lastSuccessfulTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
-
     public static Builder builder(CronJobStatusArgs defaults) {
         return new Builder(defaults);
     }
 
     public static final class Builder {
-        private @Nullable Output<List<ObjectReferenceArgs>> active;
-        private @Nullable Output<String> lastScheduleTime;
-        private @Nullable Output<String> lastSuccessfulTime;
+        private CronJobStatusArgs $;
 
         public Builder() {
-    	      // Empty
+            $ = new CronJobStatusArgs();
         }
 
         public Builder(CronJobStatusArgs defaults) {
-    	      Objects.requireNonNull(defaults);
-    	      this.active = defaults.active;
-    	      this.lastScheduleTime = defaults.lastScheduleTime;
-    	      this.lastSuccessfulTime = defaults.lastSuccessfulTime;
+            $ = new CronJobStatusArgs(Objects.requireNonNull(defaults));
         }
 
         public Builder active(@Nullable Output<List<ObjectReferenceArgs>> active) {
-            this.active = active;
+            $.active = active;
             return this;
         }
-        public Builder active(@Nullable List<ObjectReferenceArgs> active) {
-            this.active = Codegen.ofNullable(active);
-            return this;
+
+        public Builder active(List<ObjectReferenceArgs> active) {
+            return active(Output.of(active));
         }
+
         public Builder active(ObjectReferenceArgs... active) {
             return active(List.of(active));
         }
+
         public Builder lastScheduleTime(@Nullable Output<String> lastScheduleTime) {
-            this.lastScheduleTime = lastScheduleTime;
+            $.lastScheduleTime = lastScheduleTime;
             return this;
         }
-        public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
-            this.lastScheduleTime = Codegen.ofNullable(lastScheduleTime);
-            return this;
+
+        public Builder lastScheduleTime(String lastScheduleTime) {
+            return lastScheduleTime(Output.of(lastScheduleTime));
         }
+
         public Builder lastSuccessfulTime(@Nullable Output<String> lastSuccessfulTime) {
-            this.lastSuccessfulTime = lastSuccessfulTime;
+            $.lastSuccessfulTime = lastSuccessfulTime;
             return this;
         }
-        public Builder lastSuccessfulTime(@Nullable String lastSuccessfulTime) {
-            this.lastSuccessfulTime = Codegen.ofNullable(lastSuccessfulTime);
-            return this;
-        }        public CronJobStatusArgs build() {
-            return new CronJobStatusArgs(active, lastScheduleTime, lastSuccessfulTime);
+
+        public Builder lastSuccessfulTime(String lastSuccessfulTime) {
+            return lastSuccessfulTime(Output.of(lastSuccessfulTime));
+        }
+
+        public CronJobStatusArgs build() {
+            return $;
         }
     }
+
 }
