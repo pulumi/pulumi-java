@@ -240,7 +240,7 @@ func (dg *defaultsGen) builderExprWithSimpleType(
 	return buf.String(), nil
 }
 
-// Helper to find any Enum types referenced in the type of a Property
+// Helper to find any Enum types referenced in the type of Property
 // and index them by FQN.
 func (dg *defaultsGen) detectEnumTypes(prop *schema.Property) map[string]*schema.EnumType {
 	// Index all EnumTypes present in schemaType by FQN.
