@@ -86,6 +86,14 @@ public final class TCPSocketActionArgs extends com.pulumi.resources.ResourceArgs
             return port(Output.of(port));
         }
 
+        public Builder port(Integer port) {
+            return port(Either.ofLeft(port));
+        }
+
+        public Builder port(String port) {
+            return port(Either.ofRight(port));
+        }
+
         public TCPSocketActionArgs build() {
             $.port = Objects.requireNonNull($.port, "expected parameter 'port' to be non-null");
             return $;
