@@ -586,9 +586,9 @@ func (pt *plainType) genInputType(ctx *classFileContext) error {
 	return nil
 }
 
-// Generates derived buidler setters that resolve to the main setter.
-// This helps to promote T to Output<T> and accept varargs for a List
-// parameter.
+// Generates derived builder setters that resolve to the main setter.
+// This helps to promote T to Output<T>, accept varargs for a List parameter
+// and to unroll Either<L, R> to both of its types.
 func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldName string, t TypeShape) {
 	w := ctx.writer
 
@@ -608,6 +608,23 @@ func (pt *plainType) genBuilderHelpers(ctx *classFileContext, setterName, fieldN
 			setterName, fieldName, t2.ToCode(ctx.imports))
 		fprintf(w, "            return %[1]s(%[3]s.of(%[2]s));\n",
 			setterName, fieldName, ctx.ref(names.List))
+		fprintf(w, "        }\n\n")
+	}
+
+	// Further helpers for when Output<Either<L, R>> is needed but L or R provided.
+	isEither, t1, t2 := t1.UnEither()
+	if isEither {
+		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
+			setterName, fieldName, t1.ToCode(ctx.imports))
+		fprintf(w, "            return %[1]s(%[3]s.ofLeft(%[2]s));\n",
+			setterName, fieldName, ctx.ref(names.Either),
+		)
+		fprintf(w, "        }\n\n")
+		fprintf(w, "        public Builder %[1]s(%[3]s %[2]s) {\n",
+			setterName, fieldName, t2.ToCode(ctx.imports))
+		fprintf(w, "            return %[1]s(%[3]s.ofRight(%[2]s));\n",
+			setterName, fieldName, ctx.ref(names.Either),
+		)
 		fprintf(w, "        }\n\n")
 	}
 }
