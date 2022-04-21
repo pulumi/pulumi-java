@@ -65,6 +65,14 @@ public final class RollingUpdateDaemonSetArgs extends com.pulumi.resources.Resou
             return maxUnavailable(Output.of(maxUnavailable));
         }
 
+        public Builder maxUnavailable(Integer maxUnavailable) {
+            return maxUnavailable(Either.ofLeft(maxUnavailable));
+        }
+
+        public Builder maxUnavailable(String maxUnavailable) {
+            return maxUnavailable(Either.ofRight(maxUnavailable));
+        }
+
         public RollingUpdateDaemonSetArgs build() {
             return $;
         }
